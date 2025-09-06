@@ -1,5 +1,5 @@
 # Workflow name
-name: 'Check Ubuntu Repos and Rebuild Base Images'
+name: 'Check Rocky Linux Repos and Rebuild Base Images'
 
 # Triggers for the workflow
 on:
@@ -65,7 +65,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       # Gets the current date for tagging
-      - name: Get current date
+#      - name: Get current date
         id: get_date
         run: echo "date=$(date +'%Y%m%d-%H%M%S')" >> $GITHUB_OUTPUT
 
@@ -78,17 +78,17 @@ jobs:
       - name: 'Generate Docker tags'
         id: docker_tags
         run: |
-          tags="ghcr.io/${{ steps.lowercase_owner.outputs.owner }}/ubuntu-${{ matrix.codename }}:latest
-          ghcr.io/${{ steps.lowercase_owner.outputs.owner }}/ubuntu-${{ matrix.codename }}:${{ steps.get_date.outputs.date }}
-          ghcr.io/${{ steps.lowercase_owner.outputs.owner }}/ubuntu-${{ matrix.version }}:latest
-          ghcr.io/${{ steps.lowercase_owner.outputs.owner }}/ubuntu-${{ matrix.version }}:${{ steps.get_date.outputs.date }}
-          ghcr.io/${{ steps.lowercase_owner.outputs.owner }}/ubuntu:${{ matrix.version }}-latest
-          ghcr.io/${{ steps.lowercase_owner.outputs.owner }}/ubuntu:${{ matrix.version }}-${{ steps.get_date.outputs.date }}
-          ghcr.io/${{ steps.lowercase_owner.outputs.owner }}/ubuntu:${{ matrix.codename }}-latest
-          ghcr.io/${{ steps.lowercase_owner.outputs.owner }}/ubuntu:${{ matrix.codename }}-${{ steps.get_date.outputs.date }}"
+          tags="ghcr.io/${{ steps.lowercase_owner.outputs.owner }}/rocky-${{ matrix.codename }}:latest
+          ghcr.io/${{ steps.lowercase_owner.outputs.owner }}/rocky-${{ matrix.codename }}:${{ steps.get_date.outputs.date }}
+          ghcr.io/${{ steps.lowercase_owner.outputs.owner }}/rocky-${{ matrix.version }}:latest
+          ghcr.io/${{ steps.lowercase_owner.outputs.owner }}/rocky-${{ matrix.version }}:${{ steps.get_date.outputs.date }}
+          ghcr.io/${{ steps.lowercase_owner.outputs.owner }}/rocky:${{ matrix.version }}-latest
+          ghcr.io/${{ steps.lowercase_owner.outputs.owner }}/rocky:${{ matrix.version }}-${{ steps.get_date.outputs.date }}
+          ghcr.io/${{ steps.lowercase_owner.outputs.owner }}/rocky:${{ matrix.codename }}-latest
+          ghcr.io/${{ steps.lowercase_owner.outputs.owner }}/rocky:${{ matrix.codename }}-${{ steps.get_date.outputs.date }}"
           if [ "${{ matrix.version }}" == "${{ needs.prepare.outputs.latest_version }}" ]; then
             tags="$tags
-          ghcr.io/${{ steps.lowercase_owner.outputs.owner }}/ubuntu:latest"
+          ghcr.io/${{ steps.lowercase_owner.outputs.owner }}/rocky:latest"
           fi
           {
             echo "tags<<EOF"
@@ -102,42 +102,42 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: ./docker
-          file: ./docker/Dockerfile.ubuntu
+          file: ./docker/Dockerfile.rocky
           push: false
           load: true
           build-args: |
-            UBUNTU_VERSION=${{ matrix.version }}
+            ROCKY_VERSION=${{ matrix.version }}
           tags: ${{ steps.docker_tags.outputs.tags }}
           cache-from: type=gha,scope=${{ github.workflow }}-${{ matrix.version }}
 
       # Caches the package list hash to speed up subsequent runs
-      - name: 'Cache package list hash for Ubuntu ${{ matrix.version }}'
+      - name: 'Cache package list hash for Rocky Linux ${{ matrix.version }}'
         uses: actions/cache@v4
         id: cache-pkg-state
         with:
           path: package-state-${{ matrix.version }}.hash
-          key: ubuntu-pkg-state-${{ matrix.version }}
+          key: rocky-pkg-state-${{ matrix.version }}
 
       # Generates the current package list hash
-      - name: 'Generate package list hash for Ubuntu ${{ matrix.version }}'
+      - name: 'Generate package list hash for Rocky Linux ${{ matrix.version }}'
         id: generate_hash
         run: |
-          echo "Generating package list hash for ghcr.io/${{ steps.lowercase_owner.outputs.owner }}/ubuntu-${{ matrix.codename }}:latest..."
-          CURRENT_HASH=$(docker run --rm ghcr.io/${{ steps.lowercase_owner.outputs.owner }}/ubuntu-${{ matrix.codename }}:latest dpkg-query -W -f='%P\t${Version}\n' | sort | sha256sum | cut -d' ' -f1)
+          echo "Generating package list hash for ghcr.io/${{ steps.lowercase_owner.outputs.owner }}/rocky-${{ matrix.codename }}:latest..."
+          CURRENT_HASH=$(docker run --rm ghcr.io/${{ steps.lowercase_owner.outputs.owner }}/rocky-${{ matrix.codename }}:latest rpm -qa --queryformat '%{NAME}\t%{VERSION}\n' | sort | sha256sum | cut -d' ' -f1)
           echo "Current package hash: $CURRENT_HASH"
           echo "new_hash=$CURRENT_HASH" >> $GITHUB_OUTPUT
 
       # Compares the new hash with the old one to detect changes
-      - name: 'Compare hashes for Ubuntu ${{ matrix.version }}'
+      - name: 'Compare hashes for Rocky Linux ${{ matrix.version }}'
         id: check_changes
         run: |
           OLD_HASH=$(cat package-state-${{ matrix.version }}.hash 2>/dev/null || echo "no-previous-hash")
           NEW_HASH="${{ steps.generate_hash.outputs.new_hash }}"
           if [ "$OLD_HASH" == "$NEW_HASH" ]; then
-            echo "✅ No package changes detected for Ubuntu ${{ matrix.version }}."
+            echo "✅ No package changes detected for Rocky Linux ${{ matrix.version }}."
             echo "changed=false" >> $GITHUB_OUTPUT
           else
-            echo "🚨 Package changes detected for Ubuntu ${{ matrix.version }}! Triggering rebuild."
+            echo "🚨 Package changes detected for Rocky Linux ${{ matrix.version }}! Triggering rebuild."
             echo "changed=true" >> $GITHUB_OUTPUT
             echo $NEW_HASH > package-state-${{ matrix.version }}.hash
           fi
@@ -156,7 +156,7 @@ jobs:
       - name: 'Scan image with Grype and generate all reports'
         if: steps.check_changes.outputs.changed == 'true'
         run: |
-          IMAGE_TAG="ghcr.io/${{ steps.lowercase_owner.outputs.owner }}/ubuntu-${{ matrix.codename }}:latest"
+          IMAGE_TAG="ghcr.io/${{ steps.lowercase_owner.outputs.owner }}/rocky-${{ matrix.codename }}:latest"
           
           echo "--- Generating Grype JSON report for $IMAGE_TAG ---"
 
@@ -186,10 +186,10 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: ./docker
-          file: ./docker/Dockerfile.ubuntu
+          file: ./docker/Dockerfile.rocky
           push: true
           build-args: |
-            UBUNTU_VERSION=${{ matrix.version }}
+            ROCKY_VERSION=${{ matrix.version }}
           tags: ${{ steps.docker_tags.outputs.tags }}
           cache-from: type=gha,scope=${{ github.workflow }}-${{ matrix.version }}
           cache-to: type=gha,mode=max,scope=${{ github.workflow }}-${{ matrix.version }}
@@ -218,7 +218,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           LOWERCASE_OWNER="${{ steps.lowercase_owner.outputs.owner }}"
-          PACKAGE_NAMES="ubuntu $(jq -r '.[] | "ubuntu-" + .codename, "ubuntu-" + .version' versions.env | tr '\n' ' ')"
+          PACKAGE_NAMES="rocky $(jq -r '.[] | "rocky-" + .codename, "rocky-" + .version' versions.env | tr '\n' ' ')"
 
           if [ "${{ steps.owner_type.outputs.type }}" == "Organization" ]; then
             API_BASE_URL="https://api.github.com/orgs/$LOWERCASE_OWNER/packages/container"
@@ -308,7 +308,7 @@ jobs:
               REPORT_URL="https://htmlpreview.github.io/?https://github.com/${{ github.repository }}/blob/main/$report_dir/grype-report-$OS_NAME.html"
               VULN_BADGES_LINE="[![Critical Vulns](https://img.shields.io/badge/Critical-$CRITICAL-red.svg)]($REPORT_URL) [![High Vulns](https://img.shields.io/badge/High-$HIGH-orange.svg)]($REPORT_URL) [![Medium Vulns](https://img.shields.io/badge/Medium-$MEDIUM-yellow.svg)]($REPORT_URL) [![Low Vulns](https://img.shields.io/badge/Low-$LOW-blue.svg)]($REPORT_URL)"
 
-              sed -i "/### Ubuntu $OS_VERSION $OS_NAME_CAPITALIZED/!b;n;c$VULN_BADGES_LINE" README.md
+              sed -i "/### Rocky Linux $OS_VERSION $OS_NAME_CAPITALIZED/!b;n;c$VULN_BADGES_LINE" README.md
           done
 
       # Commits and pushes the changes to the repository
