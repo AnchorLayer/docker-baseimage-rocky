@@ -22,11 +22,11 @@ jobs:
         uses: actions/checkout@v4
       - name: 'Generate matrix and get latest version'
         id: get_versions
-        run: |
-          MATRIX=$(jq -c '{include: .}' versions.env)
-          LATEST_VERSION=$(jq -r '.[0].version' versions.env)
-          echo "matrix=$MATRIX" >> $GITHUB_OUTPUT
-          echo "latest_version=$LATEST_VERSION" >> $GITHUB_OUTPUT
+        run: |\
+          MATRIX=$(jq -c '{include: .}' versions.env)\
+          LATEST_VERSION=$(jq -r '.[0].version' versions.env)\
+          echo "matrix=$MATRIX" >> $GITHUB_OUTPUT\
+          echo "latest_version=$LATEST_VERSION" >> $GITHUB_OUTPUT\
           echo "The latest version is $LATEST_VERSION"
 
   # Job to check for updates and build images
@@ -77,23 +77,19 @@ jobs:
       # Generate Docker tags
       - name: 'Generate Docker tags'
         id: docker_tags
-        run: |
-          tags="ghcr.io/${{ steps.lowercase_owner.outputs.owner }}/rocky-${{ matrix.codename }}:latest
-          ghcr.io/${{ steps.lowercase_owner.outputs.owner }}/rocky-${{ matrix.codename }}:${{ steps.get_date.outputs.date }}
-          ghcr.io/${{ steps.lowercase_owner.outputs.owner }}/rocky-${{ matrix.version }}:latest
-          ghcr.io/${{ steps.lowercase_owner.outputs.owner }}/rocky-${{ matrix.version }}:${{ steps.get_date.outputs.date }}
-          ghcr.io/${{ steps.lowercase_owner.outputs.owner }}/rocky:${{ matrix.version }}-latest
-          ghcr.io/${{ steps.lowercase_owner.outputs.owner }}/rocky:${{ matrix.version }}-${{ steps.get_date.outputs.date }}
-          ghcr.io/${{ steps.lowercase_owner.outputs.owner }}/rocky:${{ matrix.codename }}-latest
-          ghcr.io/${{ steps.lowercase_owner.outputs.owner }}/rocky:${{ matrix.codename }}-${{ steps.get_date.outputs.date }}"
+        run: |\
+          tags="ghcr.io/${{ steps.lowercase_owner.outputs.owner }}/rocky-${{ matrix.version }}:latest\
+          ghcr.io/${{ steps.lowercase_owner.outputs.owner }}/rocky-${{ matrix.version }}:${{ steps.get_date.outputs.date }}\
+          ghcr.io/${{ steps.lowercase_owner.outputs.owner }}/rocky:${{ matrix.version }}-latest\
+          ghcr.io/${{ steps.lowercase_owner.outputs.owner }}/rocky:${{ matrix.version }}-${{ steps.get_date.outputs.date }}"
           if [ "${{ matrix.version }}" == "${{ needs.prepare.outputs.latest_version }}" ]; then
-            tags="$tags
+            tags="$tags\
           ghcr.io/${{ steps.lowercase_owner.outputs.owner }}/rocky:latest"
           fi
-          {
-            echo "tags<<EOF"
-            echo "$tags"
-            echo "EOF"
+          {\
+            echo "tags<<EOF"\
+            echo "$tags"\
+            echo "EOF"\
           } >> "$GITHUB_OUTPUT"
 
       # Builds the Docker image but does not push it
@@ -102,10 +98,10 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: ./docker
-          file: ./docker/Dockerfile.rocky
+          file: ./docker/Dockerfile.rocky${{ matrix.version }}
           push: false
           load: true
-          build-args: |
+          build-args: |\
             ROCKY_VERSION=${{ matrix.version }}
           tags: ${{ steps.docker_tags.outputs.tags }}
           cache-from: type=gha,scope=${{ github.workflow }}-${{ matrix.version }}
@@ -121,16 +117,16 @@ jobs:
       # Generates the current package list hash
       - name: 'Generate package list hash for Rocky Linux ${{ matrix.version }}'
         id: generate_hash
-        run: |
-          echo "Generating package list hash for ghcr.io/${{ steps.lowercase_owner.outputs.owner }}/rocky-${{ matrix.codename }}:latest..."
-          CURRENT_HASH=$(docker run --rm ghcr.io/${{ steps.lowercase_owner.outputs.owner }}/rocky-${{ matrix.codename }}:latest rpm -qa --queryformat '%{NAME}\t%{VERSION}\n' | sort | sha256sum | cut -d' ' -f1)
+        run: |\
+          echo "Generating package list hash for ghcr.io/${{ steps.lowercase_owner.outputs.owner }}/rocky-${{ matrix.version }}:latest..."
+          CURRENT_HASH=$(docker run --rm ghcr.io/${{ steps.lowercase_owner.outputs.owner }}/rocky-${{ matrix.version }}:latest rpm -qa --queryformat '%{NAME}\t%{VERSION}\n' | sort | sha256sum | cut -d' ' -f1)
           echo "Current package hash: $CURRENT_HASH"
           echo "new_hash=$CURRENT_HASH" >> $GITHUB_OUTPUT
 
       # Compares the new hash with the old one to detect changes
       - name: 'Compare hashes for Rocky Linux ${{ matrix.version }}'
         id: check_changes
-        run: |
+        run: |\
           OLD_HASH=$(cat package-state-${{ matrix.version }}.hash 2>/dev/null || echo "no-previous-hash")
           NEW_HASH="${{ steps.generate_hash.outputs.new_hash }}"
           if [ "$OLD_HASH" == "$NEW_HASH" ]; then
@@ -145,7 +141,7 @@ jobs:
       # Installs Grype and clones templates for vulnerability scanning
       - name: 'Install Grype and clone templates'
         if: steps.check_changes.outputs.changed == 'true'
-        run: |
+        run: |\
           curl -sSfL https://raw.githubusercontent.com/anchore/grype/main/install.sh | sh -s -- -b /usr/local/bin
           git clone --depth 1 https://github.com/anchore/grype.git
 
@@ -155,13 +151,13 @@ jobs:
       # multiple times or by carefully combining output options if supported.
       - name: 'Scan image with Grype and generate all reports'
         if: steps.check_changes.outputs.changed == 'true'
-        run: |
-          IMAGE_TAG="ghcr.io/${{ steps.lowercase_owner.outputs.owner }}/rocky-${{ matrix.codename }}:latest"
+        run: |\
+          IMAGE_TAG="ghcr.io/${{ steps.lowercase_owner.outputs.owner }}/rocky-${{ matrix.version }}:latest"
           
           echo "--- Generating Grype JSON report for $IMAGE_TAG ---"
 
           # Run Grype to generate a JSON report
-          grype --scope all-layers $IMAGE_TAG -o json > grype-report-${{ matrix.codename }}.json
+          grype --scope all-layers $IMAGE_TAG -o json > grype-report-${{ matrix.version }}.json
 
           echo "--- JSON report generated successfully. ---"
 
@@ -170,15 +166,15 @@ jobs:
         if: steps.check_changes.outputs.changed == 'true'
         uses: actions/upload-artifact@v4
         with:
-          name: vuln-reports-${{ matrix.codename }}
-          path: |
-            grype-report-${{ matrix.codename }}.json
+          name: vuln-reports-${{ matrix.version }}
+          path: |\
+            grype-report-${{ matrix.version }}.json
             # Uncomment and add other report paths here if you re-enable them
-            # grype-report-${{ matrix.codename }}.sarif
-            # grype-report-${{ matrix.codename }}.cyclonedx.xml
-            # grype-report-${{ matrix.codename }}.cyclonedx.json
-            # grype-report-${{ matrix.codename }}.csv
-            # grype-report-${{ matrix.codename }}.html
+            # grype-report-${{ matrix.version }}.sarif
+            # grype-report-${{ matrix.version }}.cyclonedx.xml
+            # grype-report-${{ matrix.version }}.cyclonedx.json
+            # grype-report-${{ matrix.version }}.csv
+            # grype-report-${{ matrix.version }}.html
 
       # Pushes the Docker image to the registry
       - name: 'Push Docker image'
@@ -186,9 +182,9 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: ./docker
-          file: ./docker/Dockerfile.rocky
+          file: ./docker/Dockerfile.rocky${{ matrix.version }}
           push: true
-          build-args: |
+          build-args: |\
             ROCKY_VERSION=${{ matrix.version }}
           tags: ${{ steps.docker_tags.outputs.tags }}
           cache-from: type=gha,scope=${{ github.workflow }}-${{ matrix.version }}
@@ -209,16 +205,16 @@ jobs:
 
       - name: Get repository owner type
         id: owner_type
-        run: |
+        run: |\
           OWNER_TYPE=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" "https://api.github.com/users/${{ github.repository_owner }}" | jq -r .type)
           echo "type=${OWNER_TYPE}" >> $GITHUB_OUTPUT
 
       - name: Make packages public
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
+        run: |\
           LOWERCASE_OWNER="${{ steps.lowercase_owner.outputs.owner }}"
-          PACKAGE_NAMES="rocky $(jq -r '.[] | "rocky-" + .codename, "rocky-" + .version' versions.env | tr '\n' ' ')"
+          PACKAGE_NAMES="rocky $(jq -r '.[] | "rocky-" + .version' versions.env | tr '\n' ' ')"
 
           if [ "${{ steps.owner_type.outputs.type }}" == "Organization" ]; then
             API_BASE_URL="https://api.github.com/orgs/$LOWERCASE_OWNER/packages/container"
@@ -259,7 +255,7 @@ jobs:
 
       - name: 'Check for downloaded reports'
         id: check_reports
-        run: |
+        run: |\
           if [ -d "reports-tmp" ] && [ -n "$(ls -A reports-tmp)" ]; then
             echo "reports_downloaded=true"
             echo "reports_downloaded=true" >> $GITHUB_OUTPUT
@@ -271,11 +267,11 @@ jobs:
       # Moves the reports into the repository for processing
       - name: 'Move reports into repo'
         if: steps.check_reports.outputs.reports_downloaded == 'true'
-        run: |
+        run: |\
           mkdir -p vuln-reports
           for report_dir in reports-tmp/vuln-reports-*; do
-            OS_NAME=$(basename "$report_dir" | sed 's/vuln-reports-//')
-            TARGET_DIR="vuln-reports-$OS_NAME"
+            OS_VERSION=$(basename "$report_dir" | sed 's/vuln-reports-//')
+            TARGET_DIR="vuln-reports-$OS_VERSION"
             rm -rf "$TARGET_DIR"
             mv "$report_dir" "$TARGET_DIR"
           done
@@ -284,31 +280,32 @@ jobs:
       # Updates the README with vulnerability badges based on the scan results
       - name: 'Update README with vuln badges'
         if: steps.check_reports.outputs.reports_downloaded == 'true'
-        run: |
+        run: |\
           for report_dir in vuln-reports-*; do
-              OS_NAME=$(echo "$report_dir" | sed 's/vuln-reports-//')
-              OS_VERSION=$(jq -r --arg OS_NAME "$OS_NAME" '.[] | select(.codename == $OS_NAME) | .version' versions.env)
-              if [ -z "$OS_VERSION" ]; then
-                  echo "Could not find version for OS name $OS_NAME. Skipping."
-                  continue
-              fi
-              OS_NAME_CAPITALIZED="$(tr '[:lower:]' '[:upper:]' <<< ${OS_NAME:0:1})${OS_NAME:1}"
-              report_path="$report_dir/grype-report-$OS_NAME.csv"
+              OS_VERSION=$(echo "$report_dir" | sed 's/vuln-reports-//')
+              # OS_VERSION is already extracted from the report_dir name, no need to query versions.env again
+              # if [ -z "$OS_VERSION" ]; then
+              #     echo "Could not find version for OS name $OS_NAME. Skipping."
+              #     continue
+              # fi
+              # OS_NAME_CAPITALIZED="$(tr '[:lower:]' '[:upper:]' <<< ${OS_NAME:0:1})${OS_NAME:1}" # Remove this line
+              report_path="$report_dir/grype-report-$OS_VERSION.json" # Changed to .json as per Grype output
 
               if [ ! -f "$report_path" ]; then
-                echo "Vulnerability report not found for $OS_NAME. Skipping."
+                echo "Vulnerability report not found for $OS_VERSION. Skipping."
                 continue
               fi
 
-              CRITICAL=$(grep -c "Critical" "$report_path" || true)
-              HIGH=$(grep -c "High" "$report_path" || true)
-              MEDIUM=$(grep -c "Medium" "$report_path" || true)
-              LOW=$(grep -c "Low" "$report_path" || true)
+              # Parse JSON report to count vulnerabilities
+              CRITICAL=$(jq '.matches[] | select(.vulnerability.severity == "Critical")' "$report_path" | wc -l | tr -d ' ' || true)
+              HIGH=$(jq '.matches[] | select(.vulnerability.severity == "High")' "$report_path" | wc -l | tr -d ' ' || true)
+              MEDIUM=$(jq '.matches[] | select(.vulnerability.severity == "Medium")' "$report_path" | wc -l | tr -d ' ' || true)
+              LOW=$(jq '.matches[] | select(.vulnerability.severity == "Low")' "$report_path" | wc -l | tr -d ' ' || true)
 
-              REPORT_URL="https://htmlpreview.github.io/?https://github.com/${{ github.repository }}/blob/main/$report_dir/grype-report-$OS_NAME.html"
+              REPORT_URL="https://htmlpreview.github.io/?https://github.com/${{ github.repository }}/blob/main/$report_dir/grype-report-$OS_VERSION.html"
               VULN_BADGES_LINE="[![Critical Vulns](https://img.shields.io/badge/Critical-$CRITICAL-red.svg)]($REPORT_URL) [![High Vulns](https://img.shields.io/badge/High-$HIGH-orange.svg)]($REPORT_URL) [![Medium Vulns](https://img.shields.io/badge/Medium-$MEDIUM-yellow.svg)]($REPORT_URL) [![Low Vulns](https://img.shields.io/badge/Low-$LOW-blue.svg)]($REPORT_URL)"
 
-              sed -i "/### Rocky Linux $OS_VERSION $OS_NAME_CAPITALIZED/!b;n;c$VULN_BADGES_LINE" README.md
+              sed -i "/### Rocky Linux $OS_VERSION/!b;n;c$VULN_BADGES_LINE" README.md
           done
 
       # Commits and pushes the changes to the repository
