@@ -1,1 +1,7 @@
-# docker-baseimage-rocky
+## Vulnerability Scan Results
+
+### Rocky Linux 9
+[![Critical Vulns](https://img.shields.io/badge/Critical-0-red.svg)](https://htmlpreview.github.io/?https://github.com/AnchorLayer/docker-baseimage-rocky/blob/main/vuln-reports-rocky9/grype-report-rocky9.html) [![High Vulns](https://img.shields.io/badge/High-0-orange.svg)](https://htmlpreview.github.io/?https://github.com/AnchorLayer/docker-baseimage-rocky/blob/main/vuln-reports-rocky9/grype-report-rocky9.html) [![Medium Vulns](https://img.shields.io/badge/Medium-0-yellow.svg)](https://htmlpreview.github.io/?https://github.com/AnchorLayer/docker-baseimage-rocky/blob/main/vuln-reports-rocky9/grype-report-rocky9.html) [![Low Vulns](https://img.shields.io/badge/Low-0-blue.svg)](https://htmlpreview.github.io/?https://github.com/AnchorLayer/docker-baseimage-rocky/blob/main/vuln-reports-rocky9/grype-report-rocky9.html)
+
+### Rocky Linux 8
+[![Critical Vulns](https://img.shields.io/badge/Critical-0-red.svg)](https://htmlpreview.github.io/?https://github.com/AnchorLayer/docker-baseimage-rocky/blob/main/vuln-reports-rocky8/grype-report-rocky8.html) [![High Vulns](https://img.shields.io/badge/High-0-orange.svg)](https://htmlpreview.github.io/?https://github.com/AnchorLayer/docker-baseimage-rocky/blob/main/vuln-reports-rocky8/grype-report-rocky8.html) [![Medium Vulns](https://img.shields.io/badge/Medium-0-yellow.svg)](https://htmlpreview.github.io/?https://github.com/AnchorLayer/docker-baseimage-rocky/blob/main/vuln-reports-rocky8/grype-report-rocky8.html) [![Low Vulns](https://img.shields.io/badge/Low-0-blue.svg)](https://htmlpreview.github.io/?https://github.com/AnchorLayer/docker-baseimage-rocky/blob/main/vuln-reports-rocky8/grype-report-rocky8.html)
