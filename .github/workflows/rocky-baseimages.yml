@@ -290,8 +290,8 @@ jobs:
         run: |
           mkdir -p vuln-reports
           for report_dir in reports-tmp/vuln-reports-*; do
-            OS_CODENAME=$(basename "$report_dir" | sed 's/vuln-reports-//')
-            TARGET_DIR="vuln-reports-$OS_CODENAME"
+            OS_NAME=$(basename "$report_dir" | sed 's/vuln-reports-//')
+            TARGET_DIR="vuln-reports-$OS_NAME"
             rm -rf "$TARGET_DIR"
             mv "$report_dir" "$TARGET_DIR"
           done
@@ -301,43 +301,30 @@ jobs:
       - name: 'Update README with vuln badges'
         if: steps.check_reports.outputs.reports_downloaded == 'true'
         run: |
-          VERSIONS_DATA=$(cat versions.env)
-          
           for report_dir in vuln-reports-*; do
-              OS_CODENAME=$(echo "$report_dir" | sed 's/vuln-reports-//')
-              
-              # Find the version for the current OS_CODENAME
-              OS_VERSION=$(echo "$VERSIONS_DATA" | jq -r ".[] | select(.codename == \"$OS_CODENAME\") | .version")
-              
-              FULL_OS_NAME="Rocky Linux $OS_VERSION"
-              if [ -n "$OS_CODENAME" ]; then
-                FULL_OS_NAME="$FULL_OS_NAME $OS_CODENAME"
+              OS_NAME=$(echo "$report_dir" | sed 's/vuln-reports-//')
+              OS_VERSION=$(jq -r --arg OS_NAME "$OS_NAME" '.[] | select(.codename == $OS_NAME) | .version' versions.env)
+              if [ -z "$OS_VERSION" ]; then
+                  echo "Could not find version for OS name $OS_NAME. Skipping."
+                  continue
               fi
-
-              report_path="$report_dir/grype-report-$OS_CODENAME.json"
-
+              OS_NAME_CAPITALIZED="$(tr '[:lower:]' '[:upper:]' <<< ${OS_NAME:0:1})${OS_NAME:1}"
+              report_path="$report_dir/grype-report-$OS_NAME.csv"
+          
               if [ ! -f "$report_path" ]; then
-                echo "Vulnerability report not found for $OS_CODENAME. Skipping."
+                echo "Vulnerability report not found for $OS_NAME. Skipping."
                 continue
               fi
-
-              # Parse JSON report to count vulnerabilities
-              CRITICAL=$(jq '.matches[] | select(.vulnerability.severity == "Critical")' "$report_path" | wc -l | tr -d ' ' || true)
-              HIGH=$(jq '.matches[] | select(.vulnerability.severity == "High")' "$report_path" | wc -l | tr -d ' ' || true)
-              MEDIUM=$(jq '.matches[] | select(.vulnerability.severity == "Medium")' "$report_path" | wc -l | tr -d ' ' || true)
-              LOW=$(jq '.matches[] | select(.vulnerability.severity == "Low")' "$report_path" | wc -l | tr -d ' ' || true)
-
-              REPORT_URL="https://htmlpreview.github.io/?https://github.com/${{ github.repository }}/blob/main/$report_dir/grype-report-$OS_CODENAME.html"
+          
+              CRITICAL=$(grep -c "Critical" "$report_path" || true)
+              HIGH=$(grep -c "High" "$report_path" || true)
+              MEDIUM=$(grep -c "Medium" "$report_path" || true)
+              LOW=$(grep -c "Low" "$report_path" || true)
+          
+              REPORT_URL="https://htmlpreview.github.io/?https://github.com/${{ github.repository }}/blob/main/$report_dir/grype-report-$OS_NAME.html"
               VULN_BADGES_LINE="[![Critical Vulns](https://img.shields.io/badge/Critical-$CRITICAL-red.svg)]($REPORT_URL) [![High Vulns](https://img.shields.io/badge/High-$HIGH-orange.svg)]($REPORT_URL) [![Medium Vulns](https://img.shields.io/badge/Medium-$MEDIUM-yellow.svg)]($REPORT_URL) [![Low Vulns](https://img.shields.io/badge/Low-$LOW-blue.svg)]($REPORT_URL)"
-
-              # Find line number of header and replace the next line
-              LINE_NUM=$(grep -n "### $FULL_OS_NAME" README.md | cut -d: -f1)
-              if [ -n "$LINE_NUM" ]; then
-                REPLACE_LINE_NUM=$((LINE_NUM + 1))
-                sed -i "${REPLACE_LINE_NUM}s#.*#$VULN_BADGES_LINE#" README.md
-              else
-                echo "Warning: Could not find header '### $FULL_OS_NAME' in README.md"
-              fi
+          
+              sed -i "/### ROCKY LINUX $OS_VERSION $OS_NAME_CAPITALIZED/!b;n;c$VULN_BADGES_LINE" README.md
           done
 
       # Commits and pushes the changes to the repository
