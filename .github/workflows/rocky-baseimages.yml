@@ -297,19 +297,31 @@ jobs:
           done
           rm -rf reports-tmp
 
+      # Read versions.env to get codenames
+      - name: 'Read versions.env'
+        id: read_versions_env
+        run: |
+          VERSIONS_JSON=$(cat versions.env)
+          echo "versions_data=$VERSIONS_JSON" >> $GITHUB_OUTPUT
+
       # Updates the README with vulnerability badges based on the scan results
       - name: 'Update README with vuln badges'
         if: steps.check_reports.outputs.reports_downloaded == 'true'
         run: |
+          VERSIONS_DATA='${{ steps.read_versions_env.outputs.versions_data }}'
+          
           for report_dir in vuln-reports-*; do
               OS_VERSION=$(echo "$report_dir" | sed 's/vuln-reports-//')
-              # OS_VERSION is already extracted from the report_dir name, no need to query versions.env again
-              # if [ -z "$OS_VERSION" ]; then
-              #     echo "Could not find version for OS name $OS_NAME. Skipping."
-              #     continue
-              # fi
-              # OS_NAME_CAPITALIZED="$(tr '[:lower:]' '[:upper:]' <<< ${OS_NAME:0:1})${OS_NAME:1}" # Remove this line
-              report_path="$report_dir/grype-report-$OS_VERSION.json" # Changed to .json as per Grype output
+              
+              # Find the codename for the current OS_VERSION
+              CODENAME=$(echo "$VERSIONS_DATA" | jq -r ".[] | select(.version == "$OS_VERSION") | .codename")
+              
+              FULL_OS_NAME="Rocky Linux $OS_VERSION"
+              if [ -n "$CODENAME" ]; then
+                FULL_OS_NAME="$FULL_OS_NAME $CODENAME"
+              fi
+
+              report_path="$report_dir/grype-report-$OS_VERSION.json"
 
               if [ ! -f "$report_path" ]; then
                 echo "Vulnerability report not found for $OS_VERSION. Skipping."
@@ -325,7 +337,8 @@ jobs:
               REPORT_URL="https://htmlpreview.github.io/?https://github.com/${{ github.repository }}/blob/main/$report_dir/grype-report-$OS_VERSION.html"
               VULN_BADGES_LINE="[![Critical Vulns](https://img.shields.io/badge/Critical-$CRITICAL-red.svg)]($REPORT_URL) [![High Vulns](https://img.shields.io/badge/High-$HIGH-orange.svg)]($REPORT_URL) [![Medium Vulns](https://img.shields.io/badge/Medium-$MEDIUM-yellow.svg)]($REPORT_URL) [![Low Vulns](https://img.shields.io/badge/Low-$LOW-blue.svg)]($REPORT_URL)"
 
-              sed -i "/### Rocky Linux $OS_VERSION/{n;c\\$VULN_BADGES_LINE}" README.md
+              # Use the full OS name in the sed command
+              sed -i "/### $FULL_OS_NAME/{n;c\$VULN_BADGES_LINE}" README.md
           done
 
       # Commits and pushes the changes to the repository
