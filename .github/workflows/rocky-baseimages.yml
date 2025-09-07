@@ -106,9 +106,10 @@ jobs:
           tags: ${{ steps.docker_tags.outputs.tags }}
           cache-from: type=gha,scope=${{ github.workflow }}-${{ matrix.version }}
 
+      # Capitalize codename
       - name: 'Capitalize codename'
         id: capitalize_codename
-        run: echo "codename=$(echo '${{ matrix.codename }}' | awk '{print toupper(substr($0,1,1))substr($0,2)}')" >> $GITHUB_OUTPUT
+        run: echo "codename=$(echo '${{ matrix.codename }}' | awk '{print toupper(substr($0,1,1))substr($0,2)}' )" >> $GITHUB_OUTPUT
 
       # Caches the package list hash to speed up subsequent runs
       - name: 'Cache package list hash for Rocky Linux ${{ matrix.version }}'
@@ -236,12 +237,12 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           LOWERCASE_OWNER="${{ steps.lowercase_owner.outputs.owner }}"
-          PACKAGE_NAMES="rocky $(jq -r '.[] | "rocky-" + .version' versions.env | tr '\n' ' ')"
+          PACKAGE_NAMES="rocky $(jq -r '.[] | "rocky-" + .version' versions.env | tr '\n' ' ' )"
 
           if [ "${{ steps.owner_type.outputs.type }}" == "Organization" ]; then
             API_BASE_URL="https://api.github.com/orgs/$LOWERCASE_OWNER/packages/container"
           else
-            API_BASE_URL="https://api.github.com/user/packages/container"
+            API_BASE_URL="https://api.github.com/users/$LOWERCASE_OWNER/packages/container"
           fi
 
           for PACKAGE_NAME in $PACKAGE_NAMES; do
@@ -306,7 +307,7 @@ jobs:
           for report_dir in vuln-reports-*; do
               OS_NAME=$(echo "$report_dir" | sed 's/vuln-reports-//')
               OS_NAME_LOWER=$(echo "$OS_NAME" | tr '[:upper:]' '[:lower:]')
-              OS_VERSION=$(jq -r --arg OS_NAME "$OS_NAME_LOWER" '.[] | select(.codename == $OS_NAME) | .version' versions.env)
+              OS_VERSION=$(jq -r --arg OS_NAME "$OS_NAME_LOWER" '.[] | select(.codename == $OS_NAME_LOWER) | .version' versions.env)
               if [ -z "$OS_VERSION" ]; then
                   echo "Could not find version for OS name $OS_NAME. Skipping."
                   continue
