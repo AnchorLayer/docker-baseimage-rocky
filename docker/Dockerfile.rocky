@@ -3,15 +3,15 @@
 ARG ROCKY_VERSION=9
 
 # 2. Use the argument in the FROM instruction to set the base image dynamically.
-FROM rockylinux:${ROCKY_VERSION}
+FROM rockylinux:${ROCKY_VERSION}-minimal
 
 # Set non-interactive to avoid prompts during package installation (though less common for dnf)
 ENV DNF_ASSUMEYES=1
 
 # Update, upgrade, and install some basic packages
-RUN dnf update -y && \
-    dnf upgrade -y && \
-    dnf clean all
+RUN microdnf update -y && \
+    microdnf upgrade -y && \
+    microdnf clean all
 
 # Set a working directory
 WORKDIR /app
