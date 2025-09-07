@@ -67,7 +67,7 @@ jobs:
       # Gets the current date for tagging
       - name: Get current date
         id: get_date
-        run: echo "date=$(date +'\%Y\%m\%d-\%H\%M\%S')" >> $GITHUB_OUTPUT
+        run: echo "date=$(date +'%Y%m%d-%H%M%S')" >> $GITHUB_OUTPUT
 
       # Convert repository owner to lowercase
       - name: 'Convert repository owner to lowercase'
@@ -124,7 +124,7 @@ jobs:
         id: generate_hash
         run: |
           echo "Generating package list hash for ghcr.io/${{ steps.lowercase_owner.outputs.owner }}/rocky-${{ matrix.version }}:latest..."
-          CURRENT_HASH=$(docker run --rm ghcr.io/${{ steps.lowercase_owner.outputs.owner }}/rocky-${{ matrix.version }}:latest rpm -qa --queryformat '%{NAME}\\t%{VERSION}\\n' | sort | sha256sum | cut -d' ' -f1)
+          CURRENT_HASH=$(docker run --rm ghcr.io/${{ steps.lowercase_owner.outputs.owner }}/rocky-${{ matrix.version }}:latest rpm -qa --queryformat '%{NAME}\t%{VERSION}\n' | sort | sha256sum | cut -d' ' -f1)
           echo "Current package hash: $CURRENT_HASH"
           echo "new_hash=$CURRENT_HASH" >> $GITHUB_OUTPUT
 
@@ -237,7 +237,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           LOWERCASE_OWNER="${{ steps.lowercase_owner.outputs.owner }}"
-          PACKAGE_NAMES="rocky $(jq -r '.[] | "rocky-" + .version' versions.env | tr '\\n' ' ' )"
+          PACKAGE_NAMES="rocky $(jq -r '.[] | "rocky-" + .version' versions.env | tr '\n' ' ' )"
 
           if [ "${{ steps.owner_type.outputs.type }}" == "Organization" ]; then
             API_BASE_URL="https://api.github.com/orgs/$LOWERCASE_OWNER/packages/container"
@@ -247,10 +247,10 @@ jobs:
 
           for PACKAGE_NAME in $PACKAGE_NAMES; do
             echo "Making $PACKAGE_NAME public..."
-            curl -s -f -X PATCH \\
-              -H "Authorization: token $GITHUB_TOKEN" \\
-              -H "Accept: application/vnd.github.v3+json" \\
-              "$API_BASE_URL/$PACKAGE_NAME" \\
+            curl -s -f -X PATCH \
+              -H "Authorization: token $GITHUB_TOKEN" \
+              -H "Accept: application/vnd.github.v3+json" \
+              "$API_BASE_URL/$PACKAGE_NAME" \
               -d '{"visibility":"public"}' || echo "Could not make package $PACKAGE_NAME public. It may not exist or is already public."
           done
 
@@ -307,7 +307,7 @@ jobs:
           for report_dir in vuln-reports-*; do
               OS_NAME=$(echo "$report_dir" | sed 's/vuln-reports-//')
               OS_NAME_LOWER=$(echo "$OS_NAME" | tr '[:upper:]' '[:lower:]')
-              OS_VERSION=$(jq -r --arg OS_NAME "$OS_NAME_LOWER" '.[] | select(.codename == $OS_NAME) | .version' versions.env)
+              OS_VERSION=$(jq -r --arg OS_NAME "$OS_NAME_LOWER" '.[] | select(.codename == $OS_NAME_LOWER) | .version' versions.env)
               if [ -z "$OS_VERSION" ]; then
                   echo "Could not find version for OS name $OS_NAME. Skipping."
                   continue
