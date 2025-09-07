@@ -327,7 +327,7 @@ jobs:
               REPORT_URL="https://htmlpreview.github.io/?https://github.com/${{ github.repository }}/blob/main/$report_dir/grype-report-$OS_NAME.html"
               VULN_BADGES_LINE="[![Critical Vulns](https://img.shields.io/badge/Critical-$CRITICAL-red.svg)]($REPORT_URL) [![High Vulns](https://img.shields.io/badge/High-$HIGH-orange.svg)]($REPORT_URL) [![Medium Vulns](https://img.shields.io/badge/Medium-$MEDIUM-yellow.svg)]($REPORT_URL) [![Low Vulns](https://img.shields.io/badge/Low-$LOW-blue.svg)]($REPORT_URL)"
           
-              sed -i "/### ROCKY LINUX $OS_VERSION $OS_NAME/!b;n;c$VULN_BADGES_LINE" README.md
+              sed -i "/### Rocky Linux $OS_VERSION $OS_NAME/!b;n;c$VULN_BADGES_LINE" README.md
           done
 
       # Commits and pushes the changes to the repository
