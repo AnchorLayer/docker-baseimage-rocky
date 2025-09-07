@@ -1,6 +1,6 @@
 ## Vulnerability Scan Results
 
-### Rocky Linux 9 Quartz
+### Rocky Linux 10 Quartz
 [![Critical Vulns](https://img.shields.io/badge/Critical-0-red.svg)](https://htmlpreview.github.io/?https://github.com/AnchorLayer/docker-baseimage-rocky/blob/main/vuln-reports-9/grype-report-9.html) [![High Vulns](https://img.shields.io/badge/High-295-orange.svg)](https://htmlpreview.github.io/?https://github.com/AnchorLayer/docker-baseimage-rocky/blob/main/vuln-reports-9/grype-report-9.html) [![Medium Vulns](https://img.shields.io/badge/Medium-5037-yellow.svg)](https://htmlpreview.github.io/?https://github.com/AnchorLayer/docker-baseimage-rocky/blob/main/vuln-reports-9/grype-report-9.html) [![Low Vulns](https://img.shields.io/badge/Low-29095-blue.svg)](https://htmlpreview.github.io/?https://github.com/AnchorLayer/docker-baseimage-rocky/blob/main/vuln-reports-9/grype-report-9.html)
 
 ### Rocky Linux 9 Onyx
