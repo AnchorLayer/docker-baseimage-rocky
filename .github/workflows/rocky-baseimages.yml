@@ -297,24 +297,17 @@ jobs:
           done
           rm -rf reports-tmp
 
-      # Read versions.env to get codenames
-      - name: 'Read versions.env'
-        id: read_versions_env
-        run: |
-          VERSIONS_JSON=$(cat versions.env)
-          echo "versions_data=$VERSIONS_JSON" >> $GITHUB_OUTPUT
-
       # Updates the README with vulnerability badges based on the scan results
       - name: 'Update README with vuln badges'
         if: steps.check_reports.outputs.reports_downloaded == 'true'
         run: |
-          VERSIONS_DATA='${{ steps.read_versions_env.outputs.versions_data }}'
+          VERSIONS_DATA=$(cat versions.env)
           
           for report_dir in vuln-reports-*; do
               OS_VERSION=$(echo "$report_dir" | sed 's/vuln-reports-//')
               
               # Find the codename for the current OS_VERSION
-              CODENAME=$(echo "$VERSIONS_DATA" | jq -r ".[] | select(.version == "$OS_VERSION") | .codename")
+              CODENAME=$(echo "$VERSIONS_DATA" | jq -r ".[] | select(.version == \"$OS_VERSION\") | .codename")
               
               FULL_OS_NAME="Rocky Linux $OS_VERSION"
               if [ -n "$CODENAME" ]; then
@@ -338,7 +331,7 @@ jobs:
               VULN_BADGES_LINE="[![Critical Vulns](https://img.shields.io/badge/Critical-$CRITICAL-red.svg)]($REPORT_URL) [![High Vulns](https://img.shields.io/badge/High-$HIGH-orange.svg)]($REPORT_URL) [![Medium Vulns](https://img.shields.io/badge/Medium-$MEDIUM-yellow.svg)]($REPORT_URL) [![Low Vulns](https://img.shields.io/badge/Low-$LOW-blue.svg)]($REPORT_URL)"
 
               # Use the full OS name in the sed command
-              sed -i "/### $FULL_OS_NAME/{n;c\$VULN_BADGES_LINE}" README.md
+              sed -i "/### $FULL_OS_NAME/{n;c\\$VULN_BADGES_LINE}" README.md
           done
 
       # Commits and pushes the changes to the repository
