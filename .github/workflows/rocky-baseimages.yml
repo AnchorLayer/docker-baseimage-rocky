@@ -307,7 +307,7 @@ jobs:
           for report_dir in vuln-reports-*; do
               OS_NAME=$(echo "$report_dir" | sed 's/vuln-reports-//')
               OS_NAME_LOWER=$(echo "$OS_NAME" | tr '[:upper:]' '[:lower:]')
-              OS_VERSION=$(jq -r --arg OS_NAME "$OS_NAME_LOWER" '.[] | select(.codename == $OS_NAME_LOWER) | .version' versions.env)
+              OS_VERSION=$(jq -r --arg OS_NAME "$OS_NAME_LOWER" '.[] | select(.codename == $OS_NAME) | .version' versions.env)
               if [ -z "$OS_VERSION" ]; then
                   echo "Could not find version for OS name $OS_NAME. Skipping."
                   continue
