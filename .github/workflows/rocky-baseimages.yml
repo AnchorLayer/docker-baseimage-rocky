@@ -106,6 +106,10 @@ jobs:
           tags: ${{ steps.docker_tags.outputs.tags }}
           cache-from: type=gha,scope=${{ github.workflow }}-${{ matrix.version }}
 
+      - name: 'Capitalize codename'
+        id: capitalize_codename
+        run: echo "codename=$(echo '${{ matrix.codename }}' | awk '{print toupper(substr($0,1,1))substr($0,2)}')" >> $GITHUB_OUTPUT
+
       # Caches the package list hash to speed up subsequent runs
       - name: 'Cache package list hash for Rocky Linux ${{ matrix.version }}'
         uses: actions/cache@v4
@@ -146,13 +150,11 @@ jobs:
           git clone --depth 1 https://github.com/anchore/grype.git
 
       # Scans the image with Grype and generates various vulnerability reports
-      # Simplified Grype command to debug issues with multiple output formats.
-      # If this works, you can re-introduce other formats by running Grype
-      # multiple times or by carefully combining output options if supported.
       - name: 'Scan image with Grype and generate all reports'
         if: steps.check_changes.outputs.changed == 'true'
         run: |
           IMAGE_TAG="ghcr.io/${{ steps.lowercase_owner.outputs.owner }}/rocky-${{ matrix.version }}:latest"
+          CODENAME_CAPITALIZED="${{ steps.capitalize_codename.outputs.codename }}"
           
           # Human-readable summary for the logs (doesn't save a file)
           echo "--- Generating Grype Table Report (for logs) ---"
@@ -160,41 +162,41 @@ jobs:
 
           # JSON report (machine-readable, most detailed)
           echo "--- Generating Grype JSON Report ---"
-          grype --scope all-layers $IMAGE_TAG -o json > grype-report-${{ matrix.codename }}.json
+          grype --scope all-layers $IMAGE_TAG -o json > "grype-report-$CODENAME_CAPITALIZED.json"
 
           # SARIF report for security dashboards (e.g., GitHub Security tab)
           echo "--- Generating Grype SARIF Report ---"
-          grype --scope all-layers $IMAGE_TAG -o sarif > grype-report-${{ matrix.codename }}.sarif
+          grype --scope all-layers $IMAGE_TAG -o sarif > "grype-report-$CODENAME_CAPITALIZED.sarif"
 
           # CycloneDX XML report (SBOM format)
           echo "--- Generating Grype CycloneDX XML Report ---"
-          grype --scope all-layers $IMAGE_TAG -o cyclonedx > grype-report-${{ matrix.codename }}.cyclonedx.xml
+          grype --scope all-layers $IMAGE_TAG -o cyclonedx > "grype-report-$CODENAME_CAPITALIZED.cyclonedx.xml"
 
           # CycloneDX JSON report (SBOM format)
           echo "--- Generating Grype CycloneDX JSON Report ---"
-          grype --scope all-layers $IMAGE_TAG -o cyclonedx-json > grype-report-${{ matrix.codename }}.cyclonedx.json
+          grype --scope all-layers $IMAGE_TAG -o cyclonedx-json > "grype-report-$CODENAME_CAPITALIZED.cyclonedx.json"
 
           # Custom CSV template report
           echo "--- Generating Grype Custom CSV Report ---"
-          grype --scope all-layers $IMAGE_TAG -o template -t grype/templates/csv.tmpl > grype-report-${{ matrix.codename }}.csv
+          grype --scope all-layers $IMAGE_TAG -o template -t grype/templates/csv.tmpl > "grype-report-$CODENAME_CAPITALIZED.csv"
 
           # Custom HTML template report
           echo "--- Generating Grype Custom HTML Report ---"
-          grype --scope all-layers $IMAGE_TAG -o template -t grype/templates/html.tmpl > grype-report-${{ matrix.codename }}.html
+          grype --scope all-layers $IMAGE_TAG -o template -t grype/templates/html.tmpl > "grype-report-$CODENAME_CAPITALIZED.html"
 
       # Uploads the generated vulnerability reports as artifacts
       - name: 'Upload vulnerability reports'
         if: steps.check_changes.outputs.changed == 'true'
         uses: actions/upload-artifact@v4
         with:
-          name: vuln-reports-${{ matrix.codename }}
+          name: vuln-reports-${{ steps.capitalize_codename.outputs.codename }}
           path: |
-            grype-report-${{ matrix.codename }}.json
-            grype-report-${{ matrix.codename }}.sarif
-            grype-report-${{ matrix.codename }}.cyclonedx.xml
-            grype-report-${{ matrix.codename }}.cyclonedx.json
-            grype-report-${{ matrix.codename }}.csv
-            grype-report-${{ matrix.codename }}.html
+            grype-report-${{ steps.capitalize_codename.outputs.codename }}.json
+            grype-report-${{ steps.capitalize_codename.outputs.codename }}.sarif
+            grype-report-${{ steps.capitalize_codename.outputs.codename }}.cyclonedx.xml
+            grype-report-${{ steps.capitalize_codename.outputs.codename }}.cyclonedx.json
+            grype-report-${{ steps.capitalize_codename.outputs.codename }}.csv
+            grype-report-${{ steps.capitalize_codename.outputs.codename }}.html
 
       # Pushes the Docker image to the registry
       - name: 'Push Docker image'
@@ -303,12 +305,12 @@ jobs:
         run: |
           for report_dir in vuln-reports-*; do
               OS_NAME=$(echo "$report_dir" | sed 's/vuln-reports-//')
-              OS_VERSION=$(jq -r --arg OS_NAME "$OS_NAME" '.[] | select(.codename == $OS_NAME) | .version' versions.env)
+              OS_NAME_LOWER=$(echo "$OS_NAME" | tr '[:upper:]' '[:lower:]')
+              OS_VERSION=$(jq -r --arg OS_NAME "$OS_NAME_LOWER" '.[] | select(.codename == $OS_NAME) | .version' versions.env)
               if [ -z "$OS_VERSION" ]; then
                   echo "Could not find version for OS name $OS_NAME. Skipping."
                   continue
               fi
-              OS_NAME_CAPITALIZED="$(tr '[:lower:]' '[:upper:]' <<< ${OS_NAME:0:1})${OS_NAME:1}"
               report_path="$report_dir/grype-report-$OS_NAME.csv"
           
               if [ ! -f "$report_path" ]; then
@@ -324,7 +326,7 @@ jobs:
               REPORT_URL="https://htmlpreview.github.io/?https://github.com/${{ github.repository }}/blob/main/$report_dir/grype-report-$OS_NAME.html"
               VULN_BADGES_LINE="[![Critical Vulns](https://img.shields.io/badge/Critical-$CRITICAL-red.svg)]($REPORT_URL) [![High Vulns](https://img.shields.io/badge/High-$HIGH-orange.svg)]($REPORT_URL) [![Medium Vulns](https://img.shields.io/badge/Medium-$MEDIUM-yellow.svg)]($REPORT_URL) [![Low Vulns](https://img.shields.io/badge/Low-$LOW-blue.svg)]($REPORT_URL)"
           
-              sed -i "/### ROCKY LINUX $OS_VERSION $OS_NAME_CAPITALIZED/!b;n;c$VULN_BADGES_LINE" README.md
+              sed -i "/### ROCKY LINUX $OS_VERSION $OS_NAME/!b;n;c$VULN_BADGES_LINE" README.md
           done
 
       # Commits and pushes the changes to the repository
