@@ -290,8 +290,8 @@ jobs:
         run: |
           mkdir -p vuln-reports
           for report_dir in reports-tmp/vuln-reports-*; do
-            OS_VERSION=$(basename "$report_dir" | sed 's/vuln-reports-//')
-            TARGET_DIR="vuln-reports-$OS_VERSION"
+            OS_CODENAME=$(basename "$report_dir" | sed 's/vuln-reports-//')
+            TARGET_DIR="vuln-reports-$OS_CODENAME"
             rm -rf "$TARGET_DIR"
             mv "$report_dir" "$TARGET_DIR"
           done
@@ -304,20 +304,20 @@ jobs:
           VERSIONS_DATA=$(cat versions.env)
           
           for report_dir in vuln-reports-*; do
-              OS_VERSION=$(echo "$report_dir" | sed 's/vuln-reports-//')
+              OS_CODENAME=$(echo "$report_dir" | sed 's/vuln-reports-//')
               
-              # Find the codename for the current OS_VERSION
-              CODENAME=$(echo "$VERSIONS_DATA" | jq -r ".[] | select(.version == \"$OS_VERSION\") | .codename")
+              # Find the version for the current OS_CODENAME
+              OS_VERSION=$(echo "$VERSIONS_DATA" | jq -r ".[] | select(.codename == \"$OS_CODENAME\") | .version")
               
               FULL_OS_NAME="Rocky Linux $OS_VERSION"
-              if [ -n "$CODENAME" ]; then
-                FULL_OS_NAME="$FULL_OS_NAME $CODENAME"
+              if [ -n "$OS_CODENAME" ]; then
+                FULL_OS_NAME="$FULL_OS_NAME $OS_CODENAME"
               fi
 
-              report_path="$report_dir/grype-report-$OS_VERSION.json"
+              report_path="$report_dir/grype-report-$OS_CODENAME.json"
 
               if [ ! -f "$report_path" ]; then
-                echo "Vulnerability report not found for $OS_VERSION. Skipping."
+                echo "Vulnerability report not found for $OS_CODENAME. Skipping."
                 continue
               fi
 
@@ -327,11 +327,17 @@ jobs:
               MEDIUM=$(jq '.matches[] | select(.vulnerability.severity == "Medium")' "$report_path" | wc -l | tr -d ' ' || true)
               LOW=$(jq '.matches[] | select(.vulnerability.severity == "Low")' "$report_path" | wc -l | tr -d ' ' || true)
 
-              REPORT_URL="https://htmlpreview.github.io/?https://github.com/${{ github.repository }}/blob/main/$report_dir/grype-report-$OS_VERSION.html"
+              REPORT_URL="https://htmlpreview.github.io/?https://github.com/${{ github.repository }}/blob/main/$report_dir/grype-report-$OS_CODENAME.html"
               VULN_BADGES_LINE="[![Critical Vulns](https://img.shields.io/badge/Critical-$CRITICAL-red.svg)]($REPORT_URL) [![High Vulns](https://img.shields.io/badge/High-$HIGH-orange.svg)]($REPORT_URL) [![Medium Vulns](https://img.shields.io/badge/Medium-$MEDIUM-yellow.svg)]($REPORT_URL) [![Low Vulns](https://img.shields.io/badge/Low-$LOW-blue.svg)]($REPORT_URL)"
 
-              # Use the full OS name in the sed command
-              sed -i "/### $FULL_OS_NAME/{n;c\\$VULN_BADGES_LINE}" README.md
+              # Find line number of header and replace the next line
+              LINE_NUM=$(grep -n "### $FULL_OS_NAME" README.md | cut -d: -f1)
+              if [ -n "$LINE_NUM" ]; then
+                REPLACE_LINE_NUM=$((LINE_NUM + 1))
+                sed -i "${REPLACE_LINE_NUM}s#.*#$VULN_BADGES_LINE#" README.md
+              else
+                echo "Warning: Could not find header '### $FULL_OS_NAME' in README.md"
+              fi
           done
 
       # Commits and pushes the changes to the repository
