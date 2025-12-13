@@ -766,7 +766,7 @@
                     <dd id="typeValue">image</dd><dt>Checksum:</dt>
                     <dd id="checksumValue">sha256:f376ba4b3b4e88e41bedc1d3756b8260edb64b3b311860cb50363435605ee0d0</dd><dt>Date:</dt>
                     <dd>
-                        <span id="dateElement">2025-12-13T09:15:52.972445312Z</span>
+                        <span id="dateElement">2025-12-13T09:39:13.770569518Z</span>
                         <span id="prettyDateElement" style="display: none;"></span>
                     </dd>
                 </dl>
@@ -1198,6 +1198,38 @@ it on an insecure host should not be okay.</td>
                         <td>pkg:rpm/rocky/libxml2@2.9.13-14.el9_7?arch=x86_64&distro=rocky-9.7&upstream=libxml2-2.9.13-14.el9_7.src.rpm</td>
                     </tr>
                     <tr>
+                        <td>libssh</td>
+                        <td>0.10.4-15.el9_6</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-5372">CVE-2025-5372</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in libssh versions built with OpenSSL versions older than 3.0, specifically in the ssh_kdf() function responsible for key derivation. Due to inconsistent interpretation of return values where OpenSSL uses 0 to indicate failure and libssh uses 0 for success—the function may mistakenly return a success status even when key derivation fails. This results in uninitialized cryptographic key buffers being used in subsequent communication, potentially compromising SSH sessions&#39; confidentiality, integrity, and availability.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/libssh@0.10.4-15.el9_6?arch=x86_64&distro=rocky-9.7&upstream=libssh-0.10.4-15.el9_6.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>libssh-config</td>
+                        <td>0.10.4-15.el9_6</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-5372">CVE-2025-5372</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in libssh versions built with OpenSSL versions older than 3.0, specifically in the ssh_kdf() function responsible for key derivation. Due to inconsistent interpretation of return values where OpenSSL uses 0 to indicate failure and libssh uses 0 for success—the function may mistakenly return a success status even when key derivation fails. This results in uninitialized cryptographic key buffers being used in subsequent communication, potentially compromising SSH sessions&#39; confidentiality, integrity, and availability.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/libssh-config@0.10.4-15.el9_6?arch=noarch&distro=rocky-9.7&upstream=libssh-0.10.4-15.el9_6.src.rpm</td>
+                    </tr>
+                    <tr>
                         <td>pcre2</td>
                         <td>10.40-6.el9</td>
                         <td>rpm</td>
@@ -1356,38 +1388,6 @@ it on an insecure host should not be okay.</td>
                         <td>A flaw was found in glib. This vulnerability allows a heap buffer overflow and denial-of-service (DoS) via an integer overflow in GLib&#39;s GIO (GLib Input/Output) escape_byte_string() function when processing malicious file or remote filesystem attribute values.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/glib2@2.68.4-18.el9_7?arch=x86_64&distro=rocky-9.7&upstream=glib2-2.68.4-18.el9_7.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>libssh</td>
-                        <td>0.10.4-15.el9_6</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2025-5372">CVE-2025-5372</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in libssh versions built with OpenSSL versions older than 3.0, specifically in the ssh_kdf() function responsible for key derivation. Due to inconsistent interpretation of return values where OpenSSL uses 0 to indicate failure and libssh uses 0 for success—the function may mistakenly return a success status even when key derivation fails. This results in uninitialized cryptographic key buffers being used in subsequent communication, potentially compromising SSH sessions&#39; confidentiality, integrity, and availability.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/libssh@0.10.4-15.el9_6?arch=x86_64&distro=rocky-9.7&upstream=libssh-0.10.4-15.el9_6.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>libssh-config</td>
-                        <td>0.10.4-15.el9_6</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2025-5372">CVE-2025-5372</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in libssh versions built with OpenSSL versions older than 3.0, specifically in the ssh_kdf() function responsible for key derivation. Due to inconsistent interpretation of return values where OpenSSL uses 0 to indicate failure and libssh uses 0 for success—the function may mistakenly return a success status even when key derivation fails. This results in uninitialized cryptographic key buffers being used in subsequent communication, potentially compromising SSH sessions&#39; confidentiality, integrity, and availability.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/libssh-config@0.10.4-15.el9_6?arch=noarch&distro=rocky-9.7&upstream=libssh-0.10.4-15.el9_6.src.rpm</td>
                     </tr>
                     <tr>
                         <td>libssh</td>
@@ -1715,7 +1715,7 @@ boundary.</td>
                         <td>
                             N/A
                         </td>
-                        <td>A vulnerability has been identified in the libarchive library. This flaw involves an integer overflow that can be triggered when processing a Web Archive (WARC) file that claims to have more than INT64_MAX - 4 content bytes. An attacker could craft a malicious WARC archive to induce this overflow, potentially leading to unpredictable program behavior, memory corruption, or a denial-of-service condition within applications that process such archives using libarchive.</td>
+                        <td>A vulnerability has been identified in the libarchive library. This flaw involves an integer overflow that can be triggered when processing a Web Archive (WARC) file that claims to have more than INT64_MAX - 4 content bytes. An attacker could craft a malicious WARC archive to induce this overflow, potentially leading to unpredictable program behavior, memory corruption, or a denial-of-service condition within applications that process such archives using libarchive. This bug affects libarchive versions prior to 3.8.0.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/libarchive@3.5.3-6.el9_6?arch=x86_64&distro=rocky-9.7&upstream=libarchive-3.5.3-6.el9_6.src.rpm</td>
                     </tr>
@@ -1939,7 +1939,7 @@ boundary.</td>
                         <td>
                             N/A
                         </td>
-                        <td>A vulnerability has been identified in the libarchive library. This flaw involves an &#39;off-by-one&#39; miscalculation when handling prefixes and suffixes for file names. This can lead to a 1-byte write overflow. While seemingly small, such an overflow can corrupt adjacent memory, leading to unpredictable program behavior, crashes, or in specific circumstances, could be leveraged as a building block for more sophisticated exploitation.</td>
+                        <td>A vulnerability has been identified in the libarchive library. This flaw involves an &#39;off-by-one&#39; miscalculation when handling prefixes and suffixes for file names. This can lead to a 1-byte write overflow. While seemingly small, such an overflow can corrupt adjacent memory, leading to unpredictable program behavior, crashes, or in specific circumstances, could be leveraged as a building block for more sophisticated exploitation. This bug affects libarchive versions prior to 3.8.0.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/libarchive@3.5.3-6.el9_6?arch=x86_64&distro=rocky-9.7&upstream=libarchive-3.5.3-6.el9_6.src.rpm</td>
                     </tr>
