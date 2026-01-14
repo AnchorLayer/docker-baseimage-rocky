@@ -304,27 +304,6 @@
               }
             },
             {
-              "id": "CVE-2026-22184-zlib",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-22184 high vulnerability for zlib package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in zlib. A global buffer overflow vulnerability exists in the `untgz` utility, specifically within the `TGZfname()` function. This flaw allows an attacker to provide an archive name longer than 1024 bytes, leading to an out-of-bounds write. This can result in memory corruption, denial of service, and potentially arbitrary code execution on the affected system."
-              },
-              "helpUri": "https://github.com/anchore/grype",
-              "help": {
-                "text": "Vulnerability CVE-2026-22184\nSeverity: high\nPackage: zlib\nVersion: 1.2.11-40.el9\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-22184](https://access.redhat.com/security/cve/CVE-2026-22184)",
-                "markdown": "**Vulnerability CVE-2026-22184**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| high  | zlib  | 1.2.11-40.el9  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-22184](https://access.redhat.com/security/cve/CVE-2026-22184)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/zlib@1.2.11-40.el9?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=zlib-1.2.11-40.el9.src.rpm"
-                ],
-                "security-severity": "8.6"
-              }
-            },
-            {
               "id": "CVE-2023-32636-glib2",
               "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
@@ -2062,37 +2041,6 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "79a73284139d65c3916a6fbb7dad015e91f47ab35f194139cfab47275f1c14be:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2026-22184-zlib",
-          "level": "error",
-          "message": {
-            "text": "A high vulnerability in rpm package: zlib, version 1.2.11-40.el9 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:4399bb3147e5af0f9f6057bd99266fa171dd752ebe4e46e204e406ad3b5504f6:/var/lib/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "06f17a4a6c4c976c5e0ac44e7962a12184171208dba661c11a8952d84abf2b89:1"
           }
         },
         {
