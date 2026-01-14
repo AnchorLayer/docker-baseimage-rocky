@@ -773,7 +773,7 @@
                     <dd id="typeValue">image</dd><dt>Checksum:</dt>
                     <dd id="checksumValue">sha256:f376ba4b3b4e88e41bedc1d3756b8260edb64b3b311860cb50363435605ee0d0</dd><dt>Date:</dt>
                     <dd>
-                        <span id="dateElement">2026-01-14T08:24:07.204260942Z</span>
+                        <span id="dateElement">2026-01-14T08:53:54.432041001Z</span>
                         <span id="prettyDateElement" style="display: none;"></span>
                     </dd>
                 </dl>
@@ -1051,6 +1051,22 @@
                         <td>pkg:rpm/rocky/libssh-config@0.10.4-15.el9_6?arch=noarch&distro=rocky-9.7&upstream=libssh-0.10.4-15.el9_6.src.rpm</td>
                     </tr>
                     <tr>
+                        <td>zlib</td>
+                        <td>1.2.11-40.el9</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-22184">CVE-2026-22184</a>
+                        </td>
+                        <td>High</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in zlib. A global buffer overflow vulnerability exists in the `untgz` utility, specifically within the `TGZfname()` function. This flaw allows an attacker to provide an archive name longer than 1024 bytes, leading to an out-of-bounds write. This can result in memory corruption, denial of service, and potentially arbitrary code execution on the affected system.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/zlib@1.2.11-40.el9?arch=x86_64&distro=rocky-9.7&upstream=zlib-1.2.11-40.el9.src.rpm</td>
+                    </tr>
+                    <tr>
                         <td>glib2</td>
                         <td>2.68.4-18.el9_7</td>
                         <td>rpm</td>
@@ -1081,22 +1097,6 @@
                         <td>A flaw was found in libxml2. This vulnerability allows a NULL pointer dereference, leading to a potential crash or denial of service via a crafted XML pattern.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/libxml2@2.9.13-14.el9_7?arch=x86_64&distro=rocky-9.7&upstream=libxml2-2.9.13-14.el9_7.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>zlib</td>
-                        <td>1.2.11-40.el9</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-22184">CVE-2026-22184</a>
-                        </td>
-                        <td>High</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in zlib. A global buffer overflow vulnerability exists in the `untgz` utility, specifically within the `TGZfname()` function. This flaw allows an attacker to provide an archive name longer than 1024 bytes, leading to an out-of-bounds write. This can result in memory corruption, denial of service, and potentially arbitrary code execution on the affected system.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/zlib@1.2.11-40.el9?arch=x86_64&distro=rocky-9.7&upstream=zlib-1.2.11-40.el9.src.rpm</td>
                     </tr>
                     <tr>
                         <td>libarchive</td>
@@ -1407,6 +1407,22 @@
                         <td>pkg:rpm/rocky/glib2@2.68.4-18.el9_7?arch=x86_64&distro=rocky-9.7&upstream=glib2-2.68.4-18.el9_7.src.rpm</td>
                     </tr>
                     <tr>
+                        <td>libtasn1</td>
+                        <td>4.16.0-9.el9</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-13151">CVE-2025-13151</a>
+                        </td>
+                        <td>Low</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in libtasn1. A remote attacker could exploit a stack-based buffer overflow vulnerability in the `asn1_expend_octet_string` function. This occurs due to a failure in validating the size of input data. Successful exploitation can lead to a Denial of Service (DoS) condition, making the affected system or application unavailable.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/libtasn1@4.16.0-9.el9?arch=x86_64&distro=rocky-9.7&upstream=libtasn1-4.16.0-9.el9.src.rpm</td>
+                    </tr>
+                    <tr>
                         <td>libgcc</td>
                         <td>11.5.0-11.el9</td>
                         <td>rpm</td>
@@ -1453,22 +1469,6 @@
                         <td>Scrapy are vulnerable to a denial of service (DoS) attack due to a flaw in its brotli decompression implementation. The protection mechanism against decompression bombs fails to mitigate the brotli variant, allowing remote servers to crash clients with less than 80GB of available memory. This occurs because brotli can achieve extremely high compression ratios for zero-filled data, leading to excessive memory consumption during decompression.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/libbrotli@1.0.9-7.el9_5?arch=x86_64&distro=rocky-9.7&upstream=brotli-1.0.9-7.el9_5.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>libtasn1</td>
-                        <td>4.16.0-9.el9</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2025-13151">CVE-2025-13151</a>
-                        </td>
-                        <td>Low</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in libtasn1. A remote attacker could exploit a stack-based buffer overflow vulnerability in the `asn1_expend_octet_string` function. This occurs due to a failure in validating the size of input data. Successful exploitation can lead to a Denial of Service (DoS) condition, making the affected system or application unavailable.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/libtasn1@4.16.0-9.el9?arch=x86_64&distro=rocky-9.7&upstream=libtasn1-4.16.0-9.el9.src.rpm</td>
                     </tr>
                     <tr>
                         <td>curl</td>
@@ -1607,6 +1607,22 @@ it on an insecure host should not be okay.</td>
                         <td>A flaw was found in libssh, a library that implements the SSH protocol. When calculating the session ID during the key exchange (KEX) process, an allocation failure in cryptographic functions may lead to a NULL pointer dereference. This issue can cause the client or server to crash.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/libssh-config@0.10.4-15.el9_6?arch=noarch&distro=rocky-9.7&upstream=libssh-0.10.4-15.el9_6.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>openldap</td>
+                        <td>2.6.8-4.el9.0.1</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-22185">CVE-2026-22185</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in OpenLDAP Lightning Memory-Mapped Database (LMDB) mdb_load. When processing malformed input, a local attacker can exploit a heap buffer underflow vulnerability in the readline() function. This can lead to an out-of-bounds read, potentially causing a denial of service (DoS) and limited disclosure of heap memory contents.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/openldap@2.6.8-4.el9.0.1?arch=x86_64&distro=rocky-9.7&upstream=openldap-2.6.8-4.el9.0.1.src.rpm</td>
                     </tr>
                     <tr>
                         <td>libarchive</td>
@@ -1921,22 +1937,6 @@ boundary.</td>
                         <td>A flaw was found in GNU Coreutils. The sort utility&#39;s begfield() function is vulnerable to a heap buffer under-read. The program may access memory outside the allocated buffer if a user runs a crafted command using the traditional key format. A malicious input could lead to a crash or leak sensitive data.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/coreutils-single@8.32-39.el9?arch=x86_64&distro=rocky-9.7&upstream=coreutils-8.32-39.el9.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>openldap</td>
-                        <td>2.6.8-4.el9.0.1</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-22185">CVE-2026-22185</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in OpenLDAP Lightning Memory-Mapped Database (LMDB) mdb_load. When processing malformed input, a local attacker can exploit a heap buffer underflow vulnerability in the readline() function. This can lead to an out-of-bounds read, potentially causing a denial of service (DoS) and limited disclosure of heap memory contents.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/openldap@2.6.8-4.el9.0.1?arch=x86_64&distro=rocky-9.7&upstream=openldap-2.6.8-4.el9.0.1.src.rpm</td>
                     </tr>
                     <tr>
                         <td>libarchive</td>
