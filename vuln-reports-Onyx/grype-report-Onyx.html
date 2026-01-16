@@ -758,6 +758,13 @@
     
     
     
+    
+    
+    
+    
+    
+    
+    
 
 <body>
     <div class="main-container">
@@ -772,7 +779,7 @@
                     <dd id="typeValue">image</dd><dt>Checksum:</dt>
                     <dd id="checksumValue">sha256:f376ba4b3b4e88e41bedc1d3756b8260edb64b3b311860cb50363435605ee0d0</dd><dt>Date:</dt>
                     <dd>
-                        <span id="dateElement">2026-01-16T06:27:30.074855638Z</span>
+                        <span id="dateElement">2026-01-16T06:56:48.086749104Z</span>
                         <span id="prettyDateElement" style="display: none;"></span>
                     </dd>
                 </dl>
@@ -789,15 +796,15 @@
             </div>
             <div class="severity-box" id="high">
                 <div class="severity-title">High</div>
-                <div class="severity-count" id="highCount">2</div>
+                <div class="severity-count" id="highCount">5</div>
             </div>
             <div class="severity-box" id="medium">
                 <div class="severity-title">Medium</div>
-                <div class="severity-count" id="mediumCount">31</div>
+                <div class="severity-count" id="mediumCount">32</div>
             </div>
             <div class="severity-box" id="low">
                 <div class="severity-title">Low</div>
-                <div class="severity-count" id="lowCount">42</div>
+                <div class="severity-count" id="lowCount">45</div>
             </div>
             <div class="severity-box" id="unknown">
                 <div class="severity-title">Unknown</div>
@@ -1544,6 +1551,54 @@ it on an insecure host should not be okay.</td>
                         <td>pkg:rpm/rocky/gawk@5.1.0-6.el9?arch=x86_64&distro=rocky-9.7&upstream=gawk-5.1.0-6.el9.src.rpm</td>
                     </tr>
                     <tr>
+                        <td>glibc</td>
+                        <td>2.34-231.el9_7.2</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-0861">CVE-2026-0861</a>
+                        </td>
+                        <td>High</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in the glibc library. Passing an excessively large alignment value to the memalign suite of functions, such as memalign, posix_memalign, aligned_alloc, valloc and pvalloc, an integer overflow can occur during internal size calculations due to improper overflow checks, causing an allocation of a small chunk of memory which is subsequently used for writing. This issue can result in an application crash or heap memory corruption.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/glibc@2.34-231.el9_7.2?arch=x86_64&distro=rocky-9.7&upstream=glibc-2.34-231.el9_7.2.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>glibc-common</td>
+                        <td>2.34-231.el9_7.2</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-0861">CVE-2026-0861</a>
+                        </td>
+                        <td>High</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in the glibc library. Passing an excessively large alignment value to the memalign suite of functions, such as memalign, posix_memalign, aligned_alloc, valloc and pvalloc, an integer overflow can occur during internal size calculations due to improper overflow checks, causing an allocation of a small chunk of memory which is subsequently used for writing. This issue can result in an application crash or heap memory corruption.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/glibc-common@2.34-231.el9_7.2?arch=x86_64&distro=rocky-9.7&upstream=glibc-2.34-231.el9_7.2.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>glibc-minimal-langpack</td>
+                        <td>2.34-231.el9_7.2</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-0861">CVE-2026-0861</a>
+                        </td>
+                        <td>High</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in the glibc library. Passing an excessively large alignment value to the memalign suite of functions, such as memalign, posix_memalign, aligned_alloc, valloc and pvalloc, an integer overflow can occur during internal size calculations due to improper overflow checks, causing an allocation of a small chunk of memory which is subsequently used for writing. This issue can result in an application crash or heap memory corruption.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/glibc-minimal-langpack@2.34-231.el9_7.2?arch=x86_64&distro=rocky-9.7&upstream=glibc-2.34-231.el9_7.2.src.rpm</td>
+                    </tr>
+                    <tr>
                         <td>curl</td>
                         <td>7.76.1-34.el9</td>
                         <td>rpm</td>
@@ -1658,22 +1713,6 @@ This prevents curl from detecting MITM attackers and more.</td>
                         <td>A vulnerability in apply_substitution() function in libarchive&#39;s bsdtar allows crafted -s substitution rules to repeatedly match a zero-length substring and append replacements without advancing the input pointer. When the rule uses the global /g flag (or an explicitly empty pattern), this leads to unbounded output allocation and eventual process OOM (Denial of Service). Upgrade to libarchive 3.8.1 or apply a patch that prevents zero-length match loops or rejects empty patterns.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/libarchive@3.5.3-6.el9_6?arch=x86_64&distro=rocky-9.7&upstream=libarchive-3.5.3-6.el9_6.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>gnupg2</td>
-                        <td>2.3.3-4.el9</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2025-68973">CVE-2025-68973</a>
-                        </td>
-                        <td>High</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in GnuPG. An attacker can provide crafted input to the `armor_filter` function, which incorrectly increments an index variable, leading to an out-of-bounds write. This memory corruption vulnerability may allow for information disclosure and could potentially lead to arbitrary code execution.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/gnupg2@2.3.3-4.el9?arch=x86_64&distro=rocky-9.7&upstream=gnupg2-2.3.3-4.el9.src.rpm</td>
                     </tr>
                     <tr>
                         <td>libarchive</td>
@@ -1922,6 +1961,24 @@ boundary.</td>
                         <td>pkg:rpm/rocky/coreutils-single@8.32-39.el9?arch=x86_64&distro=rocky-9.7&upstream=coreutils-8.32-39.el9.src.rpm</td>
                     </tr>
                     <tr>
+                        <td>gnupg2</td>
+                        <td>2.3.3-4.el9</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-68973">CVE-2025-68973</a>
+                        </td>
+                        <td>High</td>
+                        <td>fixed</td>
+                        <td>
+                            <ul>
+                                <li>0:2.3.3-5.el9_7</li>
+                            </ul>
+                        </td>
+                        <td>A flaw was found in GnuPG. An attacker can provide crafted input to the `armor_filter` function, which incorrectly increments an index variable, leading to an out-of-bounds write. This memory corruption vulnerability may allow for information disclosure and could potentially lead to arbitrary code execution.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/gnupg2@2.3.3-4.el9?arch=x86_64&distro=rocky-9.7&upstream=gnupg2-2.3.3-4.el9.src.rpm</td>
+                    </tr>
+                    <tr>
                         <td>libarchive</td>
                         <td>3.5.3-6.el9_6</td>
                         <td>rpm</td>
@@ -2112,6 +2169,70 @@ boundary.</td>
                         <td>A flaw was found in GnuPG. An adversary can exploit this vulnerability by crafting a signed message that includes a form feed character (\f) at the end of a plaintext line. This allows the adversary to append additional, unsigned text to the message while the signature verification still reports success. This issue leads to an integrity bypass, potentially enabling the spoofing of signed communications.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/gnupg2@2.3.3-4.el9?arch=x86_64&distro=rocky-9.7&upstream=gnupg2-2.3.3-4.el9.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>libxml2</td>
+                        <td>2.9.13-14.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-0990">CVE-2026-0990</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in libxml2, an XML parsing library. This uncontrolled recursion vulnerability occurs in the xmlCatalogXMLResolveURI function when an XML catalog contains a delegate URI entry that references itself. A remote attacker could exploit this configuration-dependent issue by providing a specially crafted XML catalog, leading to infinite recursion and call stack exhaustion. This ultimately results in a segmentation fault, causing a Denial of Service (DoS) by crashing affected applications.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/libxml2@2.9.13-14.el9_7?arch=x86_64&distro=rocky-9.7&upstream=libxml2-2.9.13-14.el9_7.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>glib2</td>
+                        <td>2.68.4-18.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-0988">CVE-2026-0988</a>
+                        </td>
+                        <td>Low</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>No description is available for this CVE.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/glib2@2.68.4-18.el9_7?arch=x86_64&distro=rocky-9.7&upstream=glib2-2.68.4-18.el9_7.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>libxml2</td>
+                        <td>2.9.13-14.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-0989">CVE-2026-0989</a>
+                        </td>
+                        <td>Low</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was identified in the RelaxNG parser of libxml2 related to how external schema inclusions are handled. The parser does not enforce a limit on inclusion depth when resolving nested &lt;include&gt; directives. Specially crafted or overly complex schemas can cause excessive recursion during parsing. This may lead to stack exhaustion and application crashes, creating a denial-of-service risk.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/libxml2@2.9.13-14.el9_7?arch=x86_64&distro=rocky-9.7&upstream=libxml2-2.9.13-14.el9_7.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>libxml2</td>
+                        <td>2.9.13-14.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-0992">CVE-2026-0992</a>
+                        </td>
+                        <td>Low</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in the libxml2 library. This uncontrolled resource consumption vulnerability occurs when processing XML catalogs that contain repeated &lt;nextCatalog&gt; elements pointing to the same downstream catalog. A remote attacker can exploit this by supplying crafted catalogs, causing the parser to redundantly traverse catalog chains. This leads to excessive CPU consumption and degrades application availability, resulting in a denial-of-service condition.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/libxml2@2.9.13-14.el9_7?arch=x86_64&distro=rocky-9.7&upstream=libxml2-2.9.13-14.el9_7.src.rpm</td>
                     </tr>
                     <tr>
                         <td>lz4-libs</td>
