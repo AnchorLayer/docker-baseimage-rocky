@@ -771,6 +771,45 @@
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
 <body>
     <div class="main-container">
@@ -785,7 +824,7 @@
                     <dd id="typeValue">image</dd><dt>Checksum:</dt>
                     <dd id="checksumValue">sha256:f376ba4b3b4e88e41bedc1d3756b8260edb64b3b311860cb50363435605ee0d0</dd><dt>Date:</dt>
                     <dd>
-                        <span id="dateElement">2026-01-28T06:30:59.794007548Z</span>
+                        <span id="dateElement">2026-01-28T07:00:49.445217147Z</span>
                         <span id="prettyDateElement" style="display: none;"></span>
                     </dd>
                 </dl>
@@ -802,15 +841,15 @@
             </div>
             <div class="severity-box" id="high">
                 <div class="severity-title">High</div>
-                <div class="severity-count" id="highCount">2</div>
+                <div class="severity-count" id="highCount">5</div>
             </div>
             <div class="severity-box" id="medium">
                 <div class="severity-title">Medium</div>
-                <div class="severity-count" id="mediumCount">33</div>
+                <div class="severity-count" id="mediumCount">41</div>
             </div>
             <div class="severity-box" id="low">
                 <div class="severity-title">Low</div>
-                <div class="severity-count" id="lowCount">53</div>
+                <div class="severity-count" id="lowCount">81</div>
             </div>
             <div class="severity-box" id="unknown">
                 <div class="severity-title">Unknown</div>
@@ -1602,9 +1641,11 @@
                             <a href="https://access.redhat.com/security/cve/CVE-2025-9086">CVE-2025-9086</a>
                         </td>
                         <td>Medium</td>
-                        <td>not-fixed</td>
+                        <td>fixed</td>
                         <td>
-                            N/A
+                            <ul>
+                                <li>0:7.76.1-35.el9_7.3</li>
+                            </ul>
                         </td>
                         <td>1. A cookie is set using the `secure` keyword for `https://target` 
 2. curl is redirected to or otherwise made to speak with `http://target` (same 
@@ -1631,9 +1672,11 @@ it on an insecure host should not be okay.</td>
                             <a href="https://access.redhat.com/security/cve/CVE-2025-9086">CVE-2025-9086</a>
                         </td>
                         <td>Medium</td>
-                        <td>not-fixed</td>
+                        <td>fixed</td>
                         <td>
-                            N/A
+                            <ul>
+                                <li>0:7.76.1-35.el9_7.3</li>
+                            </ul>
                         </td>
                         <td>1. A cookie is set using the `secure` keyword for `https://target` 
 2. curl is redirected to or otherwise made to speak with `http://target` (same 
@@ -1651,6 +1694,24 @@ the cookie since it was already set as secure on a secure host so overriding
 it on an insecure host should not be okay.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/libcurl@7.76.1-34.el9?arch=x86_64&distro=rocky-9.7&upstream=curl-7.76.1-34.el9.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>glib2</td>
+                        <td>2.68.4-18.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-13601">CVE-2025-13601</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>fixed</td>
+                        <td>
+                            <ul>
+                                <li>0:2.68.4-18.el9_7.1</li>
+                            </ul>
+                        </td>
+                        <td>A heap-based buffer overflow problem was found in glib through an incorrect calculation of buffer size in the g_escape_uri_string() function. If the string to escape contains a very large number of unacceptable characters (which would need escaping), the calculation of the length of the escaped string could overflow, leading to a potential write off the end of the newly allocated string.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/glib2@2.68.4-18.el9_7?arch=x86_64&distro=rocky-9.7&upstream=glib2-2.68.4-18.el9_7.src.rpm</td>
                     </tr>
                     <tr>
                         <td>libbrotli</td>
@@ -1673,16 +1734,14 @@ it on an insecure host should not be okay.</td>
                         <td>2.68.4-18.el9_7</td>
                         <td>rpm</td>
                         <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2025-13601">CVE-2025-13601</a>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-0988">CVE-2026-0988</a>
                         </td>
-                        <td>Medium</td>
-                        <td>fixed</td>
+                        <td>Low</td>
+                        <td>not-fixed</td>
                         <td>
-                            <ul>
-                                <li>0:2.68.4-18.el9_7.1</li>
-                            </ul>
+                            N/A
                         </td>
-                        <td>A heap-based buffer overflow problem was found in glib through an incorrect calculation of buffer size in the g_escape_uri_string() function. If the string to escape contains a very large number of unacceptable characters (which would need escaping), the calculation of the length of the escaped string could overflow, leading to a potential write off the end of the newly allocated string.</td>
+                        <td>A flaw was found in glib. Missing validation of offset and count parameters in the g_buffered_input_stream_peek() function can lead to an integer overflow during length calculation. When specially crafted values are provided, this overflow results in an incorrect size being passed to memcpy(), triggering a buffer overflow. This can cause application crashes, leading to a Denial of Service (DoS).</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/glib2@2.68.4-18.el9_7?arch=x86_64&distro=rocky-9.7&upstream=glib2-2.68.4-18.el9_7.src.rpm</td>
                     </tr>
@@ -1717,22 +1776,6 @@ it on an insecure host should not be okay.</td>
                         <td>A heap out-of-bounds read flaw was found in builtin.c in the gawk package. This issue may lead to a crash and could be used to read sensitive information.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/gawk@5.1.0-6.el9?arch=x86_64&distro=rocky-9.7&upstream=gawk-5.1.0-6.el9.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>glib2</td>
-                        <td>2.68.4-18.el9_7</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-0988">CVE-2026-0988</a>
-                        </td>
-                        <td>Low</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in glib. Missing validation of offset and count parameters in the g_buffered_input_stream_peek() function can lead to an integer overflow during length calculation. When specially crafted values are provided, this overflow results in an incorrect size being passed to memcpy(), triggering a buffer overflow. This can cause application crashes, leading to a Denial of Service (DoS).</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/glib2@2.68.4-18.el9_7?arch=x86_64&distro=rocky-9.7&upstream=glib2-2.68.4-18.el9_7.src.rpm</td>
                     </tr>
                     <tr>
                         <td>gnupg2</td>
@@ -2303,6 +2346,22 @@ boundary.</td>
                         <td>pkg:rpm/rocky/libcurl@7.76.1-34.el9?arch=x86_64&distro=rocky-9.7&upstream=curl-7.76.1-34.el9.src.rpm</td>
                     </tr>
                     <tr>
+                        <td>gnutls</td>
+                        <td>3.8.3-9.el9.0.1</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-9820">CVE-2025-9820</a>
+                        </td>
+                        <td>Low</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in the GnuTLS library, specifically in the gnutls_pkcs11_token_init() function that handles PKCS#11 token initialization. When a token label longer than expected is processed, the function writes past the end of a fixed-size stack buffer. This programming error can cause the application using GnuTLS to crash or, in certain conditions, be exploited for code execution. As a result, systems or applications relying on GnuTLS may be vulnerable to a denial of service or local privilege escalation attacks.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/gnutls@3.8.3-9.el9.0.1?arch=x86_64&distro=rocky-9.7&upstream=gnutls-3.8.3-9.el9.0.1.src.rpm</td>
+                    </tr>
+                    <tr>
                         <td>gnupg2</td>
                         <td>2.3.3-4.el9</td>
                         <td>rpm</td>
@@ -2319,20 +2378,628 @@ boundary.</td>
                         <td>pkg:rpm/rocky/gnupg2@2.3.3-4.el9?arch=x86_64&distro=rocky-9.7&upstream=gnupg2-2.3.3-4.el9.src.rpm</td>
                     </tr>
                     <tr>
-                        <td>gnutls</td>
-                        <td>3.8.3-9.el9.0.1</td>
+                        <td>openssl</td>
+                        <td>1:3.5.1-4.el9_7</td>
                         <td>rpm</td>
                         <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2025-9820">CVE-2025-9820</a>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-15467">CVE-2025-15467</a>
+                        </td>
+                        <td>High</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in OpenSSL. A remote attacker can exploit a stack buffer overflow vulnerability by supplying a crafted Cryptographic Message Syntax (CMS) message with an oversized Initialization Vector (IV) when parsing AuthEnvelopedData structures that use Authenticated Encryption with Associated Data (AEAD) ciphers such as AES-GCM. This can lead to a crash, causing a Denial of Service (DoS), or potentially allow for remote code execution.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/openssl@3.5.1-4.el9_7?arch=x86_64&distro=rocky-9.7&epoch=1&upstream=openssl-3.5.1-4.el9_7.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>openssl-fips-provider</td>
+                        <td>1:3.5.1-4.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-15467">CVE-2025-15467</a>
+                        </td>
+                        <td>High</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in OpenSSL. A remote attacker can exploit a stack buffer overflow vulnerability by supplying a crafted Cryptographic Message Syntax (CMS) message with an oversized Initialization Vector (IV) when parsing AuthEnvelopedData structures that use Authenticated Encryption with Associated Data (AEAD) ciphers such as AES-GCM. This can lead to a crash, causing a Denial of Service (DoS), or potentially allow for remote code execution.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/openssl-fips-provider@3.5.1-4.el9_7?arch=x86_64&distro=rocky-9.7&epoch=1&upstream=openssl-3.5.1-4.el9_7.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>openssl-libs</td>
+                        <td>1:3.5.1-4.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-15467">CVE-2025-15467</a>
+                        </td>
+                        <td>High</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in OpenSSL. A remote attacker can exploit a stack buffer overflow vulnerability by supplying a crafted Cryptographic Message Syntax (CMS) message with an oversized Initialization Vector (IV) when parsing AuthEnvelopedData structures that use Authenticated Encryption with Associated Data (AEAD) ciphers such as AES-GCM. This can lead to a crash, causing a Denial of Service (DoS), or potentially allow for remote code execution.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/openssl-libs@3.5.1-4.el9_7?arch=x86_64&distro=rocky-9.7&epoch=1&upstream=openssl-3.5.1-4.el9_7.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>glib2</td>
+                        <td>2.68.4-18.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-1484">CVE-2026-1484</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in the GLib Base64 encoding routine when processing very large input data. Due to incorrect use of integer types during length calculation, the library may miscalculate buffer boundaries. This can cause memory writes outside the allocated buffer. Applications that process untrusted or extremely large Base64 input using GLib may crash or behave unpredictably.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/glib2@2.68.4-18.el9_7?arch=x86_64&distro=rocky-9.7&upstream=glib2-2.68.4-18.el9_7.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>glib2</td>
+                        <td>2.68.4-18.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-1489">CVE-2026-1489</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in GLib. An integer overflow vulnerability in its Unicode case conversion implementation can lead to memory corruption. By processing specially crafted and extremely large Unicode strings, an attacker could trigger an undersized memory allocation, resulting in out-of-bounds writes. This could cause applications utilizing GLib for string conversion to crash or become unstable.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/glib2@2.68.4-18.el9_7?arch=x86_64&distro=rocky-9.7&upstream=glib2-2.68.4-18.el9_7.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>openssl</td>
+                        <td>1:3.5.1-4.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-11187">CVE-2025-11187</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in OpenSSL. When an application processes a maliciously crafted PKCS#12 file, an attacker can exploit a stack buffer overflow or a NULL pointer dereference. This can lead to a denial of service (DoS) by crashing the application, and in some cases, may enable arbitrary code execution. The vulnerability arises from the lack of validation for PBKDF2 salt and keylength parameters within the PKCS#12 file.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/openssl@3.5.1-4.el9_7?arch=x86_64&distro=rocky-9.7&epoch=1&upstream=openssl-3.5.1-4.el9_7.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>openssl</td>
+                        <td>1:3.5.1-4.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-69419">CVE-2025-69419</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in OpenSSL. When processing a specially crafted PKCS#12 (Personal Information Exchange Syntax Standard) file, a remote attacker can exploit an out-of-bounds write vulnerability. This issue, occurring within the OPENSSL_uni2utf8() function, leads to memory corruption by writing data beyond its allocated buffer. Successful exploitation could result in a denial of service or potentially allow for arbitrary code execution.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/openssl@3.5.1-4.el9_7?arch=x86_64&distro=rocky-9.7&epoch=1&upstream=openssl-3.5.1-4.el9_7.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>openssl-fips-provider</td>
+                        <td>1:3.5.1-4.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-11187">CVE-2025-11187</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in OpenSSL. When an application processes a maliciously crafted PKCS#12 file, an attacker can exploit a stack buffer overflow or a NULL pointer dereference. This can lead to a denial of service (DoS) by crashing the application, and in some cases, may enable arbitrary code execution. The vulnerability arises from the lack of validation for PBKDF2 salt and keylength parameters within the PKCS#12 file.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/openssl-fips-provider@3.5.1-4.el9_7?arch=x86_64&distro=rocky-9.7&epoch=1&upstream=openssl-3.5.1-4.el9_7.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>openssl-fips-provider</td>
+                        <td>1:3.5.1-4.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-69419">CVE-2025-69419</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in OpenSSL. When processing a specially crafted PKCS#12 (Personal Information Exchange Syntax Standard) file, a remote attacker can exploit an out-of-bounds write vulnerability. This issue, occurring within the OPENSSL_uni2utf8() function, leads to memory corruption by writing data beyond its allocated buffer. Successful exploitation could result in a denial of service or potentially allow for arbitrary code execution.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/openssl-fips-provider@3.5.1-4.el9_7?arch=x86_64&distro=rocky-9.7&epoch=1&upstream=openssl-3.5.1-4.el9_7.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>openssl-libs</td>
+                        <td>1:3.5.1-4.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-11187">CVE-2025-11187</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in OpenSSL. When an application processes a maliciously crafted PKCS#12 file, an attacker can exploit a stack buffer overflow or a NULL pointer dereference. This can lead to a denial of service (DoS) by crashing the application, and in some cases, may enable arbitrary code execution. The vulnerability arises from the lack of validation for PBKDF2 salt and keylength parameters within the PKCS#12 file.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/openssl-libs@3.5.1-4.el9_7?arch=x86_64&distro=rocky-9.7&epoch=1&upstream=openssl-3.5.1-4.el9_7.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>openssl-libs</td>
+                        <td>1:3.5.1-4.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-69419">CVE-2025-69419</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in OpenSSL. When processing a specially crafted PKCS#12 (Personal Information Exchange Syntax Standard) file, a remote attacker can exploit an out-of-bounds write vulnerability. This issue, occurring within the OPENSSL_uni2utf8() function, leads to memory corruption by writing data beyond its allocated buffer. Successful exploitation could result in a denial of service or potentially allow for arbitrary code execution.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/openssl-libs@3.5.1-4.el9_7?arch=x86_64&distro=rocky-9.7&epoch=1&upstream=openssl-3.5.1-4.el9_7.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>glib2</td>
+                        <td>2.68.4-18.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-1485">CVE-2026-1485</a>
                         </td>
                         <td>Low</td>
                         <td>not-fixed</td>
                         <td>
                             N/A
                         </td>
-                        <td>A flaw was found in the GnuTLS library, specifically in the gnutls_pkcs11_token_init() function that handles PKCS#11 token initialization. When a token label longer than expected is processed, the function writes past the end of a fixed-size stack buffer. This programming error can cause the application using GnuTLS to crash or, in certain conditions, be exploited for code execution. As a result, systems or applications relying on GnuTLS may be vulnerable to a denial of service or local privilege escalation attacks.</td>
+                        <td>A flaw was found in Glib&#39;s content type parsing logic. This buffer underflow vulnerability occurs because the length of a header line is stored in a signed integer, which can lead to integer wraparound for very large inputs. This results in pointer underflow and out-of-bounds memory access. Exploitation requires a local user to install or process a specially crafted treemagic file, which can lead to local denial of service or application instability.</td>
                         <td>[]</td>
-                        <td>pkg:rpm/rocky/gnutls@3.8.3-9.el9.0.1?arch=x86_64&distro=rocky-9.7&upstream=gnutls-3.8.3-9.el9.0.1.src.rpm</td>
+                        <td>pkg:rpm/rocky/glib2@2.68.4-18.el9_7?arch=x86_64&distro=rocky-9.7&upstream=glib2-2.68.4-18.el9_7.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>openssl</td>
+                        <td>1:3.5.1-4.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-15468">CVE-2025-15468</a>
+                        </td>
+                        <td>Low</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in openssl. A remote attacker could trigger a NULL pointer dereference by sending an unknown or unsupported cipher ID during the client hello callback in applications using the QUIC (Quick UDP Internet Connections) protocol. This vulnerability, occurring when the SSL_CIPHER_find() function is called in this specific context, leads to an abnormal termination of the running process, causing a Denial of Service (DoS).</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/openssl@3.5.1-4.el9_7?arch=x86_64&distro=rocky-9.7&epoch=1&upstream=openssl-3.5.1-4.el9_7.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>openssl</td>
+                        <td>1:3.5.1-4.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-15469">CVE-2025-15469</a>
+                        </td>
+                        <td>Low</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in openssl. When a user signs or verifies files larger than 16MB using the `openssl dgst` command with one-shot algorithms, the tool silently truncates the input to 16MB. This creates an integrity gap, allowing trailing data beyond the initial 16MB to be modified without detection because it remains unauthenticated. This vulnerability primarily impacts workflows that both sign and verify files using the affected `openssl dgst` command.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/openssl@3.5.1-4.el9_7?arch=x86_64&distro=rocky-9.7&epoch=1&upstream=openssl-3.5.1-4.el9_7.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>openssl</td>
+                        <td>1:3.5.1-4.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-66199">CVE-2025-66199</a>
+                        </td>
+                        <td>Low</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in OpenSSL. A remote attacker can exploit this vulnerability by sending a specially crafted CompressedCertificate message during the TLS 1.3 handshake. This can cause excessive per-connection memory allocations, leading to resource exhaustion and a Denial of Service (DoS) for affected clients and servers. This issue occurs when TLS 1.3 certificate compression is enabled and negotiated.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/openssl@3.5.1-4.el9_7?arch=x86_64&distro=rocky-9.7&epoch=1&upstream=openssl-3.5.1-4.el9_7.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>openssl</td>
+                        <td>1:3.5.1-4.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-68160">CVE-2025-68160</a>
+                        </td>
+                        <td>Low</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in OpenSSL. This vulnerability involves an out-of-bounds write in the line-buffering BIO filter, which can lead to memory corruption. While exploitation is unlikely to be under direct attacker control, a successful attack could cause an application to crash, resulting in a Denial of Service (DoS).</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/openssl@3.5.1-4.el9_7?arch=x86_64&distro=rocky-9.7&epoch=1&upstream=openssl-3.5.1-4.el9_7.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>openssl</td>
+                        <td>1:3.5.1-4.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-69418">CVE-2025-69418</a>
+                        </td>
+                        <td>Low</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in OpenSSL. When applications directly call the low-level CRYPTO_ocb128_encrypt() or CRYPTO_ocb128_decrypt() functions with non-block-aligned lengths in a single call on hardware-accelerated builds, the trailing 1-15 bytes of a message may be exposed in cleartext. These exposed bytes are not covered by the authentication tag, allowing an attacker to read or tamper with them without detection.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/openssl@3.5.1-4.el9_7?arch=x86_64&distro=rocky-9.7&epoch=1&upstream=openssl-3.5.1-4.el9_7.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>openssl</td>
+                        <td>1:3.5.1-4.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-69420">CVE-2025-69420</a>
+                        </td>
+                        <td>Low</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in OpenSSL. A type confusion vulnerability exists in the TimeStamp Response verification code, where an ASN1_TYPE union member is accessed without proper type validation. A remote attacker can exploit this by providing a malformed TimeStamp Response to an application that verifies timestamp responses. This can lead to an invalid or NULL pointer dereference, resulting in a Denial of Service (DoS) due to an application crash.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/openssl@3.5.1-4.el9_7?arch=x86_64&distro=rocky-9.7&epoch=1&upstream=openssl-3.5.1-4.el9_7.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>openssl</td>
+                        <td>1:3.5.1-4.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-69421">CVE-2025-69421</a>
+                        </td>
+                        <td>Low</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in OpenSSL. This vulnerability allows a remote attacker to trigger a Denial of Service (DoS) by providing a specially crafted, malformed PKCS#12 file to an application that processes it. The flaw occurs due to a NULL pointer dereference in the PKCS12_item_decrypt_d2i_ex() function when handling the malformed file, leading to an application crash.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/openssl@3.5.1-4.el9_7?arch=x86_64&distro=rocky-9.7&epoch=1&upstream=openssl-3.5.1-4.el9_7.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>openssl</td>
+                        <td>1:3.5.1-4.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-22795">CVE-2026-22795</a>
+                        </td>
+                        <td>Low</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in OpenSSL. This type confusion vulnerability allows a remote attacker to cause a Denial of Service (DoS) by tricking a user or application into processing a maliciously crafted PKCS#12 (Personal Information Exchange Syntax Standard) file. The vulnerability leads to an invalid or NULL pointer dereference, resulting in an application crash.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/openssl@3.5.1-4.el9_7?arch=x86_64&distro=rocky-9.7&epoch=1&upstream=openssl-3.5.1-4.el9_7.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>openssl</td>
+                        <td>1:3.5.1-4.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-22796">CVE-2026-22796</a>
+                        </td>
+                        <td>Low</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in OpenSSL. This type confusion vulnerability allows a remote attacker to cause a denial of service (DoS) by providing specially crafted PKCS#7 data to an application that performs signature verification. The vulnerability occurs because the application accesses an ASN1_TYPE union member without proper type validation, leading to an invalid or NULL pointer dereference and a crash.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/openssl@3.5.1-4.el9_7?arch=x86_64&distro=rocky-9.7&epoch=1&upstream=openssl-3.5.1-4.el9_7.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>openssl-fips-provider</td>
+                        <td>1:3.5.1-4.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-15468">CVE-2025-15468</a>
+                        </td>
+                        <td>Low</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in openssl. A remote attacker could trigger a NULL pointer dereference by sending an unknown or unsupported cipher ID during the client hello callback in applications using the QUIC (Quick UDP Internet Connections) protocol. This vulnerability, occurring when the SSL_CIPHER_find() function is called in this specific context, leads to an abnormal termination of the running process, causing a Denial of Service (DoS).</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/openssl-fips-provider@3.5.1-4.el9_7?arch=x86_64&distro=rocky-9.7&epoch=1&upstream=openssl-3.5.1-4.el9_7.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>openssl-fips-provider</td>
+                        <td>1:3.5.1-4.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-15469">CVE-2025-15469</a>
+                        </td>
+                        <td>Low</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in openssl. When a user signs or verifies files larger than 16MB using the `openssl dgst` command with one-shot algorithms, the tool silently truncates the input to 16MB. This creates an integrity gap, allowing trailing data beyond the initial 16MB to be modified without detection because it remains unauthenticated. This vulnerability primarily impacts workflows that both sign and verify files using the affected `openssl dgst` command.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/openssl-fips-provider@3.5.1-4.el9_7?arch=x86_64&distro=rocky-9.7&epoch=1&upstream=openssl-3.5.1-4.el9_7.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>openssl-fips-provider</td>
+                        <td>1:3.5.1-4.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-66199">CVE-2025-66199</a>
+                        </td>
+                        <td>Low</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in OpenSSL. A remote attacker can exploit this vulnerability by sending a specially crafted CompressedCertificate message during the TLS 1.3 handshake. This can cause excessive per-connection memory allocations, leading to resource exhaustion and a Denial of Service (DoS) for affected clients and servers. This issue occurs when TLS 1.3 certificate compression is enabled and negotiated.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/openssl-fips-provider@3.5.1-4.el9_7?arch=x86_64&distro=rocky-9.7&epoch=1&upstream=openssl-3.5.1-4.el9_7.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>openssl-fips-provider</td>
+                        <td>1:3.5.1-4.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-68160">CVE-2025-68160</a>
+                        </td>
+                        <td>Low</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in OpenSSL. This vulnerability involves an out-of-bounds write in the line-buffering BIO filter, which can lead to memory corruption. While exploitation is unlikely to be under direct attacker control, a successful attack could cause an application to crash, resulting in a Denial of Service (DoS).</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/openssl-fips-provider@3.5.1-4.el9_7?arch=x86_64&distro=rocky-9.7&epoch=1&upstream=openssl-3.5.1-4.el9_7.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>openssl-fips-provider</td>
+                        <td>1:3.5.1-4.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-69418">CVE-2025-69418</a>
+                        </td>
+                        <td>Low</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in OpenSSL. When applications directly call the low-level CRYPTO_ocb128_encrypt() or CRYPTO_ocb128_decrypt() functions with non-block-aligned lengths in a single call on hardware-accelerated builds, the trailing 1-15 bytes of a message may be exposed in cleartext. These exposed bytes are not covered by the authentication tag, allowing an attacker to read or tamper with them without detection.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/openssl-fips-provider@3.5.1-4.el9_7?arch=x86_64&distro=rocky-9.7&epoch=1&upstream=openssl-3.5.1-4.el9_7.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>openssl-fips-provider</td>
+                        <td>1:3.5.1-4.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-69420">CVE-2025-69420</a>
+                        </td>
+                        <td>Low</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in OpenSSL. A type confusion vulnerability exists in the TimeStamp Response verification code, where an ASN1_TYPE union member is accessed without proper type validation. A remote attacker can exploit this by providing a malformed TimeStamp Response to an application that verifies timestamp responses. This can lead to an invalid or NULL pointer dereference, resulting in a Denial of Service (DoS) due to an application crash.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/openssl-fips-provider@3.5.1-4.el9_7?arch=x86_64&distro=rocky-9.7&epoch=1&upstream=openssl-3.5.1-4.el9_7.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>openssl-fips-provider</td>
+                        <td>1:3.5.1-4.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-69421">CVE-2025-69421</a>
+                        </td>
+                        <td>Low</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in OpenSSL. This vulnerability allows a remote attacker to trigger a Denial of Service (DoS) by providing a specially crafted, malformed PKCS#12 file to an application that processes it. The flaw occurs due to a NULL pointer dereference in the PKCS12_item_decrypt_d2i_ex() function when handling the malformed file, leading to an application crash.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/openssl-fips-provider@3.5.1-4.el9_7?arch=x86_64&distro=rocky-9.7&epoch=1&upstream=openssl-3.5.1-4.el9_7.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>openssl-fips-provider</td>
+                        <td>1:3.5.1-4.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-22795">CVE-2026-22795</a>
+                        </td>
+                        <td>Low</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in OpenSSL. This type confusion vulnerability allows a remote attacker to cause a Denial of Service (DoS) by tricking a user or application into processing a maliciously crafted PKCS#12 (Personal Information Exchange Syntax Standard) file. The vulnerability leads to an invalid or NULL pointer dereference, resulting in an application crash.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/openssl-fips-provider@3.5.1-4.el9_7?arch=x86_64&distro=rocky-9.7&epoch=1&upstream=openssl-3.5.1-4.el9_7.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>openssl-fips-provider</td>
+                        <td>1:3.5.1-4.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-22796">CVE-2026-22796</a>
+                        </td>
+                        <td>Low</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in OpenSSL. This type confusion vulnerability allows a remote attacker to cause a denial of service (DoS) by providing specially crafted PKCS#7 data to an application that performs signature verification. The vulnerability occurs because the application accesses an ASN1_TYPE union member without proper type validation, leading to an invalid or NULL pointer dereference and a crash.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/openssl-fips-provider@3.5.1-4.el9_7?arch=x86_64&distro=rocky-9.7&epoch=1&upstream=openssl-3.5.1-4.el9_7.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>openssl-libs</td>
+                        <td>1:3.5.1-4.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-15468">CVE-2025-15468</a>
+                        </td>
+                        <td>Low</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in openssl. A remote attacker could trigger a NULL pointer dereference by sending an unknown or unsupported cipher ID during the client hello callback in applications using the QUIC (Quick UDP Internet Connections) protocol. This vulnerability, occurring when the SSL_CIPHER_find() function is called in this specific context, leads to an abnormal termination of the running process, causing a Denial of Service (DoS).</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/openssl-libs@3.5.1-4.el9_7?arch=x86_64&distro=rocky-9.7&epoch=1&upstream=openssl-3.5.1-4.el9_7.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>openssl-libs</td>
+                        <td>1:3.5.1-4.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-15469">CVE-2025-15469</a>
+                        </td>
+                        <td>Low</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in openssl. When a user signs or verifies files larger than 16MB using the `openssl dgst` command with one-shot algorithms, the tool silently truncates the input to 16MB. This creates an integrity gap, allowing trailing data beyond the initial 16MB to be modified without detection because it remains unauthenticated. This vulnerability primarily impacts workflows that both sign and verify files using the affected `openssl dgst` command.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/openssl-libs@3.5.1-4.el9_7?arch=x86_64&distro=rocky-9.7&epoch=1&upstream=openssl-3.5.1-4.el9_7.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>openssl-libs</td>
+                        <td>1:3.5.1-4.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-66199">CVE-2025-66199</a>
+                        </td>
+                        <td>Low</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in OpenSSL. A remote attacker can exploit this vulnerability by sending a specially crafted CompressedCertificate message during the TLS 1.3 handshake. This can cause excessive per-connection memory allocations, leading to resource exhaustion and a Denial of Service (DoS) for affected clients and servers. This issue occurs when TLS 1.3 certificate compression is enabled and negotiated.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/openssl-libs@3.5.1-4.el9_7?arch=x86_64&distro=rocky-9.7&epoch=1&upstream=openssl-3.5.1-4.el9_7.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>openssl-libs</td>
+                        <td>1:3.5.1-4.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-68160">CVE-2025-68160</a>
+                        </td>
+                        <td>Low</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in OpenSSL. This vulnerability involves an out-of-bounds write in the line-buffering BIO filter, which can lead to memory corruption. While exploitation is unlikely to be under direct attacker control, a successful attack could cause an application to crash, resulting in a Denial of Service (DoS).</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/openssl-libs@3.5.1-4.el9_7?arch=x86_64&distro=rocky-9.7&epoch=1&upstream=openssl-3.5.1-4.el9_7.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>openssl-libs</td>
+                        <td>1:3.5.1-4.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-69418">CVE-2025-69418</a>
+                        </td>
+                        <td>Low</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in OpenSSL. When applications directly call the low-level CRYPTO_ocb128_encrypt() or CRYPTO_ocb128_decrypt() functions with non-block-aligned lengths in a single call on hardware-accelerated builds, the trailing 1-15 bytes of a message may be exposed in cleartext. These exposed bytes are not covered by the authentication tag, allowing an attacker to read or tamper with them without detection.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/openssl-libs@3.5.1-4.el9_7?arch=x86_64&distro=rocky-9.7&epoch=1&upstream=openssl-3.5.1-4.el9_7.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>openssl-libs</td>
+                        <td>1:3.5.1-4.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-69420">CVE-2025-69420</a>
+                        </td>
+                        <td>Low</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in OpenSSL. A type confusion vulnerability exists in the TimeStamp Response verification code, where an ASN1_TYPE union member is accessed without proper type validation. A remote attacker can exploit this by providing a malformed TimeStamp Response to an application that verifies timestamp responses. This can lead to an invalid or NULL pointer dereference, resulting in a Denial of Service (DoS) due to an application crash.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/openssl-libs@3.5.1-4.el9_7?arch=x86_64&distro=rocky-9.7&epoch=1&upstream=openssl-3.5.1-4.el9_7.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>openssl-libs</td>
+                        <td>1:3.5.1-4.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-69421">CVE-2025-69421</a>
+                        </td>
+                        <td>Low</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in OpenSSL. This vulnerability allows a remote attacker to trigger a Denial of Service (DoS) by providing a specially crafted, malformed PKCS#12 file to an application that processes it. The flaw occurs due to a NULL pointer dereference in the PKCS12_item_decrypt_d2i_ex() function when handling the malformed file, leading to an application crash.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/openssl-libs@3.5.1-4.el9_7?arch=x86_64&distro=rocky-9.7&epoch=1&upstream=openssl-3.5.1-4.el9_7.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>openssl-libs</td>
+                        <td>1:3.5.1-4.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-22795">CVE-2026-22795</a>
+                        </td>
+                        <td>Low</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in OpenSSL. This type confusion vulnerability allows a remote attacker to cause a Denial of Service (DoS) by tricking a user or application into processing a maliciously crafted PKCS#12 (Personal Information Exchange Syntax Standard) file. The vulnerability leads to an invalid or NULL pointer dereference, resulting in an application crash.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/openssl-libs@3.5.1-4.el9_7?arch=x86_64&distro=rocky-9.7&epoch=1&upstream=openssl-3.5.1-4.el9_7.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>openssl-libs</td>
+                        <td>1:3.5.1-4.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-22796">CVE-2026-22796</a>
+                        </td>
+                        <td>Low</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in OpenSSL. This type confusion vulnerability allows a remote attacker to cause a denial of service (DoS) by providing specially crafted PKCS#7 data to an application that performs signature verification. The vulnerability occurs because the application accesses an ASN1_TYPE union member without proper type validation, leading to an invalid or NULL pointer dereference and a crash.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/openssl-libs@3.5.1-4.el9_7?arch=x86_64&distro=rocky-9.7&epoch=1&upstream=openssl-3.5.1-4.el9_7.src.rpm</td>
                     </tr>
                     <tr>
                         <td>lz4-libs</td>
