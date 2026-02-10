@@ -2719,6 +2719,27 @@
               }
             },
             {
+              "id": "CVE-2025-14831-gnutls",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2025-14831 medium vulnerability for gnutls package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in GnuTLS. This vulnerability allows a denial of service (DoS) by excessive CPU (Central Processing Unit) and memory consumption via specially crafted malicious certificates containing a large number of name constraints and subject alternative names (SANs)."
+              },
+              "helpUri": "https://github.com/anchore/grype",
+              "help": {
+                "text": "Vulnerability CVE-2025-14831\nSeverity: medium\nPackage: gnutls\nVersion: 3.8.3-9.el9.0.1\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2025-14831](https://access.redhat.com/security/cve/CVE-2025-14831)",
+                "markdown": "**Vulnerability CVE-2025-14831**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | gnutls  | 3.8.3-9.el9.0.1  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2025-14831](https://access.redhat.com/security/cve/CVE-2025-14831)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/gnutls@3.8.3-9.el9.0.1?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=gnutls-3.8.3-9.el9.0.1.src.rpm"
+                ],
+                "security-severity": "5.3"
+              }
+            },
+            {
               "id": "CVE-2026-2100-p11-kit",
               "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
@@ -6782,6 +6803,37 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "7f096a64524891508940c5eb6f0e4455ef7abeaf5e49aae046bb1d33594dd1a8:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2025-14831-gnutls",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: gnutls, version 3.8.3-9.el9.0.1 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:4399bb3147e5af0f9f6057bd99266fa171dd752ebe4e46e204e406ad3b5504f6:/var/lib/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "18fa6c6a943f555d4bfaaa3ac37e06831e1b64a3003aaedd2027b580f0cd5971:1"
           }
         },
         {
