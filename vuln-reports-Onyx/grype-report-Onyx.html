@@ -839,7 +839,7 @@
                     <dd id="typeValue">image</dd><dt>Checksum:</dt>
                     <dd id="checksumValue">sha256:f376ba4b3b4e88e41bedc1d3756b8260edb64b3b311860cb50363435605ee0d0</dd><dt>Date:</dt>
                     <dd>
-                        <span id="dateElement">2026-02-12T06:56:22.738023439Z</span>
+                        <span id="dateElement">2026-02-12T07:48:20.147717151Z</span>
                         <span id="prettyDateElement" style="display: none;"></span>
                     </dd>
                 </dl>
@@ -2111,6 +2111,22 @@
                         <td>pkg:rpm/rocky/gnutls@3.8.3-9.el9.0.1?arch=x86_64&distro=rocky-9.7&upstream=gnutls-3.8.3-9.el9.0.1.src.rpm</td>
                     </tr>
                     <tr>
+                        <td>glib2</td>
+                        <td>2.68.4-18.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-7039">CVE-2025-7039</a>
+                        </td>
+                        <td>Low</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in glib. An integer overflow during temporary file creation leads to an out-of-bounds memory access, allowing an attacker to potentially perform path traversal or access private temporary file content by creating symbolic links. This vulnerability allows a local attacker to manipulate file paths and access unauthorized data. The core issue stems from insufficient validation of file path lengths during temporary file operations.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/glib2@2.68.4-18.el9_7?arch=x86_64&distro=rocky-9.7&upstream=glib2-2.68.4-18.el9_7.src.rpm</td>
+                    </tr>
+                    <tr>
                         <td>gnupg2</td>
                         <td>2.3.3-4.el9</td>
                         <td>rpm</td>
@@ -2143,22 +2159,6 @@
                         <td>A vulnerability has been identified in the libarchive library. This flaw can lead to a heap buffer over-read due to the size of a filter block potentially exceeding the Lempel-Ziv-Storer-Schieber (LZSS) window. This means the library may attempt to read beyond the allocated memory buffer, which can result in unpredictable program behavior, crashes (denial of service), or the disclosure of sensitive information from adjacent memory regions.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/libarchive@3.5.3-6.el9_6?arch=x86_64&distro=rocky-9.7&upstream=libarchive-3.5.3-6.el9_6.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>glib2</td>
-                        <td>2.68.4-18.el9_7</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2025-7039">CVE-2025-7039</a>
-                        </td>
-                        <td>Low</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in glib. An integer overflow during temporary file creation leads to an out-of-bounds memory access, allowing an attacker to potentially perform path traversal or access private temporary file content by creating symbolic links. This vulnerability allows a local attacker to manipulate file paths and access unauthorized data. The core issue stems from insufficient validation of file path lengths during temporary file operations.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/glib2@2.68.4-18.el9_7?arch=x86_64&distro=rocky-9.7&upstream=glib2-2.68.4-18.el9_7.src.rpm</td>
                     </tr>
                     <tr>
                         <td>libssh</td>
@@ -2303,6 +2303,132 @@ it on an insecure host should not be okay.</td>
                         <td>pkg:rpm/rocky/gawk@5.1.0-6.el9?arch=x86_64&distro=rocky-9.7&upstream=gawk-5.1.0-6.el9.src.rpm</td>
                     </tr>
                     <tr>
+                        <td>libblkid</td>
+                        <td>2.37.4-21.el9</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-14104">CVE-2025-14104</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>fixed</td>
+                        <td>
+                            <ul>
+                                <li>0:2.37.4-21.el9_7</li>
+                            </ul>
+                        </td>
+                        <td>A flaw was found in util-linux. This vulnerability allows a heap buffer overread when processing 256-byte usernames, specifically within the `setpwnam()` function, affecting SUID (Set User ID) login-utils utilities writing to the password database.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/libblkid@2.37.4-21.el9?arch=x86_64&distro=rocky-9.7&upstream=util-linux-2.37.4-21.el9.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>libfdisk</td>
+                        <td>2.37.4-21.el9</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-14104">CVE-2025-14104</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>fixed</td>
+                        <td>
+                            <ul>
+                                <li>0:2.37.4-21.el9_7</li>
+                            </ul>
+                        </td>
+                        <td>A flaw was found in util-linux. This vulnerability allows a heap buffer overread when processing 256-byte usernames, specifically within the `setpwnam()` function, affecting SUID (Set User ID) login-utils utilities writing to the password database.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/libfdisk@2.37.4-21.el9?arch=x86_64&distro=rocky-9.7&upstream=util-linux-2.37.4-21.el9.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>libmount</td>
+                        <td>2.37.4-21.el9</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-14104">CVE-2025-14104</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>fixed</td>
+                        <td>
+                            <ul>
+                                <li>0:2.37.4-21.el9_7</li>
+                            </ul>
+                        </td>
+                        <td>A flaw was found in util-linux. This vulnerability allows a heap buffer overread when processing 256-byte usernames, specifically within the `setpwnam()` function, affecting SUID (Set User ID) login-utils utilities writing to the password database.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/libmount@2.37.4-21.el9?arch=x86_64&distro=rocky-9.7&upstream=util-linux-2.37.4-21.el9.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>libsmartcols</td>
+                        <td>2.37.4-21.el9</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-14104">CVE-2025-14104</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>fixed</td>
+                        <td>
+                            <ul>
+                                <li>0:2.37.4-21.el9_7</li>
+                            </ul>
+                        </td>
+                        <td>A flaw was found in util-linux. This vulnerability allows a heap buffer overread when processing 256-byte usernames, specifically within the `setpwnam()` function, affecting SUID (Set User ID) login-utils utilities writing to the password database.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/libsmartcols@2.37.4-21.el9?arch=x86_64&distro=rocky-9.7&upstream=util-linux-2.37.4-21.el9.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>libuuid</td>
+                        <td>2.37.4-21.el9</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-14104">CVE-2025-14104</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>fixed</td>
+                        <td>
+                            <ul>
+                                <li>0:2.37.4-21.el9_7</li>
+                            </ul>
+                        </td>
+                        <td>A flaw was found in util-linux. This vulnerability allows a heap buffer overread when processing 256-byte usernames, specifically within the `setpwnam()` function, affecting SUID (Set User ID) login-utils utilities writing to the password database.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/libuuid@2.37.4-21.el9?arch=x86_64&distro=rocky-9.7&upstream=util-linux-2.37.4-21.el9.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>util-linux</td>
+                        <td>2.37.4-21.el9</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-14104">CVE-2025-14104</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>fixed</td>
+                        <td>
+                            <ul>
+                                <li>0:2.37.4-21.el9_7</li>
+                            </ul>
+                        </td>
+                        <td>A flaw was found in util-linux. This vulnerability allows a heap buffer overread when processing 256-byte usernames, specifically within the `setpwnam()` function, affecting SUID (Set User ID) login-utils utilities writing to the password database.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/util-linux@2.37.4-21.el9?arch=x86_64&distro=rocky-9.7&upstream=util-linux-2.37.4-21.el9.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>util-linux-core</td>
+                        <td>2.37.4-21.el9</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-14104">CVE-2025-14104</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>fixed</td>
+                        <td>
+                            <ul>
+                                <li>0:2.37.4-21.el9_7</li>
+                            </ul>
+                        </td>
+                        <td>A flaw was found in util-linux. This vulnerability allows a heap buffer overread when processing 256-byte usernames, specifically within the `setpwnam()` function, affecting SUID (Set User ID) login-utils utilities writing to the password database.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/util-linux-core@2.37.4-21.el9?arch=x86_64&distro=rocky-9.7&upstream=util-linux-2.37.4-21.el9.src.rpm</td>
+                    </tr>
+                    <tr>
                         <td>openssl</td>
                         <td>1:3.5.1-4.el9_7</td>
                         <td>rpm</td>
@@ -2437,22 +2563,6 @@ boundary.</td>
                         <td>pkg:rpm/rocky/libxml2@2.9.13-14.el9_7?arch=x86_64&distro=rocky-9.7&upstream=libxml2-2.9.13-14.el9_7.src.rpm</td>
                     </tr>
                     <tr>
-                        <td>gnupg2</td>
-                        <td>2.3.3-4.el9</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2022-3219">CVE-2022-3219</a>
-                        </td>
-                        <td>Low</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A vulnerability was found in GnuPG. GnuPG can spin on a relatively small input by crafting a public key with thousands of signatures attached and compressed down to a few kilobytes. This issue can potentially cause a denial of service.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/gnupg2@2.3.3-4.el9?arch=x86_64&distro=rocky-9.7&upstream=gnupg2-2.3.3-4.el9.src.rpm</td>
-                    </tr>
-                    <tr>
                         <td>libssh</td>
                         <td>0.10.4-15.el9_6</td>
                         <td>rpm</td>
@@ -2483,132 +2593,6 @@ boundary.</td>
                         <td>A flaw was found in libssh, a library that implements the SSH protocol. When calculating the session ID during the key exchange (KEX) process, an allocation failure in cryptographic functions may lead to a NULL pointer dereference. This issue can cause the client or server to crash.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/libssh-config@0.10.4-15.el9_6?arch=noarch&distro=rocky-9.7&upstream=libssh-0.10.4-15.el9_6.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>libblkid</td>
-                        <td>2.37.4-21.el9</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2025-14104">CVE-2025-14104</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>fixed</td>
-                        <td>
-                            <ul>
-                                <li>0:2.37.4-21.el9_7</li>
-                            </ul>
-                        </td>
-                        <td>A flaw was found in util-linux. This vulnerability allows a heap buffer overread when processing 256-byte usernames, specifically within the `setpwnam()` function, affecting SUID (Set User ID) login-utils utilities writing to the password database.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/libblkid@2.37.4-21.el9?arch=x86_64&distro=rocky-9.7&upstream=util-linux-2.37.4-21.el9.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>libfdisk</td>
-                        <td>2.37.4-21.el9</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2025-14104">CVE-2025-14104</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>fixed</td>
-                        <td>
-                            <ul>
-                                <li>0:2.37.4-21.el9_7</li>
-                            </ul>
-                        </td>
-                        <td>A flaw was found in util-linux. This vulnerability allows a heap buffer overread when processing 256-byte usernames, specifically within the `setpwnam()` function, affecting SUID (Set User ID) login-utils utilities writing to the password database.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/libfdisk@2.37.4-21.el9?arch=x86_64&distro=rocky-9.7&upstream=util-linux-2.37.4-21.el9.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>libmount</td>
-                        <td>2.37.4-21.el9</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2025-14104">CVE-2025-14104</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>fixed</td>
-                        <td>
-                            <ul>
-                                <li>0:2.37.4-21.el9_7</li>
-                            </ul>
-                        </td>
-                        <td>A flaw was found in util-linux. This vulnerability allows a heap buffer overread when processing 256-byte usernames, specifically within the `setpwnam()` function, affecting SUID (Set User ID) login-utils utilities writing to the password database.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/libmount@2.37.4-21.el9?arch=x86_64&distro=rocky-9.7&upstream=util-linux-2.37.4-21.el9.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>libsmartcols</td>
-                        <td>2.37.4-21.el9</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2025-14104">CVE-2025-14104</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>fixed</td>
-                        <td>
-                            <ul>
-                                <li>0:2.37.4-21.el9_7</li>
-                            </ul>
-                        </td>
-                        <td>A flaw was found in util-linux. This vulnerability allows a heap buffer overread when processing 256-byte usernames, specifically within the `setpwnam()` function, affecting SUID (Set User ID) login-utils utilities writing to the password database.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/libsmartcols@2.37.4-21.el9?arch=x86_64&distro=rocky-9.7&upstream=util-linux-2.37.4-21.el9.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>libuuid</td>
-                        <td>2.37.4-21.el9</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2025-14104">CVE-2025-14104</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>fixed</td>
-                        <td>
-                            <ul>
-                                <li>0:2.37.4-21.el9_7</li>
-                            </ul>
-                        </td>
-                        <td>A flaw was found in util-linux. This vulnerability allows a heap buffer overread when processing 256-byte usernames, specifically within the `setpwnam()` function, affecting SUID (Set User ID) login-utils utilities writing to the password database.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/libuuid@2.37.4-21.el9?arch=x86_64&distro=rocky-9.7&upstream=util-linux-2.37.4-21.el9.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>util-linux</td>
-                        <td>2.37.4-21.el9</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2025-14104">CVE-2025-14104</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>fixed</td>
-                        <td>
-                            <ul>
-                                <li>0:2.37.4-21.el9_7</li>
-                            </ul>
-                        </td>
-                        <td>A flaw was found in util-linux. This vulnerability allows a heap buffer overread when processing 256-byte usernames, specifically within the `setpwnam()` function, affecting SUID (Set User ID) login-utils utilities writing to the password database.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/util-linux@2.37.4-21.el9?arch=x86_64&distro=rocky-9.7&upstream=util-linux-2.37.4-21.el9.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>util-linux-core</td>
-                        <td>2.37.4-21.el9</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2025-14104">CVE-2025-14104</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>fixed</td>
-                        <td>
-                            <ul>
-                                <li>0:2.37.4-21.el9_7</li>
-                            </ul>
-                        </td>
-                        <td>A flaw was found in util-linux. This vulnerability allows a heap buffer overread when processing 256-byte usernames, specifically within the `setpwnam()` function, affecting SUID (Set User ID) login-utils utilities writing to the password database.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/util-linux-core@2.37.4-21.el9?arch=x86_64&distro=rocky-9.7&upstream=util-linux-2.37.4-21.el9.src.rpm</td>
                     </tr>
                     <tr>
                         <td>glibc</td>
@@ -2845,6 +2829,22 @@ boundary.</td>
                         <td>A flaw was found in OpenSSL. When an application processes a maliciously crafted PKCS#12 file, an attacker can exploit a stack buffer overflow or a NULL pointer dereference. This can lead to a denial of service (DoS) by crashing the application, and in some cases, may enable arbitrary code execution. The vulnerability arises from the lack of validation for PBKDF2 salt and keylength parameters within the PKCS#12 file.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/openssl-libs@3.5.1-4.el9_7?arch=x86_64&distro=rocky-9.7&epoch=1&upstream=openssl-3.5.1-4.el9_7.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>gnupg2</td>
+                        <td>2.3.3-4.el9</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2022-3219">CVE-2022-3219</a>
+                        </td>
+                        <td>Low</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A vulnerability was found in GnuPG. GnuPG can spin on a relatively small input by crafting a public key with thousands of signatures attached and compressed down to a few kilobytes. This issue can potentially cause a denial of service.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/gnupg2@2.3.3-4.el9?arch=x86_64&distro=rocky-9.7&upstream=gnupg2-2.3.3-4.el9.src.rpm</td>
                     </tr>
                     <tr>
                         <td>openssl</td>
