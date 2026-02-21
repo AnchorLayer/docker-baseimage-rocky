@@ -840,7 +840,7 @@
                     <dd id="typeValue">image</dd><dt>Checksum:</dt>
                     <dd id="checksumValue">sha256:f376ba4b3b4e88e41bedc1d3756b8260edb64b3b311860cb50363435605ee0d0</dd><dt>Date:</dt>
                     <dd>
-                        <span id="dateElement">2026-02-21T06:01:52.11843322Z</span>
+                        <span id="dateElement">2026-02-21T06:54:26.05913819Z</span>
                         <span id="prettyDateElement" style="display: none;"></span>
                     </dd>
                 </dl>
@@ -889,6 +889,22 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <tr>
+                        <td>openldap</td>
+                        <td>2.6.8-4.el9.0.1</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2023-2953">CVE-2023-2953</a>
+                        </td>
+                        <td>Low</td>
+                        <td>wont-fix</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A vulnerability was found in OpenLDAP, in ber_memalloc_x() function, leading to a null pointer dereference. This flaw can result in reduced system memory and cause LDAP authentication failures. The impact is primarily a disruption in authentication processes, which may hinder user access or service operations relying on LDAP for authentication.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/openldap@2.6.8-4.el9.0.1?arch=x86_64&distro=rocky-9.7&upstream=openldap-2.6.8-4.el9.0.1.src.rpm</td>
+                    </tr>
                     <tr>
                         <td>openssl</td>
                         <td>1:3.5.1-4.el9_7</td>
@@ -942,22 +958,6 @@
                         <td>A flaw was found in OpenSSL. A remote attacker can exploit a stack buffer overflow vulnerability by supplying a crafted Cryptographic Message Syntax (CMS) message with an oversized Initialization Vector (IV) when parsing AuthEnvelopedData structures that use Authenticated Encryption with Associated Data (AEAD) ciphers such as AES-GCM. This can lead to a crash, causing a Denial of Service (DoS), or potentially allow for remote code execution.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/openssl-libs@3.5.1-4.el9_7?arch=x86_64&distro=rocky-9.7&epoch=1&upstream=openssl-3.5.1-4.el9_7.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>openldap</td>
-                        <td>2.6.8-4.el9.0.1</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2023-2953">CVE-2023-2953</a>
-                        </td>
-                        <td>Low</td>
-                        <td>wont-fix</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A vulnerability was found in OpenLDAP, in ber_memalloc_x() function, leading to a null pointer dereference. This flaw can result in reduced system memory and cause LDAP authentication failures. The impact is primarily a disruption in authentication processes, which may hinder user access or service operations relying on LDAP for authentication.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/openldap@2.6.8-4.el9.0.1?arch=x86_64&distro=rocky-9.7&upstream=openldap-2.6.8-4.el9.0.1.src.rpm</td>
                     </tr>
                     <tr>
                         <td>curl</td>
@@ -1986,6 +1986,68 @@
                         <td>pkg:rpm/rocky/gnutls@3.8.3-9.el9.0.1?arch=x86_64&distro=rocky-9.7&upstream=gnutls-3.8.3-9.el9.0.1.src.rpm</td>
                     </tr>
                     <tr>
+                        <td>curl</td>
+                        <td>7.76.1-34.el9</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-9086">CVE-2025-9086</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>fixed</td>
+                        <td>
+                            <ul>
+                                <li>0:7.76.1-35.el9_7.3</li>
+                            </ul>
+                        </td>
+                        <td>1. A cookie is set using the `secure` keyword for `https://target` 
+2. curl is redirected to or otherwise made to speak with `http://target` (same 
+hostname, but using clear text HTTP) using the same cookie set 
+3. The same cookie name is set - but with just a slash as path (`path=\&#34;/\&#34;,`).
+Since this site is not secure, the cookie *should* just be ignored.
+4. A bug in the path comparison logic makes curl read outside a heap buffer
+boundary
+The bug either causes a crash or it potentially makes the comparison come to
+the wrong conclusion and lets the clear-text site override the contents of the
+secure cookie, contrary to expectations and depending on the memory contents
+immediately following the single-byte allocation that holds the path.
+The presumed and correct behavior would be to plainly ignore the second set of
+the cookie since it was already set as secure on a secure host so overriding
+it on an insecure host should not be okay.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/curl@7.76.1-34.el9?arch=x86_64&distro=rocky-9.7&upstream=curl-7.76.1-34.el9.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>libcurl</td>
+                        <td>7.76.1-34.el9</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-9086">CVE-2025-9086</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>fixed</td>
+                        <td>
+                            <ul>
+                                <li>0:7.76.1-35.el9_7.3</li>
+                            </ul>
+                        </td>
+                        <td>1. A cookie is set using the `secure` keyword for `https://target` 
+2. curl is redirected to or otherwise made to speak with `http://target` (same 
+hostname, but using clear text HTTP) using the same cookie set 
+3. The same cookie name is set - but with just a slash as path (`path=\&#34;/\&#34;,`).
+Since this site is not secure, the cookie *should* just be ignored.
+4. A bug in the path comparison logic makes curl read outside a heap buffer
+boundary
+The bug either causes a crash or it potentially makes the comparison come to
+the wrong conclusion and lets the clear-text site override the contents of the
+secure cookie, contrary to expectations and depending on the memory contents
+immediately following the single-byte allocation that holds the path.
+The presumed and correct behavior would be to plainly ignore the second set of
+the cookie since it was already set as secure on a secure host so overriding
+it on an insecure host should not be okay.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/libcurl@7.76.1-34.el9?arch=x86_64&distro=rocky-9.7&upstream=curl-7.76.1-34.el9.src.rpm</td>
+                    </tr>
+                    <tr>
                         <td>libbrotli</td>
                         <td>1.0.9-7.el9_5</td>
                         <td>rpm</td>
@@ -2102,66 +2164,20 @@
                         <td>pkg:rpm/rocky/gnupg2@2.3.3-4.el9?arch=x86_64&distro=rocky-9.7&upstream=gnupg2-2.3.3-4.el9.src.rpm</td>
                     </tr>
                     <tr>
-                        <td>curl</td>
-                        <td>7.76.1-34.el9</td>
+                        <td>coreutils-single</td>
+                        <td>8.32-39.el9</td>
                         <td>rpm</td>
                         <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2025-9086">CVE-2025-9086</a>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-5278">CVE-2025-5278</a>
                         </td>
                         <td>Medium</td>
-                        <td>fixed</td>
+                        <td>not-fixed</td>
                         <td>
-                            <ul>
-                                <li>0:7.76.1-35.el9_7.3</li>
-                            </ul>
+                            N/A
                         </td>
-                        <td>1. A cookie is set using the `secure` keyword for `https://target` 
-2. curl is redirected to or otherwise made to speak with `http://target` (same 
-hostname, but using clear text HTTP) using the same cookie set 
-3. The same cookie name is set - but with just a slash as path (`path=\&#34;/\&#34;,`).
-Since this site is not secure, the cookie *should* just be ignored.
-4. A bug in the path comparison logic makes curl read outside a heap buffer
-boundary
-The bug either causes a crash or it potentially makes the comparison come to
-the wrong conclusion and lets the clear-text site override the contents of the
-secure cookie, contrary to expectations and depending on the memory contents
-immediately following the single-byte allocation that holds the path.
-The presumed and correct behavior would be to plainly ignore the second set of
-the cookie since it was already set as secure on a secure host so overriding
-it on an insecure host should not be okay.</td>
+                        <td>A flaw was found in GNU Coreutils. The sort utility&#39;s begfield() function is vulnerable to a heap buffer under-read. The program may access memory outside the allocated buffer if a user runs a crafted command using the traditional key format. A malicious input could lead to a crash or leak sensitive data.</td>
                         <td>[]</td>
-                        <td>pkg:rpm/rocky/curl@7.76.1-34.el9?arch=x86_64&distro=rocky-9.7&upstream=curl-7.76.1-34.el9.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>libcurl</td>
-                        <td>7.76.1-34.el9</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2025-9086">CVE-2025-9086</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>fixed</td>
-                        <td>
-                            <ul>
-                                <li>0:7.76.1-35.el9_7.3</li>
-                            </ul>
-                        </td>
-                        <td>1. A cookie is set using the `secure` keyword for `https://target` 
-2. curl is redirected to or otherwise made to speak with `http://target` (same 
-hostname, but using clear text HTTP) using the same cookie set 
-3. The same cookie name is set - but with just a slash as path (`path=\&#34;/\&#34;,`).
-Since this site is not secure, the cookie *should* just be ignored.
-4. A bug in the path comparison logic makes curl read outside a heap buffer
-boundary
-The bug either causes a crash or it potentially makes the comparison come to
-the wrong conclusion and lets the clear-text site override the contents of the
-secure cookie, contrary to expectations and depending on the memory contents
-immediately following the single-byte allocation that holds the path.
-The presumed and correct behavior would be to plainly ignore the second set of
-the cookie since it was already set as secure on a secure host so overriding
-it on an insecure host should not be okay.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/libcurl@7.76.1-34.el9?arch=x86_64&distro=rocky-9.7&upstream=curl-7.76.1-34.el9.src.rpm</td>
+                        <td>pkg:rpm/rocky/coreutils-single@8.32-39.el9?arch=x86_64&distro=rocky-9.7&upstream=coreutils-8.32-39.el9.src.rpm</td>
                     </tr>
                     <tr>
                         <td>libssh</td>
@@ -2194,22 +2210,6 @@ it on an insecure host should not be okay.</td>
                         <td>A flaw was found in libssh, a library that implements the SSH protocol. When calculating the session ID during the key exchange (KEX) process, an allocation failure in cryptographic functions may lead to a NULL pointer dereference. This issue can cause the client or server to crash.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/libssh-config@0.10.4-15.el9_6?arch=noarch&distro=rocky-9.7&upstream=libssh-0.10.4-15.el9_6.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>coreutils-single</td>
-                        <td>8.32-39.el9</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2025-5278">CVE-2025-5278</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in GNU Coreutils. The sort utility&#39;s begfield() function is vulnerable to a heap buffer under-read. The program may access memory outside the allocated buffer if a user runs a crafted command using the traditional key format. A malicious input could lead to a crash or leak sensitive data.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/coreutils-single@8.32-39.el9?arch=x86_64&distro=rocky-9.7&upstream=coreutils-8.32-39.el9.src.rpm</td>
                     </tr>
                     <tr>
                         <td>openssl</td>

@@ -10,6 +10,27 @@
           "informationUri": "https://github.com/anchore/grype",
           "rules": [
             {
+              "id": "CVE-2023-2953-openldap",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2023-2953 low vulnerability for openldap package"
+              },
+              "fullDescription": {
+                "text": "A vulnerability was found in OpenLDAP, in ber_memalloc_x() function, leading to a null pointer dereference. This flaw can result in reduced system memory and cause LDAP authentication failures. The impact is primarily a disruption in authentication processes, which may hinder user access or service operations relying on LDAP for authentication."
+              },
+              "helpUri": "https://github.com/anchore/grype",
+              "help": {
+                "text": "Vulnerability CVE-2023-2953\nSeverity: low\nPackage: openldap\nVersion: 2.6.8-4.el9.0.1\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2023-2953](https://access.redhat.com/security/cve/CVE-2023-2953)",
+                "markdown": "**Vulnerability CVE-2023-2953**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | openldap  | 2.6.8-4.el9.0.1  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2023-2953](https://access.redhat.com/security/cve/CVE-2023-2953)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/openldap@2.6.8-4.el9.0.1?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=openldap-2.6.8-4.el9.0.1.src.rpm"
+                ],
+                "security-severity": "7.1"
+              }
+            },
+            {
               "id": "CVE-2025-15467-openssl",
               "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
@@ -70,27 +91,6 @@
                   "pkg:rpm/rocky/openssl-libs@3.5.1-4.el9_7?arch=x86_64\u0026distro=rocky-9.7\u0026epoch=1\u0026upstream=openssl-3.5.1-4.el9_7.src.rpm"
                 ],
                 "security-severity": "9.8"
-              }
-            },
-            {
-              "id": "CVE-2023-2953-openldap",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2023-2953 low vulnerability for openldap package"
-              },
-              "fullDescription": {
-                "text": "A vulnerability was found in OpenLDAP, in ber_memalloc_x() function, leading to a null pointer dereference. This flaw can result in reduced system memory and cause LDAP authentication failures. The impact is primarily a disruption in authentication processes, which may hinder user access or service operations relying on LDAP for authentication."
-              },
-              "helpUri": "https://github.com/anchore/grype",
-              "help": {
-                "text": "Vulnerability CVE-2023-2953\nSeverity: low\nPackage: openldap\nVersion: 2.6.8-4.el9.0.1\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2023-2953](https://access.redhat.com/security/cve/CVE-2023-2953)",
-                "markdown": "**Vulnerability CVE-2023-2953**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | openldap  | 2.6.8-4.el9.0.1  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2023-2953](https://access.redhat.com/security/cve/CVE-2023-2953)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/openldap@2.6.8-4.el9.0.1?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=openldap-2.6.8-4.el9.0.1.src.rpm"
-                ],
-                "security-severity": "7.1"
               }
             },
             {
@@ -1375,6 +1375,48 @@
               }
             },
             {
+              "id": "CVE-2025-9086-curl",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2025-9086 medium vulnerability for curl package"
+              },
+              "fullDescription": {
+                "text": "1. A cookie is set using the `secure` keyword for `https://target` \n2. curl is redirected to or otherwise made to speak with `http://target` (same \nhostname, but using clear text HTTP) using the same cookie set \n3. The same cookie name is set - but with just a slash as path (`path=\\\"/\\\",`).\nSince this site is not secure, the cookie *should* just be ignored.\n4. A bug in the path comparison logic makes curl read outside a heap buffer\nboundary\nThe bug either causes a crash or it potentially makes the comparison come to\nthe wrong conclusion and lets the clear-text site override the contents of the\nsecure cookie, contrary to expectations and depending on the memory contents\nimmediately following the single-byte allocation that holds the path.\nThe presumed and correct behavior would be to plainly ignore the second set of\nthe cookie since it was already set as secure on a secure host so overriding\nit on an insecure host should not be okay."
+              },
+              "helpUri": "https://github.com/anchore/grype",
+              "help": {
+                "text": "Vulnerability CVE-2025-9086\nSeverity: medium\nPackage: curl\nVersion: 7.76.1-34.el9\nFix Version: 0:7.76.1-35.el9_7.3\nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2025-9086](https://access.redhat.com/security/cve/CVE-2025-9086)",
+                "markdown": "**Vulnerability CVE-2025-9086**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | curl  | 7.76.1-34.el9  | 0:7.76.1-35.el9_7.3  | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2025-9086](https://access.redhat.com/security/cve/CVE-2025-9086)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/curl@7.76.1-34.el9?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=curl-7.76.1-34.el9.src.rpm"
+                ],
+                "security-severity": "5.3"
+              }
+            },
+            {
+              "id": "CVE-2025-9086-libcurl",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2025-9086 medium vulnerability for libcurl package"
+              },
+              "fullDescription": {
+                "text": "1. A cookie is set using the `secure` keyword for `https://target` \n2. curl is redirected to or otherwise made to speak with `http://target` (same \nhostname, but using clear text HTTP) using the same cookie set \n3. The same cookie name is set - but with just a slash as path (`path=\\\"/\\\",`).\nSince this site is not secure, the cookie *should* just be ignored.\n4. A bug in the path comparison logic makes curl read outside a heap buffer\nboundary\nThe bug either causes a crash or it potentially makes the comparison come to\nthe wrong conclusion and lets the clear-text site override the contents of the\nsecure cookie, contrary to expectations and depending on the memory contents\nimmediately following the single-byte allocation that holds the path.\nThe presumed and correct behavior would be to plainly ignore the second set of\nthe cookie since it was already set as secure on a secure host so overriding\nit on an insecure host should not be okay."
+              },
+              "helpUri": "https://github.com/anchore/grype",
+              "help": {
+                "text": "Vulnerability CVE-2025-9086\nSeverity: medium\nPackage: libcurl\nVersion: 7.76.1-34.el9\nFix Version: 0:7.76.1-35.el9_7.3\nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2025-9086](https://access.redhat.com/security/cve/CVE-2025-9086)",
+                "markdown": "**Vulnerability CVE-2025-9086**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | libcurl  | 7.76.1-34.el9  | 0:7.76.1-35.el9_7.3  | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2025-9086](https://access.redhat.com/security/cve/CVE-2025-9086)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/libcurl@7.76.1-34.el9?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=curl-7.76.1-34.el9.src.rpm"
+                ],
+                "security-severity": "5.3"
+              }
+            },
+            {
               "id": "CVE-2025-6176-libbrotli",
               "name": "RpmMatcherExactIndirectMatch",
               "shortDescription": {
@@ -1522,45 +1564,24 @@
               }
             },
             {
-              "id": "CVE-2025-9086-curl",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2025-9086 medium vulnerability for curl package"
-              },
-              "fullDescription": {
-                "text": "1. A cookie is set using the `secure` keyword for `https://target` \n2. curl is redirected to or otherwise made to speak with `http://target` (same \nhostname, but using clear text HTTP) using the same cookie set \n3. The same cookie name is set - but with just a slash as path (`path=\\\"/\\\",`).\nSince this site is not secure, the cookie *should* just be ignored.\n4. A bug in the path comparison logic makes curl read outside a heap buffer\nboundary\nThe bug either causes a crash or it potentially makes the comparison come to\nthe wrong conclusion and lets the clear-text site override the contents of the\nsecure cookie, contrary to expectations and depending on the memory contents\nimmediately following the single-byte allocation that holds the path.\nThe presumed and correct behavior would be to plainly ignore the second set of\nthe cookie since it was already set as secure on a secure host so overriding\nit on an insecure host should not be okay."
-              },
-              "helpUri": "https://github.com/anchore/grype",
-              "help": {
-                "text": "Vulnerability CVE-2025-9086\nSeverity: medium\nPackage: curl\nVersion: 7.76.1-34.el9\nFix Version: 0:7.76.1-35.el9_7.3\nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2025-9086](https://access.redhat.com/security/cve/CVE-2025-9086)",
-                "markdown": "**Vulnerability CVE-2025-9086**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | curl  | 7.76.1-34.el9  | 0:7.76.1-35.el9_7.3  | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2025-9086](https://access.redhat.com/security/cve/CVE-2025-9086)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/curl@7.76.1-34.el9?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=curl-7.76.1-34.el9.src.rpm"
-                ],
-                "security-severity": "5.3"
-              }
-            },
-            {
-              "id": "CVE-2025-9086-libcurl",
+              "id": "CVE-2025-5278-coreutils-single",
               "name": "RpmMatcherExactIndirectMatch",
               "shortDescription": {
-                "text": "CVE-2025-9086 medium vulnerability for libcurl package"
+                "text": "CVE-2025-5278 medium vulnerability for coreutils-single package"
               },
               "fullDescription": {
-                "text": "1. A cookie is set using the `secure` keyword for `https://target` \n2. curl is redirected to or otherwise made to speak with `http://target` (same \nhostname, but using clear text HTTP) using the same cookie set \n3. The same cookie name is set - but with just a slash as path (`path=\\\"/\\\",`).\nSince this site is not secure, the cookie *should* just be ignored.\n4. A bug in the path comparison logic makes curl read outside a heap buffer\nboundary\nThe bug either causes a crash or it potentially makes the comparison come to\nthe wrong conclusion and lets the clear-text site override the contents of the\nsecure cookie, contrary to expectations and depending on the memory contents\nimmediately following the single-byte allocation that holds the path.\nThe presumed and correct behavior would be to plainly ignore the second set of\nthe cookie since it was already set as secure on a secure host so overriding\nit on an insecure host should not be okay."
+                "text": "A flaw was found in GNU Coreutils. The sort utility's begfield() function is vulnerable to a heap buffer under-read. The program may access memory outside the allocated buffer if a user runs a crafted command using the traditional key format. A malicious input could lead to a crash or leak sensitive data."
               },
               "helpUri": "https://github.com/anchore/grype",
               "help": {
-                "text": "Vulnerability CVE-2025-9086\nSeverity: medium\nPackage: libcurl\nVersion: 7.76.1-34.el9\nFix Version: 0:7.76.1-35.el9_7.3\nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2025-9086](https://access.redhat.com/security/cve/CVE-2025-9086)",
-                "markdown": "**Vulnerability CVE-2025-9086**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | libcurl  | 7.76.1-34.el9  | 0:7.76.1-35.el9_7.3  | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2025-9086](https://access.redhat.com/security/cve/CVE-2025-9086)  |\n"
+                "text": "Vulnerability CVE-2025-5278\nSeverity: medium\nPackage: coreutils-single\nVersion: 8.32-39.el9\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2025-5278](https://access.redhat.com/security/cve/CVE-2025-5278)",
+                "markdown": "**Vulnerability CVE-2025-5278**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | coreutils-single  | 8.32-39.el9  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2025-5278](https://access.redhat.com/security/cve/CVE-2025-5278)  |\n"
               },
               "properties": {
                 "purls": [
-                  "pkg:rpm/rocky/libcurl@7.76.1-34.el9?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=curl-7.76.1-34.el9.src.rpm"
+                  "pkg:rpm/rocky/coreutils-single@8.32-39.el9?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=coreutils-8.32-39.el9.src.rpm"
                 ],
-                "security-severity": "5.3"
+                "security-severity": "4.4"
               }
             },
             {
@@ -1603,27 +1624,6 @@
                   "pkg:rpm/rocky/libssh-config@0.10.4-15.el9_6?arch=noarch\u0026distro=rocky-9.7\u0026upstream=libssh-0.10.4-15.el9_6.src.rpm"
                 ],
                 "security-severity": "4.7"
-              }
-            },
-            {
-              "id": "CVE-2025-5278-coreutils-single",
-              "name": "RpmMatcherExactIndirectMatch",
-              "shortDescription": {
-                "text": "CVE-2025-5278 medium vulnerability for coreutils-single package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in GNU Coreutils. The sort utility's begfield() function is vulnerable to a heap buffer under-read. The program may access memory outside the allocated buffer if a user runs a crafted command using the traditional key format. A malicious input could lead to a crash or leak sensitive data."
-              },
-              "helpUri": "https://github.com/anchore/grype",
-              "help": {
-                "text": "Vulnerability CVE-2025-5278\nSeverity: medium\nPackage: coreutils-single\nVersion: 8.32-39.el9\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2025-5278](https://access.redhat.com/security/cve/CVE-2025-5278)",
-                "markdown": "**Vulnerability CVE-2025-5278**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | coreutils-single  | 8.32-39.el9  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2025-5278](https://access.redhat.com/security/cve/CVE-2025-5278)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/coreutils-single@8.32-39.el9?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=coreutils-8.32-39.el9.src.rpm"
-                ],
-                "security-severity": "4.4"
               }
             },
             {
@@ -3038,6 +3038,37 @@
       },
       "results": [
         {
+          "ruleId": "CVE-2023-2953-openldap",
+          "level": "note",
+          "message": {
+            "text": "A low vulnerability in rpm package: openldap, version 2.6.8-4.el9.0.1 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:4399bb3147e5af0f9f6057bd99266fa171dd752ebe4e46e204e406ad3b5504f6:/var/lib/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "16c8aa88e3527bf5112924d97a1f29f54cf2f69ecda7ed565b805a03fd1c74fe:1"
+          }
+        },
+        {
           "ruleId": "CVE-2025-15467-openssl",
           "level": "error",
           "message": {
@@ -3128,37 +3159,6 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "7f096a64524891508940c5eb6f0e4455ef7abeaf5e49aae046bb1d33594dd1a8:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2023-2953-openldap",
-          "level": "note",
-          "message": {
-            "text": "A low vulnerability in rpm package: openldap, version 2.6.8-4.el9.0.1 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:4399bb3147e5af0f9f6057bd99266fa171dd752ebe4e46e204e406ad3b5504f6:/var/lib/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "16c8aa88e3527bf5112924d97a1f29f54cf2f69ecda7ed565b805a03fd1c74fe:1"
           }
         },
         {
@@ -5053,6 +5053,68 @@
           }
         },
         {
+          "ruleId": "CVE-2025-9086-curl",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: curl, version 7.76.1-34.el9 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:4399bb3147e5af0f9f6057bd99266fa171dd752ebe4e46e204e406ad3b5504f6:/var/lib/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "0e63401452343c3492287fc06a804559de972451a408c2ea5e808eb8c90a97a7:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2025-9086-libcurl",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: libcurl, version 7.76.1-34.el9 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:4399bb3147e5af0f9f6057bd99266fa171dd752ebe4e46e204e406ad3b5504f6:/var/lib/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "cd70c63991bebfc8356ff05b60d9e8f147d34ea72ac80e9343140379a0b24457:1"
+          }
+        },
+        {
           "ruleId": "CVE-2025-6176-libbrotli",
           "level": "error",
           "message": {
@@ -5270,10 +5332,10 @@
           }
         },
         {
-          "ruleId": "CVE-2025-9086-curl",
+          "ruleId": "CVE-2025-5278-coreutils-single",
           "level": "warning",
           "message": {
-            "text": "A medium vulnerability in rpm package: curl, version 7.76.1-34.el9 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
+            "text": "A medium vulnerability in rpm package: coreutils-single, version 8.32-39.el9 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
           },
           "locations": [
             {
@@ -5297,38 +5359,7 @@
             }
           ],
           "partialFingerprints": {
-            "primaryLocationLineHash": "0e63401452343c3492287fc06a804559de972451a408c2ea5e808eb8c90a97a7:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2025-9086-libcurl",
-          "level": "warning",
-          "message": {
-            "text": "A medium vulnerability in rpm package: libcurl, version 7.76.1-34.el9 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:4399bb3147e5af0f9f6057bd99266fa171dd752ebe4e46e204e406ad3b5504f6:/var/lib/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "cd70c63991bebfc8356ff05b60d9e8f147d34ea72ac80e9343140379a0b24457:1"
+            "primaryLocationLineHash": "624ac14744224e81862726c3f23c73f1c33f7ac107fb1295a996487c139cdbfa:1"
           }
         },
         {
@@ -5391,37 +5422,6 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "79a73284139d65c3916a6fbb7dad015e91f47ab35f194139cfab47275f1c14be:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2025-5278-coreutils-single",
-          "level": "warning",
-          "message": {
-            "text": "A medium vulnerability in rpm package: coreutils-single, version 8.32-39.el9 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:4399bb3147e5af0f9f6057bd99266fa171dd752ebe4e46e204e406ad3b5504f6:/var/lib/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "624ac14744224e81862726c3f23c73f1c33f7ac107fb1295a996487c139cdbfa:1"
           }
         },
         {
