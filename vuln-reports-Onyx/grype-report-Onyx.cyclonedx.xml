@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bom xmlns="http://cyclonedx.org/schema/bom/1.6" serialNumber="urn:uuid:0a224bb9-6e75-40d4-b8e8-4b996c5aa4c3" version="1">
+<bom xmlns="http://cyclonedx.org/schema/bom/1.6" serialNumber="urn:uuid:1f444d9a-85be-46d4-9686-d9476f5f468d" version="1">
   <metadata>
-    <timestamp>2026-02-22T06:40:38Z</timestamp>
+    <timestamp>2026-02-22T07:33:18Z</timestamp>
     <tools>
       <components>
         <component type="application">
@@ -24154,7 +24154,7 @@
     </dependency>
   </dependencies>
   <vulnerabilities>
-    <vulnerability bom-ref="urn:uuid:8730ff3c-5fa4-4e08-b92a-cb66566f572a">
+    <vulnerability bom-ref="urn:uuid:9d46f5a1-f181-4b05-b5b1-5937bea3c21b">
       <id>CVE-2023-2953</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -24192,7 +24192,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:f1ff72d6-da5c-4a67-9e45-c3cf53798e09">
+    <vulnerability bom-ref="urn:uuid:01cdbbb7-8362-432f-b2b1-0946a6f69f81">
       <id>CVE-2025-15467</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -24219,7 +24219,7 @@
             <name>FIRST</name>
             <url>https://www.first.org/epss/</url>
           </source>
-          <score>0.00792</score>
+          <score>0.00672</score>
           <method>other</method>
         </rating>
       </ratings>
@@ -24230,7 +24230,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:75c64a16-d061-4826-a192-123d76e1f8ca">
+    <vulnerability bom-ref="urn:uuid:49782811-b5bc-4a4b-9920-07230bc72262">
       <id>CVE-2025-15467</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -24257,7 +24257,7 @@
             <name>FIRST</name>
             <url>https://www.first.org/epss/</url>
           </source>
-          <score>0.00792</score>
+          <score>0.00672</score>
           <method>other</method>
         </rating>
       </ratings>
@@ -24268,7 +24268,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:13bb8166-3dd1-470e-a164-4f793a245516">
+    <vulnerability bom-ref="urn:uuid:3f0b4d60-7315-408a-9cb5-d4ae8fdf54b3">
       <id>CVE-2025-15467</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -24295,7 +24295,7 @@
             <name>FIRST</name>
             <url>https://www.first.org/epss/</url>
           </source>
-          <score>0.00792</score>
+          <score>0.00672</score>
           <method>other</method>
         </rating>
       </ratings>
@@ -24306,7 +24306,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:c3d3c537-5940-453c-a7d3-eccdf75b0253">
+    <vulnerability bom-ref="urn:uuid:9858b470-1d94-4ba4-bd7e-a392e70aef81">
       <id>CVE-2024-11053</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -24344,7 +24344,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:10eb36c9-a399-43b1-b45c-daaef54b2e9d">
+    <vulnerability bom-ref="urn:uuid:9d58ce44-650a-426d-ac89-a986a5f6fce2">
       <id>CVE-2024-11053</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -24382,7 +24382,83 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:5689f274-334d-4a49-868b-fd3f2246768b">
+    <vulnerability bom-ref="urn:uuid:022f53fd-98b1-4597-9fb8-07fb28825dd9">
+      <id>CVE-2024-7264</id>
+      <source>
+        <name>redhat-distro-redhat-9</name>
+        <url>https://access.redhat.com/security/cve/CVE-2024-7264</url>
+      </source>
+      <references>
+        <reference>
+          <id>CVE-2024-7264</id>
+          <source>
+            <name>redhat-distro-redhat-9</name>
+            <url>https://access.redhat.com/security/cve/CVE-2024-7264</url>
+          </source>
+        </reference>
+      </references>
+      <ratings>
+        <rating>
+          <score>5.3</score>
+          <severity>low</severity>
+          <method>CVSSv31</method>
+          <vector>CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:L/I:N/A:H</vector>
+        </rating>
+        <rating>
+          <source>
+            <name>FIRST</name>
+            <url>https://www.first.org/epss/</url>
+          </source>
+          <score>0.00882</score>
+          <method>other</method>
+        </rating>
+      </ratings>
+      <description>A flaw was found in libcurl, where libcurl&#39;s ASN1 parser code has the `GTime2str()` function, used for parsing an ASN.1 Generalized Time field. If a syntactically incorrect field is given, the parser can use -1 for the length of the *time fraction*, leading to a `strlen()` performed on a pointer to a heap buffer area that is not purposely NULL terminated.</description>
+      <affects>
+        <target>
+          <ref>pkg:rpm/rocky/curl@7.76.1-34.el9?arch=x86_64&amp;distro=rocky-9.7&amp;package-id=4fefc234193b47ef&amp;upstream=curl-7.76.1-34.el9.src.rpm</ref>
+        </target>
+      </affects>
+    </vulnerability>
+    <vulnerability bom-ref="urn:uuid:1e774e55-40af-490f-a4dd-b248bb7ed9d3">
+      <id>CVE-2024-7264</id>
+      <source>
+        <name>redhat-distro-redhat-9</name>
+        <url>https://access.redhat.com/security/cve/CVE-2024-7264</url>
+      </source>
+      <references>
+        <reference>
+          <id>CVE-2024-7264</id>
+          <source>
+            <name>redhat-distro-redhat-9</name>
+            <url>https://access.redhat.com/security/cve/CVE-2024-7264</url>
+          </source>
+        </reference>
+      </references>
+      <ratings>
+        <rating>
+          <score>5.3</score>
+          <severity>low</severity>
+          <method>CVSSv31</method>
+          <vector>CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:L/I:N/A:H</vector>
+        </rating>
+        <rating>
+          <source>
+            <name>FIRST</name>
+            <url>https://www.first.org/epss/</url>
+          </source>
+          <score>0.00882</score>
+          <method>other</method>
+        </rating>
+      </ratings>
+      <description>A flaw was found in libcurl, where libcurl&#39;s ASN1 parser code has the `GTime2str()` function, used for parsing an ASN.1 Generalized Time field. If a syntactically incorrect field is given, the parser can use -1 for the length of the *time fraction*, leading to a `strlen()` performed on a pointer to a heap buffer area that is not purposely NULL terminated.</description>
+      <affects>
+        <target>
+          <ref>pkg:rpm/rocky/libcurl@7.76.1-34.el9?arch=x86_64&amp;distro=rocky-9.7&amp;package-id=5bd057f64cc7ff47&amp;upstream=curl-7.76.1-34.el9.src.rpm</ref>
+        </target>
+      </affects>
+    </vulnerability>
+    <vulnerability bom-ref="urn:uuid:97429d6d-6707-4776-a802-434573fa0701">
       <id>CVE-2024-34459</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -24420,83 +24496,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:fc39c307-0f3c-4b4d-b892-ee7f809a05db">
-      <id>CVE-2024-7264</id>
-      <source>
-        <name>redhat-distro-redhat-9</name>
-        <url>https://access.redhat.com/security/cve/CVE-2024-7264</url>
-      </source>
-      <references>
-        <reference>
-          <id>CVE-2024-7264</id>
-          <source>
-            <name>redhat-distro-redhat-9</name>
-            <url>https://access.redhat.com/security/cve/CVE-2024-7264</url>
-          </source>
-        </reference>
-      </references>
-      <ratings>
-        <rating>
-          <score>5.3</score>
-          <severity>low</severity>
-          <method>CVSSv31</method>
-          <vector>CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:L/I:N/A:H</vector>
-        </rating>
-        <rating>
-          <source>
-            <name>FIRST</name>
-            <url>https://www.first.org/epss/</url>
-          </source>
-          <score>0.00796</score>
-          <method>other</method>
-        </rating>
-      </ratings>
-      <description>A flaw was found in libcurl, where libcurl&#39;s ASN1 parser code has the `GTime2str()` function, used for parsing an ASN.1 Generalized Time field. If a syntactically incorrect field is given, the parser can use -1 for the length of the *time fraction*, leading to a `strlen()` performed on a pointer to a heap buffer area that is not purposely NULL terminated.</description>
-      <affects>
-        <target>
-          <ref>pkg:rpm/rocky/curl@7.76.1-34.el9?arch=x86_64&amp;distro=rocky-9.7&amp;package-id=4fefc234193b47ef&amp;upstream=curl-7.76.1-34.el9.src.rpm</ref>
-        </target>
-      </affects>
-    </vulnerability>
-    <vulnerability bom-ref="urn:uuid:6a873c70-3aee-40c0-b0e7-534a145daf0b">
-      <id>CVE-2024-7264</id>
-      <source>
-        <name>redhat-distro-redhat-9</name>
-        <url>https://access.redhat.com/security/cve/CVE-2024-7264</url>
-      </source>
-      <references>
-        <reference>
-          <id>CVE-2024-7264</id>
-          <source>
-            <name>redhat-distro-redhat-9</name>
-            <url>https://access.redhat.com/security/cve/CVE-2024-7264</url>
-          </source>
-        </reference>
-      </references>
-      <ratings>
-        <rating>
-          <score>5.3</score>
-          <severity>low</severity>
-          <method>CVSSv31</method>
-          <vector>CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:L/I:N/A:H</vector>
-        </rating>
-        <rating>
-          <source>
-            <name>FIRST</name>
-            <url>https://www.first.org/epss/</url>
-          </source>
-          <score>0.00796</score>
-          <method>other</method>
-        </rating>
-      </ratings>
-      <description>A flaw was found in libcurl, where libcurl&#39;s ASN1 parser code has the `GTime2str()` function, used for parsing an ASN.1 Generalized Time field. If a syntactically incorrect field is given, the parser can use -1 for the length of the *time fraction*, leading to a `strlen()` performed on a pointer to a heap buffer area that is not purposely NULL terminated.</description>
-      <affects>
-        <target>
-          <ref>pkg:rpm/rocky/libcurl@7.76.1-34.el9?arch=x86_64&amp;distro=rocky-9.7&amp;package-id=5bd057f64cc7ff47&amp;upstream=curl-7.76.1-34.el9.src.rpm</ref>
-        </target>
-      </affects>
-    </vulnerability>
-    <vulnerability bom-ref="urn:uuid:2c265211-2726-4519-a8e2-f078f1dd0ed6">
+    <vulnerability bom-ref="urn:uuid:151bae2b-a5c2-4ba0-a982-2241fae105f8">
       <id>CVE-2024-9681</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -24534,7 +24534,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:6eb573b7-b92d-4a97-aabf-fad256e67156">
+    <vulnerability bom-ref="urn:uuid:b5fedc10-80ff-468e-8e46-f5a0b42b2b2a">
       <id>CVE-2024-9681</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -24572,7 +24572,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:41c8eb16-d09a-4446-89bf-6a3c8d3b9cb1">
+    <vulnerability bom-ref="urn:uuid:796aa49c-2e95-41bc-b592-e40873178130">
       <id>CVE-2024-41996</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -24610,7 +24610,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:04d3ebfd-983d-42e9-b344-0a0900e16f7d">
+    <vulnerability bom-ref="urn:uuid:2c550c6b-ddb6-47b2-8c33-e7ef200252bf">
       <id>CVE-2024-41996</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -24648,7 +24648,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:247ced5f-0916-440a-ae01-6873df7f8745">
+    <vulnerability bom-ref="urn:uuid:738280c4-8ee6-461c-b0ce-567032c693a8">
       <id>CVE-2024-41996</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -24686,7 +24686,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:2b77290e-7a11-4c03-a660-cabc69a91f25">
+    <vulnerability bom-ref="urn:uuid:c7637328-4f11-4e3c-8396-dde1e06cc85f">
       <id>CVE-2025-14087</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -24724,7 +24724,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:52d96cb6-e16f-4908-add2-e8e02f3018ec">
+    <vulnerability bom-ref="urn:uuid:eddcd8c1-fb27-4f4f-a921-e3ab4d28d1ac">
       <id>CVE-2025-3360</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -24762,7 +24762,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:16bb7d46-d64f-4c5e-b591-c0a413d09483">
+    <vulnerability bom-ref="urn:uuid:bc09d4d5-b383-483c-9d46-3e1dc4497c70">
       <id>CVE-2023-32636</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -24800,7 +24800,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:47249258-7db1-4a19-9056-58457f6c5d6d">
+    <vulnerability bom-ref="urn:uuid:bece4cb2-dbc5-4385-820f-d6c667f8e7c5">
       <id>CVE-2025-27113</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -24838,7 +24838,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:4e2e3619-50e1-499d-9b97-0c3572705bf1">
+    <vulnerability bom-ref="urn:uuid:3963f6cc-97d1-424a-a95b-eeec82c4ac6b">
       <id>CVE-2025-1632</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -24876,7 +24876,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:8528e935-7a2a-4992-89bd-3dfd93466229">
+    <vulnerability bom-ref="urn:uuid:9345830c-0397-4e0d-97d2-370b810d5804">
       <id>CVE-2025-5318</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -24914,7 +24914,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:12ffb747-b2d9-4661-ae0d-794531196331">
+    <vulnerability bom-ref="urn:uuid:8823f06d-5890-4d35-8eeb-f19d43e5b70e">
       <id>CVE-2025-5318</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -24952,7 +24952,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:ecba0873-0fbc-49b5-8aaf-8e3de8800061">
+    <vulnerability bom-ref="urn:uuid:9514a0c9-4211-44c9-8084-53dae6e29004">
       <id>CVE-2025-5351</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -24990,7 +24990,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:526b859d-98bb-402a-96bf-f017096424ed">
+    <vulnerability bom-ref="urn:uuid:7cea19e5-487c-453a-9f5f-057fd1d8f164">
       <id>CVE-2025-5351</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -25028,7 +25028,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:2db3062b-8027-4c51-80dd-a0451f4202f7">
+    <vulnerability bom-ref="urn:uuid:991e34f5-e44f-420c-bbcf-33c350ad7d75">
       <id>CVE-2024-13176</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -25066,7 +25066,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:629894c9-4828-4413-9ba7-a809a9524f77">
+    <vulnerability bom-ref="urn:uuid:8a2cf1bc-6ab4-437a-903a-f7455d89a448">
       <id>CVE-2024-13176</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -25104,7 +25104,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:ed293864-b007-4ed1-aede-9b6fe1c6173c">
+    <vulnerability bom-ref="urn:uuid:228dd59a-76c7-4cca-ae0f-f38443a60577">
       <id>CVE-2024-13176</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -25142,7 +25142,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:bfd29d65-c262-4755-bb1e-0557df3ba530">
+    <vulnerability bom-ref="urn:uuid:073c4d99-156d-403a-86c2-2b82faba0998">
       <id>CVE-2025-69419</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -25180,7 +25180,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:4e05f7d0-0951-4ace-bbd5-dcb71d77f26a">
+    <vulnerability bom-ref="urn:uuid:3d04ea5d-cecd-426a-84ad-830e480e6edc">
       <id>CVE-2025-69419</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -25218,7 +25218,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:5130cd24-52a9-4968-b379-233a9f2dc51b">
+    <vulnerability bom-ref="urn:uuid:a293aa02-ddaf-40ff-a611-d5f3b74cffef">
       <id>CVE-2025-69419</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -25256,7 +25256,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:eb091b8f-7023-4bf5-879d-7f9ac83875f6">
+    <vulnerability bom-ref="urn:uuid:b45ec247-6fda-4424-b48c-97bbf2643ab0">
       <id>CVE-2023-45322</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -25294,7 +25294,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:ef86f5e7-46fa-4a67-8051-e124b012a8b8">
+    <vulnerability bom-ref="urn:uuid:5ca08bf8-d89d-4d8f-907e-b58330656895">
       <id>CVE-2022-41409</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -25332,7 +25332,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:fae6deac-9593-41a8-83ce-7a0e5cedfe40">
+    <vulnerability bom-ref="urn:uuid:aa67ed2b-0b87-4dda-9691-7b84d9f4b7d6">
       <id>CVE-2022-41409</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -25370,83 +25370,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:d4b76b93-c37e-4d9b-b5d4-365a41141905">
-      <id>CVE-2025-5372</id>
-      <source>
-        <name>redhat-distro-redhat-9</name>
-        <url>https://access.redhat.com/security/cve/CVE-2025-5372</url>
-      </source>
-      <references>
-        <reference>
-          <id>CVE-2025-5372</id>
-          <source>
-            <name>redhat-distro-redhat-9</name>
-            <url>https://access.redhat.com/security/cve/CVE-2025-5372</url>
-          </source>
-        </reference>
-      </references>
-      <ratings>
-        <rating>
-          <score>5</score>
-          <severity>medium</severity>
-          <method>CVSSv31</method>
-          <vector>CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:L</vector>
-        </rating>
-        <rating>
-          <source>
-            <name>FIRST</name>
-            <url>https://www.first.org/epss/</url>
-          </source>
-          <score>0.00064</score>
-          <method>other</method>
-        </rating>
-      </ratings>
-      <description>A flaw was found in libssh versions built with OpenSSL versions older than 3.0, specifically in the ssh_kdf() function responsible for key derivation. Due to inconsistent interpretation of return values where OpenSSL uses 0 to indicate failure and libssh uses 0 for success—the function may mistakenly return a success status even when key derivation fails. This results in uninitialized cryptographic key buffers being used in subsequent communication, potentially compromising SSH sessions&#39; confidentiality, integrity, and availability.</description>
-      <affects>
-        <target>
-          <ref>pkg:rpm/rocky/libssh@0.10.4-15.el9_6?arch=x86_64&amp;distro=rocky-9.7&amp;package-id=af40aaa77d28244b&amp;upstream=libssh-0.10.4-15.el9_6.src.rpm</ref>
-        </target>
-      </affects>
-    </vulnerability>
-    <vulnerability bom-ref="urn:uuid:40b68913-65c5-4e25-85f3-2a94c2adf8e8">
-      <id>CVE-2025-5372</id>
-      <source>
-        <name>redhat-distro-redhat-9</name>
-        <url>https://access.redhat.com/security/cve/CVE-2025-5372</url>
-      </source>
-      <references>
-        <reference>
-          <id>CVE-2025-5372</id>
-          <source>
-            <name>redhat-distro-redhat-9</name>
-            <url>https://access.redhat.com/security/cve/CVE-2025-5372</url>
-          </source>
-        </reference>
-      </references>
-      <ratings>
-        <rating>
-          <score>5</score>
-          <severity>medium</severity>
-          <method>CVSSv31</method>
-          <vector>CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:L</vector>
-        </rating>
-        <rating>
-          <source>
-            <name>FIRST</name>
-            <url>https://www.first.org/epss/</url>
-          </source>
-          <score>0.00064</score>
-          <method>other</method>
-        </rating>
-      </ratings>
-      <description>A flaw was found in libssh versions built with OpenSSL versions older than 3.0, specifically in the ssh_kdf() function responsible for key derivation. Due to inconsistent interpretation of return values where OpenSSL uses 0 to indicate failure and libssh uses 0 for success—the function may mistakenly return a success status even when key derivation fails. This results in uninitialized cryptographic key buffers being used in subsequent communication, potentially compromising SSH sessions&#39; confidentiality, integrity, and availability.</description>
-      <affects>
-        <target>
-          <ref>pkg:rpm/rocky/libssh-config@0.10.4-15.el9_6?arch=noarch&amp;distro=rocky-9.7&amp;package-id=8182d2fa30879dd6&amp;upstream=libssh-0.10.4-15.el9_6.src.rpm</ref>
-        </target>
-      </affects>
-    </vulnerability>
-    <vulnerability bom-ref="urn:uuid:05570388-151f-4c06-88d3-a898766bf5cc">
+    <vulnerability bom-ref="urn:uuid:5ac19858-bc53-4b93-a1de-56cb041ca7f7">
       <id>CVE-2026-0990</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -25484,7 +25408,83 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:c151e3ea-f555-450a-847b-076d9bcf264d">
+    <vulnerability bom-ref="urn:uuid:66986b83-ab42-4313-b02b-4f19a6d7fff7">
+      <id>CVE-2025-5372</id>
+      <source>
+        <name>redhat-distro-redhat-9</name>
+        <url>https://access.redhat.com/security/cve/CVE-2025-5372</url>
+      </source>
+      <references>
+        <reference>
+          <id>CVE-2025-5372</id>
+          <source>
+            <name>redhat-distro-redhat-9</name>
+            <url>https://access.redhat.com/security/cve/CVE-2025-5372</url>
+          </source>
+        </reference>
+      </references>
+      <ratings>
+        <rating>
+          <score>5</score>
+          <severity>medium</severity>
+          <method>CVSSv31</method>
+          <vector>CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:L</vector>
+        </rating>
+        <rating>
+          <source>
+            <name>FIRST</name>
+            <url>https://www.first.org/epss/</url>
+          </source>
+          <score>0.00063</score>
+          <method>other</method>
+        </rating>
+      </ratings>
+      <description>A flaw was found in libssh versions built with OpenSSL versions older than 3.0, specifically in the ssh_kdf() function responsible for key derivation. Due to inconsistent interpretation of return values where OpenSSL uses 0 to indicate failure and libssh uses 0 for success—the function may mistakenly return a success status even when key derivation fails. This results in uninitialized cryptographic key buffers being used in subsequent communication, potentially compromising SSH sessions&#39; confidentiality, integrity, and availability.</description>
+      <affects>
+        <target>
+          <ref>pkg:rpm/rocky/libssh@0.10.4-15.el9_6?arch=x86_64&amp;distro=rocky-9.7&amp;package-id=af40aaa77d28244b&amp;upstream=libssh-0.10.4-15.el9_6.src.rpm</ref>
+        </target>
+      </affects>
+    </vulnerability>
+    <vulnerability bom-ref="urn:uuid:ebfd5afc-b746-454d-93eb-d8d2fda413c7">
+      <id>CVE-2025-5372</id>
+      <source>
+        <name>redhat-distro-redhat-9</name>
+        <url>https://access.redhat.com/security/cve/CVE-2025-5372</url>
+      </source>
+      <references>
+        <reference>
+          <id>CVE-2025-5372</id>
+          <source>
+            <name>redhat-distro-redhat-9</name>
+            <url>https://access.redhat.com/security/cve/CVE-2025-5372</url>
+          </source>
+        </reference>
+      </references>
+      <ratings>
+        <rating>
+          <score>5</score>
+          <severity>medium</severity>
+          <method>CVSSv31</method>
+          <vector>CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:L</vector>
+        </rating>
+        <rating>
+          <source>
+            <name>FIRST</name>
+            <url>https://www.first.org/epss/</url>
+          </source>
+          <score>0.00063</score>
+          <method>other</method>
+        </rating>
+      </ratings>
+      <description>A flaw was found in libssh versions built with OpenSSL versions older than 3.0, specifically in the ssh_kdf() function responsible for key derivation. Due to inconsistent interpretation of return values where OpenSSL uses 0 to indicate failure and libssh uses 0 for success—the function may mistakenly return a success status even when key derivation fails. This results in uninitialized cryptographic key buffers being used in subsequent communication, potentially compromising SSH sessions&#39; confidentiality, integrity, and availability.</description>
+      <affects>
+        <target>
+          <ref>pkg:rpm/rocky/libssh-config@0.10.4-15.el9_6?arch=noarch&amp;distro=rocky-9.7&amp;package-id=8182d2fa30879dd6&amp;upstream=libssh-0.10.4-15.el9_6.src.rpm</ref>
+        </target>
+      </affects>
+    </vulnerability>
+    <vulnerability bom-ref="urn:uuid:d0a222fc-950a-4366-985c-1f9750caadbb">
       <id>CVE-2026-22796</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -25522,7 +25522,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:74a02dcc-0184-495c-b526-d83b94c88189">
+    <vulnerability bom-ref="urn:uuid:f23e88b2-d1f1-45db-8727-1532ee89945b">
       <id>CVE-2026-22796</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -25560,7 +25560,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:fb4f8f86-1df1-42ad-a8e0-11e413fb8161">
+    <vulnerability bom-ref="urn:uuid:a553669b-5e7a-45e5-8548-a5460ecb1432">
       <id>CVE-2026-22796</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -25598,7 +25598,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:f0cd7b84-b026-4315-b584-621aace7412a">
+    <vulnerability bom-ref="urn:uuid:5ebf112e-a071-40c6-869d-da1e1a45e847">
       <id>CVE-2025-69420</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -25636,7 +25636,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:727eef96-8d8e-4f94-9fe4-5d484fa53abe">
+    <vulnerability bom-ref="urn:uuid:b36d7e2c-c705-4b46-b416-87061a08191d">
       <id>CVE-2025-69420</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -25674,7 +25674,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:b45b693d-c53f-42ef-abed-6faaae25414c">
+    <vulnerability bom-ref="urn:uuid:af061bd7-10d2-425c-9659-458850268eb3">
       <id>CVE-2025-69420</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -25712,7 +25712,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:058e5ef9-61ff-46e9-a288-33342bb92c67">
+    <vulnerability bom-ref="urn:uuid:ef1d6f7d-9b6c-4b1b-86e3-9882fa54e86c">
       <id>CVE-2025-14512</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -25750,7 +25750,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:c9fe4231-9221-494d-8f80-f8a80b1efb79">
+    <vulnerability bom-ref="urn:uuid:70c69b49-c84a-45f4-8e05-b81592c8b436">
       <id>CVE-2025-5987</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -25788,7 +25788,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:f2e2a82f-1ada-40e2-83d3-aefa09a4ace8">
+    <vulnerability bom-ref="urn:uuid:5021984d-62b6-4640-9a72-42c9d9bc5f99">
       <id>CVE-2025-5987</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -25826,7 +25826,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:563eb745-3b07-448c-9461-af1b29145f6f">
+    <vulnerability bom-ref="urn:uuid:e6e55232-377e-4626-a29e-7c59b1b2923e">
       <id>CVE-2025-69421</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -25864,7 +25864,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:7a0dc73f-aa32-4de4-b01f-c7fda3c4cb46">
+    <vulnerability bom-ref="urn:uuid:2465ee93-8767-4e28-a457-92c21d82abe8">
       <id>CVE-2025-69421</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -25902,7 +25902,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:237766d4-365f-4526-9e72-df9c01ff89d9">
+    <vulnerability bom-ref="urn:uuid:a7030ac9-9c2d-4756-9457-9aa09fb375f8">
       <id>CVE-2025-69421</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -25940,7 +25940,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:8a52750e-1b33-43c9-8ade-891e1c3e4e49">
+    <vulnerability bom-ref="urn:uuid:0278b62c-0db8-42f5-bf39-5976b45ddcb0">
       <id>CVE-2025-13151</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -25978,7 +25978,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:77994923-7e33-4656-91f0-38ea95370c30">
+    <vulnerability bom-ref="urn:uuid:0ebd08da-536a-401c-969b-4c7eb3437c1c">
       <id>CVE-2025-66199</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -26016,7 +26016,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:2e4ffe00-bee7-479e-b0ff-012ffa05e80e">
+    <vulnerability bom-ref="urn:uuid:b231677b-d000-428f-b201-7a4b309545bc">
       <id>CVE-2025-66199</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -26054,7 +26054,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:ad5bbda7-3e96-4320-a2ad-6928237ccabc">
+    <vulnerability bom-ref="urn:uuid:8649d3d3-32af-4e8d-95ee-53418d1886f3">
       <id>CVE-2025-66199</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -26092,7 +26092,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:85c6348a-6266-46c4-81f0-1d00834504cb">
+    <vulnerability bom-ref="urn:uuid:c2ca9cfa-514d-41e8-95a0-a822d6907731">
       <id>CVE-2023-50495</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -26130,7 +26130,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:9705ad24-981a-49a5-b121-d0ae18014c9a">
+    <vulnerability bom-ref="urn:uuid:90ba1a71-3848-4743-b2ff-7fc45832689e">
       <id>CVE-2023-50495</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -26168,7 +26168,121 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:8c567d9f-de36-4024-b2aa-f1e99a8eba15">
+    <vulnerability bom-ref="urn:uuid:81565184-36fb-4376-b47f-759f86c0b116">
+      <id>CVE-2025-15281</id>
+      <source>
+        <name>redhat-distro-redhat-9</name>
+        <url>https://access.redhat.com/security/cve/CVE-2025-15281</url>
+      </source>
+      <references>
+        <reference>
+          <id>CVE-2025-15281</id>
+          <source>
+            <name>redhat-distro-redhat-9</name>
+            <url>https://access.redhat.com/security/cve/CVE-2025-15281</url>
+          </source>
+        </reference>
+      </references>
+      <ratings>
+        <rating>
+          <score>5.9</score>
+          <severity>low</severity>
+          <method>CVSSv31</method>
+          <vector>CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H</vector>
+        </rating>
+        <rating>
+          <source>
+            <name>FIRST</name>
+            <url>https://www.first.org/epss/</url>
+          </source>
+          <score>0.00053</score>
+          <method>other</method>
+        </rating>
+      </ratings>
+      <description>A flaw was found in glibc. When the wordexp function is called with the flags WRDE_REUSE and WRDE_APPEND, it may return uninitialized memory. If the caller inspects the we_wordv array or calls the wordfree function to free the allocated memory, the process will abort, resulting in a denial of service.</description>
+      <affects>
+        <target>
+          <ref>pkg:rpm/rocky/glibc@2.34-231.el9_7.2?arch=x86_64&amp;distro=rocky-9.7&amp;package-id=97da9ad27d490a91&amp;upstream=glibc-2.34-231.el9_7.2.src.rpm</ref>
+        </target>
+      </affects>
+    </vulnerability>
+    <vulnerability bom-ref="urn:uuid:87a7eea2-4694-4889-9723-af155a6d7f29">
+      <id>CVE-2025-15281</id>
+      <source>
+        <name>redhat-distro-redhat-9</name>
+        <url>https://access.redhat.com/security/cve/CVE-2025-15281</url>
+      </source>
+      <references>
+        <reference>
+          <id>CVE-2025-15281</id>
+          <source>
+            <name>redhat-distro-redhat-9</name>
+            <url>https://access.redhat.com/security/cve/CVE-2025-15281</url>
+          </source>
+        </reference>
+      </references>
+      <ratings>
+        <rating>
+          <score>5.9</score>
+          <severity>low</severity>
+          <method>CVSSv31</method>
+          <vector>CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H</vector>
+        </rating>
+        <rating>
+          <source>
+            <name>FIRST</name>
+            <url>https://www.first.org/epss/</url>
+          </source>
+          <score>0.00053</score>
+          <method>other</method>
+        </rating>
+      </ratings>
+      <description>A flaw was found in glibc. When the wordexp function is called with the flags WRDE_REUSE and WRDE_APPEND, it may return uninitialized memory. If the caller inspects the we_wordv array or calls the wordfree function to free the allocated memory, the process will abort, resulting in a denial of service.</description>
+      <affects>
+        <target>
+          <ref>pkg:rpm/rocky/glibc-common@2.34-231.el9_7.2?arch=x86_64&amp;distro=rocky-9.7&amp;package-id=996a1b940899d96d&amp;upstream=glibc-2.34-231.el9_7.2.src.rpm</ref>
+        </target>
+      </affects>
+    </vulnerability>
+    <vulnerability bom-ref="urn:uuid:f2338328-46af-4d31-869d-5624d4443ad6">
+      <id>CVE-2025-15281</id>
+      <source>
+        <name>redhat-distro-redhat-9</name>
+        <url>https://access.redhat.com/security/cve/CVE-2025-15281</url>
+      </source>
+      <references>
+        <reference>
+          <id>CVE-2025-15281</id>
+          <source>
+            <name>redhat-distro-redhat-9</name>
+            <url>https://access.redhat.com/security/cve/CVE-2025-15281</url>
+          </source>
+        </reference>
+      </references>
+      <ratings>
+        <rating>
+          <score>5.9</score>
+          <severity>low</severity>
+          <method>CVSSv31</method>
+          <vector>CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H</vector>
+        </rating>
+        <rating>
+          <source>
+            <name>FIRST</name>
+            <url>https://www.first.org/epss/</url>
+          </source>
+          <score>0.00053</score>
+          <method>other</method>
+        </rating>
+      </ratings>
+      <description>A flaw was found in glibc. When the wordexp function is called with the flags WRDE_REUSE and WRDE_APPEND, it may return uninitialized memory. If the caller inspects the we_wordv array or calls the wordfree function to free the allocated memory, the process will abort, resulting in a denial of service.</description>
+      <affects>
+        <target>
+          <ref>pkg:rpm/rocky/glibc-minimal-langpack@2.34-231.el9_7.2?arch=x86_64&amp;distro=rocky-9.7&amp;package-id=6e56d55ade82ab64&amp;upstream=glibc-2.34-231.el9_7.2.src.rpm</ref>
+        </target>
+      </affects>
+    </vulnerability>
+    <vulnerability bom-ref="urn:uuid:e850ac3f-c9ef-4c74-b6a9-fe9b704c50ce">
       <id>CVE-2026-1489</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -26206,121 +26320,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:f43a8033-1a4e-432d-a417-20ce7d66daab">
-      <id>CVE-2025-15281</id>
-      <source>
-        <name>redhat-distro-redhat-9</name>
-        <url>https://access.redhat.com/security/cve/CVE-2025-15281</url>
-      </source>
-      <references>
-        <reference>
-          <id>CVE-2025-15281</id>
-          <source>
-            <name>redhat-distro-redhat-9</name>
-            <url>https://access.redhat.com/security/cve/CVE-2025-15281</url>
-          </source>
-        </reference>
-      </references>
-      <ratings>
-        <rating>
-          <score>5.9</score>
-          <severity>low</severity>
-          <method>CVSSv31</method>
-          <vector>CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H</vector>
-        </rating>
-        <rating>
-          <source>
-            <name>FIRST</name>
-            <url>https://www.first.org/epss/</url>
-          </source>
-          <score>0.00049</score>
-          <method>other</method>
-        </rating>
-      </ratings>
-      <description>A flaw was found in glibc. When the wordexp function is called with the flags WRDE_REUSE and WRDE_APPEND, it may return uninitialized memory. If the caller inspects the we_wordv array or calls the wordfree function to free the allocated memory, the process will abort, resulting in a denial of service.</description>
-      <affects>
-        <target>
-          <ref>pkg:rpm/rocky/glibc@2.34-231.el9_7.2?arch=x86_64&amp;distro=rocky-9.7&amp;package-id=97da9ad27d490a91&amp;upstream=glibc-2.34-231.el9_7.2.src.rpm</ref>
-        </target>
-      </affects>
-    </vulnerability>
-    <vulnerability bom-ref="urn:uuid:5eb0bb64-4fc7-40b5-a3fb-d1b75ad25f7a">
-      <id>CVE-2025-15281</id>
-      <source>
-        <name>redhat-distro-redhat-9</name>
-        <url>https://access.redhat.com/security/cve/CVE-2025-15281</url>
-      </source>
-      <references>
-        <reference>
-          <id>CVE-2025-15281</id>
-          <source>
-            <name>redhat-distro-redhat-9</name>
-            <url>https://access.redhat.com/security/cve/CVE-2025-15281</url>
-          </source>
-        </reference>
-      </references>
-      <ratings>
-        <rating>
-          <score>5.9</score>
-          <severity>low</severity>
-          <method>CVSSv31</method>
-          <vector>CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H</vector>
-        </rating>
-        <rating>
-          <source>
-            <name>FIRST</name>
-            <url>https://www.first.org/epss/</url>
-          </source>
-          <score>0.00049</score>
-          <method>other</method>
-        </rating>
-      </ratings>
-      <description>A flaw was found in glibc. When the wordexp function is called with the flags WRDE_REUSE and WRDE_APPEND, it may return uninitialized memory. If the caller inspects the we_wordv array or calls the wordfree function to free the allocated memory, the process will abort, resulting in a denial of service.</description>
-      <affects>
-        <target>
-          <ref>pkg:rpm/rocky/glibc-common@2.34-231.el9_7.2?arch=x86_64&amp;distro=rocky-9.7&amp;package-id=996a1b940899d96d&amp;upstream=glibc-2.34-231.el9_7.2.src.rpm</ref>
-        </target>
-      </affects>
-    </vulnerability>
-    <vulnerability bom-ref="urn:uuid:7bf0ac25-7540-4dd6-a1e8-2153f664eb3c">
-      <id>CVE-2025-15281</id>
-      <source>
-        <name>redhat-distro-redhat-9</name>
-        <url>https://access.redhat.com/security/cve/CVE-2025-15281</url>
-      </source>
-      <references>
-        <reference>
-          <id>CVE-2025-15281</id>
-          <source>
-            <name>redhat-distro-redhat-9</name>
-            <url>https://access.redhat.com/security/cve/CVE-2025-15281</url>
-          </source>
-        </reference>
-      </references>
-      <ratings>
-        <rating>
-          <score>5.9</score>
-          <severity>low</severity>
-          <method>CVSSv31</method>
-          <vector>CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H</vector>
-        </rating>
-        <rating>
-          <source>
-            <name>FIRST</name>
-            <url>https://www.first.org/epss/</url>
-          </source>
-          <score>0.00049</score>
-          <method>other</method>
-        </rating>
-      </ratings>
-      <description>A flaw was found in glibc. When the wordexp function is called with the flags WRDE_REUSE and WRDE_APPEND, it may return uninitialized memory. If the caller inspects the we_wordv array or calls the wordfree function to free the allocated memory, the process will abort, resulting in a denial of service.</description>
-      <affects>
-        <target>
-          <ref>pkg:rpm/rocky/glibc-minimal-langpack@2.34-231.el9_7.2?arch=x86_64&amp;distro=rocky-9.7&amp;package-id=6e56d55ade82ab64&amp;upstream=glibc-2.34-231.el9_7.2.src.rpm</ref>
-        </target>
-      </affects>
-    </vulnerability>
-    <vulnerability bom-ref="urn:uuid:e9e7ac3b-392b-48ed-8b57-007aa7d8557d">
+    <vulnerability bom-ref="urn:uuid:83ed3f65-9e87-48cc-88c9-cb2b938a7b14">
       <id>CVE-2025-15468</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -26358,7 +26358,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:bd08ddd0-1547-4697-9afa-7cf1898bdecd">
+    <vulnerability bom-ref="urn:uuid:c623da75-adf1-4134-a8bd-aa6bc8d0ea10">
       <id>CVE-2025-15468</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -26396,7 +26396,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:1fee4feb-4cdd-4a35-9e81-7ad75359e967">
+    <vulnerability bom-ref="urn:uuid:582acb8a-9e32-4a80-9c5e-b03516eb5f56">
       <id>CVE-2025-15468</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -26434,7 +26434,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:37e9414d-1432-4d05-bd63-d20f643bc596">
+    <vulnerability bom-ref="urn:uuid:8d657c24-5b02-4b8b-aa5c-61e7892b7900">
       <id>CVE-2022-27943</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -26472,7 +26472,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:d04a43c5-2b3a-4386-a96a-7e465708b2b8">
+    <vulnerability bom-ref="urn:uuid:e63a0276-c12f-427f-9c7d-ef58ff8dcbbd">
       <id>CVE-2022-27943</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -26510,7 +26510,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:3607893f-394e-4bd2-98ee-ef6e24e2fe9b">
+    <vulnerability bom-ref="urn:uuid:4dd9dd26-06f8-4d19-9059-c271f4b41ac6">
       <id>CVE-2026-1484</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -26548,7 +26548,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:9239a1ba-a05c-4dda-a86e-6451408f579d">
+    <vulnerability bom-ref="urn:uuid:edea98c1-6fb3-4faa-8250-ade56d29907a">
       <id>CVE-2025-5915</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -26586,7 +26586,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:b8c25556-496e-4d3e-9305-f3d463dd9830">
+    <vulnerability bom-ref="urn:uuid:d53528c1-9ad1-403f-b03b-216ed4ac2dd9">
       <id>CVE-2025-14831</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -26624,7 +26624,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:34677263-62c0-40bc-887c-ac3127fa5754">
+    <vulnerability bom-ref="urn:uuid:93660a75-329d-4cb3-a59f-d4a2b40ab326">
       <id>CVE-2025-9086</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -26662,7 +26662,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:23ff09bd-869a-4ea3-904e-f8868315e0fb">
+    <vulnerability bom-ref="urn:uuid:138bcfca-2dd6-4fb2-bbef-02a8e4e6913d">
       <id>CVE-2025-9086</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -26700,7 +26700,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:b08c988d-ea27-418d-b65f-ca3c1622385c">
+    <vulnerability bom-ref="urn:uuid:c15cb13e-487d-4e00-8340-603d3402a732">
       <id>CVE-2025-6176</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -26738,7 +26738,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:81e713f7-fff4-4f45-a005-999cb27151de">
+    <vulnerability bom-ref="urn:uuid:64b5770b-b7b6-4baa-a8c5-3cc9abd61f62">
       <id>CVE-2025-60753</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -26776,7 +26776,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:8e49f521-164d-4bc6-b7df-b3e24be139ae">
+    <vulnerability bom-ref="urn:uuid:f818d79b-20c2-4111-97d8-3c8e4dd9061b">
       <id>CVE-2026-0988</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -26814,7 +26814,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:b59f64e3-7ab4-4023-9f54-562cbd46d8f7">
+    <vulnerability bom-ref="urn:uuid:47a131d7-fc93-46c7-86ab-467aa87b9ad2">
       <id>CVE-2025-8277</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -26841,7 +26841,7 @@
             <name>FIRST</name>
             <url>https://www.first.org/epss/</url>
           </source>
-          <score>0.00052</score>
+          <score>0.00053</score>
           <method>other</method>
         </rating>
       </ratings>
@@ -26852,7 +26852,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:b85a8053-7af6-4d2c-a38a-9a6f4a661565">
+    <vulnerability bom-ref="urn:uuid:4f0b9c5b-cfdf-42ab-8e4e-4c1651538edc">
       <id>CVE-2025-8277</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -26879,7 +26879,7 @@
             <name>FIRST</name>
             <url>https://www.first.org/epss/</url>
           </source>
-          <score>0.00052</score>
+          <score>0.00053</score>
           <method>other</method>
         </rating>
       </ratings>
@@ -26890,7 +26890,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:6d020ec6-79ef-44a2-ae87-d9587ba0f9d9">
+    <vulnerability bom-ref="urn:uuid:d4e74294-3aa8-4e1b-919c-680fec9abefe">
       <id>CVE-2025-7039</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -26928,45 +26928,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:4a4c85c0-180a-4d48-9cd0-ebd37e0c4b71">
-      <id>CVE-2025-68973</id>
-      <source>
-        <name>redhat-distro-redhat-9</name>
-        <url>https://access.redhat.com/security/cve/CVE-2025-68973</url>
-      </source>
-      <references>
-        <reference>
-          <id>CVE-2025-68973</id>
-          <source>
-            <name>redhat-distro-redhat-9</name>
-            <url>https://access.redhat.com/security/cve/CVE-2025-68973</url>
-          </source>
-        </reference>
-      </references>
-      <ratings>
-        <rating>
-          <score>7.8</score>
-          <severity>high</severity>
-          <method>CVSSv31</method>
-          <vector>CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:N</vector>
-        </rating>
-        <rating>
-          <source>
-            <name>FIRST</name>
-            <url>https://www.first.org/epss/</url>
-          </source>
-          <score>0.00019</score>
-          <method>other</method>
-        </rating>
-      </ratings>
-      <description>A flaw was found in GnuPG. An attacker can provide crafted input to the `armor_filter` function, which incorrectly increments an index variable, leading to an out-of-bounds write. This memory corruption vulnerability may allow for information disclosure and could potentially lead to arbitrary code execution.</description>
-      <affects>
-        <target>
-          <ref>pkg:rpm/rocky/gnupg2@2.3.3-4.el9?arch=x86_64&amp;distro=rocky-9.7&amp;package-id=bb6641618d5e2b58&amp;upstream=gnupg2-2.3.3-4.el9.src.rpm</ref>
-        </target>
-      </affects>
-    </vulnerability>
-    <vulnerability bom-ref="urn:uuid:37fb2060-6f3a-493b-a2f9-5056a6b4a7ab">
+    <vulnerability bom-ref="urn:uuid:02c429c5-e4db-4ae6-bff0-66d7bd8f98ea">
       <id>CVE-2025-5278</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -27004,83 +26966,45 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:6e3dd11a-56c5-4657-ae3c-ee51674029a3">
-      <id>CVE-2025-8114</id>
+    <vulnerability bom-ref="urn:uuid:75e821be-4150-4992-98f9-70f1683da1e0">
+      <id>CVE-2025-68973</id>
       <source>
         <name>redhat-distro-redhat-9</name>
-        <url>https://access.redhat.com/security/cve/CVE-2025-8114</url>
+        <url>https://access.redhat.com/security/cve/CVE-2025-68973</url>
       </source>
       <references>
         <reference>
-          <id>CVE-2025-8114</id>
+          <id>CVE-2025-68973</id>
           <source>
             <name>redhat-distro-redhat-9</name>
-            <url>https://access.redhat.com/security/cve/CVE-2025-8114</url>
+            <url>https://access.redhat.com/security/cve/CVE-2025-68973</url>
           </source>
         </reference>
       </references>
       <ratings>
         <rating>
-          <score>4.7</score>
-          <severity>medium</severity>
+          <score>7.8</score>
+          <severity>high</severity>
           <method>CVSSv31</method>
-          <vector>CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H</vector>
+          <vector>CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:N</vector>
         </rating>
         <rating>
           <source>
             <name>FIRST</name>
             <url>https://www.first.org/epss/</url>
           </source>
-          <score>0.00026</score>
+          <score>0.00016</score>
           <method>other</method>
         </rating>
       </ratings>
-      <description>A flaw was found in libssh, a library that implements the SSH protocol. When calculating the session ID during the key exchange (KEX) process, an allocation failure in cryptographic functions may lead to a NULL pointer dereference. This issue can cause the client or server to crash.</description>
+      <description>A flaw was found in GnuPG. An attacker can provide crafted input to the `armor_filter` function, which incorrectly increments an index variable, leading to an out-of-bounds write. This memory corruption vulnerability may allow for information disclosure and could potentially lead to arbitrary code execution.</description>
       <affects>
         <target>
-          <ref>pkg:rpm/rocky/libssh@0.10.4-15.el9_6?arch=x86_64&amp;distro=rocky-9.7&amp;package-id=af40aaa77d28244b&amp;upstream=libssh-0.10.4-15.el9_6.src.rpm</ref>
+          <ref>pkg:rpm/rocky/gnupg2@2.3.3-4.el9?arch=x86_64&amp;distro=rocky-9.7&amp;package-id=bb6641618d5e2b58&amp;upstream=gnupg2-2.3.3-4.el9.src.rpm</ref>
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:d24c6391-41fa-410c-9822-4a1c8a547c5f">
-      <id>CVE-2025-8114</id>
-      <source>
-        <name>redhat-distro-redhat-9</name>
-        <url>https://access.redhat.com/security/cve/CVE-2025-8114</url>
-      </source>
-      <references>
-        <reference>
-          <id>CVE-2025-8114</id>
-          <source>
-            <name>redhat-distro-redhat-9</name>
-            <url>https://access.redhat.com/security/cve/CVE-2025-8114</url>
-          </source>
-        </reference>
-      </references>
-      <ratings>
-        <rating>
-          <score>4.7</score>
-          <severity>medium</severity>
-          <method>CVSSv31</method>
-          <vector>CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H</vector>
-        </rating>
-        <rating>
-          <source>
-            <name>FIRST</name>
-            <url>https://www.first.org/epss/</url>
-          </source>
-          <score>0.00026</score>
-          <method>other</method>
-        </rating>
-      </ratings>
-      <description>A flaw was found in libssh, a library that implements the SSH protocol. When calculating the session ID during the key exchange (KEX) process, an allocation failure in cryptographic functions may lead to a NULL pointer dereference. This issue can cause the client or server to crash.</description>
-      <affects>
-        <target>
-          <ref>pkg:rpm/rocky/libssh-config@0.10.4-15.el9_6?arch=noarch&amp;distro=rocky-9.7&amp;package-id=8182d2fa30879dd6&amp;upstream=libssh-0.10.4-15.el9_6.src.rpm</ref>
-        </target>
-      </affects>
-    </vulnerability>
-    <vulnerability bom-ref="urn:uuid:8d4b5830-e730-45ef-a821-8377ef56071f">
+    <vulnerability bom-ref="urn:uuid:106c3b93-106e-452a-8efc-52d97d1984c8">
       <id>CVE-2025-9232</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -27118,7 +27042,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:3e3df937-4000-4664-9c9f-2b72cdcaa74c">
+    <vulnerability bom-ref="urn:uuid:bc5689ed-8ef1-4fc5-bd88-e75def4abd1d">
       <id>CVE-2025-9232</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -27156,7 +27080,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:2b45310b-9bf6-4ff3-a701-0b6f2ad4f18f">
+    <vulnerability bom-ref="urn:uuid:74eb2382-d660-48c4-b176-c1a2646d9d39">
       <id>CVE-2025-9232</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -27194,7 +27118,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:00e9aef3-accf-4aae-bcdd-2775ea2c3397">
+    <vulnerability bom-ref="urn:uuid:b83eeaae-c549-4f42-8d09-9f7cb93f817a">
       <id>CVE-2026-22185</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -27232,7 +27156,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:5c91c708-679d-48c1-93fb-ff1a0a8b2394">
+    <vulnerability bom-ref="urn:uuid:caca6c36-7539-4515-a8a9-82375e0140fb">
       <id>CVE-2023-4156</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -27270,7 +27194,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:b9a5bc3e-bd23-4405-bff1-60ae42e19984">
+    <vulnerability bom-ref="urn:uuid:d6c35a09-9614-4bab-9c4d-7d698de67f87">
       <id>CVE-2025-5918</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -27308,7 +27232,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:9144fe8e-c36c-41b9-b858-86e417d7308d">
+    <vulnerability bom-ref="urn:uuid:e76b6f15-154c-477b-9372-720fcf319c92">
       <id>CVE-2026-0915</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -27346,7 +27270,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:290d98a0-9116-44e6-a28d-1386086059ff">
+    <vulnerability bom-ref="urn:uuid:abd20764-2581-4682-a224-47b12e978e02">
       <id>CVE-2026-0915</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -27384,7 +27308,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:c55499fa-fbbd-4925-bfb5-0c2252628da1">
+    <vulnerability bom-ref="urn:uuid:39bd8b89-abb7-46e8-94f4-ba6f57d79e34">
       <id>CVE-2026-0915</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -27422,7 +27346,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:c9e0ead6-fa13-4434-b4f8-612d9c9c6a71">
+    <vulnerability bom-ref="urn:uuid:9dd7d1e8-aef5-4993-a765-f73cfad00b0a">
       <id>CVE-2025-5916</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -27460,7 +27384,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:66bd5ac6-1799-4e29-a902-a3b6e446b5d4">
+    <vulnerability bom-ref="urn:uuid:3746e82a-43bc-4a89-ac18-954d0a125aee">
       <id>CVE-2025-5917</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -27498,7 +27422,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:c19a5ba0-b4cb-445d-9eed-86a0d15dc341">
+    <vulnerability bom-ref="urn:uuid:de26a48d-2358-41c5-a14e-143fc34c8a6f">
       <id>CVE-2026-1757</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -27536,7 +27460,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:dfa43731-08a3-4689-af90-1b3901dcaa22">
+    <vulnerability bom-ref="urn:uuid:5ad9b4c3-1d51-4791-9a55-40aab6027ec6">
       <id>CVE-2025-30258</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -27574,7 +27498,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:34c67564-8812-4f55-bdfa-686e3b5b568e">
+    <vulnerability bom-ref="urn:uuid:391e3d20-15a4-4654-8ca3-ca212b948133">
       <id>CVE-2024-0232</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -27612,7 +27536,83 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:026624be-6bd7-4105-aecf-accb2dc27df8">
+    <vulnerability bom-ref="urn:uuid:684c2a89-98d5-4186-a04c-a65d7949ac55">
+      <id>CVE-2025-8114</id>
+      <source>
+        <name>redhat-distro-redhat-9</name>
+        <url>https://access.redhat.com/security/cve/CVE-2025-8114</url>
+      </source>
+      <references>
+        <reference>
+          <id>CVE-2025-8114</id>
+          <source>
+            <name>redhat-distro-redhat-9</name>
+            <url>https://access.redhat.com/security/cve/CVE-2025-8114</url>
+          </source>
+        </reference>
+      </references>
+      <ratings>
+        <rating>
+          <score>4.7</score>
+          <severity>medium</severity>
+          <method>CVSSv31</method>
+          <vector>CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H</vector>
+        </rating>
+        <rating>
+          <source>
+            <name>FIRST</name>
+            <url>https://www.first.org/epss/</url>
+          </source>
+          <score>0.00014</score>
+          <method>other</method>
+        </rating>
+      </ratings>
+      <description>A flaw was found in libssh, a library that implements the SSH protocol. When calculating the session ID during the key exchange (KEX) process, an allocation failure in cryptographic functions may lead to a NULL pointer dereference. This issue can cause the client or server to crash.</description>
+      <affects>
+        <target>
+          <ref>pkg:rpm/rocky/libssh@0.10.4-15.el9_6?arch=x86_64&amp;distro=rocky-9.7&amp;package-id=af40aaa77d28244b&amp;upstream=libssh-0.10.4-15.el9_6.src.rpm</ref>
+        </target>
+      </affects>
+    </vulnerability>
+    <vulnerability bom-ref="urn:uuid:c3aba7dd-c1c4-4e80-81a2-70e6a4c5a789">
+      <id>CVE-2025-8114</id>
+      <source>
+        <name>redhat-distro-redhat-9</name>
+        <url>https://access.redhat.com/security/cve/CVE-2025-8114</url>
+      </source>
+      <references>
+        <reference>
+          <id>CVE-2025-8114</id>
+          <source>
+            <name>redhat-distro-redhat-9</name>
+            <url>https://access.redhat.com/security/cve/CVE-2025-8114</url>
+          </source>
+        </reference>
+      </references>
+      <ratings>
+        <rating>
+          <score>4.7</score>
+          <severity>medium</severity>
+          <method>CVSSv31</method>
+          <vector>CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H</vector>
+        </rating>
+        <rating>
+          <source>
+            <name>FIRST</name>
+            <url>https://www.first.org/epss/</url>
+          </source>
+          <score>0.00014</score>
+          <method>other</method>
+        </rating>
+      </ratings>
+      <description>A flaw was found in libssh, a library that implements the SSH protocol. When calculating the session ID during the key exchange (KEX) process, an allocation failure in cryptographic functions may lead to a NULL pointer dereference. This issue can cause the client or server to crash.</description>
+      <affects>
+        <target>
+          <ref>pkg:rpm/rocky/libssh-config@0.10.4-15.el9_6?arch=noarch&amp;distro=rocky-9.7&amp;package-id=8182d2fa30879dd6&amp;upstream=libssh-0.10.4-15.el9_6.src.rpm</ref>
+        </target>
+      </affects>
+    </vulnerability>
+    <vulnerability bom-ref="urn:uuid:3d4bc10e-87c6-40e4-afe1-53f0a80ced42">
       <id>CVE-2026-0989</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -27650,7 +27650,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:f629fdf2-e87d-4017-8e27-c60dfa9b88e5">
+    <vulnerability bom-ref="urn:uuid:cde54982-e77e-4f21-8ea1-ecf0f912fefa">
       <id>CVE-2023-30571</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -27688,7 +27688,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:6f2afe54-e2e0-437f-8baf-d24479a24243">
+    <vulnerability bom-ref="urn:uuid:5e539bf2-4f95-48ad-95b1-1806a7fa7ec3">
       <id>CVE-2026-0992</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -27726,7 +27726,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:0e3fce6d-8d61-4118-ba43-01d2994ac921">
+    <vulnerability bom-ref="urn:uuid:a329cd0f-0858-489b-8e24-d8deaed6be84">
       <id>CVE-2026-22795</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -27764,7 +27764,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:fa91873e-c774-4122-9220-5921a8b3bcbc">
+    <vulnerability bom-ref="urn:uuid:1ec4fa1f-1fcd-46e7-9a80-50763a7d03fe">
       <id>CVE-2026-22795</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -27802,7 +27802,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:b0da4da3-b095-4c57-8c07-5e75038c8e2b">
+    <vulnerability bom-ref="urn:uuid:039c0609-a16d-4119-89af-fd095e310fd4">
       <id>CVE-2026-22795</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -27840,7 +27840,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:2146a02a-8015-4789-a4c4-544db197f3fb">
+    <vulnerability bom-ref="urn:uuid:e2b23ace-0262-485a-a199-cee3e1ea7702">
       <id>CVE-2025-4878</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -27878,7 +27878,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:304887fd-39ae-40ed-b4fa-2c8e4c062537">
+    <vulnerability bom-ref="urn:uuid:a7a69005-4e1c-4b76-971a-3e5e5d7abf67">
       <id>CVE-2025-4878</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -27916,7 +27916,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:82aca381-2fec-4b53-b1a0-609ba03387bc">
+    <vulnerability bom-ref="urn:uuid:9505cd83-dc03-4aab-9c74-8c2ce8c53d7c">
       <id>CVE-2025-11187</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -27954,7 +27954,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:1f1a4eb6-8a55-46ae-ad57-7c78d1b3fc32">
+    <vulnerability bom-ref="urn:uuid:9e6e064a-93d0-4bd6-b602-da39cab49aee">
       <id>CVE-2025-11187</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -27992,7 +27992,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:82a27f6b-bb9e-4184-ae06-6430e787280f">
+    <vulnerability bom-ref="urn:uuid:c1cdc65d-c607-4a2c-b1c4-d558262f8493">
       <id>CVE-2025-11187</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -28030,7 +28030,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:7696499f-c00d-4700-b4fa-0ac87791ee4f">
+    <vulnerability bom-ref="urn:uuid:a3835d4e-b4e2-42b9-b65e-a7241132c910">
       <id>CVE-2022-3219</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -28068,7 +28068,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:57672f83-2ec7-4550-a4a6-2f90170a66ed">
+    <vulnerability bom-ref="urn:uuid:758cd2ac-5696-4c9c-b866-30a87a0d1ef1">
       <id>CVE-2025-6170</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -28106,7 +28106,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:0b2c8923-0f2f-4f40-b7fe-92d5fdcbb46a">
+    <vulnerability bom-ref="urn:uuid:a04a1399-cf2d-448f-baba-b45fdbb2aa19">
       <id>CVE-2025-68160</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -28144,7 +28144,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:d93e444f-6149-431f-92b5-b73a61d4e2a2">
+    <vulnerability bom-ref="urn:uuid:e145bfd5-94e6-4c43-beef-04f5d40a091e">
       <id>CVE-2025-68160</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -28182,7 +28182,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:17b89b76-b1f5-4c26-a85d-c80f61beed98">
+    <vulnerability bom-ref="urn:uuid:312bc650-708a-46c8-bd98-3226e001b30b">
       <id>CVE-2025-68160</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -28220,7 +28220,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:8b123b2f-a0ce-447d-93b3-d01ecae21ea8">
+    <vulnerability bom-ref="urn:uuid:cb5bf2dc-5d8a-4818-9b33-bfef1ba44265">
       <id>CVE-2025-13601</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -28258,7 +28258,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:4449d11f-98d1-43b4-aec2-61d8d4be3a30">
+    <vulnerability bom-ref="urn:uuid:6b5d1a09-4c48-4218-b197-8b02aac60942">
       <id>CVE-2026-24883</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -28296,7 +28296,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:ece52b72-5aca-4c09-89c6-41f07d3186c7">
+    <vulnerability bom-ref="urn:uuid:5db66f24-69ca-400e-8d81-85332af0df44">
       <id>CVE-2025-9820</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -28334,7 +28334,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:f865ae27-ac9f-4387-9545-da596511e8c5">
+    <vulnerability bom-ref="urn:uuid:2d2547a8-3c96-476c-8f83-3864f39b5dab">
       <id>CVE-2025-14017</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -28372,7 +28372,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:422d60c1-98b2-442b-a70c-bf7ab59fa928">
+    <vulnerability bom-ref="urn:uuid:ed535c17-01b2-46a3-8a38-b4322d69c5cd">
       <id>CVE-2025-14017</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -28410,7 +28410,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:ce998f2e-0c5d-4aba-a021-0008768cf884">
+    <vulnerability bom-ref="urn:uuid:2624238b-d0e1-4cc5-bb37-a09e08cd5ef8">
       <id>CVE-2025-14104</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -28448,7 +28448,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:16548974-d46f-4837-9c21-d0b52d17eaa0">
+    <vulnerability bom-ref="urn:uuid:3439f9e0-e1e9-4fd7-8c1e-50aebdcb431d">
       <id>CVE-2025-14104</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -28486,7 +28486,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:8e5f9bea-8ea3-4629-b274-9eae558733e5">
+    <vulnerability bom-ref="urn:uuid:003509e7-6729-4c96-bf1c-8107f7fb0514">
       <id>CVE-2025-14104</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -28524,7 +28524,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:2a3572ba-c1a3-4b17-96bd-63ed97b66391">
+    <vulnerability bom-ref="urn:uuid:2e828bc2-8528-44da-97d7-051026b21bee">
       <id>CVE-2025-14104</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -28562,7 +28562,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:faaf88fd-f615-410b-a609-f5bfe22075b4">
+    <vulnerability bom-ref="urn:uuid:0243efc9-b711-46c0-a829-9209cd168b08">
       <id>CVE-2025-14104</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -28600,7 +28600,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:cc51f1ff-a9a1-4282-b012-197475e37f97">
+    <vulnerability bom-ref="urn:uuid:bc0789e1-713a-4e36-b9e3-400d39de6506">
       <id>CVE-2025-14104</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -28638,7 +28638,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:88062ae5-2cd2-4879-89e8-09d067c3b131">
+    <vulnerability bom-ref="urn:uuid:fa3424b4-3f11-43f4-b0f0-02455ef6e8ed">
       <id>CVE-2025-14104</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -28676,7 +28676,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:178096f2-820b-4b5f-bcda-d4d1082ab24e">
+    <vulnerability bom-ref="urn:uuid:58a57eec-d72b-4f22-99e7-79517cdeab6e">
       <id>CVE-2026-0861</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -28714,7 +28714,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:a8c68748-942d-4524-bcfd-37a680e8dbe1">
+    <vulnerability bom-ref="urn:uuid:2388aeb2-3305-4aa4-b644-48c27dcf5f5e">
       <id>CVE-2026-0861</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -28752,7 +28752,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:d42d5804-2c61-49a8-8e0c-b71cc32cfc5c">
+    <vulnerability bom-ref="urn:uuid:6443eb82-8a3b-4687-b6e6-3c2518ac9077">
       <id>CVE-2026-0861</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -28790,7 +28790,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:273f384a-3e93-4f1d-a664-98966d432f75">
+    <vulnerability bom-ref="urn:uuid:05bd81ad-b806-453d-b675-7df4c4fa6628">
       <id>CVE-2025-15469</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -28828,7 +28828,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:caffb960-87b6-4298-a1ce-c0719da8779b">
+    <vulnerability bom-ref="urn:uuid:90d4bc8e-0281-4661-9e9a-57cca3578d80">
       <id>CVE-2025-15469</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -28866,7 +28866,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:5509220a-fb72-4459-8235-d5bdd4056642">
+    <vulnerability bom-ref="urn:uuid:a8f96a83-b386-43e4-a805-d46132d2aa6b">
       <id>CVE-2025-15469</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -28904,7 +28904,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:99366c43-2793-4d12-a90b-1e45af5d701e">
+    <vulnerability bom-ref="urn:uuid:2cab6bb9-9d3c-4662-8ab2-425ee3e90c08">
       <id>CVE-2026-27171</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -28942,7 +28942,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:cb777c79-d96a-4cba-9d3a-690589f8eba3">
+    <vulnerability bom-ref="urn:uuid:2e3602bf-ee71-464c-a61f-cdddacf260ba">
       <id>CVE-2025-69418</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -28980,7 +28980,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:12337bb5-1831-4ed1-a025-0cb0b05f7d3a">
+    <vulnerability bom-ref="urn:uuid:c6b68419-b0cb-4291-801a-e66aa5cdbdeb">
       <id>CVE-2025-69418</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -29018,7 +29018,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:a79cc815-f0f3-4310-997a-4386c9b31e29">
+    <vulnerability bom-ref="urn:uuid:312fa1a8-a76a-4b06-9e64-99144e303d12">
       <id>CVE-2025-69418</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -29056,7 +29056,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:e9f76d49-205b-44c0-ac91-648b4a87c3bc">
+    <vulnerability bom-ref="urn:uuid:64ca6a2d-f6ac-499c-b27f-4afa4a4b4302">
       <id>CVE-2025-68972</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -29094,7 +29094,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:aa36bd27-2424-4adb-92e1-182202c16350">
+    <vulnerability bom-ref="urn:uuid:37582e8f-ec52-474e-9c69-b3e314d952ea">
       <id>CVE-2026-1485</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -29132,7 +29132,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:a9606a91-28d0-4a45-a6e0-453ae3cb3bb7">
+    <vulnerability bom-ref="urn:uuid:73d3f5c1-1d27-454f-b3c3-a4ba7d070619">
       <id>CVE-2026-0964</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -29162,7 +29162,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:df4bf437-9b14-4c5f-8179-60db6609688c">
+    <vulnerability bom-ref="urn:uuid:9b33ed26-5599-444e-ab9e-a218f8ccf07b">
       <id>CVE-2026-0966</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -29192,7 +29192,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:56d0d204-fb0f-49b3-b4d7-d52e27c9c70e">
+    <vulnerability bom-ref="urn:uuid:ecafb8e4-99b4-4832-ac0a-d072921f6f5e">
       <id>CVE-2026-0964</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -29222,7 +29222,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:c57527e3-fe83-4391-b14b-14bf1e4d1128">
+    <vulnerability bom-ref="urn:uuid:36ab9d40-97b1-43e8-8614-29eea79bc65a">
       <id>CVE-2026-0966</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -29252,7 +29252,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:d9524291-ae65-4f7a-8a2d-125c460e4aea">
+    <vulnerability bom-ref="urn:uuid:da757bef-707b-4118-bed8-a39498dae371">
       <id>CVE-2026-2100</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -29282,7 +29282,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:5fdd64ad-52e7-4dfc-98cb-0d47728b1360">
+    <vulnerability bom-ref="urn:uuid:54e959ac-6b18-4475-abfc-bc27cec2a467">
       <id>CVE-2026-2100</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -29312,7 +29312,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:e54a7389-5d10-4585-9578-858986ea594c">
+    <vulnerability bom-ref="urn:uuid:ab5b3f45-3488-4821-892a-8f65b0128651">
       <id>CVE-2026-0965</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -29342,7 +29342,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:4a5395c0-fb54-4d2c-897c-adf1f5cb6af4">
+    <vulnerability bom-ref="urn:uuid:4b5f3829-69d2-4407-b345-441d1e43c958">
       <id>CVE-2026-0967</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -29372,7 +29372,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:25b9fc18-c7d2-42eb-a4ae-73ac5ee7708e">
+    <vulnerability bom-ref="urn:uuid:7ce04213-f80f-4b6b-bdd5-83845b5a1194">
       <id>CVE-2026-0968</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -29402,7 +29402,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:c169c9f7-9275-481f-b0ad-a652f7ce8593">
+    <vulnerability bom-ref="urn:uuid:c28334af-c4f7-47a1-bb03-dc2e7d8057b5">
       <id>CVE-2026-0965</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -29432,7 +29432,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:a8c595f2-a4f6-4b1a-814f-ea11afe60e2c">
+    <vulnerability bom-ref="urn:uuid:748d9bfc-912c-43c2-8a4e-72fa34ab7937">
       <id>CVE-2026-0967</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -29462,7 +29462,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:69f149c4-aa87-4a58-ae6a-91bce47f4419">
+    <vulnerability bom-ref="urn:uuid:db2c321f-a413-403b-bf2a-afd38b02c78a">
       <id>CVE-2026-0968</id>
       <source>
         <name>redhat-distro-redhat-9</name>
@@ -29492,7 +29492,7 @@
         </target>
       </affects>
     </vulnerability>
-    <vulnerability bom-ref="urn:uuid:a5c307b9-2a41-4881-96a5-d45c1e58987f">
+    <vulnerability bom-ref="urn:uuid:0930a31d-6c10-4e61-a02e-b1043c50377f">
       <id>CVE-2025-62813</id>
       <source>
         <name>redhat-distro-redhat-9</name>
