@@ -840,7 +840,7 @@
                     <dd id="typeValue">image</dd><dt>Checksum:</dt>
                     <dd id="checksumValue">sha256:f376ba4b3b4e88e41bedc1d3756b8260edb64b3b311860cb50363435605ee0d0</dd><dt>Date:</dt>
                     <dd>
-                        <span id="dateElement">2026-02-25T06:56:57.566264203Z</span>
+                        <span id="dateElement">2026-02-25T07:49:59.128829584Z</span>
                         <span id="prettyDateElement" style="display: none;"></span>
                     </dd>
                 </dl>
@@ -1195,7 +1195,7 @@
                         <td>
                             N/A
                         </td>
-                        <td>A flaw was found in the bsdunzip utility of libarchive. In affected versions, a specially crafted file may trigger a null pointer dereference. This issue can lead to an application crash or other unexpected behavior.</td>
+                        <td>A flaw was found in the bsdunzip utility of libarchive. In affected versions, a specially crafted file may trigger a null pointer dereference. This issue can lead to an application crash or other unexpected behavior. This bug does not compromise the integrity or availability of the base system.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/libarchive@3.5.3-6.el9_6?arch=x86_64&distro=rocky-9.7&upstream=libarchive-3.5.3-6.el9_6.src.rpm</td>
                     </tr>
@@ -1314,6 +1314,22 @@
                         <td>A timing side-channel vulnerability was found in OpenSSL. This vulnerability allows an attacker to recover the private key. However, measuring the timing would require local access to the signing application or a fast network connection with low latency. There is a timing signal of around 300 nanoseconds when the top word of the inverted ECDSA nonce value is zero. This issue can happen with significant probability only for some of the supported elliptic curves. In particular, the NIST P-521 curve is affected.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/openssl-libs@3.5.1-4.el9_7?arch=x86_64&distro=rocky-9.7&epoch=1&upstream=openssl-3.5.1-4.el9_7.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>glib2</td>
+                        <td>2.68.4-18.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-1489">CVE-2026-1489</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in GLib. An integer overflow vulnerability in its Unicode case conversion implementation can lead to memory corruption. By processing specially crafted and extremely large Unicode strings, an attacker could trigger an undersized memory allocation, resulting in out-of-bounds writes. This could cause applications utilizing GLib for string conversion to crash or become unstable.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/glib2@2.68.4-18.el9_7?arch=x86_64&distro=rocky-9.7&upstream=glib2-2.68.4-18.el9_7.src.rpm</td>
                     </tr>
                     <tr>
                         <td>openssl</td>
@@ -1590,6 +1606,22 @@
                         <td>pkg:rpm/rocky/glib2@2.68.4-18.el9_7?arch=x86_64&distro=rocky-9.7&upstream=glib2-2.68.4-18.el9_7.src.rpm</td>
                     </tr>
                     <tr>
+                        <td>glib2</td>
+                        <td>2.68.4-18.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-1484">CVE-2026-1484</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in the GLib Base64 encoding routine when processing very large input data. Due to incorrect use of integer types during length calculation, the library may miscalculate buffer boundaries. This can cause memory writes outside the allocated buffer. Applications that process untrusted or extremely large Base64 input using GLib may crash or behave unpredictably.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/glib2@2.68.4-18.el9_7?arch=x86_64&distro=rocky-9.7&upstream=glib2-2.68.4-18.el9_7.src.rpm</td>
+                    </tr>
+                    <tr>
                         <td>libssh</td>
                         <td>0.10.4-15.el9_6</td>
                         <td>rpm</td>
@@ -1678,6 +1710,22 @@
                         <td>A flaw was found in OpenSSL. This vulnerability allows a remote attacker to trigger a Denial of Service (DoS) by providing a specially crafted, malformed PKCS#12 file to an application that processes it. The flaw occurs due to a NULL pointer dereference in the PKCS12_item_decrypt_d2i_ex() function when handling the malformed file, leading to an application crash.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/openssl-libs@3.5.1-4.el9_7?arch=x86_64&distro=rocky-9.7&epoch=1&upstream=openssl-3.5.1-4.el9_7.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>glib2</td>
+                        <td>2.68.4-18.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-0988">CVE-2026-0988</a>
+                        </td>
+                        <td>Low</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in glib. Missing validation of offset and count parameters in the g_buffered_input_stream_peek() function can lead to an integer overflow during length calculation. When specially crafted values are provided, this overflow results in an incorrect size being passed to memcpy(), triggering a buffer overflow. This can cause application crashes, leading to a Denial of Service (DoS).</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/glib2@2.68.4-18.el9_7?arch=x86_64&distro=rocky-9.7&upstream=glib2-2.68.4-18.el9_7.src.rpm</td>
                     </tr>
                     <tr>
                         <td>libtasn1</td>
@@ -1836,22 +1884,6 @@
                         <td>pkg:rpm/rocky/glibc-minimal-langpack@2.34-231.el9_7.2?arch=x86_64&distro=rocky-9.7&upstream=glibc-2.34-231.el9_7.2.src.rpm</td>
                     </tr>
                     <tr>
-                        <td>glib2</td>
-                        <td>2.68.4-18.el9_7</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-1489">CVE-2026-1489</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in GLib. An integer overflow vulnerability in its Unicode case conversion implementation can lead to memory corruption. By processing specially crafted and extremely large Unicode strings, an attacker could trigger an undersized memory allocation, resulting in out-of-bounds writes. This could cause applications utilizing GLib for string conversion to crash or become unstable.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/glib2@2.68.4-18.el9_7?arch=x86_64&distro=rocky-9.7&upstream=glib2-2.68.4-18.el9_7.src.rpm</td>
-                    </tr>
-                    <tr>
                         <td>openssl</td>
                         <td>1:3.5.1-4.el9_7</td>
                         <td>rpm</td>
@@ -1938,22 +1970,6 @@
                         <td>pkg:rpm/rocky/libstdc%2B%2B@11.5.0-11.el9?arch=x86_64&distro=rocky-9.7&upstream=gcc-11.5.0-11.el9.src.rpm</td>
                     </tr>
                     <tr>
-                        <td>glib2</td>
-                        <td>2.68.4-18.el9_7</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-1484">CVE-2026-1484</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in the GLib Base64 encoding routine when processing very large input data. Due to incorrect use of integer types during length calculation, the library may miscalculate buffer boundaries. This can cause memory writes outside the allocated buffer. Applications that process untrusted or extremely large Base64 input using GLib may crash or behave unpredictably.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/glib2@2.68.4-18.el9_7?arch=x86_64&distro=rocky-9.7&upstream=glib2-2.68.4-18.el9_7.src.rpm</td>
-                    </tr>
-                    <tr>
                         <td>libarchive</td>
                         <td>3.5.3-6.el9_6</td>
                         <td>rpm</td>
@@ -1984,22 +2000,6 @@
                         <td>A flaw was found in GnuTLS. This vulnerability allows a denial of service (DoS) by excessive CPU (Central Processing Unit) and memory consumption via specially crafted malicious certificates containing a large number of name constraints and subject alternative names (SANs).</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/gnutls@3.8.3-9.el9.0.1?arch=x86_64&distro=rocky-9.7&upstream=gnutls-3.8.3-9.el9.0.1.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>glib2</td>
-                        <td>2.68.4-18.el9_7</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-0988">CVE-2026-0988</a>
-                        </td>
-                        <td>Low</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in glib. Missing validation of offset and count parameters in the g_buffered_input_stream_peek() function can lead to an integer overflow during length calculation. When specially crafted values are provided, this overflow results in an incorrect size being passed to memcpy(), triggering a buffer overflow. This can cause application crashes, leading to a Denial of Service (DoS).</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/glib2@2.68.4-18.el9_7?arch=x86_64&distro=rocky-9.7&upstream=glib2-2.68.4-18.el9_7.src.rpm</td>
                     </tr>
                     <tr>
                         <td>curl</td>
@@ -2464,38 +2464,6 @@ boundary.</td>
                         <td>pkg:rpm/rocky/sqlite-libs@3.34.1-9.el9_7?arch=x86_64&distro=rocky-9.7&upstream=sqlite-3.34.1-9.el9_7.src.rpm</td>
                     </tr>
                     <tr>
-                        <td>libssh</td>
-                        <td>0.10.4-15.el9_6</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2025-8114">CVE-2025-8114</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in libssh, a library that implements the SSH protocol. When calculating the session ID during the key exchange (KEX) process, an allocation failure in cryptographic functions may lead to a NULL pointer dereference. This issue can cause the client or server to crash.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/libssh@0.10.4-15.el9_6?arch=x86_64&distro=rocky-9.7&upstream=libssh-0.10.4-15.el9_6.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>libssh-config</td>
-                        <td>0.10.4-15.el9_6</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2025-8114">CVE-2025-8114</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in libssh, a library that implements the SSH protocol. When calculating the session ID during the key exchange (KEX) process, an allocation failure in cryptographic functions may lead to a NULL pointer dereference. This issue can cause the client or server to crash.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/libssh-config@0.10.4-15.el9_6?arch=noarch&distro=rocky-9.7&upstream=libssh-0.10.4-15.el9_6.src.rpm</td>
-                    </tr>
-                    <tr>
                         <td>libxml2</td>
                         <td>2.9.13-14.el9_7</td>
                         <td>rpm</td>
@@ -2596,6 +2564,38 @@ boundary.</td>
                         <td>A flaw was found in OpenSSL. This type confusion vulnerability allows a remote attacker to cause a Denial of Service (DoS) by tricking a user or application into processing a maliciously crafted PKCS#12 (Personal Information Exchange Syntax Standard) file. The vulnerability leads to an invalid or NULL pointer dereference, resulting in an application crash.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/openssl-libs@3.5.1-4.el9_7?arch=x86_64&distro=rocky-9.7&epoch=1&upstream=openssl-3.5.1-4.el9_7.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>libssh</td>
+                        <td>0.10.4-15.el9_6</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-8114">CVE-2025-8114</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in libssh, a library that implements the SSH protocol. When calculating the session ID during the key exchange (KEX) process, an allocation failure in cryptographic functions may lead to a NULL pointer dereference. This issue can cause the client or server to crash.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/libssh@0.10.4-15.el9_6?arch=x86_64&distro=rocky-9.7&upstream=libssh-0.10.4-15.el9_6.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>libssh-config</td>
+                        <td>0.10.4-15.el9_6</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-8114">CVE-2025-8114</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in libssh, a library that implements the SSH protocol. When calculating the session ID during the key exchange (KEX) process, an allocation failure in cryptographic functions may lead to a NULL pointer dereference. This issue can cause the client or server to crash.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/libssh-config@0.10.4-15.el9_6?arch=noarch&distro=rocky-9.7&upstream=libssh-0.10.4-15.el9_6.src.rpm</td>
                     </tr>
                     <tr>
                         <td>libssh</td>
@@ -3086,6 +3086,22 @@ boundary.</td>
                         <td>pkg:rpm/rocky/openssl-libs@3.5.1-4.el9_7?arch=x86_64&distro=rocky-9.7&epoch=1&upstream=openssl-3.5.1-4.el9_7.src.rpm</td>
                     </tr>
                     <tr>
+                        <td>glib2</td>
+                        <td>2.68.4-18.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-1485">CVE-2026-1485</a>
+                        </td>
+                        <td>Low</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in Glib&#39;s content type parsing logic. This buffer underflow vulnerability occurs because the length of a header line is stored in a signed integer, which can lead to integer wraparound for very large inputs. This results in pointer underflow and out-of-bounds memory access. Exploitation requires a local user to install or process a specially crafted treemagic file, which can lead to local denial of service or application instability.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/glib2@2.68.4-18.el9_7?arch=x86_64&distro=rocky-9.7&upstream=glib2-2.68.4-18.el9_7.src.rpm</td>
+                    </tr>
+                    <tr>
                         <td>zlib</td>
                         <td>1.2.11-40.el9</td>
                         <td>rpm</td>
@@ -3170,22 +3186,6 @@ boundary.</td>
                         <td>A flaw was found in GnuPG. An adversary can exploit this vulnerability by crafting a signed message that includes a form feed character (\f) at the end of a plaintext line. This allows the adversary to append additional, unsigned text to the message while the signature verification still reports success. This issue leads to an integrity bypass, potentially enabling the spoofing of signed communications.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/gnupg2@2.3.3-4.el9?arch=x86_64&distro=rocky-9.7&upstream=gnupg2-2.3.3-4.el9.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>glib2</td>
-                        <td>2.68.4-18.el9_7</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-1485">CVE-2026-1485</a>
-                        </td>
-                        <td>Low</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in Glib&#39;s content type parsing logic. This buffer underflow vulnerability occurs because the length of a header line is stored in a signed integer, which can lead to integer wraparound for very large inputs. This results in pointer underflow and out-of-bounds memory access. Exploitation requires a local user to install or process a specially crafted treemagic file, which can lead to local denial of service or application instability.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/glib2@2.68.4-18.el9_7?arch=x86_64&distro=rocky-9.7&upstream=glib2-2.68.4-18.el9_7.src.rpm</td>
                     </tr>
                     <tr>
                         <td>libssh</td>
