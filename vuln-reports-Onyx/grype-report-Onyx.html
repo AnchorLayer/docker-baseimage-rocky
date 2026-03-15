@@ -856,7 +856,7 @@
                     <dd id="typeValue">image</dd><dt>Checksum:</dt>
                     <dd id="checksumValue">sha256:f376ba4b3b4e88e41bedc1d3756b8260edb64b3b311860cb50363435605ee0d0</dd><dt>Date:</dt>
                     <dd>
-                        <span id="dateElement">2026-03-15T06:50:07.431514895Z</span>
+                        <span id="dateElement">2026-03-15T07:41:52.984811251Z</span>
                         <span id="prettyDateElement" style="display: none;"></span>
                     </dd>
                 </dl>
@@ -1310,6 +1310,38 @@
                         <td>0.10.4-15.el9_6</td>
                         <td>rpm</td>
                         <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-3731">CVE-2026-3731</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in libssh. A remote attacker could trigger an out-of-bounds read vulnerability in the SFTP Extension Name Handler by manipulating the `idx` argument in the `sftp_extensions_get_name` or `sftp_extensions_get_data` functions. This could lead to a Denial of Service (DoS), making the affected system unresponsive.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/libssh@0.10.4-15.el9_6?arch=x86_64&distro=rocky-9.7&upstream=libssh-0.10.4-15.el9_6.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>libssh-config</td>
+                        <td>0.10.4-15.el9_6</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-3731">CVE-2026-3731</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in libssh. A remote attacker could trigger an out-of-bounds read vulnerability in the SFTP Extension Name Handler by manipulating the `idx` argument in the `sftp_extensions_get_name` or `sftp_extensions_get_data` functions. This could lead to a Denial of Service (DoS), making the affected system unresponsive.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/libssh-config@0.10.4-15.el9_6?arch=noarch&distro=rocky-9.7&upstream=libssh-0.10.4-15.el9_6.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>libssh</td>
+                        <td>0.10.4-15.el9_6</td>
+                        <td>rpm</td>
+                        <td>
                             <a href="https://access.redhat.com/security/cve/CVE-2025-5351">CVE-2025-5351</a>
                         </td>
                         <td>Medium</td>
@@ -1352,38 +1384,6 @@
                         <td>A vulnerability in apply_substitution() function in libarchive&#39;s bsdtar allows crafted -s substitution rules to repeatedly match a zero-length substring and append replacements without advancing the input pointer. When the rule uses the global /g flag (or an explicitly empty pattern), this leads to unbounded output allocation and eventual process OOM (Denial of Service). Upgrade to libarchive 3.8.1 or apply a patch that prevents zero-length match loops or rejects empty patterns.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/libarchive@3.5.3-6.el9_6?arch=x86_64&distro=rocky-9.7&upstream=libarchive-3.5.3-6.el9_6.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>libssh</td>
-                        <td>0.10.4-15.el9_6</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-3731">CVE-2026-3731</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in libssh. A remote attacker could trigger an out-of-bounds read vulnerability in the SFTP Extension Name Handler by manipulating the `idx` argument in the `sftp_extensions_get_name` or `sftp_extensions_get_data` functions. This could lead to a Denial of Service (DoS), making the affected system unresponsive.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/libssh@0.10.4-15.el9_6?arch=x86_64&distro=rocky-9.7&upstream=libssh-0.10.4-15.el9_6.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>libssh-config</td>
-                        <td>0.10.4-15.el9_6</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-3731">CVE-2026-3731</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in libssh. A remote attacker could trigger an out-of-bounds read vulnerability in the SFTP Extension Name Handler by manipulating the `idx` argument in the `sftp_extensions_get_name` or `sftp_extensions_get_data` functions. This could lead to a Denial of Service (DoS), making the affected system unresponsive.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/libssh-config@0.10.4-15.el9_6?arch=noarch&distro=rocky-9.7&upstream=libssh-0.10.4-15.el9_6.src.rpm</td>
                     </tr>
                     <tr>
                         <td>glib2</td>
@@ -1891,7 +1891,7 @@
                         <td>
                             N/A
                         </td>
-                        <td>NCurse v6.4-20230418 was discovered to contain a segmentation fault via the component _nc_wrap_entry().</td>
+                        <td>A vulnerability was found in the NCurses package, where a segmentation fault may be triggered through _nc_wrap_entry().</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/ncurses-base@6.2-12.20210508.el9?arch=noarch&distro=rocky-9.7&upstream=ncurses-6.2-12.20210508.el9.src.rpm</td>
                     </tr>
@@ -1907,7 +1907,7 @@
                         <td>
                             N/A
                         </td>
-                        <td>NCurse v6.4-20230418 was discovered to contain a segmentation fault via the component _nc_wrap_entry().</td>
+                        <td>A vulnerability was found in the NCurses package, where a segmentation fault may be triggered through _nc_wrap_entry().</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/ncurses-libs@6.2-12.20210508.el9?arch=x86_64&distro=rocky-9.7&upstream=ncurses-6.2-12.20210508.el9.src.rpm</td>
                     </tr>
@@ -2396,6 +2396,54 @@
                         <td>pkg:rpm/rocky/libarchive@3.5.3-6.el9_6?arch=x86_64&distro=rocky-9.7&upstream=libarchive-3.5.3-6.el9_6.src.rpm</td>
                     </tr>
                     <tr>
+                        <td>openssl</td>
+                        <td>1:3.5.1-4.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-9232">CVE-2025-9232</a>
+                        </td>
+                        <td>Low</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in the OpenSSL HTTP client API no_proxy handling. This vulnerability allows an application level denial of service (application crash) via an attacker-controlled IPv6 URL when the no_proxy environment variable is set.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/openssl@3.5.1-4.el9_7?arch=x86_64&distro=rocky-9.7&epoch=1&upstream=openssl-3.5.1-4.el9_7.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>openssl-fips-provider</td>
+                        <td>1:3.5.1-4.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-9232">CVE-2025-9232</a>
+                        </td>
+                        <td>Low</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in the OpenSSL HTTP client API no_proxy handling. This vulnerability allows an application level denial of service (application crash) via an attacker-controlled IPv6 URL when the no_proxy environment variable is set.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/openssl-fips-provider@3.5.1-4.el9_7?arch=x86_64&distro=rocky-9.7&epoch=1&upstream=openssl-3.5.1-4.el9_7.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>openssl-libs</td>
+                        <td>1:3.5.1-4.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-9232">CVE-2025-9232</a>
+                        </td>
+                        <td>Low</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in the OpenSSL HTTP client API no_proxy handling. This vulnerability allows an application level denial of service (application crash) via an attacker-controlled IPv6 URL when the no_proxy environment variable is set.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/openssl-libs@3.5.1-4.el9_7?arch=x86_64&distro=rocky-9.7&epoch=1&upstream=openssl-3.5.1-4.el9_7.src.rpm</td>
+                    </tr>
+                    <tr>
                         <td>openldap</td>
                         <td>2.6.8-4.el9.0.1</td>
                         <td>rpm</td>
@@ -2428,6 +2476,22 @@
                         <td>pkg:rpm/rocky/gawk@5.1.0-6.el9?arch=x86_64&distro=rocky-9.7&upstream=gawk-5.1.0-6.el9.src.rpm</td>
                     </tr>
                     <tr>
+                        <td>systemd-libs</td>
+                        <td>252-55.el9_7.7.rocky.0.1</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-4105">CVE-2026-4105</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in systemd. The systemd-machined service contains an Improper Access Control vulnerability due to insufficient validation of the class parameter in the RegisterMachine D-Bus (Desktop Bus) method. A local unprivileged user can exploit this by attempting to register a machine with a specific class value, which may leave behind a usable, attacker-controlled machine object. This allows the attacker to invoke methods on the privileged object, leading to the execution of arbitrary commands with root privileges on the host system.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/systemd-libs@252-55.el9_7.7.rocky.0.1?arch=x86_64&distro=rocky-9.7&upstream=systemd-252-55.el9_7.7.rocky.0.1.src.rpm</td>
+                    </tr>
+                    <tr>
                         <td>libxml2</td>
                         <td>2.9.13-14.el9_7</td>
                         <td>rpm</td>
@@ -2442,108 +2506,6 @@
                         <td>A flaw was identified in the interactive shell of the xmllint utility, part of the libxml2 project, where memory allocated for user input is not properly released under certain conditions. When a user submits input consisting only of whitespace, the program skips command execution but fails to free the allocated buffer. Repeating this action causes memory to continuously accumulate. Over time, this can exhaust system memory and terminate the xmllint process, creating a denial-of-service condition on the local system.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/libxml2@2.9.13-14.el9_7?arch=x86_64&distro=rocky-9.7&upstream=libxml2-2.9.13-14.el9_7.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>openssl</td>
-                        <td>1:3.5.1-4.el9_7</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2025-9232">CVE-2025-9232</a>
-                        </td>
-                        <td>Low</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>Issue summary: An application using the OpenSSL HTTP client API functions may
-trigger an out-of-bounds read if the &#39;no_proxy&#39; environment variable is set and
-the host portion of the authority component of the HTTP URL is an IPv6 address.
-Impact summary: An out-of-bounds read can trigger a crash which leads to
-Denial of Service for an application.
-The OpenSSL HTTP client API functions can be used directly by applications
-but they are also used by the OCSP client functions and CMP (Certificate
-Management Protocol) client implementation in OpenSSL. However the URLs used
-by these implementations are unlikely to be controlled by an attacker.
-In this vulnerable code the out of bounds read can only trigger a crash.
-Furthermore the vulnerability requires an attacker-controlled URL to be
-passed from an application to the OpenSSL function and the user has to have
-a &#39;no_proxy&#39; environment variable set. For the aforementioned reasons the
-issue was assessed as Low severity.
-The vulnerable code was introduced in the following patch releases:
-3.0.16, 3.1.8, 3.2.4, 3.3.3, 3.4.0 and 3.5.0.
-The FIPS modules in 3.5, 3.4, 3.3, 3.2, 3.1 and 3.0 are not affected by this
-issue, as the HTTP client implementation is outside the OpenSSL FIPS module
-boundary.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/openssl@3.5.1-4.el9_7?arch=x86_64&distro=rocky-9.7&epoch=1&upstream=openssl-3.5.1-4.el9_7.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>openssl-fips-provider</td>
-                        <td>1:3.5.1-4.el9_7</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2025-9232">CVE-2025-9232</a>
-                        </td>
-                        <td>Low</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>Issue summary: An application using the OpenSSL HTTP client API functions may
-trigger an out-of-bounds read if the &#39;no_proxy&#39; environment variable is set and
-the host portion of the authority component of the HTTP URL is an IPv6 address.
-Impact summary: An out-of-bounds read can trigger a crash which leads to
-Denial of Service for an application.
-The OpenSSL HTTP client API functions can be used directly by applications
-but they are also used by the OCSP client functions and CMP (Certificate
-Management Protocol) client implementation in OpenSSL. However the URLs used
-by these implementations are unlikely to be controlled by an attacker.
-In this vulnerable code the out of bounds read can only trigger a crash.
-Furthermore the vulnerability requires an attacker-controlled URL to be
-passed from an application to the OpenSSL function and the user has to have
-a &#39;no_proxy&#39; environment variable set. For the aforementioned reasons the
-issue was assessed as Low severity.
-The vulnerable code was introduced in the following patch releases:
-3.0.16, 3.1.8, 3.2.4, 3.3.3, 3.4.0 and 3.5.0.
-The FIPS modules in 3.5, 3.4, 3.3, 3.2, 3.1 and 3.0 are not affected by this
-issue, as the HTTP client implementation is outside the OpenSSL FIPS module
-boundary.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/openssl-fips-provider@3.5.1-4.el9_7?arch=x86_64&distro=rocky-9.7&epoch=1&upstream=openssl-3.5.1-4.el9_7.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>openssl-libs</td>
-                        <td>1:3.5.1-4.el9_7</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2025-9232">CVE-2025-9232</a>
-                        </td>
-                        <td>Low</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>Issue summary: An application using the OpenSSL HTTP client API functions may
-trigger an out-of-bounds read if the &#39;no_proxy&#39; environment variable is set and
-the host portion of the authority component of the HTTP URL is an IPv6 address.
-Impact summary: An out-of-bounds read can trigger a crash which leads to
-Denial of Service for an application.
-The OpenSSL HTTP client API functions can be used directly by applications
-but they are also used by the OCSP client functions and CMP (Certificate
-Management Protocol) client implementation in OpenSSL. However the URLs used
-by these implementations are unlikely to be controlled by an attacker.
-In this vulnerable code the out of bounds read can only trigger a crash.
-Furthermore the vulnerability requires an attacker-controlled URL to be
-passed from an application to the OpenSSL function and the user has to have
-a &#39;no_proxy&#39; environment variable set. For the aforementioned reasons the
-issue was assessed as Low severity.
-The vulnerable code was introduced in the following patch releases:
-3.0.16, 3.1.8, 3.2.4, 3.3.3, 3.4.0 and 3.5.0.
-The FIPS modules in 3.5, 3.4, 3.3, 3.2, 3.1 and 3.0 are not affected by this
-issue, as the HTTP client implementation is outside the OpenSSL FIPS module
-boundary.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/openssl-libs@3.5.1-4.el9_7?arch=x86_64&distro=rocky-9.7&epoch=1&upstream=openssl-3.5.1-4.el9_7.src.rpm</td>
                     </tr>
                     <tr>
                         <td>glibc</td>
@@ -2600,20 +2562,20 @@ boundary.</td>
                         <td>pkg:rpm/rocky/glibc-minimal-langpack@2.34-231.el9_7.2?arch=x86_64&distro=rocky-9.7&upstream=glibc-2.34-231.el9_7.2.src.rpm</td>
                     </tr>
                     <tr>
-                        <td>systemd-libs</td>
-                        <td>252-55.el9_7.7.rocky.0.1</td>
+                        <td>sqlite-libs</td>
+                        <td>3.34.1-9.el9_7</td>
                         <td>rpm</td>
                         <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-4105">CVE-2026-4105</a>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-70873">CVE-2025-70873</a>
                         </td>
-                        <td>Medium</td>
+                        <td>Low</td>
                         <td>not-fixed</td>
                         <td>
                             N/A
                         </td>
-                        <td>A flaw was found in systemd. The systemd-machined service contains an Improper Access Control vulnerability due to insufficient validation of the class parameter in the RegisterMachine D-Bus (Desktop Bus) method. A local unprivileged user can exploit this by attempting to register a machine with a specific class value, which may leave behind a usable, attacker-controlled machine object. This allows the attacker to invoke methods on the privileged object, leading to the execution of arbitrary commands with root privileges on the host system.</td>
+                        <td>A flaw was found in SQLite. This information disclosure vulnerability exists within the zipfile extension, specifically in the zipfileInflate function. A remote attacker could exploit this by providing a specially crafted ZIP file. Successful exploitation could lead to the disclosure of sensitive heap memory information.</td>
                         <td>[]</td>
-                        <td>pkg:rpm/rocky/systemd-libs@252-55.el9_7.7.rocky.0.1?arch=x86_64&distro=rocky-9.7&upstream=systemd-252-55.el9_7.7.rocky.0.1.src.rpm</td>
+                        <td>pkg:rpm/rocky/sqlite-libs@3.34.1-9.el9_7?arch=x86_64&distro=rocky-9.7&upstream=sqlite-3.34.1-9.el9_7.src.rpm</td>
                     </tr>
                     <tr>
                         <td>libxml2</td>
@@ -2954,20 +2916,52 @@ boundary.</td>
                         <td>pkg:rpm/rocky/openssl-libs@3.5.1-4.el9_7?arch=x86_64&distro=rocky-9.7&epoch=1&upstream=openssl-3.5.1-4.el9_7.src.rpm</td>
                     </tr>
                     <tr>
-                        <td>sqlite-libs</td>
-                        <td>3.34.1-9.el9_7</td>
+                        <td>openssl</td>
+                        <td>1:3.5.1-4.el9_7</td>
                         <td>rpm</td>
                         <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2025-70873">CVE-2025-70873</a>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-2673">CVE-2026-2673</a>
                         </td>
                         <td>Low</td>
                         <td>not-fixed</td>
                         <td>
                             N/A
                         </td>
-                        <td>A flaw was found in SQLite. This information disclosure vulnerability exists within the zipfile extension, specifically in the zipfileInflate function. A remote attacker could exploit this by providing a specially crafted ZIP file. Successful exploitation could lead to the disclosure of sensitive heap memory information.</td>
+                        <td>A key group selection preference flaw has been discovered in OpenSSL. An OpenSSL TLS 1.3 server may fail to negotiate the expected preferred key exchange group when its key exchange group configuration includes the default by using the &#34;DEFAULT&#34; keyword. A less preferred key exchange may be used even when a more preferred group is supported by both client and server, if the group was not included among the client&#39;s initial predicated keyshares. This will sometimes be the case with the new hybrid post-quantum groups, if the client chooses to defer their use until specifically requested by the server. No OpenSSL FIPS modules are affected by this issue, the code in question lies outside the FIPS boundary.</td>
                         <td>[]</td>
-                        <td>pkg:rpm/rocky/sqlite-libs@3.34.1-9.el9_7?arch=x86_64&distro=rocky-9.7&upstream=sqlite-3.34.1-9.el9_7.src.rpm</td>
+                        <td>pkg:rpm/rocky/openssl@3.5.1-4.el9_7?arch=x86_64&distro=rocky-9.7&epoch=1&upstream=openssl-3.5.1-4.el9_7.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>openssl-fips-provider</td>
+                        <td>1:3.5.1-4.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-2673">CVE-2026-2673</a>
+                        </td>
+                        <td>Low</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A key group selection preference flaw has been discovered in OpenSSL. An OpenSSL TLS 1.3 server may fail to negotiate the expected preferred key exchange group when its key exchange group configuration includes the default by using the &#34;DEFAULT&#34; keyword. A less preferred key exchange may be used even when a more preferred group is supported by both client and server, if the group was not included among the client&#39;s initial predicated keyshares. This will sometimes be the case with the new hybrid post-quantum groups, if the client chooses to defer their use until specifically requested by the server. No OpenSSL FIPS modules are affected by this issue, the code in question lies outside the FIPS boundary.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/openssl-fips-provider@3.5.1-4.el9_7?arch=x86_64&distro=rocky-9.7&epoch=1&upstream=openssl-3.5.1-4.el9_7.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>openssl-libs</td>
+                        <td>1:3.5.1-4.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-2673">CVE-2026-2673</a>
+                        </td>
+                        <td>Low</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A key group selection preference flaw has been discovered in OpenSSL. An OpenSSL TLS 1.3 server may fail to negotiate the expected preferred key exchange group when its key exchange group configuration includes the default by using the &#34;DEFAULT&#34; keyword. A less preferred key exchange may be used even when a more preferred group is supported by both client and server, if the group was not included among the client&#39;s initial predicated keyshares. This will sometimes be the case with the new hybrid post-quantum groups, if the client chooses to defer their use until specifically requested by the server. No OpenSSL FIPS modules are affected by this issue, the code in question lies outside the FIPS boundary.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/openssl-libs@3.5.1-4.el9_7?arch=x86_64&distro=rocky-9.7&epoch=1&upstream=openssl-3.5.1-4.el9_7.src.rpm</td>
                     </tr>
                     <tr>
                         <td>glib2</td>
@@ -3401,7 +3395,11 @@ boundary.</td>
                         <td>
                             N/A
                         </td>
-                        <td>No description is available for this CVE.</td>
+                        <td>A malicious SCP server can send unexpected paths that could make the
+client application override local files outside of working directory.
+This could be misused to create malicious executable or configuration
+files and make the user execute them under specific consequences.
+This is the same issue as in OpenSSH, tracked as CVE-2019-6111.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/libssh@0.10.4-15.el9_6?arch=x86_64&distro=rocky-9.7&upstream=libssh-0.10.4-15.el9_6.src.rpm</td>
                     </tr>
@@ -3417,7 +3415,16 @@ boundary.</td>
                         <td>
                             N/A
                         </td>
-                        <td>No description is available for this CVE.</td>
+                        <td>The API function `ssh_get_hexa()` is vulnerable, when 0-lenght
+input is provided to this function. This function is used internally
+in `ssh_get_fingerprint_hash()` and `ssh_print_hexa()` (deprecated),
+which is vulnerable to the same input (length is provided by the
+calling application).
+The function is also used internally in the gssapi code for logging
+the OIDs received by the server during GSSAPI authentication. This
+could be triggered remotely, when the server allows GSSAPI authentication
+and logging verbosity is set at least to SSH_LOG_PACKET (3). This
+could cause self-DoS of the per-connection daemon process.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/libssh@0.10.4-15.el9_6?arch=x86_64&distro=rocky-9.7&upstream=libssh-0.10.4-15.el9_6.src.rpm</td>
                     </tr>
@@ -3433,7 +3440,11 @@ boundary.</td>
                         <td>
                             N/A
                         </td>
-                        <td>No description is available for this CVE.</td>
+                        <td>A malicious SCP server can send unexpected paths that could make the
+client application override local files outside of working directory.
+This could be misused to create malicious executable or configuration
+files and make the user execute them under specific consequences.
+This is the same issue as in OpenSSH, tracked as CVE-2019-6111.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/libssh-config@0.10.4-15.el9_6?arch=noarch&distro=rocky-9.7&upstream=libssh-0.10.4-15.el9_6.src.rpm</td>
                     </tr>
@@ -3449,7 +3460,16 @@ boundary.</td>
                         <td>
                             N/A
                         </td>
-                        <td>No description is available for this CVE.</td>
+                        <td>The API function `ssh_get_hexa()` is vulnerable, when 0-lenght
+input is provided to this function. This function is used internally
+in `ssh_get_fingerprint_hash()` and `ssh_print_hexa()` (deprecated),
+which is vulnerable to the same input (length is provided by the
+calling application).
+The function is also used internally in the gssapi code for logging
+the OIDs received by the server during GSSAPI authentication. This
+could be triggered remotely, when the server allows GSSAPI authentication
+and logging verbosity is set at least to SSH_LOG_PACKET (3). This
+could cause self-DoS of the per-connection daemon process.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/libssh-config@0.10.4-15.el9_6?arch=noarch&distro=rocky-9.7&upstream=libssh-0.10.4-15.el9_6.src.rpm</td>
                     </tr>
@@ -3465,7 +3485,7 @@ boundary.</td>
                         <td>
                             N/A
                         </td>
-                        <td>No description is available for this CVE.</td>
+                        <td>A flaw was found in p11-kit. A remote attacker could exploit this vulnerability by calling the C_DeriveKey function on a remote token with specific IBM kyber or IBM btc derive mechanism parameters set to NULL. This could lead to the RPC-client attempting to return an uninitialized value, potentially resulting in a NULL dereference or undefined behavior. This issue may cause an application level denial of service or other unpredictable system states.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/p11-kit@0.25.3-3.el9_5?arch=x86_64&distro=rocky-9.7&upstream=p11-kit-0.25.3-3.el9_5.src.rpm</td>
                     </tr>
@@ -3481,7 +3501,7 @@ boundary.</td>
                         <td>
                             N/A
                         </td>
-                        <td>No description is available for this CVE.</td>
+                        <td>A flaw was found in p11-kit. A remote attacker could exploit this vulnerability by calling the C_DeriveKey function on a remote token with specific IBM kyber or IBM btc derive mechanism parameters set to NULL. This could lead to the RPC-client attempting to return an uninitialized value, potentially resulting in a NULL dereference or undefined behavior. This issue may cause an application level denial of service or other unpredictable system states.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/p11-kit-trust@0.25.3-3.el9_5?arch=x86_64&distro=rocky-9.7&upstream=p11-kit-0.25.3-3.el9_5.src.rpm</td>
                     </tr>
@@ -3497,7 +3517,7 @@ boundary.</td>
                         <td>
                             N/A
                         </td>
-                        <td>No description is available for this CVE.</td>
+                        <td>A flaw was found in libssh where it can attempt to open arbitrary files during configuration parsing. A local attacker can exploit this by providing a malicious configuration file or when the system is misconfigured. This vulnerability could lead to a Denial of Service (DoS) by causing the system to try and access dangerous files, such as block devices or large system files, which can disrupt normal operations.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/libssh@0.10.4-15.el9_6?arch=x86_64&distro=rocky-9.7&upstream=libssh-0.10.4-15.el9_6.src.rpm</td>
                     </tr>
@@ -3513,7 +3533,7 @@ boundary.</td>
                         <td>
                             N/A
                         </td>
-                        <td>No description is available for this CVE.</td>
+                        <td>A flaw was found in libssh. A remote attacker, by controlling client configuration files or known_hosts files, could craft specific hostnames that when processed by the `match_pattern()` function can lead to inefficient regular expression backtracking. This can cause timeouts and resource exhaustion, resulting in a Denial of Service (DoS) for the client.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/libssh@0.10.4-15.el9_6?arch=x86_64&distro=rocky-9.7&upstream=libssh-0.10.4-15.el9_6.src.rpm</td>
                     </tr>
@@ -3529,7 +3549,7 @@ boundary.</td>
                         <td>
                             N/A
                         </td>
-                        <td>No description is available for this CVE.</td>
+                        <td>A flaw was found in libssh in which a malicious SFTP (SSH File Transfer Protocol) server can exploit this by sending a malformed &#39;longname&#39; field within an `SSH_FXP_NAME` message during a file listing operation. This missing null check can lead to reading beyond allocated memory on the heap. This can cause unexpected behavior or lead to a denial of service (DoS) due to application crashes.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/libssh@0.10.4-15.el9_6?arch=x86_64&distro=rocky-9.7&upstream=libssh-0.10.4-15.el9_6.src.rpm</td>
                     </tr>
@@ -3545,7 +3565,7 @@ boundary.</td>
                         <td>
                             N/A
                         </td>
-                        <td>No description is available for this CVE.</td>
+                        <td>A flaw was found in libssh where it can attempt to open arbitrary files during configuration parsing. A local attacker can exploit this by providing a malicious configuration file or when the system is misconfigured. This vulnerability could lead to a Denial of Service (DoS) by causing the system to try and access dangerous files, such as block devices or large system files, which can disrupt normal operations.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/libssh-config@0.10.4-15.el9_6?arch=noarch&distro=rocky-9.7&upstream=libssh-0.10.4-15.el9_6.src.rpm</td>
                     </tr>
@@ -3561,7 +3581,7 @@ boundary.</td>
                         <td>
                             N/A
                         </td>
-                        <td>No description is available for this CVE.</td>
+                        <td>A flaw was found in libssh. A remote attacker, by controlling client configuration files or known_hosts files, could craft specific hostnames that when processed by the `match_pattern()` function can lead to inefficient regular expression backtracking. This can cause timeouts and resource exhaustion, resulting in a Denial of Service (DoS) for the client.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/libssh-config@0.10.4-15.el9_6?arch=noarch&distro=rocky-9.7&upstream=libssh-0.10.4-15.el9_6.src.rpm</td>
                     </tr>
@@ -3577,57 +3597,9 @@ boundary.</td>
                         <td>
                             N/A
                         </td>
-                        <td>No description is available for this CVE.</td>
+                        <td>A flaw was found in libssh in which a malicious SFTP (SSH File Transfer Protocol) server can exploit this by sending a malformed &#39;longname&#39; field within an `SSH_FXP_NAME` message during a file listing operation. This missing null check can lead to reading beyond allocated memory on the heap. This can cause unexpected behavior or lead to a denial of service (DoS) due to application crashes.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/libssh-config@0.10.4-15.el9_6?arch=noarch&distro=rocky-9.7&upstream=libssh-0.10.4-15.el9_6.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>openssl</td>
-                        <td>1:3.5.1-4.el9_7</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-2673">CVE-2026-2673</a>
-                        </td>
-                        <td>Low</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A key group selection preference flaw has been discovered in OpenSSL. An OpenSSL TLS 1.3 server may fail to negotiate the expected preferred key exchange group when its key exchange group configuration includes the default by using the &#34;DEFAULT&#34; keyword. A less preferred key exchange may be used even when a more preferred group is supported by both client and server, if the group was not included among the client&#39;s initial predicated keyshares. This will sometimes be the case with the new hybrid post-quantum groups, if the client chooses to defer their use until specifically requested by the server. No OpenSSL FIPS modules are affected by this issue, the code in question lies outside the FIPS boundary.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/openssl@3.5.1-4.el9_7?arch=x86_64&distro=rocky-9.7&epoch=1&upstream=openssl-3.5.1-4.el9_7.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>openssl-fips-provider</td>
-                        <td>1:3.5.1-4.el9_7</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-2673">CVE-2026-2673</a>
-                        </td>
-                        <td>Low</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A key group selection preference flaw has been discovered in OpenSSL. An OpenSSL TLS 1.3 server may fail to negotiate the expected preferred key exchange group when its key exchange group configuration includes the default by using the &#34;DEFAULT&#34; keyword. A less preferred key exchange may be used even when a more preferred group is supported by both client and server, if the group was not included among the client&#39;s initial predicated keyshares. This will sometimes be the case with the new hybrid post-quantum groups, if the client chooses to defer their use until specifically requested by the server. No OpenSSL FIPS modules are affected by this issue, the code in question lies outside the FIPS boundary.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/openssl-fips-provider@3.5.1-4.el9_7?arch=x86_64&distro=rocky-9.7&epoch=1&upstream=openssl-3.5.1-4.el9_7.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>openssl-libs</td>
-                        <td>1:3.5.1-4.el9_7</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-2673">CVE-2026-2673</a>
-                        </td>
-                        <td>Low</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A key group selection preference flaw has been discovered in OpenSSL. An OpenSSL TLS 1.3 server may fail to negotiate the expected preferred key exchange group when its key exchange group configuration includes the default by using the &#34;DEFAULT&#34; keyword. A less preferred key exchange may be used even when a more preferred group is supported by both client and server, if the group was not included among the client&#39;s initial predicated keyshares. This will sometimes be the case with the new hybrid post-quantum groups, if the client chooses to defer their use until specifically requested by the server. No OpenSSL FIPS modules are affected by this issue, the code in question lies outside the FIPS boundary.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/openssl-libs@3.5.1-4.el9_7?arch=x86_64&distro=rocky-9.7&epoch=1&upstream=openssl-3.5.1-4.el9_7.src.rpm</td>
                     </tr>
                     <tr>
                         <td>lz4-libs</td>
