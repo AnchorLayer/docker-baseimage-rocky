@@ -913,6 +913,27 @@
               }
             },
             {
+              "id": "CVE-2025-14831-gnutls",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2025-14831 medium vulnerability for gnutls package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in GnuTLS. This vulnerability allows a denial of service (DoS) by excessive CPU (Central Processing Unit) and memory consumption via specially crafted malicious certificates containing a large number of name constraints and subject alternative names (SANs)."
+              },
+              "helpUri": "https://github.com/anchore/grype",
+              "help": {
+                "text": "Vulnerability CVE-2025-14831\nSeverity: medium\nPackage: gnutls\nVersion: 3.8.3-9.el9.0.1\nFix Version: 0:3.8.3-10.el9_7\nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2025-14831](https://access.redhat.com/security/cve/CVE-2025-14831)",
+                "markdown": "**Vulnerability CVE-2025-14831**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | gnutls  | 3.8.3-9.el9.0.1  | 0:3.8.3-10.el9_7  | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2025-14831](https://access.redhat.com/security/cve/CVE-2025-14831)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/gnutls@3.8.3-9.el9.0.1?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=gnutls-3.8.3-9.el9.0.1.src.rpm"
+                ],
+                "security-severity": "5.3"
+              }
+            },
+            {
               "id": "CVE-2026-1965-curl",
               "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
@@ -1057,6 +1078,48 @@
                   "pkg:rpm/rocky/openssl-libs@3.5.1-4.el9_7?arch=x86_64\u0026distro=rocky-9.7\u0026epoch=1\u0026upstream=openssl-3.5.1-4.el9_7.src.rpm"
                 ],
                 "security-severity": "6.5"
+              }
+            },
+            {
+              "id": "CVE-2026-3805-curl",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-3805 medium vulnerability for curl package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in curl. When handling a second Server Message Block (SMB) request to the same host, curl incorrectly accesses memory that has already been freed. This memory corruption vulnerability, known as a use-after-free, could allow a remote attacker to potentially execute arbitrary code or cause a denial of service."
+              },
+              "helpUri": "https://github.com/anchore/grype",
+              "help": {
+                "text": "Vulnerability CVE-2026-3805\nSeverity: medium\nPackage: curl\nVersion: 7.76.1-34.el9\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-3805](https://access.redhat.com/security/cve/CVE-2026-3805)",
+                "markdown": "**Vulnerability CVE-2026-3805**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | curl  | 7.76.1-34.el9  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-3805](https://access.redhat.com/security/cve/CVE-2026-3805)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/curl@7.76.1-34.el9?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=curl-7.76.1-34.el9.src.rpm"
+                ],
+                "security-severity": "6.3"
+              }
+            },
+            {
+              "id": "CVE-2026-3805-libcurl",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-3805 medium vulnerability for libcurl package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in curl. When handling a second Server Message Block (SMB) request to the same host, curl incorrectly accesses memory that has already been freed. This memory corruption vulnerability, known as a use-after-free, could allow a remote attacker to potentially execute arbitrary code or cause a denial of service."
+              },
+              "helpUri": "https://github.com/anchore/grype",
+              "help": {
+                "text": "Vulnerability CVE-2026-3805\nSeverity: medium\nPackage: libcurl\nVersion: 7.76.1-34.el9\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-3805](https://access.redhat.com/security/cve/CVE-2026-3805)",
+                "markdown": "**Vulnerability CVE-2026-3805**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | libcurl  | 7.76.1-34.el9  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-3805](https://access.redhat.com/security/cve/CVE-2026-3805)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/libcurl@7.76.1-34.el9?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=curl-7.76.1-34.el9.src.rpm"
+                ],
+                "security-severity": "6.3"
               }
             },
             {
@@ -1330,69 +1393,6 @@
                   "pkg:rpm/rocky/glibc-minimal-langpack@2.34-231.el9_7.2?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=glibc-2.34-231.el9_7.2.src.rpm"
                 ],
                 "security-severity": "5.9"
-              }
-            },
-            {
-              "id": "CVE-2025-14831-gnutls",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2025-14831 medium vulnerability for gnutls package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in GnuTLS. This vulnerability allows a denial of service (DoS) by excessive CPU (Central Processing Unit) and memory consumption via specially crafted malicious certificates containing a large number of name constraints and subject alternative names (SANs)."
-              },
-              "helpUri": "https://github.com/anchore/grype",
-              "help": {
-                "text": "Vulnerability CVE-2025-14831\nSeverity: medium\nPackage: gnutls\nVersion: 3.8.3-9.el9.0.1\nFix Version: 0:3.8.3-10.el9_7\nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2025-14831](https://access.redhat.com/security/cve/CVE-2025-14831)",
-                "markdown": "**Vulnerability CVE-2025-14831**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | gnutls  | 3.8.3-9.el9.0.1  | 0:3.8.3-10.el9_7  | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2025-14831](https://access.redhat.com/security/cve/CVE-2025-14831)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/gnutls@3.8.3-9.el9.0.1?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=gnutls-3.8.3-9.el9.0.1.src.rpm"
-                ],
-                "security-severity": "5.3"
-              }
-            },
-            {
-              "id": "CVE-2026-3805-curl",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-3805 medium vulnerability for curl package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in curl. When handling a second Server Message Block (SMB) request to the same host, curl incorrectly accesses memory that has already been freed. This memory corruption vulnerability, known as a use-after-free, could allow a remote attacker to potentially execute arbitrary code or cause a denial of service."
-              },
-              "helpUri": "https://github.com/anchore/grype",
-              "help": {
-                "text": "Vulnerability CVE-2026-3805\nSeverity: medium\nPackage: curl\nVersion: 7.76.1-34.el9\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-3805](https://access.redhat.com/security/cve/CVE-2026-3805)",
-                "markdown": "**Vulnerability CVE-2026-3805**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | curl  | 7.76.1-34.el9  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-3805](https://access.redhat.com/security/cve/CVE-2026-3805)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/curl@7.76.1-34.el9?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=curl-7.76.1-34.el9.src.rpm"
-                ],
-                "security-severity": "6.3"
-              }
-            },
-            {
-              "id": "CVE-2026-3805-libcurl",
-              "name": "RpmMatcherExactIndirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-3805 medium vulnerability for libcurl package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in curl. When handling a second Server Message Block (SMB) request to the same host, curl incorrectly accesses memory that has already been freed. This memory corruption vulnerability, known as a use-after-free, could allow a remote attacker to potentially execute arbitrary code or cause a denial of service."
-              },
-              "helpUri": "https://github.com/anchore/grype",
-              "help": {
-                "text": "Vulnerability CVE-2026-3805\nSeverity: medium\nPackage: libcurl\nVersion: 7.76.1-34.el9\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-3805](https://access.redhat.com/security/cve/CVE-2026-3805)",
-                "markdown": "**Vulnerability CVE-2026-3805**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | libcurl  | 7.76.1-34.el9  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-3805](https://access.redhat.com/security/cve/CVE-2026-3805)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/libcurl@7.76.1-34.el9?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=curl-7.76.1-34.el9.src.rpm"
-                ],
-                "security-severity": "6.3"
               }
             },
             {
@@ -1816,6 +1816,90 @@
               }
             },
             {
+              "id": "CVE-2026-3784-curl",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-3784 medium vulnerability for curl package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in curl. This vulnerability allows curl to wrongly reuse an existing HTTP proxy connection when performing a CONNECT request to a server, even if the new request uses different authentication credentials for the HTTP proxy. This improper connection reuse could lead to an attacker gaining unauthorized access to resources or information intended for a different user."
+              },
+              "helpUri": "https://github.com/anchore/grype",
+              "help": {
+                "text": "Vulnerability CVE-2026-3784\nSeverity: medium\nPackage: curl\nVersion: 7.76.1-34.el9\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-3784](https://access.redhat.com/security/cve/CVE-2026-3784)",
+                "markdown": "**Vulnerability CVE-2026-3784**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | curl  | 7.76.1-34.el9  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-3784](https://access.redhat.com/security/cve/CVE-2026-3784)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/curl@7.76.1-34.el9?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=curl-7.76.1-34.el9.src.rpm"
+                ],
+                "security-severity": "6.5"
+              }
+            },
+            {
+              "id": "CVE-2026-3784-libcurl",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-3784 medium vulnerability for libcurl package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in curl. This vulnerability allows curl to wrongly reuse an existing HTTP proxy connection when performing a CONNECT request to a server, even if the new request uses different authentication credentials for the HTTP proxy. This improper connection reuse could lead to an attacker gaining unauthorized access to resources or information intended for a different user."
+              },
+              "helpUri": "https://github.com/anchore/grype",
+              "help": {
+                "text": "Vulnerability CVE-2026-3784\nSeverity: medium\nPackage: libcurl\nVersion: 7.76.1-34.el9\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-3784](https://access.redhat.com/security/cve/CVE-2026-3784)",
+                "markdown": "**Vulnerability CVE-2026-3784**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | libcurl  | 7.76.1-34.el9  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-3784](https://access.redhat.com/security/cve/CVE-2026-3784)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/libcurl@7.76.1-34.el9?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=curl-7.76.1-34.el9.src.rpm"
+                ],
+                "security-severity": "6.5"
+              }
+            },
+            {
+              "id": "CVE-2026-3783-curl",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-3783 medium vulnerability for curl package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in curl. When an OAuth2 bearer token is used for an HTTP(S) transfer that redirects to a second URL, curl could unintentionally leak the token. This occurs if the second hostname has entries in the `.netrc` file, allowing the bearer token intended for the first host to be sent to the redirected host. This information disclosure could allow an attacker to gain unauthorized access."
+              },
+              "helpUri": "https://github.com/anchore/grype",
+              "help": {
+                "text": "Vulnerability CVE-2026-3783\nSeverity: medium\nPackage: curl\nVersion: 7.76.1-34.el9\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-3783](https://access.redhat.com/security/cve/CVE-2026-3783)",
+                "markdown": "**Vulnerability CVE-2026-3783**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | curl  | 7.76.1-34.el9  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-3783](https://access.redhat.com/security/cve/CVE-2026-3783)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/curl@7.76.1-34.el9?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=curl-7.76.1-34.el9.src.rpm"
+                ],
+                "security-severity": "5.7"
+              }
+            },
+            {
+              "id": "CVE-2026-3783-libcurl",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-3783 medium vulnerability for libcurl package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in curl. When an OAuth2 bearer token is used for an HTTP(S) transfer that redirects to a second URL, curl could unintentionally leak the token. This occurs if the second hostname has entries in the `.netrc` file, allowing the bearer token intended for the first host to be sent to the redirected host. This information disclosure could allow an attacker to gain unauthorized access."
+              },
+              "helpUri": "https://github.com/anchore/grype",
+              "help": {
+                "text": "Vulnerability CVE-2026-3783\nSeverity: medium\nPackage: libcurl\nVersion: 7.76.1-34.el9\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-3783](https://access.redhat.com/security/cve/CVE-2026-3783)",
+                "markdown": "**Vulnerability CVE-2026-3783**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | libcurl  | 7.76.1-34.el9  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-3783](https://access.redhat.com/security/cve/CVE-2026-3783)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/libcurl@7.76.1-34.el9?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=curl-7.76.1-34.el9.src.rpm"
+                ],
+                "security-severity": "5.7"
+              }
+            },
+            {
               "id": "CVE-2025-9232-openssl",
               "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
@@ -2023,90 +2107,6 @@
                   "pkg:rpm/rocky/sqlite-libs@3.34.1-9.el9_7?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=sqlite-3.34.1-9.el9_7.src.rpm"
                 ],
                 "security-severity": "3.3"
-              }
-            },
-            {
-              "id": "CVE-2026-3784-curl",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-3784 medium vulnerability for curl package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in curl. This vulnerability allows curl to wrongly reuse an existing HTTP proxy connection when performing a CONNECT request to a server, even if the new request uses different authentication credentials for the HTTP proxy. This improper connection reuse could lead to an attacker gaining unauthorized access to resources or information intended for a different user."
-              },
-              "helpUri": "https://github.com/anchore/grype",
-              "help": {
-                "text": "Vulnerability CVE-2026-3784\nSeverity: medium\nPackage: curl\nVersion: 7.76.1-34.el9\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-3784](https://access.redhat.com/security/cve/CVE-2026-3784)",
-                "markdown": "**Vulnerability CVE-2026-3784**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | curl  | 7.76.1-34.el9  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-3784](https://access.redhat.com/security/cve/CVE-2026-3784)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/curl@7.76.1-34.el9?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=curl-7.76.1-34.el9.src.rpm"
-                ],
-                "security-severity": "6.5"
-              }
-            },
-            {
-              "id": "CVE-2026-3784-libcurl",
-              "name": "RpmMatcherExactIndirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-3784 medium vulnerability for libcurl package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in curl. This vulnerability allows curl to wrongly reuse an existing HTTP proxy connection when performing a CONNECT request to a server, even if the new request uses different authentication credentials for the HTTP proxy. This improper connection reuse could lead to an attacker gaining unauthorized access to resources or information intended for a different user."
-              },
-              "helpUri": "https://github.com/anchore/grype",
-              "help": {
-                "text": "Vulnerability CVE-2026-3784\nSeverity: medium\nPackage: libcurl\nVersion: 7.76.1-34.el9\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-3784](https://access.redhat.com/security/cve/CVE-2026-3784)",
-                "markdown": "**Vulnerability CVE-2026-3784**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | libcurl  | 7.76.1-34.el9  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-3784](https://access.redhat.com/security/cve/CVE-2026-3784)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/libcurl@7.76.1-34.el9?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=curl-7.76.1-34.el9.src.rpm"
-                ],
-                "security-severity": "6.5"
-              }
-            },
-            {
-              "id": "CVE-2026-3783-curl",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-3783 medium vulnerability for curl package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in curl. When an OAuth2 bearer token is used for an HTTP(S) transfer that redirects to a second URL, curl could unintentionally leak the token. This occurs if the second hostname has entries in the `.netrc` file, allowing the bearer token intended for the first host to be sent to the redirected host. This information disclosure could allow an attacker to gain unauthorized access."
-              },
-              "helpUri": "https://github.com/anchore/grype",
-              "help": {
-                "text": "Vulnerability CVE-2026-3783\nSeverity: medium\nPackage: curl\nVersion: 7.76.1-34.el9\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-3783](https://access.redhat.com/security/cve/CVE-2026-3783)",
-                "markdown": "**Vulnerability CVE-2026-3783**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | curl  | 7.76.1-34.el9  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-3783](https://access.redhat.com/security/cve/CVE-2026-3783)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/curl@7.76.1-34.el9?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=curl-7.76.1-34.el9.src.rpm"
-                ],
-                "security-severity": "5.7"
-              }
-            },
-            {
-              "id": "CVE-2026-3783-libcurl",
-              "name": "RpmMatcherExactIndirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-3783 medium vulnerability for libcurl package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in curl. When an OAuth2 bearer token is used for an HTTP(S) transfer that redirects to a second URL, curl could unintentionally leak the token. This occurs if the second hostname has entries in the `.netrc` file, allowing the bearer token intended for the first host to be sent to the redirected host. This information disclosure could allow an attacker to gain unauthorized access."
-              },
-              "helpUri": "https://github.com/anchore/grype",
-              "help": {
-                "text": "Vulnerability CVE-2026-3783\nSeverity: medium\nPackage: libcurl\nVersion: 7.76.1-34.el9\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-3783](https://access.redhat.com/security/cve/CVE-2026-3783)",
-                "markdown": "**Vulnerability CVE-2026-3783**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | libcurl  | 7.76.1-34.el9  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-3783](https://access.redhat.com/security/cve/CVE-2026-3783)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/libcurl@7.76.1-34.el9?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=curl-7.76.1-34.el9.src.rpm"
-                ],
-                "security-severity": "5.7"
               }
             },
             {
@@ -2614,27 +2614,6 @@
               }
             },
             {
-              "id": "CVE-2025-9820-gnutls",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2025-9820 low vulnerability for gnutls package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in the GnuTLS library, specifically in the gnutls_pkcs11_token_init() function that handles PKCS#11 token initialization. When a token label longer than expected is processed, the function writes past the end of a fixed-size stack buffer. This programming error can cause the application using GnuTLS to crash or, in certain conditions, be exploited for code execution. As a result, systems or applications relying on GnuTLS may be vulnerable to a denial of service or local privilege escalation attacks."
-              },
-              "helpUri": "https://github.com/anchore/grype",
-              "help": {
-                "text": "Vulnerability CVE-2025-9820\nSeverity: low\nPackage: gnutls\nVersion: 3.8.3-9.el9.0.1\nFix Version: 0:3.8.3-10.el9_7\nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2025-9820](https://access.redhat.com/security/cve/CVE-2025-9820)",
-                "markdown": "**Vulnerability CVE-2025-9820**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | gnutls  | 3.8.3-9.el9.0.1  | 0:3.8.3-10.el9_7  | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2025-9820](https://access.redhat.com/security/cve/CVE-2025-9820)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/gnutls@3.8.3-9.el9.0.1?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=gnutls-3.8.3-9.el9.0.1.src.rpm"
-                ],
-                "security-severity": "4.0"
-              }
-            },
-            {
               "id": "CVE-2026-0861-glibc",
               "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
@@ -2716,6 +2695,27 @@
                   "pkg:rpm/rocky/gnupg2@2.3.3-4.el9?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=gnupg2-2.3.3-4.el9.src.rpm"
                 ],
                 "security-severity": "3.7"
+              }
+            },
+            {
+              "id": "CVE-2025-9820-gnutls",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2025-9820 low vulnerability for gnutls package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in the GnuTLS library, specifically in the gnutls_pkcs11_token_init() function that handles PKCS#11 token initialization. When a token label longer than expected is processed, the function writes past the end of a fixed-size stack buffer. This programming error can cause the application using GnuTLS to crash or, in certain conditions, be exploited for code execution. As a result, systems or applications relying on GnuTLS may be vulnerable to a denial of service or local privilege escalation attacks."
+              },
+              "helpUri": "https://github.com/anchore/grype",
+              "help": {
+                "text": "Vulnerability CVE-2025-9820\nSeverity: low\nPackage: gnutls\nVersion: 3.8.3-9.el9.0.1\nFix Version: 0:3.8.3-10.el9_7\nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2025-9820](https://access.redhat.com/security/cve/CVE-2025-9820)",
+                "markdown": "**Vulnerability CVE-2025-9820**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | gnutls  | 3.8.3-9.el9.0.1  | 0:3.8.3-10.el9_7  | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2025-9820](https://access.redhat.com/security/cve/CVE-2025-9820)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/gnutls@3.8.3-9.el9.0.1?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=gnutls-3.8.3-9.el9.0.1.src.rpm"
+                ],
+                "security-severity": "4.0"
               }
             },
             {
@@ -4707,6 +4707,37 @@
           }
         },
         {
+          "ruleId": "CVE-2025-14831-gnutls",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: gnutls, version 3.8.3-9.el9.0.1 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:4399bb3147e5af0f9f6057bd99266fa171dd752ebe4e46e204e406ad3b5504f6:/var/lib/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "18fa6c6a943f555d4bfaaa3ac37e06831e1b64a3003aaedd2027b580f0cd5971:1"
+          }
+        },
+        {
           "ruleId": "CVE-2026-1965-curl",
           "level": "warning",
           "message": {
@@ -4921,6 +4952,68 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "7f096a64524891508940c5eb6f0e4455ef7abeaf5e49aae046bb1d33594dd1a8:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-3805-curl",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: curl, version 7.76.1-34.el9 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:4399bb3147e5af0f9f6057bd99266fa171dd752ebe4e46e204e406ad3b5504f6:/var/lib/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "0e63401452343c3492287fc06a804559de972451a408c2ea5e808eb8c90a97a7:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-3805-libcurl",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: libcurl, version 7.76.1-34.el9 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:4399bb3147e5af0f9f6057bd99266fa171dd752ebe4e46e204e406ad3b5504f6:/var/lib/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "cd70c63991bebfc8356ff05b60d9e8f147d34ea72ac80e9343140379a0b24457:1"
           }
         },
         {
@@ -5324,99 +5417,6 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "7bf7c0a7e5961d54f9f1697e6affe9737f0e48103ea617c57656f9839203716a:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2025-14831-gnutls",
-          "level": "warning",
-          "message": {
-            "text": "A medium vulnerability in rpm package: gnutls, version 3.8.3-9.el9.0.1 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:4399bb3147e5af0f9f6057bd99266fa171dd752ebe4e46e204e406ad3b5504f6:/var/lib/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "18fa6c6a943f555d4bfaaa3ac37e06831e1b64a3003aaedd2027b580f0cd5971:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2026-3805-curl",
-          "level": "warning",
-          "message": {
-            "text": "A medium vulnerability in rpm package: curl, version 7.76.1-34.el9 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:4399bb3147e5af0f9f6057bd99266fa171dd752ebe4e46e204e406ad3b5504f6:/var/lib/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "0e63401452343c3492287fc06a804559de972451a408c2ea5e808eb8c90a97a7:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2026-3805-libcurl",
-          "level": "warning",
-          "message": {
-            "text": "A medium vulnerability in rpm package: libcurl, version 7.76.1-34.el9 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:4399bb3147e5af0f9f6057bd99266fa171dd752ebe4e46e204e406ad3b5504f6:/var/lib/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "cd70c63991bebfc8356ff05b60d9e8f147d34ea72ac80e9343140379a0b24457:1"
           }
         },
         {
@@ -6040,6 +6040,130 @@
           }
         },
         {
+          "ruleId": "CVE-2026-3784-curl",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: curl, version 7.76.1-34.el9 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:4399bb3147e5af0f9f6057bd99266fa171dd752ebe4e46e204e406ad3b5504f6:/var/lib/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "0e63401452343c3492287fc06a804559de972451a408c2ea5e808eb8c90a97a7:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-3784-libcurl",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: libcurl, version 7.76.1-34.el9 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:4399bb3147e5af0f9f6057bd99266fa171dd752ebe4e46e204e406ad3b5504f6:/var/lib/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "cd70c63991bebfc8356ff05b60d9e8f147d34ea72ac80e9343140379a0b24457:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-3783-curl",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: curl, version 7.76.1-34.el9 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:4399bb3147e5af0f9f6057bd99266fa171dd752ebe4e46e204e406ad3b5504f6:/var/lib/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "0e63401452343c3492287fc06a804559de972451a408c2ea5e808eb8c90a97a7:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-3783-libcurl",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: libcurl, version 7.76.1-34.el9 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:4399bb3147e5af0f9f6057bd99266fa171dd752ebe4e46e204e406ad3b5504f6:/var/lib/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "cd70c63991bebfc8356ff05b60d9e8f147d34ea72ac80e9343140379a0b24457:1"
+          }
+        },
+        {
           "ruleId": "CVE-2025-9232-openssl",
           "level": "note",
           "message": {
@@ -6347,130 +6471,6 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "cb50aa2355830d0c43e3bf6582aec0a7a393f3e6f160976a7172b23c5d20422d:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2026-3784-curl",
-          "level": "warning",
-          "message": {
-            "text": "A medium vulnerability in rpm package: curl, version 7.76.1-34.el9 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:4399bb3147e5af0f9f6057bd99266fa171dd752ebe4e46e204e406ad3b5504f6:/var/lib/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "0e63401452343c3492287fc06a804559de972451a408c2ea5e808eb8c90a97a7:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2026-3784-libcurl",
-          "level": "warning",
-          "message": {
-            "text": "A medium vulnerability in rpm package: libcurl, version 7.76.1-34.el9 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:4399bb3147e5af0f9f6057bd99266fa171dd752ebe4e46e204e406ad3b5504f6:/var/lib/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "cd70c63991bebfc8356ff05b60d9e8f147d34ea72ac80e9343140379a0b24457:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2026-3783-curl",
-          "level": "warning",
-          "message": {
-            "text": "A medium vulnerability in rpm package: curl, version 7.76.1-34.el9 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:4399bb3147e5af0f9f6057bd99266fa171dd752ebe4e46e204e406ad3b5504f6:/var/lib/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "0e63401452343c3492287fc06a804559de972451a408c2ea5e808eb8c90a97a7:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2026-3783-libcurl",
-          "level": "warning",
-          "message": {
-            "text": "A medium vulnerability in rpm package: libcurl, version 7.76.1-34.el9 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:4399bb3147e5af0f9f6057bd99266fa171dd752ebe4e46e204e406ad3b5504f6:/var/lib/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "cd70c63991bebfc8356ff05b60d9e8f147d34ea72ac80e9343140379a0b24457:1"
           }
         },
         {
@@ -7218,37 +7218,6 @@
           }
         },
         {
-          "ruleId": "CVE-2025-9820-gnutls",
-          "level": "note",
-          "message": {
-            "text": "A low vulnerability in rpm package: gnutls, version 3.8.3-9.el9.0.1 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:4399bb3147e5af0f9f6057bd99266fa171dd752ebe4e46e204e406ad3b5504f6:/var/lib/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "18fa6c6a943f555d4bfaaa3ac37e06831e1b64a3003aaedd2027b580f0cd5971:1"
-          }
-        },
-        {
           "ruleId": "CVE-2026-0861-glibc",
           "level": "note",
           "message": {
@@ -7370,6 +7339,37 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "ed305f8faf7fa40eb7834a4292a4a77c9de3b753b8fc5805ad5a603083317bc6:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2025-9820-gnutls",
+          "level": "note",
+          "message": {
+            "text": "A low vulnerability in rpm package: gnutls, version 3.8.3-9.el9.0.1 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:4399bb3147e5af0f9f6057bd99266fa171dd752ebe4e46e204e406ad3b5504f6:/var/lib/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "18fa6c6a943f555d4bfaaa3ac37e06831e1b64a3003aaedd2027b580f0cd5971:1"
           }
         },
         {
