@@ -859,7 +859,7 @@
                     <dd id="typeValue">image</dd><dt>Checksum:</dt>
                     <dd id="checksumValue">sha256:f376ba4b3b4e88e41bedc1d3756b8260edb64b3b311860cb50363435605ee0d0</dd><dt>Date:</dt>
                     <dd>
-                        <span id="dateElement">2026-03-21T06:00:44.143226297Z</span>
+                        <span id="dateElement">2026-03-21T06:52:09.787753878Z</span>
                         <span id="prettyDateElement" style="display: none;"></span>
                     </dd>
                 </dl>
@@ -908,6 +908,22 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <tr>
+                        <td>openldap</td>
+                        <td>2.6.8-4.el9.0.1</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2023-2953">CVE-2023-2953</a>
+                        </td>
+                        <td>Low</td>
+                        <td>wont-fix</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A vulnerability was found in OpenLDAP, in ber_memalloc_x() function, leading to a null pointer dereference. This flaw can result in reduced system memory and cause LDAP authentication failures. The impact is primarily a disruption in authentication processes, which may hinder user access or service operations relying on LDAP for authentication.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/openldap@2.6.8-4.el9.0.1?arch=x86_64&distro=rocky-9.7&upstream=openldap-2.6.8-4.el9.0.1.src.rpm</td>
+                    </tr>
                     <tr>
                         <td>openssl</td>
                         <td>1:3.5.1-4.el9_7</td>
@@ -961,22 +977,6 @@
                         <td>A flaw was found in OpenSSL. A remote attacker can exploit a stack buffer overflow vulnerability by supplying a crafted Cryptographic Message Syntax (CMS) message with an oversized Initialization Vector (IV) when parsing AuthEnvelopedData structures that use Authenticated Encryption with Associated Data (AEAD) ciphers such as AES-GCM. This can lead to a crash, causing a Denial of Service (DoS), or potentially allow for remote code execution.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/openssl-libs@3.5.1-4.el9_7?arch=x86_64&distro=rocky-9.7&epoch=1&upstream=openssl-3.5.1-4.el9_7.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>openldap</td>
-                        <td>2.6.8-4.el9.0.1</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2023-2953">CVE-2023-2953</a>
-                        </td>
-                        <td>Low</td>
-                        <td>wont-fix</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A vulnerability was found in OpenLDAP, in ber_memalloc_x() function, leading to a null pointer dereference. This flaw can result in reduced system memory and cause LDAP authentication failures. The impact is primarily a disruption in authentication processes, which may hinder user access or service operations relying on LDAP for authentication.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/openldap@2.6.8-4.el9.0.1?arch=x86_64&distro=rocky-9.7&upstream=openldap-2.6.8-4.el9.0.1.src.rpm</td>
                     </tr>
                     <tr>
                         <td>curl</td>
@@ -1171,6 +1171,22 @@
                         <td>pkg:rpm/rocky/glib2@2.68.4-18.el9_7?arch=x86_64&distro=rocky-9.7&upstream=glib2-2.68.4-18.el9_7.src.rpm</td>
                     </tr>
                     <tr>
+                        <td>libarchive</td>
+                        <td>3.5.3-6.el9_6</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-4424">CVE-2026-4424</a>
+                        </td>
+                        <td>High</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in libarchive. This heap out-of-bounds read vulnerability exists in the RAR archive processing logic due to improper validation of the LZSS sliding window size after transitions between compression methods. A remote attacker can exploit this by providing a specially crafted RAR archive, leading to the disclosure of sensitive heap memory information without requiring authentication or user interaction.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/libarchive@3.5.3-6.el9_6?arch=x86_64&distro=rocky-9.7&upstream=libarchive-3.5.3-6.el9_6.src.rpm</td>
+                    </tr>
+                    <tr>
                         <td>openssl</td>
                         <td>1:3.5.1-4.el9_7</td>
                         <td>rpm</td>
@@ -1297,6 +1313,22 @@
                         <td>3.5.3-6.el9_6</td>
                         <td>rpm</td>
                         <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-4426">CVE-2026-4426</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in libarchive. An Undefined Behavior vulnerability exists in the zisofs decompression logic, caused by improper validation of a field (`pz_log2_bs`) read from ISO9660 Rock Ridge extensions. A remote attacker can exploit this by supplying a specially crafted ISO file. This can lead to incorrect memory allocation and potential application crashes, resulting in a denial-of-service (DoS) condition.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/libarchive@3.5.3-6.el9_6?arch=x86_64&distro=rocky-9.7&upstream=libarchive-3.5.3-6.el9_6.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>libarchive</td>
+                        <td>3.5.3-6.el9_6</td>
+                        <td>rpm</td>
+                        <td>
                             <a href="https://access.redhat.com/security/cve/CVE-2025-1632">CVE-2025-1632</a>
                         </td>
                         <td>Low</td>
@@ -1307,6 +1339,38 @@
                         <td>A flaw was found in the bsdunzip utility of libarchive. In affected versions, a specially crafted file may trigger a null pointer dereference. This issue can lead to an application crash or other unexpected behavior. This bug does not compromise the integrity or availability of the base system.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/libarchive@3.5.3-6.el9_6?arch=x86_64&distro=rocky-9.7&upstream=libarchive-3.5.3-6.el9_6.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>libssh</td>
+                        <td>0.10.4-15.el9_6</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-5351">CVE-2025-5351</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in the key export functionality of libssh. The issue occurs in the internal function responsible for converting cryptographic keys into serialized formats. During error handling, a memory structure is freed but not cleared, leading to a potential double free issue if an additional failure occurs later in the function. This condition may result in heap corruption or application instability in low-memory scenarios, posing a risk to system reliability where key export operations are performed.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/libssh@0.10.4-15.el9_6?arch=x86_64&distro=rocky-9.7&upstream=libssh-0.10.4-15.el9_6.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>libssh-config</td>
+                        <td>0.10.4-15.el9_6</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-5351">CVE-2025-5351</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in the key export functionality of libssh. The issue occurs in the internal function responsible for converting cryptographic keys into serialized formats. During error handling, a memory structure is freed but not cleared, leading to a potential double free issue if an additional failure occurs later in the function. This condition may result in heap corruption or application instability in low-memory scenarios, posing a risk to system reliability where key export operations are performed.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/libssh-config@0.10.4-15.el9_6?arch=noarch&distro=rocky-9.7&upstream=libssh-0.10.4-15.el9_6.src.rpm</td>
                     </tr>
                     <tr>
                         <td>libssh</td>
@@ -1345,14 +1409,14 @@
                         <td>0.10.4-15.el9_6</td>
                         <td>rpm</td>
                         <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2025-5351">CVE-2025-5351</a>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-5372">CVE-2025-5372</a>
                         </td>
                         <td>Medium</td>
                         <td>not-fixed</td>
                         <td>
                             N/A
                         </td>
-                        <td>A flaw was found in the key export functionality of libssh. The issue occurs in the internal function responsible for converting cryptographic keys into serialized formats. During error handling, a memory structure is freed but not cleared, leading to a potential double free issue if an additional failure occurs later in the function. This condition may result in heap corruption or application instability in low-memory scenarios, posing a risk to system reliability where key export operations are performed.</td>
+                        <td>A flaw was found in libssh versions built with OpenSSL versions older than 3.0, specifically in the ssh_kdf() function responsible for key derivation. Due to inconsistent interpretation of return values where OpenSSL uses 0 to indicate failure and libssh uses 0 for success—the function may mistakenly return a success status even when key derivation fails. This results in uninitialized cryptographic key buffers being used in subsequent communication, potentially compromising SSH sessions&#39; confidentiality, integrity, and availability.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/libssh@0.10.4-15.el9_6?arch=x86_64&distro=rocky-9.7&upstream=libssh-0.10.4-15.el9_6.src.rpm</td>
                     </tr>
@@ -1361,14 +1425,14 @@
                         <td>0.10.4-15.el9_6</td>
                         <td>rpm</td>
                         <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2025-5351">CVE-2025-5351</a>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-5372">CVE-2025-5372</a>
                         </td>
                         <td>Medium</td>
                         <td>not-fixed</td>
                         <td>
                             N/A
                         </td>
-                        <td>A flaw was found in the key export functionality of libssh. The issue occurs in the internal function responsible for converting cryptographic keys into serialized formats. During error handling, a memory structure is freed but not cleared, leading to a potential double free issue if an additional failure occurs later in the function. This condition may result in heap corruption or application instability in low-memory scenarios, posing a risk to system reliability where key export operations are performed.</td>
+                        <td>A flaw was found in libssh versions built with OpenSSL versions older than 3.0, specifically in the ssh_kdf() function responsible for key derivation. Due to inconsistent interpretation of return values where OpenSSL uses 0 to indicate failure and libssh uses 0 for success—the function may mistakenly return a success status even when key derivation fails. This results in uninitialized cryptographic key buffers being used in subsequent communication, potentially compromising SSH sessions&#39; confidentiality, integrity, and availability.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/libssh-config@0.10.4-15.el9_6?arch=noarch&distro=rocky-9.7&upstream=libssh-0.10.4-15.el9_6.src.rpm</td>
                     </tr>
@@ -1493,38 +1557,6 @@
                         <td>A flaw was found in GLib. An integer overflow vulnerability in its Unicode case conversion implementation can lead to memory corruption. By processing specially crafted and extremely large Unicode strings, an attacker could trigger an undersized memory allocation, resulting in out-of-bounds writes. This could cause applications utilizing GLib for string conversion to crash or become unstable.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/glib2@2.68.4-18.el9_7?arch=x86_64&distro=rocky-9.7&upstream=glib2-2.68.4-18.el9_7.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>libssh</td>
-                        <td>0.10.4-15.el9_6</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2025-5372">CVE-2025-5372</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in libssh versions built with OpenSSL versions older than 3.0, specifically in the ssh_kdf() function responsible for key derivation. Due to inconsistent interpretation of return values where OpenSSL uses 0 to indicate failure and libssh uses 0 for success—the function may mistakenly return a success status even when key derivation fails. This results in uninitialized cryptographic key buffers being used in subsequent communication, potentially compromising SSH sessions&#39; confidentiality, integrity, and availability.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/libssh@0.10.4-15.el9_6?arch=x86_64&distro=rocky-9.7&upstream=libssh-0.10.4-15.el9_6.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>libssh-config</td>
-                        <td>0.10.4-15.el9_6</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2025-5372">CVE-2025-5372</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in libssh versions built with OpenSSL versions older than 3.0, specifically in the ssh_kdf() function responsible for key derivation. Due to inconsistent interpretation of return values where OpenSSL uses 0 to indicate failure and libssh uses 0 for success—the function may mistakenly return a success status even when key derivation fails. This results in uninitialized cryptographic key buffers being used in subsequent communication, potentially compromising SSH sessions&#39; confidentiality, integrity, and availability.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/libssh-config@0.10.4-15.el9_6?arch=noarch&distro=rocky-9.7&upstream=libssh-0.10.4-15.el9_6.src.rpm</td>
                     </tr>
                     <tr>
                         <td>openssl</td>
@@ -3403,38 +3435,6 @@
                         <td>A flaw was found in OpenSSL. When applications directly call the low-level CRYPTO_ocb128_encrypt() or CRYPTO_ocb128_decrypt() functions with non-block-aligned lengths in a single call on hardware-accelerated builds, the trailing 1-15 bytes of a message may be exposed in cleartext. These exposed bytes are not covered by the authentication tag, allowing an attacker to read or tamper with them without detection.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/openssl-libs@3.5.1-4.el9_7?arch=x86_64&distro=rocky-9.7&epoch=1&upstream=openssl-3.5.1-4.el9_7.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>libarchive</td>
-                        <td>3.5.3-6.el9_6</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-4424">CVE-2026-4424</a>
-                        </td>
-                        <td>High</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in libarchive. This heap out-of-bounds read vulnerability exists in the RAR archive processing logic due to improper validation of the LZSS sliding window size after transitions between compression methods. A remote attacker can exploit this by providing a specially crafted RAR archive, leading to the disclosure of sensitive heap memory information without requiring authentication or user interaction.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/libarchive@3.5.3-6.el9_6?arch=x86_64&distro=rocky-9.7&upstream=libarchive-3.5.3-6.el9_6.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>libarchive</td>
-                        <td>3.5.3-6.el9_6</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-4426">CVE-2026-4426</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in libarchive. An Undefined Behavior vulnerability exists in the zisofs decompression logic, caused by improper validation of a field (`pz_log2_bs`) read from ISO9660 Rock Ridge extensions. A remote attacker can exploit this by supplying a specially crafted ISO file. This can lead to incorrect memory allocation and potential application crashes, resulting in a denial-of-service (DoS) condition.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/libarchive@3.5.3-6.el9_6?arch=x86_64&distro=rocky-9.7&upstream=libarchive-3.5.3-6.el9_6.src.rpm</td>
                     </tr>
                     <tr>
                         <td>libssh</td>
