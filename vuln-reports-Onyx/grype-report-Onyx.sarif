@@ -2719,6 +2719,27 @@
               }
             },
             {
+              "id": "CVE-2025-13601-glib2",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2025-13601 medium vulnerability for glib2 package"
+              },
+              "fullDescription": {
+                "text": "A heap-based buffer overflow problem was found in glib through an incorrect calculation of buffer size in the g_escape_uri_string() function. If the string to escape contains a very large number of unacceptable characters (which would need escaping), the calculation of the length of the escaped string could overflow, leading to a potential write off the end of the newly allocated string."
+              },
+              "helpUri": "https://github.com/anchore/grype",
+              "help": {
+                "text": "Vulnerability CVE-2025-13601\nSeverity: medium\nPackage: glib2\nVersion: 2.68.4-18.el9_7\nFix Version: 0:2.68.4-18.el9_7.1\nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2025-13601](https://access.redhat.com/security/cve/CVE-2025-13601)",
+                "markdown": "**Vulnerability CVE-2025-13601**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | glib2  | 2.68.4-18.el9_7  | 0:2.68.4-18.el9_7.1  | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2025-13601](https://access.redhat.com/security/cve/CVE-2025-13601)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/glib2@2.68.4-18.el9_7?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=glib2-2.68.4-18.el9_7.src.rpm"
+                ],
+                "security-severity": "7.7"
+              }
+            },
+            {
               "id": "CVE-2024-0232-sqlite-libs",
               "name": "RpmMatcherExactIndirectMatch",
               "shortDescription": {
@@ -2989,27 +3010,6 @@
                   "pkg:rpm/rocky/glibc-minimal-langpack@2.34-231.el9_7.2?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=glibc-2.34-231.el9_7.2.src.rpm"
                 ],
                 "security-severity": "8.1"
-              }
-            },
-            {
-              "id": "CVE-2025-13601-glib2",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2025-13601 medium vulnerability for glib2 package"
-              },
-              "fullDescription": {
-                "text": "A heap-based buffer overflow problem was found in glib through an incorrect calculation of buffer size in the g_escape_uri_string() function. If the string to escape contains a very large number of unacceptable characters (which would need escaping), the calculation of the length of the escaped string could overflow, leading to a potential write off the end of the newly allocated string."
-              },
-              "helpUri": "https://github.com/anchore/grype",
-              "help": {
-                "text": "Vulnerability CVE-2025-13601\nSeverity: medium\nPackage: glib2\nVersion: 2.68.4-18.el9_7\nFix Version: 0:2.68.4-18.el9_7.1\nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2025-13601](https://access.redhat.com/security/cve/CVE-2025-13601)",
-                "markdown": "**Vulnerability CVE-2025-13601**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | glib2  | 2.68.4-18.el9_7  | 0:2.68.4-18.el9_7.1  | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2025-13601](https://access.redhat.com/security/cve/CVE-2025-13601)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/glib2@2.68.4-18.el9_7?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=glib2-2.68.4-18.el9_7.src.rpm"
-                ],
-                "security-severity": "7.7"
               }
             },
             {
@@ -7583,6 +7583,37 @@
           }
         },
         {
+          "ruleId": "CVE-2025-13601-glib2",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: glib2, version 2.68.4-18.el9_7 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:4399bb3147e5af0f9f6057bd99266fa171dd752ebe4e46e204e406ad3b5504f6:/var/lib/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "011a71bb26df2e8b48508431aac6662a11c99dad4253357c23fd0c197e236006:1"
+          }
+        },
+        {
           "ruleId": "CVE-2024-0232-sqlite-libs",
           "level": "note",
           "message": {
@@ -7983,37 +8014,6 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "7bf7c0a7e5961d54f9f1697e6affe9737f0e48103ea617c57656f9839203716a:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2025-13601-glib2",
-          "level": "warning",
-          "message": {
-            "text": "A medium vulnerability in rpm package: glib2, version 2.68.4-18.el9_7 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:4399bb3147e5af0f9f6057bd99266fa171dd752ebe4e46e204e406ad3b5504f6:/var/lib/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "011a71bb26df2e8b48508431aac6662a11c99dad4253357c23fd0c197e236006:1"
           }
         },
         {
