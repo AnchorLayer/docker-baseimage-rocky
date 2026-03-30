@@ -866,7 +866,7 @@
                     <dd id="typeValue">image</dd><dt>Checksum:</dt>
                     <dd id="checksumValue">sha256:f376ba4b3b4e88e41bedc1d3756b8260edb64b3b311860cb50363435605ee0d0</dd><dt>Date:</dt>
                     <dd>
-                        <span id="dateElement">2026-03-30T07:07:43.844448115Z</span>
+                        <span id="dateElement">2026-03-30T08:56:17.80433078Z</span>
                         <span id="prettyDateElement" style="display: none;"></span>
                     </dd>
                 </dl>
@@ -1316,22 +1316,6 @@
                         <td>pkg:rpm/rocky/libarchive@3.5.3-6.el9_6?arch=x86_64&distro=rocky-9.7&upstream=libarchive-3.5.3-6.el9_6.src.rpm</td>
                     </tr>
                     <tr>
-                        <td>libxml2</td>
-                        <td>2.9.13-14.el9_7</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2025-27113">CVE-2025-27113</a>
-                        </td>
-                        <td>Low</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in libxml2. This vulnerability allows a NULL pointer dereference, leading to a potential crash or denial of service via a crafted XML pattern.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/libxml2@2.9.13-14.el9_7?arch=x86_64&distro=rocky-9.7&upstream=libxml2-2.9.13-14.el9_7.src.rpm</td>
-                    </tr>
-                    <tr>
                         <td>libarchive</td>
                         <td>3.5.3-6.el9_6</td>
                         <td>rpm</td>
@@ -1632,24 +1616,6 @@ could cause self-DoS of the per-connection daemon process.</td>
                         <td>pkg:rpm/rocky/libarchive@3.5.3-6.el9_6?arch=x86_64&distro=rocky-9.7&upstream=libarchive-3.5.3-6.el9_6.src.rpm</td>
                     </tr>
                     <tr>
-                        <td>libbrotli</td>
-                        <td>1.0.9-7.el9_5</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2025-6176">CVE-2025-6176</a>
-                        </td>
-                        <td>High</td>
-                        <td>fixed</td>
-                        <td>
-                            <ul>
-                                <li>0:1.0.9-9.el9_7</li>
-                            </ul>
-                        </td>
-                        <td>Scrapy are vulnerable to a denial of service (DoS) attack due to a flaw in its brotli decompression implementation. The protection mechanism against decompression bombs fails to mitigate the brotli variant, allowing remote servers to crash clients with less than 80GB of available memory. This occurs because brotli can achieve extremely high compression ratios for zero-filled data, leading to excessive memory consumption during decompression.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/libbrotli@1.0.9-7.el9_5?arch=x86_64&distro=rocky-9.7&upstream=brotli-1.0.9-7.el9_5.src.rpm</td>
-                    </tr>
-                    <tr>
                         <td>openssl</td>
                         <td>1:3.5.1-4.el9_7</td>
                         <td>rpm</td>
@@ -1742,6 +1708,22 @@ could cause self-DoS of the per-connection daemon process.</td>
                         <td>2.9.13-14.el9_7</td>
                         <td>rpm</td>
                         <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-27113">CVE-2025-27113</a>
+                        </td>
+                        <td>Low</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in libxml2. This vulnerability allows a NULL pointer dereference, leading to a potential crash or denial of service via a crafted XML pattern.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/libxml2@2.9.13-14.el9_7?arch=x86_64&distro=rocky-9.7&upstream=libxml2-2.9.13-14.el9_7.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>libxml2</td>
+                        <td>2.9.13-14.el9_7</td>
+                        <td>rpm</td>
+                        <td>
                             <a href="https://access.redhat.com/security/cve/CVE-2026-0990">CVE-2026-0990</a>
                         </td>
                         <td>Medium</td>
@@ -1784,6 +1766,60 @@ could cause self-DoS of the per-connection daemon process.</td>
                         <td>A flaw was found in curl. When an application uses libcurl to make multiple Negotiate-authenticated HTTP or HTTPS requests to the same server with different credentials, libcurl may incorrectly reuse an existing connection. This logical error can cause a subsequent request to be sent using the authentication of a previous user, leading to an authentication bypass.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/libcurl@7.76.1-34.el9?arch=x86_64&distro=rocky-9.7&upstream=curl-7.76.1-34.el9.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>glibc</td>
+                        <td>2.34-231.el9_7.2</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-15281">CVE-2025-15281</a>
+                        </td>
+                        <td>Low</td>
+                        <td>fixed</td>
+                        <td>
+                            <ul>
+                                <li>0:2.34-231.el9_7.10</li>
+                            </ul>
+                        </td>
+                        <td>A flaw was found in glibc. When the wordexp function is called with the flags WRDE_REUSE and WRDE_APPEND, it may return uninitialized memory. If the caller inspects the we_wordv array or calls the wordfree function to free the allocated memory, the process will abort, resulting in a denial of service.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/glibc@2.34-231.el9_7.2?arch=x86_64&distro=rocky-9.7&upstream=glibc-2.34-231.el9_7.2.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>glibc-common</td>
+                        <td>2.34-231.el9_7.2</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-15281">CVE-2025-15281</a>
+                        </td>
+                        <td>Low</td>
+                        <td>fixed</td>
+                        <td>
+                            <ul>
+                                <li>0:2.34-231.el9_7.10</li>
+                            </ul>
+                        </td>
+                        <td>A flaw was found in glibc. When the wordexp function is called with the flags WRDE_REUSE and WRDE_APPEND, it may return uninitialized memory. If the caller inspects the we_wordv array or calls the wordfree function to free the allocated memory, the process will abort, resulting in a denial of service.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/glibc-common@2.34-231.el9_7.2?arch=x86_64&distro=rocky-9.7&upstream=glibc-2.34-231.el9_7.2.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>glibc-minimal-langpack</td>
+                        <td>2.34-231.el9_7.2</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-15281">CVE-2025-15281</a>
+                        </td>
+                        <td>Low</td>
+                        <td>fixed</td>
+                        <td>
+                            <ul>
+                                <li>0:2.34-231.el9_7.10</li>
+                            </ul>
+                        </td>
+                        <td>A flaw was found in glibc. When the wordexp function is called with the flags WRDE_REUSE and WRDE_APPEND, it may return uninitialized memory. If the caller inspects the we_wordv array or calls the wordfree function to free the allocated memory, the process will abort, resulting in a denial of service.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/glibc-minimal-langpack@2.34-231.el9_7.2?arch=x86_64&distro=rocky-9.7&upstream=glibc-2.34-231.el9_7.2.src.rpm</td>
                     </tr>
                     <tr>
                         <td>glibc</td>
@@ -1864,60 +1900,6 @@ could cause self-DoS of the per-connection daemon process.</td>
                         <td>A flaw was found in GNU Coreutils. The sort utility&#39;s begfield() function is vulnerable to a heap buffer under-read. The program may access memory outside the allocated buffer if a user runs a crafted command using the traditional key format. A malicious input could lead to a crash or leak sensitive data.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/coreutils-single@8.32-39.el9?arch=x86_64&distro=rocky-9.7&upstream=coreutils-8.32-39.el9.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>glibc</td>
-                        <td>2.34-231.el9_7.2</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2025-15281">CVE-2025-15281</a>
-                        </td>
-                        <td>Low</td>
-                        <td>fixed</td>
-                        <td>
-                            <ul>
-                                <li>0:2.34-231.el9_7.10</li>
-                            </ul>
-                        </td>
-                        <td>A flaw was found in glibc. When the wordexp function is called with the flags WRDE_REUSE and WRDE_APPEND, it may return uninitialized memory. If the caller inspects the we_wordv array or calls the wordfree function to free the allocated memory, the process will abort, resulting in a denial of service.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/glibc@2.34-231.el9_7.2?arch=x86_64&distro=rocky-9.7&upstream=glibc-2.34-231.el9_7.2.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>glibc-common</td>
-                        <td>2.34-231.el9_7.2</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2025-15281">CVE-2025-15281</a>
-                        </td>
-                        <td>Low</td>
-                        <td>fixed</td>
-                        <td>
-                            <ul>
-                                <li>0:2.34-231.el9_7.10</li>
-                            </ul>
-                        </td>
-                        <td>A flaw was found in glibc. When the wordexp function is called with the flags WRDE_REUSE and WRDE_APPEND, it may return uninitialized memory. If the caller inspects the we_wordv array or calls the wordfree function to free the allocated memory, the process will abort, resulting in a denial of service.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/glibc-common@2.34-231.el9_7.2?arch=x86_64&distro=rocky-9.7&upstream=glibc-2.34-231.el9_7.2.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>glibc-minimal-langpack</td>
-                        <td>2.34-231.el9_7.2</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2025-15281">CVE-2025-15281</a>
-                        </td>
-                        <td>Low</td>
-                        <td>fixed</td>
-                        <td>
-                            <ul>
-                                <li>0:2.34-231.el9_7.10</li>
-                            </ul>
-                        </td>
-                        <td>A flaw was found in glibc. When the wordexp function is called with the flags WRDE_REUSE and WRDE_APPEND, it may return uninitialized memory. If the caller inspects the we_wordv array or calls the wordfree function to free the allocated memory, the process will abort, resulting in a denial of service.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/glibc-minimal-langpack@2.34-231.el9_7.2?arch=x86_64&distro=rocky-9.7&upstream=glibc-2.34-231.el9_7.2.src.rpm</td>
                     </tr>
                     <tr>
                         <td>glib2</td>
@@ -2052,6 +2034,24 @@ could cause self-DoS of the per-connection daemon process.</td>
                         <td>A flaw was found in libtasn1. A remote attacker could exploit a stack-based buffer overflow vulnerability in the `asn1_expend_octet_string` function. This occurs due to a failure in validating the size of input data. Successful exploitation can lead to a Denial of Service (DoS) condition, making the affected system or application unavailable.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/libtasn1@4.16.0-9.el9?arch=x86_64&distro=rocky-9.7&upstream=libtasn1-4.16.0-9.el9.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>libbrotli</td>
+                        <td>1.0.9-7.el9_5</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-6176">CVE-2025-6176</a>
+                        </td>
+                        <td>High</td>
+                        <td>fixed</td>
+                        <td>
+                            <ul>
+                                <li>0:1.0.9-9.el9_7</li>
+                            </ul>
+                        </td>
+                        <td>Scrapy are vulnerable to a denial of service (DoS) attack due to a flaw in its brotli decompression implementation. The protection mechanism against decompression bombs fails to mitigate the brotli variant, allowing remote servers to crash clients with less than 80GB of available memory. This occurs because brotli can achieve extremely high compression ratios for zero-filled data, leading to excessive memory consumption during decompression.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/libbrotli@1.0.9-7.el9_5?arch=x86_64&distro=rocky-9.7&upstream=brotli-1.0.9-7.el9_5.src.rpm</td>
                     </tr>
                     <tr>
                         <td>ncurses-base</td>
@@ -3092,6 +3092,22 @@ This is the same issue as in OpenSSH, tracked as CVE-2019-6111.</td>
                         <td>pkg:rpm/rocky/gnupg2@2.3.3-4.el9?arch=x86_64&distro=rocky-9.7&upstream=gnupg2-2.3.3-4.el9.src.rpm</td>
                     </tr>
                     <tr>
+                        <td>systemd-libs</td>
+                        <td>252-55.el9_7.7.rocky.0.1</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-29111">CVE-2026-29111</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in systemd, a system and service manager. An unprivileged user can exploit this vulnerability by making an Inter-Process Communication (IPC) API call with spurious data. In older versions (v249 and earlier), this can lead to stack overwriting with attacker-controlled content, potentially enabling arbitrary code execution or privilege escalation. In newer versions (v250 and later), the flaw causes systemd to assert and freeze, resulting in a Denial of Service (DoS).</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/systemd-libs@252-55.el9_7.7.rocky.0.1?arch=x86_64&distro=rocky-9.7&upstream=systemd-252-55.el9_7.7.rocky.0.1.src.rpm</td>
+                    </tr>
+                    <tr>
                         <td>glib2</td>
                         <td>2.68.4-18.el9_7</td>
                         <td>rpm</td>
@@ -3220,22 +3236,6 @@ This is the same issue as in OpenSSH, tracked as CVE-2019-6111.</td>
                         <td>A vulnerability was found in libssh, where an uninitialized variable exists under certain conditions in the privatekey_from_file() function. This flaw can be triggered if the file specified by the filename doesn&#39;t exist and may lead to possible signing failures or heap corruption.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/libssh-config@0.10.4-15.el9_6?arch=noarch&distro=rocky-9.7&upstream=libssh-0.10.4-15.el9_6.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>systemd-libs</td>
-                        <td>252-55.el9_7.7.rocky.0.1</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-29111">CVE-2026-29111</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in systemd, a system and service manager. An unprivileged user can exploit this vulnerability by making an Inter-Process Communication (IPC) API call with spurious data. In older versions (v249 and earlier), this can lead to stack overwriting with attacker-controlled content, potentially enabling arbitrary code execution or privilege escalation. In newer versions (v250 and later), the flaw causes systemd to assert and freeze, resulting in a Denial of Service (DoS).</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/systemd-libs@252-55.el9_7.7.rocky.0.1?arch=x86_64&distro=rocky-9.7&upstream=systemd-252-55.el9_7.7.rocky.0.1.src.rpm</td>
                     </tr>
                     <tr>
                         <td>libssh</td>
