@@ -870,13 +870,13 @@
                     <dd id="typeValue">image</dd><dt>Checksum:</dt>
                     <dd id="checksumValue">sha256:f376ba4b3b4e88e41bedc1d3756b8260edb64b3b311860cb50363435605ee0d0</dd><dt>Date:</dt>
                     <dd>
-                        <span id="dateElement">2026-04-03T06:09:43.721978652Z</span>
+                        <span id="dateElement">2026-04-03T07:43:39.318300659Z</span>
                         <span id="prettyDateElement" style="display: none;"></span>
                     </dd>
                     <dt>Grype Version:</dt>
                     <dd>0.110.0</dd>
                     <dt>DB Built:</dt>
-                    <dd>2026-04-02 14:22:58 +0000 UTC</dd>
+                    <dd>2026-04-03 06:37:34 +0000 UTC</dd>
                 </dl>
             </div>
             <div class="heading-right">
@@ -891,11 +891,11 @@
             </div>
             <div class="severity-box" id="high">
                 <div class="severity-title">High</div>
-                <div class="severity-count" id="highCount">11</div>
+                <div class="severity-count" id="highCount">8</div>
             </div>
             <div class="severity-box" id="medium">
                 <div class="severity-title">Medium</div>
-                <div class="severity-count" id="mediumCount">66</div>
+                <div class="severity-count" id="mediumCount">69</div>
             </div>
             <div class="severity-box" id="low">
                 <div class="severity-title">Low</div>
@@ -1588,22 +1588,6 @@ could cause self-DoS of the per-connection daemon process.</td>
                         <td>pkg:rpm/rocky/openssl-libs@3.5.1-4.el9_7?arch=x86_64&distro=rocky-9.7&epoch=1&upstream=openssl-3.5.1-4.el9_7.src.rpm</td>
                     </tr>
                     <tr>
-                        <td>libarchive</td>
-                        <td>3.5.3-6.el9_6</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2025-60753">CVE-2025-60753</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A vulnerability in apply_substitution() function in libarchive&#39;s bsdtar allows crafted -s substitution rules to repeatedly match a zero-length substring and append replacements without advancing the input pointer. When the rule uses the global /g flag (or an explicitly empty pattern), this leads to unbounded output allocation and eventual process OOM (Denial of Service). Upgrade to libarchive 3.8.1 or apply a patch that prevents zero-length match loops or rejects empty patterns.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/libarchive@3.5.3-6.el9_6?arch=x86_64&distro=rocky-9.7&upstream=libarchive-3.5.3-6.el9_6.src.rpm</td>
-                    </tr>
-                    <tr>
                         <td>libssh</td>
                         <td>0.10.4-15.el9_6</td>
                         <td>rpm</td>
@@ -1638,6 +1622,22 @@ could cause self-DoS of the per-connection daemon process.</td>
                         <td>A flaw was found in libssh when using the ChaCha20 cipher with the OpenSSL library. If an attacker manages to exhaust the heap space, this error is not detected and may lead to libssh using a partially initialized cipher context. This occurs because the OpenSSL error code returned aliases with the SSH_OK code, resulting in libssh not properly detecting the error returned by the OpenSSL library. This issue can lead to undefined behavior, including compromised data confidentiality and integrity or crashes.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/libssh-config@0.10.4-15.el9_6?arch=noarch&distro=rocky-9.7&upstream=libssh-0.10.4-15.el9_6.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>libarchive</td>
+                        <td>3.5.3-6.el9_6</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-60753">CVE-2025-60753</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A vulnerability in apply_substitution() function in libarchive&#39;s bsdtar allows crafted -s substitution rules to repeatedly match a zero-length substring and append replacements without advancing the input pointer. When the rule uses the global /g flag (or an explicitly empty pattern), this leads to unbounded output allocation and eventual process OOM (Denial of Service). Upgrade to libarchive 3.8.1 or apply a patch that prevents zero-length match loops or rejects empty patterns.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/libarchive@3.5.3-6.el9_6?arch=x86_64&distro=rocky-9.7&upstream=libarchive-3.5.3-6.el9_6.src.rpm</td>
                     </tr>
                     <tr>
                         <td>openssl</td>
@@ -1830,70 +1830,6 @@ could cause self-DoS of the per-connection daemon process.</td>
                         <td>pkg:rpm/rocky/glibc-minimal-langpack@2.34-231.el9_7.2?arch=x86_64&distro=rocky-9.7&upstream=glibc-2.34-231.el9_7.2.src.rpm</td>
                     </tr>
                     <tr>
-                        <td>libxml2</td>
-                        <td>2.9.13-14.el9_7</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2025-27113">CVE-2025-27113</a>
-                        </td>
-                        <td>Low</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in libxml2. This vulnerability allows a NULL pointer dereference, leading to a potential crash or denial of service via a crafted XML pattern.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/libxml2@2.9.13-14.el9_7?arch=x86_64&distro=rocky-9.7&upstream=libxml2-2.9.13-14.el9_7.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>glibc</td>
-                        <td>2.34-231.el9_7.2</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-4046">CVE-2026-4046</a>
-                        </td>
-                        <td>High</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in glibc, the GNU C Library. A remote attacker could exploit this vulnerability by providing specially crafted inputs using the IBM1390 or IBM1399 character sets to the `iconv()` function. This could lead to an assertion failure, causing the application to crash and resulting in a Denial of Service (DoS).</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/glibc@2.34-231.el9_7.2?arch=x86_64&distro=rocky-9.7&upstream=glibc-2.34-231.el9_7.2.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>glibc-common</td>
-                        <td>2.34-231.el9_7.2</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-4046">CVE-2026-4046</a>
-                        </td>
-                        <td>High</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in glibc, the GNU C Library. A remote attacker could exploit this vulnerability by providing specially crafted inputs using the IBM1390 or IBM1399 character sets to the `iconv()` function. This could lead to an assertion failure, causing the application to crash and resulting in a Denial of Service (DoS).</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/glibc-common@2.34-231.el9_7.2?arch=x86_64&distro=rocky-9.7&upstream=glibc-2.34-231.el9_7.2.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>glibc-minimal-langpack</td>
-                        <td>2.34-231.el9_7.2</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-4046">CVE-2026-4046</a>
-                        </td>
-                        <td>High</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in glibc, the GNU C Library. A remote attacker could exploit this vulnerability by providing specially crafted inputs using the IBM1390 or IBM1399 character sets to the `iconv()` function. This could lead to an assertion failure, causing the application to crash and resulting in a Denial of Service (DoS).</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/glibc-minimal-langpack@2.34-231.el9_7.2?arch=x86_64&distro=rocky-9.7&upstream=glibc-2.34-231.el9_7.2.src.rpm</td>
-                    </tr>
-                    <tr>
                         <td>glibc</td>
                         <td>2.34-231.el9_7.2</td>
                         <td>rpm</td>
@@ -1988,6 +1924,22 @@ could cause self-DoS of the per-connection daemon process.</td>
                         <td>A flaw was found in glib. This vulnerability allows a heap buffer overflow and denial-of-service (DoS) via an integer overflow in GLib&#39;s GIO (GLib Input/Output) escape_byte_string() function when processing malicious file or remote filesystem attribute values.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/glib2@2.68.4-18.el9_7?arch=x86_64&distro=rocky-9.7&upstream=glib2-2.68.4-18.el9_7.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>libxml2</td>
+                        <td>2.9.13-14.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-27113">CVE-2025-27113</a>
+                        </td>
+                        <td>Low</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in libxml2. This vulnerability allows a NULL pointer dereference, leading to a potential crash or denial of service via a crafted XML pattern.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/libxml2@2.9.13-14.el9_7?arch=x86_64&distro=rocky-9.7&upstream=libxml2-2.9.13-14.el9_7.src.rpm</td>
                     </tr>
                     <tr>
                         <td>openssl</td>
@@ -2236,6 +2188,54 @@ could cause self-DoS of the per-connection daemon process.</td>
                         <td>Scrapy are vulnerable to a denial of service (DoS) attack due to a flaw in its brotli decompression implementation. The protection mechanism against decompression bombs fails to mitigate the brotli variant, allowing remote servers to crash clients with less than 80GB of available memory. This occurs because brotli can achieve extremely high compression ratios for zero-filled data, leading to excessive memory consumption during decompression.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/libbrotli@1.0.9-7.el9_5?arch=x86_64&distro=rocky-9.7&upstream=brotli-1.0.9-7.el9_5.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>glibc</td>
+                        <td>2.34-231.el9_7.2</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-4046">CVE-2026-4046</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in glibc, the GNU C Library. A remote attacker could exploit this vulnerability by providing specially crafted inputs using the IBM1390 or IBM1399 character sets to the `iconv()` function. This could lead to an assertion failure, causing the application to crash and resulting in a Denial of Service (DoS).</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/glibc@2.34-231.el9_7.2?arch=x86_64&distro=rocky-9.7&upstream=glibc-2.34-231.el9_7.2.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>glibc-common</td>
+                        <td>2.34-231.el9_7.2</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-4046">CVE-2026-4046</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in glibc, the GNU C Library. A remote attacker could exploit this vulnerability by providing specially crafted inputs using the IBM1390 or IBM1399 character sets to the `iconv()` function. This could lead to an assertion failure, causing the application to crash and resulting in a Denial of Service (DoS).</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/glibc-common@2.34-231.el9_7.2?arch=x86_64&distro=rocky-9.7&upstream=glibc-2.34-231.el9_7.2.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>glibc-minimal-langpack</td>
+                        <td>2.34-231.el9_7.2</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-4046">CVE-2026-4046</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in glibc, the GNU C Library. A remote attacker could exploit this vulnerability by providing specially crafted inputs using the IBM1390 or IBM1399 character sets to the `iconv()` function. This could lead to an assertion failure, causing the application to crash and resulting in a Denial of Service (DoS).</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/glibc-minimal-langpack@2.34-231.el9_7.2?arch=x86_64&distro=rocky-9.7&upstream=glibc-2.34-231.el9_7.2.src.rpm</td>
                     </tr>
                     <tr>
                         <td>pcre2</td>
