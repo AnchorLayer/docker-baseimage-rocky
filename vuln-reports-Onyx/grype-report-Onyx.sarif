@@ -2026,27 +2026,6 @@
               }
             },
             {
-              "id": "CVE-2025-7039-glib2",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2025-7039 low vulnerability for glib2 package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in glib. An integer overflow during temporary file creation leads to an out-of-bounds memory access, allowing an attacker to potentially perform path traversal or access private temporary file content by creating symbolic links. This vulnerability allows a local attacker to manipulate file paths and access unauthorized data. The core issue stems from insufficient validation of file path lengths during temporary file operations."
-              },
-              "helpUri": "https://github.com/anchore/grype",
-              "help": {
-                "text": "Vulnerability CVE-2025-7039\nSeverity: low\nPackage: glib2\nVersion: 2.68.4-18.el9_7\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2025-7039](https://access.redhat.com/security/cve/CVE-2025-7039)",
-                "markdown": "**Vulnerability CVE-2025-7039**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | glib2  | 2.68.4-18.el9_7  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2025-7039](https://access.redhat.com/security/cve/CVE-2025-7039)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/glib2@2.68.4-18.el9_7?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=glib2-2.68.4-18.el9_7.src.rpm"
-                ],
-                "security-severity": "3.7"
-              }
-            },
-            {
               "id": "CVE-2026-4111-libarchive",
               "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
@@ -2065,6 +2044,27 @@
                   "pkg:rpm/rocky/libarchive@3.5.3-6.el9_6?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=libarchive-3.5.3-6.el9_6.src.rpm"
                 ],
                 "security-severity": "7.5"
+              }
+            },
+            {
+              "id": "CVE-2025-7039-glib2",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2025-7039 low vulnerability for glib2 package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in glib. An integer overflow during temporary file creation leads to an out-of-bounds memory access, allowing an attacker to potentially perform path traversal or access private temporary file content by creating symbolic links. This vulnerability allows a local attacker to manipulate file paths and access unauthorized data. The core issue stems from insufficient validation of file path lengths during temporary file operations."
+              },
+              "helpUri": "https://github.com/anchore/grype",
+              "help": {
+                "text": "Vulnerability CVE-2025-7039\nSeverity: low\nPackage: glib2\nVersion: 2.68.4-18.el9_7\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2025-7039](https://access.redhat.com/security/cve/CVE-2025-7039)",
+                "markdown": "**Vulnerability CVE-2025-7039**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | glib2  | 2.68.4-18.el9_7  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2025-7039](https://access.redhat.com/security/cve/CVE-2025-7039)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/glib2@2.68.4-18.el9_7?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=glib2-2.68.4-18.el9_7.src.rpm"
+                ],
+                "security-severity": "3.7"
               }
             },
             {
@@ -3202,6 +3202,153 @@
               }
             },
             {
+              "id": "CVE-2026-27456-libblkid",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-27456 medium vulnerability for libblkid package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in util-linux. When an /etc/fstab entry is configured with the user,loop options, the `mount` program checks the file path with user permissions but later opens it with root privileges. This creates a brief Time-of-Check-Time-of-Use (TOCTOU) window where an attacker can substitute the intended file with a malicious symbolic link. This allows a local unprivileged user to mount any root-owned file or block device that contains a valid filesystem, gaining full read access to its contents."
+              },
+              "helpUri": "https://github.com/anchore/grype",
+              "help": {
+                "text": "Vulnerability CVE-2026-27456\nSeverity: medium\nPackage: libblkid\nVersion: 2.37.4-21.el9\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-27456](https://access.redhat.com/security/cve/CVE-2026-27456)",
+                "markdown": "**Vulnerability CVE-2026-27456**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | libblkid  | 2.37.4-21.el9  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-27456](https://access.redhat.com/security/cve/CVE-2026-27456)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/libblkid@2.37.4-21.el9?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=util-linux-2.37.4-21.el9.src.rpm"
+                ],
+                "security-severity": "4.7"
+              }
+            },
+            {
+              "id": "CVE-2026-27456-libfdisk",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-27456 medium vulnerability for libfdisk package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in util-linux. When an /etc/fstab entry is configured with the user,loop options, the `mount` program checks the file path with user permissions but later opens it with root privileges. This creates a brief Time-of-Check-Time-of-Use (TOCTOU) window where an attacker can substitute the intended file with a malicious symbolic link. This allows a local unprivileged user to mount any root-owned file or block device that contains a valid filesystem, gaining full read access to its contents."
+              },
+              "helpUri": "https://github.com/anchore/grype",
+              "help": {
+                "text": "Vulnerability CVE-2026-27456\nSeverity: medium\nPackage: libfdisk\nVersion: 2.37.4-21.el9\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-27456](https://access.redhat.com/security/cve/CVE-2026-27456)",
+                "markdown": "**Vulnerability CVE-2026-27456**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | libfdisk  | 2.37.4-21.el9  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-27456](https://access.redhat.com/security/cve/CVE-2026-27456)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/libfdisk@2.37.4-21.el9?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=util-linux-2.37.4-21.el9.src.rpm"
+                ],
+                "security-severity": "4.7"
+              }
+            },
+            {
+              "id": "CVE-2026-27456-libmount",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-27456 medium vulnerability for libmount package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in util-linux. When an /etc/fstab entry is configured with the user,loop options, the `mount` program checks the file path with user permissions but later opens it with root privileges. This creates a brief Time-of-Check-Time-of-Use (TOCTOU) window where an attacker can substitute the intended file with a malicious symbolic link. This allows a local unprivileged user to mount any root-owned file or block device that contains a valid filesystem, gaining full read access to its contents."
+              },
+              "helpUri": "https://github.com/anchore/grype",
+              "help": {
+                "text": "Vulnerability CVE-2026-27456\nSeverity: medium\nPackage: libmount\nVersion: 2.37.4-21.el9\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-27456](https://access.redhat.com/security/cve/CVE-2026-27456)",
+                "markdown": "**Vulnerability CVE-2026-27456**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | libmount  | 2.37.4-21.el9  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-27456](https://access.redhat.com/security/cve/CVE-2026-27456)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/libmount@2.37.4-21.el9?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=util-linux-2.37.4-21.el9.src.rpm"
+                ],
+                "security-severity": "4.7"
+              }
+            },
+            {
+              "id": "CVE-2026-27456-libsmartcols",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-27456 medium vulnerability for libsmartcols package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in util-linux. When an /etc/fstab entry is configured with the user,loop options, the `mount` program checks the file path with user permissions but later opens it with root privileges. This creates a brief Time-of-Check-Time-of-Use (TOCTOU) window where an attacker can substitute the intended file with a malicious symbolic link. This allows a local unprivileged user to mount any root-owned file or block device that contains a valid filesystem, gaining full read access to its contents."
+              },
+              "helpUri": "https://github.com/anchore/grype",
+              "help": {
+                "text": "Vulnerability CVE-2026-27456\nSeverity: medium\nPackage: libsmartcols\nVersion: 2.37.4-21.el9\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-27456](https://access.redhat.com/security/cve/CVE-2026-27456)",
+                "markdown": "**Vulnerability CVE-2026-27456**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | libsmartcols  | 2.37.4-21.el9  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-27456](https://access.redhat.com/security/cve/CVE-2026-27456)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/libsmartcols@2.37.4-21.el9?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=util-linux-2.37.4-21.el9.src.rpm"
+                ],
+                "security-severity": "4.7"
+              }
+            },
+            {
+              "id": "CVE-2026-27456-libuuid",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-27456 medium vulnerability for libuuid package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in util-linux. When an /etc/fstab entry is configured with the user,loop options, the `mount` program checks the file path with user permissions but later opens it with root privileges. This creates a brief Time-of-Check-Time-of-Use (TOCTOU) window where an attacker can substitute the intended file with a malicious symbolic link. This allows a local unprivileged user to mount any root-owned file or block device that contains a valid filesystem, gaining full read access to its contents."
+              },
+              "helpUri": "https://github.com/anchore/grype",
+              "help": {
+                "text": "Vulnerability CVE-2026-27456\nSeverity: medium\nPackage: libuuid\nVersion: 2.37.4-21.el9\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-27456](https://access.redhat.com/security/cve/CVE-2026-27456)",
+                "markdown": "**Vulnerability CVE-2026-27456**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | libuuid  | 2.37.4-21.el9  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-27456](https://access.redhat.com/security/cve/CVE-2026-27456)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/libuuid@2.37.4-21.el9?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=util-linux-2.37.4-21.el9.src.rpm"
+                ],
+                "security-severity": "4.7"
+              }
+            },
+            {
+              "id": "CVE-2026-27456-util-linux",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-27456 medium vulnerability for util-linux package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in util-linux. When an /etc/fstab entry is configured with the user,loop options, the `mount` program checks the file path with user permissions but later opens it with root privileges. This creates a brief Time-of-Check-Time-of-Use (TOCTOU) window where an attacker can substitute the intended file with a malicious symbolic link. This allows a local unprivileged user to mount any root-owned file or block device that contains a valid filesystem, gaining full read access to its contents."
+              },
+              "helpUri": "https://github.com/anchore/grype",
+              "help": {
+                "text": "Vulnerability CVE-2026-27456\nSeverity: medium\nPackage: util-linux\nVersion: 2.37.4-21.el9\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-27456](https://access.redhat.com/security/cve/CVE-2026-27456)",
+                "markdown": "**Vulnerability CVE-2026-27456**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | util-linux  | 2.37.4-21.el9  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-27456](https://access.redhat.com/security/cve/CVE-2026-27456)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/util-linux@2.37.4-21.el9?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=util-linux-2.37.4-21.el9.src.rpm"
+                ],
+                "security-severity": "4.7"
+              }
+            },
+            {
+              "id": "CVE-2026-27456-util-linux-core",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-27456 medium vulnerability for util-linux-core package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in util-linux. When an /etc/fstab entry is configured with the user,loop options, the `mount` program checks the file path with user permissions but later opens it with root privileges. This creates a brief Time-of-Check-Time-of-Use (TOCTOU) window where an attacker can substitute the intended file with a malicious symbolic link. This allows a local unprivileged user to mount any root-owned file or block device that contains a valid filesystem, gaining full read access to its contents."
+              },
+              "helpUri": "https://github.com/anchore/grype",
+              "help": {
+                "text": "Vulnerability CVE-2026-27456\nSeverity: medium\nPackage: util-linux-core\nVersion: 2.37.4-21.el9\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-27456](https://access.redhat.com/security/cve/CVE-2026-27456)",
+                "markdown": "**Vulnerability CVE-2026-27456**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | util-linux-core  | 2.37.4-21.el9  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-27456](https://access.redhat.com/security/cve/CVE-2026-27456)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/util-linux-core@2.37.4-21.el9?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=util-linux-2.37.4-21.el9.src.rpm"
+                ],
+                "security-severity": "4.7"
+              }
+            },
+            {
               "id": "CVE-2026-1757-libxml2",
               "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
@@ -3283,48 +3430,6 @@
                   "pkg:rpm/rocky/openssl-libs@3.5.1-4.el9_7?arch=x86_64\u0026distro=rocky-9.7\u0026epoch=1\u0026upstream=openssl-3.5.1-4.el9_7.src.rpm"
                 ],
                 "security-severity": "6.1"
-              }
-            },
-            {
-              "id": "CVE-2025-14017-curl",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2025-14017 medium vulnerability for curl package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in curl. When performing multi-threaded LDAPS (Lightweight Directory Access Protocol Secure) transfers, changes to Transport Layer Security (TLS) options in one thread could inadvertently apply globally, affecting other concurrent transfers. This could lead to unintended security posture changes, such as disabling certificate verification for other threads. This vulnerability can result in a security bypass, where expected security checks are not performed."
-              },
-              "helpUri": "https://github.com/anchore/grype",
-              "help": {
-                "text": "Vulnerability CVE-2025-14017\nSeverity: medium\nPackage: curl\nVersion: 7.76.1-34.el9\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2025-14017](https://access.redhat.com/security/cve/CVE-2025-14017)",
-                "markdown": "**Vulnerability CVE-2025-14017**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | curl  | 7.76.1-34.el9  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2025-14017](https://access.redhat.com/security/cve/CVE-2025-14017)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/curl@7.76.1-34.el9?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=curl-7.76.1-34.el9.src.rpm"
-                ],
-                "security-severity": "4.8"
-              }
-            },
-            {
-              "id": "CVE-2025-14017-libcurl",
-              "name": "RpmMatcherExactIndirectMatch",
-              "shortDescription": {
-                "text": "CVE-2025-14017 medium vulnerability for libcurl package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in curl. When performing multi-threaded LDAPS (Lightweight Directory Access Protocol Secure) transfers, changes to Transport Layer Security (TLS) options in one thread could inadvertently apply globally, affecting other concurrent transfers. This could lead to unintended security posture changes, such as disabling certificate verification for other threads. This vulnerability can result in a security bypass, where expected security checks are not performed."
-              },
-              "helpUri": "https://github.com/anchore/grype",
-              "help": {
-                "text": "Vulnerability CVE-2025-14017\nSeverity: medium\nPackage: libcurl\nVersion: 7.76.1-34.el9\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2025-14017](https://access.redhat.com/security/cve/CVE-2025-14017)",
-                "markdown": "**Vulnerability CVE-2025-14017**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | libcurl  | 7.76.1-34.el9  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2025-14017](https://access.redhat.com/security/cve/CVE-2025-14017)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/libcurl@7.76.1-34.el9?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=curl-7.76.1-34.el9.src.rpm"
-                ],
-                "security-severity": "4.8"
               }
             },
             {
@@ -3472,6 +3577,48 @@
                   "pkg:rpm/rocky/util-linux-core@2.37.4-21.el9?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=util-linux-2.37.4-21.el9.src.rpm"
                 ],
                 "security-severity": "6.1"
+              }
+            },
+            {
+              "id": "CVE-2025-14017-curl",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2025-14017 medium vulnerability for curl package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in curl. When performing multi-threaded LDAPS (Lightweight Directory Access Protocol Secure) transfers, changes to Transport Layer Security (TLS) options in one thread could inadvertently apply globally, affecting other concurrent transfers. This could lead to unintended security posture changes, such as disabling certificate verification for other threads. This vulnerability can result in a security bypass, where expected security checks are not performed."
+              },
+              "helpUri": "https://github.com/anchore/grype",
+              "help": {
+                "text": "Vulnerability CVE-2025-14017\nSeverity: medium\nPackage: curl\nVersion: 7.76.1-34.el9\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2025-14017](https://access.redhat.com/security/cve/CVE-2025-14017)",
+                "markdown": "**Vulnerability CVE-2025-14017**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | curl  | 7.76.1-34.el9  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2025-14017](https://access.redhat.com/security/cve/CVE-2025-14017)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/curl@7.76.1-34.el9?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=curl-7.76.1-34.el9.src.rpm"
+                ],
+                "security-severity": "4.8"
+              }
+            },
+            {
+              "id": "CVE-2025-14017-libcurl",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2025-14017 medium vulnerability for libcurl package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in curl. When performing multi-threaded LDAPS (Lightweight Directory Access Protocol Secure) transfers, changes to Transport Layer Security (TLS) options in one thread could inadvertently apply globally, affecting other concurrent transfers. This could lead to unintended security posture changes, such as disabling certificate verification for other threads. This vulnerability can result in a security bypass, where expected security checks are not performed."
+              },
+              "helpUri": "https://github.com/anchore/grype",
+              "help": {
+                "text": "Vulnerability CVE-2025-14017\nSeverity: medium\nPackage: libcurl\nVersion: 7.76.1-34.el9\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2025-14017](https://access.redhat.com/security/cve/CVE-2025-14017)",
+                "markdown": "**Vulnerability CVE-2025-14017**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | libcurl  | 7.76.1-34.el9  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2025-14017](https://access.redhat.com/security/cve/CVE-2025-14017)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/libcurl@7.76.1-34.el9?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=curl-7.76.1-34.el9.src.rpm"
+                ],
+                "security-severity": "4.8"
               }
             },
             {
@@ -6665,37 +6812,6 @@
           }
         },
         {
-          "ruleId": "CVE-2025-7039-glib2",
-          "level": "note",
-          "message": {
-            "text": "A low vulnerability in rpm package: glib2, version 2.68.4-18.el9_7 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:4399bb3147e5af0f9f6057bd99266fa171dd752ebe4e46e204e406ad3b5504f6:/var/lib/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "011a71bb26df2e8b48508431aac6662a11c99dad4253357c23fd0c197e236006:1"
-          }
-        },
-        {
           "ruleId": "CVE-2026-4111-libarchive",
           "level": "error",
           "message": {
@@ -6724,6 +6840,37 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "433d79702c0f7e855900896162012336cb42217d0e9831c5a51815465af04956:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2025-7039-glib2",
+          "level": "note",
+          "message": {
+            "text": "A low vulnerability in rpm package: glib2, version 2.68.4-18.el9_7 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:4399bb3147e5af0f9f6057bd99266fa171dd752ebe4e46e204e406ad3b5504f6:/var/lib/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "011a71bb26df2e8b48508431aac6662a11c99dad4253357c23fd0c197e236006:1"
           }
         },
         {
@@ -8401,6 +8548,223 @@
           }
         },
         {
+          "ruleId": "CVE-2026-27456-libblkid",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: libblkid, version 2.37.4-21.el9 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:4399bb3147e5af0f9f6057bd99266fa171dd752ebe4e46e204e406ad3b5504f6:/var/lib/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "b414c2020eed71dd9331da7324a650738be8360e8251ee7c5913020ab44e8a60:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-27456-libfdisk",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: libfdisk, version 2.37.4-21.el9 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:4399bb3147e5af0f9f6057bd99266fa171dd752ebe4e46e204e406ad3b5504f6:/var/lib/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "72f3a716d82cf58b31312264eb5e61b66a175f14efb588b626bce3fe57229284:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-27456-libmount",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: libmount, version 2.37.4-21.el9 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:4399bb3147e5af0f9f6057bd99266fa171dd752ebe4e46e204e406ad3b5504f6:/var/lib/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "9f6011cf950750225f391aae2a62d5d150e42870f1c6b53843aaebe68de2e00d:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-27456-libsmartcols",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: libsmartcols, version 2.37.4-21.el9 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:4399bb3147e5af0f9f6057bd99266fa171dd752ebe4e46e204e406ad3b5504f6:/var/lib/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "7f19e289010f68fc6246cdfc865b9f9aecc100ae460668da8366b304f584ba51:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-27456-libuuid",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: libuuid, version 2.37.4-21.el9 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:4399bb3147e5af0f9f6057bd99266fa171dd752ebe4e46e204e406ad3b5504f6:/var/lib/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "63798d9bf3cebd18b20131f06279bc169fe5a41c1d8529e8778d6dea0170f0c3:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-27456-util-linux",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: util-linux, version 2.37.4-21.el9 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:4399bb3147e5af0f9f6057bd99266fa171dd752ebe4e46e204e406ad3b5504f6:/var/lib/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "02a19a7f444d93275df6e50569cb1b90a545e3c60c97c13d97d479bba9f8fbde:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-27456-util-linux-core",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: util-linux-core, version 2.37.4-21.el9 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:4399bb3147e5af0f9f6057bd99266fa171dd752ebe4e46e204e406ad3b5504f6:/var/lib/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "137f138580adb665378b25c0945d9f34241a9d69bc52efa8300fe660b5532745:1"
+          }
+        },
+        {
           "ruleId": "CVE-2026-1757-libxml2",
           "level": "warning",
           "message": {
@@ -8522,68 +8886,6 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "7f096a64524891508940c5eb6f0e4455ef7abeaf5e49aae046bb1d33594dd1a8:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2025-14017-curl",
-          "level": "warning",
-          "message": {
-            "text": "A medium vulnerability in rpm package: curl, version 7.76.1-34.el9 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:4399bb3147e5af0f9f6057bd99266fa171dd752ebe4e46e204e406ad3b5504f6:/var/lib/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "0e63401452343c3492287fc06a804559de972451a408c2ea5e808eb8c90a97a7:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2025-14017-libcurl",
-          "level": "warning",
-          "message": {
-            "text": "A medium vulnerability in rpm package: libcurl, version 7.76.1-34.el9 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:4399bb3147e5af0f9f6057bd99266fa171dd752ebe4e46e204e406ad3b5504f6:/var/lib/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "cd70c63991bebfc8356ff05b60d9e8f147d34ea72ac80e9343140379a0b24457:1"
           }
         },
         {
@@ -8801,6 +9103,68 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "137f138580adb665378b25c0945d9f34241a9d69bc52efa8300fe660b5532745:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2025-14017-curl",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: curl, version 7.76.1-34.el9 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:4399bb3147e5af0f9f6057bd99266fa171dd752ebe4e46e204e406ad3b5504f6:/var/lib/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "0e63401452343c3492287fc06a804559de972451a408c2ea5e808eb8c90a97a7:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2025-14017-libcurl",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: libcurl, version 7.76.1-34.el9 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:4399bb3147e5af0f9f6057bd99266fa171dd752ebe4e46e204e406ad3b5504f6:/var/lib/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "cd70c63991bebfc8356ff05b60d9e8f147d34ea72ac80e9343140379a0b24457:1"
           }
         },
         {
