@@ -881,6 +881,7 @@
     
     
     
+    
 
 <body>
     <div class="main-container">
@@ -895,13 +896,13 @@
                     <dd id="typeValue">image</dd><dt>Checksum:</dt>
                     <dd id="checksumValue">sha256:f376ba4b3b4e88e41bedc1d3756b8260edb64b3b311860cb50363435605ee0d0</dd><dt>Date:</dt>
                     <dd>
-                        <span id="dateElement">2026-04-10T06:51:32.854896898Z</span>
+                        <span id="dateElement">2026-04-10T08:19:46.233584536Z</span>
                         <span id="prettyDateElement" style="display: none;"></span>
                     </dd>
                     <dt>Grype Version:</dt>
                     <dd>0.111.0</dd>
                     <dt>DB Built:</dt>
-                    <dd>2026-04-09 06:44:43 +0000 UTC</dd>
+                    <dd>2026-04-10 06:59:29 +0000 UTC</dd>
                 </dl>
             </div>
             <div class="heading-right">
@@ -916,7 +917,7 @@
             </div>
             <div class="severity-box" id="high">
                 <div class="severity-title">High</div>
-                <div class="severity-count" id="highCount">8</div>
+                <div class="severity-count" id="highCount">9</div>
             </div>
             <div class="severity-box" id="medium">
                 <div class="severity-title">Medium</div>
@@ -1051,22 +1052,6 @@
                         <td>pkg:rpm/rocky/libcurl@7.76.1-34.el9?arch=x86_64&distro=rocky-9.7&upstream=curl-7.76.1-34.el9.src.rpm</td>
                     </tr>
                     <tr>
-                        <td>libxml2</td>
-                        <td>2.9.13-14.el9_7</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2024-34459">CVE-2024-34459</a>
-                        </td>
-                        <td>Low</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in the xmllint program distributed by the libxml2 package. A buffer over-read in the xmlHTMLPrintFileContext function in the xmllint.c file may be triggered when a crafted file is processed with the xmllint program using the `--htmlout` command line option, causing an application crash and resulting in a denial of service.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/libxml2@2.9.13-14.el9_7?arch=x86_64&distro=rocky-9.7&upstream=libxml2-2.9.13-14.el9_7.src.rpm</td>
-                    </tr>
-                    <tr>
                         <td>curl</td>
                         <td>7.76.1-34.el9</td>
                         <td>rpm</td>
@@ -1097,6 +1082,22 @@
                         <td>A flaw was found in libcurl, where libcurl&#39;s ASN1 parser code has the `GTime2str()` function, used for parsing an ASN.1 Generalized Time field. If a syntactically incorrect field is given, the parser can use -1 for the length of the *time fraction*, leading to a `strlen()` performed on a pointer to a heap buffer area that is not purposely NULL terminated.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/libcurl@7.76.1-34.el9?arch=x86_64&distro=rocky-9.7&upstream=curl-7.76.1-34.el9.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>libxml2</td>
+                        <td>2.9.13-14.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2024-34459">CVE-2024-34459</a>
+                        </td>
+                        <td>Low</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in the xmllint program distributed by the libxml2 package. A buffer over-read in the xmlHTMLPrintFileContext function in the xmllint.c file may be triggered when a crafted file is processed with the xmllint program using the `--htmlout` command line option, causing an application crash and resulting in a denial of service.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/libxml2@2.9.13-14.el9_7?arch=x86_64&distro=rocky-9.7&upstream=libxml2-2.9.13-14.el9_7.src.rpm</td>
                     </tr>
                     <tr>
                         <td>curl</td>
@@ -1495,6 +1496,38 @@ could cause self-DoS of the per-connection daemon process.</td>
                         <td>pkg:rpm/rocky/libssh-config@0.10.4-15.el9_6?arch=noarch&distro=rocky-9.7&upstream=libssh-0.10.4-15.el9_6.src.rpm</td>
                     </tr>
                     <tr>
+                        <td>libssh</td>
+                        <td>0.10.4-15.el9_6</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-3731">CVE-2026-3731</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in libssh. A remote attacker could trigger an out-of-bounds read vulnerability in the SFTP Extension Name Handler by manipulating the `idx` argument in the `sftp_extensions_get_name` or `sftp_extensions_get_data` functions. This could lead to a Denial of Service (DoS), making the affected system unresponsive.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/libssh@0.10.4-15.el9_6?arch=x86_64&distro=rocky-9.7&upstream=libssh-0.10.4-15.el9_6.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>libssh-config</td>
+                        <td>0.10.4-15.el9_6</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-3731">CVE-2026-3731</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in libssh. A remote attacker could trigger an out-of-bounds read vulnerability in the SFTP Extension Name Handler by manipulating the `idx` argument in the `sftp_extensions_get_name` or `sftp_extensions_get_data` functions. This could lead to a Denial of Service (DoS), making the affected system unresponsive.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/libssh-config@0.10.4-15.el9_6?arch=noarch&distro=rocky-9.7&upstream=libssh-0.10.4-15.el9_6.src.rpm</td>
+                    </tr>
+                    <tr>
                         <td>openssl</td>
                         <td>1:3.5.1-4.el9_7</td>
                         <td>rpm</td>
@@ -1547,38 +1580,6 @@ could cause self-DoS of the per-connection daemon process.</td>
                         <td>A flaw was found in OpenSSL. This type confusion vulnerability allows a remote attacker to cause a denial of service (DoS) by providing specially crafted PKCS#7 data to an application that performs signature verification. The vulnerability occurs because the application accesses an ASN1_TYPE union member without proper type validation, leading to an invalid or NULL pointer dereference and a crash.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/openssl-libs@3.5.1-4.el9_7?arch=x86_64&distro=rocky-9.7&epoch=1&upstream=openssl-3.5.1-4.el9_7.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>libssh</td>
-                        <td>0.10.4-15.el9_6</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-3731">CVE-2026-3731</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in libssh. A remote attacker could trigger an out-of-bounds read vulnerability in the SFTP Extension Name Handler by manipulating the `idx` argument in the `sftp_extensions_get_name` or `sftp_extensions_get_data` functions. This could lead to a Denial of Service (DoS), making the affected system unresponsive.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/libssh@0.10.4-15.el9_6?arch=x86_64&distro=rocky-9.7&upstream=libssh-0.10.4-15.el9_6.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>libssh-config</td>
-                        <td>0.10.4-15.el9_6</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-3731">CVE-2026-3731</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in libssh. A remote attacker could trigger an out-of-bounds read vulnerability in the SFTP Extension Name Handler by manipulating the `idx` argument in the `sftp_extensions_get_name` or `sftp_extensions_get_data` functions. This could lead to a Denial of Service (DoS), making the affected system unresponsive.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/libssh-config@0.10.4-15.el9_6?arch=noarch&distro=rocky-9.7&upstream=libssh-0.10.4-15.el9_6.src.rpm</td>
                     </tr>
                     <tr>
                         <td>libssh</td>
@@ -2119,6 +2120,24 @@ a locally running SSH agent.</td>
                         <td>A flaw was found in libtasn1. A remote attacker could exploit a stack-based buffer overflow vulnerability in the `asn1_expend_octet_string` function. This occurs due to a failure in validating the size of input data. Successful exploitation can lead to a Denial of Service (DoS) condition, making the affected system or application unavailable.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/libtasn1@4.16.0-9.el9?arch=x86_64&distro=rocky-9.7&upstream=libtasn1-4.16.0-9.el9.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>libarchive</td>
+                        <td>3.5.3-6.el9_6</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-4111">CVE-2026-4111</a>
+                        </td>
+                        <td>High</td>
+                        <td>fixed</td>
+                        <td>
+                            <ul>
+                                <li>0:3.5.3-7.el9_7</li>
+                            </ul>
+                        </td>
+                        <td>A flaw was identified in the RAR5 archive decompression logic of the libarchive library, specifically within the archive_read_data() processing path. When a specially crafted RAR5 archive is processed, the decompression routine may enter a state where internal logic prevents forward progress. This condition results in an infinite loop that continuously consumes CPU resources. Because the archive passes checksum validation and appears structurally valid, affected applications cannot detect the issue before processing. This can allow attackers to cause persistent denial-of-service conditions in services that automatically process archives.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/libarchive@3.5.3-6.el9_6?arch=x86_64&distro=rocky-9.7&upstream=libarchive-3.5.3-6.el9_6.src.rpm</td>
                     </tr>
                     <tr>
                         <td>glibc</td>
@@ -2717,24 +2736,6 @@ This is the same issue as in OpenSSH, tracked as CVE-2019-6111.</td>
                         <td>pkg:rpm/rocky/libssh-config@0.10.4-15.el9_6?arch=noarch&distro=rocky-9.7&upstream=libssh-0.10.4-15.el9_6.src.rpm</td>
                     </tr>
                     <tr>
-                        <td>libarchive</td>
-                        <td>3.5.3-6.el9_6</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-4111">CVE-2026-4111</a>
-                        </td>
-                        <td>High</td>
-                        <td>fixed</td>
-                        <td>
-                            <ul>
-                                <li>0:3.5.3-7.el9_7</li>
-                            </ul>
-                        </td>
-                        <td>A flaw was identified in the RAR5 archive decompression logic of the libarchive library, specifically within the archive_read_data() processing path. When a specially crafted RAR5 archive is processed, the decompression routine may enter a state where internal logic prevents forward progress. This condition results in an infinite loop that continuously consumes CPU resources. Because the archive passes checksum validation and appears structurally valid, affected applications cannot detect the issue before processing. This can allow attackers to cause persistent denial-of-service conditions in services that automatically process archives.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/libarchive@3.5.3-6.el9_6?arch=x86_64&distro=rocky-9.7&upstream=libarchive-3.5.3-6.el9_6.src.rpm</td>
-                    </tr>
-                    <tr>
                         <td>glib2</td>
                         <td>2.68.4-18.el9_7</td>
                         <td>rpm</td>
@@ -2913,6 +2914,54 @@ This is the same issue as in OpenSSH, tracked as CVE-2019-6111.</td>
                         <td>pkg:rpm/rocky/sqlite-libs@3.34.1-9.el9_7?arch=x86_64&distro=rocky-9.7&upstream=sqlite-3.34.1-9.el9_7.src.rpm</td>
                     </tr>
                     <tr>
+                        <td>openssl</td>
+                        <td>1:3.5.1-4.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-31790">CVE-2026-31790</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in openssl. Applications that use RSASVE key encapsulation, a method for securely exchanging encryption keys, may inadvertently expose sensitive data. This vulnerability arises when an application processes a malicious, invalid RSA public key provided by an attacker without proper validation. Consequently, the application might send the contents of an uninitialized memory buffer, which could contain confidential information, to the attacker.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/openssl@3.5.1-4.el9_7?arch=x86_64&distro=rocky-9.7&epoch=1&upstream=openssl-3.5.1-4.el9_7.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>openssl-fips-provider</td>
+                        <td>1:3.5.1-4.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-31790">CVE-2026-31790</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in openssl. Applications that use RSASVE key encapsulation, a method for securely exchanging encryption keys, may inadvertently expose sensitive data. This vulnerability arises when an application processes a malicious, invalid RSA public key provided by an attacker without proper validation. Consequently, the application might send the contents of an uninitialized memory buffer, which could contain confidential information, to the attacker.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/openssl-fips-provider@3.5.1-4.el9_7?arch=x86_64&distro=rocky-9.7&epoch=1&upstream=openssl-3.5.1-4.el9_7.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>openssl-libs</td>
+                        <td>1:3.5.1-4.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-31790">CVE-2026-31790</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in openssl. Applications that use RSASVE key encapsulation, a method for securely exchanging encryption keys, may inadvertently expose sensitive data. This vulnerability arises when an application processes a malicious, invalid RSA public key provided by an attacker without proper validation. Consequently, the application might send the contents of an uninitialized memory buffer, which could contain confidential information, to the attacker.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/openssl-libs@3.5.1-4.el9_7?arch=x86_64&distro=rocky-9.7&epoch=1&upstream=openssl-3.5.1-4.el9_7.src.rpm</td>
+                    </tr>
+                    <tr>
                         <td>systemd-libs</td>
                         <td>252-55.el9_7.7.rocky.0.1</td>
                         <td>rpm</td>
@@ -3045,6 +3094,38 @@ This is the same issue as in OpenSSH, tracked as CVE-2019-6111.</td>
                         <td>A flaw was found in glibc, the GNU C Library. When an application calls the `getnetbyaddr` or `getnetbyaddr_r` functions to resolve a network address, and the system&#39;s `nsswitch.conf` file is configured to use a DNS (Domain Name System) backend for network lookups, a query for a zero-valued network can lead to the disclosure of stack memory contents. This information is leaked to the configured DNS resolver, potentially allowing an attacker who controls the resolver to gain sensitive data from the affected system.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/glibc-minimal-langpack@2.34-231.el9_7.2?arch=x86_64&distro=rocky-9.7&upstream=glibc-2.34-231.el9_7.2.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>libssh</td>
+                        <td>0.10.4-15.el9_6</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-8114">CVE-2025-8114</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in libssh, a library that implements the SSH protocol. When calculating the session ID during the key exchange (KEX) process, an allocation failure in cryptographic functions may lead to a NULL pointer dereference. This issue can cause the client or server to crash.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/libssh@0.10.4-15.el9_6?arch=x86_64&distro=rocky-9.7&upstream=libssh-0.10.4-15.el9_6.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>libssh-config</td>
+                        <td>0.10.4-15.el9_6</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-8114">CVE-2025-8114</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in libssh, a library that implements the SSH protocol. When calculating the session ID during the key exchange (KEX) process, an allocation failure in cryptographic functions may lead to a NULL pointer dereference. This issue can cause the client or server to crash.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/libssh-config@0.10.4-15.el9_6?arch=noarch&distro=rocky-9.7&upstream=libssh-0.10.4-15.el9_6.src.rpm</td>
                     </tr>
                     <tr>
                         <td>openssl</td>
@@ -3547,54 +3628,6 @@ This is the same issue as in OpenSSH, tracked as CVE-2019-6111.</td>
                         <td>pkg:rpm/rocky/libxml2@2.9.13-14.el9_7?arch=x86_64&distro=rocky-9.7&upstream=libxml2-2.9.13-14.el9_7.src.rpm</td>
                     </tr>
                     <tr>
-                        <td>openssl</td>
-                        <td>1:3.5.1-4.el9_7</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-31790">CVE-2026-31790</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in openssl. Applications that use RSASVE key encapsulation, a method for securely exchanging encryption keys, may inadvertently expose sensitive data. This vulnerability arises when an application processes a malicious, invalid RSA public key provided by an attacker without proper validation. Consequently, the application might send the contents of an uninitialized memory buffer, which could contain confidential information, to the attacker.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/openssl@3.5.1-4.el9_7?arch=x86_64&distro=rocky-9.7&epoch=1&upstream=openssl-3.5.1-4.el9_7.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>openssl-fips-provider</td>
-                        <td>1:3.5.1-4.el9_7</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-31790">CVE-2026-31790</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in openssl. Applications that use RSASVE key encapsulation, a method for securely exchanging encryption keys, may inadvertently expose sensitive data. This vulnerability arises when an application processes a malicious, invalid RSA public key provided by an attacker without proper validation. Consequently, the application might send the contents of an uninitialized memory buffer, which could contain confidential information, to the attacker.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/openssl-fips-provider@3.5.1-4.el9_7?arch=x86_64&distro=rocky-9.7&epoch=1&upstream=openssl-3.5.1-4.el9_7.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>openssl-libs</td>
-                        <td>1:3.5.1-4.el9_7</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-31790">CVE-2026-31790</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in openssl. Applications that use RSASVE key encapsulation, a method for securely exchanging encryption keys, may inadvertently expose sensitive data. This vulnerability arises when an application processes a malicious, invalid RSA public key provided by an attacker without proper validation. Consequently, the application might send the contents of an uninitialized memory buffer, which could contain confidential information, to the attacker.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/openssl-libs@3.5.1-4.el9_7?arch=x86_64&distro=rocky-9.7&epoch=1&upstream=openssl-3.5.1-4.el9_7.src.rpm</td>
-                    </tr>
-                    <tr>
                         <td>curl</td>
                         <td>7.76.1-34.el9</td>
                         <td>rpm</td>
@@ -3627,36 +3660,116 @@ This is the same issue as in OpenSSH, tracked as CVE-2019-6111.</td>
                         <td>pkg:rpm/rocky/libcurl@7.76.1-34.el9?arch=x86_64&distro=rocky-9.7&upstream=curl-7.76.1-34.el9.src.rpm</td>
                     </tr>
                     <tr>
-                        <td>libssh</td>
-                        <td>0.10.4-15.el9_6</td>
+                        <td>libblkid</td>
+                        <td>2.37.4-21.el9</td>
                         <td>rpm</td>
                         <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2025-8114">CVE-2025-8114</a>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-27456">CVE-2026-27456</a>
                         </td>
                         <td>Medium</td>
                         <td>not-fixed</td>
                         <td>
                             N/A
                         </td>
-                        <td>A flaw was found in libssh, a library that implements the SSH protocol. When calculating the session ID during the key exchange (KEX) process, an allocation failure in cryptographic functions may lead to a NULL pointer dereference. This issue can cause the client or server to crash.</td>
+                        <td>A flaw was found in util-linux. When an /etc/fstab entry is configured with the user,loop options, the `mount` program checks the file path with user permissions but later opens it with root privileges. This creates a brief Time-of-Check-Time-of-Use (TOCTOU) window where an attacker can substitute the intended file with a malicious symbolic link. This allows a local unprivileged user to mount any root-owned file or block device that contains a valid filesystem, gaining full read access to its contents.</td>
                         <td>[]</td>
-                        <td>pkg:rpm/rocky/libssh@0.10.4-15.el9_6?arch=x86_64&distro=rocky-9.7&upstream=libssh-0.10.4-15.el9_6.src.rpm</td>
+                        <td>pkg:rpm/rocky/libblkid@2.37.4-21.el9?arch=x86_64&distro=rocky-9.7&upstream=util-linux-2.37.4-21.el9.src.rpm</td>
                     </tr>
                     <tr>
-                        <td>libssh-config</td>
-                        <td>0.10.4-15.el9_6</td>
+                        <td>libfdisk</td>
+                        <td>2.37.4-21.el9</td>
                         <td>rpm</td>
                         <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2025-8114">CVE-2025-8114</a>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-27456">CVE-2026-27456</a>
                         </td>
                         <td>Medium</td>
                         <td>not-fixed</td>
                         <td>
                             N/A
                         </td>
-                        <td>A flaw was found in libssh, a library that implements the SSH protocol. When calculating the session ID during the key exchange (KEX) process, an allocation failure in cryptographic functions may lead to a NULL pointer dereference. This issue can cause the client or server to crash.</td>
+                        <td>A flaw was found in util-linux. When an /etc/fstab entry is configured with the user,loop options, the `mount` program checks the file path with user permissions but later opens it with root privileges. This creates a brief Time-of-Check-Time-of-Use (TOCTOU) window where an attacker can substitute the intended file with a malicious symbolic link. This allows a local unprivileged user to mount any root-owned file or block device that contains a valid filesystem, gaining full read access to its contents.</td>
                         <td>[]</td>
-                        <td>pkg:rpm/rocky/libssh-config@0.10.4-15.el9_6?arch=noarch&distro=rocky-9.7&upstream=libssh-0.10.4-15.el9_6.src.rpm</td>
+                        <td>pkg:rpm/rocky/libfdisk@2.37.4-21.el9?arch=x86_64&distro=rocky-9.7&upstream=util-linux-2.37.4-21.el9.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>libmount</td>
+                        <td>2.37.4-21.el9</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-27456">CVE-2026-27456</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in util-linux. When an /etc/fstab entry is configured with the user,loop options, the `mount` program checks the file path with user permissions but later opens it with root privileges. This creates a brief Time-of-Check-Time-of-Use (TOCTOU) window where an attacker can substitute the intended file with a malicious symbolic link. This allows a local unprivileged user to mount any root-owned file or block device that contains a valid filesystem, gaining full read access to its contents.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/libmount@2.37.4-21.el9?arch=x86_64&distro=rocky-9.7&upstream=util-linux-2.37.4-21.el9.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>libsmartcols</td>
+                        <td>2.37.4-21.el9</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-27456">CVE-2026-27456</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in util-linux. When an /etc/fstab entry is configured with the user,loop options, the `mount` program checks the file path with user permissions but later opens it with root privileges. This creates a brief Time-of-Check-Time-of-Use (TOCTOU) window where an attacker can substitute the intended file with a malicious symbolic link. This allows a local unprivileged user to mount any root-owned file or block device that contains a valid filesystem, gaining full read access to its contents.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/libsmartcols@2.37.4-21.el9?arch=x86_64&distro=rocky-9.7&upstream=util-linux-2.37.4-21.el9.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>libuuid</td>
+                        <td>2.37.4-21.el9</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-27456">CVE-2026-27456</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in util-linux. When an /etc/fstab entry is configured with the user,loop options, the `mount` program checks the file path with user permissions but later opens it with root privileges. This creates a brief Time-of-Check-Time-of-Use (TOCTOU) window where an attacker can substitute the intended file with a malicious symbolic link. This allows a local unprivileged user to mount any root-owned file or block device that contains a valid filesystem, gaining full read access to its contents.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/libuuid@2.37.4-21.el9?arch=x86_64&distro=rocky-9.7&upstream=util-linux-2.37.4-21.el9.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>util-linux</td>
+                        <td>2.37.4-21.el9</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-27456">CVE-2026-27456</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in util-linux. When an /etc/fstab entry is configured with the user,loop options, the `mount` program checks the file path with user permissions but later opens it with root privileges. This creates a brief Time-of-Check-Time-of-Use (TOCTOU) window where an attacker can substitute the intended file with a malicious symbolic link. This allows a local unprivileged user to mount any root-owned file or block device that contains a valid filesystem, gaining full read access to its contents.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/util-linux@2.37.4-21.el9?arch=x86_64&distro=rocky-9.7&upstream=util-linux-2.37.4-21.el9.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>util-linux-core</td>
+                        <td>2.37.4-21.el9</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-27456">CVE-2026-27456</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in util-linux. When an /etc/fstab entry is configured with the user,loop options, the `mount` program checks the file path with user permissions but later opens it with root privileges. This creates a brief Time-of-Check-Time-of-Use (TOCTOU) window where an attacker can substitute the intended file with a malicious symbolic link. This allows a local unprivileged user to mount any root-owned file or block device that contains a valid filesystem, gaining full read access to its contents.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/util-linux-core@2.37.4-21.el9?arch=x86_64&distro=rocky-9.7&upstream=util-linux-2.37.4-21.el9.src.rpm</td>
                     </tr>
                     <tr>
                         <td>glibc</td>
@@ -3777,118 +3890,6 @@ This is the same issue as in OpenSSH, tracked as CVE-2019-6111.</td>
                         <td>A flaw was found in GnuPG. A remote attacker could provide a specially crafted long signature packet that, when processed, causes the application to crash. This vulnerability leads to a denial of service (DoS), making the GnuPG application unavailable to legitimate users.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/gnupg2@2.3.3-4.el9?arch=x86_64&distro=rocky-9.7&upstream=gnupg2-2.3.3-4.el9.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>libblkid</td>
-                        <td>2.37.4-21.el9</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-27456">CVE-2026-27456</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in util-linux. When an /etc/fstab entry is configured with the user,loop options, the `mount` program checks the file path with user permissions but later opens it with root privileges. This creates a brief Time-of-Check-Time-of-Use (TOCTOU) window where an attacker can substitute the intended file with a malicious symbolic link. This allows a local unprivileged user to mount any root-owned file or block device that contains a valid filesystem, gaining full read access to its contents.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/libblkid@2.37.4-21.el9?arch=x86_64&distro=rocky-9.7&upstream=util-linux-2.37.4-21.el9.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>libfdisk</td>
-                        <td>2.37.4-21.el9</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-27456">CVE-2026-27456</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in util-linux. When an /etc/fstab entry is configured with the user,loop options, the `mount` program checks the file path with user permissions but later opens it with root privileges. This creates a brief Time-of-Check-Time-of-Use (TOCTOU) window where an attacker can substitute the intended file with a malicious symbolic link. This allows a local unprivileged user to mount any root-owned file or block device that contains a valid filesystem, gaining full read access to its contents.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/libfdisk@2.37.4-21.el9?arch=x86_64&distro=rocky-9.7&upstream=util-linux-2.37.4-21.el9.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>libmount</td>
-                        <td>2.37.4-21.el9</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-27456">CVE-2026-27456</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in util-linux. When an /etc/fstab entry is configured with the user,loop options, the `mount` program checks the file path with user permissions but later opens it with root privileges. This creates a brief Time-of-Check-Time-of-Use (TOCTOU) window where an attacker can substitute the intended file with a malicious symbolic link. This allows a local unprivileged user to mount any root-owned file or block device that contains a valid filesystem, gaining full read access to its contents.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/libmount@2.37.4-21.el9?arch=x86_64&distro=rocky-9.7&upstream=util-linux-2.37.4-21.el9.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>libsmartcols</td>
-                        <td>2.37.4-21.el9</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-27456">CVE-2026-27456</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in util-linux. When an /etc/fstab entry is configured with the user,loop options, the `mount` program checks the file path with user permissions but later opens it with root privileges. This creates a brief Time-of-Check-Time-of-Use (TOCTOU) window where an attacker can substitute the intended file with a malicious symbolic link. This allows a local unprivileged user to mount any root-owned file or block device that contains a valid filesystem, gaining full read access to its contents.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/libsmartcols@2.37.4-21.el9?arch=x86_64&distro=rocky-9.7&upstream=util-linux-2.37.4-21.el9.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>libuuid</td>
-                        <td>2.37.4-21.el9</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-27456">CVE-2026-27456</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in util-linux. When an /etc/fstab entry is configured with the user,loop options, the `mount` program checks the file path with user permissions but later opens it with root privileges. This creates a brief Time-of-Check-Time-of-Use (TOCTOU) window where an attacker can substitute the intended file with a malicious symbolic link. This allows a local unprivileged user to mount any root-owned file or block device that contains a valid filesystem, gaining full read access to its contents.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/libuuid@2.37.4-21.el9?arch=x86_64&distro=rocky-9.7&upstream=util-linux-2.37.4-21.el9.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>util-linux</td>
-                        <td>2.37.4-21.el9</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-27456">CVE-2026-27456</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in util-linux. When an /etc/fstab entry is configured with the user,loop options, the `mount` program checks the file path with user permissions but later opens it with root privileges. This creates a brief Time-of-Check-Time-of-Use (TOCTOU) window where an attacker can substitute the intended file with a malicious symbolic link. This allows a local unprivileged user to mount any root-owned file or block device that contains a valid filesystem, gaining full read access to its contents.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/util-linux@2.37.4-21.el9?arch=x86_64&distro=rocky-9.7&upstream=util-linux-2.37.4-21.el9.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>util-linux-core</td>
-                        <td>2.37.4-21.el9</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-27456">CVE-2026-27456</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in util-linux. When an /etc/fstab entry is configured with the user,loop options, the `mount` program checks the file path with user permissions but later opens it with root privileges. This creates a brief Time-of-Check-Time-of-Use (TOCTOU) window where an attacker can substitute the intended file with a malicious symbolic link. This allows a local unprivileged user to mount any root-owned file or block device that contains a valid filesystem, gaining full read access to its contents.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/util-linux-core@2.37.4-21.el9?arch=x86_64&distro=rocky-9.7&upstream=util-linux-2.37.4-21.el9.src.rpm</td>
                     </tr>
                     <tr>
                         <td>libxml2</td>
@@ -4273,6 +4274,22 @@ This is the same issue as in OpenSSH, tracked as CVE-2019-6111.</td>
                         <td>A flaw was found in Glib&#39;s content type parsing logic. This buffer underflow vulnerability occurs because the length of a header line is stored in a signed integer, which can lead to integer wraparound for very large inputs. This results in pointer underflow and out-of-bounds memory access. Exploitation requires a local user to install or process a specially crafted treemagic file, which can lead to local denial of service or application instability.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/glib2@2.68.4-18.el9_7?arch=x86_64&distro=rocky-9.7&upstream=glib2-2.68.4-18.el9_7.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>libcap</td>
+                        <td>2.48-10.el9</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-4878">CVE-2026-4878</a>
+                        </td>
+                        <td>High</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in libcap. A local unprivileged user can exploit a Time-of-check-to-time-of-use (TOCTOU) race condition in the `cap_set_file()` function. This allows an attacker with write access to a parent directory to redirect file capability updates to an attacker-controlled file. By doing so, capabilities can be injected into or stripped from unintended executables, leading to privilege escalation.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/libcap@2.48-10.el9?arch=x86_64&distro=rocky-9.7&upstream=libcap-2.48-10.el9.src.rpm</td>
                     </tr>
                     <tr>
                         <td>lz4-libs</td>
