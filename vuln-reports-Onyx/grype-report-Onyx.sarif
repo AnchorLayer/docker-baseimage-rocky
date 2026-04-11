@@ -1081,27 +1081,6 @@
               }
             },
             {
-              "id": "CVE-2026-0990-libxml2",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-0990 medium vulnerability for libxml2 package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in libxml2, an XML parsing library. This uncontrolled recursion vulnerability occurs in the xmlCatalogXMLResolveURI function when an XML catalog contains a delegate URI entry that references itself. A remote attacker could exploit this configuration-dependent issue by providing a specially crafted XML catalog, leading to infinite recursion and call stack exhaustion. This ultimately results in a segmentation fault, causing a Denial of Service (DoS) by crashing affected applications."
-              },
-              "helpUri": "https://github.com/anchore/grype",
-              "help": {
-                "text": "Vulnerability CVE-2026-0990\nSeverity: medium\nPackage: libxml2\nVersion: 2.9.13-14.el9_7\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-0990](https://access.redhat.com/security/cve/CVE-2026-0990)",
-                "markdown": "**Vulnerability CVE-2026-0990**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | libxml2  | 2.9.13-14.el9_7  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-0990](https://access.redhat.com/security/cve/CVE-2026-0990)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/libxml2@2.9.13-14.el9_7?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=libxml2-2.9.13-14.el9_7.src.rpm"
-                ],
-                "security-severity": "5.9"
-              }
-            },
-            {
               "id": "CVE-2025-15224-curl",
               "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
@@ -1244,6 +1223,27 @@
               "properties": {
                 "purls": [
                   "pkg:rpm/rocky/glibc-minimal-langpack@2.34-231.el9_7.2?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=glibc-2.34-231.el9_7.2.src.rpm"
+                ],
+                "security-severity": "5.9"
+              }
+            },
+            {
+              "id": "CVE-2026-0990-libxml2",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-0990 medium vulnerability for libxml2 package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in libxml2, an XML parsing library. This uncontrolled recursion vulnerability occurs in the xmlCatalogXMLResolveURI function when an XML catalog contains a delegate URI entry that references itself. A remote attacker could exploit this configuration-dependent issue by providing a specially crafted XML catalog, leading to infinite recursion and call stack exhaustion. This ultimately results in a segmentation fault, causing a Denial of Service (DoS) by crashing affected applications."
+              },
+              "helpUri": "https://github.com/anchore/grype",
+              "help": {
+                "text": "Vulnerability CVE-2026-0990\nSeverity: medium\nPackage: libxml2\nVersion: 2.9.13-14.el9_7\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-0990](https://access.redhat.com/security/cve/CVE-2026-0990)",
+                "markdown": "**Vulnerability CVE-2026-0990**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | libxml2  | 2.9.13-14.el9_7  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-0990](https://access.redhat.com/security/cve/CVE-2026-0990)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/libxml2@2.9.13-14.el9_7?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=libxml2-2.9.13-14.el9_7.src.rpm"
                 ],
                 "security-severity": "5.9"
               }
@@ -1540,6 +1540,27 @@
                   "pkg:rpm/rocky/glibc-minimal-langpack@2.34-231.el9_7.2?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=glibc-2.34-231.el9_7.2.src.rpm"
                 ],
                 "security-severity": "6.5"
+              }
+            },
+            {
+              "id": "CVE-2025-6176-libbrotli",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2025-6176 high vulnerability for libbrotli package"
+              },
+              "fullDescription": {
+                "text": "Scrapy are vulnerable to a denial of service (DoS) attack due to a flaw in its brotli decompression implementation. The protection mechanism against decompression bombs fails to mitigate the brotli variant, allowing remote servers to crash clients with less than 80GB of available memory. This occurs because brotli can achieve extremely high compression ratios for zero-filled data, leading to excessive memory consumption during decompression."
+              },
+              "helpUri": "https://github.com/anchore/grype",
+              "help": {
+                "text": "Vulnerability CVE-2025-6176\nSeverity: high\nPackage: libbrotli\nVersion: 1.0.9-7.el9_5\nFix Version: 0:1.0.9-9.el9_7\nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2025-6176](https://access.redhat.com/security/cve/CVE-2025-6176)",
+                "markdown": "**Vulnerability CVE-2025-6176**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| high  | libbrotli  | 1.0.9-7.el9_5  | 0:1.0.9-9.el9_7  | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2025-6176](https://access.redhat.com/security/cve/CVE-2025-6176)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/libbrotli@1.0.9-7.el9_5?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=brotli-1.0.9-7.el9_5.src.rpm"
+                ],
+                "security-severity": "7.5"
               }
             },
             {
@@ -1879,27 +1900,6 @@
               }
             },
             {
-              "id": "CVE-2025-6176-libbrotli",
-              "name": "RpmMatcherExactIndirectMatch",
-              "shortDescription": {
-                "text": "CVE-2025-6176 high vulnerability for libbrotli package"
-              },
-              "fullDescription": {
-                "text": "Scrapy are vulnerable to a denial of service (DoS) attack due to a flaw in its brotli decompression implementation. The protection mechanism against decompression bombs fails to mitigate the brotli variant, allowing remote servers to crash clients with less than 80GB of available memory. This occurs because brotli can achieve extremely high compression ratios for zero-filled data, leading to excessive memory consumption during decompression."
-              },
-              "helpUri": "https://github.com/anchore/grype",
-              "help": {
-                "text": "Vulnerability CVE-2025-6176\nSeverity: high\nPackage: libbrotli\nVersion: 1.0.9-7.el9_5\nFix Version: 0:1.0.9-9.el9_7\nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2025-6176](https://access.redhat.com/security/cve/CVE-2025-6176)",
-                "markdown": "**Vulnerability CVE-2025-6176**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| high  | libbrotli  | 1.0.9-7.el9_5  | 0:1.0.9-9.el9_7  | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2025-6176](https://access.redhat.com/security/cve/CVE-2025-6176)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/libbrotli@1.0.9-7.el9_5?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=brotli-1.0.9-7.el9_5.src.rpm"
-                ],
-                "security-severity": "7.5"
-              }
-            },
-            {
               "id": "CVE-2025-15079-curl",
               "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
@@ -2023,69 +2023,6 @@
                   "pkg:rpm/rocky/libssh-config@0.10.4-15.el9_6?arch=noarch\u0026distro=rocky-9.7\u0026upstream=libssh-0.10.4-15.el9_6.src.rpm"
                 ],
                 "security-severity": "3.1"
-              }
-            },
-            {
-              "id": "CVE-2026-28390-openssl",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-28390 medium vulnerability for openssl package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in OpenSSL. A remote attacker could exploit this vulnerability by sending a specially crafted Cryptographic Message Syntax (CMS) EnvelopedData message. During the processing of a KeyTransportRecipientInfo with RSA-OAEP encryption, the system attempts to access an optional parameter field without first verifying its presence. This leads to a NULL pointer dereference, which can cause applications processing the attacker-controlled CMS data to crash, resulting in a Denial of Service (DoS)."
-              },
-              "helpUri": "https://github.com/anchore/grype",
-              "help": {
-                "text": "Vulnerability CVE-2026-28390\nSeverity: medium\nPackage: openssl\nVersion: 1:3.5.1-4.el9_7\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-28390](https://access.redhat.com/security/cve/CVE-2026-28390)",
-                "markdown": "**Vulnerability CVE-2026-28390**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | openssl  | 1:3.5.1-4.el9_7  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-28390](https://access.redhat.com/security/cve/CVE-2026-28390)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/openssl@3.5.1-4.el9_7?arch=x86_64\u0026distro=rocky-9.7\u0026epoch=1\u0026upstream=openssl-3.5.1-4.el9_7.src.rpm"
-                ],
-                "security-severity": "7.5"
-              }
-            },
-            {
-              "id": "CVE-2026-28390-openssl-fips-provider",
-              "name": "RpmMatcherExactIndirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-28390 medium vulnerability for openssl-fips-provider package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in OpenSSL. A remote attacker could exploit this vulnerability by sending a specially crafted Cryptographic Message Syntax (CMS) EnvelopedData message. During the processing of a KeyTransportRecipientInfo with RSA-OAEP encryption, the system attempts to access an optional parameter field without first verifying its presence. This leads to a NULL pointer dereference, which can cause applications processing the attacker-controlled CMS data to crash, resulting in a Denial of Service (DoS)."
-              },
-              "helpUri": "https://github.com/anchore/grype",
-              "help": {
-                "text": "Vulnerability CVE-2026-28390\nSeverity: medium\nPackage: openssl-fips-provider\nVersion: 1:3.5.1-4.el9_7\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-28390](https://access.redhat.com/security/cve/CVE-2026-28390)",
-                "markdown": "**Vulnerability CVE-2026-28390**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | openssl-fips-provider  | 1:3.5.1-4.el9_7  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-28390](https://access.redhat.com/security/cve/CVE-2026-28390)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/openssl-fips-provider@3.5.1-4.el9_7?arch=x86_64\u0026distro=rocky-9.7\u0026epoch=1\u0026upstream=openssl-3.5.1-4.el9_7.src.rpm"
-                ],
-                "security-severity": "7.5"
-              }
-            },
-            {
-              "id": "CVE-2026-28390-openssl-libs",
-              "name": "RpmMatcherExactIndirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-28390 medium vulnerability for openssl-libs package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in OpenSSL. A remote attacker could exploit this vulnerability by sending a specially crafted Cryptographic Message Syntax (CMS) EnvelopedData message. During the processing of a KeyTransportRecipientInfo with RSA-OAEP encryption, the system attempts to access an optional parameter field without first verifying its presence. This leads to a NULL pointer dereference, which can cause applications processing the attacker-controlled CMS data to crash, resulting in a Denial of Service (DoS)."
-              },
-              "helpUri": "https://github.com/anchore/grype",
-              "help": {
-                "text": "Vulnerability CVE-2026-28390\nSeverity: medium\nPackage: openssl-libs\nVersion: 1:3.5.1-4.el9_7\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-28390](https://access.redhat.com/security/cve/CVE-2026-28390)",
-                "markdown": "**Vulnerability CVE-2026-28390**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | openssl-libs  | 1:3.5.1-4.el9_7  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-28390](https://access.redhat.com/security/cve/CVE-2026-28390)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/openssl-libs@3.5.1-4.el9_7?arch=x86_64\u0026distro=rocky-9.7\u0026epoch=1\u0026upstream=openssl-3.5.1-4.el9_7.src.rpm"
-                ],
-                "security-severity": "7.5"
               }
             },
             {
@@ -2233,6 +2170,69 @@
                   "pkg:rpm/rocky/libssh-config@0.10.4-15.el9_6?arch=noarch\u0026distro=rocky-9.7\u0026upstream=libssh-0.10.4-15.el9_6.src.rpm"
                 ],
                 "security-severity": "3.1"
+              }
+            },
+            {
+              "id": "CVE-2026-28390-openssl",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-28390 medium vulnerability for openssl package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in OpenSSL. A remote attacker could exploit this vulnerability by sending a specially crafted Cryptographic Message Syntax (CMS) EnvelopedData message. During the processing of a KeyTransportRecipientInfo with RSA-OAEP encryption, the system attempts to access an optional parameter field without first verifying its presence. This leads to a NULL pointer dereference, which can cause applications processing the attacker-controlled CMS data to crash, resulting in a Denial of Service (DoS)."
+              },
+              "helpUri": "https://github.com/anchore/grype",
+              "help": {
+                "text": "Vulnerability CVE-2026-28390\nSeverity: medium\nPackage: openssl\nVersion: 1:3.5.1-4.el9_7\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-28390](https://access.redhat.com/security/cve/CVE-2026-28390)",
+                "markdown": "**Vulnerability CVE-2026-28390**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | openssl  | 1:3.5.1-4.el9_7  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-28390](https://access.redhat.com/security/cve/CVE-2026-28390)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/openssl@3.5.1-4.el9_7?arch=x86_64\u0026distro=rocky-9.7\u0026epoch=1\u0026upstream=openssl-3.5.1-4.el9_7.src.rpm"
+                ],
+                "security-severity": "7.5"
+              }
+            },
+            {
+              "id": "CVE-2026-28390-openssl-fips-provider",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-28390 medium vulnerability for openssl-fips-provider package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in OpenSSL. A remote attacker could exploit this vulnerability by sending a specially crafted Cryptographic Message Syntax (CMS) EnvelopedData message. During the processing of a KeyTransportRecipientInfo with RSA-OAEP encryption, the system attempts to access an optional parameter field without first verifying its presence. This leads to a NULL pointer dereference, which can cause applications processing the attacker-controlled CMS data to crash, resulting in a Denial of Service (DoS)."
+              },
+              "helpUri": "https://github.com/anchore/grype",
+              "help": {
+                "text": "Vulnerability CVE-2026-28390\nSeverity: medium\nPackage: openssl-fips-provider\nVersion: 1:3.5.1-4.el9_7\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-28390](https://access.redhat.com/security/cve/CVE-2026-28390)",
+                "markdown": "**Vulnerability CVE-2026-28390**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | openssl-fips-provider  | 1:3.5.1-4.el9_7  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-28390](https://access.redhat.com/security/cve/CVE-2026-28390)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/openssl-fips-provider@3.5.1-4.el9_7?arch=x86_64\u0026distro=rocky-9.7\u0026epoch=1\u0026upstream=openssl-3.5.1-4.el9_7.src.rpm"
+                ],
+                "security-severity": "7.5"
+              }
+            },
+            {
+              "id": "CVE-2026-28390-openssl-libs",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-28390 medium vulnerability for openssl-libs package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in OpenSSL. A remote attacker could exploit this vulnerability by sending a specially crafted Cryptographic Message Syntax (CMS) EnvelopedData message. During the processing of a KeyTransportRecipientInfo with RSA-OAEP encryption, the system attempts to access an optional parameter field without first verifying its presence. This leads to a NULL pointer dereference, which can cause applications processing the attacker-controlled CMS data to crash, resulting in a Denial of Service (DoS)."
+              },
+              "helpUri": "https://github.com/anchore/grype",
+              "help": {
+                "text": "Vulnerability CVE-2026-28390\nSeverity: medium\nPackage: openssl-libs\nVersion: 1:3.5.1-4.el9_7\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-28390](https://access.redhat.com/security/cve/CVE-2026-28390)",
+                "markdown": "**Vulnerability CVE-2026-28390**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | openssl-libs  | 1:3.5.1-4.el9_7  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-28390](https://access.redhat.com/security/cve/CVE-2026-28390)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/openssl-libs@3.5.1-4.el9_7?arch=x86_64\u0026distro=rocky-9.7\u0026epoch=1\u0026upstream=openssl-3.5.1-4.el9_7.src.rpm"
+                ],
+                "security-severity": "7.5"
               }
             },
             {
@@ -2467,18 +2467,18 @@
               }
             },
             {
-              "id": "CVE-2026-31790-openssl",
+              "id": "CVE-2026-28389-openssl",
               "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
-                "text": "CVE-2026-31790 medium vulnerability for openssl package"
+                "text": "CVE-2026-28389 low vulnerability for openssl package"
               },
               "fullDescription": {
-                "text": "A flaw was found in openssl. Applications that use RSASVE key encapsulation, a method for securely exchanging encryption keys, may inadvertently expose sensitive data. This vulnerability arises when an application processes a malicious, invalid RSA public key provided by an attacker without proper validation. Consequently, the application might send the contents of an uninitialized memory buffer, which could contain confidential information, to the attacker."
+                "text": "A flaw was found in OpenSSL. A remote attacker could exploit this by sending a specially crafted Cryptographic Message Syntax (CMS) EnvelopedData message with KeyAgreeRecipientInfo. This vulnerability arises because the software attempts to process an optional field without verifying its existence, leading to a NULL pointer dereference. This can result in a Denial of Service (DoS) for applications that handle untrusted CMS data."
               },
               "helpUri": "https://github.com/anchore/grype",
               "help": {
-                "text": "Vulnerability CVE-2026-31790\nSeverity: medium\nPackage: openssl\nVersion: 1:3.5.1-4.el9_7\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-31790](https://access.redhat.com/security/cve/CVE-2026-31790)",
-                "markdown": "**Vulnerability CVE-2026-31790**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | openssl  | 1:3.5.1-4.el9_7  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-31790](https://access.redhat.com/security/cve/CVE-2026-31790)  |\n"
+                "text": "Vulnerability CVE-2026-28389\nSeverity: low\nPackage: openssl\nVersion: 1:3.5.1-4.el9_7\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-28389](https://access.redhat.com/security/cve/CVE-2026-28389)",
+                "markdown": "**Vulnerability CVE-2026-28389**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | openssl  | 1:3.5.1-4.el9_7  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-28389](https://access.redhat.com/security/cve/CVE-2026-28389)  |\n"
               },
               "properties": {
                 "purls": [
@@ -2488,18 +2488,18 @@
               }
             },
             {
-              "id": "CVE-2026-31790-openssl-fips-provider",
+              "id": "CVE-2026-28389-openssl-fips-provider",
               "name": "RpmMatcherExactIndirectMatch",
               "shortDescription": {
-                "text": "CVE-2026-31790 medium vulnerability for openssl-fips-provider package"
+                "text": "CVE-2026-28389 low vulnerability for openssl-fips-provider package"
               },
               "fullDescription": {
-                "text": "A flaw was found in openssl. Applications that use RSASVE key encapsulation, a method for securely exchanging encryption keys, may inadvertently expose sensitive data. This vulnerability arises when an application processes a malicious, invalid RSA public key provided by an attacker without proper validation. Consequently, the application might send the contents of an uninitialized memory buffer, which could contain confidential information, to the attacker."
+                "text": "A flaw was found in OpenSSL. A remote attacker could exploit this by sending a specially crafted Cryptographic Message Syntax (CMS) EnvelopedData message with KeyAgreeRecipientInfo. This vulnerability arises because the software attempts to process an optional field without verifying its existence, leading to a NULL pointer dereference. This can result in a Denial of Service (DoS) for applications that handle untrusted CMS data."
               },
               "helpUri": "https://github.com/anchore/grype",
               "help": {
-                "text": "Vulnerability CVE-2026-31790\nSeverity: medium\nPackage: openssl-fips-provider\nVersion: 1:3.5.1-4.el9_7\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-31790](https://access.redhat.com/security/cve/CVE-2026-31790)",
-                "markdown": "**Vulnerability CVE-2026-31790**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | openssl-fips-provider  | 1:3.5.1-4.el9_7  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-31790](https://access.redhat.com/security/cve/CVE-2026-31790)  |\n"
+                "text": "Vulnerability CVE-2026-28389\nSeverity: low\nPackage: openssl-fips-provider\nVersion: 1:3.5.1-4.el9_7\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-28389](https://access.redhat.com/security/cve/CVE-2026-28389)",
+                "markdown": "**Vulnerability CVE-2026-28389**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | openssl-fips-provider  | 1:3.5.1-4.el9_7  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-28389](https://access.redhat.com/security/cve/CVE-2026-28389)  |\n"
               },
               "properties": {
                 "purls": [
@@ -2509,18 +2509,18 @@
               }
             },
             {
-              "id": "CVE-2026-31790-openssl-libs",
+              "id": "CVE-2026-28389-openssl-libs",
               "name": "RpmMatcherExactIndirectMatch",
               "shortDescription": {
-                "text": "CVE-2026-31790 medium vulnerability for openssl-libs package"
+                "text": "CVE-2026-28389 low vulnerability for openssl-libs package"
               },
               "fullDescription": {
-                "text": "A flaw was found in openssl. Applications that use RSASVE key encapsulation, a method for securely exchanging encryption keys, may inadvertently expose sensitive data. This vulnerability arises when an application processes a malicious, invalid RSA public key provided by an attacker without proper validation. Consequently, the application might send the contents of an uninitialized memory buffer, which could contain confidential information, to the attacker."
+                "text": "A flaw was found in OpenSSL. A remote attacker could exploit this by sending a specially crafted Cryptographic Message Syntax (CMS) EnvelopedData message with KeyAgreeRecipientInfo. This vulnerability arises because the software attempts to process an optional field without verifying its existence, leading to a NULL pointer dereference. This can result in a Denial of Service (DoS) for applications that handle untrusted CMS data."
               },
               "helpUri": "https://github.com/anchore/grype",
               "help": {
-                "text": "Vulnerability CVE-2026-31790\nSeverity: medium\nPackage: openssl-libs\nVersion: 1:3.5.1-4.el9_7\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-31790](https://access.redhat.com/security/cve/CVE-2026-31790)",
-                "markdown": "**Vulnerability CVE-2026-31790**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | openssl-libs  | 1:3.5.1-4.el9_7  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-31790](https://access.redhat.com/security/cve/CVE-2026-31790)  |\n"
+                "text": "Vulnerability CVE-2026-28389\nSeverity: low\nPackage: openssl-libs\nVersion: 1:3.5.1-4.el9_7\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-28389](https://access.redhat.com/security/cve/CVE-2026-28389)",
+                "markdown": "**Vulnerability CVE-2026-28389**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | openssl-libs  | 1:3.5.1-4.el9_7  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-28389](https://access.redhat.com/security/cve/CVE-2026-28389)  |\n"
               },
               "properties": {
                 "purls": [
@@ -2632,6 +2632,69 @@
                   "pkg:rpm/rocky/openssl-libs@3.5.1-4.el9_7?arch=x86_64\u0026distro=rocky-9.7\u0026epoch=1\u0026upstream=openssl-3.5.1-4.el9_7.src.rpm"
                 ],
                 "security-severity": "3.1"
+              }
+            },
+            {
+              "id": "CVE-2026-4438-glibc",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-4438 low vulnerability for glibc package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in the GNU C library (glibc). When applications use the `gethostbyaddr` or `gethostbyaddr_r` functions with a `nsswitch.conf` configuration that specifies glibc's DNS backend, the library may return an invalid DNS hostname. This violates the DNS specification and could lead to applications receiving incorrect hostname information, potentially impacting network operations or security decisions."
+              },
+              "helpUri": "https://github.com/anchore/grype",
+              "help": {
+                "text": "Vulnerability CVE-2026-4438\nSeverity: low\nPackage: glibc\nVersion: 2.34-231.el9_7.2\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-4438](https://access.redhat.com/security/cve/CVE-2026-4438)",
+                "markdown": "**Vulnerability CVE-2026-4438**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | glibc  | 2.34-231.el9_7.2  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-4438](https://access.redhat.com/security/cve/CVE-2026-4438)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/glibc@2.34-231.el9_7.2?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=glibc-2.34-231.el9_7.2.src.rpm"
+                ],
+                "security-severity": "4.0"
+              }
+            },
+            {
+              "id": "CVE-2026-4438-glibc-common",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-4438 low vulnerability for glibc-common package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in the GNU C library (glibc). When applications use the `gethostbyaddr` or `gethostbyaddr_r` functions with a `nsswitch.conf` configuration that specifies glibc's DNS backend, the library may return an invalid DNS hostname. This violates the DNS specification and could lead to applications receiving incorrect hostname information, potentially impacting network operations or security decisions."
+              },
+              "helpUri": "https://github.com/anchore/grype",
+              "help": {
+                "text": "Vulnerability CVE-2026-4438\nSeverity: low\nPackage: glibc-common\nVersion: 2.34-231.el9_7.2\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-4438](https://access.redhat.com/security/cve/CVE-2026-4438)",
+                "markdown": "**Vulnerability CVE-2026-4438**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | glibc-common  | 2.34-231.el9_7.2  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-4438](https://access.redhat.com/security/cve/CVE-2026-4438)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/glibc-common@2.34-231.el9_7.2?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=glibc-2.34-231.el9_7.2.src.rpm"
+                ],
+                "security-severity": "4.0"
+              }
+            },
+            {
+              "id": "CVE-2026-4438-glibc-minimal-langpack",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-4438 low vulnerability for glibc-minimal-langpack package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in the GNU C library (glibc). When applications use the `gethostbyaddr` or `gethostbyaddr_r` functions with a `nsswitch.conf` configuration that specifies glibc's DNS backend, the library may return an invalid DNS hostname. This violates the DNS specification and could lead to applications receiving incorrect hostname information, potentially impacting network operations or security decisions."
+              },
+              "helpUri": "https://github.com/anchore/grype",
+              "help": {
+                "text": "Vulnerability CVE-2026-4438\nSeverity: low\nPackage: glibc-minimal-langpack\nVersion: 2.34-231.el9_7.2\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-4438](https://access.redhat.com/security/cve/CVE-2026-4438)",
+                "markdown": "**Vulnerability CVE-2026-4438**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | glibc-minimal-langpack  | 2.34-231.el9_7.2  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-4438](https://access.redhat.com/security/cve/CVE-2026-4438)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/glibc-minimal-langpack@2.34-231.el9_7.2?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=glibc-2.34-231.el9_7.2.src.rpm"
+                ],
+                "security-severity": "4.0"
               }
             },
             {
@@ -2803,6 +2866,69 @@
               }
             },
             {
+              "id": "CVE-2026-31790-openssl",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-31790 medium vulnerability for openssl package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in openssl. Applications that use RSASVE key encapsulation, a method for securely exchanging encryption keys, may inadvertently expose sensitive data. This vulnerability arises when an application processes a malicious, invalid RSA public key provided by an attacker without proper validation. Consequently, the application might send the contents of an uninitialized memory buffer, which could contain confidential information, to the attacker."
+              },
+              "helpUri": "https://github.com/anchore/grype",
+              "help": {
+                "text": "Vulnerability CVE-2026-31790\nSeverity: medium\nPackage: openssl\nVersion: 1:3.5.1-4.el9_7\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-31790](https://access.redhat.com/security/cve/CVE-2026-31790)",
+                "markdown": "**Vulnerability CVE-2026-31790**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | openssl  | 1:3.5.1-4.el9_7  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-31790](https://access.redhat.com/security/cve/CVE-2026-31790)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/openssl@3.5.1-4.el9_7?arch=x86_64\u0026distro=rocky-9.7\u0026epoch=1\u0026upstream=openssl-3.5.1-4.el9_7.src.rpm"
+                ],
+                "security-severity": "5.9"
+              }
+            },
+            {
+              "id": "CVE-2026-31790-openssl-fips-provider",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-31790 medium vulnerability for openssl-fips-provider package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in openssl. Applications that use RSASVE key encapsulation, a method for securely exchanging encryption keys, may inadvertently expose sensitive data. This vulnerability arises when an application processes a malicious, invalid RSA public key provided by an attacker without proper validation. Consequently, the application might send the contents of an uninitialized memory buffer, which could contain confidential information, to the attacker."
+              },
+              "helpUri": "https://github.com/anchore/grype",
+              "help": {
+                "text": "Vulnerability CVE-2026-31790\nSeverity: medium\nPackage: openssl-fips-provider\nVersion: 1:3.5.1-4.el9_7\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-31790](https://access.redhat.com/security/cve/CVE-2026-31790)",
+                "markdown": "**Vulnerability CVE-2026-31790**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | openssl-fips-provider  | 1:3.5.1-4.el9_7  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-31790](https://access.redhat.com/security/cve/CVE-2026-31790)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/openssl-fips-provider@3.5.1-4.el9_7?arch=x86_64\u0026distro=rocky-9.7\u0026epoch=1\u0026upstream=openssl-3.5.1-4.el9_7.src.rpm"
+                ],
+                "security-severity": "5.9"
+              }
+            },
+            {
+              "id": "CVE-2026-31790-openssl-libs",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-31790 medium vulnerability for openssl-libs package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in openssl. Applications that use RSASVE key encapsulation, a method for securely exchanging encryption keys, may inadvertently expose sensitive data. This vulnerability arises when an application processes a malicious, invalid RSA public key provided by an attacker without proper validation. Consequently, the application might send the contents of an uninitialized memory buffer, which could contain confidential information, to the attacker."
+              },
+              "helpUri": "https://github.com/anchore/grype",
+              "help": {
+                "text": "Vulnerability CVE-2026-31790\nSeverity: medium\nPackage: openssl-libs\nVersion: 1:3.5.1-4.el9_7\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-31790](https://access.redhat.com/security/cve/CVE-2026-31790)",
+                "markdown": "**Vulnerability CVE-2026-31790**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | openssl-libs  | 1:3.5.1-4.el9_7  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-31790](https://access.redhat.com/security/cve/CVE-2026-31790)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/openssl-libs@3.5.1-4.el9_7?arch=x86_64\u0026distro=rocky-9.7\u0026epoch=1\u0026upstream=openssl-3.5.1-4.el9_7.src.rpm"
+                ],
+                "security-severity": "5.9"
+              }
+            },
+            {
               "id": "CVE-2025-15468-openssl",
               "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
@@ -2884,69 +3010,6 @@
                   "pkg:rpm/rocky/libxml2@2.9.13-14.el9_7?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=libxml2-2.9.13-14.el9_7.src.rpm"
                 ],
                 "security-severity": "2.5"
-              }
-            },
-            {
-              "id": "CVE-2026-4438-glibc",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-4438 low vulnerability for glibc package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in the GNU C library (glibc). When applications use the `gethostbyaddr` or `gethostbyaddr_r` functions with a `nsswitch.conf` configuration that specifies glibc's DNS backend, the library may return an invalid DNS hostname. This violates the DNS specification and could lead to applications receiving incorrect hostname information, potentially impacting network operations or security decisions."
-              },
-              "helpUri": "https://github.com/anchore/grype",
-              "help": {
-                "text": "Vulnerability CVE-2026-4438\nSeverity: low\nPackage: glibc\nVersion: 2.34-231.el9_7.2\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-4438](https://access.redhat.com/security/cve/CVE-2026-4438)",
-                "markdown": "**Vulnerability CVE-2026-4438**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | glibc  | 2.34-231.el9_7.2  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-4438](https://access.redhat.com/security/cve/CVE-2026-4438)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/glibc@2.34-231.el9_7.2?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=glibc-2.34-231.el9_7.2.src.rpm"
-                ],
-                "security-severity": "4.0"
-              }
-            },
-            {
-              "id": "CVE-2026-4438-glibc-common",
-              "name": "RpmMatcherExactIndirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-4438 low vulnerability for glibc-common package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in the GNU C library (glibc). When applications use the `gethostbyaddr` or `gethostbyaddr_r` functions with a `nsswitch.conf` configuration that specifies glibc's DNS backend, the library may return an invalid DNS hostname. This violates the DNS specification and could lead to applications receiving incorrect hostname information, potentially impacting network operations or security decisions."
-              },
-              "helpUri": "https://github.com/anchore/grype",
-              "help": {
-                "text": "Vulnerability CVE-2026-4438\nSeverity: low\nPackage: glibc-common\nVersion: 2.34-231.el9_7.2\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-4438](https://access.redhat.com/security/cve/CVE-2026-4438)",
-                "markdown": "**Vulnerability CVE-2026-4438**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | glibc-common  | 2.34-231.el9_7.2  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-4438](https://access.redhat.com/security/cve/CVE-2026-4438)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/glibc-common@2.34-231.el9_7.2?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=glibc-2.34-231.el9_7.2.src.rpm"
-                ],
-                "security-severity": "4.0"
-              }
-            },
-            {
-              "id": "CVE-2026-4438-glibc-minimal-langpack",
-              "name": "RpmMatcherExactIndirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-4438 low vulnerability for glibc-minimal-langpack package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in the GNU C library (glibc). When applications use the `gethostbyaddr` or `gethostbyaddr_r` functions with a `nsswitch.conf` configuration that specifies glibc's DNS backend, the library may return an invalid DNS hostname. This violates the DNS specification and could lead to applications receiving incorrect hostname information, potentially impacting network operations or security decisions."
-              },
-              "helpUri": "https://github.com/anchore/grype",
-              "help": {
-                "text": "Vulnerability CVE-2026-4438\nSeverity: low\nPackage: glibc-minimal-langpack\nVersion: 2.34-231.el9_7.2\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-4438](https://access.redhat.com/security/cve/CVE-2026-4438)",
-                "markdown": "**Vulnerability CVE-2026-4438**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | glibc-minimal-langpack  | 2.34-231.el9_7.2  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-4438](https://access.redhat.com/security/cve/CVE-2026-4438)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/glibc-minimal-langpack@2.34-231.el9_7.2?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=glibc-2.34-231.el9_7.2.src.rpm"
-                ],
-                "security-severity": "4.0"
               }
             },
             {
@@ -3181,6 +3244,90 @@
               }
             },
             {
+              "id": "CVE-2026-4878-libcap",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-4878 high vulnerability for libcap package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in libcap. A local unprivileged user can exploit a Time-of-check-to-time-of-use (TOCTOU) race condition in the `cap_set_file()` function. This allows an attacker with write access to a parent directory to redirect file capability updates to an attacker-controlled file. By doing so, capabilities can be injected into or stripped from unintended executables, leading to privilege escalation."
+              },
+              "helpUri": "https://github.com/anchore/grype",
+              "help": {
+                "text": "Vulnerability CVE-2026-4878\nSeverity: high\nPackage: libcap\nVersion: 2.48-10.el9\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-4878](https://access.redhat.com/security/cve/CVE-2026-4878)",
+                "markdown": "**Vulnerability CVE-2026-4878**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| high  | libcap  | 2.48-10.el9  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-4878](https://access.redhat.com/security/cve/CVE-2026-4878)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/libcap@2.48-10.el9?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=libcap-2.48-10.el9.src.rpm"
+                ],
+                "security-severity": "6.7"
+              }
+            },
+            {
+              "id": "CVE-2026-28386-openssl",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-28386 low vulnerability for openssl package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in openssl. Applications using AES-CFB128 encryption or decryption on systems with AVX-512 and VAES support may experience a Denial of Service (DoS). This occurs when processing partial cipher blocks, specifically if the input buffer ends at a memory page boundary and the subsequent page is unmapped. This can lead to an out-of-bounds read of up to 15 bytes and a potential application crash."
+              },
+              "helpUri": "https://github.com/anchore/grype",
+              "help": {
+                "text": "Vulnerability CVE-2026-28386\nSeverity: low\nPackage: openssl\nVersion: 1:3.5.1-4.el9_7\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-28386](https://access.redhat.com/security/cve/CVE-2026-28386)",
+                "markdown": "**Vulnerability CVE-2026-28386**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | openssl  | 1:3.5.1-4.el9_7  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-28386](https://access.redhat.com/security/cve/CVE-2026-28386)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/openssl@3.5.1-4.el9_7?arch=x86_64\u0026distro=rocky-9.7\u0026epoch=1\u0026upstream=openssl-3.5.1-4.el9_7.src.rpm"
+                ],
+                "security-severity": "4.7"
+              }
+            },
+            {
+              "id": "CVE-2026-28386-openssl-fips-provider",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-28386 low vulnerability for openssl-fips-provider package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in openssl. Applications using AES-CFB128 encryption or decryption on systems with AVX-512 and VAES support may experience a Denial of Service (DoS). This occurs when processing partial cipher blocks, specifically if the input buffer ends at a memory page boundary and the subsequent page is unmapped. This can lead to an out-of-bounds read of up to 15 bytes and a potential application crash."
+              },
+              "helpUri": "https://github.com/anchore/grype",
+              "help": {
+                "text": "Vulnerability CVE-2026-28386\nSeverity: low\nPackage: openssl-fips-provider\nVersion: 1:3.5.1-4.el9_7\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-28386](https://access.redhat.com/security/cve/CVE-2026-28386)",
+                "markdown": "**Vulnerability CVE-2026-28386**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | openssl-fips-provider  | 1:3.5.1-4.el9_7  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-28386](https://access.redhat.com/security/cve/CVE-2026-28386)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/openssl-fips-provider@3.5.1-4.el9_7?arch=x86_64\u0026distro=rocky-9.7\u0026epoch=1\u0026upstream=openssl-3.5.1-4.el9_7.src.rpm"
+                ],
+                "security-severity": "4.7"
+              }
+            },
+            {
+              "id": "CVE-2026-28386-openssl-libs",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-28386 low vulnerability for openssl-libs package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in openssl. Applications using AES-CFB128 encryption or decryption on systems with AVX-512 and VAES support may experience a Denial of Service (DoS). This occurs when processing partial cipher blocks, specifically if the input buffer ends at a memory page boundary and the subsequent page is unmapped. This can lead to an out-of-bounds read of up to 15 bytes and a potential application crash."
+              },
+              "helpUri": "https://github.com/anchore/grype",
+              "help": {
+                "text": "Vulnerability CVE-2026-28386\nSeverity: low\nPackage: openssl-libs\nVersion: 1:3.5.1-4.el9_7\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-28386](https://access.redhat.com/security/cve/CVE-2026-28386)",
+                "markdown": "**Vulnerability CVE-2026-28386**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | openssl-libs  | 1:3.5.1-4.el9_7  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-28386](https://access.redhat.com/security/cve/CVE-2026-28386)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/openssl-libs@3.5.1-4.el9_7?arch=x86_64\u0026distro=rocky-9.7\u0026epoch=1\u0026upstream=openssl-3.5.1-4.el9_7.src.rpm"
+                ],
+                "security-severity": "4.7"
+              }
+            },
+            {
               "id": "CVE-2023-30571-libarchive",
               "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
@@ -3328,48 +3475,6 @@
               }
             },
             {
-              "id": "CVE-2026-0992-libxml2",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-0992 low vulnerability for libxml2 package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in the libxml2 library. This uncontrolled resource consumption vulnerability occurs when processing XML catalogs that contain repeated \u003cnextCatalog\u003e elements pointing to the same downstream catalog. A remote attacker can exploit this by supplying crafted catalogs, causing the parser to redundantly traverse catalog chains. This leads to excessive CPU consumption and degrades application availability, resulting in a denial-of-service condition."
-              },
-              "helpUri": "https://github.com/anchore/grype",
-              "help": {
-                "text": "Vulnerability CVE-2026-0992\nSeverity: low\nPackage: libxml2\nVersion: 2.9.13-14.el9_7\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-0992](https://access.redhat.com/security/cve/CVE-2026-0992)",
-                "markdown": "**Vulnerability CVE-2026-0992**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | libxml2  | 2.9.13-14.el9_7  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-0992](https://access.redhat.com/security/cve/CVE-2026-0992)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/libxml2@2.9.13-14.el9_7?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=libxml2-2.9.13-14.el9_7.src.rpm"
-                ],
-                "security-severity": "2.9"
-              }
-            },
-            {
-              "id": "CVE-2026-0989-libxml2",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-0989 low vulnerability for libxml2 package"
-              },
-              "fullDescription": {
-                "text": "A flaw was identified in the RelaxNG parser of libxml2 related to how external schema inclusions are handled. The parser does not enforce a limit on inclusion depth when resolving nested \u003cinclude\u003e directives. Specially crafted or overly complex schemas can cause excessive recursion during parsing. This may lead to stack exhaustion and application crashes, creating a denial-of-service risk."
-              },
-              "helpUri": "https://github.com/anchore/grype",
-              "help": {
-                "text": "Vulnerability CVE-2026-0989\nSeverity: low\nPackage: libxml2\nVersion: 2.9.13-14.el9_7\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-0989](https://access.redhat.com/security/cve/CVE-2026-0989)",
-                "markdown": "**Vulnerability CVE-2026-0989**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | libxml2  | 2.9.13-14.el9_7  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-0989](https://access.redhat.com/security/cve/CVE-2026-0989)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/libxml2@2.9.13-14.el9_7?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=libxml2-2.9.13-14.el9_7.src.rpm"
-                ],
-                "security-severity": "3.7"
-              }
-            },
-            {
               "id": "CVE-2025-13034-curl",
               "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
@@ -3409,6 +3514,48 @@
                   "pkg:rpm/rocky/libcurl@7.76.1-34.el9?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=curl-7.76.1-34.el9.src.rpm"
                 ],
                 "security-severity": "6.8"
+              }
+            },
+            {
+              "id": "CVE-2026-0989-libxml2",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-0989 low vulnerability for libxml2 package"
+              },
+              "fullDescription": {
+                "text": "A flaw was identified in the RelaxNG parser of libxml2 related to how external schema inclusions are handled. The parser does not enforce a limit on inclusion depth when resolving nested \u003cinclude\u003e directives. Specially crafted or overly complex schemas can cause excessive recursion during parsing. This may lead to stack exhaustion and application crashes, creating a denial-of-service risk."
+              },
+              "helpUri": "https://github.com/anchore/grype",
+              "help": {
+                "text": "Vulnerability CVE-2026-0989\nSeverity: low\nPackage: libxml2\nVersion: 2.9.13-14.el9_7\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-0989](https://access.redhat.com/security/cve/CVE-2026-0989)",
+                "markdown": "**Vulnerability CVE-2026-0989**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | libxml2  | 2.9.13-14.el9_7  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-0989](https://access.redhat.com/security/cve/CVE-2026-0989)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/libxml2@2.9.13-14.el9_7?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=libxml2-2.9.13-14.el9_7.src.rpm"
+                ],
+                "security-severity": "3.7"
+              }
+            },
+            {
+              "id": "CVE-2026-0992-libxml2",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-0992 low vulnerability for libxml2 package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in the libxml2 library. This uncontrolled resource consumption vulnerability occurs when processing XML catalogs that contain repeated \u003cnextCatalog\u003e elements pointing to the same downstream catalog. A remote attacker can exploit this by supplying crafted catalogs, causing the parser to redundantly traverse catalog chains. This leads to excessive CPU consumption and degrades application availability, resulting in a denial-of-service condition."
+              },
+              "helpUri": "https://github.com/anchore/grype",
+              "help": {
+                "text": "Vulnerability CVE-2026-0992\nSeverity: low\nPackage: libxml2\nVersion: 2.9.13-14.el9_7\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-0992](https://access.redhat.com/security/cve/CVE-2026-0992)",
+                "markdown": "**Vulnerability CVE-2026-0992**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | libxml2  | 2.9.13-14.el9_7  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-0992](https://access.redhat.com/security/cve/CVE-2026-0992)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/libxml2@2.9.13-14.el9_7?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=libxml2-2.9.13-14.el9_7.src.rpm"
+                ],
+                "security-severity": "2.9"
               }
             },
             {
@@ -3703,6 +3850,69 @@
                   "pkg:rpm/rocky/gnupg2@2.3.3-4.el9?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=gnupg2-2.3.3-4.el9.src.rpm"
                 ],
                 "security-severity": "3.7"
+              }
+            },
+            {
+              "id": "CVE-2026-28388-openssl",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-28388 low vulnerability for openssl package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in OpenSSL. When processing a malformed delta Certificate Revocation List (CRL) that lacks a required CRL Number extension, a NULL pointer dereference can occur. This vulnerability can be exploited by a remote attacker who provides a specially crafted delta CRL to an application that has delta CRL processing enabled, leading to a Denial of Service (DoS) for the application."
+              },
+              "helpUri": "https://github.com/anchore/grype",
+              "help": {
+                "text": "Vulnerability CVE-2026-28388\nSeverity: low\nPackage: openssl\nVersion: 1:3.5.1-4.el9_7\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-28388](https://access.redhat.com/security/cve/CVE-2026-28388)",
+                "markdown": "**Vulnerability CVE-2026-28388**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | openssl  | 1:3.5.1-4.el9_7  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-28388](https://access.redhat.com/security/cve/CVE-2026-28388)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/openssl@3.5.1-4.el9_7?arch=x86_64\u0026distro=rocky-9.7\u0026epoch=1\u0026upstream=openssl-3.5.1-4.el9_7.src.rpm"
+                ],
+                "security-severity": "5.9"
+              }
+            },
+            {
+              "id": "CVE-2026-28388-openssl-fips-provider",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-28388 low vulnerability for openssl-fips-provider package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in OpenSSL. When processing a malformed delta Certificate Revocation List (CRL) that lacks a required CRL Number extension, a NULL pointer dereference can occur. This vulnerability can be exploited by a remote attacker who provides a specially crafted delta CRL to an application that has delta CRL processing enabled, leading to a Denial of Service (DoS) for the application."
+              },
+              "helpUri": "https://github.com/anchore/grype",
+              "help": {
+                "text": "Vulnerability CVE-2026-28388\nSeverity: low\nPackage: openssl-fips-provider\nVersion: 1:3.5.1-4.el9_7\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-28388](https://access.redhat.com/security/cve/CVE-2026-28388)",
+                "markdown": "**Vulnerability CVE-2026-28388**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | openssl-fips-provider  | 1:3.5.1-4.el9_7  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-28388](https://access.redhat.com/security/cve/CVE-2026-28388)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/openssl-fips-provider@3.5.1-4.el9_7?arch=x86_64\u0026distro=rocky-9.7\u0026epoch=1\u0026upstream=openssl-3.5.1-4.el9_7.src.rpm"
+                ],
+                "security-severity": "5.9"
+              }
+            },
+            {
+              "id": "CVE-2026-28388-openssl-libs",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-28388 low vulnerability for openssl-libs package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in OpenSSL. When processing a malformed delta Certificate Revocation List (CRL) that lacks a required CRL Number extension, a NULL pointer dereference can occur. This vulnerability can be exploited by a remote attacker who provides a specially crafted delta CRL to an application that has delta CRL processing enabled, leading to a Denial of Service (DoS) for the application."
+              },
+              "helpUri": "https://github.com/anchore/grype",
+              "help": {
+                "text": "Vulnerability CVE-2026-28388\nSeverity: low\nPackage: openssl-libs\nVersion: 1:3.5.1-4.el9_7\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-28388](https://access.redhat.com/security/cve/CVE-2026-28388)",
+                "markdown": "**Vulnerability CVE-2026-28388**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | openssl-libs  | 1:3.5.1-4.el9_7  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-28388](https://access.redhat.com/security/cve/CVE-2026-28388)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/openssl-libs@3.5.1-4.el9_7?arch=x86_64\u0026distro=rocky-9.7\u0026epoch=1\u0026upstream=openssl-3.5.1-4.el9_7.src.rpm"
+                ],
+                "security-severity": "5.9"
               }
             },
             {
@@ -4165,27 +4375,6 @@
                   "pkg:rpm/rocky/glib2@2.68.4-18.el9_7?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=glib2-2.68.4-18.el9_7.src.rpm"
                 ],
                 "security-severity": "2.8"
-              }
-            },
-            {
-              "id": "CVE-2026-4878-libcap",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-4878 high vulnerability for libcap package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in libcap. A local unprivileged user can exploit a Time-of-check-to-time-of-use (TOCTOU) race condition in the `cap_set_file()` function. This allows an attacker with write access to a parent directory to redirect file capability updates to an attacker-controlled file. By doing so, capabilities can be injected into or stripped from unintended executables, leading to privilege escalation."
-              },
-              "helpUri": "https://github.com/anchore/grype",
-              "help": {
-                "text": "Vulnerability CVE-2026-4878\nSeverity: high\nPackage: libcap\nVersion: 2.48-10.el9\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-4878](https://access.redhat.com/security/cve/CVE-2026-4878)",
-                "markdown": "**Vulnerability CVE-2026-4878**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| high  | libcap  | 2.48-10.el9  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-4878](https://access.redhat.com/security/cve/CVE-2026-4878)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/libcap@2.48-10.el9?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=libcap-2.48-10.el9.src.rpm"
-                ],
-                "security-severity": "6.7"
               }
             },
             {
@@ -5795,37 +5984,6 @@
           }
         },
         {
-          "ruleId": "CVE-2026-0990-libxml2",
-          "level": "warning",
-          "message": {
-            "text": "A medium vulnerability in rpm package: libxml2, version 2.9.13-14.el9_7 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:4399bb3147e5af0f9f6057bd99266fa171dd752ebe4e46e204e406ad3b5504f6:/var/lib/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "02875c850bf843ec5b806ce610acbadd16fbfa62194c6e942fec37ed6e77ae64:1"
-          }
-        },
-        {
           "ruleId": "CVE-2025-15224-curl",
           "level": "note",
           "message": {
@@ -6040,6 +6198,37 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "7bf7c0a7e5961d54f9f1697e6affe9737f0e48103ea617c57656f9839203716a:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-0990-libxml2",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: libxml2, version 2.9.13-14.el9_7 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:4399bb3147e5af0f9f6057bd99266fa171dd752ebe4e46e204e406ad3b5504f6:/var/lib/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "02875c850bf843ec5b806ce610acbadd16fbfa62194c6e942fec37ed6e77ae64:1"
           }
         },
         {
@@ -6474,6 +6663,37 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "7bf7c0a7e5961d54f9f1697e6affe9737f0e48103ea617c57656f9839203716a:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2025-6176-libbrotli",
+          "level": "error",
+          "message": {
+            "text": "A high vulnerability in rpm package: libbrotli, version 1.0.9-7.el9_5 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:4399bb3147e5af0f9f6057bd99266fa171dd752ebe4e46e204e406ad3b5504f6:/var/lib/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "3d71d45b8f599ada2496469885ecc26936dd9efaa5a02593bba12ed35e604834:1"
           }
         },
         {
@@ -6973,37 +7193,6 @@
           }
         },
         {
-          "ruleId": "CVE-2025-6176-libbrotli",
-          "level": "error",
-          "message": {
-            "text": "A high vulnerability in rpm package: libbrotli, version 1.0.9-7.el9_5 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:4399bb3147e5af0f9f6057bd99266fa171dd752ebe4e46e204e406ad3b5504f6:/var/lib/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "3d71d45b8f599ada2496469885ecc26936dd9efaa5a02593bba12ed35e604834:1"
-          }
-        },
-        {
           "ruleId": "CVE-2025-15079-curl",
           "level": "note",
           "message": {
@@ -7187,99 +7376,6 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "79a73284139d65c3916a6fbb7dad015e91f47ab35f194139cfab47275f1c14be:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2026-28390-openssl",
-          "level": "warning",
-          "message": {
-            "text": "A medium vulnerability in rpm package: openssl, version 1:3.5.1-4.el9_7 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:4399bb3147e5af0f9f6057bd99266fa171dd752ebe4e46e204e406ad3b5504f6:/var/lib/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "0a9e676ed635f0bc1cf4fe53bd70fc0cdf4a403380029e77852bd9fd5a9cf5f6:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2026-28390-openssl-fips-provider",
-          "level": "warning",
-          "message": {
-            "text": "A medium vulnerability in rpm package: openssl-fips-provider, version 1:3.5.1-4.el9_7 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:4399bb3147e5af0f9f6057bd99266fa171dd752ebe4e46e204e406ad3b5504f6:/var/lib/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "06873ee225abe87081e77a136ebfb6cd49a94c1aec485052518f731ad7b1af1e:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2026-28390-openssl-libs",
-          "level": "warning",
-          "message": {
-            "text": "A medium vulnerability in rpm package: openssl-libs, version 1:3.5.1-4.el9_7 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:4399bb3147e5af0f9f6057bd99266fa171dd752ebe4e46e204e406ad3b5504f6:/var/lib/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "7f096a64524891508940c5eb6f0e4455ef7abeaf5e49aae046bb1d33594dd1a8:1"
           }
         },
         {
@@ -7497,6 +7593,99 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "79a73284139d65c3916a6fbb7dad015e91f47ab35f194139cfab47275f1c14be:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-28390-openssl",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: openssl, version 1:3.5.1-4.el9_7 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:4399bb3147e5af0f9f6057bd99266fa171dd752ebe4e46e204e406ad3b5504f6:/var/lib/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "0a9e676ed635f0bc1cf4fe53bd70fc0cdf4a403380029e77852bd9fd5a9cf5f6:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-28390-openssl-fips-provider",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: openssl-fips-provider, version 1:3.5.1-4.el9_7 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:4399bb3147e5af0f9f6057bd99266fa171dd752ebe4e46e204e406ad3b5504f6:/var/lib/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "06873ee225abe87081e77a136ebfb6cd49a94c1aec485052518f731ad7b1af1e:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-28390-openssl-libs",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: openssl-libs, version 1:3.5.1-4.el9_7 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:4399bb3147e5af0f9f6057bd99266fa171dd752ebe4e46e204e406ad3b5504f6:/var/lib/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "7f096a64524891508940c5eb6f0e4455ef7abeaf5e49aae046bb1d33594dd1a8:1"
           }
         },
         {
@@ -7841,10 +8030,10 @@
           }
         },
         {
-          "ruleId": "CVE-2026-31790-openssl",
-          "level": "warning",
+          "ruleId": "CVE-2026-28389-openssl",
+          "level": "note",
           "message": {
-            "text": "A medium vulnerability in rpm package: openssl, version 1:3.5.1-4.el9_7 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
+            "text": "A low vulnerability in rpm package: openssl, version 1:3.5.1-4.el9_7 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
           },
           "locations": [
             {
@@ -7872,10 +8061,10 @@
           }
         },
         {
-          "ruleId": "CVE-2026-31790-openssl-fips-provider",
-          "level": "warning",
+          "ruleId": "CVE-2026-28389-openssl-fips-provider",
+          "level": "note",
           "message": {
-            "text": "A medium vulnerability in rpm package: openssl-fips-provider, version 1:3.5.1-4.el9_7 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
+            "text": "A low vulnerability in rpm package: openssl-fips-provider, version 1:3.5.1-4.el9_7 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
           },
           "locations": [
             {
@@ -7903,10 +8092,10 @@
           }
         },
         {
-          "ruleId": "CVE-2026-31790-openssl-libs",
-          "level": "warning",
+          "ruleId": "CVE-2026-28389-openssl-libs",
+          "level": "note",
           "message": {
-            "text": "A medium vulnerability in rpm package: openssl-libs, version 1:3.5.1-4.el9_7 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
+            "text": "A low vulnerability in rpm package: openssl-libs, version 1:3.5.1-4.el9_7 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
           },
           "locations": [
             {
@@ -8086,6 +8275,99 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "7f096a64524891508940c5eb6f0e4455ef7abeaf5e49aae046bb1d33594dd1a8:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-4438-glibc",
+          "level": "note",
+          "message": {
+            "text": "A low vulnerability in rpm package: glibc, version 2.34-231.el9_7.2 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:4399bb3147e5af0f9f6057bd99266fa171dd752ebe4e46e204e406ad3b5504f6:/var/lib/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "b419b3446b4b249edd081d1c4bb0dc1c20bd94c8739c0ade86431e6e4c9659eb:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-4438-glibc-common",
+          "level": "note",
+          "message": {
+            "text": "A low vulnerability in rpm package: glibc-common, version 2.34-231.el9_7.2 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:4399bb3147e5af0f9f6057bd99266fa171dd752ebe4e46e204e406ad3b5504f6:/var/lib/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "0bd785fd319660b6ddde42ab33e8f707ac72f403fd70f8c40ceb18b44e9ee947:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-4438-glibc-minimal-langpack",
+          "level": "note",
+          "message": {
+            "text": "A low vulnerability in rpm package: glibc-minimal-langpack, version 2.34-231.el9_7.2 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:4399bb3147e5af0f9f6057bd99266fa171dd752ebe4e46e204e406ad3b5504f6:/var/lib/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "7bf7c0a7e5961d54f9f1697e6affe9737f0e48103ea617c57656f9839203716a:1"
           }
         },
         {
@@ -8337,6 +8619,99 @@
           }
         },
         {
+          "ruleId": "CVE-2026-31790-openssl",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: openssl, version 1:3.5.1-4.el9_7 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:4399bb3147e5af0f9f6057bd99266fa171dd752ebe4e46e204e406ad3b5504f6:/var/lib/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "0a9e676ed635f0bc1cf4fe53bd70fc0cdf4a403380029e77852bd9fd5a9cf5f6:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-31790-openssl-fips-provider",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: openssl-fips-provider, version 1:3.5.1-4.el9_7 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:4399bb3147e5af0f9f6057bd99266fa171dd752ebe4e46e204e406ad3b5504f6:/var/lib/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "06873ee225abe87081e77a136ebfb6cd49a94c1aec485052518f731ad7b1af1e:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-31790-openssl-libs",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: openssl-libs, version 1:3.5.1-4.el9_7 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:4399bb3147e5af0f9f6057bd99266fa171dd752ebe4e46e204e406ad3b5504f6:/var/lib/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "7f096a64524891508940c5eb6f0e4455ef7abeaf5e49aae046bb1d33594dd1a8:1"
+          }
+        },
+        {
           "ruleId": "CVE-2025-15468-openssl",
           "level": "note",
           "message": {
@@ -8458,99 +8833,6 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "02875c850bf843ec5b806ce610acbadd16fbfa62194c6e942fec37ed6e77ae64:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2026-4438-glibc",
-          "level": "note",
-          "message": {
-            "text": "A low vulnerability in rpm package: glibc, version 2.34-231.el9_7.2 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:4399bb3147e5af0f9f6057bd99266fa171dd752ebe4e46e204e406ad3b5504f6:/var/lib/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "b419b3446b4b249edd081d1c4bb0dc1c20bd94c8739c0ade86431e6e4c9659eb:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2026-4438-glibc-common",
-          "level": "note",
-          "message": {
-            "text": "A low vulnerability in rpm package: glibc-common, version 2.34-231.el9_7.2 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:4399bb3147e5af0f9f6057bd99266fa171dd752ebe4e46e204e406ad3b5504f6:/var/lib/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "0bd785fd319660b6ddde42ab33e8f707ac72f403fd70f8c40ceb18b44e9ee947:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2026-4438-glibc-minimal-langpack",
-          "level": "note",
-          "message": {
-            "text": "A low vulnerability in rpm package: glibc-minimal-langpack, version 2.34-231.el9_7.2 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:4399bb3147e5af0f9f6057bd99266fa171dd752ebe4e46e204e406ad3b5504f6:/var/lib/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "7bf7c0a7e5961d54f9f1697e6affe9737f0e48103ea617c57656f9839203716a:1"
           }
         },
         {
@@ -8895,6 +9177,130 @@
           }
         },
         {
+          "ruleId": "CVE-2026-4878-libcap",
+          "level": "error",
+          "message": {
+            "text": "A high vulnerability in rpm package: libcap, version 2.48-10.el9 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:4399bb3147e5af0f9f6057bd99266fa171dd752ebe4e46e204e406ad3b5504f6:/var/lib/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "582fafee1645521af42b7c742bbc87d6194c9d75b33ec9555da7a2a15d0b8a80:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-28386-openssl",
+          "level": "note",
+          "message": {
+            "text": "A low vulnerability in rpm package: openssl, version 1:3.5.1-4.el9_7 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:4399bb3147e5af0f9f6057bd99266fa171dd752ebe4e46e204e406ad3b5504f6:/var/lib/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "0a9e676ed635f0bc1cf4fe53bd70fc0cdf4a403380029e77852bd9fd5a9cf5f6:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-28386-openssl-fips-provider",
+          "level": "note",
+          "message": {
+            "text": "A low vulnerability in rpm package: openssl-fips-provider, version 1:3.5.1-4.el9_7 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:4399bb3147e5af0f9f6057bd99266fa171dd752ebe4e46e204e406ad3b5504f6:/var/lib/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "06873ee225abe87081e77a136ebfb6cd49a94c1aec485052518f731ad7b1af1e:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-28386-openssl-libs",
+          "level": "note",
+          "message": {
+            "text": "A low vulnerability in rpm package: openssl-libs, version 1:3.5.1-4.el9_7 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:4399bb3147e5af0f9f6057bd99266fa171dd752ebe4e46e204e406ad3b5504f6:/var/lib/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "7f096a64524891508940c5eb6f0e4455ef7abeaf5e49aae046bb1d33594dd1a8:1"
+          }
+        },
+        {
           "ruleId": "CVE-2023-30571-libarchive",
           "level": "warning",
           "message": {
@@ -9112,68 +9518,6 @@
           }
         },
         {
-          "ruleId": "CVE-2026-0992-libxml2",
-          "level": "note",
-          "message": {
-            "text": "A low vulnerability in rpm package: libxml2, version 2.9.13-14.el9_7 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:4399bb3147e5af0f9f6057bd99266fa171dd752ebe4e46e204e406ad3b5504f6:/var/lib/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "02875c850bf843ec5b806ce610acbadd16fbfa62194c6e942fec37ed6e77ae64:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2026-0989-libxml2",
-          "level": "note",
-          "message": {
-            "text": "A low vulnerability in rpm package: libxml2, version 2.9.13-14.el9_7 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:4399bb3147e5af0f9f6057bd99266fa171dd752ebe4e46e204e406ad3b5504f6:/var/lib/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "02875c850bf843ec5b806ce610acbadd16fbfa62194c6e942fec37ed6e77ae64:1"
-          }
-        },
-        {
           "ruleId": "CVE-2025-13034-curl",
           "level": "warning",
           "message": {
@@ -9233,6 +9577,68 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "cd70c63991bebfc8356ff05b60d9e8f147d34ea72ac80e9343140379a0b24457:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-0989-libxml2",
+          "level": "note",
+          "message": {
+            "text": "A low vulnerability in rpm package: libxml2, version 2.9.13-14.el9_7 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:4399bb3147e5af0f9f6057bd99266fa171dd752ebe4e46e204e406ad3b5504f6:/var/lib/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "02875c850bf843ec5b806ce610acbadd16fbfa62194c6e942fec37ed6e77ae64:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-0992-libxml2",
+          "level": "note",
+          "message": {
+            "text": "A low vulnerability in rpm package: libxml2, version 2.9.13-14.el9_7 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:4399bb3147e5af0f9f6057bd99266fa171dd752ebe4e46e204e406ad3b5504f6:/var/lib/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "02875c850bf843ec5b806ce610acbadd16fbfa62194c6e942fec37ed6e77ae64:1"
           }
         },
         {
@@ -9667,6 +10073,99 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "ed305f8faf7fa40eb7834a4292a4a77c9de3b753b8fc5805ad5a603083317bc6:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-28388-openssl",
+          "level": "note",
+          "message": {
+            "text": "A low vulnerability in rpm package: openssl, version 1:3.5.1-4.el9_7 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:4399bb3147e5af0f9f6057bd99266fa171dd752ebe4e46e204e406ad3b5504f6:/var/lib/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "0a9e676ed635f0bc1cf4fe53bd70fc0cdf4a403380029e77852bd9fd5a9cf5f6:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-28388-openssl-fips-provider",
+          "level": "note",
+          "message": {
+            "text": "A low vulnerability in rpm package: openssl-fips-provider, version 1:3.5.1-4.el9_7 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:4399bb3147e5af0f9f6057bd99266fa171dd752ebe4e46e204e406ad3b5504f6:/var/lib/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "06873ee225abe87081e77a136ebfb6cd49a94c1aec485052518f731ad7b1af1e:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-28388-openssl-libs",
+          "level": "note",
+          "message": {
+            "text": "A low vulnerability in rpm package: openssl-libs, version 1:3.5.1-4.el9_7 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:4399bb3147e5af0f9f6057bd99266fa171dd752ebe4e46e204e406ad3b5504f6:/var/lib/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "7f096a64524891508940c5eb6f0e4455ef7abeaf5e49aae046bb1d33594dd1a8:1"
           }
         },
         {
@@ -10349,37 +10848,6 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "011a71bb26df2e8b48508431aac6662a11c99dad4253357c23fd0c197e236006:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2026-4878-libcap",
-          "level": "error",
-          "message": {
-            "text": "A high vulnerability in rpm package: libcap, version 2.48-10.el9 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:4399bb3147e5af0f9f6057bd99266fa171dd752ebe4e46e204e406ad3b5504f6:/var/lib/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "582fafee1645521af42b7c742bbc87d6194c9d75b33ec9555da7a2a15d0b8a80:1"
           }
         },
         {
