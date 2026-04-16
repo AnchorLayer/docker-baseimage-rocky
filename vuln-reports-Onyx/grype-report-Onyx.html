@@ -907,13 +907,13 @@
                     <dd id="typeValue">image</dd><dt>Checksum:</dt>
                     <dd id="checksumValue">sha256:f376ba4b3b4e88e41bedc1d3756b8260edb64b3b311860cb50363435605ee0d0</dd><dt>Date:</dt>
                     <dd>
-                        <span id="dateElement">2026-04-16T07:09:58.486653071Z</span>
+                        <span id="dateElement">2026-04-16T09:02:08.68440192Z</span>
                         <span id="prettyDateElement" style="display: none;"></span>
                     </dd>
                     <dt>Grype Version:</dt>
                     <dd>0.111.0</dd>
                     <dt>DB Built:</dt>
-                    <dd>2026-04-15 19:33:17 +0000 UTC</dd>
+                    <dd>2026-04-16 06:59:03 +0000 UTC</dd>
                 </dl>
             </div>
             <div class="heading-right">
@@ -1189,22 +1189,6 @@
                         <td>A vulnerability was found in the Diffie-Hellman Ephemeral (DHE) Key Agreement Protocol, where a malicious client can exploit the server&#39;s public key validation process. By forcing the server to use DHE and validating the order of public keys, the client can trigger expensive server-side modular exponentiation calculations. This issue results in asymmetric resource consumption, potentially leading to a denial of service (DoS) attack by overwhelming the server with computationally intensive operations.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/openssl-libs@3.5.1-4.el9_7?arch=x86_64&distro=rocky-9.7&epoch=1&upstream=openssl-3.5.1-4.el9_7.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>libarchive</td>
-                        <td>3.5.3-6.el9_6</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-5121">CVE-2026-5121</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in libarchive. On 32-bit systems, an integer overflow vulnerability exists in the zisofs block pointer allocation logic. A remote attacker can exploit this by providing a specially crafted ISO9660 image, which can lead to a heap buffer overflow. This could potentially allow for arbitrary code execution on the affected system.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/libarchive@3.5.3-6.el9_6?arch=x86_64&distro=rocky-9.7&upstream=libarchive-3.5.3-6.el9_6.src.rpm</td>
                     </tr>
                     <tr>
                         <td>glib2</td>
@@ -1537,6 +1521,22 @@ could cause self-DoS of the per-connection daemon process.</td>
                         <td>A flaw was found in libssh. A remote attacker could trigger an out-of-bounds read vulnerability in the SFTP Extension Name Handler by manipulating the `idx` argument in the `sftp_extensions_get_name` or `sftp_extensions_get_data` functions. This could lead to a Denial of Service (DoS), making the affected system unresponsive.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/libssh-config@0.10.4-15.el9_6?arch=noarch&distro=rocky-9.7&upstream=libssh-0.10.4-15.el9_6.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>libarchive</td>
+                        <td>3.5.3-6.el9_6</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-5121">CVE-2026-5121</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in libarchive. On 32-bit systems, an integer overflow vulnerability exists in the zisofs block pointer allocation logic. A remote attacker can exploit this by providing a specially crafted ISO9660 image, which can lead to a heap buffer overflow. This could potentially allow for arbitrary code execution on the affected system.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/libarchive@3.5.3-6.el9_6?arch=x86_64&distro=rocky-9.7&upstream=libarchive-3.5.3-6.el9_6.src.rpm</td>
                     </tr>
                     <tr>
                         <td>openssl</td>
@@ -3071,6 +3071,22 @@ This is the same issue as in OpenSSH, tracked as CVE-2019-6111.</td>
                         <td>pkg:rpm/rocky/libnghttp2@1.43.0-6.el9?arch=x86_64&distro=rocky-9.7&upstream=nghttp2-1.43.0-6.el9.src.rpm</td>
                     </tr>
                     <tr>
+                        <td>libarchive</td>
+                        <td>3.5.3-6.el9_6</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-60753">CVE-2025-60753</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A vulnerability in apply_substitution() function in libarchive&#39;s bsdtar allows crafted -s substitution rules to repeatedly match a zero-length substring and append replacements without advancing the input pointer. When the rule uses the global /g flag (or an explicitly empty pattern), this leads to unbounded output allocation and eventual process OOM (Denial of Service). Upgrade to libarchive 3.8.1 or apply a patch that prevents zero-length match loops or rejects empty patterns.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/libarchive@3.5.3-6.el9_6?arch=x86_64&distro=rocky-9.7&upstream=libarchive-3.5.3-6.el9_6.src.rpm</td>
+                    </tr>
+                    <tr>
                         <td>openldap</td>
                         <td>2.6.8-4.el9.0.1</td>
                         <td>rpm</td>
@@ -3149,22 +3165,6 @@ This is the same issue as in OpenSSH, tracked as CVE-2019-6111.</td>
                         <td>A flaw was found in libssh in which a malicious SFTP (SSH File Transfer Protocol) server can exploit this by sending a malformed &#39;longname&#39; field within an `SSH_FXP_NAME` message during a file listing operation. This missing null check can lead to reading beyond allocated memory on the heap. This can cause unexpected behavior or lead to a denial of service (DoS) due to application crashes.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/libssh-config@0.10.4-15.el9_6?arch=noarch&distro=rocky-9.7&upstream=libssh-0.10.4-15.el9_6.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>libarchive</td>
-                        <td>3.5.3-6.el9_6</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2025-60753">CVE-2025-60753</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A vulnerability in apply_substitution() function in libarchive&#39;s bsdtar allows crafted -s substitution rules to repeatedly match a zero-length substring and append replacements without advancing the input pointer. When the rule uses the global /g flag (or an explicitly empty pattern), this leads to unbounded output allocation and eventual process OOM (Denial of Service). Upgrade to libarchive 3.8.1 or apply a patch that prevents zero-length match loops or rejects empty patterns.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/libarchive@3.5.3-6.el9_6?arch=x86_64&distro=rocky-9.7&upstream=libarchive-3.5.3-6.el9_6.src.rpm</td>
                     </tr>
                     <tr>
                         <td>openssl</td>
