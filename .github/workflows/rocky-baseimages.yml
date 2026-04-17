@@ -92,8 +92,33 @@ jobs:
             echo "EOF"
           } >> "$GITHUB_OUTPUT"
 
-      # Builds the Docker image but does not push it
+      # Hashes repomd.xml for BaseOS and AppStream to detect upstream package changes
+      # without building the image. A cache hit on the derived key means repos are
+      # unchanged and the entire build can be skipped.
+      - name: 'Fetch Rocky Linux repo metadata hash'
+        id: fetch_repo_meta
+        run: |
+          COMBINED=""
+          for repo in BaseOS AppStream; do
+            URL="https://dl.rockylinux.org/pub/rocky/${{ matrix.version }}/$repo/x86_64/os/repodata/repomd.xml"
+            HASH=$(curl -sfL "$URL" | sha256sum | cut -d' ' -f1 || echo "fetch-failed-$repo")
+            COMBINED="${COMBINED}${HASH}"
+            echo "Fetched $repo hash: $HASH"
+          done
+          REPO_HASH=$(echo -n "$COMBINED" | sha256sum | cut -d' ' -f1)
+          echo "repo_hash=$REPO_HASH" >> $GITHUB_OUTPUT
+          echo "Combined repo hash: $REPO_HASH"
+
+      - name: 'Check for repo metadata changes'
+        id: cache-repo-meta
+        uses: actions/cache@v4
+        with:
+          path: repo-meta-${{ matrix.version }}.hash
+          key: rocky-repo-meta-${{ matrix.version }}-${{ steps.fetch_repo_meta.outputs.repo_hash }}
+
+      # Builds the Docker image but does not push it (skipped when repos are unchanged)
       - name: 'Build Docker image'
+        if: steps.cache-repo-meta.outputs.cache-hit != 'true'
         id: build-image
         uses: docker/build-push-action@v5
         with:
@@ -111,16 +136,9 @@ jobs:
         id: capitalize_codename
         run: echo "codename=$(echo '${{ matrix.codename }}' | awk '{print toupper(substr($0,1,1))substr($0,2)}' )" >> $GITHUB_OUTPUT
 
-      # Caches the package list hash to speed up subsequent runs
-      - name: 'Cache package list hash for Rocky Linux ${{ matrix.version }}'
-        uses: actions/cache@v4
-        id: cache-pkg-state
-        with:
-          path: package-state-${{ matrix.version }}.hash
-          key: rocky-pkg-state-${{ matrix.version }}
-
-      # Generates the current package list hash
+      # Generates the installed package hash from the built image
       - name: 'Generate package list hash for Rocky Linux ${{ matrix.version }}'
+        if: steps.cache-repo-meta.outputs.cache-hit != 'true'
         id: generate_hash
         run: |
           echo "Generating package list hash for ghcr.io/${{ steps.lowercase_owner.outputs.owner }}/rocky-${{ matrix.version }}:latest..."
@@ -128,35 +146,31 @@ jobs:
           echo "Current package hash: $CURRENT_HASH"
           echo "new_hash=$CURRENT_HASH" >> $GITHUB_OUTPUT
 
-      # Compares the new hash with the old one to detect changes
-      - name: 'Compare hashes for Rocky Linux ${{ matrix.version }}'
-        id: check_changes
-        run: |
-          OLD_HASH=$(cat package-state-${{ matrix.version }}.hash 2>/dev/null || echo "no-previous-hash")
-          NEW_HASH="${{ steps.generate_hash.outputs.new_hash }}"
-          if [ "$OLD_HASH" == "$NEW_HASH" ]; then
-            echo "✅ No package changes detected for Rocky Linux ${{ matrix.version }}."
-            echo "changed=false" >> $GITHUB_OUTPUT
-          else
-            echo "🚨 Package changes detected for Rocky Linux ${{ matrix.version }}! Triggering rebuild."
-            echo "changed=true" >> $GITHUB_OUTPUT
-            echo $NEW_HASH > package-state-${{ matrix.version }}.hash
-          fi
+      # Uses the package hash as the cache key: a hit means packages are unchanged
+      # and scan/push can be skipped. A miss means new packages were installed.
+      - name: 'Check for package changes'
+        if: steps.cache-repo-meta.outputs.cache-hit != 'true'
+        id: cache-pkg-state
+        uses: actions/cache@v4
+        with:
+          path: package-state-${{ matrix.version }}.hash
+          key: rocky-pkg-state-${{ matrix.version }}-${{ steps.generate_hash.outputs.new_hash }}
+          restore-keys: rocky-pkg-state-${{ matrix.version }}-
 
       # Installs Grype and clones templates for vulnerability scanning
       - name: 'Install Grype and clone templates'
-        if: steps.check_changes.outputs.changed == 'true'
+        if: steps.cache-repo-meta.outputs.cache-hit != 'true' && steps.cache-pkg-state.outputs.cache-hit != 'true'
         run: |
           curl -sSfL https://raw.githubusercontent.com/anchore/grype/main/install.sh | sh -s -- -b /usr/local/bin
           git clone --depth 1 https://github.com/anchore/grype.git
 
       # Scans the image with Grype and generates various vulnerability reports
       - name: 'Scan image with Grype and generate all reports'
-        if: steps.check_changes.outputs.changed == 'true'
+        if: steps.cache-repo-meta.outputs.cache-hit != 'true' && steps.cache-pkg-state.outputs.cache-hit != 'true'
         run: |
           IMAGE_TAG="ghcr.io/${{ steps.lowercase_owner.outputs.owner }}/rocky-${{ matrix.version }}:latest"
           CODENAME_CAPITALIZED="${{ steps.capitalize_codename.outputs.codename }}"
-          
+
           # Human-readable summary for the logs (doesn't save a file)
           echo "--- Generating Grype Table Report (for logs) ---"
           grype --scope all-layers $IMAGE_TAG -o table
@@ -187,7 +201,7 @@ jobs:
 
       # Uploads the generated vulnerability reports as artifacts
       - name: 'Upload vulnerability reports'
-        if: steps.check_changes.outputs.changed == 'true'
+        if: steps.cache-repo-meta.outputs.cache-hit != 'true' && steps.cache-pkg-state.outputs.cache-hit != 'true'
         uses: actions/upload-artifact@v4
         with:
           name: vuln-reports-${{ steps.capitalize_codename.outputs.codename }}
@@ -201,7 +215,7 @@ jobs:
 
       # Pushes the Docker image to the registry
       - name: 'Push Docker image'
-        if: ${{ steps.check_changes.outputs.changed == 'true' && success() }}
+        if: steps.cache-repo-meta.outputs.cache-hit != 'true' && steps.cache-pkg-state.outputs.cache-hit != 'true' && success()
         uses: docker/build-push-action@v5
         with:
           context: ./docker
