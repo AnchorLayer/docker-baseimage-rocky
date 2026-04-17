@@ -142,38 +142,16 @@ jobs:
         id: capitalize_codename
         run: echo "codename=$(echo '${{ matrix.codename }}' | awk '{print toupper(substr($0,1,1))substr($0,2)}' )" >> $GITHUB_OUTPUT
 
-      # Generates the installed package hash from the built image
-      - name: 'Generate package list hash for Rocky Linux ${{ matrix.version }}'
-        if: steps.cache-repo-meta.outputs.cache-hit != 'true'
-        id: generate_hash
-        run: |
-          echo "Generating package list hash for ghcr.io/${{ steps.lowercase_owner.outputs.owner }}/rocky-${{ matrix.version }}:latest..."
-          CURRENT_HASH=$(docker run --rm ghcr.io/${{ steps.lowercase_owner.outputs.owner }}/rocky-${{ matrix.version }}:latest rpm -qa --queryformat '%{NAME}\t%{VERSION}\n' | sort | sha256sum | cut -d' ' -f1)
-          echo "Current package hash: $CURRENT_HASH"
-          echo "new_hash=$CURRENT_HASH" >> $GITHUB_OUTPUT
-          echo "$CURRENT_HASH" > package-state-${{ matrix.version }}.hash
-
-      # Uses the package hash as the cache key: a hit means packages are unchanged
-      # and scan/push can be skipped. A miss means new packages were installed.
-      - name: 'Check for package changes'
-        if: steps.cache-repo-meta.outputs.cache-hit != 'true'
-        id: cache-pkg-state
-        uses: actions/cache@v4
-        with:
-          path: package-state-${{ matrix.version }}.hash
-          key: rocky-pkg-state-${{ matrix.version }}-${{ steps.generate_hash.outputs.new_hash }}
-          restore-keys: rocky-pkg-state-${{ matrix.version }}-
-
       # Installs Grype and clones templates for vulnerability scanning
       - name: 'Install Grype and clone templates'
-        if: steps.cache-repo-meta.outputs.cache-hit != 'true' && steps.cache-pkg-state.outputs.cache-hit != 'true'
+        if: steps.cache-repo-meta.outputs.cache-hit != 'true'
         run: |
           curl -sSfL https://raw.githubusercontent.com/anchore/grype/main/install.sh | sh -s -- -b /usr/local/bin
           git clone --depth 1 https://github.com/anchore/grype.git
 
       # Scans the image with Grype and generates various vulnerability reports
       - name: 'Scan image with Grype and generate all reports'
-        if: steps.cache-repo-meta.outputs.cache-hit != 'true' && steps.cache-pkg-state.outputs.cache-hit != 'true'
+        if: steps.cache-repo-meta.outputs.cache-hit != 'true'
         run: |
           IMAGE_TAG="ghcr.io/${{ steps.lowercase_owner.outputs.owner }}/rocky-${{ matrix.version }}:latest"
           CODENAME_CAPITALIZED="${{ steps.capitalize_codename.outputs.codename }}"
@@ -208,7 +186,7 @@ jobs:
 
       # Uploads the generated vulnerability reports as artifacts
       - name: 'Upload vulnerability reports'
-        if: steps.cache-repo-meta.outputs.cache-hit != 'true' && steps.cache-pkg-state.outputs.cache-hit != 'true'
+        if: steps.cache-repo-meta.outputs.cache-hit != 'true'
         uses: actions/upload-artifact@v4
         with:
           name: vuln-reports-${{ steps.capitalize_codename.outputs.codename }}
@@ -222,7 +200,7 @@ jobs:
 
       # Pushes the Docker image to the registry
       - name: 'Push Docker image'
-        if: steps.cache-repo-meta.outputs.cache-hit != 'true' && steps.cache-pkg-state.outputs.cache-hit != 'true' && success()
+        if: steps.cache-repo-meta.outputs.cache-hit != 'true' && success()
         uses: docker/build-push-action@v5
         with:
           context: ./docker
