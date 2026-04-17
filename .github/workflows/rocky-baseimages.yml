@@ -108,6 +108,7 @@ jobs:
           REPO_HASH=$(echo -n "$COMBINED" | sha256sum | cut -d' ' -f1)
           echo "repo_hash=$REPO_HASH" >> $GITHUB_OUTPUT
           echo "Combined repo hash: $REPO_HASH"
+          echo "$REPO_HASH" > repo-meta-${{ matrix.version }}.hash
 
       - name: 'Check for repo metadata changes'
         id: cache-repo-meta
@@ -145,6 +146,7 @@ jobs:
           CURRENT_HASH=$(docker run --rm ghcr.io/${{ steps.lowercase_owner.outputs.owner }}/rocky-${{ matrix.version }}:latest rpm -qa --queryformat '%{NAME}\t%{VERSION}\n' | sort | sha256sum | cut -d' ' -f1)
           echo "Current package hash: $CURRENT_HASH"
           echo "new_hash=$CURRENT_HASH" >> $GITHUB_OUTPUT
+          echo "$CURRENT_HASH" > package-state-${{ matrix.version }}.hash
 
       # Uses the package hash as the cache key: a hit means packages are unchanged
       # and scan/push can be skipped. A miss means new packages were installed.
