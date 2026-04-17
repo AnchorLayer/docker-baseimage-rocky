@@ -9,6 +9,9 @@ on:
   # Allows manual triggering of the workflow
   workflow_dispatch:
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 # Defines the jobs to be run
 jobs:
   # Job to determine the latest version and matrix
@@ -101,9 +104,11 @@ jobs:
           COMBINED=""
           for repo in BaseOS AppStream; do
             URL="https://dl.rockylinux.org/pub/rocky/${{ matrix.version }}/$repo/x86_64/os/repodata/repomd.xml"
-            HASH=$(curl -sfL "$URL" | sha256sum | cut -d' ' -f1 || echo "fetch-failed-$repo")
+            # Extract only <checksum> values — repomd.xml also has <timestamp>/<revision>
+            # fields that change on every mirror sync regardless of package updates.
+            HASH=$(curl -sfL "$URL" | grep -o '<checksum type="sha256">[^<]*</checksum>' | sort | sha256sum | cut -d' ' -f1 || echo "fetch-failed-$repo")
             COMBINED="${COMBINED}${HASH}"
-            echo "Fetched $repo hash: $HASH"
+            echo "Fetched $repo checksum hash: $HASH"
           done
           REPO_HASH=$(echo -n "$COMBINED" | sha256sum | cut -d' ' -f1)
           echo "repo_hash=$REPO_HASH" >> $GITHUB_OUTPUT
