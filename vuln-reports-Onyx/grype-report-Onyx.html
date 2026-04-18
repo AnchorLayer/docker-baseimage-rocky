@@ -845,13 +845,13 @@
                     <dd id="typeValue">image</dd><dt>Checksum:</dt>
                     <dd id="checksumValue">sha256:0d6e615f166351c718dcbe1c1dcdfbfda5c042c8916411927b0707293fcd440d</dd><dt>Date:</dt>
                     <dd>
-                        <span id="dateElement">2026-04-17T13:45:18.526600431Z</span>
+                        <span id="dateElement">2026-04-18T20:30:56.86193155Z</span>
                         <span id="prettyDateElement" style="display: none;"></span>
                     </dd>
                     <dt>Grype Version:</dt>
                     <dd>0.111.0</dd>
                     <dt>DB Built:</dt>
-                    <dd>2026-04-17 06:58:16 +0000 UTC</dd>
+                    <dd>2026-04-18 06:43:28 +0000 UTC</dd>
                 </dl>
             </div>
             <div class="heading-right">
@@ -898,6 +898,22 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <tr>
+                        <td>libxml2</td>
+                        <td>2.9.13-14.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2024-34459">CVE-2024-34459</a>
+                        </td>
+                        <td>Low</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in the xmllint program distributed by the libxml2 package. A buffer over-read in the xmlHTMLPrintFileContext function in the xmllint.c file may be triggered when a crafted file is processed with the xmllint program using the `--htmlout` command line option, causing an application crash and resulting in a denial of service.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/libxml2@2.9.13-14.el9_7?arch=x86_64&distro=rocky-9.7&upstream=libxml2-2.9.13-14.el9_7.src.rpm</td>
+                    </tr>
                     <tr>
                         <td>openldap</td>
                         <td>2.6.8-4.el9.0.1</td>
@@ -977,22 +993,6 @@
                         <td>A flaw was found in libcurl, where libcurl&#39;s ASN1 parser code has the `GTime2str()` function, used for parsing an ASN.1 Generalized Time field. If a syntactically incorrect field is given, the parser can use -1 for the length of the *time fraction*, leading to a `strlen()` performed on a pointer to a heap buffer area that is not purposely NULL terminated.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/libcurl@7.76.1-35.el9_7.3?arch=x86_64&distro=rocky-9.7&upstream=curl-7.76.1-35.el9_7.3.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>libxml2</td>
-                        <td>2.9.13-14.el9_7</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2024-34459">CVE-2024-34459</a>
-                        </td>
-                        <td>Low</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in the xmllint program distributed by the libxml2 package. A buffer over-read in the xmlHTMLPrintFileContext function in the xmllint.c file may be triggered when a crafted file is processed with the xmllint program using the `--htmlout` command line option, causing an application crash and resulting in a denial of service.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/libxml2@2.9.13-14.el9_7?arch=x86_64&distro=rocky-9.7&upstream=libxml2-2.9.13-14.el9_7.src.rpm</td>
                     </tr>
                     <tr>
                         <td>curl</td>
@@ -1075,6 +1075,24 @@
                         <td>pkg:rpm/rocky/openssl-libs@3.5.1-7.el9_7?arch=x86_64&distro=rocky-9.7&epoch=1&upstream=openssl-3.5.1-7.el9_7.src.rpm</td>
                     </tr>
                     <tr>
+                        <td>libarchive</td>
+                        <td>3.5.3-7.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-4424">CVE-2026-4424</a>
+                        </td>
+                        <td>High</td>
+                        <td>fixed</td>
+                        <td>
+                            <ul>
+                                <li>0:3.5.3-9.el9_7</li>
+                            </ul>
+                        </td>
+                        <td>A flaw was found in libarchive. This heap out-of-bounds read vulnerability exists in the RAR archive processing logic due to improper validation of the LZSS sliding window size after transitions between compression methods. A remote attacker can exploit this by providing a specially crafted RAR archive, leading to the disclosure of sensitive heap memory information without requiring authentication or user interaction.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/libarchive@3.5.3-7.el9_7?arch=x86_64&distro=rocky-9.7&upstream=libarchive-3.5.3-7.el9_7.src.rpm</td>
+                    </tr>
+                    <tr>
                         <td>glib2</td>
                         <td>2.68.4-18.el9_7.1</td>
                         <td>rpm</td>
@@ -1105,22 +1123,6 @@
                         <td>A flaw was found in GLib. An integer overflow and buffer under-read occur when parsing a long invalid ISO 8601 timestamp with the g_date_time_new_from_iso8601() function.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/glib2@2.68.4-18.el9_7.1?arch=x86_64&distro=rocky-9.7&upstream=glib2-2.68.4-18.el9_7.1.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>libarchive</td>
-                        <td>3.5.3-7.el9_7</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-4424">CVE-2026-4424</a>
-                        </td>
-                        <td>High</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in libarchive. This heap out-of-bounds read vulnerability exists in the RAR archive processing logic due to improper validation of the LZSS sliding window size after transitions between compression methods. A remote attacker can exploit this by providing a specially crafted RAR archive, leading to the disclosure of sensitive heap memory information without requiring authentication or user interaction.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/libarchive@3.5.3-7.el9_7?arch=x86_64&distro=rocky-9.7&upstream=libarchive-3.5.3-7.el9_7.src.rpm</td>
                     </tr>
                     <tr>
                         <td>glib2</td>
@@ -1317,22 +1319,6 @@ could cause self-DoS of the per-connection daemon process.</td>
                         <td>pkg:rpm/rocky/libssh-config@0.10.4-17.el9_7?arch=noarch&distro=rocky-9.7&upstream=libssh-0.10.4-17.el9_7.src.rpm</td>
                     </tr>
                     <tr>
-                        <td>libarchive</td>
-                        <td>3.5.3-7.el9_7</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-5121">CVE-2026-5121</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in libarchive. On 32-bit systems, an integer overflow vulnerability exists in the zisofs block pointer allocation logic. A remote attacker can exploit this by providing a specially crafted ISO9660 image, which can lead to a heap buffer overflow. This could potentially allow for arbitrary code execution on the affected system.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/libarchive@3.5.3-7.el9_7?arch=x86_64&distro=rocky-9.7&upstream=libarchive-3.5.3-7.el9_7.src.rpm</td>
-                    </tr>
-                    <tr>
                         <td>libssh</td>
                         <td>0.10.4-17.el9_7</td>
                         <td>rpm</td>
@@ -1363,6 +1349,24 @@ could cause self-DoS of the per-connection daemon process.</td>
                         <td>A flaw was found in libssh versions built with OpenSSL versions older than 3.0, specifically in the ssh_kdf() function responsible for key derivation. Due to inconsistent interpretation of return values where OpenSSL uses 0 to indicate failure and libssh uses 0 for success—the function may mistakenly return a success status even when key derivation fails. This results in uninitialized cryptographic key buffers being used in subsequent communication, potentially compromising SSH sessions&#39; confidentiality, integrity, and availability.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/libssh-config@0.10.4-17.el9_7?arch=noarch&distro=rocky-9.7&upstream=libssh-0.10.4-17.el9_7.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>libarchive</td>
+                        <td>3.5.3-7.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-5121">CVE-2026-5121</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>fixed</td>
+                        <td>
+                            <ul>
+                                <li>0:3.5.3-9.el9_7</li>
+                            </ul>
+                        </td>
+                        <td>A flaw was found in libarchive. On 32-bit systems, an integer overflow vulnerability exists in the zisofs block pointer allocation logic. A remote attacker can exploit this by providing a specially crafted ISO9660 image, which can lead to a heap buffer overflow. This could potentially allow for arbitrary code execution on the affected system.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/libarchive@3.5.3-7.el9_7?arch=x86_64&distro=rocky-9.7&upstream=libarchive-3.5.3-7.el9_7.src.rpm</td>
                     </tr>
                     <tr>
                         <td>libarchive</td>
@@ -2385,22 +2389,6 @@ This is the same issue as in OpenSSH, tracked as CVE-2019-6111.</td>
                         <td>pkg:rpm/rocky/openssl-libs@3.5.1-7.el9_7?arch=x86_64&distro=rocky-9.7&epoch=1&upstream=openssl-3.5.1-7.el9_7.src.rpm</td>
                     </tr>
                     <tr>
-                        <td>sqlite-libs</td>
-                        <td>3.34.1-9.el9_7</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2025-70873">CVE-2025-70873</a>
-                        </td>
-                        <td>Low</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in SQLite. This information disclosure vulnerability exists within the zipfile extension, specifically in the zipfileInflate function. A remote attacker could exploit this by providing a specially crafted ZIP file. Successful exploitation could lead to the disclosure of sensitive heap memory information.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/sqlite-libs@3.34.1-9.el9_7?arch=x86_64&distro=rocky-9.7&upstream=sqlite-3.34.1-9.el9_7.src.rpm</td>
-                    </tr>
-                    <tr>
                         <td>openssl</td>
                         <td>1:3.5.1-7.el9_7</td>
                         <td>rpm</td>
@@ -2561,6 +2549,22 @@ This is the same issue as in OpenSSH, tracked as CVE-2019-6111.</td>
                         <td>pkg:rpm/rocky/libssh-config@0.10.4-17.el9_7?arch=noarch&distro=rocky-9.7&upstream=libssh-0.10.4-17.el9_7.src.rpm</td>
                     </tr>
                     <tr>
+                        <td>sqlite-libs</td>
+                        <td>3.34.1-9.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-70873">CVE-2025-70873</a>
+                        </td>
+                        <td>Low</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in SQLite. This information disclosure vulnerability exists within the zipfile extension, specifically in the zipfileInflate function. A remote attacker could exploit this by providing a specially crafted ZIP file. Successful exploitation could lead to the disclosure of sensitive heap memory information.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/sqlite-libs@3.34.1-9.el9_7?arch=x86_64&distro=rocky-9.7&upstream=sqlite-3.34.1-9.el9_7.src.rpm</td>
+                    </tr>
+                    <tr>
                         <td>openssl</td>
                         <td>1:3.5.1-7.el9_7</td>
                         <td>rpm</td>
@@ -2705,6 +2709,38 @@ This is the same issue as in OpenSSH, tracked as CVE-2019-6111.</td>
                         <td>pkg:rpm/rocky/libssh-config@0.10.4-17.el9_7?arch=noarch&distro=rocky-9.7&upstream=libssh-0.10.4-17.el9_7.src.rpm</td>
                     </tr>
                     <tr>
+                        <td>libssh</td>
+                        <td>0.10.4-17.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-4878">CVE-2025-4878</a>
+                        </td>
+                        <td>Low</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A vulnerability was found in libssh, where an uninitialized variable exists under certain conditions in the privatekey_from_file() function. This flaw can be triggered if the file specified by the filename doesn&#39;t exist and may lead to possible signing failures or heap corruption.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/libssh@0.10.4-17.el9_7?arch=x86_64&distro=rocky-9.7&upstream=libssh-0.10.4-17.el9_7.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>libssh-config</td>
+                        <td>0.10.4-17.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-4878">CVE-2025-4878</a>
+                        </td>
+                        <td>Low</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A vulnerability was found in libssh, where an uninitialized variable exists under certain conditions in the privatekey_from_file() function. This flaw can be triggered if the file specified by the filename doesn&#39;t exist and may lead to possible signing failures or heap corruption.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/libssh-config@0.10.4-17.el9_7?arch=noarch&distro=rocky-9.7&upstream=libssh-0.10.4-17.el9_7.src.rpm</td>
+                    </tr>
+                    <tr>
                         <td>libarchive</td>
                         <td>3.5.3-7.el9_7</td>
                         <td>rpm</td>
@@ -2783,38 +2819,6 @@ This is the same issue as in OpenSSH, tracked as CVE-2019-6111.</td>
                         <td>A flaw was found in curl. When an OAuth2 bearer token is used for an HTTP(S) transfer that redirects to a second URL, curl could unintentionally leak the token. This occurs if the second hostname has entries in the `.netrc` file, allowing the bearer token intended for the first host to be sent to the redirected host. This information disclosure could allow an attacker to gain unauthorized access.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/libcurl@7.76.1-35.el9_7.3?arch=x86_64&distro=rocky-9.7&upstream=curl-7.76.1-35.el9_7.3.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>libssh</td>
-                        <td>0.10.4-17.el9_7</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2025-4878">CVE-2025-4878</a>
-                        </td>
-                        <td>Low</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A vulnerability was found in libssh, where an uninitialized variable exists under certain conditions in the privatekey_from_file() function. This flaw can be triggered if the file specified by the filename doesn&#39;t exist and may lead to possible signing failures or heap corruption.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/libssh@0.10.4-17.el9_7?arch=x86_64&distro=rocky-9.7&upstream=libssh-0.10.4-17.el9_7.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>libssh-config</td>
-                        <td>0.10.4-17.el9_7</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2025-4878">CVE-2025-4878</a>
-                        </td>
-                        <td>Low</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A vulnerability was found in libssh, where an uninitialized variable exists under certain conditions in the privatekey_from_file() function. This flaw can be triggered if the file specified by the filename doesn&#39;t exist and may lead to possible signing failures or heap corruption.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/libssh-config@0.10.4-17.el9_7?arch=noarch&distro=rocky-9.7&upstream=libssh-0.10.4-17.el9_7.src.rpm</td>
                     </tr>
                     <tr>
                         <td>glib2</td>
