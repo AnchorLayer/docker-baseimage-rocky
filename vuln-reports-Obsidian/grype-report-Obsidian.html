@@ -908,13 +908,13 @@
                     <dd id="typeValue">image</dd><dt>Checksum:</dt>
                     <dd id="checksumValue">sha256:2bb1309af784e2f066d78ea197a71fd3075cdfdd5cc2eae977c9bb0131c05d9f</dd><dt>Date:</dt>
                     <dd>
-                        <span id="dateElement">2026-04-18T20:30:58.950913051Z</span>
+                        <span id="dateElement">2026-04-21T14:57:46.42392205Z</span>
                         <span id="prettyDateElement" style="display: none;"></span>
                     </dd>
                     <dt>Grype Version:</dt>
                     <dd>0.111.0</dd>
                     <dt>DB Built:</dt>
-                    <dd>2026-04-18 06:43:28 +0000 UTC</dd>
+                    <dd>2026-04-21 06:58:23 +0000 UTC</dd>
                 </dl>
             </div>
             <div class="heading-right">
@@ -1526,6 +1526,24 @@
                         <td>3.3.3-6.el8_10</td>
                         <td>rpm</td>
                         <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-4424">CVE-2026-4424</a>
+                        </td>
+                        <td>High</td>
+                        <td>fixed</td>
+                        <td>
+                            <ul>
+                                <li>0:3.3.3-7.el8_10</li>
+                            </ul>
+                        </td>
+                        <td>A flaw was found in libarchive. This heap out-of-bounds read vulnerability exists in the RAR archive processing logic due to improper validation of the LZSS sliding window size after transitions between compression methods. A remote attacker can exploit this by providing a specially crafted RAR archive, leading to the disclosure of sensitive heap memory information without requiring authentication or user interaction.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/libarchive@3.3.3-6.el8_10?arch=x86_64&distro=rocky-8.10&upstream=libarchive-3.3.3-6.el8_10.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>libarchive</td>
+                        <td>3.3.3-6.el8_10</td>
+                        <td>rpm</td>
+                        <td>
                             <a href="https://access.redhat.com/security/cve/CVE-2018-1000880">CVE-2018-1000880</a>
                         </td>
                         <td>Low</td>
@@ -1584,6 +1602,22 @@
                         <td>A NULL pointer dereference flaw was found in GnuTLS. As Nettle&#39;s hash update functions internally call memcpy, providing zero-length input may cause undefined behavior. This flaw leads to a denial of service after authentication in rare circumstances.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/gnutls@3.6.16-8.el8_10.5?arch=x86_64&distro=rocky-8.10&upstream=gnutls-3.6.16-8.el8_10.5.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>libzstd</td>
+                        <td>1.4.4-1.el8</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2022-4899">CVE-2022-4899</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>wont-fix</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A vulnerability was found in zstd. This flaw allows an attacker to supply an empty string as an argument to the command line tool to cause a buffer overrun.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/libzstd@1.4.4-1.el8?arch=x86_64&distro=rocky-8.10&upstream=zstd-1.4.4-1.el8.src.rpm</td>
                     </tr>
                     <tr>
                         <td>ncurses-base</td>
@@ -1650,24 +1684,6 @@
                         <td>pkg:rpm/rocky/openssl-libs@1.1.1k-15.el8_10?arch=x86_64&distro=rocky-8.10&epoch=1&upstream=openssl-1.1.1k-15.el8_10.src.rpm</td>
                     </tr>
                     <tr>
-                        <td>libarchive</td>
-                        <td>3.3.3-6.el8_10</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-4424">CVE-2026-4424</a>
-                        </td>
-                        <td>High</td>
-                        <td>fixed</td>
-                        <td>
-                            <ul>
-                                <li>0:3.3.3-7.el8_10</li>
-                            </ul>
-                        </td>
-                        <td>A flaw was found in libarchive. This heap out-of-bounds read vulnerability exists in the RAR archive processing logic due to improper validation of the LZSS sliding window size after transitions between compression methods. A remote attacker can exploit this by providing a specially crafted RAR archive, leading to the disclosure of sensitive heap memory information without requiring authentication or user interaction.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/libarchive@3.3.3-6.el8_10?arch=x86_64&distro=rocky-8.10&upstream=libarchive-3.3.3-6.el8_10.src.rpm</td>
-                    </tr>
-                    <tr>
                         <td>glib2</td>
                         <td>2.56.4-168.el8_10</td>
                         <td>rpm</td>
@@ -1698,22 +1714,6 @@
                         <td>[Disputed] A vulnerability has been identified in Libgcrypt due to a flaw in its C implementation of AES. This vulnerability enables a remote attacker to perform a flush-and-reload side-channel attack, potentially accessing sensitive information. The vulnerability arises from the availability of physical addresses to other processes, particularly on platforms lacking an assembly-language implementation.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/libgcrypt@1.8.5-7.el8_6?arch=x86_64&distro=rocky-8.10&upstream=libgcrypt-1.8.5-7.el8_6.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>libzstd</td>
-                        <td>1.4.4-1.el8</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2022-4899">CVE-2022-4899</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>wont-fix</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A vulnerability was found in zstd. This flaw allows an attacker to supply an empty string as an argument to the command line tool to cause a buffer overrun.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/libzstd@1.4.4-1.el8?arch=x86_64&distro=rocky-8.10&upstream=zstd-1.4.4-1.el8.src.rpm</td>
                     </tr>
                     <tr>
                         <td>openssl</td>
@@ -1844,6 +1844,24 @@
                         <td>pkg:rpm/rocky/openssl-libs@1.1.1k-15.el8_10?arch=x86_64&distro=rocky-8.10&epoch=1&upstream=openssl-1.1.1k-15.el8_10.src.rpm</td>
                     </tr>
                     <tr>
+                        <td>libarchive</td>
+                        <td>3.3.3-6.el8_10</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-5121">CVE-2026-5121</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>fixed</td>
+                        <td>
+                            <ul>
+                                <li>0:3.3.3-7.el8_10</li>
+                            </ul>
+                        </td>
+                        <td>A flaw was found in libarchive. On 32-bit systems, an integer overflow vulnerability exists in the zisofs block pointer allocation logic. A remote attacker can exploit this by providing a specially crafted ISO9660 image, which can lead to a heap buffer overflow. This could potentially allow for arbitrary code execution on the affected system.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/libarchive@3.3.3-6.el8_10?arch=x86_64&distro=rocky-8.10&upstream=libarchive-3.3.3-6.el8_10.src.rpm</td>
+                    </tr>
+                    <tr>
                         <td>libgcc</td>
                         <td>8.5.0-28.el8_10</td>
                         <td>rpm</td>
@@ -1876,22 +1894,6 @@
                         <td>pkg:rpm/rocky/libstdc%2B%2B@8.5.0-28.el8_10?arch=x86_64&distro=rocky-8.10&upstream=gcc-8.5.0-28.el8_10.src.rpm</td>
                     </tr>
                     <tr>
-                        <td>glib2</td>
-                        <td>2.56.4-168.el8_10</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2023-32636">CVE-2023-32636</a>
-                        </td>
-                        <td>Low</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in glib, where the gvariant deserialization code is vulnerable to a denial of service introduced by additional input validation added to resolve CVE-2023-29499. The offset table validation may be very slow. This bug does not affect any released version of glib but does affect glib distributors who followed the guidance of glib developers to backport the initial fix for CVE-2023-29499.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/glib2@2.56.4-168.el8_10?arch=x86_64&distro=rocky-8.10&upstream=glib2-2.56.4-168.el8_10.src.rpm</td>
-                    </tr>
-                    <tr>
                         <td>libarchive</td>
                         <td>3.3.3-6.el8_10</td>
                         <td>rpm</td>
@@ -1906,6 +1908,22 @@
                         <td>A flaw was found in libarchive. An Undefined Behavior vulnerability exists in the zisofs decompression logic, caused by improper validation of a field (`pz_log2_bs`) read from ISO9660 Rock Ridge extensions. A remote attacker can exploit this by supplying a specially crafted ISO file. This can lead to incorrect memory allocation and potential application crashes, resulting in a denial-of-service (DoS) condition.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/libarchive@3.3.3-6.el8_10?arch=x86_64&distro=rocky-8.10&upstream=libarchive-3.3.3-6.el8_10.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>glib2</td>
+                        <td>2.56.4-168.el8_10</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2023-32636">CVE-2023-32636</a>
+                        </td>
+                        <td>Low</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in glib, where the gvariant deserialization code is vulnerable to a denial of service introduced by additional input validation added to resolve CVE-2023-29499. The offset table validation may be very slow. This bug does not affect any released version of glib but does affect glib distributors who followed the guidance of glib developers to backport the initial fix for CVE-2023-29499.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/glib2@2.56.4-168.el8_10?arch=x86_64&distro=rocky-8.10&upstream=glib2-2.56.4-168.el8_10.src.rpm</td>
                     </tr>
                     <tr>
                         <td>coreutils-single</td>
@@ -2002,24 +2020,6 @@
                         <td>A flaw was found in OpenSSL. This type confusion vulnerability allows a remote attacker to cause a denial of service (DoS) by providing specially crafted PKCS#7 data to an application that performs signature verification. The vulnerability occurs because the application accesses an ASN1_TYPE union member without proper type validation, leading to an invalid or NULL pointer dereference and a crash.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/openssl-libs@1.1.1k-15.el8_10?arch=x86_64&distro=rocky-8.10&epoch=1&upstream=openssl-1.1.1k-15.el8_10.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>libarchive</td>
-                        <td>3.3.3-6.el8_10</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-5121">CVE-2026-5121</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>fixed</td>
-                        <td>
-                            <ul>
-                                <li>0:3.3.3-7.el8_10</li>
-                            </ul>
-                        </td>
-                        <td>A flaw was found in libarchive. On 32-bit systems, an integer overflow vulnerability exists in the zisofs block pointer allocation logic. A remote attacker can exploit this by providing a specially crafted ISO9660 image, which can lead to a heap buffer overflow. This could potentially allow for arbitrary code execution on the affected system.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/libarchive@3.3.3-6.el8_10?arch=x86_64&distro=rocky-8.10&upstream=libarchive-3.3.3-6.el8_10.src.rpm</td>
                     </tr>
                     <tr>
                         <td>systemd</td>
@@ -2135,6 +2135,22 @@ A SUID binary or process has a special type of permission, which allows the proc
                         <td>A flaw was found in glib. This vulnerability allows a heap buffer overflow and denial-of-service (DoS) via an integer overflow in GLib&#39;s GIO (GLib Input/Output) escape_byte_string() function when processing malicious file or remote filesystem attribute values.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/glib2@2.56.4-168.el8_10?arch=x86_64&distro=rocky-8.10&upstream=glib2-2.56.4-168.el8_10.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>libxml2</td>
+                        <td>2.9.7-21.el8_10.3</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-6170">CVE-2025-6170</a>
+                        </td>
+                        <td>Low</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in the interactive shell of the xmllint command-line tool, used for parsing XML files. When a user inputs an overly long command, the program does not check the input size properly, which can cause it to crash. This issue might allow attackers to run harmful code in rare configurations without modern protections.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/libxml2@2.9.7-21.el8_10.3?arch=x86_64&distro=rocky-8.10&upstream=libxml2-2.9.7-21.el8_10.3.src.rpm</td>
                     </tr>
                     <tr>
                         <td>libarchive</td>
@@ -2265,38 +2281,6 @@ A SUID binary or process has a special type of permission, which allows the proc
                         <td>pkg:rpm/rocky/libarchive@3.3.3-6.el8_10?arch=x86_64&distro=rocky-8.10&upstream=libarchive-3.3.3-6.el8_10.src.rpm</td>
                     </tr>
                     <tr>
-                        <td>libxml2</td>
-                        <td>2.9.7-21.el8_10.3</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2023-45322">CVE-2023-45322</a>
-                        </td>
-                        <td>Low</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in libxml2. In an out-of-memory condition or when limiting the memory allocation, processing a XML document using the HTML parser may result in a use-after-free vulnerability.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/libxml2@2.9.7-21.el8_10.3?arch=x86_64&distro=rocky-8.10&upstream=libxml2-2.9.7-21.el8_10.3.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>libxml2</td>
-                        <td>2.9.7-21.el8_10.3</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2025-6170">CVE-2025-6170</a>
-                        </td>
-                        <td>Low</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in the interactive shell of the xmllint command-line tool, used for parsing XML files. When a user inputs an overly long command, the program does not check the input size properly, which can cause it to crash. This issue might allow attackers to run harmful code in rare configurations without modern protections.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/libxml2@2.9.7-21.el8_10.3?arch=x86_64&distro=rocky-8.10&upstream=libxml2-2.9.7-21.el8_10.3.src.rpm</td>
-                    </tr>
-                    <tr>
                         <td>curl</td>
                         <td>7.61.1-34.el8_10.11</td>
                         <td>rpm</td>
@@ -2331,6 +2315,22 @@ public key authentication, curl would wrongly still ask and authenticate using
 a locally running SSH agent.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/libcurl-minimal@7.61.1-34.el8_10.11?arch=x86_64&distro=rocky-8.10&upstream=curl-7.61.1-34.el8_10.11.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>libxml2</td>
+                        <td>2.9.7-21.el8_10.3</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2023-45322">CVE-2023-45322</a>
+                        </td>
+                        <td>Low</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in libxml2. In an out-of-memory condition or when limiting the memory allocation, processing a XML document using the HTML parser may result in a use-after-free vulnerability.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/libxml2@2.9.7-21.el8_10.3?arch=x86_64&distro=rocky-8.10&upstream=libxml2-2.9.7-21.el8_10.3.src.rpm</td>
                     </tr>
                     <tr>
                         <td>libxml2</td>
@@ -2635,38 +2635,6 @@ a locally running SSH agent.</td>
                         <td>A vulnerability was found in the NCurses package, where a segmentation fault may be triggered through _nc_wrap_entry().</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/ncurses-libs@6.1-10.20180224.el8?arch=x86_64&distro=rocky-8.10&upstream=ncurses-6.1-10.20180224.el8.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>curl</td>
-                        <td>7.61.1-34.el8_10.11</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-3805">CVE-2026-3805</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in curl. When handling a second Server Message Block (SMB) request to the same host, curl incorrectly accesses memory that has already been freed. This memory corruption vulnerability, known as a use-after-free, could allow a remote attacker to potentially execute arbitrary code or cause a denial of service.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/curl@7.61.1-34.el8_10.11?arch=x86_64&distro=rocky-8.10&upstream=curl-7.61.1-34.el8_10.11.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>libcurl-minimal</td>
-                        <td>7.61.1-34.el8_10.11</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-3805">CVE-2026-3805</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in curl. When handling a second Server Message Block (SMB) request to the same host, curl incorrectly accesses memory that has already been freed. This memory corruption vulnerability, known as a use-after-free, could allow a remote attacker to potentially execute arbitrary code or cause a denial of service.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/libcurl-minimal@7.61.1-34.el8_10.11?arch=x86_64&distro=rocky-8.10&upstream=curl-7.61.1-34.el8_10.11.src.rpm</td>
                     </tr>
                     <tr>
                         <td>glibc</td>
@@ -3261,6 +3229,38 @@ a locally running SSH agent.</td>
                         <td>pkg:rpm/rocky/libcurl-minimal@7.61.1-34.el8_10.11?arch=x86_64&distro=rocky-8.10&upstream=curl-7.61.1-34.el8_10.11.src.rpm</td>
                     </tr>
                     <tr>
+                        <td>curl</td>
+                        <td>7.61.1-34.el8_10.11</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-3805">CVE-2026-3805</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in curl. When handling a second Server Message Block (SMB) request to the same host, curl incorrectly accesses memory that has already been freed. This memory corruption vulnerability, known as a use-after-free, could allow a remote attacker to potentially execute arbitrary code or cause a denial of service.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/curl@7.61.1-34.el8_10.11?arch=x86_64&distro=rocky-8.10&upstream=curl-7.61.1-34.el8_10.11.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>libcurl-minimal</td>
+                        <td>7.61.1-34.el8_10.11</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-3805">CVE-2026-3805</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in curl. When handling a second Server Message Block (SMB) request to the same host, curl incorrectly accesses memory that has already been freed. This memory corruption vulnerability, known as a use-after-free, could allow a remote attacker to potentially execute arbitrary code or cause a denial of service.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/libcurl-minimal@7.61.1-34.el8_10.11?arch=x86_64&distro=rocky-8.10&upstream=curl-7.61.1-34.el8_10.11.src.rpm</td>
+                    </tr>
+                    <tr>
                         <td>sqlite-libs</td>
                         <td>3.26.0-20.el8_10</td>
                         <td>rpm</td>
@@ -3609,6 +3609,22 @@ a locally running SSH agent.</td>
                             N/A
                         </td>
                         <td>A flaw was found in libexpat. A remote attacker could exploit this vulnerability by providing specially crafted XML content with empty external parameter entities. This could lead to a NULL pointer dereference, causing the application to crash and resulting in a Denial of Service (DoS).</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/expat@2.5.0-1.el8_10?arch=x86_64&distro=rocky-8.10&upstream=expat-2.5.0-1.el8_10.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>expat</td>
+                        <td>2.5.0-1.el8_10</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-41080">CVE-2026-41080</a>
+                        </td>
+                        <td>Low</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in libexpat. A remote attacker could exploit this vulnerability by providing a specially crafted XML document that leverages insufficient entropy in the hash function. This can lead to hash flooding, a type of Denial of Service (DoS) attack, where the system becomes unresponsive or crashes due to excessive resource consumption.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/expat@2.5.0-1.el8_10?arch=x86_64&distro=rocky-8.10&upstream=expat-2.5.0-1.el8_10.src.rpm</td>
                     </tr>
@@ -4139,22 +4155,6 @@ a locally running SSH agent.</td>
                         <td>A NULL pointer dereference vulnerability in the elfutils library has been discovered. This vulnerability occurs within the handle_verdef() function in the readelf.c source file. A NULL pointer dereference typically happens when a program attempts to access memory using a pointer that is not pointing anywhere (i.e., it&#39;s NULL), leading to a crash or potentially exploitable behavior.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/elfutils-libs@0.190-2.el8?arch=x86_64&distro=rocky-8.10&upstream=elfutils-0.190-2.el8.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>expat</td>
-                        <td>2.5.0-1.el8_10</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-41080">CVE-2026-41080</a>
-                        </td>
-                        <td>Low</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in libexpat. A remote attacker could exploit this vulnerability by providing a specially crafted XML document that leverages insufficient entropy in the hash function. This can lead to hash flooding, a type of Denial of Service (DoS) attack, where the system becomes unresponsive or crashes due to excessive resource consumption.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/expat@2.5.0-1.el8_10?arch=x86_64&distro=rocky-8.10&upstream=expat-2.5.0-1.el8_10.src.rpm</td>
                     </tr>
                     <tr>
                         <td>libxml2</td>

@@ -178,6 +178,27 @@
               }
             },
             {
+              "id": "CVE-2026-4424-libarchive",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-4424 high vulnerability for libarchive package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in libarchive. This heap out-of-bounds read vulnerability exists in the RAR archive processing logic due to improper validation of the LZSS sliding window size after transitions between compression methods. A remote attacker can exploit this by providing a specially crafted RAR archive, leading to the disclosure of sensitive heap memory information without requiring authentication or user interaction."
+              },
+              "helpUri": "https://github.com/anchore/grype",
+              "help": {
+                "text": "Vulnerability CVE-2026-4424\nSeverity: high\nPackage: libarchive\nVersion: 3.5.3-7.el9_7\nFix Version: 0:3.5.3-9.el9_7\nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-4424](https://access.redhat.com/security/cve/CVE-2026-4424)",
+                "markdown": "**Vulnerability CVE-2026-4424**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| high  | libarchive  | 3.5.3-7.el9_7  | 0:3.5.3-9.el9_7  | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-4424](https://access.redhat.com/security/cve/CVE-2026-4424)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/libarchive@3.5.3-7.el9_7?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=libarchive-3.5.3-7.el9_7.src.rpm"
+                ],
+                "security-severity": "7.5"
+              }
+            },
+            {
               "id": "CVE-2024-41996-openssl",
               "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
@@ -241,27 +262,6 @@
               }
             },
             {
-              "id": "CVE-2026-4424-libarchive",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-4424 high vulnerability for libarchive package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in libarchive. This heap out-of-bounds read vulnerability exists in the RAR archive processing logic due to improper validation of the LZSS sliding window size after transitions between compression methods. A remote attacker can exploit this by providing a specially crafted RAR archive, leading to the disclosure of sensitive heap memory information without requiring authentication or user interaction."
-              },
-              "helpUri": "https://github.com/anchore/grype",
-              "help": {
-                "text": "Vulnerability CVE-2026-4424\nSeverity: high\nPackage: libarchive\nVersion: 3.5.3-7.el9_7\nFix Version: 0:3.5.3-9.el9_7\nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-4424](https://access.redhat.com/security/cve/CVE-2026-4424)",
-                "markdown": "**Vulnerability CVE-2026-4424**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| high  | libarchive  | 3.5.3-7.el9_7  | 0:3.5.3-9.el9_7  | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-4424](https://access.redhat.com/security/cve/CVE-2026-4424)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/libarchive@3.5.3-7.el9_7?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=libarchive-3.5.3-7.el9_7.src.rpm"
-                ],
-                "security-severity": "7.5"
-              }
-            },
-            {
               "id": "CVE-2025-14087-glib2",
               "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
@@ -304,24 +304,66 @@
               }
             },
             {
-              "id": "CVE-2023-32636-glib2",
+              "id": "CVE-2026-0966-libssh",
               "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
-                "text": "CVE-2023-32636 low vulnerability for glib2 package"
+                "text": "CVE-2026-0966 medium vulnerability for libssh package"
               },
               "fullDescription": {
-                "text": "A flaw was found in glib, where the gvariant deserialization code is vulnerable to a denial of service introduced by additional input validation added to resolve CVE-2023-29499. The offset table validation may be very slow. This bug does not affect any released version of glib but does affect glib distributors who followed the guidance of glib developers to backport the initial fix for CVE-2023-29499."
+                "text": "The API function `ssh_get_hexa()` is vulnerable, when 0-lenght\ninput is provided to this function. This function is used internally\nin `ssh_get_fingerprint_hash()` and `ssh_print_hexa()` (deprecated),\nwhich is vulnerable to the same input (length is provided by the\ncalling application).\nThe function is also used internally in the gssapi code for logging\nthe OIDs received by the server during GSSAPI authentication. This\ncould be triggered remotely, when the server allows GSSAPI authentication\nand logging verbosity is set at least to SSH_LOG_PACKET (3). This\ncould cause self-DoS of the per-connection daemon process."
               },
               "helpUri": "https://github.com/anchore/grype",
               "help": {
-                "text": "Vulnerability CVE-2023-32636\nSeverity: low\nPackage: glib2\nVersion: 2.68.4-18.el9_7.1\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2023-32636](https://access.redhat.com/security/cve/CVE-2023-32636)",
-                "markdown": "**Vulnerability CVE-2023-32636**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | glib2  | 2.68.4-18.el9_7.1  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2023-32636](https://access.redhat.com/security/cve/CVE-2023-32636)  |\n"
+                "text": "Vulnerability CVE-2026-0966\nSeverity: medium\nPackage: libssh\nVersion: 0.10.4-17.el9_7\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-0966](https://access.redhat.com/security/cve/CVE-2026-0966)",
+                "markdown": "**Vulnerability CVE-2026-0966**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | libssh  | 0.10.4-17.el9_7  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-0966](https://access.redhat.com/security/cve/CVE-2026-0966)  |\n"
               },
               "properties": {
                 "purls": [
-                  "pkg:rpm/rocky/glib2@2.68.4-18.el9_7.1?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=glib2-2.68.4-18.el9_7.1.src.rpm"
+                  "pkg:rpm/rocky/libssh@0.10.4-17.el9_7?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=libssh-0.10.4-17.el9_7.src.rpm"
                 ],
-                "security-severity": "6.2"
+                "security-severity": "6.5"
+              }
+            },
+            {
+              "id": "CVE-2026-0966-libssh-config",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-0966 medium vulnerability for libssh-config package"
+              },
+              "fullDescription": {
+                "text": "The API function `ssh_get_hexa()` is vulnerable, when 0-lenght\ninput is provided to this function. This function is used internally\nin `ssh_get_fingerprint_hash()` and `ssh_print_hexa()` (deprecated),\nwhich is vulnerable to the same input (length is provided by the\ncalling application).\nThe function is also used internally in the gssapi code for logging\nthe OIDs received by the server during GSSAPI authentication. This\ncould be triggered remotely, when the server allows GSSAPI authentication\nand logging verbosity is set at least to SSH_LOG_PACKET (3). This\ncould cause self-DoS of the per-connection daemon process."
+              },
+              "helpUri": "https://github.com/anchore/grype",
+              "help": {
+                "text": "Vulnerability CVE-2026-0966\nSeverity: medium\nPackage: libssh-config\nVersion: 0.10.4-17.el9_7\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-0966](https://access.redhat.com/security/cve/CVE-2026-0966)",
+                "markdown": "**Vulnerability CVE-2026-0966**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | libssh-config  | 0.10.4-17.el9_7  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-0966](https://access.redhat.com/security/cve/CVE-2026-0966)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/libssh-config@0.10.4-17.el9_7?arch=noarch\u0026distro=rocky-9.7\u0026upstream=libssh-0.10.4-17.el9_7.src.rpm"
+                ],
+                "security-severity": "6.5"
+              }
+            },
+            {
+              "id": "CVE-2026-5121-libarchive",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-5121 medium vulnerability for libarchive package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in libarchive. On 32-bit systems, an integer overflow vulnerability exists in the zisofs block pointer allocation logic. A remote attacker can exploit this by providing a specially crafted ISO9660 image, which can lead to a heap buffer overflow. This could potentially allow for arbitrary code execution on the affected system."
+              },
+              "helpUri": "https://github.com/anchore/grype",
+              "help": {
+                "text": "Vulnerability CVE-2026-5121\nSeverity: medium\nPackage: libarchive\nVersion: 3.5.3-7.el9_7\nFix Version: 0:3.5.3-9.el9_7\nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-5121](https://access.redhat.com/security/cve/CVE-2026-5121)",
+                "markdown": "**Vulnerability CVE-2026-5121**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | libarchive  | 3.5.3-7.el9_7  | 0:3.5.3-9.el9_7  | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-5121](https://access.redhat.com/security/cve/CVE-2026-5121)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/libarchive@3.5.3-7.el9_7?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=libarchive-3.5.3-7.el9_7.src.rpm"
+                ],
+                "security-severity": "7.5"
               }
             },
             {
@@ -343,6 +385,27 @@
                   "pkg:rpm/rocky/libarchive@3.5.3-7.el9_7?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=libarchive-3.5.3-7.el9_7.src.rpm"
                 ],
                 "security-severity": "6.5"
+              }
+            },
+            {
+              "id": "CVE-2023-32636-glib2",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2023-32636 low vulnerability for glib2 package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in glib, where the gvariant deserialization code is vulnerable to a denial of service introduced by additional input validation added to resolve CVE-2023-29499. The offset table validation may be very slow. This bug does not affect any released version of glib but does affect glib distributors who followed the guidance of glib developers to backport the initial fix for CVE-2023-29499."
+              },
+              "helpUri": "https://github.com/anchore/grype",
+              "help": {
+                "text": "Vulnerability CVE-2023-32636\nSeverity: low\nPackage: glib2\nVersion: 2.68.4-18.el9_7.1\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2023-32636](https://access.redhat.com/security/cve/CVE-2023-32636)",
+                "markdown": "**Vulnerability CVE-2023-32636**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | glib2  | 2.68.4-18.el9_7.1  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2023-32636](https://access.redhat.com/security/cve/CVE-2023-32636)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/glib2@2.68.4-18.el9_7.1?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=glib2-2.68.4-18.el9_7.1.src.rpm"
+                ],
+                "security-severity": "6.2"
               }
             },
             {
@@ -451,48 +514,6 @@
               }
             },
             {
-              "id": "CVE-2026-0966-libssh",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-0966 medium vulnerability for libssh package"
-              },
-              "fullDescription": {
-                "text": "The API function `ssh_get_hexa()` is vulnerable, when 0-lenght\ninput is provided to this function. This function is used internally\nin `ssh_get_fingerprint_hash()` and `ssh_print_hexa()` (deprecated),\nwhich is vulnerable to the same input (length is provided by the\ncalling application).\nThe function is also used internally in the gssapi code for logging\nthe OIDs received by the server during GSSAPI authentication. This\ncould be triggered remotely, when the server allows GSSAPI authentication\nand logging verbosity is set at least to SSH_LOG_PACKET (3). This\ncould cause self-DoS of the per-connection daemon process."
-              },
-              "helpUri": "https://github.com/anchore/grype",
-              "help": {
-                "text": "Vulnerability CVE-2026-0966\nSeverity: medium\nPackage: libssh\nVersion: 0.10.4-17.el9_7\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-0966](https://access.redhat.com/security/cve/CVE-2026-0966)",
-                "markdown": "**Vulnerability CVE-2026-0966**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | libssh  | 0.10.4-17.el9_7  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-0966](https://access.redhat.com/security/cve/CVE-2026-0966)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/libssh@0.10.4-17.el9_7?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=libssh-0.10.4-17.el9_7.src.rpm"
-                ],
-                "security-severity": "6.5"
-              }
-            },
-            {
-              "id": "CVE-2026-0966-libssh-config",
-              "name": "RpmMatcherExactIndirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-0966 medium vulnerability for libssh-config package"
-              },
-              "fullDescription": {
-                "text": "The API function `ssh_get_hexa()` is vulnerable, when 0-lenght\ninput is provided to this function. This function is used internally\nin `ssh_get_fingerprint_hash()` and `ssh_print_hexa()` (deprecated),\nwhich is vulnerable to the same input (length is provided by the\ncalling application).\nThe function is also used internally in the gssapi code for logging\nthe OIDs received by the server during GSSAPI authentication. This\ncould be triggered remotely, when the server allows GSSAPI authentication\nand logging verbosity is set at least to SSH_LOG_PACKET (3). This\ncould cause self-DoS of the per-connection daemon process."
-              },
-              "helpUri": "https://github.com/anchore/grype",
-              "help": {
-                "text": "Vulnerability CVE-2026-0966\nSeverity: medium\nPackage: libssh-config\nVersion: 0.10.4-17.el9_7\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-0966](https://access.redhat.com/security/cve/CVE-2026-0966)",
-                "markdown": "**Vulnerability CVE-2026-0966**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | libssh-config  | 0.10.4-17.el9_7  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-0966](https://access.redhat.com/security/cve/CVE-2026-0966)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/libssh-config@0.10.4-17.el9_7?arch=noarch\u0026distro=rocky-9.7\u0026upstream=libssh-0.10.4-17.el9_7.src.rpm"
-                ],
-                "security-severity": "6.5"
-              }
-            },
-            {
               "id": "CVE-2026-3731-libssh",
               "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
@@ -577,27 +598,6 @@
               }
             },
             {
-              "id": "CVE-2026-5121-libarchive",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-5121 medium vulnerability for libarchive package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in libarchive. On 32-bit systems, an integer overflow vulnerability exists in the zisofs block pointer allocation logic. A remote attacker can exploit this by providing a specially crafted ISO9660 image, which can lead to a heap buffer overflow. This could potentially allow for arbitrary code execution on the affected system."
-              },
-              "helpUri": "https://github.com/anchore/grype",
-              "help": {
-                "text": "Vulnerability CVE-2026-5121\nSeverity: medium\nPackage: libarchive\nVersion: 3.5.3-7.el9_7\nFix Version: 0:3.5.3-9.el9_7\nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-5121](https://access.redhat.com/security/cve/CVE-2026-5121)",
-                "markdown": "**Vulnerability CVE-2026-5121**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | libarchive  | 3.5.3-7.el9_7  | 0:3.5.3-9.el9_7  | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-5121](https://access.redhat.com/security/cve/CVE-2026-5121)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/libarchive@3.5.3-7.el9_7?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=libarchive-3.5.3-7.el9_7.src.rpm"
-                ],
-                "security-severity": "7.5"
-              }
-            },
-            {
               "id": "CVE-2025-5915-libarchive",
               "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
@@ -637,6 +637,27 @@
                   "pkg:rpm/rocky/glib2@2.68.4-18.el9_7.1?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=glib2-2.68.4-18.el9_7.1.src.rpm"
                 ],
                 "security-severity": "6.5"
+              }
+            },
+            {
+              "id": "CVE-2025-6170-libxml2",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2025-6170 low vulnerability for libxml2 package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in the interactive shell of the xmllint command-line tool, used for parsing XML files. When a user inputs an overly long command, the program does not check the input size properly, which can cause it to crash. This issue might allow attackers to run harmful code in rare configurations without modern protections."
+              },
+              "helpUri": "https://github.com/anchore/grype",
+              "help": {
+                "text": "Vulnerability CVE-2025-6170\nSeverity: low\nPackage: libxml2\nVersion: 2.9.13-14.el9_7\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2025-6170](https://access.redhat.com/security/cve/CVE-2025-6170)",
+                "markdown": "**Vulnerability CVE-2025-6170**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | libxml2  | 2.9.13-14.el9_7  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2025-6170](https://access.redhat.com/security/cve/CVE-2025-6170)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/libxml2@2.9.13-14.el9_7?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=libxml2-2.9.13-14.el9_7.src.rpm"
+                ],
+                "security-severity": "2.5"
               }
             },
             {
@@ -829,48 +850,6 @@
               }
             },
             {
-              "id": "CVE-2023-45322-libxml2",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2023-45322 low vulnerability for libxml2 package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in libxml2. In an out-of-memory condition or when limiting the memory allocation, processing a XML document using the HTML parser may result in a use-after-free vulnerability."
-              },
-              "helpUri": "https://github.com/anchore/grype",
-              "help": {
-                "text": "Vulnerability CVE-2023-45322\nSeverity: low\nPackage: libxml2\nVersion: 2.9.13-14.el9_7\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2023-45322](https://access.redhat.com/security/cve/CVE-2023-45322)",
-                "markdown": "**Vulnerability CVE-2023-45322**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | libxml2  | 2.9.13-14.el9_7  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2023-45322](https://access.redhat.com/security/cve/CVE-2023-45322)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/libxml2@2.9.13-14.el9_7?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=libxml2-2.9.13-14.el9_7.src.rpm"
-                ],
-                "security-severity": "5.9"
-              }
-            },
-            {
-              "id": "CVE-2025-6170-libxml2",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2025-6170 low vulnerability for libxml2 package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in the interactive shell of the xmllint command-line tool, used for parsing XML files. When a user inputs an overly long command, the program does not check the input size properly, which can cause it to crash. This issue might allow attackers to run harmful code in rare configurations without modern protections."
-              },
-              "helpUri": "https://github.com/anchore/grype",
-              "help": {
-                "text": "Vulnerability CVE-2025-6170\nSeverity: low\nPackage: libxml2\nVersion: 2.9.13-14.el9_7\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2025-6170](https://access.redhat.com/security/cve/CVE-2025-6170)",
-                "markdown": "**Vulnerability CVE-2025-6170**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | libxml2  | 2.9.13-14.el9_7  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2025-6170](https://access.redhat.com/security/cve/CVE-2025-6170)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/libxml2@2.9.13-14.el9_7?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=libxml2-2.9.13-14.el9_7.src.rpm"
-                ],
-                "security-severity": "2.5"
-              }
-            },
-            {
               "id": "CVE-2025-15224-curl",
               "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
@@ -910,6 +889,27 @@
                   "pkg:rpm/rocky/libcurl@7.76.1-35.el9_7.3?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=curl-7.76.1-35.el9_7.3.src.rpm"
                 ],
                 "security-severity": "4.7"
+              }
+            },
+            {
+              "id": "CVE-2023-45322-libxml2",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2023-45322 low vulnerability for libxml2 package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in libxml2. In an out-of-memory condition or when limiting the memory allocation, processing a XML document using the HTML parser may result in a use-after-free vulnerability."
+              },
+              "helpUri": "https://github.com/anchore/grype",
+              "help": {
+                "text": "Vulnerability CVE-2023-45322\nSeverity: low\nPackage: libxml2\nVersion: 2.9.13-14.el9_7\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2023-45322](https://access.redhat.com/security/cve/CVE-2023-45322)",
+                "markdown": "**Vulnerability CVE-2023-45322**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | libxml2  | 2.9.13-14.el9_7  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2023-45322](https://access.redhat.com/security/cve/CVE-2023-45322)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/libxml2@2.9.13-14.el9_7?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=libxml2-2.9.13-14.el9_7.src.rpm"
+                ],
+                "security-severity": "5.9"
               }
             },
             {
@@ -1309,48 +1309,6 @@
                   "pkg:rpm/rocky/ncurses-libs@6.2-12.20210508.el9?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=ncurses-6.2-12.20210508.el9.src.rpm"
                 ],
                 "security-severity": "6.5"
-              }
-            },
-            {
-              "id": "CVE-2026-3805-curl",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-3805 medium vulnerability for curl package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in curl. When handling a second Server Message Block (SMB) request to the same host, curl incorrectly accesses memory that has already been freed. This memory corruption vulnerability, known as a use-after-free, could allow a remote attacker to potentially execute arbitrary code or cause a denial of service."
-              },
-              "helpUri": "https://github.com/anchore/grype",
-              "help": {
-                "text": "Vulnerability CVE-2026-3805\nSeverity: medium\nPackage: curl\nVersion: 7.76.1-35.el9_7.3\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-3805](https://access.redhat.com/security/cve/CVE-2026-3805)",
-                "markdown": "**Vulnerability CVE-2026-3805**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | curl  | 7.76.1-35.el9_7.3  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-3805](https://access.redhat.com/security/cve/CVE-2026-3805)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/curl@7.76.1-35.el9_7.3?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=curl-7.76.1-35.el9_7.3.src.rpm"
-                ],
-                "security-severity": "6.3"
-              }
-            },
-            {
-              "id": "CVE-2026-3805-libcurl",
-              "name": "RpmMatcherExactIndirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-3805 medium vulnerability for libcurl package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in curl. When handling a second Server Message Block (SMB) request to the same host, curl incorrectly accesses memory that has already been freed. This memory corruption vulnerability, known as a use-after-free, could allow a remote attacker to potentially execute arbitrary code or cause a denial of service."
-              },
-              "helpUri": "https://github.com/anchore/grype",
-              "help": {
-                "text": "Vulnerability CVE-2026-3805\nSeverity: medium\nPackage: libcurl\nVersion: 7.76.1-35.el9_7.3\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-3805](https://access.redhat.com/security/cve/CVE-2026-3805)",
-                "markdown": "**Vulnerability CVE-2026-3805**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | libcurl  | 7.76.1-35.el9_7.3  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-3805](https://access.redhat.com/security/cve/CVE-2026-3805)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/libcurl@7.76.1-35.el9_7.3?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=curl-7.76.1-35.el9_7.3.src.rpm"
-                ],
-                "security-severity": "6.3"
               }
             },
             {
@@ -1858,6 +1816,48 @@
               }
             },
             {
+              "id": "CVE-2025-8114-libssh",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2025-8114 medium vulnerability for libssh package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in libssh, a library that implements the SSH protocol. When calculating the session ID during the key exchange (KEX) process, an allocation failure in cryptographic functions may lead to a NULL pointer dereference. This issue can cause the client or server to crash."
+              },
+              "helpUri": "https://github.com/anchore/grype",
+              "help": {
+                "text": "Vulnerability CVE-2025-8114\nSeverity: medium\nPackage: libssh\nVersion: 0.10.4-17.el9_7\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2025-8114](https://access.redhat.com/security/cve/CVE-2025-8114)",
+                "markdown": "**Vulnerability CVE-2025-8114**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | libssh  | 0.10.4-17.el9_7  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2025-8114](https://access.redhat.com/security/cve/CVE-2025-8114)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/libssh@0.10.4-17.el9_7?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=libssh-0.10.4-17.el9_7.src.rpm"
+                ],
+                "security-severity": "4.7"
+              }
+            },
+            {
+              "id": "CVE-2025-8114-libssh-config",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2025-8114 medium vulnerability for libssh-config package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in libssh, a library that implements the SSH protocol. When calculating the session ID during the key exchange (KEX) process, an allocation failure in cryptographic functions may lead to a NULL pointer dereference. This issue can cause the client or server to crash."
+              },
+              "helpUri": "https://github.com/anchore/grype",
+              "help": {
+                "text": "Vulnerability CVE-2025-8114\nSeverity: medium\nPackage: libssh-config\nVersion: 0.10.4-17.el9_7\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2025-8114](https://access.redhat.com/security/cve/CVE-2025-8114)",
+                "markdown": "**Vulnerability CVE-2025-8114**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | libssh-config  | 0.10.4-17.el9_7  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2025-8114](https://access.redhat.com/security/cve/CVE-2025-8114)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/libssh-config@0.10.4-17.el9_7?arch=noarch\u0026distro=rocky-9.7\u0026upstream=libssh-0.10.4-17.el9_7.src.rpm"
+                ],
+                "security-severity": "4.7"
+              }
+            },
+            {
               "id": "CVE-2026-28388-openssl",
               "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
@@ -2131,6 +2131,48 @@
               }
             },
             {
+              "id": "CVE-2026-3805-curl",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-3805 medium vulnerability for curl package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in curl. When handling a second Server Message Block (SMB) request to the same host, curl incorrectly accesses memory that has already been freed. This memory corruption vulnerability, known as a use-after-free, could allow a remote attacker to potentially execute arbitrary code or cause a denial of service."
+              },
+              "helpUri": "https://github.com/anchore/grype",
+              "help": {
+                "text": "Vulnerability CVE-2026-3805\nSeverity: medium\nPackage: curl\nVersion: 7.76.1-35.el9_7.3\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-3805](https://access.redhat.com/security/cve/CVE-2026-3805)",
+                "markdown": "**Vulnerability CVE-2026-3805**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | curl  | 7.76.1-35.el9_7.3  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-3805](https://access.redhat.com/security/cve/CVE-2026-3805)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/curl@7.76.1-35.el9_7.3?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=curl-7.76.1-35.el9_7.3.src.rpm"
+                ],
+                "security-severity": "6.3"
+              }
+            },
+            {
+              "id": "CVE-2026-3805-libcurl",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-3805 medium vulnerability for libcurl package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in curl. When handling a second Server Message Block (SMB) request to the same host, curl incorrectly accesses memory that has already been freed. This memory corruption vulnerability, known as a use-after-free, could allow a remote attacker to potentially execute arbitrary code or cause a denial of service."
+              },
+              "helpUri": "https://github.com/anchore/grype",
+              "help": {
+                "text": "Vulnerability CVE-2026-3805\nSeverity: medium\nPackage: libcurl\nVersion: 7.76.1-35.el9_7.3\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-3805](https://access.redhat.com/security/cve/CVE-2026-3805)",
+                "markdown": "**Vulnerability CVE-2026-3805**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | libcurl  | 7.76.1-35.el9_7.3  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-3805](https://access.redhat.com/security/cve/CVE-2026-3805)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/libcurl@7.76.1-35.el9_7.3?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=curl-7.76.1-35.el9_7.3.src.rpm"
+                ],
+                "security-severity": "6.3"
+              }
+            },
+            {
               "id": "CVE-2025-70873-sqlite-libs",
               "name": "RpmMatcherExactIndirectMatch",
               "shortDescription": {
@@ -2296,48 +2338,6 @@
                   "pkg:rpm/rocky/glibc-minimal-langpack@2.34-231.el9_7.10?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=glibc-2.34-231.el9_7.10.src.rpm"
                 ],
                 "security-severity": "4.0"
-              }
-            },
-            {
-              "id": "CVE-2025-8114-libssh",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2025-8114 medium vulnerability for libssh package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in libssh, a library that implements the SSH protocol. When calculating the session ID during the key exchange (KEX) process, an allocation failure in cryptographic functions may lead to a NULL pointer dereference. This issue can cause the client or server to crash."
-              },
-              "helpUri": "https://github.com/anchore/grype",
-              "help": {
-                "text": "Vulnerability CVE-2025-8114\nSeverity: medium\nPackage: libssh\nVersion: 0.10.4-17.el9_7\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2025-8114](https://access.redhat.com/security/cve/CVE-2025-8114)",
-                "markdown": "**Vulnerability CVE-2025-8114**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | libssh  | 0.10.4-17.el9_7  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2025-8114](https://access.redhat.com/security/cve/CVE-2025-8114)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/libssh@0.10.4-17.el9_7?arch=x86_64\u0026distro=rocky-9.7\u0026upstream=libssh-0.10.4-17.el9_7.src.rpm"
-                ],
-                "security-severity": "4.7"
-              }
-            },
-            {
-              "id": "CVE-2025-8114-libssh-config",
-              "name": "RpmMatcherExactIndirectMatch",
-              "shortDescription": {
-                "text": "CVE-2025-8114 medium vulnerability for libssh-config package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in libssh, a library that implements the SSH protocol. When calculating the session ID during the key exchange (KEX) process, an allocation failure in cryptographic functions may lead to a NULL pointer dereference. This issue can cause the client or server to crash."
-              },
-              "helpUri": "https://github.com/anchore/grype",
-              "help": {
-                "text": "Vulnerability CVE-2025-8114\nSeverity: medium\nPackage: libssh-config\nVersion: 0.10.4-17.el9_7\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2025-8114](https://access.redhat.com/security/cve/CVE-2025-8114)",
-                "markdown": "**Vulnerability CVE-2025-8114**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | libssh-config  | 0.10.4-17.el9_7  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2025-8114](https://access.redhat.com/security/cve/CVE-2025-8114)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/libssh-config@0.10.4-17.el9_7?arch=noarch\u0026distro=rocky-9.7\u0026upstream=libssh-0.10.4-17.el9_7.src.rpm"
-                ],
-                "security-severity": "4.7"
               }
             },
             {
@@ -3391,6 +3391,37 @@
           }
         },
         {
+          "ruleId": "CVE-2026-4424-libarchive",
+          "level": "error",
+          "message": {
+            "text": "A high vulnerability in rpm package: libarchive, version 3.5.3-7.el9_7 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:c04390e234416aa7bc969b9f3857907fe65dd23ffe475594a98c7c175cd82b20:/var/lib/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "43c15d533939c3d8825240a54a25ac21fed8dcdc1232cf56e667ab0b1a87a584:1"
+          }
+        },
+        {
           "ruleId": "CVE-2024-41996-openssl",
           "level": "note",
           "message": {
@@ -3484,37 +3515,6 @@
           }
         },
         {
-          "ruleId": "CVE-2026-4424-libarchive",
-          "level": "error",
-          "message": {
-            "text": "A high vulnerability in rpm package: libarchive, version 3.5.3-7.el9_7 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:c04390e234416aa7bc969b9f3857907fe65dd23ffe475594a98c7c175cd82b20:/var/lib/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "43c15d533939c3d8825240a54a25ac21fed8dcdc1232cf56e667ab0b1a87a584:1"
-          }
-        },
-        {
           "ruleId": "CVE-2025-14087-glib2",
           "level": "warning",
           "message": {
@@ -3577,10 +3577,10 @@
           }
         },
         {
-          "ruleId": "CVE-2023-32636-glib2",
-          "level": "note",
+          "ruleId": "CVE-2026-0966-libssh",
+          "level": "warning",
           "message": {
-            "text": "A low vulnerability in rpm package: glib2, version 2.68.4-18.el9_7.1 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
+            "text": "A medium vulnerability in rpm package: libssh, version 0.10.4-17.el9_7 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
           },
           "locations": [
             {
@@ -3604,7 +3604,69 @@
             }
           ],
           "partialFingerprints": {
-            "primaryLocationLineHash": "e046daad5fdd8258d0f7dcf25df45ee61e9f9dbeb0d062ad2efe27c900ddba0c:1"
+            "primaryLocationLineHash": "dcdaf414cb474c41b3be3b18565b687b46914a712a76435e01cf462d5c8f9642:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-0966-libssh-config",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: libssh-config, version 0.10.4-17.el9_7 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:c04390e234416aa7bc969b9f3857907fe65dd23ffe475594a98c7c175cd82b20:/var/lib/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "ce8ebaa405b4d11f9d35fe317b4564016b2bc28cb49c6b5f90c7104ffce297a2:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-5121-libarchive",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: libarchive, version 3.5.3-7.el9_7 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:c04390e234416aa7bc969b9f3857907fe65dd23ffe475594a98c7c175cd82b20:/var/lib/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "43c15d533939c3d8825240a54a25ac21fed8dcdc1232cf56e667ab0b1a87a584:1"
           }
         },
         {
@@ -3636,6 +3698,37 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "43c15d533939c3d8825240a54a25ac21fed8dcdc1232cf56e667ab0b1a87a584:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2023-32636-glib2",
+          "level": "note",
+          "message": {
+            "text": "A low vulnerability in rpm package: glib2, version 2.68.4-18.el9_7.1 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:c04390e234416aa7bc969b9f3857907fe65dd23ffe475594a98c7c175cd82b20:/var/lib/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "e046daad5fdd8258d0f7dcf25df45ee61e9f9dbeb0d062ad2efe27c900ddba0c:1"
           }
         },
         {
@@ -3794,68 +3887,6 @@
           }
         },
         {
-          "ruleId": "CVE-2026-0966-libssh",
-          "level": "warning",
-          "message": {
-            "text": "A medium vulnerability in rpm package: libssh, version 0.10.4-17.el9_7 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:c04390e234416aa7bc969b9f3857907fe65dd23ffe475594a98c7c175cd82b20:/var/lib/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "dcdaf414cb474c41b3be3b18565b687b46914a712a76435e01cf462d5c8f9642:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2026-0966-libssh-config",
-          "level": "warning",
-          "message": {
-            "text": "A medium vulnerability in rpm package: libssh-config, version 0.10.4-17.el9_7 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:c04390e234416aa7bc969b9f3857907fe65dd23ffe475594a98c7c175cd82b20:/var/lib/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "ce8ebaa405b4d11f9d35fe317b4564016b2bc28cb49c6b5f90c7104ffce297a2:1"
-          }
-        },
-        {
           "ruleId": "CVE-2026-3731-libssh",
           "level": "warning",
           "message": {
@@ -3980,37 +4011,6 @@
           }
         },
         {
-          "ruleId": "CVE-2026-5121-libarchive",
-          "level": "warning",
-          "message": {
-            "text": "A medium vulnerability in rpm package: libarchive, version 3.5.3-7.el9_7 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:c04390e234416aa7bc969b9f3857907fe65dd23ffe475594a98c7c175cd82b20:/var/lib/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "43c15d533939c3d8825240a54a25ac21fed8dcdc1232cf56e667ab0b1a87a584:1"
-          }
-        },
-        {
           "ruleId": "CVE-2025-5915-libarchive",
           "level": "note",
           "message": {
@@ -4070,6 +4070,37 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "e046daad5fdd8258d0f7dcf25df45ee61e9f9dbeb0d062ad2efe27c900ddba0c:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2025-6170-libxml2",
+          "level": "note",
+          "message": {
+            "text": "A low vulnerability in rpm package: libxml2, version 2.9.13-14.el9_7 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:c04390e234416aa7bc969b9f3857907fe65dd23ffe475594a98c7c175cd82b20:/var/lib/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "02875c850bf843ec5b806ce610acbadd16fbfa62194c6e942fec37ed6e77ae64:1"
           }
         },
         {
@@ -4352,68 +4383,6 @@
           }
         },
         {
-          "ruleId": "CVE-2023-45322-libxml2",
-          "level": "note",
-          "message": {
-            "text": "A low vulnerability in rpm package: libxml2, version 2.9.13-14.el9_7 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:c04390e234416aa7bc969b9f3857907fe65dd23ffe475594a98c7c175cd82b20:/var/lib/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "02875c850bf843ec5b806ce610acbadd16fbfa62194c6e942fec37ed6e77ae64:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2025-6170-libxml2",
-          "level": "note",
-          "message": {
-            "text": "A low vulnerability in rpm package: libxml2, version 2.9.13-14.el9_7 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:c04390e234416aa7bc969b9f3857907fe65dd23ffe475594a98c7c175cd82b20:/var/lib/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "02875c850bf843ec5b806ce610acbadd16fbfa62194c6e942fec37ed6e77ae64:1"
-          }
-        },
-        {
           "ruleId": "CVE-2025-15224-curl",
           "level": "note",
           "message": {
@@ -4473,6 +4442,37 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "41ec1fa96b0686ee5672ed8d000c566ef6fb34a69045c40600a71f38f73b1efc:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2023-45322-libxml2",
+          "level": "note",
+          "message": {
+            "text": "A low vulnerability in rpm package: libxml2, version 2.9.13-14.el9_7 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:c04390e234416aa7bc969b9f3857907fe65dd23ffe475594a98c7c175cd82b20:/var/lib/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "02875c850bf843ec5b806ce610acbadd16fbfa62194c6e942fec37ed6e77ae64:1"
           }
         },
         {
@@ -5062,68 +5062,6 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "717cda65fc446b5a2e54f04c7707f4df0ab28aeb3d623bae0488e2e5c9faf6ae:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2026-3805-curl",
-          "level": "warning",
-          "message": {
-            "text": "A medium vulnerability in rpm package: curl, version 7.76.1-35.el9_7.3 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:c04390e234416aa7bc969b9f3857907fe65dd23ffe475594a98c7c175cd82b20:/var/lib/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "21f151bbbf7d16e5790cd45bc569b46c7959c0390475d04b993fa85b91a0f9c6:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2026-3805-libcurl",
-          "level": "warning",
-          "message": {
-            "text": "A medium vulnerability in rpm package: libcurl, version 7.76.1-35.el9_7.3 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:c04390e234416aa7bc969b9f3857907fe65dd23ffe475594a98c7c175cd82b20:/var/lib/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "41ec1fa96b0686ee5672ed8d000c566ef6fb34a69045c40600a71f38f73b1efc:1"
           }
         },
         {
@@ -5871,6 +5809,68 @@
           }
         },
         {
+          "ruleId": "CVE-2025-8114-libssh",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: libssh, version 0.10.4-17.el9_7 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:c04390e234416aa7bc969b9f3857907fe65dd23ffe475594a98c7c175cd82b20:/var/lib/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "dcdaf414cb474c41b3be3b18565b687b46914a712a76435e01cf462d5c8f9642:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2025-8114-libssh-config",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: libssh-config, version 0.10.4-17.el9_7 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:c04390e234416aa7bc969b9f3857907fe65dd23ffe475594a98c7c175cd82b20:/var/lib/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "ce8ebaa405b4d11f9d35fe317b4564016b2bc28cb49c6b5f90c7104ffce297a2:1"
+          }
+        },
+        {
           "ruleId": "CVE-2026-28388-openssl",
           "level": "note",
           "message": {
@@ -6274,6 +6274,68 @@
           }
         },
         {
+          "ruleId": "CVE-2026-3805-curl",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: curl, version 7.76.1-35.el9_7.3 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:c04390e234416aa7bc969b9f3857907fe65dd23ffe475594a98c7c175cd82b20:/var/lib/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "21f151bbbf7d16e5790cd45bc569b46c7959c0390475d04b993fa85b91a0f9c6:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-3805-libcurl",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: libcurl, version 7.76.1-35.el9_7.3 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:c04390e234416aa7bc969b9f3857907fe65dd23ffe475594a98c7c175cd82b20:/var/lib/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "41ec1fa96b0686ee5672ed8d000c566ef6fb34a69045c40600a71f38f73b1efc:1"
+          }
+        },
+        {
           "ruleId": "CVE-2025-70873-sqlite-libs",
           "level": "note",
           "message": {
@@ -6519,68 +6581,6 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "c593de9893ec7049bb710e349c0e036bfe3f39078ea29ab824cac336b591f1c9:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2025-8114-libssh",
-          "level": "warning",
-          "message": {
-            "text": "A medium vulnerability in rpm package: libssh, version 0.10.4-17.el9_7 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:c04390e234416aa7bc969b9f3857907fe65dd23ffe475594a98c7c175cd82b20:/var/lib/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "dcdaf414cb474c41b3be3b18565b687b46914a712a76435e01cf462d5c8f9642:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2025-8114-libssh-config",
-          "level": "warning",
-          "message": {
-            "text": "A medium vulnerability in rpm package: libssh-config, version 0.10.4-17.el9_7 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:c04390e234416aa7bc969b9f3857907fe65dd23ffe475594a98c7c175cd82b20:/var/lib/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "ce8ebaa405b4d11f9d35fe317b4564016b2bc28cb49c6b5f90c7104ffce297a2:1"
           }
         },
         {
