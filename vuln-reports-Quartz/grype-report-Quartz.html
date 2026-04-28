@@ -833,10 +833,6 @@
     
     
     
-    
-    
-    
-    
 
 <body>
     <div class="main-container">
@@ -851,13 +847,13 @@
                     <dd id="typeValue">image</dd><dt>Checksum:</dt>
                     <dd id="checksumValue">sha256:f0046f0b22512638ba8cf43eb594deed08b3ce26cb3ecf85d0cdc443bd9ad4b8</dd><dt>Date:</dt>
                     <dd>
-                        <span id="dateElement">2026-04-26T20:02:22.956906148Z</span>
+                        <span id="dateElement">2026-04-28T12:11:09.855609081Z</span>
                         <span id="prettyDateElement" style="display: none;"></span>
                     </dd>
                     <dt>Grype Version:</dt>
                     <dd>0.111.1</dd>
                     <dt>DB Built:</dt>
-                    <dd>2026-04-26 06:57:35 +0000 UTC</dd>
+                    <dd>2026-04-28 07:17:42 +0000 UTC</dd>
                 </dl>
             </div>
             <div class="heading-right">
@@ -872,15 +868,15 @@
             </div>
             <div class="severity-box" id="high">
                 <div class="severity-title">High</div>
-                <div class="severity-count" id="highCount">5</div>
+                <div class="severity-count" id="highCount">1</div>
             </div>
             <div class="severity-box" id="medium">
                 <div class="severity-title">Medium</div>
-                <div class="severity-count" id="mediumCount">76</div>
+                <div class="severity-count" id="mediumCount">78</div>
             </div>
             <div class="severity-box" id="low">
                 <div class="severity-title">Low</div>
-                <div class="severity-count" id="lowCount">74</div>
+                <div class="severity-count" id="lowCount">72</div>
             </div>
             <div class="severity-box" id="unknown">
                 <div class="severity-title">Unknown</div>
@@ -1193,22 +1189,6 @@
                         <td>pkg:rpm/rocky/glib2@2.80.4-10.el10_1.12?arch=x86_64&distro=rocky-10.1&upstream=glib2-2.80.4-10.el10_1.12.src.rpm</td>
                     </tr>
                     <tr>
-                        <td>rpm-sequoia</td>
-                        <td>1.9.0.3-1.el10_1</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2024-12224">CVE-2024-12224</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in idna crate. This vulnerability allows hostname spoofing and potential privilege escalation via specially crafted Punycode labels that render as ASCII or empty labels, leading to incorrect equality comparisons during hostname validation.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/rpm-sequoia@1.9.0.3-1.el10_1?arch=x86_64&distro=rocky-10.1&upstream=rust-rpm-sequoia-1.9.0.3-1.el10_1.src.rpm</td>
-                    </tr>
-                    <tr>
                         <td>p11-kit</td>
                         <td>0.25.5-7.el10</td>
                         <td>rpm</td>
@@ -1239,6 +1219,22 @@
                         <td>A flaw was found in p11-kit. A remote attacker could exploit this vulnerability by calling the C_DeriveKey function on a remote token with specific IBM kyber or IBM btc derive mechanism parameters set to NULL. This could lead to the RPC-client attempting to return an uninitialized value, potentially resulting in a NULL dereference or undefined behavior. This issue may cause an application level denial of service or other unpredictable system states.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/p11-kit-trust@0.25.5-7.el10?arch=x86_64&distro=rocky-10.1&upstream=p11-kit-0.25.5-7.el10.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>rpm-sequoia</td>
+                        <td>1.9.0.3-1.el10_1</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2024-12224">CVE-2024-12224</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in idna crate. This vulnerability allows hostname spoofing and potential privilege escalation via specially crafted Punycode labels that render as ASCII or empty labels, leading to incorrect equality comparisons during hostname validation.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/rpm-sequoia@1.9.0.3-1.el10_1?arch=x86_64&distro=rocky-10.1&upstream=rust-rpm-sequoia-1.9.0.3-1.el10_1.src.rpm</td>
                     </tr>
                     <tr>
                         <td>libarchive</td>
@@ -1808,6 +1804,38 @@ a locally running SSH agent.</td>
                         <td>pkg:rpm/rocky/libxml2@2.12.5-9.el10_0?arch=x86_64&distro=rocky-10.1&upstream=libxml2-2.12.5-9.el10_0.src.rpm</td>
                     </tr>
                     <tr>
+                        <td>openssl-fips-provider</td>
+                        <td>1:3.5.1-7.el10_1</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-28386">CVE-2026-28386</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in openssl. Applications using AES-CFB128 encryption or decryption on systems with AVX-512 and VAES support may experience a Denial of Service (DoS). This occurs when processing partial cipher blocks, specifically if the input buffer ends at a memory page boundary and the subsequent page is unmapped. This can lead to an out-of-bounds read of up to 15 bytes and a potential application crash.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/openssl-fips-provider@3.5.1-7.el10_1?arch=x86_64&distro=rocky-10.1&epoch=1&upstream=openssl-3.5.1-7.el10_1.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>openssl-libs</td>
+                        <td>1:3.5.1-7.el10_1</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-28386">CVE-2026-28386</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in openssl. Applications using AES-CFB128 encryption or decryption on systems with AVX-512 and VAES support may experience a Denial of Service (DoS). This occurs when processing partial cipher blocks, specifically if the input buffer ends at a memory page boundary and the subsequent page is unmapped. This can lead to an out-of-bounds read of up to 15 bytes and a potential application crash.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/openssl-libs@3.5.1-7.el10_1?arch=x86_64&distro=rocky-10.1&epoch=1&upstream=openssl-3.5.1-7.el10_1.src.rpm</td>
+                    </tr>
+                    <tr>
                         <td>xz-libs</td>
                         <td>1:5.6.2-4.el10_0</td>
                         <td>rpm</td>
@@ -1872,6 +1900,70 @@ a locally running SSH agent.</td>
                         <td>pkg:rpm/rocky/libtasn1@4.20.0-1.el10?arch=x86_64&distro=rocky-10.1&upstream=libtasn1-4.20.0-1.el10.src.rpm</td>
                     </tr>
                     <tr>
+                        <td>glibc</td>
+                        <td>2.39-58.el10_1.7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-5450">CVE-2026-5450</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in glibc (GNU C Library). This vulnerability occurs when an application uses the `scanf` family of functions with a `%mc` format specifier, which is used for dynamically allocating memory for character input, and provides an explicit width greater than 1024. This specific combination can lead to a one-byte heap buffer overflow, potentially allowing an attacker to corrupt memory.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/glibc@2.39-58.el10_1.7?arch=x86_64&distro=rocky-10.1&upstream=glibc-2.39-58.el10_1.7.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>glibc-common</td>
+                        <td>2.39-58.el10_1.7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-5450">CVE-2026-5450</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in glibc (GNU C Library). This vulnerability occurs when an application uses the `scanf` family of functions with a `%mc` format specifier, which is used for dynamically allocating memory for character input, and provides an explicit width greater than 1024. This specific combination can lead to a one-byte heap buffer overflow, potentially allowing an attacker to corrupt memory.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/glibc-common@2.39-58.el10_1.7?arch=x86_64&distro=rocky-10.1&upstream=glibc-2.39-58.el10_1.7.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>glibc-langpack-en</td>
+                        <td>2.39-58.el10_1.7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-5450">CVE-2026-5450</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in glibc (GNU C Library). This vulnerability occurs when an application uses the `scanf` family of functions with a `%mc` format specifier, which is used for dynamically allocating memory for character input, and provides an explicit width greater than 1024. This specific combination can lead to a one-byte heap buffer overflow, potentially allowing an attacker to corrupt memory.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/glibc-langpack-en@2.39-58.el10_1.7?arch=x86_64&distro=rocky-10.1&upstream=glibc-2.39-58.el10_1.7.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>glibc-minimal-langpack</td>
+                        <td>2.39-58.el10_1.7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-5450">CVE-2026-5450</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in glibc (GNU C Library). This vulnerability occurs when an application uses the `scanf` family of functions with a `%mc` format specifier, which is used for dynamically allocating memory for character input, and provides an explicit width greater than 1024. This specific combination can lead to a one-byte heap buffer overflow, potentially allowing an attacker to corrupt memory.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/glibc-minimal-langpack@2.39-58.el10_1.7?arch=x86_64&distro=rocky-10.1&upstream=glibc-2.39-58.el10_1.7.src.rpm</td>
+                    </tr>
+                    <tr>
                         <td>glib2</td>
                         <td>2.80.4-10.el10_1.12</td>
                         <td>rpm</td>
@@ -1886,6 +1978,70 @@ a locally running SSH agent.</td>
                         <td>A flaw was found in glib. Missing validation of offset and count parameters in the g_buffered_input_stream_peek() function can lead to an integer overflow during length calculation. When specially crafted values are provided, this overflow results in an incorrect size being passed to memcpy(), triggering a buffer overflow. This can cause application crashes, leading to a Denial of Service (DoS).</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/glib2@2.80.4-10.el10_1.12?arch=x86_64&distro=rocky-10.1&upstream=glib2-2.80.4-10.el10_1.12.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>glibc</td>
+                        <td>2.39-58.el10_1.7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-5928">CVE-2026-5928</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in glibc (GNU C Library). When the `ungetwc` function is called on a file stream using wide characters with specific overlapping single-byte and multi-byte encodings, it may attempt to read data outside of its allocated buffer. This can lead to the unintentional disclosure of sensitive information from memory or cause the program to crash, resulting in a denial of service.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/glibc@2.39-58.el10_1.7?arch=x86_64&distro=rocky-10.1&upstream=glibc-2.39-58.el10_1.7.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>glibc-common</td>
+                        <td>2.39-58.el10_1.7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-5928">CVE-2026-5928</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in glibc (GNU C Library). When the `ungetwc` function is called on a file stream using wide characters with specific overlapping single-byte and multi-byte encodings, it may attempt to read data outside of its allocated buffer. This can lead to the unintentional disclosure of sensitive information from memory or cause the program to crash, resulting in a denial of service.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/glibc-common@2.39-58.el10_1.7?arch=x86_64&distro=rocky-10.1&upstream=glibc-2.39-58.el10_1.7.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>glibc-langpack-en</td>
+                        <td>2.39-58.el10_1.7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-5928">CVE-2026-5928</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in glibc (GNU C Library). When the `ungetwc` function is called on a file stream using wide characters with specific overlapping single-byte and multi-byte encodings, it may attempt to read data outside of its allocated buffer. This can lead to the unintentional disclosure of sensitive information from memory or cause the program to crash, resulting in a denial of service.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/glibc-langpack-en@2.39-58.el10_1.7?arch=x86_64&distro=rocky-10.1&upstream=glibc-2.39-58.el10_1.7.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>glibc-minimal-langpack</td>
+                        <td>2.39-58.el10_1.7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-5928">CVE-2026-5928</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in glibc (GNU C Library). When the `ungetwc` function is called on a file stream using wide characters with specific overlapping single-byte and multi-byte encodings, it may attempt to read data outside of its allocated buffer. This can lead to the unintentional disclosure of sensitive information from memory or cause the program to crash, resulting in a denial of service.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/glibc-minimal-langpack@2.39-58.el10_1.7?arch=x86_64&distro=rocky-10.1&upstream=glibc-2.39-58.el10_1.7.src.rpm</td>
                     </tr>
                     <tr>
                         <td>glibc</td>
@@ -2000,38 +2156,6 @@ a locally running SSH agent.</td>
                         <td>pkg:rpm/rocky/rpm-sequoia@1.9.0.3-1.el10_1?arch=x86_64&distro=rocky-10.1&upstream=rust-rpm-sequoia-1.9.0.3-1.el10_1.src.rpm</td>
                     </tr>
                     <tr>
-                        <td>openssl-fips-provider</td>
-                        <td>1:3.5.1-7.el10_1</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-28386">CVE-2026-28386</a>
-                        </td>
-                        <td>Low</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in openssl. Applications using AES-CFB128 encryption or decryption on systems with AVX-512 and VAES support may experience a Denial of Service (DoS). This occurs when processing partial cipher blocks, specifically if the input buffer ends at a memory page boundary and the subsequent page is unmapped. This can lead to an out-of-bounds read of up to 15 bytes and a potential application crash.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/openssl-fips-provider@3.5.1-7.el10_1?arch=x86_64&distro=rocky-10.1&epoch=1&upstream=openssl-3.5.1-7.el10_1.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>openssl-libs</td>
-                        <td>1:3.5.1-7.el10_1</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-28386">CVE-2026-28386</a>
-                        </td>
-                        <td>Low</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in openssl. Applications using AES-CFB128 encryption or decryption on systems with AVX-512 and VAES support may experience a Denial of Service (DoS). This occurs when processing partial cipher blocks, specifically if the input buffer ends at a memory page boundary and the subsequent page is unmapped. This can lead to an out-of-bounds read of up to 15 bytes and a potential application crash.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/openssl-libs@3.5.1-7.el10_1?arch=x86_64&distro=rocky-10.1&epoch=1&upstream=openssl-3.5.1-7.el10_1.src.rpm</td>
-                    </tr>
-                    <tr>
                         <td>gnutls</td>
                         <td>3.8.10-3.el10_1</td>
                         <td>rpm</td>
@@ -2126,134 +2250,6 @@ a locally running SSH agent.</td>
                         <td>A flaw was found in OpenSSL. A remote attacker could exploit this vulnerability by sending a specially crafted Cryptographic Message Syntax (CMS) EnvelopedData message. During the processing of a KeyTransportRecipientInfo with RSA-OAEP encryption, the system attempts to access an optional parameter field without first verifying its presence. This leads to a NULL pointer dereference, which can cause applications processing the attacker-controlled CMS data to crash, resulting in a Denial of Service (DoS).</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/openssl-libs@3.5.1-7.el10_1?arch=x86_64&distro=rocky-10.1&epoch=1&upstream=openssl-3.5.1-7.el10_1.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>glibc</td>
-                        <td>2.39-58.el10_1.7</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-5450">CVE-2026-5450</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in glibc (GNU C Library). This vulnerability occurs when an application uses the `scanf` family of functions with a `%mc` format specifier, which is used for dynamically allocating memory for character input, and provides an explicit width greater than 1024. This specific combination can lead to a one-byte heap buffer overflow, potentially allowing an attacker to corrupt memory.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/glibc@2.39-58.el10_1.7?arch=x86_64&distro=rocky-10.1&upstream=glibc-2.39-58.el10_1.7.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>glibc-common</td>
-                        <td>2.39-58.el10_1.7</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-5450">CVE-2026-5450</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in glibc (GNU C Library). This vulnerability occurs when an application uses the `scanf` family of functions with a `%mc` format specifier, which is used for dynamically allocating memory for character input, and provides an explicit width greater than 1024. This specific combination can lead to a one-byte heap buffer overflow, potentially allowing an attacker to corrupt memory.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/glibc-common@2.39-58.el10_1.7?arch=x86_64&distro=rocky-10.1&upstream=glibc-2.39-58.el10_1.7.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>glibc-langpack-en</td>
-                        <td>2.39-58.el10_1.7</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-5450">CVE-2026-5450</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in glibc (GNU C Library). This vulnerability occurs when an application uses the `scanf` family of functions with a `%mc` format specifier, which is used for dynamically allocating memory for character input, and provides an explicit width greater than 1024. This specific combination can lead to a one-byte heap buffer overflow, potentially allowing an attacker to corrupt memory.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/glibc-langpack-en@2.39-58.el10_1.7?arch=x86_64&distro=rocky-10.1&upstream=glibc-2.39-58.el10_1.7.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>glibc-minimal-langpack</td>
-                        <td>2.39-58.el10_1.7</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-5450">CVE-2026-5450</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in glibc (GNU C Library). This vulnerability occurs when an application uses the `scanf` family of functions with a `%mc` format specifier, which is used for dynamically allocating memory for character input, and provides an explicit width greater than 1024. This specific combination can lead to a one-byte heap buffer overflow, potentially allowing an attacker to corrupt memory.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/glibc-minimal-langpack@2.39-58.el10_1.7?arch=x86_64&distro=rocky-10.1&upstream=glibc-2.39-58.el10_1.7.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>glibc</td>
-                        <td>2.39-58.el10_1.7</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-5928">CVE-2026-5928</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in glibc (GNU C Library). When the `ungetwc` function is called on a file stream using wide characters with specific overlapping single-byte and multi-byte encodings, it may attempt to read data outside of its allocated buffer. This can lead to the unintentional disclosure of sensitive information from memory or cause the program to crash, resulting in a denial of service.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/glibc@2.39-58.el10_1.7?arch=x86_64&distro=rocky-10.1&upstream=glibc-2.39-58.el10_1.7.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>glibc-common</td>
-                        <td>2.39-58.el10_1.7</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-5928">CVE-2026-5928</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in glibc (GNU C Library). When the `ungetwc` function is called on a file stream using wide characters with specific overlapping single-byte and multi-byte encodings, it may attempt to read data outside of its allocated buffer. This can lead to the unintentional disclosure of sensitive information from memory or cause the program to crash, resulting in a denial of service.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/glibc-common@2.39-58.el10_1.7?arch=x86_64&distro=rocky-10.1&upstream=glibc-2.39-58.el10_1.7.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>glibc-langpack-en</td>
-                        <td>2.39-58.el10_1.7</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-5928">CVE-2026-5928</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in glibc (GNU C Library). When the `ungetwc` function is called on a file stream using wide characters with specific overlapping single-byte and multi-byte encodings, it may attempt to read data outside of its allocated buffer. This can lead to the unintentional disclosure of sensitive information from memory or cause the program to crash, resulting in a denial of service.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/glibc-langpack-en@2.39-58.el10_1.7?arch=x86_64&distro=rocky-10.1&upstream=glibc-2.39-58.el10_1.7.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>glibc-minimal-langpack</td>
-                        <td>2.39-58.el10_1.7</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-5928">CVE-2026-5928</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in glibc (GNU C Library). When the `ungetwc` function is called on a file stream using wide characters with specific overlapping single-byte and multi-byte encodings, it may attempt to read data outside of its allocated buffer. This can lead to the unintentional disclosure of sensitive information from memory or cause the program to crash, resulting in a denial of service.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/glibc-minimal-langpack@2.39-58.el10_1.7?arch=x86_64&distro=rocky-10.1&upstream=glibc-2.39-58.el10_1.7.src.rpm</td>
                     </tr>
                     <tr>
                         <td>curl</td>
@@ -2480,6 +2476,38 @@ a locally running SSH agent.</td>
                         <td>pkg:rpm/rocky/libarchive@3.7.7-8.el10_1?arch=x86_64&distro=rocky-10.1&upstream=libarchive-3.7.7-8.el10_1.src.rpm</td>
                     </tr>
                     <tr>
+                        <td>openssl-fips-provider</td>
+                        <td>1:3.5.1-7.el10_1</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-9232">CVE-2025-9232</a>
+                        </td>
+                        <td>Low</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in the OpenSSL HTTP client API no_proxy handling. This vulnerability allows an application level denial of service (application crash) via an attacker-controlled IPv6 URL when the no_proxy environment variable is set.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/openssl-fips-provider@3.5.1-7.el10_1?arch=x86_64&distro=rocky-10.1&epoch=1&upstream=openssl-3.5.1-7.el10_1.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>openssl-libs</td>
+                        <td>1:3.5.1-7.el10_1</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-9232">CVE-2025-9232</a>
+                        </td>
+                        <td>Low</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in the OpenSSL HTTP client API no_proxy handling. This vulnerability allows an application level denial of service (application crash) via an attacker-controlled IPv6 URL when the no_proxy environment variable is set.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/openssl-libs@3.5.1-7.el10_1?arch=x86_64&distro=rocky-10.1&epoch=1&upstream=openssl-3.5.1-7.el10_1.src.rpm</td>
+                    </tr>
+                    <tr>
                         <td>openldap</td>
                         <td>2.6.9-1.el10</td>
                         <td>rpm</td>
@@ -2656,38 +2684,6 @@ a locally running SSH agent.</td>
                         <td>pkg:rpm/rocky/openssl-libs@3.5.1-7.el10_1?arch=x86_64&distro=rocky-10.1&epoch=1&upstream=openssl-3.5.1-7.el10_1.src.rpm</td>
                     </tr>
                     <tr>
-                        <td>openssl-fips-provider</td>
-                        <td>1:3.5.1-7.el10_1</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2025-9232">CVE-2025-9232</a>
-                        </td>
-                        <td>Low</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in the OpenSSL HTTP client API no_proxy handling. This vulnerability allows an application level denial of service (application crash) via an attacker-controlled IPv6 URL when the no_proxy environment variable is set.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/openssl-fips-provider@3.5.1-7.el10_1?arch=x86_64&distro=rocky-10.1&epoch=1&upstream=openssl-3.5.1-7.el10_1.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>openssl-libs</td>
-                        <td>1:3.5.1-7.el10_1</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2025-9232">CVE-2025-9232</a>
-                        </td>
-                        <td>Low</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in the OpenSSL HTTP client API no_proxy handling. This vulnerability allows an application level denial of service (application crash) via an attacker-controlled IPv6 URL when the no_proxy environment variable is set.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/openssl-libs@3.5.1-7.el10_1?arch=x86_64&distro=rocky-10.1&epoch=1&upstream=openssl-3.5.1-7.el10_1.src.rpm</td>
-                    </tr>
-                    <tr>
                         <td>libssh</td>
                         <td>0.11.1-5.el10_1</td>
                         <td>rpm</td>
@@ -2832,22 +2828,6 @@ a locally running SSH agent.</td>
                         <td>pkg:rpm/rocky/openssl-libs@3.5.1-7.el10_1?arch=x86_64&distro=rocky-10.1&epoch=1&upstream=openssl-3.5.1-7.el10_1.src.rpm</td>
                     </tr>
                     <tr>
-                        <td>libxml2</td>
-                        <td>2.12.5-9.el10_0</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-6732">CVE-2026-6732</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in libxml2. This vulnerability occurs when the library processes a specially crafted XML Schema Definition (XSD) validated document that includes an internal entity reference. An attacker could exploit this by providing a malicious document, leading to a type confusion error that causes the application to crash. This results in a denial of service (DoS), making the affected system or application unavailable.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/libxml2@2.12.5-9.el10_0?arch=x86_64&distro=rocky-10.1&upstream=libxml2-2.12.5-9.el10_0.src.rpm</td>
-                    </tr>
-                    <tr>
                         <td>libssh</td>
                         <td>0.11.1-5.el10_1</td>
                         <td>rpm</td>
@@ -2886,6 +2866,22 @@ files and make the user execute them under specific consequences.
 This is the same issue as in OpenSSH, tracked as CVE-2019-6111.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/libssh-config@0.11.1-5.el10_1?arch=noarch&distro=rocky-10.1&upstream=libssh-0.11.1-5.el10_1.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>libxml2</td>
+                        <td>2.12.5-9.el10_0</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-6732">CVE-2026-6732</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in libxml2. This vulnerability occurs when the library processes a specially crafted XML Schema Definition (XSD) validated document that includes an internal entity reference. An attacker could exploit this by providing a malicious document, leading to a type confusion error that causes the application to crash. This results in a denial of service (DoS), making the affected system or application unavailable.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/libxml2@2.12.5-9.el10_0?arch=x86_64&distro=rocky-10.1&upstream=libxml2-2.12.5-9.el10_0.src.rpm</td>
                     </tr>
                     <tr>
                         <td>glib2</td>
@@ -2934,6 +2930,38 @@ This is the same issue as in OpenSSH, tracked as CVE-2019-6111.</td>
                         <td>A flaw was found in the bsdunzip utility of libarchive. In affected versions, a specially crafted file may trigger a null pointer dereference. This issue can lead to an application crash or other unexpected behavior. This bug does not compromise the integrity or availability of the base system.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/libarchive@3.7.7-8.el10_1?arch=x86_64&distro=rocky-10.1&upstream=libarchive-3.7.7-8.el10_1.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>libssh</td>
+                        <td>0.11.1-5.el10_1</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-0967">CVE-2026-0967</a>
+                        </td>
+                        <td>Low</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in libssh. A remote attacker, by controlling client configuration files or known_hosts files, could craft specific hostnames that when processed by the `match_pattern()` function can lead to inefficient regular expression backtracking. This can cause timeouts and resource exhaustion, resulting in a Denial of Service (DoS) for the client.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/libssh@0.11.1-5.el10_1?arch=x86_64&distro=rocky-10.1&upstream=libssh-0.11.1-5.el10_1.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>libssh-config</td>
+                        <td>0.11.1-5.el10_1</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-0967">CVE-2026-0967</a>
+                        </td>
+                        <td>Low</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in libssh. A remote attacker, by controlling client configuration files or known_hosts files, could craft specific hostnames that when processed by the `match_pattern()` function can lead to inefficient regular expression backtracking. This can cause timeouts and resource exhaustion, resulting in a Denial of Service (DoS) for the client.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/libssh-config@0.11.1-5.el10_1?arch=noarch&distro=rocky-10.1&upstream=libssh-0.11.1-5.el10_1.src.rpm</td>
                     </tr>
                     <tr>
                         <td>libblkid</td>
@@ -3080,38 +3108,6 @@ This is the same issue as in OpenSSH, tracked as CVE-2019-6111.</td>
                         <td>pkg:rpm/rocky/systemd-libs@257-13.el10.rocky.0.1?arch=x86_64&distro=rocky-10.1&upstream=systemd-257-13.el10.rocky.0.1.src.rpm</td>
                     </tr>
                     <tr>
-                        <td>libssh</td>
-                        <td>0.11.1-5.el10_1</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-0967">CVE-2026-0967</a>
-                        </td>
-                        <td>Low</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in libssh. A remote attacker, by controlling client configuration files or known_hosts files, could craft specific hostnames that when processed by the `match_pattern()` function can lead to inefficient regular expression backtracking. This can cause timeouts and resource exhaustion, resulting in a Denial of Service (DoS) for the client.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/libssh@0.11.1-5.el10_1?arch=x86_64&distro=rocky-10.1&upstream=libssh-0.11.1-5.el10_1.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>libssh-config</td>
-                        <td>0.11.1-5.el10_1</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-0967">CVE-2026-0967</a>
-                        </td>
-                        <td>Low</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in libssh. A remote attacker, by controlling client configuration files or known_hosts files, could craft specific hostnames that when processed by the `match_pattern()` function can lead to inefficient regular expression backtracking. This can cause timeouts and resource exhaustion, resulting in a Denial of Service (DoS) for the client.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/libssh-config@0.11.1-5.el10_1?arch=noarch&distro=rocky-10.1&upstream=libssh-0.11.1-5.el10_1.src.rpm</td>
-                    </tr>
-                    <tr>
                         <td>curl</td>
                         <td>8.12.1-2.el10_1.2</td>
                         <td>rpm</td>
@@ -3240,22 +3236,6 @@ This is the same issue as in OpenSSH, tracked as CVE-2019-6111.</td>
                         <td>pkg:rpm/rocky/libcurl@8.12.1-2.el10_1.2?arch=x86_64&distro=rocky-10.1&upstream=curl-8.12.1-2.el10_1.2.src.rpm</td>
                     </tr>
                     <tr>
-                        <td>rpm-sequoia</td>
-                        <td>1.9.0.3-1.el10_1</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-2625">CVE-2026-2625</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in rust-rpm-sequoia. An attacker can exploit this vulnerability by providing a specially crafted Red Hat Package Manager (RPM) file. During the RPM signature verification process, this crafted file can trigger an error in the OpenPGP signature parsing code, leading to an unconditional termination of the rpm process. This issue results in an application level denial of service, making the system unable to process RPM files for signature verification.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/rpm-sequoia@1.9.0.3-1.el10_1?arch=x86_64&distro=rocky-10.1&upstream=rust-rpm-sequoia-1.9.0.3-1.el10_1.src.rpm</td>
-                    </tr>
-                    <tr>
                         <td>libssh</td>
                         <td>0.11.1-5.el10_1</td>
                         <td>rpm</td>
@@ -3286,6 +3266,22 @@ This is the same issue as in OpenSSH, tracked as CVE-2019-6111.</td>
                         <td>A flaw was found in libssh in which a malicious SFTP (SSH File Transfer Protocol) server can exploit this by sending a malformed &#39;longname&#39; field within an `SSH_FXP_NAME` message during a file listing operation. This missing null check can lead to reading beyond allocated memory on the heap. This can cause unexpected behavior or lead to a denial of service (DoS) due to application crashes.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/libssh-config@0.11.1-5.el10_1?arch=noarch&distro=rocky-10.1&upstream=libssh-0.11.1-5.el10_1.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>rpm-sequoia</td>
+                        <td>1.9.0.3-1.el10_1</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-2625">CVE-2026-2625</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in rust-rpm-sequoia. An attacker can exploit this vulnerability by providing a specially crafted Red Hat Package Manager (RPM) file. During the RPM signature verification process, this crafted file can trigger an error in the OpenPGP signature parsing code, leading to an unconditional termination of the rpm process. This issue results in an application level denial of service, making the system unable to process RPM files for signature verification.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/rpm-sequoia@1.9.0.3-1.el10_1?arch=x86_64&distro=rocky-10.1&upstream=rust-rpm-sequoia-1.9.0.3-1.el10_1.src.rpm</td>
                     </tr>
                     <tr>
                         <td>libcap</td>
@@ -3350,70 +3346,6 @@ This is the same issue as in OpenSSH, tracked as CVE-2019-6111.</td>
                         <td>A flaw was found in Glib&#39;s content type parsing logic. This buffer underflow vulnerability occurs because the length of a header line is stored in a signed integer, which can lead to integer wraparound for very large inputs. This results in pointer underflow and out-of-bounds memory access. Exploitation requires a local user to install or process a specially crafted treemagic file, which can lead to local denial of service or application instability.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/glib2@2.80.4-10.el10_1.12?arch=x86_64&distro=rocky-10.1&upstream=glib2-2.80.4-10.el10_1.12.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>glibc</td>
-                        <td>2.39-58.el10_1.7</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-5358">CVE-2026-5358</a>
-                        </td>
-                        <td>High</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in the GNU C Library (glibc). The obsolete `nis_local_principal` function contains a buffer overflow vulnerability. A remote attacker could exploit this by spoofing a crafted response to a User Datagram Protocol (UDP) request. This could allow the attacker to overwrite static data in the requesting application, potentially leading to data corruption or a denial of service.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/glibc@2.39-58.el10_1.7?arch=x86_64&distro=rocky-10.1&upstream=glibc-2.39-58.el10_1.7.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>glibc-common</td>
-                        <td>2.39-58.el10_1.7</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-5358">CVE-2026-5358</a>
-                        </td>
-                        <td>High</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in the GNU C Library (glibc). The obsolete `nis_local_principal` function contains a buffer overflow vulnerability. A remote attacker could exploit this by spoofing a crafted response to a User Datagram Protocol (UDP) request. This could allow the attacker to overwrite static data in the requesting application, potentially leading to data corruption or a denial of service.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/glibc-common@2.39-58.el10_1.7?arch=x86_64&distro=rocky-10.1&upstream=glibc-2.39-58.el10_1.7.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>glibc-langpack-en</td>
-                        <td>2.39-58.el10_1.7</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-5358">CVE-2026-5358</a>
-                        </td>
-                        <td>High</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in the GNU C Library (glibc). The obsolete `nis_local_principal` function contains a buffer overflow vulnerability. A remote attacker could exploit this by spoofing a crafted response to a User Datagram Protocol (UDP) request. This could allow the attacker to overwrite static data in the requesting application, potentially leading to data corruption or a denial of service.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/glibc-langpack-en@2.39-58.el10_1.7?arch=x86_64&distro=rocky-10.1&upstream=glibc-2.39-58.el10_1.7.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>glibc-minimal-langpack</td>
-                        <td>2.39-58.el10_1.7</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-5358">CVE-2026-5358</a>
-                        </td>
-                        <td>High</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in the GNU C Library (glibc). The obsolete `nis_local_principal` function contains a buffer overflow vulnerability. A remote attacker could exploit this by spoofing a crafted response to a User Datagram Protocol (UDP) request. This could allow the attacker to overwrite static data in the requesting application, potentially leading to data corruption or a denial of service.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/glibc-minimal-langpack@2.39-58.el10_1.7?arch=x86_64&distro=rocky-10.1&upstream=glibc-2.39-58.el10_1.7.src.rpm</td>
                     </tr>
                 </tbody>
             </table>
