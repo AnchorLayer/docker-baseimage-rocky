@@ -844,6 +844,18 @@
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
 <body>
     <div class="main-container">
@@ -858,13 +870,13 @@
                     <dd id="typeValue">image</dd><dt>Checksum:</dt>
                     <dd id="checksumValue">sha256:a4a602c4db9758cd361779e1efe54a47a4e15d4f7e8131e4204cdfedc0554649</dd><dt>Date:</dt>
                     <dd>
-                        <span id="dateElement">2026-04-29T15:54:14.257479314Z</span>
+                        <span id="dateElement">2026-05-01T10:52:21.36713096Z</span>
                         <span id="prettyDateElement" style="display: none;"></span>
                     </dd>
                     <dt>Grype Version:</dt>
                     <dd>0.111.1</dd>
                     <dt>DB Built:</dt>
-                    <dd>2026-04-29 07:42:13 +0000 UTC</dd>
+                    <dd>2026-05-01 07:12:24 +0000 UTC</dd>
                 </dl>
             </div>
             <div class="heading-right">
@@ -879,15 +891,15 @@
             </div>
             <div class="severity-box" id="high">
                 <div class="severity-title">High</div>
-                <div class="severity-count" id="highCount">2</div>
+                <div class="severity-count" id="highCount">3</div>
             </div>
             <div class="severity-box" id="medium">
                 <div class="severity-title">Medium</div>
-                <div class="severity-count" id="mediumCount">81</div>
+                <div class="severity-count" id="mediumCount">89</div>
             </div>
             <div class="severity-box" id="low">
                 <div class="severity-title">Low</div>
-                <div class="severity-count" id="lowCount">79</div>
+                <div class="severity-count" id="lowCount">82</div>
             </div>
             <div class="severity-box" id="unknown">
                 <div class="severity-title">Unknown</div>
@@ -1040,6 +1052,38 @@
                         <td>pkg:rpm/rocky/libcurl@7.76.1-35.el9_7.3?arch=x86_64&distro=rocky-9.7&upstream=curl-7.76.1-35.el9_7.3.src.rpm</td>
                     </tr>
                     <tr>
+                        <td>libssh</td>
+                        <td>0.10.4-17.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-5351">CVE-2025-5351</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in the key export functionality of libssh. The issue occurs in the internal function responsible for converting cryptographic keys into serialized formats. During error handling, a memory structure is freed but not cleared, leading to a potential double free issue if an additional failure occurs later in the function. This condition may result in heap corruption or application instability in low-memory scenarios, posing a risk to system reliability where key export operations are performed.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/libssh@0.10.4-17.el9_7?arch=x86_64&distro=rocky-9.7&upstream=libssh-0.10.4-17.el9_7.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>libssh-config</td>
+                        <td>0.10.4-17.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-5351">CVE-2025-5351</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in the key export functionality of libssh. The issue occurs in the internal function responsible for converting cryptographic keys into serialized formats. During error handling, a memory structure is freed but not cleared, leading to a potential double free issue if an additional failure occurs later in the function. This condition may result in heap corruption or application instability in low-memory scenarios, posing a risk to system reliability where key export operations are performed.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/libssh-config@0.10.4-17.el9_7?arch=noarch&distro=rocky-9.7&upstream=libssh-0.10.4-17.el9_7.src.rpm</td>
+                    </tr>
+                    <tr>
                         <td>openssl</td>
                         <td>1:3.5.1-7.el9_7</td>
                         <td>rpm</td>
@@ -1088,6 +1132,38 @@
                         <td>pkg:rpm/rocky/openssl-libs@3.5.1-7.el9_7?arch=x86_64&distro=rocky-9.7&epoch=1&upstream=openssl-3.5.1-7.el9_7.src.rpm</td>
                     </tr>
                     <tr>
+                        <td>libssh</td>
+                        <td>0.10.4-17.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-5372">CVE-2025-5372</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in libssh versions built with OpenSSL versions older than 3.0, specifically in the ssh_kdf() function responsible for key derivation. Due to inconsistent interpretation of return values where OpenSSL uses 0 to indicate failure and libssh uses 0 for success—the function may mistakenly return a success status even when key derivation fails. This results in uninitialized cryptographic key buffers being used in subsequent communication, potentially compromising SSH sessions&#39; confidentiality, integrity, and availability.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/libssh@0.10.4-17.el9_7?arch=x86_64&distro=rocky-9.7&upstream=libssh-0.10.4-17.el9_7.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>libssh-config</td>
+                        <td>0.10.4-17.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-5372">CVE-2025-5372</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in libssh versions built with OpenSSL versions older than 3.0, specifically in the ssh_kdf() function responsible for key derivation. Due to inconsistent interpretation of return values where OpenSSL uses 0 to indicate failure and libssh uses 0 for success—the function may mistakenly return a success status even when key derivation fails. This results in uninitialized cryptographic key buffers being used in subsequent communication, potentially compromising SSH sessions&#39; confidentiality, integrity, and availability.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/libssh-config@0.10.4-17.el9_7?arch=noarch&distro=rocky-9.7&upstream=libssh-0.10.4-17.el9_7.src.rpm</td>
+                    </tr>
+                    <tr>
                         <td>glib2</td>
                         <td>2.68.4-18.el9_7.1</td>
                         <td>rpm</td>
@@ -1102,22 +1178,6 @@
                         <td>A flaw was found in GLib. An integer overflow and buffer under-read occur when parsing a long invalid ISO 8601 timestamp with the g_date_time_new_from_iso8601() function.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/glib2@2.68.4-18.el9_7.1?arch=x86_64&distro=rocky-9.7&upstream=glib2-2.68.4-18.el9_7.1.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>libarchive</td>
-                        <td>3.5.3-9.el9_7</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-4426">CVE-2026-4426</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in libarchive. An Undefined Behavior vulnerability exists in the zisofs decompression logic, caused by improper validation of a field (`pz_log2_bs`) read from ISO9660 Rock Ridge extensions. A remote attacker can exploit this by supplying a specially crafted ISO file. This can lead to incorrect memory allocation and potential application crashes, resulting in a denial-of-service (DoS) condition.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/libarchive@3.5.3-9.el9_7?arch=x86_64&distro=rocky-9.7&upstream=libarchive-3.5.3-9.el9_7.src.rpm</td>
                     </tr>
                     <tr>
                         <td>glib2</td>
@@ -1136,36 +1196,20 @@
                         <td>pkg:rpm/rocky/glib2@2.68.4-18.el9_7.1?arch=x86_64&distro=rocky-9.7&upstream=glib2-2.68.4-18.el9_7.1.src.rpm</td>
                     </tr>
                     <tr>
-                        <td>libssh</td>
-                        <td>0.10.4-17.el9_7</td>
+                        <td>libarchive</td>
+                        <td>3.5.3-9.el9_7</td>
                         <td>rpm</td>
                         <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2025-5351">CVE-2025-5351</a>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-4426">CVE-2026-4426</a>
                         </td>
                         <td>Medium</td>
                         <td>not-fixed</td>
                         <td>
                             N/A
                         </td>
-                        <td>A flaw was found in the key export functionality of libssh. The issue occurs in the internal function responsible for converting cryptographic keys into serialized formats. During error handling, a memory structure is freed but not cleared, leading to a potential double free issue if an additional failure occurs later in the function. This condition may result in heap corruption or application instability in low-memory scenarios, posing a risk to system reliability where key export operations are performed.</td>
+                        <td>A flaw was found in libarchive. An Undefined Behavior vulnerability exists in the zisofs decompression logic, caused by improper validation of a field (`pz_log2_bs`) read from ISO9660 Rock Ridge extensions. A remote attacker can exploit this by supplying a specially crafted ISO file. This can lead to incorrect memory allocation and potential application crashes, resulting in a denial-of-service (DoS) condition.</td>
                         <td>[]</td>
-                        <td>pkg:rpm/rocky/libssh@0.10.4-17.el9_7?arch=x86_64&distro=rocky-9.7&upstream=libssh-0.10.4-17.el9_7.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>libssh-config</td>
-                        <td>0.10.4-17.el9_7</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2025-5351">CVE-2025-5351</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in the key export functionality of libssh. The issue occurs in the internal function responsible for converting cryptographic keys into serialized formats. During error handling, a memory structure is freed but not cleared, leading to a potential double free issue if an additional failure occurs later in the function. This condition may result in heap corruption or application instability in low-memory scenarios, posing a risk to system reliability where key export operations are performed.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/libssh-config@0.10.4-17.el9_7?arch=noarch&distro=rocky-9.7&upstream=libssh-0.10.4-17.el9_7.src.rpm</td>
+                        <td>pkg:rpm/rocky/libarchive@3.5.3-9.el9_7?arch=x86_64&distro=rocky-9.7&upstream=libarchive-3.5.3-9.el9_7.src.rpm</td>
                     </tr>
                     <tr>
                         <td>coreutils-single</td>
@@ -1212,38 +1256,6 @@
                             N/A
                         </td>
                         <td>A flaw was found in libssh. A remote attacker could trigger an out-of-bounds read vulnerability in the SFTP Extension Name Handler by manipulating the `idx` argument in the `sftp_extensions_get_name` or `sftp_extensions_get_data` functions. This could lead to a Denial of Service (DoS), making the affected system unresponsive.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/libssh-config@0.10.4-17.el9_7?arch=noarch&distro=rocky-9.7&upstream=libssh-0.10.4-17.el9_7.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>libssh</td>
-                        <td>0.10.4-17.el9_7</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2025-5372">CVE-2025-5372</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in libssh versions built with OpenSSL versions older than 3.0, specifically in the ssh_kdf() function responsible for key derivation. Due to inconsistent interpretation of return values where OpenSSL uses 0 to indicate failure and libssh uses 0 for success—the function may mistakenly return a success status even when key derivation fails. This results in uninitialized cryptographic key buffers being used in subsequent communication, potentially compromising SSH sessions&#39; confidentiality, integrity, and availability.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/libssh@0.10.4-17.el9_7?arch=x86_64&distro=rocky-9.7&upstream=libssh-0.10.4-17.el9_7.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>libssh-config</td>
-                        <td>0.10.4-17.el9_7</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2025-5372">CVE-2025-5372</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in libssh versions built with OpenSSL versions older than 3.0, specifically in the ssh_kdf() function responsible for key derivation. Due to inconsistent interpretation of return values where OpenSSL uses 0 to indicate failure and libssh uses 0 for success—the function may mistakenly return a success status even when key derivation fails. This results in uninitialized cryptographic key buffers being used in subsequent communication, potentially compromising SSH sessions&#39; confidentiality, integrity, and availability.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/libssh-config@0.10.4-17.el9_7?arch=noarch&distro=rocky-9.7&upstream=libssh-0.10.4-17.el9_7.src.rpm</td>
                     </tr>
@@ -1604,54 +1616,6 @@ a locally running SSH agent.</td>
                         <td>A flaw was found in libxml2. This vulnerability allows a NULL pointer dereference, leading to a potential crash or denial of service via a crafted XML pattern.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/libxml2@2.9.13-14.el9_7?arch=x86_64&distro=rocky-9.7&upstream=libxml2-2.9.13-14.el9_7.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>openssl</td>
-                        <td>1:3.5.1-7.el9_7</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-28386">CVE-2026-28386</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in openssl. Applications using AES-CFB128 encryption or decryption on systems with AVX-512 and VAES support may experience a Denial of Service (DoS). This occurs when processing partial cipher blocks, specifically if the input buffer ends at a memory page boundary and the subsequent page is unmapped. This can lead to an out-of-bounds read of up to 15 bytes and a potential application crash.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/openssl@3.5.1-7.el9_7?arch=x86_64&distro=rocky-9.7&epoch=1&upstream=openssl-3.5.1-7.el9_7.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>openssl-fips-provider</td>
-                        <td>1:3.5.1-7.el9_7</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-28386">CVE-2026-28386</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in openssl. Applications using AES-CFB128 encryption or decryption on systems with AVX-512 and VAES support may experience a Denial of Service (DoS). This occurs when processing partial cipher blocks, specifically if the input buffer ends at a memory page boundary and the subsequent page is unmapped. This can lead to an out-of-bounds read of up to 15 bytes and a potential application crash.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/openssl-fips-provider@3.5.1-7.el9_7?arch=x86_64&distro=rocky-9.7&epoch=1&upstream=openssl-3.5.1-7.el9_7.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>openssl-libs</td>
-                        <td>1:3.5.1-7.el9_7</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-28386">CVE-2026-28386</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in openssl. Applications using AES-CFB128 encryption or decryption on systems with AVX-512 and VAES support may experience a Denial of Service (DoS). This occurs when processing partial cipher blocks, specifically if the input buffer ends at a memory page boundary and the subsequent page is unmapped. This can lead to an out-of-bounds read of up to 15 bytes and a potential application crash.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/openssl-libs@3.5.1-7.el9_7?arch=x86_64&distro=rocky-9.7&epoch=1&upstream=openssl-3.5.1-7.el9_7.src.rpm</td>
                     </tr>
                     <tr>
                         <td>xz-libs</td>
@@ -2036,6 +2000,70 @@ a locally running SSH agent.</td>
                         <td>A flaw was found in binutils, where GNU GCC is vulnerable to a denial of service caused by a stack consumption in the demangle_const() function in libiberty/rust-demangle.c. The vulnerability exists due to the application not properly controlling the consumption of internal resources. By persuading a victim to open a specially-crafted file, an attacker could cause a denial of service.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/libstdc%2B%2B@11.5.0-11.el9?arch=x86_64&distro=rocky-9.7&upstream=gcc-11.5.0-11.el9.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>glibc</td>
+                        <td>2.34-231.el9_7.10</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-5435">CVE-2026-5435</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in glibc, the GNU C Library. Specifically, deprecated functions responsible for printing TSIG (Transaction Signature) records fail to properly manage memory buffers. This oversight can lead to an out-of-bounds write when processing specially crafted TSIG records. An attacker could exploit this to cause a denial of service or potentially execute arbitrary code.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/glibc@2.34-231.el9_7.10?arch=x86_64&distro=rocky-9.7&upstream=glibc-2.34-231.el9_7.10.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>glibc-common</td>
+                        <td>2.34-231.el9_7.10</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-5435">CVE-2026-5435</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in glibc, the GNU C Library. Specifically, deprecated functions responsible for printing TSIG (Transaction Signature) records fail to properly manage memory buffers. This oversight can lead to an out-of-bounds write when processing specially crafted TSIG records. An attacker could exploit this to cause a denial of service or potentially execute arbitrary code.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/glibc-common@2.34-231.el9_7.10?arch=x86_64&distro=rocky-9.7&upstream=glibc-2.34-231.el9_7.10.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>glibc-langpack-en</td>
+                        <td>2.34-231.el9_7.10</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-5435">CVE-2026-5435</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in glibc, the GNU C Library. Specifically, deprecated functions responsible for printing TSIG (Transaction Signature) records fail to properly manage memory buffers. This oversight can lead to an out-of-bounds write when processing specially crafted TSIG records. An attacker could exploit this to cause a denial of service or potentially execute arbitrary code.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/glibc-langpack-en@2.34-231.el9_7.10?arch=x86_64&distro=rocky-9.7&upstream=glibc-2.34-231.el9_7.10.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>glibc-minimal-langpack</td>
+                        <td>2.34-231.el9_7.10</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-5435">CVE-2026-5435</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in glibc, the GNU C Library. Specifically, deprecated functions responsible for printing TSIG (Transaction Signature) records fail to properly manage memory buffers. This oversight can lead to an out-of-bounds write when processing specially crafted TSIG records. An attacker could exploit this to cause a denial of service or potentially execute arbitrary code.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/glibc-minimal-langpack@2.34-231.el9_7.10?arch=x86_64&distro=rocky-9.7&upstream=glibc-2.34-231.el9_7.10.src.rpm</td>
                     </tr>
                     <tr>
                         <td>curl</td>
@@ -2614,6 +2642,22 @@ a locally running SSH agent.</td>
                         <td>pkg:rpm/rocky/glibc-minimal-langpack@2.34-231.el9_7.10?arch=x86_64&distro=rocky-9.7&upstream=glibc-2.34-231.el9_7.10.src.rpm</td>
                     </tr>
                     <tr>
+                        <td>libxml2</td>
+                        <td>2.9.13-14.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-6732">CVE-2026-6732</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in libxml2. This vulnerability occurs when the library processes a specially crafted XML Schema Definition (XSD) validated document that includes an internal entity reference. An attacker could exploit this by providing a malicious document, leading to a type confusion error that causes the application to crash. This results in a denial of service (DoS), making the affected system or application unavailable.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/libxml2@2.9.13-14.el9_7?arch=x86_64&distro=rocky-9.7&upstream=libxml2-2.9.13-14.el9_7.src.rpm</td>
+                    </tr>
+                    <tr>
                         <td>openssl</td>
                         <td>1:3.5.1-7.el9_7</td>
                         <td>rpm</td>
@@ -2694,20 +2738,20 @@ a locally running SSH agent.</td>
                         <td>pkg:rpm/rocky/libssh-config@0.10.4-17.el9_7?arch=noarch&distro=rocky-9.7&upstream=libssh-0.10.4-17.el9_7.src.rpm</td>
                     </tr>
                     <tr>
-                        <td>libarchive</td>
-                        <td>3.5.3-9.el9_7</td>
+                        <td>libgcrypt</td>
+                        <td>1.10.0-11.el9</td>
                         <td>rpm</td>
                         <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-5745">CVE-2026-5745</a>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-41989">CVE-2026-41989</a>
                         </td>
                         <td>Medium</td>
                         <td>not-fixed</td>
                         <td>
                             N/A
                         </td>
-                        <td>A flaw was found in libarchive. A NULL pointer dereference vulnerability exists in the ACL parsing logic, specifically within the archive_acl_from_text_nl() function. When processing a malformed ACL string (such as a bare &#34;d&#34; or &#34;default&#34; tag without subsequent fields), the function fails to perform adequate validation before advancing the pointer. An attacker can exploit this by providing a maliciously crafted archive, causing an application utilizing the libarchive API (such as bsdtar) to crash, resulting in a Denial of Service (DoS).</td>
+                        <td>A flaw was found in Libgcrypt. A remote attacker could exploit this vulnerability by sending crafted Elliptic Curve Diffie-Hellman (ECDH) ciphertext to the `gcry_pk_decrypt` function. This can lead to a heap-based buffer overflow, potentially causing a denial of service (DoS) condition.</td>
                         <td>[]</td>
-                        <td>pkg:rpm/rocky/libarchive@3.5.3-9.el9_7?arch=x86_64&distro=rocky-9.7&upstream=libarchive-3.5.3-9.el9_7.src.rpm</td>
+                        <td>pkg:rpm/rocky/libgcrypt@1.10.0-11.el9?arch=x86_64&distro=rocky-9.7&upstream=libgcrypt-1.10.0-11.el9.src.rpm</td>
                     </tr>
                     <tr>
                         <td>glib2</td>
@@ -2878,20 +2922,20 @@ This is the same issue as in OpenSSH, tracked as CVE-2019-6111.</td>
                         <td>pkg:rpm/rocky/libssh-config@0.10.4-17.el9_7?arch=noarch&distro=rocky-9.7&upstream=libssh-0.10.4-17.el9_7.src.rpm</td>
                     </tr>
                     <tr>
-                        <td>libxml2</td>
-                        <td>2.9.13-14.el9_7</td>
+                        <td>libarchive</td>
+                        <td>3.5.3-9.el9_7</td>
                         <td>rpm</td>
                         <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-6732">CVE-2026-6732</a>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-5745">CVE-2026-5745</a>
                         </td>
                         <td>Medium</td>
                         <td>not-fixed</td>
                         <td>
                             N/A
                         </td>
-                        <td>A flaw was found in libxml2. This vulnerability occurs when the library processes a specially crafted XML Schema Definition (XSD) validated document that includes an internal entity reference. An attacker could exploit this by providing a malicious document, leading to a type confusion error that causes the application to crash. This results in a denial of service (DoS), making the affected system or application unavailable.</td>
+                        <td>A flaw was found in libarchive. A NULL pointer dereference vulnerability exists in the ACL parsing logic, specifically within the archive_acl_from_text_nl() function. When processing a malformed ACL string (such as a bare &#34;d&#34; or &#34;default&#34; tag without subsequent fields), the function fails to perform adequate validation before advancing the pointer. An attacker can exploit this by providing a maliciously crafted archive, causing an application utilizing the libarchive API (such as bsdtar) to crash, resulting in a Denial of Service (DoS).</td>
                         <td>[]</td>
-                        <td>pkg:rpm/rocky/libxml2@2.9.13-14.el9_7?arch=x86_64&distro=rocky-9.7&upstream=libxml2-2.9.13-14.el9_7.src.rpm</td>
+                        <td>pkg:rpm/rocky/libarchive@3.5.3-9.el9_7?arch=x86_64&distro=rocky-9.7&upstream=libarchive-3.5.3-9.el9_7.src.rpm</td>
                     </tr>
                     <tr>
                         <td>glib2</td>
@@ -2956,22 +3000,6 @@ This is the same issue as in OpenSSH, tracked as CVE-2019-6111.</td>
                         <td>A flaw was found in libssh. A remote attacker, by controlling client configuration files or known_hosts files, could craft specific hostnames that when processed by the `match_pattern()` function can lead to inefficient regular expression backtracking. This can cause timeouts and resource exhaustion, resulting in a Denial of Service (DoS) for the client.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/libssh-config@0.10.4-17.el9_7?arch=noarch&distro=rocky-9.7&upstream=libssh-0.10.4-17.el9_7.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>libgcrypt</td>
-                        <td>1.10.0-11.el9</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-41989">CVE-2026-41989</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in Libgcrypt. A remote attacker could exploit this vulnerability by sending crafted Elliptic Curve Diffie-Hellman (ECDH) ciphertext to the `gcry_pk_decrypt` function. This can lead to a heap-based buffer overflow, potentially causing a denial of service (DoS) condition.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/libgcrypt@1.10.0-11.el9?arch=x86_64&distro=rocky-9.7&upstream=libgcrypt-1.10.0-11.el9.src.rpm</td>
                     </tr>
                     <tr>
                         <td>libblkid</td>
@@ -3221,9 +3249,11 @@ This is the same issue as in OpenSSH, tracked as CVE-2019-6111.</td>
                             <a href="https://access.redhat.com/security/cve/CVE-2026-4878">CVE-2026-4878</a>
                         </td>
                         <td>High</td>
-                        <td>not-fixed</td>
+                        <td>fixed</td>
                         <td>
-                            N/A
+                            <ul>
+                                <li>0:2.48-10.el9_7.1</li>
+                            </ul>
                         </td>
                         <td>A flaw was found in libcap. A local unprivileged user can exploit a Time-of-check-to-time-of-use (TOCTOU) race condition in the `cap_set_file()` function. This allows an attacker with write access to a parent directory to redirect file capability updates to an attacker-controlled file. By doing so, capabilities can be injected into or stripped from unintended executables, leading to privilege escalation.</td>
                         <td>[]</td>
@@ -3294,22 +3324,6 @@ This is the same issue as in OpenSSH, tracked as CVE-2019-6111.</td>
                         <td>pkg:rpm/rocky/libxml2@2.9.13-14.el9_7?arch=x86_64&distro=rocky-9.7&upstream=libxml2-2.9.13-14.el9_7.src.rpm</td>
                     </tr>
                     <tr>
-                        <td>gnupg2</td>
-                        <td>2.3.3-5.el9_7</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-24883">CVE-2026-24883</a>
-                        </td>
-                        <td>Low</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in GnuPG. A remote attacker could provide a specially crafted long signature packet that, when processed, causes the application to crash. This vulnerability leads to a denial of service (DoS), making the GnuPG application unavailable to legitimate users.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/gnupg2@2.3.3-5.el9_7?arch=x86_64&distro=rocky-9.7&upstream=gnupg2-2.3.3-5.el9_7.src.rpm</td>
-                    </tr>
-                    <tr>
                         <td>libgcrypt</td>
                         <td>1.10.0-11.el9</td>
                         <td>rpm</td>
@@ -3324,6 +3338,22 @@ This is the same issue as in OpenSSH, tracked as CVE-2019-6111.</td>
                         <td>A flaw was found in Libgcrypt. During Dilithium signing operations, the library fails to perform a bounds check when writing to a static array. While the data involved is not directly controlled by an attacker, this vulnerability could lead to memory corruption, potentially resulting in a denial of service (DoS) or affecting data integrity.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/libgcrypt@1.10.0-11.el9?arch=x86_64&distro=rocky-9.7&upstream=libgcrypt-1.10.0-11.el9.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>gnupg2</td>
+                        <td>2.3.3-5.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-24883">CVE-2026-24883</a>
+                        </td>
+                        <td>Low</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in GnuPG. A remote attacker could provide a specially crafted long signature packet that, when processed, causes the application to crash. This vulnerability leads to a denial of service (DoS), making the GnuPG application unavailable to legitimate users.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/gnupg2@2.3.3-5.el9_7?arch=x86_64&distro=rocky-9.7&upstream=gnupg2-2.3.3-5.el9_7.src.rpm</td>
                     </tr>
                     <tr>
                         <td>curl</td>
@@ -3470,68 +3500,244 @@ This is the same issue as in OpenSSH, tracked as CVE-2019-6111.</td>
                         <td>pkg:rpm/rocky/glib2@2.68.4-18.el9_7.1?arch=x86_64&distro=rocky-9.7&upstream=glib2-2.68.4-18.el9_7.1.src.rpm</td>
                     </tr>
                     <tr>
-                        <td>glibc</td>
-                        <td>2.34-231.el9_7.10</td>
+                        <td>gnutls</td>
+                        <td>3.8.3-10.el9_7</td>
                         <td>rpm</td>
                         <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-5435">CVE-2026-5435</a>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-33845">CVE-2026-33845</a>
                         </td>
-                        <td>Medium</td>
+                        <td>High</td>
                         <td>not-fixed</td>
                         <td>
                             N/A
                         </td>
-                        <td>A flaw was found in glibc, the GNU C Library. Specifically, deprecated functions responsible for printing TSIG (Transaction Signature) records fail to properly manage memory buffers. This oversight can lead to an out-of-bounds write when processing specially crafted TSIG records. An attacker could exploit this to cause a denial of service or potentially execute arbitrary code.</td>
+                        <td>A flaw in GnuTLS DTLS handshake parsing allows malformed fragments with zero length and non-zero offset, leading to an integer underflow during reassembly and resulting in an out-of-bounds read. This issue is remotely exploitable and may cause information disclosure or denial of service.</td>
                         <td>[]</td>
-                        <td>pkg:rpm/rocky/glibc@2.34-231.el9_7.10?arch=x86_64&distro=rocky-9.7&upstream=glibc-2.34-231.el9_7.10.src.rpm</td>
+                        <td>pkg:rpm/rocky/gnutls@3.8.3-10.el9_7?arch=x86_64&distro=rocky-9.7&upstream=gnutls-3.8.3-10.el9_7.src.rpm</td>
                     </tr>
                     <tr>
-                        <td>glibc-common</td>
-                        <td>2.34-231.el9_7.10</td>
+                        <td>curl</td>
+                        <td>7.76.1-35.el9_7.3</td>
                         <td>rpm</td>
                         <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-5435">CVE-2026-5435</a>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-4873">CVE-2026-4873</a>
                         </td>
                         <td>Medium</td>
                         <td>not-fixed</td>
                         <td>
                             N/A
                         </td>
-                        <td>A flaw was found in glibc, the GNU C Library. Specifically, deprecated functions responsible for printing TSIG (Transaction Signature) records fail to properly manage memory buffers. This oversight can lead to an out-of-bounds write when processing specially crafted TSIG records. An attacker could exploit this to cause a denial of service or potentially execute arbitrary code.</td>
+                        <td>A flaw was found in curl. A remote attacker could exploit this by initiating an unencrypted connection (via IMAP, SMTP, or POP3) and then making a subsequent request to the same host that requires Transport Layer Security (TLS). Due to incorrect connection reuse, the subsequent request would bypass the TLS requirement, leading to the transmission of sensitive information in cleartext. This vulnerability, categorized as Cleartext Transmission of Sensitive Information (CWE-319), results in information disclosure.</td>
                         <td>[]</td>
-                        <td>pkg:rpm/rocky/glibc-common@2.34-231.el9_7.10?arch=x86_64&distro=rocky-9.7&upstream=glibc-2.34-231.el9_7.10.src.rpm</td>
+                        <td>pkg:rpm/rocky/curl@7.76.1-35.el9_7.3?arch=x86_64&distro=rocky-9.7&upstream=curl-7.76.1-35.el9_7.3.src.rpm</td>
                     </tr>
                     <tr>
-                        <td>glibc-langpack-en</td>
-                        <td>2.34-231.el9_7.10</td>
+                        <td>curl</td>
+                        <td>7.76.1-35.el9_7.3</td>
                         <td>rpm</td>
                         <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-5435">CVE-2026-5435</a>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-5545">CVE-2026-5545</a>
                         </td>
                         <td>Medium</td>
                         <td>not-fixed</td>
                         <td>
                             N/A
                         </td>
-                        <td>A flaw was found in glibc, the GNU C Library. Specifically, deprecated functions responsible for printing TSIG (Transaction Signature) records fail to properly manage memory buffers. This oversight can lead to an out-of-bounds write when processing specially crafted TSIG records. An attacker could exploit this to cause a denial of service or potentially execute arbitrary code.</td>
+                        <td>A flaw was found in libcurl. An application using libcurl that performs an authenticated HTTP(S) request after a Negotiate-authenticated one to the same host may incorrectly reuse the previous connection. This authentication bypass vulnerability allows the second request to be sent over a connection authenticated with different credentials, potentially leading to unauthorized access or information disclosure.</td>
                         <td>[]</td>
-                        <td>pkg:rpm/rocky/glibc-langpack-en@2.34-231.el9_7.10?arch=x86_64&distro=rocky-9.7&upstream=glibc-2.34-231.el9_7.10.src.rpm</td>
+                        <td>pkg:rpm/rocky/curl@7.76.1-35.el9_7.3?arch=x86_64&distro=rocky-9.7&upstream=curl-7.76.1-35.el9_7.3.src.rpm</td>
                     </tr>
                     <tr>
-                        <td>glibc-minimal-langpack</td>
-                        <td>2.34-231.el9_7.10</td>
+                        <td>curl</td>
+                        <td>7.76.1-35.el9_7.3</td>
                         <td>rpm</td>
                         <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-5435">CVE-2026-5435</a>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-5773">CVE-2026-5773</a>
                         </td>
                         <td>Medium</td>
                         <td>not-fixed</td>
                         <td>
                             N/A
                         </td>
-                        <td>A flaw was found in glibc, the GNU C Library. Specifically, deprecated functions responsible for printing TSIG (Transaction Signature) records fail to properly manage memory buffers. This oversight can lead to an out-of-bounds write when processing specially crafted TSIG records. An attacker could exploit this to cause a denial of service or potentially execute arbitrary code.</td>
+                        <td>A flaw was found in libcurl. Due to a logical error in the connection reuse mechanism for SMB (Server Message Block) transfers, libcurl might reuse an existing SMB connection with a different share than intended. This vulnerability, categorized as CWE-488 (Exposure of Data Element to Wrong Session), could lead to the download of an incorrect file or the upload of a file to an unintended location when an application uses libcurl for SMB transfers.</td>
                         <td>[]</td>
-                        <td>pkg:rpm/rocky/glibc-minimal-langpack@2.34-231.el9_7.10?arch=x86_64&distro=rocky-9.7&upstream=glibc-2.34-231.el9_7.10.src.rpm</td>
+                        <td>pkg:rpm/rocky/curl@7.76.1-35.el9_7.3?arch=x86_64&distro=rocky-9.7&upstream=curl-7.76.1-35.el9_7.3.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>curl</td>
+                        <td>7.76.1-35.el9_7.3</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-6253">CVE-2026-6253</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in curl. When curl is configured to use distinct proxies for different URL schemes, a redirect from a URL using an authenticated proxy to one using an unauthenticated proxy can inadvertently expose the initial proxy&#39;s credentials. This improper credential management (CWE-522) may allow an attacker to gain unauthorized access or information by intercepting these disclosed credentials.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/curl@7.76.1-35.el9_7.3?arch=x86_64&distro=rocky-9.7&upstream=curl-7.76.1-35.el9_7.3.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>curl</td>
+                        <td>7.76.1-35.el9_7.3</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-6429">CVE-2026-6429</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in libcurl. When configured to use a .netrc file for credentials and follow HTTP redirects, libcurl can inadvertently send the password from the initial connection to the redirected host. This sensitive information disclosure occurs when both the original and redirect URLs use clear text HTTP, are performed over the same HTTP proxy, and the same connection is reused. This vulnerability, categorized as an Exposure of Sensitive Information to an Unauthorized Actor (CWE-200), could allow an attacker to obtain user credentials.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/curl@7.76.1-35.el9_7.3?arch=x86_64&distro=rocky-9.7&upstream=curl-7.76.1-35.el9_7.3.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>gnutls</td>
+                        <td>3.8.3-10.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-3833">CVE-2026-3833</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in gnutls. This vulnerability occurs because gnutls performs case-sensitive comparisons of `nameConstraints` labels, specifically for `dNSName` (DNS) or `rfc822Name` (email) constraints within `excludedSubtrees` or `permittedSubtrees`. A remote attacker can exploit this by crafting a leaf certificate with casing differences in the Subject Alternative Name (SAN), leading to a policy bypass where a certificate that should be rejected is instead accepted. This could result in unauthorized access or information disclosure.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/gnutls@3.8.3-10.el9_7?arch=x86_64&distro=rocky-9.7&upstream=gnutls-3.8.3-10.el9_7.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>libcurl</td>
+                        <td>7.76.1-35.el9_7.3</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-4873">CVE-2026-4873</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in curl. A remote attacker could exploit this by initiating an unencrypted connection (via IMAP, SMTP, or POP3) and then making a subsequent request to the same host that requires Transport Layer Security (TLS). Due to incorrect connection reuse, the subsequent request would bypass the TLS requirement, leading to the transmission of sensitive information in cleartext. This vulnerability, categorized as Cleartext Transmission of Sensitive Information (CWE-319), results in information disclosure.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/libcurl@7.76.1-35.el9_7.3?arch=x86_64&distro=rocky-9.7&upstream=curl-7.76.1-35.el9_7.3.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>libcurl</td>
+                        <td>7.76.1-35.el9_7.3</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-5545">CVE-2026-5545</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in libcurl. An application using libcurl that performs an authenticated HTTP(S) request after a Negotiate-authenticated one to the same host may incorrectly reuse the previous connection. This authentication bypass vulnerability allows the second request to be sent over a connection authenticated with different credentials, potentially leading to unauthorized access or information disclosure.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/libcurl@7.76.1-35.el9_7.3?arch=x86_64&distro=rocky-9.7&upstream=curl-7.76.1-35.el9_7.3.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>libcurl</td>
+                        <td>7.76.1-35.el9_7.3</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-5773">CVE-2026-5773</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in libcurl. Due to a logical error in the connection reuse mechanism for SMB (Server Message Block) transfers, libcurl might reuse an existing SMB connection with a different share than intended. This vulnerability, categorized as CWE-488 (Exposure of Data Element to Wrong Session), could lead to the download of an incorrect file or the upload of a file to an unintended location when an application uses libcurl for SMB transfers.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/libcurl@7.76.1-35.el9_7.3?arch=x86_64&distro=rocky-9.7&upstream=curl-7.76.1-35.el9_7.3.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>libcurl</td>
+                        <td>7.76.1-35.el9_7.3</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-6253">CVE-2026-6253</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in curl. When curl is configured to use distinct proxies for different URL schemes, a redirect from a URL using an authenticated proxy to one using an unauthenticated proxy can inadvertently expose the initial proxy&#39;s credentials. This improper credential management (CWE-522) may allow an attacker to gain unauthorized access or information by intercepting these disclosed credentials.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/libcurl@7.76.1-35.el9_7.3?arch=x86_64&distro=rocky-9.7&upstream=curl-7.76.1-35.el9_7.3.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>libcurl</td>
+                        <td>7.76.1-35.el9_7.3</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-6429">CVE-2026-6429</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in libcurl. When configured to use a .netrc file for credentials and follow HTTP redirects, libcurl can inadvertently send the password from the initial connection to the redirected host. This sensitive information disclosure occurs when both the original and redirect URLs use clear text HTTP, are performed over the same HTTP proxy, and the same connection is reused. This vulnerability, categorized as an Exposure of Sensitive Information to an Unauthorized Actor (CWE-200), could allow an attacker to obtain user credentials.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/libcurl@7.76.1-35.el9_7.3?arch=x86_64&distro=rocky-9.7&upstream=curl-7.76.1-35.el9_7.3.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>curl</td>
+                        <td>7.76.1-35.el9_7.3</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-6276">CVE-2026-6276</a>
+                        </td>
+                        <td>Low</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in libcurl. This vulnerability allows for information disclosure when a custom `Host:` header is used in an initial HTTP request, and a subsequent request reuses the same connection without specifying a new `Host:` header. This can lead to libcurl incorrectly sending cookies intended for the first host to the second host, resulting in a cookie leak. This issue is categorized as an Origin Validation Error (CWE-346). Exploitation typically requires specific debugging configurations.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/curl@7.76.1-35.el9_7.3?arch=x86_64&distro=rocky-9.7&upstream=curl-7.76.1-35.el9_7.3.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>gnutls</td>
+                        <td>3.8.3-10.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-3832">CVE-2026-3832</a>
+                        </td>
+                        <td>Low</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in gnutls. A remote attacker could exploit this vulnerability by presenting a specially crafted Online Certificate Status Protocol (OCSP) response during a TLS handshake. Due to a logic error in how gnutls processes multi-record OCSP responses, a client with OCSP verification enabled may incorrectly accept a revoked server certificate, potentially leading to a compromise of trust.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/gnutls@3.8.3-10.el9_7?arch=x86_64&distro=rocky-9.7&upstream=gnutls-3.8.3-10.el9_7.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>libcurl</td>
+                        <td>7.76.1-35.el9_7.3</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-6276">CVE-2026-6276</a>
+                        </td>
+                        <td>Low</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in libcurl. This vulnerability allows for information disclosure when a custom `Host:` header is used in an initial HTTP request, and a subsequent request reuses the same connection without specifying a new `Host:` header. This can lead to libcurl incorrectly sending cookies intended for the first host to the second host, resulting in a cookie leak. This issue is categorized as an Origin Validation Error (CWE-346). Exploitation typically requires specific debugging configurations.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/libcurl@7.76.1-35.el9_7.3?arch=x86_64&distro=rocky-9.7&upstream=curl-7.76.1-35.el9_7.3.src.rpm</td>
                     </tr>
                 </tbody>
             </table>
