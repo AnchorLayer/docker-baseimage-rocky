@@ -866,13 +866,13 @@
                     <dd id="typeValue">image</dd><dt>Checksum:</dt>
                     <dd id="checksumValue">sha256:f0046f0b22512638ba8cf43eb594deed08b3ce26cb3ecf85d0cdc443bd9ad4b8</dd><dt>Date:</dt>
                     <dd>
-                        <span id="dateElement">2026-05-01T10:52:27.331129573Z</span>
+                        <span id="dateElement">2026-05-03T15:42:01.972839017Z</span>
                         <span id="prettyDateElement" style="display: none;"></span>
                     </dd>
                     <dt>Grype Version:</dt>
-                    <dd>0.111.1</dd>
+                    <dd>0.112.0</dd>
                     <dt>DB Built:</dt>
-                    <dd>2026-05-01 07:12:24 +0000 UTC</dd>
+                    <dd>2026-05-03 07:08:02 +0000 UTC</dd>
                 </dl>
             </div>
             <div class="heading-right">
@@ -1336,56 +1336,6 @@
                         <td>pkg:rpm/rocky/krb5-libs@1.21.3-8.el10_0?arch=x86_64&distro=rocky-10.1&upstream=krb5-1.21.3-8.el10_0.src.rpm</td>
                     </tr>
                     <tr>
-                        <td>libssh</td>
-                        <td>0.11.1-5.el10_1</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-0966">CVE-2026-0966</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>The API function `ssh_get_hexa()` is vulnerable, when 0-lenght
-input is provided to this function. This function is used internally
-in `ssh_get_fingerprint_hash()` and `ssh_print_hexa()` (deprecated),
-which is vulnerable to the same input (length is provided by the
-calling application).
-The function is also used internally in the gssapi code for logging
-the OIDs received by the server during GSSAPI authentication. This
-could be triggered remotely, when the server allows GSSAPI authentication
-and logging verbosity is set at least to SSH_LOG_PACKET (3). This
-could cause self-DoS of the per-connection daemon process.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/libssh@0.11.1-5.el10_1?arch=x86_64&distro=rocky-10.1&upstream=libssh-0.11.1-5.el10_1.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>libssh-config</td>
-                        <td>0.11.1-5.el10_1</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-0966">CVE-2026-0966</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>The API function `ssh_get_hexa()` is vulnerable, when 0-lenght
-input is provided to this function. This function is used internally
-in `ssh_get_fingerprint_hash()` and `ssh_print_hexa()` (deprecated),
-which is vulnerable to the same input (length is provided by the
-calling application).
-The function is also used internally in the gssapi code for logging
-the OIDs received by the server during GSSAPI authentication. This
-could be triggered remotely, when the server allows GSSAPI authentication
-and logging verbosity is set at least to SSH_LOG_PACKET (3). This
-could cause self-DoS of the per-connection daemon process.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/libssh-config@0.11.1-5.el10_1?arch=noarch&distro=rocky-10.1&upstream=libssh-0.11.1-5.el10_1.src.rpm</td>
-                    </tr>
-                    <tr>
                         <td>curl</td>
                         <td>8.12.1-2.el10_1.2</td>
                         <td>rpm</td>
@@ -1497,6 +1447,70 @@ A SUID binary or process has a special type of permission, which allows the proc
                         <td>An integer overflow flaw has been discovered in SQLite. This flaw allows an attacker who has the ability to execute raw SQL statements to induce a denial of service or leak process memory.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/sqlite-libs@3.46.1-5.el10_1?arch=x86_64&distro=rocky-10.1&upstream=sqlite-3.46.1-5.el10_1.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>glibc</td>
+                        <td>2.39-58.el10_1.7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-4437">CVE-2026-4437</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in glibc (the GNU C Library). When an application uses the `gethostbyaddr` or `gethostbyaddr_r` functions with a `nsswitch.conf` configuration that specifies glibc&#39;s DNS backend, a remote attacker can send a specially crafted DNS (Domain Name System) response. This crafted response can cause the application to incorrectly interpret a non-answer section of the DNS response as a valid answer, leading to potential misbehavior or incorrect information processing.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/glibc@2.39-58.el10_1.7?arch=x86_64&distro=rocky-10.1&upstream=glibc-2.39-58.el10_1.7.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>glibc-common</td>
+                        <td>2.39-58.el10_1.7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-4437">CVE-2026-4437</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in glibc (the GNU C Library). When an application uses the `gethostbyaddr` or `gethostbyaddr_r` functions with a `nsswitch.conf` configuration that specifies glibc&#39;s DNS backend, a remote attacker can send a specially crafted DNS (Domain Name System) response. This crafted response can cause the application to incorrectly interpret a non-answer section of the DNS response as a valid answer, leading to potential misbehavior or incorrect information processing.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/glibc-common@2.39-58.el10_1.7?arch=x86_64&distro=rocky-10.1&upstream=glibc-2.39-58.el10_1.7.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>glibc-langpack-en</td>
+                        <td>2.39-58.el10_1.7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-4437">CVE-2026-4437</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in glibc (the GNU C Library). When an application uses the `gethostbyaddr` or `gethostbyaddr_r` functions with a `nsswitch.conf` configuration that specifies glibc&#39;s DNS backend, a remote attacker can send a specially crafted DNS (Domain Name System) response. This crafted response can cause the application to incorrectly interpret a non-answer section of the DNS response as a valid answer, leading to potential misbehavior or incorrect information processing.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/glibc-langpack-en@2.39-58.el10_1.7?arch=x86_64&distro=rocky-10.1&upstream=glibc-2.39-58.el10_1.7.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>glibc-minimal-langpack</td>
+                        <td>2.39-58.el10_1.7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-4437">CVE-2026-4437</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in glibc (the GNU C Library). When an application uses the `gethostbyaddr` or `gethostbyaddr_r` functions with a `nsswitch.conf` configuration that specifies glibc&#39;s DNS backend, a remote attacker can send a specially crafted DNS (Domain Name System) response. This crafted response can cause the application to incorrectly interpret a non-answer section of the DNS response as a valid answer, leading to potential misbehavior or incorrect information processing.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/glibc-minimal-langpack@2.39-58.el10_1.7?arch=x86_64&distro=rocky-10.1&upstream=glibc-2.39-58.el10_1.7.src.rpm</td>
                     </tr>
                     <tr>
                         <td>libarchive</td>
@@ -1743,68 +1757,54 @@ a locally running SSH agent.</td>
                         <td>pkg:rpm/rocky/glibc-minimal-langpack@2.39-58.el10_1.7?arch=x86_64&distro=rocky-10.1&upstream=glibc-2.39-58.el10_1.7.src.rpm</td>
                     </tr>
                     <tr>
-                        <td>glibc</td>
-                        <td>2.39-58.el10_1.7</td>
+                        <td>libssh</td>
+                        <td>0.11.1-5.el10_1</td>
                         <td>rpm</td>
                         <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-4437">CVE-2026-4437</a>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-0966">CVE-2026-0966</a>
                         </td>
                         <td>Medium</td>
                         <td>not-fixed</td>
                         <td>
                             N/A
                         </td>
-                        <td>A flaw was found in glibc (the GNU C Library). When an application uses the `gethostbyaddr` or `gethostbyaddr_r` functions with a `nsswitch.conf` configuration that specifies glibc&#39;s DNS backend, a remote attacker can send a specially crafted DNS (Domain Name System) response. This crafted response can cause the application to incorrectly interpret a non-answer section of the DNS response as a valid answer, leading to potential misbehavior or incorrect information processing.</td>
+                        <td>The API function `ssh_get_hexa()` is vulnerable, when 0-lenght
+input is provided to this function. This function is used internally
+in `ssh_get_fingerprint_hash()` and `ssh_print_hexa()` (deprecated),
+which is vulnerable to the same input (length is provided by the
+calling application).
+The function is also used internally in the gssapi code for logging
+the OIDs received by the server during GSSAPI authentication. This
+could be triggered remotely, when the server allows GSSAPI authentication
+and logging verbosity is set at least to SSH_LOG_PACKET (3). This
+could cause self-DoS of the per-connection daemon process.</td>
                         <td>[]</td>
-                        <td>pkg:rpm/rocky/glibc@2.39-58.el10_1.7?arch=x86_64&distro=rocky-10.1&upstream=glibc-2.39-58.el10_1.7.src.rpm</td>
+                        <td>pkg:rpm/rocky/libssh@0.11.1-5.el10_1?arch=x86_64&distro=rocky-10.1&upstream=libssh-0.11.1-5.el10_1.src.rpm</td>
                     </tr>
                     <tr>
-                        <td>glibc-common</td>
-                        <td>2.39-58.el10_1.7</td>
+                        <td>libssh-config</td>
+                        <td>0.11.1-5.el10_1</td>
                         <td>rpm</td>
                         <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-4437">CVE-2026-4437</a>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-0966">CVE-2026-0966</a>
                         </td>
                         <td>Medium</td>
                         <td>not-fixed</td>
                         <td>
                             N/A
                         </td>
-                        <td>A flaw was found in glibc (the GNU C Library). When an application uses the `gethostbyaddr` or `gethostbyaddr_r` functions with a `nsswitch.conf` configuration that specifies glibc&#39;s DNS backend, a remote attacker can send a specially crafted DNS (Domain Name System) response. This crafted response can cause the application to incorrectly interpret a non-answer section of the DNS response as a valid answer, leading to potential misbehavior or incorrect information processing.</td>
+                        <td>The API function `ssh_get_hexa()` is vulnerable, when 0-lenght
+input is provided to this function. This function is used internally
+in `ssh_get_fingerprint_hash()` and `ssh_print_hexa()` (deprecated),
+which is vulnerable to the same input (length is provided by the
+calling application).
+The function is also used internally in the gssapi code for logging
+the OIDs received by the server during GSSAPI authentication. This
+could be triggered remotely, when the server allows GSSAPI authentication
+and logging verbosity is set at least to SSH_LOG_PACKET (3). This
+could cause self-DoS of the per-connection daemon process.</td>
                         <td>[]</td>
-                        <td>pkg:rpm/rocky/glibc-common@2.39-58.el10_1.7?arch=x86_64&distro=rocky-10.1&upstream=glibc-2.39-58.el10_1.7.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>glibc-langpack-en</td>
-                        <td>2.39-58.el10_1.7</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-4437">CVE-2026-4437</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in glibc (the GNU C Library). When an application uses the `gethostbyaddr` or `gethostbyaddr_r` functions with a `nsswitch.conf` configuration that specifies glibc&#39;s DNS backend, a remote attacker can send a specially crafted DNS (Domain Name System) response. This crafted response can cause the application to incorrectly interpret a non-answer section of the DNS response as a valid answer, leading to potential misbehavior or incorrect information processing.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/glibc-langpack-en@2.39-58.el10_1.7?arch=x86_64&distro=rocky-10.1&upstream=glibc-2.39-58.el10_1.7.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>glibc-minimal-langpack</td>
-                        <td>2.39-58.el10_1.7</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-4437">CVE-2026-4437</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in glibc (the GNU C Library). When an application uses the `gethostbyaddr` or `gethostbyaddr_r` functions with a `nsswitch.conf` configuration that specifies glibc&#39;s DNS backend, a remote attacker can send a specially crafted DNS (Domain Name System) response. This crafted response can cause the application to incorrectly interpret a non-answer section of the DNS response as a valid answer, leading to potential misbehavior or incorrect information processing.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/glibc-minimal-langpack@2.39-58.el10_1.7?arch=x86_64&distro=rocky-10.1&upstream=glibc-2.39-58.el10_1.7.src.rpm</td>
+                        <td>pkg:rpm/rocky/libssh-config@0.11.1-5.el10_1?arch=noarch&distro=rocky-10.1&upstream=libssh-0.11.1-5.el10_1.src.rpm</td>
                     </tr>
                     <tr>
                         <td>libxml2</td>
@@ -1821,6 +1821,22 @@ a locally running SSH agent.</td>
                         <td>A flaw was found in libxml2. This vulnerability allows a NULL pointer dereference, leading to a potential crash or denial of service via a crafted XML pattern.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/libxml2@2.12.5-9.el10_0?arch=x86_64&distro=rocky-10.1&upstream=libxml2-2.12.5-9.el10_0.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>gnutls</td>
+                        <td>3.8.10-3.el10_1</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-33845">CVE-2026-33845</a>
+                        </td>
+                        <td>High</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw in GnuTLS DTLS handshake parsing allows malformed fragments with zero length and non-zero offset, leading to an integer underflow during reassembly and resulting in an out-of-bounds read. This issue is remotely exploitable and may cause information disclosure or denial of service.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/gnutls@3.8.10-3.el10_1?arch=x86_64&distro=rocky-10.1&upstream=gnutls-3.8.10-3.el10_1.src.rpm</td>
                     </tr>
                     <tr>
                         <td>xz-libs</td>
@@ -1917,6 +1933,102 @@ a locally running SSH agent.</td>
                         <td>A flaw was found in libtasn1. A remote attacker could exploit a stack-based buffer overflow vulnerability in the `asn1_expend_octet_string` function. This occurs due to a failure in validating the size of input data. Successful exploitation can lead to a Denial of Service (DoS) condition, making the affected system or application unavailable.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/libtasn1@4.20.0-1.el10?arch=x86_64&distro=rocky-10.1&upstream=libtasn1-4.20.0-1.el10.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>openssl-fips-provider</td>
+                        <td>1:3.5.1-7.el10_1</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-28390">CVE-2026-28390</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in OpenSSL. A remote attacker could exploit this vulnerability by sending a specially crafted Cryptographic Message Syntax (CMS) EnvelopedData message. During the processing of a KeyTransportRecipientInfo with RSA-OAEP encryption, the system attempts to access an optional parameter field without first verifying its presence. This leads to a NULL pointer dereference, which can cause applications processing the attacker-controlled CMS data to crash, resulting in a Denial of Service (DoS).</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/openssl-fips-provider@3.5.1-7.el10_1?arch=x86_64&distro=rocky-10.1&epoch=1&upstream=openssl-3.5.1-7.el10_1.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>openssl-libs</td>
+                        <td>1:3.5.1-7.el10_1</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-28390">CVE-2026-28390</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in OpenSSL. A remote attacker could exploit this vulnerability by sending a specially crafted Cryptographic Message Syntax (CMS) EnvelopedData message. During the processing of a KeyTransportRecipientInfo with RSA-OAEP encryption, the system attempts to access an optional parameter field without first verifying its presence. This leads to a NULL pointer dereference, which can cause applications processing the attacker-controlled CMS data to crash, resulting in a Denial of Service (DoS).</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/openssl-libs@3.5.1-7.el10_1?arch=x86_64&distro=rocky-10.1&epoch=1&upstream=openssl-3.5.1-7.el10_1.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>glibc</td>
+                        <td>2.39-58.el10_1.7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-4046">CVE-2026-4046</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in glibc, the GNU C Library. A remote attacker could exploit this vulnerability by providing specially crafted inputs using the IBM1390 or IBM1399 character sets to the `iconv()` function. This could lead to an assertion failure, causing the application to crash and resulting in a Denial of Service (DoS).</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/glibc@2.39-58.el10_1.7?arch=x86_64&distro=rocky-10.1&upstream=glibc-2.39-58.el10_1.7.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>glibc-common</td>
+                        <td>2.39-58.el10_1.7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-4046">CVE-2026-4046</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in glibc, the GNU C Library. A remote attacker could exploit this vulnerability by providing specially crafted inputs using the IBM1390 or IBM1399 character sets to the `iconv()` function. This could lead to an assertion failure, causing the application to crash and resulting in a Denial of Service (DoS).</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/glibc-common@2.39-58.el10_1.7?arch=x86_64&distro=rocky-10.1&upstream=glibc-2.39-58.el10_1.7.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>glibc-langpack-en</td>
+                        <td>2.39-58.el10_1.7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-4046">CVE-2026-4046</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in glibc, the GNU C Library. A remote attacker could exploit this vulnerability by providing specially crafted inputs using the IBM1390 or IBM1399 character sets to the `iconv()` function. This could lead to an assertion failure, causing the application to crash and resulting in a Denial of Service (DoS).</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/glibc-langpack-en@2.39-58.el10_1.7?arch=x86_64&distro=rocky-10.1&upstream=glibc-2.39-58.el10_1.7.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>glibc-minimal-langpack</td>
+                        <td>2.39-58.el10_1.7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-4046">CVE-2026-4046</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in glibc, the GNU C Library. A remote attacker could exploit this vulnerability by providing specially crafted inputs using the IBM1390 or IBM1399 character sets to the `iconv()` function. This could lead to an assertion failure, causing the application to crash and resulting in a Denial of Service (DoS).</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/glibc-minimal-langpack@2.39-58.el10_1.7?arch=x86_64&distro=rocky-10.1&upstream=glibc-2.39-58.el10_1.7.src.rpm</td>
                     </tr>
                     <tr>
                         <td>glibc</td>
@@ -2059,70 +2171,6 @@ a locally running SSH agent.</td>
                             N/A
                         </td>
                         <td>A flaw was found in glibc (GNU C Library). When the `ungetwc` function is called on a file stream using wide characters with specific overlapping single-byte and multi-byte encodings, it may attempt to read data outside of its allocated buffer. This can lead to the unintentional disclosure of sensitive information from memory or cause the program to crash, resulting in a denial of service.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/glibc-minimal-langpack@2.39-58.el10_1.7?arch=x86_64&distro=rocky-10.1&upstream=glibc-2.39-58.el10_1.7.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>glibc</td>
-                        <td>2.39-58.el10_1.7</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-4046">CVE-2026-4046</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in glibc, the GNU C Library. A remote attacker could exploit this vulnerability by providing specially crafted inputs using the IBM1390 or IBM1399 character sets to the `iconv()` function. This could lead to an assertion failure, causing the application to crash and resulting in a Denial of Service (DoS).</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/glibc@2.39-58.el10_1.7?arch=x86_64&distro=rocky-10.1&upstream=glibc-2.39-58.el10_1.7.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>glibc-common</td>
-                        <td>2.39-58.el10_1.7</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-4046">CVE-2026-4046</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in glibc, the GNU C Library. A remote attacker could exploit this vulnerability by providing specially crafted inputs using the IBM1390 or IBM1399 character sets to the `iconv()` function. This could lead to an assertion failure, causing the application to crash and resulting in a Denial of Service (DoS).</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/glibc-common@2.39-58.el10_1.7?arch=x86_64&distro=rocky-10.1&upstream=glibc-2.39-58.el10_1.7.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>glibc-langpack-en</td>
-                        <td>2.39-58.el10_1.7</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-4046">CVE-2026-4046</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in glibc, the GNU C Library. A remote attacker could exploit this vulnerability by providing specially crafted inputs using the IBM1390 or IBM1399 character sets to the `iconv()` function. This could lead to an assertion failure, causing the application to crash and resulting in a Denial of Service (DoS).</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/glibc-langpack-en@2.39-58.el10_1.7?arch=x86_64&distro=rocky-10.1&upstream=glibc-2.39-58.el10_1.7.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>glibc-minimal-langpack</td>
-                        <td>2.39-58.el10_1.7</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-4046">CVE-2026-4046</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in glibc, the GNU C Library. A remote attacker could exploit this vulnerability by providing specially crafted inputs using the IBM1390 or IBM1399 character sets to the `iconv()` function. This could lead to an assertion failure, causing the application to crash and resulting in a Denial of Service (DoS).</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/glibc-minimal-langpack@2.39-58.el10_1.7?arch=x86_64&distro=rocky-10.1&upstream=glibc-2.39-58.el10_1.7.src.rpm</td>
                     </tr>
@@ -2307,14 +2355,14 @@ a locally running SSH agent.</td>
                         <td>1:3.5.1-7.el10_1</td>
                         <td>rpm</td>
                         <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-28390">CVE-2026-28390</a>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-28389">CVE-2026-28389</a>
                         </td>
-                        <td>Medium</td>
+                        <td>Low</td>
                         <td>not-fixed</td>
                         <td>
                             N/A
                         </td>
-                        <td>A flaw was found in OpenSSL. A remote attacker could exploit this vulnerability by sending a specially crafted Cryptographic Message Syntax (CMS) EnvelopedData message. During the processing of a KeyTransportRecipientInfo with RSA-OAEP encryption, the system attempts to access an optional parameter field without first verifying its presence. This leads to a NULL pointer dereference, which can cause applications processing the attacker-controlled CMS data to crash, resulting in a Denial of Service (DoS).</td>
+                        <td>A flaw was found in OpenSSL. A remote attacker could exploit this by sending a specially crafted Cryptographic Message Syntax (CMS) EnvelopedData message with KeyAgreeRecipientInfo. This vulnerability arises because the software attempts to process an optional field without verifying its existence, leading to a NULL pointer dereference. This can result in a Denial of Service (DoS) for applications that handle untrusted CMS data.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/openssl-fips-provider@3.5.1-7.el10_1?arch=x86_64&distro=rocky-10.1&epoch=1&upstream=openssl-3.5.1-7.el10_1.src.rpm</td>
                     </tr>
@@ -2323,16 +2371,32 @@ a locally running SSH agent.</td>
                         <td>1:3.5.1-7.el10_1</td>
                         <td>rpm</td>
                         <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-28390">CVE-2026-28390</a>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-28389">CVE-2026-28389</a>
+                        </td>
+                        <td>Low</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in OpenSSL. A remote attacker could exploit this by sending a specially crafted Cryptographic Message Syntax (CMS) EnvelopedData message with KeyAgreeRecipientInfo. This vulnerability arises because the software attempts to process an optional field without verifying its existence, leading to a NULL pointer dereference. This can result in a Denial of Service (DoS) for applications that handle untrusted CMS data.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/openssl-libs@3.5.1-7.el10_1?arch=x86_64&distro=rocky-10.1&epoch=1&upstream=openssl-3.5.1-7.el10_1.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>gnutls</td>
+                        <td>3.8.10-3.el10_1</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-3833">CVE-2026-3833</a>
                         </td>
                         <td>Medium</td>
                         <td>not-fixed</td>
                         <td>
                             N/A
                         </td>
-                        <td>A flaw was found in OpenSSL. A remote attacker could exploit this vulnerability by sending a specially crafted Cryptographic Message Syntax (CMS) EnvelopedData message. During the processing of a KeyTransportRecipientInfo with RSA-OAEP encryption, the system attempts to access an optional parameter field without first verifying its presence. This leads to a NULL pointer dereference, which can cause applications processing the attacker-controlled CMS data to crash, resulting in a Denial of Service (DoS).</td>
+                        <td>A flaw was found in gnutls. This vulnerability occurs because gnutls performs case-sensitive comparisons of `nameConstraints` labels, specifically for `dNSName` (DNS) or `rfc822Name` (email) constraints within `excludedSubtrees` or `permittedSubtrees`. A remote attacker can exploit this by crafting a leaf certificate with casing differences in the Subject Alternative Name (SAN), leading to a policy bypass where a certificate that should be rejected is instead accepted. This could result in unauthorized access or information disclosure.</td>
                         <td>[]</td>
-                        <td>pkg:rpm/rocky/openssl-libs@3.5.1-7.el10_1?arch=x86_64&distro=rocky-10.1&epoch=1&upstream=openssl-3.5.1-7.el10_1.src.rpm</td>
+                        <td>pkg:rpm/rocky/gnutls@3.8.10-3.el10_1?arch=x86_64&distro=rocky-10.1&upstream=gnutls-3.8.10-3.el10_1.src.rpm</td>
                     </tr>
                     <tr>
                         <td>curl</td>
@@ -2415,6 +2479,70 @@ a locally running SSH agent.</td>
                         <td>pkg:rpm/rocky/sqlite-libs@3.46.1-5.el10_1?arch=x86_64&distro=rocky-10.1&upstream=sqlite-3.46.1-5.el10_1.src.rpm</td>
                     </tr>
                     <tr>
+                        <td>glibc</td>
+                        <td>2.39-58.el10_1.7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-4438">CVE-2026-4438</a>
+                        </td>
+                        <td>Low</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in the GNU C library (glibc). When applications use the `gethostbyaddr` or `gethostbyaddr_r` functions with a `nsswitch.conf` configuration that specifies glibc&#39;s DNS backend, the library may return an invalid DNS hostname. This violates the DNS specification and could lead to applications receiving incorrect hostname information, potentially impacting network operations or security decisions.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/glibc@2.39-58.el10_1.7?arch=x86_64&distro=rocky-10.1&upstream=glibc-2.39-58.el10_1.7.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>glibc-common</td>
+                        <td>2.39-58.el10_1.7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-4438">CVE-2026-4438</a>
+                        </td>
+                        <td>Low</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in the GNU C library (glibc). When applications use the `gethostbyaddr` or `gethostbyaddr_r` functions with a `nsswitch.conf` configuration that specifies glibc&#39;s DNS backend, the library may return an invalid DNS hostname. This violates the DNS specification and could lead to applications receiving incorrect hostname information, potentially impacting network operations or security decisions.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/glibc-common@2.39-58.el10_1.7?arch=x86_64&distro=rocky-10.1&upstream=glibc-2.39-58.el10_1.7.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>glibc-langpack-en</td>
+                        <td>2.39-58.el10_1.7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-4438">CVE-2026-4438</a>
+                        </td>
+                        <td>Low</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in the GNU C library (glibc). When applications use the `gethostbyaddr` or `gethostbyaddr_r` functions with a `nsswitch.conf` configuration that specifies glibc&#39;s DNS backend, the library may return an invalid DNS hostname. This violates the DNS specification and could lead to applications receiving incorrect hostname information, potentially impacting network operations or security decisions.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/glibc-langpack-en@2.39-58.el10_1.7?arch=x86_64&distro=rocky-10.1&upstream=glibc-2.39-58.el10_1.7.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>glibc-minimal-langpack</td>
+                        <td>2.39-58.el10_1.7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-4438">CVE-2026-4438</a>
+                        </td>
+                        <td>Low</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in the GNU C library (glibc). When applications use the `gethostbyaddr` or `gethostbyaddr_r` functions with a `nsswitch.conf` configuration that specifies glibc&#39;s DNS backend, the library may return an invalid DNS hostname. This violates the DNS specification and could lead to applications receiving incorrect hostname information, potentially impacting network operations or security decisions.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/glibc-minimal-langpack@2.39-58.el10_1.7?arch=x86_64&distro=rocky-10.1&upstream=glibc-2.39-58.el10_1.7.src.rpm</td>
+                    </tr>
+                    <tr>
                         <td>glib2</td>
                         <td>2.80.4-10.el10_1.12</td>
                         <td>rpm</td>
@@ -2461,38 +2589,6 @@ a locally running SSH agent.</td>
                         <td>A flaw was found in libssh, a library that implements the SSH protocol. When calculating the session ID during the key exchange (KEX) process, an allocation failure in cryptographic functions may lead to a NULL pointer dereference. This issue can cause the client or server to crash.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/libssh-config@0.11.1-5.el10_1?arch=noarch&distro=rocky-10.1&upstream=libssh-0.11.1-5.el10_1.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>openssl-fips-provider</td>
-                        <td>1:3.5.1-7.el10_1</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-28389">CVE-2026-28389</a>
-                        </td>
-                        <td>Low</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in OpenSSL. A remote attacker could exploit this by sending a specially crafted Cryptographic Message Syntax (CMS) EnvelopedData message with KeyAgreeRecipientInfo. This vulnerability arises because the software attempts to process an optional field without verifying its existence, leading to a NULL pointer dereference. This can result in a Denial of Service (DoS) for applications that handle untrusted CMS data.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/openssl-fips-provider@3.5.1-7.el10_1?arch=x86_64&distro=rocky-10.1&epoch=1&upstream=openssl-3.5.1-7.el10_1.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>openssl-libs</td>
-                        <td>1:3.5.1-7.el10_1</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-28389">CVE-2026-28389</a>
-                        </td>
-                        <td>Low</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in OpenSSL. A remote attacker could exploit this by sending a specially crafted Cryptographic Message Syntax (CMS) EnvelopedData message with KeyAgreeRecipientInfo. This vulnerability arises because the software attempts to process an optional field without verifying its existence, leading to a NULL pointer dereference. This can result in a Denial of Service (DoS) for applications that handle untrusted CMS data.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/openssl-libs@3.5.1-7.el10_1?arch=x86_64&distro=rocky-10.1&epoch=1&upstream=openssl-3.5.1-7.el10_1.src.rpm</td>
                     </tr>
                     <tr>
                         <td>systemd-libs</td>
@@ -2671,70 +2767,6 @@ a locally running SSH agent.</td>
                         <td>pkg:rpm/rocky/libcurl@8.12.1-2.el10_1.2?arch=x86_64&distro=rocky-10.1&upstream=curl-8.12.1-2.el10_1.2.src.rpm</td>
                     </tr>
                     <tr>
-                        <td>glibc</td>
-                        <td>2.39-58.el10_1.7</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-4438">CVE-2026-4438</a>
-                        </td>
-                        <td>Low</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in the GNU C library (glibc). When applications use the `gethostbyaddr` or `gethostbyaddr_r` functions with a `nsswitch.conf` configuration that specifies glibc&#39;s DNS backend, the library may return an invalid DNS hostname. This violates the DNS specification and could lead to applications receiving incorrect hostname information, potentially impacting network operations or security decisions.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/glibc@2.39-58.el10_1.7?arch=x86_64&distro=rocky-10.1&upstream=glibc-2.39-58.el10_1.7.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>glibc-common</td>
-                        <td>2.39-58.el10_1.7</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-4438">CVE-2026-4438</a>
-                        </td>
-                        <td>Low</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in the GNU C library (glibc). When applications use the `gethostbyaddr` or `gethostbyaddr_r` functions with a `nsswitch.conf` configuration that specifies glibc&#39;s DNS backend, the library may return an invalid DNS hostname. This violates the DNS specification and could lead to applications receiving incorrect hostname information, potentially impacting network operations or security decisions.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/glibc-common@2.39-58.el10_1.7?arch=x86_64&distro=rocky-10.1&upstream=glibc-2.39-58.el10_1.7.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>glibc-langpack-en</td>
-                        <td>2.39-58.el10_1.7</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-4438">CVE-2026-4438</a>
-                        </td>
-                        <td>Low</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in the GNU C library (glibc). When applications use the `gethostbyaddr` or `gethostbyaddr_r` functions with a `nsswitch.conf` configuration that specifies glibc&#39;s DNS backend, the library may return an invalid DNS hostname. This violates the DNS specification and could lead to applications receiving incorrect hostname information, potentially impacting network operations or security decisions.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/glibc-langpack-en@2.39-58.el10_1.7?arch=x86_64&distro=rocky-10.1&upstream=glibc-2.39-58.el10_1.7.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>glibc-minimal-langpack</td>
-                        <td>2.39-58.el10_1.7</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-4438">CVE-2026-4438</a>
-                        </td>
-                        <td>Low</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in the GNU C library (glibc). When applications use the `gethostbyaddr` or `gethostbyaddr_r` functions with a `nsswitch.conf` configuration that specifies glibc&#39;s DNS backend, the library may return an invalid DNS hostname. This violates the DNS specification and could lead to applications receiving incorrect hostname information, potentially impacting network operations or security decisions.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/glibc-minimal-langpack@2.39-58.el10_1.7?arch=x86_64&distro=rocky-10.1&upstream=glibc-2.39-58.el10_1.7.src.rpm</td>
-                    </tr>
-                    <tr>
                         <td>libxml2</td>
                         <td>2.12.5-9.el10_0</td>
                         <td>rpm</td>
@@ -2911,46 +2943,6 @@ a locally running SSH agent.</td>
                         <td>pkg:rpm/rocky/openssl-libs@3.5.1-7.el10_1?arch=x86_64&distro=rocky-10.1&epoch=1&upstream=openssl-3.5.1-7.el10_1.src.rpm</td>
                     </tr>
                     <tr>
-                        <td>libssh</td>
-                        <td>0.11.1-5.el10_1</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-0964">CVE-2026-0964</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A malicious SCP server can send unexpected paths that could make the
-client application override local files outside of working directory.
-This could be misused to create malicious executable or configuration
-files and make the user execute them under specific consequences.
-This is the same issue as in OpenSSH, tracked as CVE-2019-6111.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/libssh@0.11.1-5.el10_1?arch=x86_64&distro=rocky-10.1&upstream=libssh-0.11.1-5.el10_1.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>libssh-config</td>
-                        <td>0.11.1-5.el10_1</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-0964">CVE-2026-0964</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A malicious SCP server can send unexpected paths that could make the
-client application override local files outside of working directory.
-This could be misused to create malicious executable or configuration
-files and make the user execute them under specific consequences.
-This is the same issue as in OpenSSH, tracked as CVE-2019-6111.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/libssh-config@0.11.1-5.el10_1?arch=noarch&distro=rocky-10.1&upstream=libssh-0.11.1-5.el10_1.src.rpm</td>
-                    </tr>
-                    <tr>
                         <td>libarchive</td>
                         <td>3.7.7-8.el10_1</td>
                         <td>rpm</td>
@@ -3043,6 +3035,46 @@ This is the same issue as in OpenSSH, tracked as CVE-2019-6111.</td>
                             N/A
                         </td>
                         <td>A flaw was found in libssh. A remote attacker, by controlling client configuration files or known_hosts files, could craft specific hostnames that when processed by the `match_pattern()` function can lead to inefficient regular expression backtracking. This can cause timeouts and resource exhaustion, resulting in a Denial of Service (DoS) for the client.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/libssh-config@0.11.1-5.el10_1?arch=noarch&distro=rocky-10.1&upstream=libssh-0.11.1-5.el10_1.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>libssh</td>
+                        <td>0.11.1-5.el10_1</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-0964">CVE-2026-0964</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A malicious SCP server can send unexpected paths that could make the
+client application override local files outside of working directory.
+This could be misused to create malicious executable or configuration
+files and make the user execute them under specific consequences.
+This is the same issue as in OpenSSH, tracked as CVE-2019-6111.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/libssh@0.11.1-5.el10_1?arch=x86_64&distro=rocky-10.1&upstream=libssh-0.11.1-5.el10_1.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>libssh-config</td>
+                        <td>0.11.1-5.el10_1</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-0964">CVE-2026-0964</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A malicious SCP server can send unexpected paths that could make the
+client application override local files outside of working directory.
+This could be misused to create malicious executable or configuration
+files and make the user execute them under specific consequences.
+This is the same issue as in OpenSSH, tracked as CVE-2019-6111.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/libssh-config@0.11.1-5.el10_1?arch=noarch&distro=rocky-10.1&upstream=libssh-0.11.1-5.el10_1.src.rpm</td>
                     </tr>
@@ -3157,6 +3189,22 @@ This is the same issue as in OpenSSH, tracked as CVE-2019-6111.</td>
                         <td>A flaw was found in util-linux. When an /etc/fstab entry is configured with the user,loop options, the `mount` program checks the file path with user permissions but later opens it with root privileges. This creates a brief Time-of-Check-Time-of-Use (TOCTOU) window where an attacker can substitute the intended file with a malicious symbolic link. This allows a local unprivileged user to mount any root-owned file or block device that contains a valid filesystem, gaining full read access to its contents.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/util-linux-core@2.40.2-15.el10_1?arch=x86_64&distro=rocky-10.1&upstream=util-linux-2.40.2-15.el10_1.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>gnutls</td>
+                        <td>3.8.10-3.el10_1</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-3832">CVE-2026-3832</a>
+                        </td>
+                        <td>Low</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in gnutls. A remote attacker could exploit this vulnerability by presenting a specially crafted Online Certificate Status Protocol (OCSP) response during a TLS handshake. Due to a logic error in how gnutls processes multi-record OCSP responses, a client with OCSP verification enabled may incorrectly accept a revoked server certificate, potentially leading to a compromise of trust.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/gnutls@3.8.10-3.el10_1?arch=x86_64&distro=rocky-10.1&upstream=gnutls-3.8.10-3.el10_1.src.rpm</td>
                     </tr>
                     <tr>
                         <td>libxml2</td>
@@ -3433,22 +3481,6 @@ This is the same issue as in OpenSSH, tracked as CVE-2019-6111.</td>
                         <td>pkg:rpm/rocky/glib2@2.80.4-10.el10_1.12?arch=x86_64&distro=rocky-10.1&upstream=glib2-2.80.4-10.el10_1.12.src.rpm</td>
                     </tr>
                     <tr>
-                        <td>gnutls</td>
-                        <td>3.8.10-3.el10_1</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-33845">CVE-2026-33845</a>
-                        </td>
-                        <td>High</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw in GnuTLS DTLS handshake parsing allows malformed fragments with zero length and non-zero offset, leading to an integer underflow during reassembly and resulting in an out-of-bounds read. This issue is remotely exploitable and may cause information disclosure or denial of service.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/gnutls@3.8.10-3.el10_1?arch=x86_64&distro=rocky-10.1&upstream=gnutls-3.8.10-3.el10_1.src.rpm</td>
-                    </tr>
-                    <tr>
                         <td>curl</td>
                         <td>8.12.1-2.el10_1.2</td>
                         <td>rpm</td>
@@ -3527,22 +3559,6 @@ This is the same issue as in OpenSSH, tracked as CVE-2019-6111.</td>
                         <td>A flaw was found in libcurl. When configured to use a .netrc file for credentials and follow HTTP redirects, libcurl can inadvertently send the password from the initial connection to the redirected host. This sensitive information disclosure occurs when both the original and redirect URLs use clear text HTTP, are performed over the same HTTP proxy, and the same connection is reused. This vulnerability, categorized as an Exposure of Sensitive Information to an Unauthorized Actor (CWE-200), could allow an attacker to obtain user credentials.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/curl@8.12.1-2.el10_1.2?arch=x86_64&distro=rocky-10.1&upstream=curl-8.12.1-2.el10_1.2.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>gnutls</td>
-                        <td>3.8.10-3.el10_1</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-3833">CVE-2026-3833</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in gnutls. This vulnerability occurs because gnutls performs case-sensitive comparisons of `nameConstraints` labels, specifically for `dNSName` (DNS) or `rfc822Name` (email) constraints within `excludedSubtrees` or `permittedSubtrees`. A remote attacker can exploit this by crafting a leaf certificate with casing differences in the Subject Alternative Name (SAN), leading to a policy bypass where a certificate that should be rejected is instead accepted. This could result in unauthorized access or information disclosure.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/gnutls@3.8.10-3.el10_1?arch=x86_64&distro=rocky-10.1&upstream=gnutls-3.8.10-3.el10_1.src.rpm</td>
                     </tr>
                     <tr>
                         <td>libcurl</td>
@@ -3639,22 +3655,6 @@ This is the same issue as in OpenSSH, tracked as CVE-2019-6111.</td>
                         <td>A flaw was found in libcurl. This vulnerability allows for information disclosure when a custom `Host:` header is used in an initial HTTP request, and a subsequent request reuses the same connection without specifying a new `Host:` header. This can lead to libcurl incorrectly sending cookies intended for the first host to the second host, resulting in a cookie leak. This issue is categorized as an Origin Validation Error (CWE-346). Exploitation typically requires specific debugging configurations.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/curl@8.12.1-2.el10_1.2?arch=x86_64&distro=rocky-10.1&upstream=curl-8.12.1-2.el10_1.2.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>gnutls</td>
-                        <td>3.8.10-3.el10_1</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-3832">CVE-2026-3832</a>
-                        </td>
-                        <td>Low</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in gnutls. A remote attacker could exploit this vulnerability by presenting a specially crafted Online Certificate Status Protocol (OCSP) response during a TLS handshake. Due to a logic error in how gnutls processes multi-record OCSP responses, a client with OCSP verification enabled may incorrectly accept a revoked server certificate, potentially leading to a compromise of trust.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/gnutls@3.8.10-3.el10_1?arch=x86_64&distro=rocky-10.1&upstream=gnutls-3.8.10-3.el10_1.src.rpm</td>
                     </tr>
                     <tr>
                         <td>libcurl</td>
