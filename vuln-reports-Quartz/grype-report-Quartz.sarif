@@ -409,6 +409,27 @@
               }
             },
             {
+              "id": "CVE-2026-4426-libarchive",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-4426 medium vulnerability for libarchive package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in libarchive. An Undefined Behavior vulnerability exists in the zisofs decompression logic, caused by improper validation of a field (`pz_log2_bs`) read from ISO9660 Rock Ridge extensions. A remote attacker can exploit this by supplying a specially crafted ISO file. This can lead to incorrect memory allocation and potential application crashes, resulting in a denial-of-service (DoS) condition."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-4426",
+              "help": {
+                "text": "Vulnerability CVE-2026-4426\nSeverity: medium\nPackage: libarchive\nVersion: 3.7.7-8.el10_1\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-4426](https://access.redhat.com/security/cve/CVE-2026-4426)",
+                "markdown": "**Vulnerability CVE-2026-4426**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | libarchive  | 3.7.7-8.el10_1  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-4426](https://access.redhat.com/security/cve/CVE-2026-4426)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/libarchive@3.7.7-8.el10_1?arch=x86_64\u0026distro=rocky-10.1\u0026upstream=libarchive-3.7.7-8.el10_1.src.rpm"
+                ],
+                "security-severity": "6.5"
+              }
+            },
+            {
               "id": "CVE-2025-6052-glib2",
               "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
@@ -451,27 +472,6 @@
               }
             },
             {
-              "id": "CVE-2026-4426-libarchive",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-4426 medium vulnerability for libarchive package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in libarchive. An Undefined Behavior vulnerability exists in the zisofs decompression logic, caused by improper validation of a field (`pz_log2_bs`) read from ISO9660 Rock Ridge extensions. A remote attacker can exploit this by supplying a specially crafted ISO file. This can lead to incorrect memory allocation and potential application crashes, resulting in a denial-of-service (DoS) condition."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-4426",
-              "help": {
-                "text": "Vulnerability CVE-2026-4426\nSeverity: medium\nPackage: libarchive\nVersion: 3.7.7-8.el10_1\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-4426](https://access.redhat.com/security/cve/CVE-2026-4426)",
-                "markdown": "**Vulnerability CVE-2026-4426**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | libarchive  | 3.7.7-8.el10_1  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-4426](https://access.redhat.com/security/cve/CVE-2026-4426)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/libarchive@3.7.7-8.el10_1?arch=x86_64\u0026distro=rocky-10.1\u0026upstream=libarchive-3.7.7-8.el10_1.src.rpm"
-                ],
-                "security-severity": "6.5"
-              }
-            },
-            {
               "id": "CVE-2026-40356-krb5-libs",
               "name": "RpmMatcherExactIndirectMatch",
               "shortDescription": {
@@ -511,6 +511,27 @@
                   "pkg:rpm/rocky/coreutils-single@9.5-6.el10?arch=x86_64\u0026distro=rocky-10.1\u0026upstream=coreutils-9.5-6.el10.src.rpm"
                 ],
                 "security-severity": "4.4"
+              }
+            },
+            {
+              "id": "CVE-2025-4598-systemd-libs",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2025-4598 medium vulnerability for systemd-libs package"
+              },
+              "fullDescription": {
+                "text": "A vulnerability was found in systemd-coredump. This flaw allows an attacker to force a SUID process to crash and replace it with a non-SUID binary to access the original's privileged process coredump, allowing the attacker to read sensitive data, such as /etc/shadow content, loaded by the original process.\nA SUID binary or process has a special type of permission, which allows the process to run with the file owner's permissions, regardless of the user executing the binary. This allows the process to access more restricted data than unprivileged users or processes would be able to. An attacker can leverage this flaw by forcing a SUID process to crash and force the Linux kernel to recycle the process PID before systemd-coredump can analyze the /proc/pid/auxv file. If the attacker wins the race condition, they gain access to the original's SUID process coredump file. They can read sensitive content loaded into memory by the original binary, affecting data confidentiality."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2025-4598",
+              "help": {
+                "text": "Vulnerability CVE-2025-4598\nSeverity: medium\nPackage: systemd-libs\nVersion: 257-13.el10.rocky.0.1\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2025-4598](https://access.redhat.com/security/cve/CVE-2025-4598)",
+                "markdown": "**Vulnerability CVE-2025-4598**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | systemd-libs  | 257-13.el10.rocky.0.1  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2025-4598](https://access.redhat.com/security/cve/CVE-2025-4598)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/systemd-libs@257-13.el10.rocky.0.1?arch=x86_64\u0026distro=rocky-10.1\u0026upstream=systemd-257-13.el10.rocky.0.1.src.rpm"
+                ],
+                "security-severity": "4.7"
               }
             },
             {
@@ -679,27 +700,6 @@
                   "pkg:rpm/rocky/glib2@2.80.4-10.el10_1.12?arch=x86_64\u0026distro=rocky-10.1\u0026upstream=glib2-2.80.4-10.el10_1.12.src.rpm"
                 ],
                 "security-severity": "6.5"
-              }
-            },
-            {
-              "id": "CVE-2025-4598-systemd-libs",
-              "name": "RpmMatcherExactIndirectMatch",
-              "shortDescription": {
-                "text": "CVE-2025-4598 medium vulnerability for systemd-libs package"
-              },
-              "fullDescription": {
-                "text": "A vulnerability was found in systemd-coredump. This flaw allows an attacker to force a SUID process to crash and replace it with a non-SUID binary to access the original's privileged process coredump, allowing the attacker to read sensitive data, such as /etc/shadow content, loaded by the original process.\nA SUID binary or process has a special type of permission, which allows the process to run with the file owner's permissions, regardless of the user executing the binary. This allows the process to access more restricted data than unprivileged users or processes would be able to. An attacker can leverage this flaw by forcing a SUID process to crash and force the Linux kernel to recycle the process PID before systemd-coredump can analyze the /proc/pid/auxv file. If the attacker wins the race condition, they gain access to the original's SUID process coredump file. They can read sensitive content loaded into memory by the original binary, affecting data confidentiality."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2025-4598",
-              "help": {
-                "text": "Vulnerability CVE-2025-4598\nSeverity: medium\nPackage: systemd-libs\nVersion: 257-13.el10.rocky.0.1\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2025-4598](https://access.redhat.com/security/cve/CVE-2025-4598)",
-                "markdown": "**Vulnerability CVE-2025-4598**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | systemd-libs  | 257-13.el10.rocky.0.1  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2025-4598](https://access.redhat.com/security/cve/CVE-2025-4598)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/systemd-libs@257-13.el10.rocky.0.1?arch=x86_64\u0026distro=rocky-10.1\u0026upstream=systemd-257-13.el10.rocky.0.1.src.rpm"
-                ],
-                "security-severity": "4.7"
               }
             },
             {
@@ -931,6 +931,27 @@
                   "pkg:rpm/rocky/libarchive@3.7.7-8.el10_1?arch=x86_64\u0026distro=rocky-10.1\u0026upstream=libarchive-3.7.7-8.el10_1.src.rpm"
                 ],
                 "security-severity": "3.9"
+              }
+            },
+            {
+              "id": "CVE-2026-33845-gnutls",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-33845 high vulnerability for gnutls package"
+              },
+              "fullDescription": {
+                "text": "A flaw in GnuTLS DTLS handshake parsing allows malformed fragments with zero length and non-zero offset, leading to an integer underflow during reassembly and resulting in an out-of-bounds read. This issue is remotely exploitable and may cause information disclosure or denial of service."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-33845",
+              "help": {
+                "text": "Vulnerability CVE-2026-33845\nSeverity: high\nPackage: gnutls\nVersion: 3.8.10-3.el10_1\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-33845](https://access.redhat.com/security/cve/CVE-2026-33845)",
+                "markdown": "**Vulnerability CVE-2026-33845**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| high  | gnutls  | 3.8.10-3.el10_1  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-33845](https://access.redhat.com/security/cve/CVE-2026-33845)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/gnutls@3.8.10-3.el10_1?arch=x86_64\u0026distro=rocky-10.1\u0026upstream=gnutls-3.8.10-3.el10_1.src.rpm"
+                ],
+                "security-severity": "7.5"
               }
             },
             {
@@ -1186,6 +1207,27 @@
               }
             },
             {
+              "id": "CVE-2026-6732-libxml2",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-6732 medium vulnerability for libxml2 package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in libxml2. This vulnerability occurs when the library processes a specially crafted XML Schema Definition (XSD) validated document that includes an internal entity reference. An attacker could exploit this by providing a malicious document, leading to a type confusion error that causes the application to crash. This results in a denial of service (DoS), making the affected system or application unavailable."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-6732",
+              "help": {
+                "text": "Vulnerability CVE-2026-6732\nSeverity: medium\nPackage: libxml2\nVersion: 2.12.5-9.el10_0\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-6732](https://access.redhat.com/security/cve/CVE-2026-6732)",
+                "markdown": "**Vulnerability CVE-2026-6732**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | libxml2  | 2.12.5-9.el10_0  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-6732](https://access.redhat.com/security/cve/CVE-2026-6732)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/libxml2@2.12.5-9.el10_0?arch=x86_64\u0026distro=rocky-10.1\u0026upstream=libxml2-2.12.5-9.el10_0.src.rpm"
+                ],
+                "security-severity": "6.5"
+              }
+            },
+            {
               "id": "CVE-2025-27113-libxml2",
               "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
@@ -1309,111 +1351,6 @@
                   "pkg:rpm/rocky/libtasn1@4.20.0-1.el10?arch=x86_64\u0026distro=rocky-10.1\u0026upstream=libtasn1-4.20.0-1.el10.src.rpm"
                 ],
                 "security-severity": "5.9"
-              }
-            },
-            {
-              "id": "CVE-2026-5435-glibc",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-5435 medium vulnerability for glibc package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in glibc, the GNU C Library. Specifically, deprecated functions responsible for printing TSIG (Transaction Signature) records fail to properly manage memory buffers. This oversight can lead to an out-of-bounds write when processing specially crafted TSIG records. An attacker could exploit this to cause a denial of service or potentially execute arbitrary code."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-5435",
-              "help": {
-                "text": "Vulnerability CVE-2026-5435\nSeverity: medium\nPackage: glibc\nVersion: 2.39-58.el10_1.7\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-5435](https://access.redhat.com/security/cve/CVE-2026-5435)",
-                "markdown": "**Vulnerability CVE-2026-5435**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | glibc  | 2.39-58.el10_1.7  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-5435](https://access.redhat.com/security/cve/CVE-2026-5435)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/glibc@2.39-58.el10_1.7?arch=x86_64\u0026distro=rocky-10.1\u0026upstream=glibc-2.39-58.el10_1.7.src.rpm"
-                ],
-                "security-severity": "5.9"
-              }
-            },
-            {
-              "id": "CVE-2026-5435-glibc-common",
-              "name": "RpmMatcherExactIndirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-5435 medium vulnerability for glibc-common package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in glibc, the GNU C Library. Specifically, deprecated functions responsible for printing TSIG (Transaction Signature) records fail to properly manage memory buffers. This oversight can lead to an out-of-bounds write when processing specially crafted TSIG records. An attacker could exploit this to cause a denial of service or potentially execute arbitrary code."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-5435",
-              "help": {
-                "text": "Vulnerability CVE-2026-5435\nSeverity: medium\nPackage: glibc-common\nVersion: 2.39-58.el10_1.7\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-5435](https://access.redhat.com/security/cve/CVE-2026-5435)",
-                "markdown": "**Vulnerability CVE-2026-5435**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | glibc-common  | 2.39-58.el10_1.7  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-5435](https://access.redhat.com/security/cve/CVE-2026-5435)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/glibc-common@2.39-58.el10_1.7?arch=x86_64\u0026distro=rocky-10.1\u0026upstream=glibc-2.39-58.el10_1.7.src.rpm"
-                ],
-                "security-severity": "5.9"
-              }
-            },
-            {
-              "id": "CVE-2026-5435-glibc-langpack-en",
-              "name": "RpmMatcherExactIndirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-5435 medium vulnerability for glibc-langpack-en package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in glibc, the GNU C Library. Specifically, deprecated functions responsible for printing TSIG (Transaction Signature) records fail to properly manage memory buffers. This oversight can lead to an out-of-bounds write when processing specially crafted TSIG records. An attacker could exploit this to cause a denial of service or potentially execute arbitrary code."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-5435",
-              "help": {
-                "text": "Vulnerability CVE-2026-5435\nSeverity: medium\nPackage: glibc-langpack-en\nVersion: 2.39-58.el10_1.7\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-5435](https://access.redhat.com/security/cve/CVE-2026-5435)",
-                "markdown": "**Vulnerability CVE-2026-5435**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | glibc-langpack-en  | 2.39-58.el10_1.7  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-5435](https://access.redhat.com/security/cve/CVE-2026-5435)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/glibc-langpack-en@2.39-58.el10_1.7?arch=x86_64\u0026distro=rocky-10.1\u0026upstream=glibc-2.39-58.el10_1.7.src.rpm"
-                ],
-                "security-severity": "5.9"
-              }
-            },
-            {
-              "id": "CVE-2026-5435-glibc-minimal-langpack",
-              "name": "RpmMatcherExactIndirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-5435 medium vulnerability for glibc-minimal-langpack package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in glibc, the GNU C Library. Specifically, deprecated functions responsible for printing TSIG (Transaction Signature) records fail to properly manage memory buffers. This oversight can lead to an out-of-bounds write when processing specially crafted TSIG records. An attacker could exploit this to cause a denial of service or potentially execute arbitrary code."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-5435",
-              "help": {
-                "text": "Vulnerability CVE-2026-5435\nSeverity: medium\nPackage: glibc-minimal-langpack\nVersion: 2.39-58.el10_1.7\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-5435](https://access.redhat.com/security/cve/CVE-2026-5435)",
-                "markdown": "**Vulnerability CVE-2026-5435**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | glibc-minimal-langpack  | 2.39-58.el10_1.7  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-5435](https://access.redhat.com/security/cve/CVE-2026-5435)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/glibc-minimal-langpack@2.39-58.el10_1.7?arch=x86_64\u0026distro=rocky-10.1\u0026upstream=glibc-2.39-58.el10_1.7.src.rpm"
-                ],
-                "security-severity": "5.9"
-              }
-            },
-            {
-              "id": "CVE-2026-33845-gnutls",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-33845 high vulnerability for gnutls package"
-              },
-              "fullDescription": {
-                "text": "A flaw in GnuTLS DTLS handshake parsing allows malformed fragments with zero length and non-zero offset, leading to an integer underflow during reassembly and resulting in an out-of-bounds read. This issue is remotely exploitable and may cause information disclosure or denial of service."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-33845",
-              "help": {
-                "text": "Vulnerability CVE-2026-33845\nSeverity: high\nPackage: gnutls\nVersion: 3.8.10-3.el10_1\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-33845](https://access.redhat.com/security/cve/CVE-2026-33845)",
-                "markdown": "**Vulnerability CVE-2026-33845**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| high  | gnutls  | 3.8.10-3.el10_1  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-33845](https://access.redhat.com/security/cve/CVE-2026-33845)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/gnutls@3.8.10-3.el10_1?arch=x86_64\u0026distro=rocky-10.1\u0026upstream=gnutls-3.8.10-3.el10_1.src.rpm"
-                ],
-                "security-severity": "7.5"
               }
             },
             {
@@ -1543,6 +1480,90 @@
               }
             },
             {
+              "id": "CVE-2026-5435-glibc",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-5435 medium vulnerability for glibc package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in glibc, the GNU C Library. Specifically, deprecated functions responsible for printing TSIG (Transaction Signature) records fail to properly manage memory buffers. This oversight can lead to an out-of-bounds write when processing specially crafted TSIG records. An attacker could exploit this to cause a denial of service or potentially execute arbitrary code."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-5435",
+              "help": {
+                "text": "Vulnerability CVE-2026-5435\nSeverity: medium\nPackage: glibc\nVersion: 2.39-58.el10_1.7\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-5435](https://access.redhat.com/security/cve/CVE-2026-5435)",
+                "markdown": "**Vulnerability CVE-2026-5435**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | glibc  | 2.39-58.el10_1.7  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-5435](https://access.redhat.com/security/cve/CVE-2026-5435)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/glibc@2.39-58.el10_1.7?arch=x86_64\u0026distro=rocky-10.1\u0026upstream=glibc-2.39-58.el10_1.7.src.rpm"
+                ],
+                "security-severity": "5.9"
+              }
+            },
+            {
+              "id": "CVE-2026-5435-glibc-common",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-5435 medium vulnerability for glibc-common package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in glibc, the GNU C Library. Specifically, deprecated functions responsible for printing TSIG (Transaction Signature) records fail to properly manage memory buffers. This oversight can lead to an out-of-bounds write when processing specially crafted TSIG records. An attacker could exploit this to cause a denial of service or potentially execute arbitrary code."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-5435",
+              "help": {
+                "text": "Vulnerability CVE-2026-5435\nSeverity: medium\nPackage: glibc-common\nVersion: 2.39-58.el10_1.7\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-5435](https://access.redhat.com/security/cve/CVE-2026-5435)",
+                "markdown": "**Vulnerability CVE-2026-5435**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | glibc-common  | 2.39-58.el10_1.7  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-5435](https://access.redhat.com/security/cve/CVE-2026-5435)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/glibc-common@2.39-58.el10_1.7?arch=x86_64\u0026distro=rocky-10.1\u0026upstream=glibc-2.39-58.el10_1.7.src.rpm"
+                ],
+                "security-severity": "5.9"
+              }
+            },
+            {
+              "id": "CVE-2026-5435-glibc-langpack-en",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-5435 medium vulnerability for glibc-langpack-en package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in glibc, the GNU C Library. Specifically, deprecated functions responsible for printing TSIG (Transaction Signature) records fail to properly manage memory buffers. This oversight can lead to an out-of-bounds write when processing specially crafted TSIG records. An attacker could exploit this to cause a denial of service or potentially execute arbitrary code."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-5435",
+              "help": {
+                "text": "Vulnerability CVE-2026-5435\nSeverity: medium\nPackage: glibc-langpack-en\nVersion: 2.39-58.el10_1.7\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-5435](https://access.redhat.com/security/cve/CVE-2026-5435)",
+                "markdown": "**Vulnerability CVE-2026-5435**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | glibc-langpack-en  | 2.39-58.el10_1.7  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-5435](https://access.redhat.com/security/cve/CVE-2026-5435)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/glibc-langpack-en@2.39-58.el10_1.7?arch=x86_64\u0026distro=rocky-10.1\u0026upstream=glibc-2.39-58.el10_1.7.src.rpm"
+                ],
+                "security-severity": "5.9"
+              }
+            },
+            {
+              "id": "CVE-2026-5435-glibc-minimal-langpack",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-5435 medium vulnerability for glibc-minimal-langpack package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in glibc, the GNU C Library. Specifically, deprecated functions responsible for printing TSIG (Transaction Signature) records fail to properly manage memory buffers. This oversight can lead to an out-of-bounds write when processing specially crafted TSIG records. An attacker could exploit this to cause a denial of service or potentially execute arbitrary code."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-5435",
+              "help": {
+                "text": "Vulnerability CVE-2026-5435\nSeverity: medium\nPackage: glibc-minimal-langpack\nVersion: 2.39-58.el10_1.7\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-5435](https://access.redhat.com/security/cve/CVE-2026-5435)",
+                "markdown": "**Vulnerability CVE-2026-5435**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | glibc-minimal-langpack  | 2.39-58.el10_1.7  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-5435](https://access.redhat.com/security/cve/CVE-2026-5435)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/glibc-minimal-langpack@2.39-58.el10_1.7?arch=x86_64\u0026distro=rocky-10.1\u0026upstream=glibc-2.39-58.el10_1.7.src.rpm"
+                ],
+                "security-severity": "5.9"
+              }
+            },
+            {
               "id": "CVE-2026-5450-glibc",
               "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
@@ -1645,6 +1666,27 @@
                   "pkg:rpm/rocky/glib2@2.80.4-10.el10_1.12?arch=x86_64\u0026distro=rocky-10.1\u0026upstream=glib2-2.80.4-10.el10_1.12.src.rpm"
                 ],
                 "security-severity": "3.7"
+              }
+            },
+            {
+              "id": "CVE-2026-3833-gnutls",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-3833 medium vulnerability for gnutls package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in gnutls. This vulnerability occurs because gnutls performs case-sensitive comparisons of `nameConstraints` labels, specifically for `dNSName` (DNS) or `rfc822Name` (email) constraints within `excludedSubtrees` or `permittedSubtrees`. A remote attacker can exploit this by crafting a leaf certificate with casing differences in the Subject Alternative Name (SAN), leading to a policy bypass where a certificate that should be rejected is instead accepted. This could result in unauthorized access or information disclosure."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-3833",
+              "help": {
+                "text": "Vulnerability CVE-2026-3833\nSeverity: medium\nPackage: gnutls\nVersion: 3.8.10-3.el10_1\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-3833](https://access.redhat.com/security/cve/CVE-2026-3833)",
+                "markdown": "**Vulnerability CVE-2026-3833**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | gnutls  | 3.8.10-3.el10_1  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-3833](https://access.redhat.com/security/cve/CVE-2026-3833)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/gnutls@3.8.10-3.el10_1?arch=x86_64\u0026distro=rocky-10.1\u0026upstream=gnutls-3.8.10-3.el10_1.src.rpm"
+                ],
+                "security-severity": "6.5"
               }
             },
             {
@@ -1879,27 +1921,6 @@
               }
             },
             {
-              "id": "CVE-2026-3833-gnutls",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-3833 medium vulnerability for gnutls package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in gnutls. This vulnerability occurs because gnutls performs case-sensitive comparisons of `nameConstraints` labels, specifically for `dNSName` (DNS) or `rfc822Name` (email) constraints within `excludedSubtrees` or `permittedSubtrees`. A remote attacker can exploit this by crafting a leaf certificate with casing differences in the Subject Alternative Name (SAN), leading to a policy bypass where a certificate that should be rejected is instead accepted. This could result in unauthorized access or information disclosure."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-3833",
-              "help": {
-                "text": "Vulnerability CVE-2026-3833\nSeverity: medium\nPackage: gnutls\nVersion: 3.8.10-3.el10_1\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-3833](https://access.redhat.com/security/cve/CVE-2026-3833)",
-                "markdown": "**Vulnerability CVE-2026-3833**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | gnutls  | 3.8.10-3.el10_1  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-3833](https://access.redhat.com/security/cve/CVE-2026-3833)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/gnutls@3.8.10-3.el10_1?arch=x86_64\u0026distro=rocky-10.1\u0026upstream=gnutls-3.8.10-3.el10_1.src.rpm"
-                ],
-                "security-severity": "6.5"
-              }
-            },
-            {
               "id": "CVE-2026-28389-openssl-fips-provider",
               "name": "RpmMatcherExactIndirectMatch",
               "shortDescription": {
@@ -1942,48 +1963,6 @@
               }
             },
             {
-              "id": "CVE-2025-8277-libssh",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2025-8277 low vulnerability for libssh package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in libssh's handling of key exchange (KEX) processes when a client repeatedly sends incorrect KEX guesses. The library fails to free memory during these rekey operations, which can gradually exhaust system memory. This issue can lead to crashes on the client side, particularly when using libgcrypt, which impacts application stability and availability."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2025-8277",
-              "help": {
-                "text": "Vulnerability CVE-2025-8277\nSeverity: low\nPackage: libssh\nVersion: 0.11.1-5.el10_1\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2025-8277](https://access.redhat.com/security/cve/CVE-2025-8277)",
-                "markdown": "**Vulnerability CVE-2025-8277**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | libssh  | 0.11.1-5.el10_1  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2025-8277](https://access.redhat.com/security/cve/CVE-2025-8277)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/libssh@0.11.1-5.el10_1?arch=x86_64\u0026distro=rocky-10.1\u0026upstream=libssh-0.11.1-5.el10_1.src.rpm"
-                ],
-                "security-severity": "3.1"
-              }
-            },
-            {
-              "id": "CVE-2025-8277-libssh-config",
-              "name": "RpmMatcherExactIndirectMatch",
-              "shortDescription": {
-                "text": "CVE-2025-8277 low vulnerability for libssh-config package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in libssh's handling of key exchange (KEX) processes when a client repeatedly sends incorrect KEX guesses. The library fails to free memory during these rekey operations, which can gradually exhaust system memory. This issue can lead to crashes on the client side, particularly when using libgcrypt, which impacts application stability and availability."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2025-8277",
-              "help": {
-                "text": "Vulnerability CVE-2025-8277\nSeverity: low\nPackage: libssh-config\nVersion: 0.11.1-5.el10_1\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2025-8277](https://access.redhat.com/security/cve/CVE-2025-8277)",
-                "markdown": "**Vulnerability CVE-2025-8277**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | libssh-config  | 0.11.1-5.el10_1  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2025-8277](https://access.redhat.com/security/cve/CVE-2025-8277)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/libssh-config@0.11.1-5.el10_1?arch=noarch\u0026distro=rocky-10.1\u0026upstream=libssh-0.11.1-5.el10_1.src.rpm"
-                ],
-                "security-severity": "3.1"
-              }
-            },
-            {
               "id": "CVE-2026-3805-curl",
               "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
@@ -2023,6 +2002,48 @@
                   "pkg:rpm/rocky/libcurl@8.12.1-2.el10_1.2?arch=x86_64\u0026distro=rocky-10.1\u0026upstream=curl-8.12.1-2.el10_1.2.src.rpm"
                 ],
                 "security-severity": "6.3"
+              }
+            },
+            {
+              "id": "CVE-2025-8277-libssh",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2025-8277 low vulnerability for libssh package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in libssh's handling of key exchange (KEX) processes when a client repeatedly sends incorrect KEX guesses. The library fails to free memory during these rekey operations, which can gradually exhaust system memory. This issue can lead to crashes on the client side, particularly when using libgcrypt, which impacts application stability and availability."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2025-8277",
+              "help": {
+                "text": "Vulnerability CVE-2025-8277\nSeverity: low\nPackage: libssh\nVersion: 0.11.1-5.el10_1\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2025-8277](https://access.redhat.com/security/cve/CVE-2025-8277)",
+                "markdown": "**Vulnerability CVE-2025-8277**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | libssh  | 0.11.1-5.el10_1  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2025-8277](https://access.redhat.com/security/cve/CVE-2025-8277)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/libssh@0.11.1-5.el10_1?arch=x86_64\u0026distro=rocky-10.1\u0026upstream=libssh-0.11.1-5.el10_1.src.rpm"
+                ],
+                "security-severity": "3.1"
+              }
+            },
+            {
+              "id": "CVE-2025-8277-libssh-config",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2025-8277 low vulnerability for libssh-config package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in libssh's handling of key exchange (KEX) processes when a client repeatedly sends incorrect KEX guesses. The library fails to free memory during these rekey operations, which can gradually exhaust system memory. This issue can lead to crashes on the client side, particularly when using libgcrypt, which impacts application stability and availability."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2025-8277",
+              "help": {
+                "text": "Vulnerability CVE-2025-8277\nSeverity: low\nPackage: libssh-config\nVersion: 0.11.1-5.el10_1\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2025-8277](https://access.redhat.com/security/cve/CVE-2025-8277)",
+                "markdown": "**Vulnerability CVE-2025-8277**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | libssh-config  | 0.11.1-5.el10_1  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2025-8277](https://access.redhat.com/security/cve/CVE-2025-8277)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/libssh-config@0.11.1-5.el10_1?arch=noarch\u0026distro=rocky-10.1\u0026upstream=libssh-0.11.1-5.el10_1.src.rpm"
+                ],
+                "security-severity": "3.1"
               }
             },
             {
@@ -2278,48 +2299,6 @@
               }
             },
             {
-              "id": "CVE-2025-9232-openssl-fips-provider",
-              "name": "RpmMatcherExactIndirectMatch",
-              "shortDescription": {
-                "text": "CVE-2025-9232 low vulnerability for openssl-fips-provider package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in the OpenSSL HTTP client API no_proxy handling. This vulnerability allows an application level denial of service (application crash) via an attacker-controlled IPv6 URL when the no_proxy environment variable is set."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2025-9232",
-              "help": {
-                "text": "Vulnerability CVE-2025-9232\nSeverity: low\nPackage: openssl-fips-provider\nVersion: 1:3.5.1-7.el10_1\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2025-9232](https://access.redhat.com/security/cve/CVE-2025-9232)",
-                "markdown": "**Vulnerability CVE-2025-9232**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | openssl-fips-provider  | 1:3.5.1-7.el10_1  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2025-9232](https://access.redhat.com/security/cve/CVE-2025-9232)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/openssl-fips-provider@3.5.1-7.el10_1?arch=x86_64\u0026distro=rocky-10.1\u0026epoch=1\u0026upstream=openssl-3.5.1-7.el10_1.src.rpm"
-                ],
-                "security-severity": "3.1"
-              }
-            },
-            {
-              "id": "CVE-2025-9232-openssl-libs",
-              "name": "RpmMatcherExactIndirectMatch",
-              "shortDescription": {
-                "text": "CVE-2025-9232 low vulnerability for openssl-libs package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in the OpenSSL HTTP client API no_proxy handling. This vulnerability allows an application level denial of service (application crash) via an attacker-controlled IPv6 URL when the no_proxy environment variable is set."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2025-9232",
-              "help": {
-                "text": "Vulnerability CVE-2025-9232\nSeverity: low\nPackage: openssl-libs\nVersion: 1:3.5.1-7.el10_1\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2025-9232](https://access.redhat.com/security/cve/CVE-2025-9232)",
-                "markdown": "**Vulnerability CVE-2025-9232**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | openssl-libs  | 1:3.5.1-7.el10_1  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2025-9232](https://access.redhat.com/security/cve/CVE-2025-9232)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/openssl-libs@3.5.1-7.el10_1?arch=x86_64\u0026distro=rocky-10.1\u0026epoch=1\u0026upstream=openssl-3.5.1-7.el10_1.src.rpm"
-                ],
-                "security-severity": "3.1"
-              }
-            },
-            {
               "id": "CVE-2026-22185-openldap",
               "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
@@ -2425,24 +2404,45 @@
               }
             },
             {
-              "id": "CVE-2026-6732-libxml2",
-              "name": "RpmMatcherExactDirectMatch",
+              "id": "CVE-2025-9232-openssl-fips-provider",
+              "name": "RpmMatcherExactIndirectMatch",
               "shortDescription": {
-                "text": "CVE-2026-6732 medium vulnerability for libxml2 package"
+                "text": "CVE-2025-9232 low vulnerability for openssl-fips-provider package"
               },
               "fullDescription": {
-                "text": "A flaw was found in libxml2. This vulnerability occurs when the library processes a specially crafted XML Schema Definition (XSD) validated document that includes an internal entity reference. An attacker could exploit this by providing a malicious document, leading to a type confusion error that causes the application to crash. This results in a denial of service (DoS), making the affected system or application unavailable."
+                "text": "A flaw was found in the OpenSSL HTTP client API no_proxy handling. This vulnerability allows an application level denial of service (application crash) via an attacker-controlled IPv6 URL when the no_proxy environment variable is set."
               },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-6732",
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2025-9232",
               "help": {
-                "text": "Vulnerability CVE-2026-6732\nSeverity: medium\nPackage: libxml2\nVersion: 2.12.5-9.el10_0\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-6732](https://access.redhat.com/security/cve/CVE-2026-6732)",
-                "markdown": "**Vulnerability CVE-2026-6732**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | libxml2  | 2.12.5-9.el10_0  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-6732](https://access.redhat.com/security/cve/CVE-2026-6732)  |\n"
+                "text": "Vulnerability CVE-2025-9232\nSeverity: low\nPackage: openssl-fips-provider\nVersion: 1:3.5.1-7.el10_1\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2025-9232](https://access.redhat.com/security/cve/CVE-2025-9232)",
+                "markdown": "**Vulnerability CVE-2025-9232**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | openssl-fips-provider  | 1:3.5.1-7.el10_1  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2025-9232](https://access.redhat.com/security/cve/CVE-2025-9232)  |\n"
               },
               "properties": {
                 "purls": [
-                  "pkg:rpm/rocky/libxml2@2.12.5-9.el10_0?arch=x86_64\u0026distro=rocky-10.1\u0026upstream=libxml2-2.12.5-9.el10_0.src.rpm"
+                  "pkg:rpm/rocky/openssl-fips-provider@3.5.1-7.el10_1?arch=x86_64\u0026distro=rocky-10.1\u0026epoch=1\u0026upstream=openssl-3.5.1-7.el10_1.src.rpm"
                 ],
-                "security-severity": "6.5"
+                "security-severity": "3.1"
+              }
+            },
+            {
+              "id": "CVE-2025-9232-openssl-libs",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2025-9232 low vulnerability for openssl-libs package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in the OpenSSL HTTP client API no_proxy handling. This vulnerability allows an application level denial of service (application crash) via an attacker-controlled IPv6 URL when the no_proxy environment variable is set."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2025-9232",
+              "help": {
+                "text": "Vulnerability CVE-2025-9232\nSeverity: low\nPackage: openssl-libs\nVersion: 1:3.5.1-7.el10_1\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2025-9232](https://access.redhat.com/security/cve/CVE-2025-9232)",
+                "markdown": "**Vulnerability CVE-2025-9232**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | openssl-libs  | 1:3.5.1-7.el10_1  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2025-9232](https://access.redhat.com/security/cve/CVE-2025-9232)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/openssl-libs@3.5.1-7.el10_1?arch=x86_64\u0026distro=rocky-10.1\u0026epoch=1\u0026upstream=openssl-3.5.1-7.el10_1.src.rpm"
+                ],
+                "security-severity": "3.1"
               }
             },
             {
@@ -2527,6 +2527,27 @@
                   "pkg:rpm/rocky/libssh-config@0.11.1-5.el10_1?arch=noarch\u0026distro=rocky-10.1\u0026upstream=libssh-0.11.1-5.el10_1.src.rpm"
                 ],
                 "security-severity": "3.6"
+              }
+            },
+            {
+              "id": "CVE-2026-3832-gnutls",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-3832 low vulnerability for gnutls package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in gnutls. A remote attacker could exploit this vulnerability by presenting a specially crafted Online Certificate Status Protocol (OCSP) response during a TLS handshake. Due to a logic error in how gnutls processes multi-record OCSP responses, a client with OCSP verification enabled may incorrectly accept a revoked server certificate, potentially leading to a compromise of trust."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-3832",
+              "help": {
+                "text": "Vulnerability CVE-2026-3832\nSeverity: low\nPackage: gnutls\nVersion: 3.8.10-3.el10_1\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-3832](https://access.redhat.com/security/cve/CVE-2026-3832)",
+                "markdown": "**Vulnerability CVE-2026-3832**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | gnutls  | 3.8.10-3.el10_1  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-3832](https://access.redhat.com/security/cve/CVE-2026-3832)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/gnutls@3.8.10-3.el10_1?arch=x86_64\u0026distro=rocky-10.1\u0026upstream=gnutls-3.8.10-3.el10_1.src.rpm"
+                ],
+                "security-severity": "3.7"
               }
             },
             {
@@ -2926,27 +2947,6 @@
                   "pkg:rpm/rocky/libssh-config@0.11.1-5.el10_1?arch=noarch\u0026distro=rocky-10.1\u0026upstream=libssh-0.11.1-5.el10_1.src.rpm"
                 ],
                 "security-severity": "2.2"
-              }
-            },
-            {
-              "id": "CVE-2026-3832-gnutls",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-3832 low vulnerability for gnutls package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in gnutls. A remote attacker could exploit this vulnerability by presenting a specially crafted Online Certificate Status Protocol (OCSP) response during a TLS handshake. Due to a logic error in how gnutls processes multi-record OCSP responses, a client with OCSP verification enabled may incorrectly accept a revoked server certificate, potentially leading to a compromise of trust."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-3832",
-              "help": {
-                "text": "Vulnerability CVE-2026-3832\nSeverity: low\nPackage: gnutls\nVersion: 3.8.10-3.el10_1\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-3832](https://access.redhat.com/security/cve/CVE-2026-3832)",
-                "markdown": "**Vulnerability CVE-2026-3832**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | gnutls  | 3.8.10-3.el10_1  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-3832](https://access.redhat.com/security/cve/CVE-2026-3832)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/gnutls@3.8.10-3.el10_1?arch=x86_64\u0026distro=rocky-10.1\u0026upstream=gnutls-3.8.10-3.el10_1.src.rpm"
-                ],
-                "security-severity": "3.7"
               }
             },
             {
@@ -4194,6 +4194,37 @@
           }
         },
         {
+          "ruleId": "CVE-2026-4426-libarchive",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: libarchive, version 3.7.7-8.el10_1 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:ef13b6f2d511a7974ab3162a2ca9daf97c08af3eaaf892a193a98a72e6e80fa8:/usr/lib/sysimage/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "47a4a7481025e457314901e844504c5635a1f7d0bdf4cacdd9145cf6cd6f2b6b:1"
+          }
+        },
+        {
           "ruleId": "CVE-2025-6052-glib2",
           "level": "note",
           "message": {
@@ -4256,37 +4287,6 @@
           }
         },
         {
-          "ruleId": "CVE-2026-4426-libarchive",
-          "level": "warning",
-          "message": {
-            "text": "A medium vulnerability in rpm package: libarchive, version 3.7.7-8.el10_1 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:ef13b6f2d511a7974ab3162a2ca9daf97c08af3eaaf892a193a98a72e6e80fa8:/usr/lib/sysimage/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "47a4a7481025e457314901e844504c5635a1f7d0bdf4cacdd9145cf6cd6f2b6b:1"
-          }
-        },
-        {
           "ruleId": "CVE-2026-40356-krb5-libs",
           "level": "error",
           "message": {
@@ -4346,6 +4346,37 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "73d53cab70c983d5f5f6c6749137e882139000c9593ab4d1de65749e13ae2bde:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2025-4598-systemd-libs",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: systemd-libs, version 257-13.el10.rocky.0.1 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:ef13b6f2d511a7974ab3162a2ca9daf97c08af3eaaf892a193a98a72e6e80fa8:/usr/lib/sysimage/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "bf76f17941264178715fec6cee7bbe413e5601f42ddc254b3d42e6c9dc54ade5:1"
           }
         },
         {
@@ -4594,37 +4625,6 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "7ee7d309874fa292a6e301c280f24bc8332ad54c8f9512eaa88bd7de4b208528:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2025-4598-systemd-libs",
-          "level": "warning",
-          "message": {
-            "text": "A medium vulnerability in rpm package: systemd-libs, version 257-13.el10.rocky.0.1 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:ef13b6f2d511a7974ab3162a2ca9daf97c08af3eaaf892a193a98a72e6e80fa8:/usr/lib/sysimage/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "bf76f17941264178715fec6cee7bbe413e5601f42ddc254b3d42e6c9dc54ade5:1"
           }
         },
         {
@@ -4966,6 +4966,37 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "47a4a7481025e457314901e844504c5635a1f7d0bdf4cacdd9145cf6cd6f2b6b:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-33845-gnutls",
+          "level": "error",
+          "message": {
+            "text": "A high vulnerability in rpm package: gnutls, version 3.8.10-3.el10_1 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:ef13b6f2d511a7974ab3162a2ca9daf97c08af3eaaf892a193a98a72e6e80fa8:/usr/lib/sysimage/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "60c4e318b4e991320b476db613291db7c547326f01b8e066e3e97f29fa35f827:1"
           }
         },
         {
@@ -5341,6 +5372,37 @@
           }
         },
         {
+          "ruleId": "CVE-2026-6732-libxml2",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: libxml2, version 2.12.5-9.el10_0 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:ef13b6f2d511a7974ab3162a2ca9daf97c08af3eaaf892a193a98a72e6e80fa8:/usr/lib/sysimage/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "1fe3e6425700bacd70bdcff969d8ea3cd6b9a0eca5f0f264fb6e039c6697f92c:1"
+          }
+        },
+        {
           "ruleId": "CVE-2025-27113-libxml2",
           "level": "note",
           "message": {
@@ -5524,161 +5586,6 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "200d94d2e608db8ac75b1089a95b9279506c776ac527be20cb6f54748b97c96f:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2026-5435-glibc",
-          "level": "warning",
-          "message": {
-            "text": "A medium vulnerability in rpm package: glibc, version 2.39-58.el10_1.7 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:ef13b6f2d511a7974ab3162a2ca9daf97c08af3eaaf892a193a98a72e6e80fa8:/usr/lib/sysimage/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "0c76774197dfe39248155aabd37e9e8bf22d16a0275bbb97e10f87fe83facb7b:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2026-5435-glibc-common",
-          "level": "warning",
-          "message": {
-            "text": "A medium vulnerability in rpm package: glibc-common, version 2.39-58.el10_1.7 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:ef13b6f2d511a7974ab3162a2ca9daf97c08af3eaaf892a193a98a72e6e80fa8:/usr/lib/sysimage/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "7e2c75400d10009ff480ea238d0d7b31f1f989ea690721ab292648849f19d338:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2026-5435-glibc-langpack-en",
-          "level": "warning",
-          "message": {
-            "text": "A medium vulnerability in rpm package: glibc-langpack-en, version 2.39-58.el10_1.7 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:ef13b6f2d511a7974ab3162a2ca9daf97c08af3eaaf892a193a98a72e6e80fa8:/usr/lib/sysimage/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "c88a8227c920486a2051d1b4421c7872180f1e41c31458de1db55f2dd63daa37:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2026-5435-glibc-minimal-langpack",
-          "level": "warning",
-          "message": {
-            "text": "A medium vulnerability in rpm package: glibc-minimal-langpack, version 2.39-58.el10_1.7 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:ef13b6f2d511a7974ab3162a2ca9daf97c08af3eaaf892a193a98a72e6e80fa8:/usr/lib/sysimage/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "7419ef5b9c4a6bb01e136bac01f9dfddf14dbf076de91bd619ed2aaecead096d:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2026-33845-gnutls",
-          "level": "error",
-          "message": {
-            "text": "A high vulnerability in rpm package: gnutls, version 3.8.10-3.el10_1 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:ef13b6f2d511a7974ab3162a2ca9daf97c08af3eaaf892a193a98a72e6e80fa8:/usr/lib/sysimage/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "60c4e318b4e991320b476db613291db7c547326f01b8e066e3e97f29fa35f827:1"
           }
         },
         {
@@ -5868,6 +5775,130 @@
           }
         },
         {
+          "ruleId": "CVE-2026-5435-glibc",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: glibc, version 2.39-58.el10_1.7 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:ef13b6f2d511a7974ab3162a2ca9daf97c08af3eaaf892a193a98a72e6e80fa8:/usr/lib/sysimage/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "0c76774197dfe39248155aabd37e9e8bf22d16a0275bbb97e10f87fe83facb7b:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-5435-glibc-common",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: glibc-common, version 2.39-58.el10_1.7 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:ef13b6f2d511a7974ab3162a2ca9daf97c08af3eaaf892a193a98a72e6e80fa8:/usr/lib/sysimage/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "7e2c75400d10009ff480ea238d0d7b31f1f989ea690721ab292648849f19d338:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-5435-glibc-langpack-en",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: glibc-langpack-en, version 2.39-58.el10_1.7 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:ef13b6f2d511a7974ab3162a2ca9daf97c08af3eaaf892a193a98a72e6e80fa8:/usr/lib/sysimage/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "c88a8227c920486a2051d1b4421c7872180f1e41c31458de1db55f2dd63daa37:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-5435-glibc-minimal-langpack",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: glibc-minimal-langpack, version 2.39-58.el10_1.7 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:ef13b6f2d511a7974ab3162a2ca9daf97c08af3eaaf892a193a98a72e6e80fa8:/usr/lib/sysimage/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "7419ef5b9c4a6bb01e136bac01f9dfddf14dbf076de91bd619ed2aaecead096d:1"
+          }
+        },
+        {
           "ruleId": "CVE-2026-5450-glibc",
           "level": "warning",
           "message": {
@@ -6020,6 +6051,37 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "7ee7d309874fa292a6e301c280f24bc8332ad54c8f9512eaa88bd7de4b208528:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-3833-gnutls",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: gnutls, version 3.8.10-3.el10_1 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:ef13b6f2d511a7974ab3162a2ca9daf97c08af3eaaf892a193a98a72e6e80fa8:/usr/lib/sysimage/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "60c4e318b4e991320b476db613291db7c547326f01b8e066e3e97f29fa35f827:1"
           }
         },
         {
@@ -6364,37 +6426,6 @@
           }
         },
         {
-          "ruleId": "CVE-2026-3833-gnutls",
-          "level": "warning",
-          "message": {
-            "text": "A medium vulnerability in rpm package: gnutls, version 3.8.10-3.el10_1 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:ef13b6f2d511a7974ab3162a2ca9daf97c08af3eaaf892a193a98a72e6e80fa8:/usr/lib/sysimage/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "60c4e318b4e991320b476db613291db7c547326f01b8e066e3e97f29fa35f827:1"
-          }
-        },
-        {
           "ruleId": "CVE-2026-28389-openssl-fips-provider",
           "level": "note",
           "message": {
@@ -6457,68 +6488,6 @@
           }
         },
         {
-          "ruleId": "CVE-2025-8277-libssh",
-          "level": "note",
-          "message": {
-            "text": "A low vulnerability in rpm package: libssh, version 0.11.1-5.el10_1 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:ef13b6f2d511a7974ab3162a2ca9daf97c08af3eaaf892a193a98a72e6e80fa8:/usr/lib/sysimage/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "49a2544cece3d43ca48244d492e429d8ebb95f42ffada68b93330cdada2e949a:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2025-8277-libssh-config",
-          "level": "note",
-          "message": {
-            "text": "A low vulnerability in rpm package: libssh-config, version 0.11.1-5.el10_1 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:ef13b6f2d511a7974ab3162a2ca9daf97c08af3eaaf892a193a98a72e6e80fa8:/usr/lib/sysimage/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "8e05533be870d1e1c259366479ef56705fd6a961743b92192c4a62a93182160d:1"
-          }
-        },
-        {
           "ruleId": "CVE-2026-3805-curl",
           "level": "warning",
           "message": {
@@ -6578,6 +6547,68 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "d233dac0f55329435880515749551c20bd162aa02a5acce81482fba41a9127ba:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2025-8277-libssh",
+          "level": "note",
+          "message": {
+            "text": "A low vulnerability in rpm package: libssh, version 0.11.1-5.el10_1 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:ef13b6f2d511a7974ab3162a2ca9daf97c08af3eaaf892a193a98a72e6e80fa8:/usr/lib/sysimage/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "49a2544cece3d43ca48244d492e429d8ebb95f42ffada68b93330cdada2e949a:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2025-8277-libssh-config",
+          "level": "note",
+          "message": {
+            "text": "A low vulnerability in rpm package: libssh-config, version 0.11.1-5.el10_1 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:ef13b6f2d511a7974ab3162a2ca9daf97c08af3eaaf892a193a98a72e6e80fa8:/usr/lib/sysimage/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "8e05533be870d1e1c259366479ef56705fd6a961743b92192c4a62a93182160d:1"
           }
         },
         {
@@ -6953,68 +6984,6 @@
           }
         },
         {
-          "ruleId": "CVE-2025-9232-openssl-fips-provider",
-          "level": "note",
-          "message": {
-            "text": "A low vulnerability in rpm package: openssl-fips-provider, version 1:3.5.1-7.el10_1 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:ef13b6f2d511a7974ab3162a2ca9daf97c08af3eaaf892a193a98a72e6e80fa8:/usr/lib/sysimage/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "dbfb0a802a6e18c1816b28d933776a7918cfda7f6a970ebaa92e95c7e30d6f75:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2025-9232-openssl-libs",
-          "level": "note",
-          "message": {
-            "text": "A low vulnerability in rpm package: openssl-libs, version 1:3.5.1-7.el10_1 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:ef13b6f2d511a7974ab3162a2ca9daf97c08af3eaaf892a193a98a72e6e80fa8:/usr/lib/sysimage/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "0e9f63ba7b8ca0432f44d7d853ed217e9ce0e2b70dd543da4e4fc30145e5da0b:1"
-          }
-        },
-        {
           "ruleId": "CVE-2026-22185-openldap",
           "level": "warning",
           "message": {
@@ -7170,10 +7139,10 @@
           }
         },
         {
-          "ruleId": "CVE-2026-6732-libxml2",
-          "level": "warning",
+          "ruleId": "CVE-2025-9232-openssl-fips-provider",
+          "level": "note",
           "message": {
-            "text": "A medium vulnerability in rpm package: libxml2, version 2.12.5-9.el10_0 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
+            "text": "A low vulnerability in rpm package: openssl-fips-provider, version 1:3.5.1-7.el10_1 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
           },
           "locations": [
             {
@@ -7197,7 +7166,38 @@
             }
           ],
           "partialFingerprints": {
-            "primaryLocationLineHash": "1fe3e6425700bacd70bdcff969d8ea3cd6b9a0eca5f0f264fb6e039c6697f92c:1"
+            "primaryLocationLineHash": "dbfb0a802a6e18c1816b28d933776a7918cfda7f6a970ebaa92e95c7e30d6f75:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2025-9232-openssl-libs",
+          "level": "note",
+          "message": {
+            "text": "A low vulnerability in rpm package: openssl-libs, version 1:3.5.1-7.el10_1 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:ef13b6f2d511a7974ab3162a2ca9daf97c08af3eaaf892a193a98a72e6e80fa8:/usr/lib/sysimage/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "0e9f63ba7b8ca0432f44d7d853ed217e9ce0e2b70dd543da4e4fc30145e5da0b:1"
           }
         },
         {
@@ -7322,6 +7322,37 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "8e05533be870d1e1c259366479ef56705fd6a961743b92192c4a62a93182160d:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-3832-gnutls",
+          "level": "note",
+          "message": {
+            "text": "A low vulnerability in rpm package: gnutls, version 3.8.10-3.el10_1 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:ef13b6f2d511a7974ab3162a2ca9daf97c08af3eaaf892a193a98a72e6e80fa8:/usr/lib/sysimage/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "60c4e318b4e991320b476db613291db7c547326f01b8e066e3e97f29fa35f827:1"
           }
         },
         {
@@ -7911,37 +7942,6 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "8e05533be870d1e1c259366479ef56705fd6a961743b92192c4a62a93182160d:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2026-3832-gnutls",
-          "level": "note",
-          "message": {
-            "text": "A low vulnerability in rpm package: gnutls, version 3.8.10-3.el10_1 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:ef13b6f2d511a7974ab3162a2ca9daf97c08af3eaaf892a193a98a72e6e80fa8:/usr/lib/sysimage/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "60c4e318b4e991320b476db613291db7c547326f01b8e066e3e97f29fa35f827:1"
           }
         },
         {
