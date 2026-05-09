@@ -942,13 +942,13 @@
                     <dd id="typeValue">image</dd><dt>Checksum:</dt>
                     <dd id="checksumValue">sha256:98148ca2787818ce6e48cc255e7e02621d7bcc231aba9bd72f4762e764a2244f</dd><dt>Date:</dt>
                     <dd>
-                        <span id="dateElement">2026-05-08T10:21:14.656574636Z</span>
+                        <span id="dateElement">2026-05-09T13:58:23.928338707Z</span>
                         <span id="prettyDateElement" style="display: none;"></span>
                     </dd>
                     <dt>Grype Version:</dt>
                     <dd>0.112.0</dd>
                     <dt>DB Built:</dt>
-                    <dd>2026-05-08 06:53:55 +0000 UTC</dd>
+                    <dd>2026-05-09 07:01:20 +0000 UTC</dd>
                 </dl>
             </div>
             <div class="heading-right">
@@ -1780,6 +1780,22 @@
                         <td>pkg:rpm/rocky/libarchive@3.3.3-7.el8_10?arch=x86_64&distro=rocky-8.10&upstream=libarchive-3.3.3-7.el8_10.src.rpm</td>
                     </tr>
                     <tr>
+                        <td>gnutls</td>
+                        <td>3.6.16-8.el8_10.5</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-42010">CVE-2026-42010</a>
+                        </td>
+                        <td>High</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in gnutls. Servers configured with RSA-PSK (Rivest–Shamir–Adleman – Pre-Shared Key) wrongfully matched usernames containing a NUL character with truncated usernames. A remote attacker could exploit this by sending a specially crafted username, leading to an authentication bypass. This vulnerability allows an attacker to gain unauthorized access by circumventing the authentication process.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/gnutls@3.6.16-8.el8_10.5?arch=x86_64&distro=rocky-8.10&upstream=gnutls-3.6.16-8.el8_10.5.src.rpm</td>
+                    </tr>
+                    <tr>
                         <td>ncurses-base</td>
                         <td>6.1-10.20180224.el8</td>
                         <td>rpm</td>
@@ -2411,22 +2427,6 @@ a locally running SSH agent.</td>
                         <td>pkg:rpm/rocky/libcurl-minimal@7.61.1-34.el8_10.11?arch=x86_64&distro=rocky-8.10&upstream=curl-7.61.1-34.el8_10.11.src.rpm</td>
                     </tr>
                     <tr>
-                        <td>glib2</td>
-                        <td>2.56.4-168.el8_10</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2025-14087">CVE-2025-14087</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in GLib (Gnome Lib). This vulnerability allows a remote attacker to cause heap corruption, leading to a denial of service or potential code execution via a buffer-underflow in the GVariant parser when processing maliciously crafted input strings.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/glib2@2.56.4-168.el8_10?arch=x86_64&distro=rocky-8.10&upstream=glib2-2.56.4-168.el8_10.src.rpm</td>
-                    </tr>
-                    <tr>
                         <td>libxml2</td>
                         <td>2.9.7-21.el8_10.3</td>
                         <td>rpm</td>
@@ -2855,6 +2855,22 @@ a locally running SSH agent.</td>
                             N/A
                         </td>
                         <td>A flaw was found in glib. Missing validation of offset and count parameters in the g_buffered_input_stream_peek() function can lead to an integer overflow during length calculation. When specially crafted values are provided, this overflow results in an incorrect size being passed to memcpy(), triggering a buffer overflow. This can cause application crashes, leading to a Denial of Service (DoS).</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/glib2@2.56.4-168.el8_10?arch=x86_64&distro=rocky-8.10&upstream=glib2-2.56.4-168.el8_10.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>glib2</td>
+                        <td>2.56.4-168.el8_10</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-14087">CVE-2025-14087</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in GLib (Gnome Lib). This vulnerability allows a remote attacker to cause heap corruption, leading to a denial of service or potential code execution via a buffer-underflow in the GVariant parser when processing maliciously crafted input strings.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/glib2@2.56.4-168.el8_10?arch=x86_64&distro=rocky-8.10&upstream=glib2-2.56.4-168.el8_10.src.rpm</td>
                     </tr>
@@ -3529,6 +3545,22 @@ a locally running SSH agent.</td>
                         <td>A flaw was found in the libarchive package. Affected versions of libarchive do not check a strftime return value, which can lead to a denial of service or unspecified other impacts via a crafted TAR archive that is read with a verbose value of 2. For example, the 100-byte buffer may not be sufficient for a custom locale.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/libarchive@3.3.3-7.el8_10?arch=x86_64&distro=rocky-8.10&upstream=libarchive-3.3.3-7.el8_10.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>gnutls</td>
+                        <td>3.6.16-8.el8_10.5</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-42011">CVE-2026-42011</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in gnutls. This vulnerability occurs because permitted name constraints were incorrectly ignored when previous Certificate Authorities (CAs) only had excluded name constraints. A remote attacker could exploit this to bypass critical name constraint checks during certificate validation. This bypass could lead to the acceptance of invalid certificates, potentially enabling spoofing or man-in-the-middle attacks against affected systems.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/gnutls@3.6.16-8.el8_10.5?arch=x86_64&distro=rocky-8.10&upstream=gnutls-3.6.16-8.el8_10.5.src.rpm</td>
                     </tr>
                     <tr>
                         <td>systemd</td>
@@ -4607,6 +4639,22 @@ a locally running SSH agent.</td>
                         <td>pkg:rpm/rocky/gnupg2-smime@2.2.20-4.el8_10?arch=x86_64&distro=rocky-8.10&upstream=gnupg2-2.2.20-4.el8_10.src.rpm</td>
                     </tr>
                     <tr>
+                        <td>expat</td>
+                        <td>2.5.0-1.el8_10</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-66382">CVE-2025-66382</a>
+                        </td>
+                        <td>Low</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in libexpat. This vulnerability allows a denial of service (DoS) by processing a crafted file with an approximate size of 2 MiB, leading to dozens of seconds of processing time.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/expat@2.5.0-1.el8_10?arch=x86_64&distro=rocky-8.10&upstream=expat-2.5.0-1.el8_10.src.rpm</td>
+                    </tr>
+                    <tr>
                         <td>openssl</td>
                         <td>1:1.1.1k-15.el8_10</td>
                         <td>rpm</td>
@@ -4659,22 +4707,6 @@ a locally running SSH agent.</td>
                         <td>2.5.0-1.el8_10</td>
                         <td>rpm</td>
                         <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2025-66382">CVE-2025-66382</a>
-                        </td>
-                        <td>Low</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in libexpat. This vulnerability allows a denial of service (DoS) by processing a crafted file with an approximate size of 2 MiB, leading to dozens of seconds of processing time.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/expat@2.5.0-1.el8_10?arch=x86_64&distro=rocky-8.10&upstream=expat-2.5.0-1.el8_10.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>expat</td>
-                        <td>2.5.0-1.el8_10</td>
-                        <td>rpm</td>
-                        <td>
                             <a href="https://access.redhat.com/security/cve/CVE-2026-32777">CVE-2026-32777</a>
                         </td>
                         <td>Medium</td>
@@ -4717,22 +4749,6 @@ a locally running SSH agent.</td>
                         <td>A flaw was found in Glib&#39;s content type parsing logic. This buffer underflow vulnerability occurs because the length of a header line is stored in a signed integer, which can lead to integer wraparound for very large inputs. This results in pointer underflow and out-of-bounds memory access. Exploitation requires a local user to install or process a specially crafted treemagic file, which can lead to local denial of service or application instability.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/glib2@2.56.4-168.el8_10?arch=x86_64&distro=rocky-8.10&upstream=glib2-2.56.4-168.el8_10.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>gnutls</td>
-                        <td>3.6.16-8.el8_10.5</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-42010">CVE-2026-42010</a>
-                        </td>
-                        <td>High</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in gnutls. Servers configured with RSA-PSK (Rivest–Shamir–Adleman – Pre-Shared Key) wrongfully matched usernames containing a NUL character with truncated usernames. A remote attacker could exploit this by sending a specially crafted username, leading to an authentication bypass. This vulnerability allows an attacker to gain unauthorized access by circumventing the authentication process.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/gnutls@3.6.16-8.el8_10.5?arch=x86_64&distro=rocky-8.10&upstream=gnutls-3.6.16-8.el8_10.5.src.rpm</td>
                     </tr>
                     <tr>
                         <td>curl</td>
@@ -4813,22 +4829,6 @@ a locally running SSH agent.</td>
                         <td>A flaw was found in libcurl. When configured to use a .netrc file for credentials and follow HTTP redirects, libcurl can inadvertently send the password from the initial connection to the redirected host. This sensitive information disclosure occurs when both the original and redirect URLs use clear text HTTP, are performed over the same HTTP proxy, and the same connection is reused. This vulnerability, categorized as an Exposure of Sensitive Information to an Unauthorized Actor (CWE-200), could allow an attacker to obtain user credentials.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/curl@7.61.1-34.el8_10.11?arch=x86_64&distro=rocky-8.10&upstream=curl-7.61.1-34.el8_10.11.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>gnutls</td>
-                        <td>3.6.16-8.el8_10.5</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-42011">CVE-2026-42011</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in gnutls. This vulnerability occurs because permitted name constraints were incorrectly ignored when previous Certificate Authorities (CAs) only had excluded name constraints. A remote attacker could exploit this to bypass critical name constraint checks during certificate validation. This bypass could lead to the acceptance of invalid certificates, potentially enabling spoofing or man-in-the-middle attacks against affected systems.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/gnutls@3.6.16-8.el8_10.5?arch=x86_64&distro=rocky-8.10&upstream=gnutls-3.6.16-8.el8_10.5.src.rpm</td>
                     </tr>
                     <tr>
                         <td>libcurl-minimal</td>
