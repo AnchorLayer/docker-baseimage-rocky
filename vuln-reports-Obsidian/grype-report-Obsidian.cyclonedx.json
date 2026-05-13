@@ -2,10 +2,10 @@
   "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
   "bomFormat": "CycloneDX",
   "specVersion": "1.6",
-  "serialNumber": "urn:uuid:1d0bc919-7d45-4c57-95d1-e1ed5e413784",
+  "serialNumber": "urn:uuid:600bc880-ed7b-4033-907c-b0eca4d89915",
   "version": 1,
   "metadata": {
-    "timestamp": "2026-05-09T13:58:15Z",
+    "timestamp": "2026-05-13T09:24:40Z",
     "tools": {
       "components": [
         {
@@ -60226,7 +60226,7 @@
   ],
   "vulnerabilities": [
     {
-      "bom-ref": "urn:uuid:2c393972-99b1-421b-8e92-b9e4bff52a7d",
+      "bom-ref": "urn:uuid:92da77c5-9e53-4b35-91df-b33e495a9d6e",
       "id": "CVE-2023-2650",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -60265,7 +60265,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:97a207de-66d2-4bbf-a1c0-7c7d6aa05d4b",
+      "bom-ref": "urn:uuid:3f54e398-c056-4ba5-acf7-99eac742ce73",
       "id": "CVE-2023-2650",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -60304,7 +60304,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:f14db2c7-9fe5-4a48-9299-36c56c676a3f",
+      "bom-ref": "urn:uuid:0dce7c7f-b0c7-4981-b7a3-d14b9effce58",
       "id": "CVE-2020-19188",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -60343,7 +60343,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:76b91594-1847-46d0-8103-e9b43084348f",
+      "bom-ref": "urn:uuid:f92d0a4c-4ca6-4387-b53f-d1c574e7ce39",
       "id": "CVE-2020-19188",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -60382,7 +60382,85 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:dae61308-f10c-47c2-bc2b-f2296128d2a1",
+      "bom-ref": "urn:uuid:339c12ab-e876-44ff-80c0-032feb06ebe5",
+      "id": "CVE-2024-2511",
+      "source": {
+        "name": "redhat-distro-redhat-8",
+        "url": "https://access.redhat.com/security/cve/CVE-2024-2511"
+      },
+      "references": [
+        {
+          "id": "CVE-2024-2511",
+          "source": {
+            "name": "redhat-distro-redhat-8",
+            "url": "https://access.redhat.com/security/cve/CVE-2024-2511"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 3.7,
+          "severity": "low",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.09052,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in OpenSSL. A malicious client can trigger an uncontrolled memory consumption, resulting in a Denial of Service. This issue occurs due to OpenSSL's TLSv1.3 session cache going into an incorrect state, leading to it failing to flush properly as it fills. OpenSSL must be configured with the non-default SSL_OP_NO_TICKET option enabled to be vulnerable. This issue only affects TLSv1.3 servers, while TLS clients are not affected.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/openssl@1.1.1k-15.el8_10?arch=x86_64&distro=rocky-8.10&epoch=1&package-id=317eab9de5210360&upstream=openssl-1.1.1k-15.el8_10.src.rpm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:42ea8a1b-8dfd-4557-826e-50ade7d5d8c7",
+      "id": "CVE-2024-2511",
+      "source": {
+        "name": "redhat-distro-redhat-8",
+        "url": "https://access.redhat.com/security/cve/CVE-2024-2511"
+      },
+      "references": [
+        {
+          "id": "CVE-2024-2511",
+          "source": {
+            "name": "redhat-distro-redhat-8",
+            "url": "https://access.redhat.com/security/cve/CVE-2024-2511"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 3.7,
+          "severity": "low",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.09052,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in OpenSSL. A malicious client can trigger an uncontrolled memory consumption, resulting in a Denial of Service. This issue occurs due to OpenSSL's TLSv1.3 session cache going into an incorrect state, leading to it failing to flush properly as it fills. OpenSSL must be configured with the non-default SSL_OP_NO_TICKET option enabled to be vulnerable. This issue only affects TLSv1.3 servers, while TLS clients are not affected.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/openssl-libs@1.1.1k-15.el8_10?arch=x86_64&distro=rocky-8.10&epoch=1&package-id=3859f7a75ea97aa1&upstream=openssl-1.1.1k-15.el8_10.src.rpm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:59559433-fb16-4f3e-aab9-0d3d840beabd",
       "id": "CVE-2020-19185",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -60421,7 +60499,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:9317a79e-2bef-45e3-a587-b5ef9f54748f",
+      "bom-ref": "urn:uuid:87af0873-6958-446c-ab4f-3afd4e81b68b",
       "id": "CVE-2020-19186",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -60460,7 +60538,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:71b9b709-8747-4682-866b-4d32034f4880",
+      "bom-ref": "urn:uuid:eb76a14c-051a-47d7-80ae-70005c9ceaa3",
       "id": "CVE-2020-19187",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -60499,7 +60577,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:1dbe4225-1d0a-40f1-b539-2629fb439e8f",
+      "bom-ref": "urn:uuid:adae5384-d999-4e85-bc6c-3ea23d86f9ef",
       "id": "CVE-2020-19190",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -60538,7 +60616,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:31c087d1-197d-444f-84ff-77987d0aa252",
+      "bom-ref": "urn:uuid:471186e2-e509-456f-976f-54d406bebcc8",
       "id": "CVE-2020-19185",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -60577,7 +60655,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:c535dffc-3c22-4560-9240-e88e6edda12e",
+      "bom-ref": "urn:uuid:6793fac4-7bf5-429c-a7a4-bc3c7648c09b",
       "id": "CVE-2020-19186",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -60616,7 +60694,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:5c531abe-bbe9-446c-9b79-4b3588bc434e",
+      "bom-ref": "urn:uuid:cf9bd960-4727-4cf8-9f7d-6ab7f1d7fffc",
       "id": "CVE-2020-19187",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -60655,7 +60733,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:0e1bca13-c48c-41b3-972b-2733145e9159",
+      "bom-ref": "urn:uuid:9d05f037-7487-4575-a99c-71cd4e1a8dfa",
       "id": "CVE-2020-19190",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -60694,7 +60772,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:2d399cf2-1633-4906-805d-2296873503dc",
+      "bom-ref": "urn:uuid:a845cbff-36f8-4696-acc5-5797b8075394",
       "id": "CVE-2019-9937",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -60733,7 +60811,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:6d76dfe2-9a11-42b4-b53f-3c466d2bca44",
+      "bom-ref": "urn:uuid:e88552d3-b86e-45e1-87f4-c1e6b38e27eb",
       "id": "CVE-2019-9936",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -60772,7 +60850,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:1a69c09e-3a4b-4ef3-bf14-176083132dab",
+      "bom-ref": "urn:uuid:b6f74adb-42d5-461d-a1e3-9d20770a31ec",
       "id": "CVE-2024-56433",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -60811,85 +60889,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:b29f5dae-e7ee-4b45-9d68-35cb7e432ddf",
-      "id": "CVE-2024-2511",
-      "source": {
-        "name": "redhat-distro-redhat-8",
-        "url": "https://access.redhat.com/security/cve/CVE-2024-2511"
-      },
-      "references": [
-        {
-          "id": "CVE-2024-2511",
-          "source": {
-            "name": "redhat-distro-redhat-8",
-            "url": "https://access.redhat.com/security/cve/CVE-2024-2511"
-          }
-        }
-      ],
-      "ratings": [
-        {
-          "score": 3.7,
-          "severity": "low",
-          "method": "CVSSv31",
-          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L"
-        },
-        {
-          "source": {
-            "name": "FIRST",
-            "url": "https://www.first.org/epss/"
-          },
-          "score": 0.04146,
-          "method": "other"
-        }
-      ],
-      "description": "A flaw was found in OpenSSL. A malicious client can trigger an uncontrolled memory consumption, resulting in a Denial of Service. This issue occurs due to OpenSSL's TLSv1.3 session cache going into an incorrect state, leading to it failing to flush properly as it fills. OpenSSL must be configured with the non-default SSL_OP_NO_TICKET option enabled to be vulnerable. This issue only affects TLSv1.3 servers, while TLS clients are not affected.",
-      "affects": [
-        {
-          "ref": "pkg:rpm/rocky/openssl@1.1.1k-15.el8_10?arch=x86_64&distro=rocky-8.10&epoch=1&package-id=317eab9de5210360&upstream=openssl-1.1.1k-15.el8_10.src.rpm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "urn:uuid:bbcaa76f-de7c-4583-9492-1133c476a66b",
-      "id": "CVE-2024-2511",
-      "source": {
-        "name": "redhat-distro-redhat-8",
-        "url": "https://access.redhat.com/security/cve/CVE-2024-2511"
-      },
-      "references": [
-        {
-          "id": "CVE-2024-2511",
-          "source": {
-            "name": "redhat-distro-redhat-8",
-            "url": "https://access.redhat.com/security/cve/CVE-2024-2511"
-          }
-        }
-      ],
-      "ratings": [
-        {
-          "score": 3.7,
-          "severity": "low",
-          "method": "CVSSv31",
-          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L"
-        },
-        {
-          "source": {
-            "name": "FIRST",
-            "url": "https://www.first.org/epss/"
-          },
-          "score": 0.04146,
-          "method": "other"
-        }
-      ],
-      "description": "A flaw was found in OpenSSL. A malicious client can trigger an uncontrolled memory consumption, resulting in a Denial of Service. This issue occurs due to OpenSSL's TLSv1.3 session cache going into an incorrect state, leading to it failing to flush properly as it fills. OpenSSL must be configured with the non-default SSL_OP_NO_TICKET option enabled to be vulnerable. This issue only affects TLSv1.3 servers, while TLS clients are not affected.",
-      "affects": [
-        {
-          "ref": "pkg:rpm/rocky/openssl-libs@1.1.1k-15.el8_10?arch=x86_64&distro=rocky-8.10&epoch=1&package-id=3859f7a75ea97aa1&upstream=openssl-1.1.1k-15.el8_10.src.rpm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "urn:uuid:009a17b4-04b6-4d64-b1be-8ebef87a3adc",
+      "bom-ref": "urn:uuid:c20c5d09-3f9f-4aad-b214-fba760ba8e22",
       "id": "CVE-2024-34459",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -60928,7 +60928,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:49ab8100-5c63-487d-8845-119702f69f60",
+      "bom-ref": "urn:uuid:0c78b92b-fac6-48bc-81e7-6fbfca4976fa",
       "id": "CVE-2020-19189",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -60967,7 +60967,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:738dfd07-f8bd-40a6-8055-a336f9cf4c83",
+      "bom-ref": "urn:uuid:029318e5-a6a1-4f7d-b27b-335cf487f080",
       "id": "CVE-2020-19189",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -61006,7 +61006,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:2aacd0ae-2d8c-47d1-b606-951ccbfac738",
+      "bom-ref": "urn:uuid:c42d8340-d53f-4943-a867-b9746a02df06",
       "id": "CVE-2024-11053",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -61045,7 +61045,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:bad10b57-e38a-4159-a392-f044d6f50370",
+      "bom-ref": "urn:uuid:3a1dc877-a1ab-4335-a406-ca5879812aee",
       "id": "CVE-2024-11053",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -61084,7 +61084,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:d442fc4a-2600-4b1f-9bc0-974f1fb33afb",
+      "bom-ref": "urn:uuid:e3ab6443-c3b4-4fa5-bf49-ca172d3fdd45",
       "id": "CVE-2023-0466",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -61123,7 +61123,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:fee47fe8-8cba-473d-bc5a-e9f3fbfab0bb",
+      "bom-ref": "urn:uuid:94467ac9-2d76-4b62-8a10-56bc604b20a7",
       "id": "CVE-2023-0466",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -61162,7 +61162,85 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:3faa3b9d-eed8-42fb-af4c-29f8e3a924d9",
+      "bom-ref": "urn:uuid:fe3d26f0-50e8-4279-b187-1a1de346077d",
+      "id": "CVE-2024-7264",
+      "source": {
+        "name": "redhat-distro-redhat-8",
+        "url": "https://access.redhat.com/security/cve/CVE-2024-7264"
+      },
+      "references": [
+        {
+          "id": "CVE-2024-7264",
+          "source": {
+            "name": "redhat-distro-redhat-8",
+            "url": "https://access.redhat.com/security/cve/CVE-2024-7264"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 5.3,
+          "severity": "low",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:L/I:N/A:H"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00882,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in libcurl, where libcurl's ASN1 parser code has the `GTime2str()` function, used for parsing an ASN.1 Generalized Time field. If a syntactically incorrect field is given, the parser can use -1 for the length of the *time fraction*, leading to a `strlen()` performed on a pointer to a heap buffer area that is not purposely NULL terminated.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/curl@7.61.1-34.el8_10.11?arch=x86_64&distro=rocky-8.10&package-id=1c05d3793ae7c8dc&upstream=curl-7.61.1-34.el8_10.11.src.rpm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:bc67a910-aac1-42ac-ab2c-2fa51e7b3c69",
+      "id": "CVE-2024-7264",
+      "source": {
+        "name": "redhat-distro-redhat-8",
+        "url": "https://access.redhat.com/security/cve/CVE-2024-7264"
+      },
+      "references": [
+        {
+          "id": "CVE-2024-7264",
+          "source": {
+            "name": "redhat-distro-redhat-8",
+            "url": "https://access.redhat.com/security/cve/CVE-2024-7264"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 5.3,
+          "severity": "low",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:L/I:N/A:H"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00882,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in libcurl, where libcurl's ASN1 parser code has the `GTime2str()` function, used for parsing an ASN.1 Generalized Time field. If a syntactically incorrect field is given, the parser can use -1 for the length of the *time fraction*, leading to a `strlen()` performed on a pointer to a heap buffer area that is not purposely NULL terminated.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/libcurl-minimal@7.61.1-34.el8_10.11?arch=x86_64&distro=rocky-8.10&package-id=134156cea513795e&upstream=curl-7.61.1-34.el8_10.11.src.rpm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:7a5734c1-5b31-4c4e-a6e9-28398e41899f",
       "id": "CVE-2024-2236",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -61189,7 +61267,7 @@
             "name": "FIRST",
             "url": "https://www.first.org/epss/"
           },
-          "score": 0.00684,
+          "score": 0.00666,
           "method": "other"
         }
       ],
@@ -61201,163 +61279,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:38705ed3-c509-4e01-9634-4e575856889c",
-      "id": "CVE-2024-7264",
-      "source": {
-        "name": "redhat-distro-redhat-8",
-        "url": "https://access.redhat.com/security/cve/CVE-2024-7264"
-      },
-      "references": [
-        {
-          "id": "CVE-2024-7264",
-          "source": {
-            "name": "redhat-distro-redhat-8",
-            "url": "https://access.redhat.com/security/cve/CVE-2024-7264"
-          }
-        }
-      ],
-      "ratings": [
-        {
-          "score": 5.3,
-          "severity": "low",
-          "method": "CVSSv31",
-          "vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:L/I:N/A:H"
-        },
-        {
-          "source": {
-            "name": "FIRST",
-            "url": "https://www.first.org/epss/"
-          },
-          "score": 0.00882,
-          "method": "other"
-        }
-      ],
-      "description": "A flaw was found in libcurl, where libcurl's ASN1 parser code has the `GTime2str()` function, used for parsing an ASN.1 Generalized Time field. If a syntactically incorrect field is given, the parser can use -1 for the length of the *time fraction*, leading to a `strlen()` performed on a pointer to a heap buffer area that is not purposely NULL terminated.",
-      "affects": [
-        {
-          "ref": "pkg:rpm/rocky/curl@7.61.1-34.el8_10.11?arch=x86_64&distro=rocky-8.10&package-id=1c05d3793ae7c8dc&upstream=curl-7.61.1-34.el8_10.11.src.rpm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "urn:uuid:916414b2-7d98-4dbf-b59d-b46dfb81afc4",
-      "id": "CVE-2024-7264",
-      "source": {
-        "name": "redhat-distro-redhat-8",
-        "url": "https://access.redhat.com/security/cve/CVE-2024-7264"
-      },
-      "references": [
-        {
-          "id": "CVE-2024-7264",
-          "source": {
-            "name": "redhat-distro-redhat-8",
-            "url": "https://access.redhat.com/security/cve/CVE-2024-7264"
-          }
-        }
-      ],
-      "ratings": [
-        {
-          "score": 5.3,
-          "severity": "low",
-          "method": "CVSSv31",
-          "vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:L/I:N/A:H"
-        },
-        {
-          "source": {
-            "name": "FIRST",
-            "url": "https://www.first.org/epss/"
-          },
-          "score": 0.00882,
-          "method": "other"
-        }
-      ],
-      "description": "A flaw was found in libcurl, where libcurl's ASN1 parser code has the `GTime2str()` function, used for parsing an ASN.1 Generalized Time field. If a syntactically incorrect field is given, the parser can use -1 for the length of the *time fraction*, leading to a `strlen()` performed on a pointer to a heap buffer area that is not purposely NULL terminated.",
-      "affects": [
-        {
-          "ref": "pkg:rpm/rocky/libcurl-minimal@7.61.1-34.el8_10.11?arch=x86_64&distro=rocky-8.10&package-id=134156cea513795e&upstream=curl-7.61.1-34.el8_10.11.src.rpm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "urn:uuid:118069f2-eda6-4a1d-a137-02507e330246",
-      "id": "CVE-2023-0464",
-      "source": {
-        "name": "redhat-distro-redhat-8",
-        "url": "https://access.redhat.com/security/cve/CVE-2023-0464"
-      },
-      "references": [
-        {
-          "id": "CVE-2023-0464",
-          "source": {
-            "name": "redhat-distro-redhat-8",
-            "url": "https://access.redhat.com/security/cve/CVE-2023-0464"
-          }
-        }
-      ],
-      "ratings": [
-        {
-          "score": 5.9,
-          "severity": "low",
-          "method": "CVSSv31",
-          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H"
-        },
-        {
-          "source": {
-            "name": "FIRST",
-            "url": "https://www.first.org/epss/"
-          },
-          "score": 0.00801,
-          "method": "other"
-        }
-      ],
-      "description": "A security vulnerability has been identified in all supported OpenSSL versions related to verifying X.509 certificate chains that include policy constraints. This flaw allows attackers to exploit this vulnerability by creating a malicious certificate chain that triggers exponential use of computational resources, leading to a denial of service (DoS) attack on affected systems. Policy processing is disabled by default but can be enabled by passing the -policy' argument to the command line utilities or calling the X509_VERIFY_PARAM_set1_policies()' function.",
-      "affects": [
-        {
-          "ref": "pkg:rpm/rocky/openssl@1.1.1k-15.el8_10?arch=x86_64&distro=rocky-8.10&epoch=1&package-id=317eab9de5210360&upstream=openssl-1.1.1k-15.el8_10.src.rpm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "urn:uuid:c162f94e-81ae-4214-b0a7-7d317c2eb5c9",
-      "id": "CVE-2023-0464",
-      "source": {
-        "name": "redhat-distro-redhat-8",
-        "url": "https://access.redhat.com/security/cve/CVE-2023-0464"
-      },
-      "references": [
-        {
-          "id": "CVE-2023-0464",
-          "source": {
-            "name": "redhat-distro-redhat-8",
-            "url": "https://access.redhat.com/security/cve/CVE-2023-0464"
-          }
-        }
-      ],
-      "ratings": [
-        {
-          "score": 5.9,
-          "severity": "low",
-          "method": "CVSSv31",
-          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H"
-        },
-        {
-          "source": {
-            "name": "FIRST",
-            "url": "https://www.first.org/epss/"
-          },
-          "score": 0.00801,
-          "method": "other"
-        }
-      ],
-      "description": "A security vulnerability has been identified in all supported OpenSSL versions related to verifying X.509 certificate chains that include policy constraints. This flaw allows attackers to exploit this vulnerability by creating a malicious certificate chain that triggers exponential use of computational resources, leading to a denial of service (DoS) attack on affected systems. Policy processing is disabled by default but can be enabled by passing the -policy' argument to the command line utilities or calling the X509_VERIFY_PARAM_set1_policies()' function.",
-      "affects": [
-        {
-          "ref": "pkg:rpm/rocky/openssl-libs@1.1.1k-15.el8_10?arch=x86_64&distro=rocky-8.10&epoch=1&package-id=3859f7a75ea97aa1&upstream=openssl-1.1.1k-15.el8_10.src.rpm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "urn:uuid:ef68cf1f-a849-4d4b-bd18-087f318de3bc",
+      "bom-ref": "urn:uuid:71a43e3f-e9f6-467c-a281-7f89cb5a63c7",
       "id": "CVE-2018-20839",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -61396,7 +61318,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:7e218545-54e0-49ec-b5ec-14c989168746",
+      "bom-ref": "urn:uuid:12939e0d-026a-4947-b281-ddc1899dbc45",
       "id": "CVE-2018-20839",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -61435,7 +61357,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:12eb1158-5cac-4da4-acab-11c91cd34592",
+      "bom-ref": "urn:uuid:e8d75e83-033a-4eec-a13d-8da458059989",
       "id": "CVE-2018-20839",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -61474,7 +61396,85 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:4fc1517a-4ea2-4fab-90eb-7a0b6ad1cfcd",
+      "bom-ref": "urn:uuid:db63c67b-34a1-4245-8461-c149c362d903",
+      "id": "CVE-2024-41996",
+      "source": {
+        "name": "redhat-distro-redhat-8",
+        "url": "https://access.redhat.com/security/cve/CVE-2024-41996"
+      },
+      "references": [
+        {
+          "id": "CVE-2024-41996",
+          "source": {
+            "name": "redhat-distro-redhat-8",
+            "url": "https://access.redhat.com/security/cve/CVE-2024-41996"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 5.9,
+          "severity": "low",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00628,
+          "method": "other"
+        }
+      ],
+      "description": "A vulnerability was found in the Diffie-Hellman Ephemeral (DHE) Key Agreement Protocol, where a malicious client can exploit the server's public key validation process. By forcing the server to use DHE and validating the order of public keys, the client can trigger expensive server-side modular exponentiation calculations. This issue results in asymmetric resource consumption, potentially leading to a denial of service (DoS) attack by overwhelming the server with computationally intensive operations.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/openssl@1.1.1k-15.el8_10?arch=x86_64&distro=rocky-8.10&epoch=1&package-id=317eab9de5210360&upstream=openssl-1.1.1k-15.el8_10.src.rpm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:1903e35d-6574-4da9-b3f2-c9a926c4dfa6",
+      "id": "CVE-2024-41996",
+      "source": {
+        "name": "redhat-distro-redhat-8",
+        "url": "https://access.redhat.com/security/cve/CVE-2024-41996"
+      },
+      "references": [
+        {
+          "id": "CVE-2024-41996",
+          "source": {
+            "name": "redhat-distro-redhat-8",
+            "url": "https://access.redhat.com/security/cve/CVE-2024-41996"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 5.9,
+          "severity": "low",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00628,
+          "method": "other"
+        }
+      ],
+      "description": "A vulnerability was found in the Diffie-Hellman Ephemeral (DHE) Key Agreement Protocol, where a malicious client can exploit the server's public key validation process. By forcing the server to use DHE and validating the order of public keys, the client can trigger expensive server-side modular exponentiation calculations. This issue results in asymmetric resource consumption, potentially leading to a denial of service (DoS) attack by overwhelming the server with computationally intensive operations.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/openssl-libs@1.1.1k-15.el8_10?arch=x86_64&distro=rocky-8.10&epoch=1&package-id=3859f7a75ea97aa1&upstream=openssl-1.1.1k-15.el8_10.src.rpm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:45465e5c-ca68-4662-a617-a1663f65d8c2",
       "id": "CVE-2018-1000879",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -61513,7 +61513,85 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:9c9959ca-fce9-4a45-96c2-a47a2506b721",
+      "bom-ref": "urn:uuid:26c9531b-45fc-4391-826d-cc3a0c6bd02d",
+      "id": "CVE-2023-0464",
+      "source": {
+        "name": "redhat-distro-redhat-8",
+        "url": "https://access.redhat.com/security/cve/CVE-2023-0464"
+      },
+      "references": [
+        {
+          "id": "CVE-2023-0464",
+          "source": {
+            "name": "redhat-distro-redhat-8",
+            "url": "https://access.redhat.com/security/cve/CVE-2023-0464"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 5.9,
+          "severity": "low",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00527,
+          "method": "other"
+        }
+      ],
+      "description": "A security vulnerability has been identified in all supported OpenSSL versions related to verifying X.509 certificate chains that include policy constraints. This flaw allows attackers to exploit this vulnerability by creating a malicious certificate chain that triggers exponential use of computational resources, leading to a denial of service (DoS) attack on affected systems. Policy processing is disabled by default but can be enabled by passing the -policy' argument to the command line utilities or calling the X509_VERIFY_PARAM_set1_policies()' function.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/openssl@1.1.1k-15.el8_10?arch=x86_64&distro=rocky-8.10&epoch=1&package-id=317eab9de5210360&upstream=openssl-1.1.1k-15.el8_10.src.rpm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:87ccfe96-53fa-405f-8469-12791c299c88",
+      "id": "CVE-2023-0464",
+      "source": {
+        "name": "redhat-distro-redhat-8",
+        "url": "https://access.redhat.com/security/cve/CVE-2023-0464"
+      },
+      "references": [
+        {
+          "id": "CVE-2023-0464",
+          "source": {
+            "name": "redhat-distro-redhat-8",
+            "url": "https://access.redhat.com/security/cve/CVE-2023-0464"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 5.9,
+          "severity": "low",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00527,
+          "method": "other"
+        }
+      ],
+      "description": "A security vulnerability has been identified in all supported OpenSSL versions related to verifying X.509 certificate chains that include policy constraints. This flaw allows attackers to exploit this vulnerability by creating a malicious certificate chain that triggers exponential use of computational resources, leading to a denial of service (DoS) attack on affected systems. Policy processing is disabled by default but can be enabled by passing the -policy' argument to the command line utilities or calling the X509_VERIFY_PARAM_set1_policies()' function.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/openssl-libs@1.1.1k-15.el8_10?arch=x86_64&distro=rocky-8.10&epoch=1&package-id=3859f7a75ea97aa1&upstream=openssl-1.1.1k-15.el8_10.src.rpm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:12ec475a-f78c-4d97-ad83-6408055b3094",
       "id": "CVE-2023-0465",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -61552,7 +61630,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:70b1bd09-45d9-48e5-92b8-b1fbadffcfd7",
+      "bom-ref": "urn:uuid:0b437233-44ce-4996-bc50-bb5a74ee2794",
       "id": "CVE-2023-0465",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -61591,7 +61669,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:55b7a8de-c7f2-4a83-a320-30a390aedb92",
+      "bom-ref": "urn:uuid:1c36d67c-d678-4010-bd8e-e491bdd20ca8",
       "id": "CVE-2018-1000880",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -61630,85 +61708,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:ed24bc66-cd9a-409f-99c8-73e5474fe937",
-      "id": "CVE-2024-41996",
-      "source": {
-        "name": "redhat-distro-redhat-8",
-        "url": "https://access.redhat.com/security/cve/CVE-2024-41996"
-      },
-      "references": [
-        {
-          "id": "CVE-2024-41996",
-          "source": {
-            "name": "redhat-distro-redhat-8",
-            "url": "https://access.redhat.com/security/cve/CVE-2024-41996"
-          }
-        }
-      ],
-      "ratings": [
-        {
-          "score": 5.9,
-          "severity": "low",
-          "method": "CVSSv31",
-          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H"
-        },
-        {
-          "source": {
-            "name": "FIRST",
-            "url": "https://www.first.org/epss/"
-          },
-          "score": 0.00438,
-          "method": "other"
-        }
-      ],
-      "description": "A vulnerability was found in the Diffie-Hellman Ephemeral (DHE) Key Agreement Protocol, where a malicious client can exploit the server's public key validation process. By forcing the server to use DHE and validating the order of public keys, the client can trigger expensive server-side modular exponentiation calculations. This issue results in asymmetric resource consumption, potentially leading to a denial of service (DoS) attack by overwhelming the server with computationally intensive operations.",
-      "affects": [
-        {
-          "ref": "pkg:rpm/rocky/openssl@1.1.1k-15.el8_10?arch=x86_64&distro=rocky-8.10&epoch=1&package-id=317eab9de5210360&upstream=openssl-1.1.1k-15.el8_10.src.rpm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "urn:uuid:aa3fe249-7a4d-4609-9cee-1a4a5923e6fe",
-      "id": "CVE-2024-41996",
-      "source": {
-        "name": "redhat-distro-redhat-8",
-        "url": "https://access.redhat.com/security/cve/CVE-2024-41996"
-      },
-      "references": [
-        {
-          "id": "CVE-2024-41996",
-          "source": {
-            "name": "redhat-distro-redhat-8",
-            "url": "https://access.redhat.com/security/cve/CVE-2024-41996"
-          }
-        }
-      ],
-      "ratings": [
-        {
-          "score": 5.9,
-          "severity": "low",
-          "method": "CVSSv31",
-          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H"
-        },
-        {
-          "source": {
-            "name": "FIRST",
-            "url": "https://www.first.org/epss/"
-          },
-          "score": 0.00438,
-          "method": "other"
-        }
-      ],
-      "description": "A vulnerability was found in the Diffie-Hellman Ephemeral (DHE) Key Agreement Protocol, where a malicious client can exploit the server's public key validation process. By forcing the server to use DHE and validating the order of public keys, the client can trigger expensive server-side modular exponentiation calculations. This issue results in asymmetric resource consumption, potentially leading to a denial of service (DoS) attack by overwhelming the server with computationally intensive operations.",
-      "affects": [
-        {
-          "ref": "pkg:rpm/rocky/openssl-libs@1.1.1k-15.el8_10?arch=x86_64&distro=rocky-8.10&epoch=1&package-id=3859f7a75ea97aa1&upstream=openssl-1.1.1k-15.el8_10.src.rpm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "urn:uuid:ed07fe8d-8862-4f77-8459-7add88a34325",
+      "bom-ref": "urn:uuid:d0c62856-6ad1-44ee-b971-244d3d8bdb2d",
       "id": "CVE-2021-4209",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -61747,7 +61747,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:9cf12d17-e18f-459d-8721-5fc09e96597d",
+      "bom-ref": "urn:uuid:778e70d9-b19d-484d-a606-a798e1189e42",
       "id": "CVE-2022-4899",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -61786,7 +61786,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:ed6e2260-0815-48b9-bc3e-8f9705b9276b",
+      "bom-ref": "urn:uuid:bbac6310-6d66-474f-989b-803392326368",
       "id": "CVE-2024-4741",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -61825,7 +61825,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:42e01ecb-35f5-4172-beab-6f7e90cb31f2",
+      "bom-ref": "urn:uuid:d40be420-8134-43f9-8732-739999678a93",
       "id": "CVE-2024-4741",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -61864,7 +61864,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:2f53dcb0-705f-4581-9076-2d3d0cb1512b",
+      "bom-ref": "urn:uuid:a4cf9889-4581-4e4e-80b8-9b0882b725af",
       "id": "CVE-2021-39537",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -61903,7 +61903,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:e9125b1d-34de-41e4-a0cd-502c3420b802",
+      "bom-ref": "urn:uuid:8513f5ae-977d-4e1e-8441-e13236c028f0",
       "id": "CVE-2021-39537",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -61942,7 +61942,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:211db2e0-deb7-4828-a8b0-955e0286e561",
+      "bom-ref": "urn:uuid:9c1558cd-8efb-4c2e-a952-b18e0b1d71a5",
       "id": "CVE-2019-12904",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -61981,7 +61981,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:d48d3f12-1d1c-4196-882b-6f4c04a2ca05",
+      "bom-ref": "urn:uuid:773add2b-93f5-46dd-a9be-d7272e4acfb9",
       "id": "CVE-2025-69420",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -62020,7 +62020,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:0bf156a6-c152-4dea-accd-1dd7ba5254ca",
+      "bom-ref": "urn:uuid:1729162b-a765-4fc1-933d-469fe5e30f81",
       "id": "CVE-2025-69420",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -62059,7 +62059,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:e064325b-b639-4f70-8b04-f132bf08b291",
+      "bom-ref": "urn:uuid:921b100a-cc97-4c60-ad47-498fa7c24c84",
       "id": "CVE-2025-3360",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -62098,7 +62098,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:eb966016-b737-4244-9bb1-3c2e1aa62854",
+      "bom-ref": "urn:uuid:34605a5b-6c6d-46c7-ac4e-f4dd816fd288",
       "id": "CVE-2026-4426",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -62137,7 +62137,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:54a8dc0a-9f60-4081-b212-d1087148d2ad",
+      "bom-ref": "urn:uuid:c2e65479-f241-4207-814c-20d4e06a920b",
       "id": "CVE-2026-42010",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -62176,7 +62176,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:67da9a11-eb20-479d-b451-c8158e489515",
+      "bom-ref": "urn:uuid:66d5ead4-575d-4381-91cb-2cc836bc883f",
       "id": "CVE-2018-19211",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -62215,7 +62215,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:24bbff96-d3a7-4b86-bfa3-2b974083cd38",
+      "bom-ref": "urn:uuid:bc259c09-af6b-4d0d-bfc0-a6eaf4b60f31",
       "id": "CVE-2018-19211",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -62254,7 +62254,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:3dc24b93-59b6-4b3e-933e-514f318aba73",
+      "bom-ref": "urn:uuid:17306511-58dc-4ebb-9462-509a09445066",
       "id": "CVE-2024-0727",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -62281,7 +62281,7 @@
             "name": "FIRST",
             "url": "https://www.first.org/epss/"
           },
-          "score": 0.00236,
+          "score": 0.00231,
           "method": "other"
         }
       ],
@@ -62293,7 +62293,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:9d2b511d-5ff9-4ae4-99f8-7efde8c7cb5a",
+      "bom-ref": "urn:uuid:ff9fd1bf-9aa6-48f6-80ac-22a4a638ffa5",
       "id": "CVE-2024-0727",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -62320,7 +62320,7 @@
             "name": "FIRST",
             "url": "https://www.first.org/epss/"
           },
-          "score": 0.00236,
+          "score": 0.00231,
           "method": "other"
         }
       ],
@@ -62332,7 +62332,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:e099cc33-bd33-41bb-9205-1ec6938e6b44",
+      "bom-ref": "urn:uuid:7aeb3ee1-d3af-47cd-9fee-37b1c2f4e2c9",
       "id": "CVE-2019-19244",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -62371,7 +62371,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:c8c12008-4073-46ca-8e4a-0eaf2d2d0d22",
+      "bom-ref": "urn:uuid:7472728b-3bfc-45e6-a57e-2aeea9e34f3b",
       "id": "CVE-2018-20657",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -62410,7 +62410,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:d5706293-bc2f-4e2e-a38e-bd7e10ead05f",
+      "bom-ref": "urn:uuid:7ec8d5ce-b35a-46b2-bc36-79b05ae507bd",
       "id": "CVE-2018-20657",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -62449,7 +62449,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:a5b626bc-3c21-47fc-9ad2-c3d62b55f033",
+      "bom-ref": "urn:uuid:67827f4e-ea2b-4f6a-976b-d4604c9a64b8",
       "id": "CVE-2023-32636",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -62488,7 +62488,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:24cb61f5-a2b1-4fc7-8145-4e51745838a3",
+      "bom-ref": "urn:uuid:4da13b17-5700-48a1-8dfb-48a90ce7260d",
       "id": "CVE-2026-40356",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -62527,7 +62527,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:a42900ba-4ad8-42db-b2fa-8a380024b410",
+      "bom-ref": "urn:uuid:f4a595eb-8cb9-4848-9e25-762ee1e26ff7",
       "id": "CVE-2025-5278",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -62566,7 +62566,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:89311995-7e01-4dd2-bf8f-4abc1c5d74ad",
+      "bom-ref": "urn:uuid:810ec852-f98d-4350-8a32-e09a98ab1389",
       "id": "CVE-2019-14250",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -62593,7 +62593,7 @@
             "name": "FIRST",
             "url": "https://www.first.org/epss/"
           },
-          "score": 0.0019,
+          "score": 0.00186,
           "method": "other"
         }
       ],
@@ -62605,7 +62605,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:294571ed-960f-42b6-86c9-e486636bccee",
+      "bom-ref": "urn:uuid:dd9eb381-3acb-437b-a555-c430e871cd62",
       "id": "CVE-2019-14250",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -62632,7 +62632,7 @@
             "name": "FIRST",
             "url": "https://www.first.org/epss/"
           },
-          "score": 0.0019,
+          "score": 0.00186,
           "method": "other"
         }
       ],
@@ -62644,124 +62644,46 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:ae96b3fa-bb68-4090-bb3b-65a4565e6bec",
-      "id": "CVE-2025-4598",
+      "bom-ref": "urn:uuid:187b7f89-ae93-4b0a-8999-aae9434a5242",
+      "id": "CVE-2026-33846",
       "source": {
         "name": "redhat-distro-redhat-8",
-        "url": "https://access.redhat.com/security/cve/CVE-2025-4598"
+        "url": "https://access.redhat.com/security/cve/CVE-2026-33846"
       },
       "references": [
         {
-          "id": "CVE-2025-4598",
+          "id": "CVE-2026-33846",
           "source": {
             "name": "redhat-distro-redhat-8",
-            "url": "https://access.redhat.com/security/cve/CVE-2025-4598"
+            "url": "https://access.redhat.com/security/cve/CVE-2026-33846"
           }
         }
       ],
       "ratings": [
         {
-          "score": 4.7,
-          "severity": "medium",
+          "score": 7.5,
+          "severity": "high",
           "method": "CVSSv31",
-          "vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:N/A:N"
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
         },
         {
           "source": {
             "name": "FIRST",
             "url": "https://www.first.org/epss/"
           },
-          "score": 0.00116,
+          "score": 0.00075,
           "method": "other"
         }
       ],
-      "description": "A vulnerability was found in systemd-coredump. This flaw allows an attacker to force a SUID process to crash and replace it with a non-SUID binary to access the original's privileged process coredump, allowing the attacker to read sensitive data, such as /etc/shadow content, loaded by the original process.\nA SUID binary or process has a special type of permission, which allows the process to run with the file owner's permissions, regardless of the user executing the binary. This allows the process to access more restricted data than unprivileged users or processes would be able to. An attacker can leverage this flaw by forcing a SUID process to crash and force the Linux kernel to recycle the process PID before systemd-coredump can analyze the /proc/pid/auxv file. If the attacker wins the race condition, they gain access to the original's SUID process coredump file. They can read sensitive content loaded into memory by the original binary, affecting data confidentiality.",
+      "description": "A heap buffer overflow vulnerability exists in the DTLS handshake fragment reassembly logic of GnuTLS. The issue arises in merge_handshake_packet() where incoming handshake fragments are matched and merged based solely on handshake type, without validating that the message_length field remains consistent across all fragments of the same logical message. An attacker can exploit this by sending crafted DTLS fragments with conflicting message_length values, causing the implementation to allocate a buffer based on a smaller initial fragment and subsequently write beyond its bounds using larger, inconsistent fragments. Because the merge operation does not enforce proper bounds checking against the allocated buffer size, this results in an out-of-bounds write on the heap. The vulnerability is remotely exploitable without authentication via the DTLS handshake path and can lead to application crashes or potential memory corruption.",
       "affects": [
         {
-          "ref": "pkg:rpm/rocky/systemd@239-82.el8_10.15?arch=x86_64&distro=rocky-8.10&package-id=7b0839657e121fd2&upstream=systemd-239-82.el8_10.15.src.rpm"
+          "ref": "pkg:rpm/rocky/gnutls@3.6.16-8.el8_10.5?arch=x86_64&distro=rocky-8.10&package-id=a1a40096d7e88303&upstream=gnutls-3.6.16-8.el8_10.5.src.rpm"
         }
       ]
     },
     {
-      "bom-ref": "urn:uuid:2121ca5a-2602-419e-958e-adf3240740cd",
-      "id": "CVE-2025-4598",
-      "source": {
-        "name": "redhat-distro-redhat-8",
-        "url": "https://access.redhat.com/security/cve/CVE-2025-4598"
-      },
-      "references": [
-        {
-          "id": "CVE-2025-4598",
-          "source": {
-            "name": "redhat-distro-redhat-8",
-            "url": "https://access.redhat.com/security/cve/CVE-2025-4598"
-          }
-        }
-      ],
-      "ratings": [
-        {
-          "score": 4.7,
-          "severity": "medium",
-          "method": "CVSSv31",
-          "vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:N/A:N"
-        },
-        {
-          "source": {
-            "name": "FIRST",
-            "url": "https://www.first.org/epss/"
-          },
-          "score": 0.00116,
-          "method": "other"
-        }
-      ],
-      "description": "A vulnerability was found in systemd-coredump. This flaw allows an attacker to force a SUID process to crash and replace it with a non-SUID binary to access the original's privileged process coredump, allowing the attacker to read sensitive data, such as /etc/shadow content, loaded by the original process.\nA SUID binary or process has a special type of permission, which allows the process to run with the file owner's permissions, regardless of the user executing the binary. This allows the process to access more restricted data than unprivileged users or processes would be able to. An attacker can leverage this flaw by forcing a SUID process to crash and force the Linux kernel to recycle the process PID before systemd-coredump can analyze the /proc/pid/auxv file. If the attacker wins the race condition, they gain access to the original's SUID process coredump file. They can read sensitive content loaded into memory by the original binary, affecting data confidentiality.",
-      "affects": [
-        {
-          "ref": "pkg:rpm/rocky/systemd-libs@239-82.el8_10.15?arch=x86_64&distro=rocky-8.10&package-id=c013d5d385762096&upstream=systemd-239-82.el8_10.15.src.rpm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "urn:uuid:a4f35ba2-42bb-4ddf-b905-6f7e54f7371f",
-      "id": "CVE-2025-4598",
-      "source": {
-        "name": "redhat-distro-redhat-8",
-        "url": "https://access.redhat.com/security/cve/CVE-2025-4598"
-      },
-      "references": [
-        {
-          "id": "CVE-2025-4598",
-          "source": {
-            "name": "redhat-distro-redhat-8",
-            "url": "https://access.redhat.com/security/cve/CVE-2025-4598"
-          }
-        }
-      ],
-      "ratings": [
-        {
-          "score": 4.7,
-          "severity": "medium",
-          "method": "CVSSv31",
-          "vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:N/A:N"
-        },
-        {
-          "source": {
-            "name": "FIRST",
-            "url": "https://www.first.org/epss/"
-          },
-          "score": 0.00116,
-          "method": "other"
-        }
-      ],
-      "description": "A vulnerability was found in systemd-coredump. This flaw allows an attacker to force a SUID process to crash and replace it with a non-SUID binary to access the original's privileged process coredump, allowing the attacker to read sensitive data, such as /etc/shadow content, loaded by the original process.\nA SUID binary or process has a special type of permission, which allows the process to run with the file owner's permissions, regardless of the user executing the binary. This allows the process to access more restricted data than unprivileged users or processes would be able to. An attacker can leverage this flaw by forcing a SUID process to crash and force the Linux kernel to recycle the process PID before systemd-coredump can analyze the /proc/pid/auxv file. If the attacker wins the race condition, they gain access to the original's SUID process coredump file. They can read sensitive content loaded into memory by the original binary, affecting data confidentiality.",
-      "affects": [
-        {
-          "ref": "pkg:rpm/rocky/systemd-pam@239-82.el8_10.15?arch=x86_64&distro=rocky-8.10&package-id=294cf8c6eeb55c32&upstream=systemd-239-82.el8_10.15.src.rpm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "urn:uuid:2f3e15f1-3480-4a13-95b3-93693f61789a",
+      "bom-ref": "urn:uuid:a301bed7-8108-40dd-a352-86d3a65aea89",
       "id": "CVE-2023-29499",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -62800,7 +62722,46 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:52270cdc-eaac-4749-a317-96a5a46fe125",
+      "bom-ref": "urn:uuid:289cd737-fb00-49b8-8e16-0e4c0e053b93",
+      "id": "CVE-2025-14512",
+      "source": {
+        "name": "redhat-distro-redhat-8",
+        "url": "https://access.redhat.com/security/cve/CVE-2025-14512"
+      },
+      "references": [
+        {
+          "id": "CVE-2025-14512",
+          "source": {
+            "name": "redhat-distro-redhat-8",
+            "url": "https://access.redhat.com/security/cve/CVE-2025-14512"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 6.5,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00094,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in glib. This vulnerability allows a heap buffer overflow and denial-of-service (DoS) via an integer overflow in GLib's GIO (GLib Input/Output) escape_byte_string() function when processing malicious file or remote filesystem attribute values.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/glib2@2.56.4-168.el8_10?arch=x86_64&distro=rocky-8.10&package-id=b4049772963f47f0&upstream=glib2-2.56.4-168.el8_10.src.rpm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:41cce79d-afdb-49db-a62e-674d601a32fc",
       "id": "CVE-2026-40355",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -62839,7 +62800,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:eddd2a9f-70eb-4136-9363-f77b550fb6df",
+      "bom-ref": "urn:uuid:7e405ea6-2f6f-4d62-92a6-1ab824051b60",
       "id": "CVE-2026-22796",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -62878,7 +62839,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:40101552-147d-474c-97e0-5bb7fee37e10",
+      "bom-ref": "urn:uuid:28b8d1ab-4f85-4e40-8efb-1cd80780fb8c",
       "id": "CVE-2026-22796",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -62917,7 +62878,163 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:d1745138-5a20-4aa1-be8a-72b726882746",
+      "bom-ref": "urn:uuid:8493b6b6-c93f-4a79-937f-925c64eda802",
+      "id": "CVE-2025-4598",
+      "source": {
+        "name": "redhat-distro-redhat-8",
+        "url": "https://access.redhat.com/security/cve/CVE-2025-4598"
+      },
+      "references": [
+        {
+          "id": "CVE-2025-4598",
+          "source": {
+            "name": "redhat-distro-redhat-8",
+            "url": "https://access.redhat.com/security/cve/CVE-2025-4598"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 4.7,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:N/A:N"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00107,
+          "method": "other"
+        }
+      ],
+      "description": "A vulnerability was found in systemd-coredump. This flaw allows an attacker to force a SUID process to crash and replace it with a non-SUID binary to access the original's privileged process coredump, allowing the attacker to read sensitive data, such as /etc/shadow content, loaded by the original process.\nA SUID binary or process has a special type of permission, which allows the process to run with the file owner's permissions, regardless of the user executing the binary. This allows the process to access more restricted data than unprivileged users or processes would be able to. An attacker can leverage this flaw by forcing a SUID process to crash and force the Linux kernel to recycle the process PID before systemd-coredump can analyze the /proc/pid/auxv file. If the attacker wins the race condition, they gain access to the original's SUID process coredump file. They can read sensitive content loaded into memory by the original binary, affecting data confidentiality.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/systemd@239-82.el8_10.15?arch=x86_64&distro=rocky-8.10&package-id=7b0839657e121fd2&upstream=systemd-239-82.el8_10.15.src.rpm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:64132bbd-70f9-40c0-9dc5-4ec315c94154",
+      "id": "CVE-2025-4598",
+      "source": {
+        "name": "redhat-distro-redhat-8",
+        "url": "https://access.redhat.com/security/cve/CVE-2025-4598"
+      },
+      "references": [
+        {
+          "id": "CVE-2025-4598",
+          "source": {
+            "name": "redhat-distro-redhat-8",
+            "url": "https://access.redhat.com/security/cve/CVE-2025-4598"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 4.7,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:N/A:N"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00107,
+          "method": "other"
+        }
+      ],
+      "description": "A vulnerability was found in systemd-coredump. This flaw allows an attacker to force a SUID process to crash and replace it with a non-SUID binary to access the original's privileged process coredump, allowing the attacker to read sensitive data, such as /etc/shadow content, loaded by the original process.\nA SUID binary or process has a special type of permission, which allows the process to run with the file owner's permissions, regardless of the user executing the binary. This allows the process to access more restricted data than unprivileged users or processes would be able to. An attacker can leverage this flaw by forcing a SUID process to crash and force the Linux kernel to recycle the process PID before systemd-coredump can analyze the /proc/pid/auxv file. If the attacker wins the race condition, they gain access to the original's SUID process coredump file. They can read sensitive content loaded into memory by the original binary, affecting data confidentiality.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/systemd-libs@239-82.el8_10.15?arch=x86_64&distro=rocky-8.10&package-id=c013d5d385762096&upstream=systemd-239-82.el8_10.15.src.rpm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:319f19f8-ec61-45eb-86c8-01a55c31c897",
+      "id": "CVE-2025-4598",
+      "source": {
+        "name": "redhat-distro-redhat-8",
+        "url": "https://access.redhat.com/security/cve/CVE-2025-4598"
+      },
+      "references": [
+        {
+          "id": "CVE-2025-4598",
+          "source": {
+            "name": "redhat-distro-redhat-8",
+            "url": "https://access.redhat.com/security/cve/CVE-2025-4598"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 4.7,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:N/A:N"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00107,
+          "method": "other"
+        }
+      ],
+      "description": "A vulnerability was found in systemd-coredump. This flaw allows an attacker to force a SUID process to crash and replace it with a non-SUID binary to access the original's privileged process coredump, allowing the attacker to read sensitive data, such as /etc/shadow content, loaded by the original process.\nA SUID binary or process has a special type of permission, which allows the process to run with the file owner's permissions, regardless of the user executing the binary. This allows the process to access more restricted data than unprivileged users or processes would be able to. An attacker can leverage this flaw by forcing a SUID process to crash and force the Linux kernel to recycle the process PID before systemd-coredump can analyze the /proc/pid/auxv file. If the attacker wins the race condition, they gain access to the original's SUID process coredump file. They can read sensitive content loaded into memory by the original binary, affecting data confidentiality.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/systemd-pam@239-82.el8_10.15?arch=x86_64&distro=rocky-8.10&package-id=294cf8c6eeb55c32&upstream=systemd-239-82.el8_10.15.src.rpm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:760bd96b-e159-4b7a-915d-81c2e0bbac89",
+      "id": "CVE-2025-14087",
+      "source": {
+        "name": "redhat-distro-redhat-8",
+        "url": "https://access.redhat.com/security/cve/CVE-2025-14087"
+      },
+      "references": [
+        {
+          "id": "CVE-2025-14087",
+          "source": {
+            "name": "redhat-distro-redhat-8",
+            "url": "https://access.redhat.com/security/cve/CVE-2025-14087"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 5.6,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00094,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in GLib (Gnome Lib). This vulnerability allows a remote attacker to cause heap corruption, leading to a denial of service or potential code execution via a buffer-underflow in the GVariant parser when processing maliciously crafted input strings.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/glib2@2.56.4-168.el8_10?arch=x86_64&distro=rocky-8.10&package-id=b4049772963f47f0&upstream=glib2-2.56.4-168.el8_10.src.rpm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:e8efbe98-d572-44ea-9716-0b2663604518",
       "id": "CVE-2026-3833",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -62956,46 +63073,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:746592ed-c246-4bce-ad79-0b5bd1be4d74",
-      "id": "CVE-2026-33846",
-      "source": {
-        "name": "redhat-distro-redhat-8",
-        "url": "https://access.redhat.com/security/cve/CVE-2026-33846"
-      },
-      "references": [
-        {
-          "id": "CVE-2026-33846",
-          "source": {
-            "name": "redhat-distro-redhat-8",
-            "url": "https://access.redhat.com/security/cve/CVE-2026-33846"
-          }
-        }
-      ],
-      "ratings": [
-        {
-          "score": 7.5,
-          "severity": "high",
-          "method": "CVSSv31",
-          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
-        },
-        {
-          "source": {
-            "name": "FIRST",
-            "url": "https://www.first.org/epss/"
-          },
-          "score": 0.00063,
-          "method": "other"
-        }
-      ],
-      "description": "A heap buffer overflow vulnerability exists in the DTLS handshake fragment reassembly logic of GnuTLS. The issue arises in merge_handshake_packet() where incoming handshake fragments are matched and merged based solely on handshake type, without validating that the message_length field remains consistent across all fragments of the same logical message. An attacker can exploit this by sending crafted DTLS fragments with conflicting message_length values, causing the implementation to allocate a buffer based on a smaller initial fragment and subsequently write beyond its bounds using larger, inconsistent fragments. Because the merge operation does not enforce proper bounds checking against the allocated buffer size, this results in an out-of-bounds write on the heap. The vulnerability is remotely exploitable without authentication via the DTLS handshake path and can lead to application crashes or potential memory corruption.",
-      "affects": [
-        {
-          "ref": "pkg:rpm/rocky/gnutls@3.6.16-8.el8_10.5?arch=x86_64&distro=rocky-8.10&package-id=a1a40096d7e88303&upstream=gnutls-3.6.16-8.el8_10.5.src.rpm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "urn:uuid:e7f0f597-ac1d-49f0-81f1-d20eea4426d7",
+      "bom-ref": "urn:uuid:321c3da7-5f38-4fb5-b0a1-e4c479201027",
       "id": "CVE-2019-8905",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -63034,7 +63112,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:112353b7-17b5-4aff-af01-5600a0c43930",
+      "bom-ref": "urn:uuid:9a67b713-b9ce-4ee8-bc2e-9ebec2e853a6",
       "id": "CVE-2018-1000654",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -63073,7 +63151,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:b5731d7f-e946-475b-a1e0-9127d0028ea6",
+      "bom-ref": "urn:uuid:2971aba5-0914-4040-92e3-55a22fe05ef0",
       "id": "CVE-2025-5915",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -63112,46 +63190,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:05c4f77e-b05b-42e4-bb5c-b8b4d94227a8",
-      "id": "CVE-2025-14512",
-      "source": {
-        "name": "redhat-distro-redhat-8",
-        "url": "https://access.redhat.com/security/cve/CVE-2025-14512"
-      },
-      "references": [
-        {
-          "id": "CVE-2025-14512",
-          "source": {
-            "name": "redhat-distro-redhat-8",
-            "url": "https://access.redhat.com/security/cve/CVE-2025-14512"
-          }
-        }
-      ],
-      "ratings": [
-        {
-          "score": 6.5,
-          "severity": "medium",
-          "method": "CVSSv31",
-          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
-        },
-        {
-          "source": {
-            "name": "FIRST",
-            "url": "https://www.first.org/epss/"
-          },
-          "score": 0.00075,
-          "method": "other"
-        }
-      ],
-      "description": "A flaw was found in glib. This vulnerability allows a heap buffer overflow and denial-of-service (DoS) via an integer overflow in GLib's GIO (GLib Input/Output) escape_byte_string() function when processing malicious file or remote filesystem attribute values.",
-      "affects": [
-        {
-          "ref": "pkg:rpm/rocky/glib2@2.56.4-168.el8_10?arch=x86_64&distro=rocky-8.10&package-id=b4049772963f47f0&upstream=glib2-2.56.4-168.el8_10.src.rpm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "urn:uuid:8386616f-0423-4c65-bef0-b62f1fc72390",
+      "bom-ref": "urn:uuid:00431060-9168-4b05-b2f9-9e9bf8994788",
       "id": "CVE-2026-4437",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -63190,7 +63229,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:8efc92e8-c09b-4be8-b023-5160c68530f6",
+      "bom-ref": "urn:uuid:74001ba5-a285-4564-b176-30b6023dfbf0",
       "id": "CVE-2026-4437",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -63229,7 +63268,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:42585433-da96-4865-b81d-0a60253137d6",
+      "bom-ref": "urn:uuid:5b37ca02-5f15-4c10-804c-10342f5d4382",
       "id": "CVE-2026-4437",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -63268,7 +63307,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:54198e07-eacc-40c3-bc4d-2d8bb0b30803",
+      "bom-ref": "urn:uuid:892b747f-7aa2-404f-b61a-8f0732bb8699",
       "id": "CVE-2026-4437",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -63307,7 +63346,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:054f3213-ea3d-447a-bdd8-a84ce3a60b64",
+      "bom-ref": "urn:uuid:68dbd203-abf6-41df-a258-de8e8b51d061",
       "id": "CVE-2026-4437",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -63346,7 +63385,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:06a54adf-3130-44e2-a92e-e1e8b7861797",
+      "bom-ref": "urn:uuid:3c2b88d7-790d-4d79-9468-c31c9ea6cea4",
       "id": "CVE-2025-5918",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -63385,7 +63424,85 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:83ce4c20-0835-490f-994d-7e6e5130053f",
+      "bom-ref": "urn:uuid:25b5f423-e596-4b04-9eb7-2bbeead003f9",
+      "id": "CVE-2025-15224",
+      "source": {
+        "name": "redhat-distro-redhat-8",
+        "url": "https://access.redhat.com/security/cve/CVE-2025-15224"
+      },
+      "references": [
+        {
+          "id": "CVE-2025-15224",
+          "source": {
+            "name": "redhat-distro-redhat-8",
+            "url": "https://access.redhat.com/security/cve/CVE-2025-15224"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 4.7,
+          "severity": "low",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:N/A:N"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00098,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in libcurl. When doing SSH-based transfers using either SCP or SFTP, and asked to do\npublic key authentication, curl would wrongly still ask and authenticate using\na locally running SSH agent.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/curl@7.61.1-34.el8_10.11?arch=x86_64&distro=rocky-8.10&package-id=1c05d3793ae7c8dc&upstream=curl-7.61.1-34.el8_10.11.src.rpm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:c1547bd7-74b0-4c70-8249-f2b2575a547d",
+      "id": "CVE-2025-15224",
+      "source": {
+        "name": "redhat-distro-redhat-8",
+        "url": "https://access.redhat.com/security/cve/CVE-2025-15224"
+      },
+      "references": [
+        {
+          "id": "CVE-2025-15224",
+          "source": {
+            "name": "redhat-distro-redhat-8",
+            "url": "https://access.redhat.com/security/cve/CVE-2025-15224"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 4.7,
+          "severity": "low",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:N/A:N"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00098,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in libcurl. When doing SSH-based transfers using either SCP or SFTP, and asked to do\npublic key authentication, curl would wrongly still ask and authenticate using\na locally running SSH agent.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/libcurl-minimal@7.61.1-34.el8_10.11?arch=x86_64&distro=rocky-8.10&package-id=134156cea513795e&upstream=curl-7.61.1-34.el8_10.11.src.rpm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:17f169e1-3ecd-4e23-b6c9-a8a73c9b66c3",
       "id": "CVE-2026-1965",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -63424,7 +63541,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:b1cdcc94-53cb-493a-a700-c7132da97fb4",
+      "bom-ref": "urn:uuid:d1bf2e52-45c8-44f2-9773-126a3c371b5e",
       "id": "CVE-2026-1965",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -63463,7 +63580,46 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:866faece-a9c7-4539-b069-a08c463beb6e",
+      "bom-ref": "urn:uuid:16394e04-3f21-44a2-80bf-1c6055aead06",
+      "id": "CVE-2025-13151",
+      "source": {
+        "name": "redhat-distro-redhat-8",
+        "url": "https://access.redhat.com/security/cve/CVE-2025-13151"
+      },
+      "references": [
+        {
+          "id": "CVE-2025-13151",
+          "source": {
+            "name": "redhat-distro-redhat-8",
+            "url": "https://access.redhat.com/security/cve/CVE-2025-13151"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 5.9,
+          "severity": "low",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.0008,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in libtasn1. A remote attacker could exploit a stack-based buffer overflow vulnerability in the `asn1_expend_octet_string` function. This occurs due to a failure in validating the size of input data. Successful exploitation can lead to a Denial of Service (DoS) condition, making the affected system or application unavailable.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/libtasn1@4.13-5.el8_10?arch=x86_64&distro=rocky-8.10&package-id=4f062b04bc3a9599&upstream=libtasn1-4.13-5.el8_10.src.rpm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:5509559f-f5ca-4011-9e2f-eb18caf18b9e",
       "id": "CVE-2025-5916",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -63502,7 +63658,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:3ff45072-e4d7-4ba6-9fc1-a7328ec2d316",
+      "bom-ref": "urn:uuid:ce4d2924-8f86-4e45-88c4-fde91ca0ee1b",
       "id": "CVE-2026-33845",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -63541,7 +63697,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:9396bdb4-3282-4e1e-a8e2-a9de866da196",
+      "bom-ref": "urn:uuid:0c1e2c2b-0334-4bfc-bdf4-dc741ee7b38b",
       "id": "CVE-2025-5917",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -63580,7 +63736,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:94d6e9f1-5bac-4105-a96b-88f8493f921f",
+      "bom-ref": "urn:uuid:e48e9ec9-f3b0-4e5e-8adf-9061d3b94c5b",
       "id": "CVE-2026-0990",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -63619,85 +63775,202 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:42ec3b1d-6b97-48da-98a4-6d9c9921885a",
-      "id": "CVE-2025-15224",
+      "bom-ref": "urn:uuid:8f5c3369-03b9-4819-a56f-bedd0fb57b15",
+      "id": "CVE-2026-4046",
       "source": {
         "name": "redhat-distro-redhat-8",
-        "url": "https://access.redhat.com/security/cve/CVE-2025-15224"
+        "url": "https://access.redhat.com/security/cve/CVE-2026-4046"
       },
       "references": [
         {
-          "id": "CVE-2025-15224",
+          "id": "CVE-2026-4046",
           "source": {
             "name": "redhat-distro-redhat-8",
-            "url": "https://access.redhat.com/security/cve/CVE-2025-15224"
+            "url": "https://access.redhat.com/security/cve/CVE-2026-4046"
           }
         }
       ],
       "ratings": [
         {
-          "score": 4.7,
-          "severity": "low",
+          "score": 5.3,
+          "severity": "medium",
           "method": "CVSSv31",
-          "vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:N/A:N"
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
         },
         {
           "source": {
             "name": "FIRST",
             "url": "https://www.first.org/epss/"
           },
-          "score": 0.00084,
+          "score": 0.00065,
           "method": "other"
         }
       ],
-      "description": "A flaw was found in libcurl. When doing SSH-based transfers using either SCP or SFTP, and asked to do\npublic key authentication, curl would wrongly still ask and authenticate using\na locally running SSH agent.",
+      "description": "A flaw was found in glibc, the GNU C Library. A remote attacker could exploit this vulnerability by providing specially crafted inputs using the IBM1390 or IBM1399 character sets to the `iconv()` function. This could lead to an assertion failure, causing the application to crash and resulting in a Denial of Service (DoS).",
       "affects": [
         {
-          "ref": "pkg:rpm/rocky/curl@7.61.1-34.el8_10.11?arch=x86_64&distro=rocky-8.10&package-id=1c05d3793ae7c8dc&upstream=curl-7.61.1-34.el8_10.11.src.rpm"
+          "ref": "pkg:rpm/rocky/glibc@2.28-251.el8_10.31?arch=x86_64&distro=rocky-8.10&package-id=d12bf8dd9497e5eb&upstream=glibc-2.28-251.el8_10.31.src.rpm"
         }
       ]
     },
     {
-      "bom-ref": "urn:uuid:f9b623d1-491e-4b80-a9d2-cca2808455dd",
-      "id": "CVE-2025-15224",
+      "bom-ref": "urn:uuid:7675c56c-a666-41e1-b42a-ecd9eb014c34",
+      "id": "CVE-2026-4046",
       "source": {
         "name": "redhat-distro-redhat-8",
-        "url": "https://access.redhat.com/security/cve/CVE-2025-15224"
+        "url": "https://access.redhat.com/security/cve/CVE-2026-4046"
       },
       "references": [
         {
-          "id": "CVE-2025-15224",
+          "id": "CVE-2026-4046",
           "source": {
             "name": "redhat-distro-redhat-8",
-            "url": "https://access.redhat.com/security/cve/CVE-2025-15224"
+            "url": "https://access.redhat.com/security/cve/CVE-2026-4046"
           }
         }
       ],
       "ratings": [
         {
-          "score": 4.7,
-          "severity": "low",
+          "score": 5.3,
+          "severity": "medium",
           "method": "CVSSv31",
-          "vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:N/A:N"
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
         },
         {
           "source": {
             "name": "FIRST",
             "url": "https://www.first.org/epss/"
           },
-          "score": 0.00084,
+          "score": 0.00065,
           "method": "other"
         }
       ],
-      "description": "A flaw was found in libcurl. When doing SSH-based transfers using either SCP or SFTP, and asked to do\npublic key authentication, curl would wrongly still ask and authenticate using\na locally running SSH agent.",
+      "description": "A flaw was found in glibc, the GNU C Library. A remote attacker could exploit this vulnerability by providing specially crafted inputs using the IBM1390 or IBM1399 character sets to the `iconv()` function. This could lead to an assertion failure, causing the application to crash and resulting in a Denial of Service (DoS).",
       "affects": [
         {
-          "ref": "pkg:rpm/rocky/libcurl-minimal@7.61.1-34.el8_10.11?arch=x86_64&distro=rocky-8.10&package-id=134156cea513795e&upstream=curl-7.61.1-34.el8_10.11.src.rpm"
+          "ref": "pkg:rpm/rocky/glibc-common@2.28-251.el8_10.31?arch=x86_64&distro=rocky-8.10&package-id=1d5e9300d0c63479&upstream=glibc-2.28-251.el8_10.31.src.rpm"
         }
       ]
     },
     {
-      "bom-ref": "urn:uuid:85d2bb27-8acd-4c33-b44c-5909c14d7099",
+      "bom-ref": "urn:uuid:26aa94db-d4b2-4135-a4e4-91a6207cd5b9",
+      "id": "CVE-2026-4046",
+      "source": {
+        "name": "redhat-distro-redhat-8",
+        "url": "https://access.redhat.com/security/cve/CVE-2026-4046"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-4046",
+          "source": {
+            "name": "redhat-distro-redhat-8",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-4046"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 5.3,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00065,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in glibc, the GNU C Library. A remote attacker could exploit this vulnerability by providing specially crafted inputs using the IBM1390 or IBM1399 character sets to the `iconv()` function. This could lead to an assertion failure, causing the application to crash and resulting in a Denial of Service (DoS).",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/glibc-gconv-extra@2.28-251.el8_10.31?arch=x86_64&distro=rocky-8.10&package-id=85599b53de21bc2f&upstream=glibc-2.28-251.el8_10.31.src.rpm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:bc0630ab-7b94-413e-a5a4-ba8e4ac5a208",
+      "id": "CVE-2026-4046",
+      "source": {
+        "name": "redhat-distro-redhat-8",
+        "url": "https://access.redhat.com/security/cve/CVE-2026-4046"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-4046",
+          "source": {
+            "name": "redhat-distro-redhat-8",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-4046"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 5.3,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00065,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in glibc, the GNU C Library. A remote attacker could exploit this vulnerability by providing specially crafted inputs using the IBM1390 or IBM1399 character sets to the `iconv()` function. This could lead to an assertion failure, causing the application to crash and resulting in a Denial of Service (DoS).",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/glibc-langpack-en@2.28-251.el8_10.31?arch=x86_64&distro=rocky-8.10&package-id=3b7acfb32cc77c4e&upstream=glibc-2.28-251.el8_10.31.src.rpm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:9da56d6a-1725-484e-a1e9-e8da9a498879",
+      "id": "CVE-2026-4046",
+      "source": {
+        "name": "redhat-distro-redhat-8",
+        "url": "https://access.redhat.com/security/cve/CVE-2026-4046"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-4046",
+          "source": {
+            "name": "redhat-distro-redhat-8",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-4046"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 5.3,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00065,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in glibc, the GNU C Library. A remote attacker could exploit this vulnerability by providing specially crafted inputs using the IBM1390 or IBM1399 character sets to the `iconv()` function. This could lead to an assertion failure, causing the application to crash and resulting in a Denial of Service (DoS).",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/glibc-minimal-langpack@2.28-251.el8_10.31?arch=x86_64&distro=rocky-8.10&package-id=26a1348c0c002fdd&upstream=glibc-2.28-251.el8_10.31.src.rpm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:a2b7ef0a-3e45-4e6c-9728-432678f2e4ca",
       "id": "CVE-2023-45322",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -63736,7 +64009,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:9bfc18ec-af4b-4aed-a57c-542217de64b6",
+      "bom-ref": "urn:uuid:71593cf4-f1ba-4058-8325-7ecf552344bd",
       "id": "CVE-2026-34743",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -63775,7 +64048,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:6ebc4fc5-21df-4932-8536-53bbfee0be12",
+      "bom-ref": "urn:uuid:fcf92396-1a70-4566-b108-dbb07aaa09ee",
       "id": "CVE-2026-6732",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -63814,7 +64087,85 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:593b0f93-7f4c-4b52-99cf-03a9a69757e9",
+      "bom-ref": "urn:uuid:b80b09a9-2ba8-4ef3-a038-236c11dbfa53",
+      "id": "CVE-2025-14819",
+      "source": {
+        "name": "redhat-distro-redhat-8",
+        "url": "https://access.redhat.com/security/cve/CVE-2025-14819"
+      },
+      "references": [
+        {
+          "id": "CVE-2025-14819",
+          "source": {
+            "name": "redhat-distro-redhat-8",
+            "url": "https://access.redhat.com/security/cve/CVE-2025-14819"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 6.8,
+          "severity": "low",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:N"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00061,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in libcurl. When handling secure connections (TLS) and reusing connection settings, libcurl could incorrectly apply a cached security setting related to certificate chain validation. This could allow libcurl to accept a server's security certificate that it should have otherwise rejected, potentially compromising the integrity of the secure connection.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/curl@7.61.1-34.el8_10.11?arch=x86_64&distro=rocky-8.10&package-id=1c05d3793ae7c8dc&upstream=curl-7.61.1-34.el8_10.11.src.rpm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:2b8007d3-870a-4c4c-bc04-ed30736f0bf9",
+      "id": "CVE-2025-14819",
+      "source": {
+        "name": "redhat-distro-redhat-8",
+        "url": "https://access.redhat.com/security/cve/CVE-2025-14819"
+      },
+      "references": [
+        {
+          "id": "CVE-2025-14819",
+          "source": {
+            "name": "redhat-distro-redhat-8",
+            "url": "https://access.redhat.com/security/cve/CVE-2025-14819"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 6.8,
+          "severity": "low",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:N"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00061,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in libcurl. When handling secure connections (TLS) and reusing connection settings, libcurl could incorrectly apply a cached security setting related to certificate chain validation. This could allow libcurl to accept a server's security certificate that it should have otherwise rejected, potentially compromising the integrity of the secure connection.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/libcurl-minimal@7.61.1-34.el8_10.11?arch=x86_64&distro=rocky-8.10&package-id=134156cea513795e&upstream=curl-7.61.1-34.el8_10.11.src.rpm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:60e870d7-0eb2-41d9-806d-c1675c13f1fe",
       "id": "CVE-2025-27113",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -63853,7 +64204,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:30646925-c5c0-482b-bad5-551c34f3da5f",
+      "bom-ref": "urn:uuid:ef2ed189-1d9f-46f5-8e94-c8c08a56a429",
       "id": "CVE-2019-8906",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -63892,7 +64243,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:e44babfe-5b1b-44de-a855-a5be3c9f3ea7",
+      "bom-ref": "urn:uuid:e71173d3-4264-49fd-9de5-9bea429ff3ee",
       "id": "CVE-2024-13176",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -63931,7 +64282,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:3667e98f-7b05-4a3f-adf2-2482ea3bab66",
+      "bom-ref": "urn:uuid:0e7786be-0d7b-4bb3-ab86-ef69cae405b5",
       "id": "CVE-2024-13176",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -63970,46 +64321,85 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:78469f34-2706-4049-95f7-0aa99e4ffdc2",
-      "id": "CVE-2025-13151",
+      "bom-ref": "urn:uuid:edf28082-5cab-4769-9dbf-1a613ebdc6aa",
+      "id": "CVE-2026-28390",
       "source": {
         "name": "redhat-distro-redhat-8",
-        "url": "https://access.redhat.com/security/cve/CVE-2025-13151"
+        "url": "https://access.redhat.com/security/cve/CVE-2026-28390"
       },
       "references": [
         {
-          "id": "CVE-2025-13151",
+          "id": "CVE-2026-28390",
           "source": {
             "name": "redhat-distro-redhat-8",
-            "url": "https://access.redhat.com/security/cve/CVE-2025-13151"
+            "url": "https://access.redhat.com/security/cve/CVE-2026-28390"
           }
         }
       ],
       "ratings": [
         {
-          "score": 5.9,
-          "severity": "low",
+          "score": 7.5,
+          "severity": "medium",
           "method": "CVSSv31",
-          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
         },
         {
           "source": {
             "name": "FIRST",
             "url": "https://www.first.org/epss/"
           },
-          "score": 0.00062,
+          "score": 0.00044,
           "method": "other"
         }
       ],
-      "description": "A flaw was found in libtasn1. A remote attacker could exploit a stack-based buffer overflow vulnerability in the `asn1_expend_octet_string` function. This occurs due to a failure in validating the size of input data. Successful exploitation can lead to a Denial of Service (DoS) condition, making the affected system or application unavailable.",
+      "description": "A flaw was found in OpenSSL. A remote attacker could exploit this vulnerability by sending a specially crafted Cryptographic Message Syntax (CMS) EnvelopedData message. During the processing of a KeyTransportRecipientInfo with RSA-OAEP encryption, the system attempts to access an optional parameter field without first verifying its presence. This leads to a NULL pointer dereference, which can cause applications processing the attacker-controlled CMS data to crash, resulting in a Denial of Service (DoS).",
       "affects": [
         {
-          "ref": "pkg:rpm/rocky/libtasn1@4.13-5.el8_10?arch=x86_64&distro=rocky-8.10&package-id=4f062b04bc3a9599&upstream=libtasn1-4.13-5.el8_10.src.rpm"
+          "ref": "pkg:rpm/rocky/openssl@1.1.1k-15.el8_10?arch=x86_64&distro=rocky-8.10&epoch=1&package-id=317eab9de5210360&upstream=openssl-1.1.1k-15.el8_10.src.rpm"
         }
       ]
     },
     {
-      "bom-ref": "urn:uuid:939cda05-e1ac-4bf5-b6f8-65c3259fe1ad",
+      "bom-ref": "urn:uuid:2436f624-2bfe-42ae-b117-18ba14d103d5",
+      "id": "CVE-2026-28390",
+      "source": {
+        "name": "redhat-distro-redhat-8",
+        "url": "https://access.redhat.com/security/cve/CVE-2026-28390"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-28390",
+          "source": {
+            "name": "redhat-distro-redhat-8",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-28390"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 7.5,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00044,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in OpenSSL. A remote attacker could exploit this vulnerability by sending a specially crafted Cryptographic Message Syntax (CMS) EnvelopedData message. During the processing of a KeyTransportRecipientInfo with RSA-OAEP encryption, the system attempts to access an optional parameter field without first verifying its presence. This leads to a NULL pointer dereference, which can cause applications processing the attacker-controlled CMS data to crash, resulting in a Denial of Service (DoS).",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/openssl-libs@1.1.1k-15.el8_10?arch=x86_64&distro=rocky-8.10&epoch=1&package-id=3859f7a75ea97aa1&upstream=openssl-1.1.1k-15.el8_10.src.rpm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:0d7ef31c-39f1-4b7a-beef-85ada2c17818",
       "id": "CVE-2023-32665",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -64048,280 +64438,85 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:b3bbee6d-8c2a-4d29-a6b3-d5ff39dd6b62",
-      "id": "CVE-2026-28390",
+      "bom-ref": "urn:uuid:2c3a2f97-ea88-4fc6-bf64-cb482e916606",
+      "id": "CVE-2025-15079",
       "source": {
         "name": "redhat-distro-redhat-8",
-        "url": "https://access.redhat.com/security/cve/CVE-2026-28390"
+        "url": "https://access.redhat.com/security/cve/CVE-2025-15079"
       },
       "references": [
         {
-          "id": "CVE-2026-28390",
+          "id": "CVE-2025-15079",
           "source": {
             "name": "redhat-distro-redhat-8",
-            "url": "https://access.redhat.com/security/cve/CVE-2026-28390"
+            "url": "https://access.redhat.com/security/cve/CVE-2025-15079"
           }
         }
       ],
       "ratings": [
         {
-          "score": 7.5,
-          "severity": "medium",
+          "score": 8.1,
+          "severity": "low",
           "method": "CVSSv31",
-          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N"
         },
         {
           "source": {
             "name": "FIRST",
             "url": "https://www.first.org/epss/"
           },
-          "score": 0.0004,
+          "score": 0.00047,
           "method": "other"
         }
       ],
-      "description": "A flaw was found in OpenSSL. A remote attacker could exploit this vulnerability by sending a specially crafted Cryptographic Message Syntax (CMS) EnvelopedData message. During the processing of a KeyTransportRecipientInfo with RSA-OAEP encryption, the system attempts to access an optional parameter field without first verifying its presence. This leads to a NULL pointer dereference, which can cause applications processing the attacker-controlled CMS data to crash, resulting in a Denial of Service (DoS).",
+      "description": "A flaw was found in curl. When performing SSH-based transfers using SCP or SFTP, libcurl could mistakenly connect to hosts not listed in the user-specified knownhosts file. This occurs if the host is present in the libssh global knownhosts file, effectively bypassing the intended host verification. This could allow a remote attacker to connect to an untrusted host, potentially leading to information disclosure or man-in-the-middle attacks.",
       "affects": [
         {
-          "ref": "pkg:rpm/rocky/openssl@1.1.1k-15.el8_10?arch=x86_64&distro=rocky-8.10&epoch=1&package-id=317eab9de5210360&upstream=openssl-1.1.1k-15.el8_10.src.rpm"
+          "ref": "pkg:rpm/rocky/curl@7.61.1-34.el8_10.11?arch=x86_64&distro=rocky-8.10&package-id=1c05d3793ae7c8dc&upstream=curl-7.61.1-34.el8_10.11.src.rpm"
         }
       ]
     },
     {
-      "bom-ref": "urn:uuid:c8370495-b6a7-4ef5-a206-7857f8b63953",
-      "id": "CVE-2026-28390",
+      "bom-ref": "urn:uuid:d8f6389b-381a-4725-b7f8-af96eb5631a5",
+      "id": "CVE-2025-15079",
       "source": {
         "name": "redhat-distro-redhat-8",
-        "url": "https://access.redhat.com/security/cve/CVE-2026-28390"
+        "url": "https://access.redhat.com/security/cve/CVE-2025-15079"
       },
       "references": [
         {
-          "id": "CVE-2026-28390",
+          "id": "CVE-2025-15079",
           "source": {
             "name": "redhat-distro-redhat-8",
-            "url": "https://access.redhat.com/security/cve/CVE-2026-28390"
+            "url": "https://access.redhat.com/security/cve/CVE-2025-15079"
           }
         }
       ],
       "ratings": [
         {
-          "score": 7.5,
-          "severity": "medium",
+          "score": 8.1,
+          "severity": "low",
           "method": "CVSSv31",
-          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N"
         },
         {
           "source": {
             "name": "FIRST",
             "url": "https://www.first.org/epss/"
           },
-          "score": 0.0004,
+          "score": 0.00047,
           "method": "other"
         }
       ],
-      "description": "A flaw was found in OpenSSL. A remote attacker could exploit this vulnerability by sending a specially crafted Cryptographic Message Syntax (CMS) EnvelopedData message. During the processing of a KeyTransportRecipientInfo with RSA-OAEP encryption, the system attempts to access an optional parameter field without first verifying its presence. This leads to a NULL pointer dereference, which can cause applications processing the attacker-controlled CMS data to crash, resulting in a Denial of Service (DoS).",
+      "description": "A flaw was found in curl. When performing SSH-based transfers using SCP or SFTP, libcurl could mistakenly connect to hosts not listed in the user-specified knownhosts file. This occurs if the host is present in the libssh global knownhosts file, effectively bypassing the intended host verification. This could allow a remote attacker to connect to an untrusted host, potentially leading to information disclosure or man-in-the-middle attacks.",
       "affects": [
         {
-          "ref": "pkg:rpm/rocky/openssl-libs@1.1.1k-15.el8_10?arch=x86_64&distro=rocky-8.10&epoch=1&package-id=3859f7a75ea97aa1&upstream=openssl-1.1.1k-15.el8_10.src.rpm"
+          "ref": "pkg:rpm/rocky/libcurl-minimal@7.61.1-34.el8_10.11?arch=x86_64&distro=rocky-8.10&package-id=134156cea513795e&upstream=curl-7.61.1-34.el8_10.11.src.rpm"
         }
       ]
     },
     {
-      "bom-ref": "urn:uuid:76d5428e-049c-4fc4-a302-881828ca587d",
-      "id": "CVE-2026-4046",
-      "source": {
-        "name": "redhat-distro-redhat-8",
-        "url": "https://access.redhat.com/security/cve/CVE-2026-4046"
-      },
-      "references": [
-        {
-          "id": "CVE-2026-4046",
-          "source": {
-            "name": "redhat-distro-redhat-8",
-            "url": "https://access.redhat.com/security/cve/CVE-2026-4046"
-          }
-        }
-      ],
-      "ratings": [
-        {
-          "score": 5.3,
-          "severity": "medium",
-          "method": "CVSSv31",
-          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
-        },
-        {
-          "source": {
-            "name": "FIRST",
-            "url": "https://www.first.org/epss/"
-          },
-          "score": 0.00048,
-          "method": "other"
-        }
-      ],
-      "description": "A flaw was found in glibc, the GNU C Library. A remote attacker could exploit this vulnerability by providing specially crafted inputs using the IBM1390 or IBM1399 character sets to the `iconv()` function. This could lead to an assertion failure, causing the application to crash and resulting in a Denial of Service (DoS).",
-      "affects": [
-        {
-          "ref": "pkg:rpm/rocky/glibc@2.28-251.el8_10.31?arch=x86_64&distro=rocky-8.10&package-id=d12bf8dd9497e5eb&upstream=glibc-2.28-251.el8_10.31.src.rpm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "urn:uuid:78840d25-78e3-4f42-a400-d92b845d9c86",
-      "id": "CVE-2026-4046",
-      "source": {
-        "name": "redhat-distro-redhat-8",
-        "url": "https://access.redhat.com/security/cve/CVE-2026-4046"
-      },
-      "references": [
-        {
-          "id": "CVE-2026-4046",
-          "source": {
-            "name": "redhat-distro-redhat-8",
-            "url": "https://access.redhat.com/security/cve/CVE-2026-4046"
-          }
-        }
-      ],
-      "ratings": [
-        {
-          "score": 5.3,
-          "severity": "medium",
-          "method": "CVSSv31",
-          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
-        },
-        {
-          "source": {
-            "name": "FIRST",
-            "url": "https://www.first.org/epss/"
-          },
-          "score": 0.00048,
-          "method": "other"
-        }
-      ],
-      "description": "A flaw was found in glibc, the GNU C Library. A remote attacker could exploit this vulnerability by providing specially crafted inputs using the IBM1390 or IBM1399 character sets to the `iconv()` function. This could lead to an assertion failure, causing the application to crash and resulting in a Denial of Service (DoS).",
-      "affects": [
-        {
-          "ref": "pkg:rpm/rocky/glibc-common@2.28-251.el8_10.31?arch=x86_64&distro=rocky-8.10&package-id=1d5e9300d0c63479&upstream=glibc-2.28-251.el8_10.31.src.rpm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "urn:uuid:9277cd09-8e25-481e-a04a-b5fbd1826731",
-      "id": "CVE-2026-4046",
-      "source": {
-        "name": "redhat-distro-redhat-8",
-        "url": "https://access.redhat.com/security/cve/CVE-2026-4046"
-      },
-      "references": [
-        {
-          "id": "CVE-2026-4046",
-          "source": {
-            "name": "redhat-distro-redhat-8",
-            "url": "https://access.redhat.com/security/cve/CVE-2026-4046"
-          }
-        }
-      ],
-      "ratings": [
-        {
-          "score": 5.3,
-          "severity": "medium",
-          "method": "CVSSv31",
-          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
-        },
-        {
-          "source": {
-            "name": "FIRST",
-            "url": "https://www.first.org/epss/"
-          },
-          "score": 0.00048,
-          "method": "other"
-        }
-      ],
-      "description": "A flaw was found in glibc, the GNU C Library. A remote attacker could exploit this vulnerability by providing specially crafted inputs using the IBM1390 or IBM1399 character sets to the `iconv()` function. This could lead to an assertion failure, causing the application to crash and resulting in a Denial of Service (DoS).",
-      "affects": [
-        {
-          "ref": "pkg:rpm/rocky/glibc-gconv-extra@2.28-251.el8_10.31?arch=x86_64&distro=rocky-8.10&package-id=85599b53de21bc2f&upstream=glibc-2.28-251.el8_10.31.src.rpm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "urn:uuid:d1d7239e-26f2-4a68-b5dc-2e6336693ca4",
-      "id": "CVE-2026-4046",
-      "source": {
-        "name": "redhat-distro-redhat-8",
-        "url": "https://access.redhat.com/security/cve/CVE-2026-4046"
-      },
-      "references": [
-        {
-          "id": "CVE-2026-4046",
-          "source": {
-            "name": "redhat-distro-redhat-8",
-            "url": "https://access.redhat.com/security/cve/CVE-2026-4046"
-          }
-        }
-      ],
-      "ratings": [
-        {
-          "score": 5.3,
-          "severity": "medium",
-          "method": "CVSSv31",
-          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
-        },
-        {
-          "source": {
-            "name": "FIRST",
-            "url": "https://www.first.org/epss/"
-          },
-          "score": 0.00048,
-          "method": "other"
-        }
-      ],
-      "description": "A flaw was found in glibc, the GNU C Library. A remote attacker could exploit this vulnerability by providing specially crafted inputs using the IBM1390 or IBM1399 character sets to the `iconv()` function. This could lead to an assertion failure, causing the application to crash and resulting in a Denial of Service (DoS).",
-      "affects": [
-        {
-          "ref": "pkg:rpm/rocky/glibc-langpack-en@2.28-251.el8_10.31?arch=x86_64&distro=rocky-8.10&package-id=3b7acfb32cc77c4e&upstream=glibc-2.28-251.el8_10.31.src.rpm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "urn:uuid:7ba29965-c19d-49db-bf4f-bd6ec5ab34ec",
-      "id": "CVE-2026-4046",
-      "source": {
-        "name": "redhat-distro-redhat-8",
-        "url": "https://access.redhat.com/security/cve/CVE-2026-4046"
-      },
-      "references": [
-        {
-          "id": "CVE-2026-4046",
-          "source": {
-            "name": "redhat-distro-redhat-8",
-            "url": "https://access.redhat.com/security/cve/CVE-2026-4046"
-          }
-        }
-      ],
-      "ratings": [
-        {
-          "score": 5.3,
-          "severity": "medium",
-          "method": "CVSSv31",
-          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
-        },
-        {
-          "source": {
-            "name": "FIRST",
-            "url": "https://www.first.org/epss/"
-          },
-          "score": 0.00048,
-          "method": "other"
-        }
-      ],
-      "description": "A flaw was found in glibc, the GNU C Library. A remote attacker could exploit this vulnerability by providing specially crafted inputs using the IBM1390 or IBM1399 character sets to the `iconv()` function. This could lead to an assertion failure, causing the application to crash and resulting in a Denial of Service (DoS).",
-      "affects": [
-        {
-          "ref": "pkg:rpm/rocky/glibc-minimal-langpack@2.28-251.el8_10.31?arch=x86_64&distro=rocky-8.10&package-id=26a1348c0c002fdd&upstream=glibc-2.28-251.el8_10.31.src.rpm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "urn:uuid:63cdc5c2-4e19-4e69-b824-80f1a68af77c",
+      "bom-ref": "urn:uuid:827266c1-56e2-4265-8c43-df41d9e691c4",
       "id": "CVE-2026-5435",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -64360,7 +64555,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:3a289966-d633-4091-af22-21f75bcd9ddf",
+      "bom-ref": "urn:uuid:ef1018c1-4a04-4a5b-b292-173b77b27bec",
       "id": "CVE-2026-5435",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -64399,7 +64594,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:03ef74de-b4a5-42ad-9b7f-3c4b431d8105",
+      "bom-ref": "urn:uuid:0390daeb-ba07-4746-b055-813934c72b41",
       "id": "CVE-2026-5435",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -64438,7 +64633,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:f1b48087-2f32-44f2-9dbf-19a3bf7b6265",
+      "bom-ref": "urn:uuid:f0b22696-ed3e-438e-b348-0f8764c6c217",
       "id": "CVE-2026-5435",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -64477,7 +64672,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:07bdde66-dcaa-4a1e-a212-64c8378612f6",
+      "bom-ref": "urn:uuid:43b4e639-61d1-4e82-8094-9bd6451330fb",
       "id": "CVE-2026-5435",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -64516,7 +64711,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:cfa14600-b497-4bc0-bf47-f1a731925f7c",
+      "bom-ref": "urn:uuid:0bf4dea5-bb46-4076-8be2-d85b57b3b5a3",
       "id": "CVE-2026-5450",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -64555,7 +64750,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:23455d59-2dc0-4a6a-8d35-eac4a974b6af",
+      "bom-ref": "urn:uuid:0b21af3d-6b06-4d4b-a0d3-46f834da4433",
       "id": "CVE-2026-5450",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -64594,7 +64789,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:256c4b1a-2d4f-4080-927d-7ad16d95aa04",
+      "bom-ref": "urn:uuid:8766a0a8-fe13-4bcf-a572-640937bd263b",
       "id": "CVE-2026-5450",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -64633,7 +64828,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:b6b12d75-89c5-45e2-b8cb-cac9bc1d4273",
+      "bom-ref": "urn:uuid:7e9cb744-8885-402b-a51f-f4ce97ddd897",
       "id": "CVE-2026-5450",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -64672,7 +64867,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:b9a14156-c47c-4100-9f5f-9acf1fd926c8",
+      "bom-ref": "urn:uuid:90a53f4d-fe45-4fdf-aaaf-a1c634e28995",
       "id": "CVE-2026-5450",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -64711,7 +64906,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:c9544e8e-46e7-448b-8627-01040fdb0cf6",
+      "bom-ref": "urn:uuid:8e74ca2c-9523-4d6d-b1db-7228315ce706",
       "id": "CVE-2026-0988",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -64750,46 +64945,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:b6830a1d-1224-4b9f-a289-3a7442664c25",
-      "id": "CVE-2025-14087",
-      "source": {
-        "name": "redhat-distro-redhat-8",
-        "url": "https://access.redhat.com/security/cve/CVE-2025-14087"
-      },
-      "references": [
-        {
-          "id": "CVE-2025-14087",
-          "source": {
-            "name": "redhat-distro-redhat-8",
-            "url": "https://access.redhat.com/security/cve/CVE-2025-14087"
-          }
-        }
-      ],
-      "ratings": [
-        {
-          "score": 5.6,
-          "severity": "medium",
-          "method": "CVSSv31",
-          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L"
-        },
-        {
-          "source": {
-            "name": "FIRST",
-            "url": "https://www.first.org/epss/"
-          },
-          "score": 0.00046,
-          "method": "other"
-        }
-      ],
-      "description": "A flaw was found in GLib (Gnome Lib). This vulnerability allows a remote attacker to cause heap corruption, leading to a denial of service or potential code execution via a buffer-underflow in the GVariant parser when processing maliciously crafted input strings.",
-      "affects": [
-        {
-          "ref": "pkg:rpm/rocky/glib2@2.56.4-168.el8_10?arch=x86_64&distro=rocky-8.10&package-id=b4049772963f47f0&upstream=glib2-2.56.4-168.el8_10.src.rpm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "urn:uuid:d0a6a492-494a-49b3-8d36-840a8620f07a",
+      "bom-ref": "urn:uuid:527c979b-f213-4235-9f72-bb95887c61c2",
       "id": "CVE-2023-50495",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -64828,7 +64984,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:2cfe1f1c-13f3-4e7c-9e08-08e66a348507",
+      "bom-ref": "urn:uuid:492416d7-ee84-420a-9a90-c24f1f09510b",
       "id": "CVE-2023-50495",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -64867,7 +65023,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:18a242ec-2e30-46ea-9921-4d5b930c6d92",
+      "bom-ref": "urn:uuid:849eb839-cb68-4f5d-a175-a18c668cf393",
       "id": "CVE-2026-5928",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -64906,7 +65062,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:a4b07802-25ba-4a7d-a237-8c36cbfe5411",
+      "bom-ref": "urn:uuid:bb1a55e2-5e6d-49c3-bc88-845e125fece3",
       "id": "CVE-2026-5928",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -64945,7 +65101,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:ec75d0aa-4617-4618-bfdb-542980ed9dbe",
+      "bom-ref": "urn:uuid:4a42eeb8-7ed2-424b-830a-23815639193c",
       "id": "CVE-2026-5928",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -64984,7 +65140,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:84e60141-674d-4caa-881b-212528c5447d",
+      "bom-ref": "urn:uuid:f3f49b3c-82a1-43dc-9625-4a5b44556f50",
       "id": "CVE-2026-5928",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -65023,7 +65179,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:176e6839-1133-40c0-acf7-294508a3be0d",
+      "bom-ref": "urn:uuid:0d986a94-bf35-4ba2-8888-9c783f2f5928",
       "id": "CVE-2026-5928",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -65062,85 +65218,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:ad23c230-b600-41c1-87aa-d3b6f979ccea",
-      "id": "CVE-2025-14819",
-      "source": {
-        "name": "redhat-distro-redhat-8",
-        "url": "https://access.redhat.com/security/cve/CVE-2025-14819"
-      },
-      "references": [
-        {
-          "id": "CVE-2025-14819",
-          "source": {
-            "name": "redhat-distro-redhat-8",
-            "url": "https://access.redhat.com/security/cve/CVE-2025-14819"
-          }
-        }
-      ],
-      "ratings": [
-        {
-          "score": 6.8,
-          "severity": "low",
-          "method": "CVSSv31",
-          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:N"
-        },
-        {
-          "source": {
-            "name": "FIRST",
-            "url": "https://www.first.org/epss/"
-          },
-          "score": 0.00045,
-          "method": "other"
-        }
-      ],
-      "description": "A flaw was found in libcurl. When handling secure connections (TLS) and reusing connection settings, libcurl could incorrectly apply a cached security setting related to certificate chain validation. This could allow libcurl to accept a server's security certificate that it should have otherwise rejected, potentially compromising the integrity of the secure connection.",
-      "affects": [
-        {
-          "ref": "pkg:rpm/rocky/curl@7.61.1-34.el8_10.11?arch=x86_64&distro=rocky-8.10&package-id=1c05d3793ae7c8dc&upstream=curl-7.61.1-34.el8_10.11.src.rpm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "urn:uuid:6646101c-979b-416a-bc70-f3491b55cb05",
-      "id": "CVE-2025-14819",
-      "source": {
-        "name": "redhat-distro-redhat-8",
-        "url": "https://access.redhat.com/security/cve/CVE-2025-14819"
-      },
-      "references": [
-        {
-          "id": "CVE-2025-14819",
-          "source": {
-            "name": "redhat-distro-redhat-8",
-            "url": "https://access.redhat.com/security/cve/CVE-2025-14819"
-          }
-        }
-      ],
-      "ratings": [
-        {
-          "score": 6.8,
-          "severity": "low",
-          "method": "CVSSv31",
-          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:N"
-        },
-        {
-          "source": {
-            "name": "FIRST",
-            "url": "https://www.first.org/epss/"
-          },
-          "score": 0.00045,
-          "method": "other"
-        }
-      ],
-      "description": "A flaw was found in libcurl. When handling secure connections (TLS) and reusing connection settings, libcurl could incorrectly apply a cached security setting related to certificate chain validation. This could allow libcurl to accept a server's security certificate that it should have otherwise rejected, potentially compromising the integrity of the secure connection.",
-      "affects": [
-        {
-          "ref": "pkg:rpm/rocky/libcurl-minimal@7.61.1-34.el8_10.11?arch=x86_64&distro=rocky-8.10&package-id=134156cea513795e&upstream=curl-7.61.1-34.el8_10.11.src.rpm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "urn:uuid:5c6fdb11-e545-448b-bf37-2948fbf51625",
+      "bom-ref": "urn:uuid:82602cb0-3018-48df-a151-24afc33b2ced",
       "id": "CVE-2023-27534",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -65179,7 +65257,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:43f15477-6b7d-4f88-a1ff-7f4acf64a2cc",
+      "bom-ref": "urn:uuid:542b57b0-e0b7-4d0a-b00f-1b6eb1d1d034",
       "id": "CVE-2023-27534",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -65218,7 +65296,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:f1ee240c-8fa6-4c22-9b0a-09c614317fde",
+      "bom-ref": "urn:uuid:c26abb77-5c22-4d6d-9f8b-2156d7c47066",
       "id": "CVE-2022-27943",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -65257,7 +65335,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:72b9d1e6-ed99-4f1e-846b-44cf1316f9aa",
+      "bom-ref": "urn:uuid:68d77a54-dfe5-4baa-9597-463695eb40d2",
       "id": "CVE-2022-27943",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -65296,85 +65374,85 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:36cd5248-54e2-4d7a-95be-4849a3be3d44",
-      "id": "CVE-2025-15079",
+      "bom-ref": "urn:uuid:7d4b3b32-bfcb-4b96-8cef-f10e3264bb2d",
+      "id": "CVE-2026-28389",
       "source": {
         "name": "redhat-distro-redhat-8",
-        "url": "https://access.redhat.com/security/cve/CVE-2025-15079"
+        "url": "https://access.redhat.com/security/cve/CVE-2026-28389"
       },
       "references": [
         {
-          "id": "CVE-2025-15079",
+          "id": "CVE-2026-28389",
           "source": {
             "name": "redhat-distro-redhat-8",
-            "url": "https://access.redhat.com/security/cve/CVE-2025-15079"
+            "url": "https://access.redhat.com/security/cve/CVE-2026-28389"
           }
         }
       ],
       "ratings": [
         {
-          "score": 8.1,
+          "score": 5.9,
           "severity": "low",
           "method": "CVSSv31",
-          "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N"
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H"
         },
         {
           "source": {
             "name": "FIRST",
             "url": "https://www.first.org/epss/"
           },
-          "score": 0.00035,
+          "score": 0.00044,
           "method": "other"
         }
       ],
-      "description": "A flaw was found in curl. When performing SSH-based transfers using SCP or SFTP, libcurl could mistakenly connect to hosts not listed in the user-specified knownhosts file. This occurs if the host is present in the libssh global knownhosts file, effectively bypassing the intended host verification. This could allow a remote attacker to connect to an untrusted host, potentially leading to information disclosure or man-in-the-middle attacks.",
+      "description": "A flaw was found in OpenSSL. A remote attacker could exploit this by sending a specially crafted Cryptographic Message Syntax (CMS) EnvelopedData message with KeyAgreeRecipientInfo. This vulnerability arises because the software attempts to process an optional field without verifying its existence, leading to a NULL pointer dereference. This can result in a Denial of Service (DoS) for applications that handle untrusted CMS data.",
       "affects": [
         {
-          "ref": "pkg:rpm/rocky/curl@7.61.1-34.el8_10.11?arch=x86_64&distro=rocky-8.10&package-id=1c05d3793ae7c8dc&upstream=curl-7.61.1-34.el8_10.11.src.rpm"
+          "ref": "pkg:rpm/rocky/openssl@1.1.1k-15.el8_10?arch=x86_64&distro=rocky-8.10&epoch=1&package-id=317eab9de5210360&upstream=openssl-1.1.1k-15.el8_10.src.rpm"
         }
       ]
     },
     {
-      "bom-ref": "urn:uuid:6eee6cc3-9299-41f5-95ad-2503fb09da44",
-      "id": "CVE-2025-15079",
+      "bom-ref": "urn:uuid:d3498957-ae46-46c2-8fae-b703b02e18a1",
+      "id": "CVE-2026-28389",
       "source": {
         "name": "redhat-distro-redhat-8",
-        "url": "https://access.redhat.com/security/cve/CVE-2025-15079"
+        "url": "https://access.redhat.com/security/cve/CVE-2026-28389"
       },
       "references": [
         {
-          "id": "CVE-2025-15079",
+          "id": "CVE-2026-28389",
           "source": {
             "name": "redhat-distro-redhat-8",
-            "url": "https://access.redhat.com/security/cve/CVE-2025-15079"
+            "url": "https://access.redhat.com/security/cve/CVE-2026-28389"
           }
         }
       ],
       "ratings": [
         {
-          "score": 8.1,
+          "score": 5.9,
           "severity": "low",
           "method": "CVSSv31",
-          "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N"
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H"
         },
         {
           "source": {
             "name": "FIRST",
             "url": "https://www.first.org/epss/"
           },
-          "score": 0.00035,
+          "score": 0.00044,
           "method": "other"
         }
       ],
-      "description": "A flaw was found in curl. When performing SSH-based transfers using SCP or SFTP, libcurl could mistakenly connect to hosts not listed in the user-specified knownhosts file. This occurs if the host is present in the libssh global knownhosts file, effectively bypassing the intended host verification. This could allow a remote attacker to connect to an untrusted host, potentially leading to information disclosure or man-in-the-middle attacks.",
+      "description": "A flaw was found in OpenSSL. A remote attacker could exploit this by sending a specially crafted Cryptographic Message Syntax (CMS) EnvelopedData message with KeyAgreeRecipientInfo. This vulnerability arises because the software attempts to process an optional field without verifying its existence, leading to a NULL pointer dereference. This can result in a Denial of Service (DoS) for applications that handle untrusted CMS data.",
       "affects": [
         {
-          "ref": "pkg:rpm/rocky/libcurl-minimal@7.61.1-34.el8_10.11?arch=x86_64&distro=rocky-8.10&package-id=134156cea513795e&upstream=curl-7.61.1-34.el8_10.11.src.rpm"
+          "ref": "pkg:rpm/rocky/openssl-libs@1.1.1k-15.el8_10?arch=x86_64&distro=rocky-8.10&epoch=1&package-id=3859f7a75ea97aa1&upstream=openssl-1.1.1k-15.el8_10.src.rpm"
         }
       ]
     },
     {
-      "bom-ref": "urn:uuid:e2ed39fb-01ea-4ef5-9698-31775221a0b7",
+      "bom-ref": "urn:uuid:724958b0-cfa5-4ad7-902f-bbd6da04a4fd",
       "id": "CVE-2022-41409",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -65413,85 +65491,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:37b61ca1-04c7-408f-a5a4-f43100e70b77",
-      "id": "CVE-2026-28389",
-      "source": {
-        "name": "redhat-distro-redhat-8",
-        "url": "https://access.redhat.com/security/cve/CVE-2026-28389"
-      },
-      "references": [
-        {
-          "id": "CVE-2026-28389",
-          "source": {
-            "name": "redhat-distro-redhat-8",
-            "url": "https://access.redhat.com/security/cve/CVE-2026-28389"
-          }
-        }
-      ],
-      "ratings": [
-        {
-          "score": 5.9,
-          "severity": "low",
-          "method": "CVSSv31",
-          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H"
-        },
-        {
-          "source": {
-            "name": "FIRST",
-            "url": "https://www.first.org/epss/"
-          },
-          "score": 0.0004,
-          "method": "other"
-        }
-      ],
-      "description": "A flaw was found in OpenSSL. A remote attacker could exploit this by sending a specially crafted Cryptographic Message Syntax (CMS) EnvelopedData message with KeyAgreeRecipientInfo. This vulnerability arises because the software attempts to process an optional field without verifying its existence, leading to a NULL pointer dereference. This can result in a Denial of Service (DoS) for applications that handle untrusted CMS data.",
-      "affects": [
-        {
-          "ref": "pkg:rpm/rocky/openssl@1.1.1k-15.el8_10?arch=x86_64&distro=rocky-8.10&epoch=1&package-id=317eab9de5210360&upstream=openssl-1.1.1k-15.el8_10.src.rpm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "urn:uuid:43d06b3a-07f1-4a6c-a7be-6f69849af873",
-      "id": "CVE-2026-28389",
-      "source": {
-        "name": "redhat-distro-redhat-8",
-        "url": "https://access.redhat.com/security/cve/CVE-2026-28389"
-      },
-      "references": [
-        {
-          "id": "CVE-2026-28389",
-          "source": {
-            "name": "redhat-distro-redhat-8",
-            "url": "https://access.redhat.com/security/cve/CVE-2026-28389"
-          }
-        }
-      ],
-      "ratings": [
-        {
-          "score": 5.9,
-          "severity": "low",
-          "method": "CVSSv31",
-          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H"
-        },
-        {
-          "source": {
-            "name": "FIRST",
-            "url": "https://www.first.org/epss/"
-          },
-          "score": 0.0004,
-          "method": "other"
-        }
-      ],
-      "description": "A flaw was found in OpenSSL. A remote attacker could exploit this by sending a specially crafted Cryptographic Message Syntax (CMS) EnvelopedData message with KeyAgreeRecipientInfo. This vulnerability arises because the software attempts to process an optional field without verifying its existence, leading to a NULL pointer dereference. This can result in a Denial of Service (DoS) for applications that handle untrusted CMS data.",
-      "affects": [
-        {
-          "ref": "pkg:rpm/rocky/openssl-libs@1.1.1k-15.el8_10?arch=x86_64&distro=rocky-8.10&epoch=1&package-id=3859f7a75ea97aa1&upstream=openssl-1.1.1k-15.el8_10.src.rpm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "urn:uuid:f28d3aeb-548d-4615-af96-af104aeeb9c9",
+      "bom-ref": "urn:uuid:a5063aa2-8dde-4434-84b6-285c74d5cdd1",
       "id": "CVE-2025-69421",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -65530,7 +65530,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:c92e20e3-0af5-40ca-a13f-34e5daf395a8",
+      "bom-ref": "urn:uuid:7335a625-156b-4c76-915d-add48532deea",
       "id": "CVE-2025-69421",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -65569,7 +65569,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:dfa2aa6f-bcdf-4c52-ae6d-627d59a1de50",
+      "bom-ref": "urn:uuid:b695b5d7-2220-49c2-b4ac-434b3125deb5",
       "id": "CVE-2020-35512",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -65608,7 +65608,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:769bcf73-bba2-470c-8624-95a2940cceaa",
+      "bom-ref": "urn:uuid:c5be8944-19c0-48cd-884d-4cbab29db1ba",
       "id": "CVE-2020-35512",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -65647,7 +65647,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:4092e65e-1d5d-4a19-bb90-3049e7846cce",
+      "bom-ref": "urn:uuid:c3305774-9740-4533-b1a1-366c28b4baba",
       "id": "CVE-2020-35512",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -65686,7 +65686,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:b15130b0-a9f8-420c-a931-197c662ec786",
+      "bom-ref": "urn:uuid:603b73f9-4c08-4b44-8c51-21fa832aa63b",
       "id": "CVE-2020-35512",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -65725,7 +65725,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:46cf2e28-19c2-431f-ba36-0c55f6156a77",
+      "bom-ref": "urn:uuid:77b9c82f-fa29-48dd-a25c-5d1cba122fb2",
       "id": "CVE-2020-35512",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -65764,7 +65764,124 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:93a4a2f3-0aac-4be5-b2d6-c09c12dc6d8a",
+      "bom-ref": "urn:uuid:2010e4df-e352-4250-a7a1-98b4dd137a20",
+      "id": "CVE-2025-14524",
+      "source": {
+        "name": "redhat-distro-redhat-8",
+        "url": "https://access.redhat.com/security/cve/CVE-2025-14524"
+      },
+      "references": [
+        {
+          "id": "CVE-2025-14524",
+          "source": {
+            "name": "redhat-distro-redhat-8",
+            "url": "https://access.redhat.com/security/cve/CVE-2025-14524"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 6.5,
+          "severity": "low",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00035,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in curl. When an OAuth2 (Open Authorization) bearer token is used for an HTTP(S) transfer, and that transfer performs a cross-protocol redirect to a different scheme like IMAP, LDAP, POP3, or SMTP, curl might incorrectly pass the bearer token to the new target host. This could lead to information disclosure, where sensitive authentication tokens are exposed to unintended recipients.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/curl@7.61.1-34.el8_10.11?arch=x86_64&distro=rocky-8.10&package-id=1c05d3793ae7c8dc&upstream=curl-7.61.1-34.el8_10.11.src.rpm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:cca1ef5a-3f84-45d3-8a8f-8d322dda7ea0",
+      "id": "CVE-2025-14524",
+      "source": {
+        "name": "redhat-distro-redhat-8",
+        "url": "https://access.redhat.com/security/cve/CVE-2025-14524"
+      },
+      "references": [
+        {
+          "id": "CVE-2025-14524",
+          "source": {
+            "name": "redhat-distro-redhat-8",
+            "url": "https://access.redhat.com/security/cve/CVE-2025-14524"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 6.5,
+          "severity": "low",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00035,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in curl. When an OAuth2 (Open Authorization) bearer token is used for an HTTP(S) transfer, and that transfer performs a cross-protocol redirect to a different scheme like IMAP, LDAP, POP3, or SMTP, curl might incorrectly pass the bearer token to the new target host. This could lead to information disclosure, where sensitive authentication tokens are exposed to unintended recipients.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/libcurl-minimal@7.61.1-34.el8_10.11?arch=x86_64&distro=rocky-8.10&package-id=134156cea513795e&upstream=curl-7.61.1-34.el8_10.11.src.rpm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:c7ac60f8-1faf-4fed-8ff3-49b19e969faf",
+      "id": "CVE-2025-7039",
+      "source": {
+        "name": "redhat-distro-redhat-8",
+        "url": "https://access.redhat.com/security/cve/CVE-2025-7039"
+      },
+      "references": [
+        {
+          "id": "CVE-2025-7039",
+          "source": {
+            "name": "redhat-distro-redhat-8",
+            "url": "https://access.redhat.com/security/cve/CVE-2025-7039"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 3.7,
+          "severity": "low",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00049,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in glib. An integer overflow during temporary file creation leads to an out-of-bounds memory access, allowing an attacker to potentially perform path traversal or access private temporary file content by creating symbolic links. This vulnerability allows a local attacker to manipulate file paths and access unauthorized data. The core issue stems from insufficient validation of file path lengths during temporary file operations.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/glib2@2.56.4-168.el8_10?arch=x86_64&distro=rocky-8.10&package-id=b4049772963f47f0&upstream=glib2-2.56.4-168.el8_10.src.rpm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:1508693f-8e2e-4323-8641-ead48871f9d5",
       "id": "CVE-2026-3805",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -65803,7 +65920,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:f0e99c67-de1f-4527-b69a-eadf22f02ff7",
+      "bom-ref": "urn:uuid:e22eef46-8048-4972-b72e-ef96821a081f",
       "id": "CVE-2026-3805",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -65842,7 +65959,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:57dc7e88-a219-4e65-ad08-2fd3ec5d1654",
+      "bom-ref": "urn:uuid:40f5f1f9-7309-4aea-939f-1abb11d89d3e",
       "id": "CVE-2023-32611",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -65881,7 +65998,46 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:3a26cf3d-1e95-417a-97d2-62e24f3b0169",
+      "bom-ref": "urn:uuid:38e907e2-e126-4a0c-83e4-7168abf9ae62",
+      "id": "CVE-2026-22185",
+      "source": {
+        "name": "redhat-distro-redhat-8",
+        "url": "https://access.redhat.com/security/cve/CVE-2026-22185"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-22185",
+          "source": {
+            "name": "redhat-distro-redhat-8",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-22185"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 6.8,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:H"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00027,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in OpenLDAP Lightning Memory-Mapped Database (LMDB) mdb_load. When processing malformed input, a local attacker can exploit a heap buffer underflow vulnerability in the readline() function. This can lead to an out-of-bounds read, potentially causing a denial of service (DoS) and limited disclosure of heap memory contents.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/openldap@2.4.46-21.el8_10?arch=x86_64&distro=rocky-8.10&package-id=c60c1f93b15e634f&upstream=openldap-2.4.46-21.el8_10.src.rpm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:74b39331-abfa-4f38-ad2a-bafed12b15a0",
       "id": "CVE-2025-70873",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -65920,7 +66076,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:5643d788-a520-4c1e-b32b-a558350121a7",
+      "bom-ref": "urn:uuid:e7957be4-20a9-4d5f-b411-5b9187f8cc34",
       "id": "CVE-2026-4438",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -65959,7 +66115,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:4962b70d-e3d7-440c-b10c-93a1c21eeb73",
+      "bom-ref": "urn:uuid:43190123-e5ec-4688-8f14-fad078254932",
       "id": "CVE-2026-4438",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -65998,7 +66154,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:1adc48a5-5fda-44f7-ab08-692e4f47f52c",
+      "bom-ref": "urn:uuid:cde3de60-d82f-4d55-b738-8090be08f90a",
       "id": "CVE-2026-4438",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -66037,7 +66193,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:8c4165c7-07d8-420d-a2bb-16dcce68622d",
+      "bom-ref": "urn:uuid:04a3ec02-b0e6-46e2-86dc-40dc7d57578b",
       "id": "CVE-2026-4438",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -66076,7 +66232,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:4e19779a-138f-42de-9e6d-7f252654750c",
+      "bom-ref": "urn:uuid:c8c12cee-8c34-44fd-8c33-24b5675f669d",
       "id": "CVE-2026-4438",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -66115,7 +66271,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:8aa84b99-8972-4e5b-859c-60535deab68b",
+      "bom-ref": "urn:uuid:fc1d9f61-ae45-4236-b1e9-835d3a104716",
       "id": "CVE-2021-3997",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -66154,7 +66310,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:a7d32534-0cea-41f5-8f01-1c872e33fd9e",
+      "bom-ref": "urn:uuid:567788b8-9374-4f9e-a29f-94d0dfed9622",
       "id": "CVE-2021-3997",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -66193,7 +66349,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:493c635f-3d2a-44e1-8d18-84f2290ce2c0",
+      "bom-ref": "urn:uuid:b5f99de0-ed9a-48a9-8001-bbdbebd59ff7",
       "id": "CVE-2021-3997",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -66232,46 +66388,85 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:7836a780-1bc0-4049-a0db-51666113ea02",
-      "id": "CVE-2025-7039",
+      "bom-ref": "urn:uuid:27d7a514-8314-4c0e-ba8c-4009937f7ace",
+      "id": "CVE-2025-30258",
       "source": {
         "name": "redhat-distro-redhat-8",
-        "url": "https://access.redhat.com/security/cve/CVE-2025-7039"
+        "url": "https://access.redhat.com/security/cve/CVE-2025-30258"
       },
       "references": [
         {
-          "id": "CVE-2025-7039",
+          "id": "CVE-2025-30258",
           "source": {
             "name": "redhat-distro-redhat-8",
-            "url": "https://access.redhat.com/security/cve/CVE-2025-7039"
+            "url": "https://access.redhat.com/security/cve/CVE-2025-30258"
           }
         }
       ],
       "ratings": [
         {
-          "score": 3.7,
+          "score": 2.7,
           "severity": "low",
           "method": "CVSSv31",
-          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N"
+          "vector": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:C/C:N/I:N/A:L"
         },
         {
           "source": {
             "name": "FIRST",
             "url": "https://www.first.org/epss/"
           },
-          "score": 0.00045,
+          "score": 0.00052,
           "method": "other"
         }
       ],
-      "description": "A flaw was found in glib. An integer overflow during temporary file creation leads to an out-of-bounds memory access, allowing an attacker to potentially perform path traversal or access private temporary file content by creating symbolic links. This vulnerability allows a local attacker to manipulate file paths and access unauthorized data. The core issue stems from insufficient validation of file path lengths during temporary file operations.",
+      "description": "A flaw was found in GnuPG. In affected versions, if a user chooses to import a certificate with certain crafted subkey data that lacks a valid backsig or that has incorrect usage flags, the user loses the ability to verify signatures made from certain other signing keys, leading to a verification denial of service.",
       "affects": [
         {
-          "ref": "pkg:rpm/rocky/glib2@2.56.4-168.el8_10?arch=x86_64&distro=rocky-8.10&package-id=b4049772963f47f0&upstream=glib2-2.56.4-168.el8_10.src.rpm"
+          "ref": "pkg:rpm/rocky/gnupg2@2.2.20-4.el8_10?arch=x86_64&distro=rocky-8.10&package-id=b7800c6750c79e18&upstream=gnupg2-2.2.20-4.el8_10.src.rpm"
         }
       ]
     },
     {
-      "bom-ref": "urn:uuid:a7e30fec-74e8-48c5-8813-6a14c094a56e",
+      "bom-ref": "urn:uuid:a6e882c6-e9e4-415d-9288-b0434d66fec4",
+      "id": "CVE-2025-30258",
+      "source": {
+        "name": "redhat-distro-redhat-8",
+        "url": "https://access.redhat.com/security/cve/CVE-2025-30258"
+      },
+      "references": [
+        {
+          "id": "CVE-2025-30258",
+          "source": {
+            "name": "redhat-distro-redhat-8",
+            "url": "https://access.redhat.com/security/cve/CVE-2025-30258"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 2.7,
+          "severity": "low",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:C/C:N/I:N/A:L"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00052,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in GnuPG. In affected versions, if a user chooses to import a certificate with certain crafted subkey data that lacks a valid backsig or that has incorrect usage flags, the user loses the ability to verify signatures made from certain other signing keys, leading to a verification denial of service.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/gnupg2-smime@2.2.20-4.el8_10?arch=x86_64&distro=rocky-8.10&package-id=00bbe0dc73aea054&upstream=gnupg2-2.2.20-4.el8_10.src.rpm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:cdc77cf9-b55e-4737-a226-b285e77b900f",
       "id": "CVE-2023-4156",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -66310,85 +66505,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:48ac93c7-8a86-4bc4-ab98-955999bfa165",
-      "id": "CVE-2025-30258",
-      "source": {
-        "name": "redhat-distro-redhat-8",
-        "url": "https://access.redhat.com/security/cve/CVE-2025-30258"
-      },
-      "references": [
-        {
-          "id": "CVE-2025-30258",
-          "source": {
-            "name": "redhat-distro-redhat-8",
-            "url": "https://access.redhat.com/security/cve/CVE-2025-30258"
-          }
-        }
-      ],
-      "ratings": [
-        {
-          "score": 2.7,
-          "severity": "low",
-          "method": "CVSSv31",
-          "vector": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:C/C:N/I:N/A:L"
-        },
-        {
-          "source": {
-            "name": "FIRST",
-            "url": "https://www.first.org/epss/"
-          },
-          "score": 0.00046,
-          "method": "other"
-        }
-      ],
-      "description": "A flaw was found in GnuPG. In affected versions, if a user chooses to import a certificate with certain crafted subkey data that lacks a valid backsig or that has incorrect usage flags, the user loses the ability to verify signatures made from certain other signing keys, leading to a verification denial of service.",
-      "affects": [
-        {
-          "ref": "pkg:rpm/rocky/gnupg2@2.2.20-4.el8_10?arch=x86_64&distro=rocky-8.10&package-id=b7800c6750c79e18&upstream=gnupg2-2.2.20-4.el8_10.src.rpm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "urn:uuid:7a52b937-b75d-4f92-98ac-64dcca9214c5",
-      "id": "CVE-2025-30258",
-      "source": {
-        "name": "redhat-distro-redhat-8",
-        "url": "https://access.redhat.com/security/cve/CVE-2025-30258"
-      },
-      "references": [
-        {
-          "id": "CVE-2025-30258",
-          "source": {
-            "name": "redhat-distro-redhat-8",
-            "url": "https://access.redhat.com/security/cve/CVE-2025-30258"
-          }
-        }
-      ],
-      "ratings": [
-        {
-          "score": 2.7,
-          "severity": "low",
-          "method": "CVSSv31",
-          "vector": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:C/C:N/I:N/A:L"
-        },
-        {
-          "source": {
-            "name": "FIRST",
-            "url": "https://www.first.org/epss/"
-          },
-          "score": 0.00046,
-          "method": "other"
-        }
-      ],
-      "description": "A flaw was found in GnuPG. In affected versions, if a user chooses to import a certificate with certain crafted subkey data that lacks a valid backsig or that has incorrect usage flags, the user loses the ability to verify signatures made from certain other signing keys, leading to a verification denial of service.",
-      "affects": [
-        {
-          "ref": "pkg:rpm/rocky/gnupg2-smime@2.2.20-4.el8_10?arch=x86_64&distro=rocky-8.10&package-id=00bbe0dc73aea054&upstream=gnupg2-2.2.20-4.el8_10.src.rpm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "urn:uuid:f9372d1f-195c-4aeb-9058-6cac1a779596",
+      "bom-ref": "urn:uuid:39507acc-c91e-412a-993e-b260d599d15a",
       "id": "CVE-2025-25724",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -66427,7 +66544,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:2d094a37-399b-4c49-a405-836e10c76ce8",
+      "bom-ref": "urn:uuid:c797f40f-7dc6-4b77-8c33-7a66200dd98b",
       "id": "CVE-2026-42011",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -66466,7 +66583,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:17ad041d-68b4-4d61-bfcc-68f67e11ee0c",
+      "bom-ref": "urn:uuid:5b7360d4-2894-4fbf-8df2-0ab779cd2b38",
       "id": "CVE-2026-29111",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -66505,7 +66622,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:a0a340d6-7fcd-43f5-89b2-55103e3ad14f",
+      "bom-ref": "urn:uuid:e1de2948-7b90-4185-90e5-71c37c3d543c",
       "id": "CVE-2026-29111",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -66544,7 +66661,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:52a64022-a039-4876-95fe-aa24bd8f986e",
+      "bom-ref": "urn:uuid:8cebd9a4-ed06-404f-8f48-8fc65988a53e",
       "id": "CVE-2026-29111",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -66583,7 +66700,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:18c484ad-d947-4860-91d0-2f78284f470a",
+      "bom-ref": "urn:uuid:2c67fd28-8eac-4f20-9be9-9d299c35eae5",
       "id": "CVE-2026-3784",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -66622,7 +66739,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:b03e29a6-6c76-41dd-a3f7-24cce474d0ac",
+      "bom-ref": "urn:uuid:b7a13948-991f-4a95-9c84-cfc9ef5778f7",
       "id": "CVE-2026-3784",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -66661,7 +66778,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:604e33cd-9578-4c39-ac2b-6becab204039",
+      "bom-ref": "urn:uuid:f93d4109-d52f-49de-9981-822a41e8544b",
       "id": "CVE-2025-60753",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -66700,124 +66817,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:6e0ee298-ec08-4ab4-8402-a40a40719a89",
-      "id": "CVE-2026-22185",
-      "source": {
-        "name": "redhat-distro-redhat-8",
-        "url": "https://access.redhat.com/security/cve/CVE-2026-22185"
-      },
-      "references": [
-        {
-          "id": "CVE-2026-22185",
-          "source": {
-            "name": "redhat-distro-redhat-8",
-            "url": "https://access.redhat.com/security/cve/CVE-2026-22185"
-          }
-        }
-      ],
-      "ratings": [
-        {
-          "score": 6.8,
-          "severity": "medium",
-          "method": "CVSSv31",
-          "vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:H"
-        },
-        {
-          "source": {
-            "name": "FIRST",
-            "url": "https://www.first.org/epss/"
-          },
-          "score": 0.00021,
-          "method": "other"
-        }
-      ],
-      "description": "A flaw was found in OpenLDAP Lightning Memory-Mapped Database (LMDB) mdb_load. When processing malformed input, a local attacker can exploit a heap buffer underflow vulnerability in the readline() function. This can lead to an out-of-bounds read, potentially causing a denial of service (DoS) and limited disclosure of heap memory contents.",
-      "affects": [
-        {
-          "ref": "pkg:rpm/rocky/openldap@2.4.46-21.el8_10?arch=x86_64&distro=rocky-8.10&package-id=c60c1f93b15e634f&upstream=openldap-2.4.46-21.el8_10.src.rpm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "urn:uuid:612e1a2d-e169-4271-83e6-4e3937a20ecc",
-      "id": "CVE-2025-14524",
-      "source": {
-        "name": "redhat-distro-redhat-8",
-        "url": "https://access.redhat.com/security/cve/CVE-2025-14524"
-      },
-      "references": [
-        {
-          "id": "CVE-2025-14524",
-          "source": {
-            "name": "redhat-distro-redhat-8",
-            "url": "https://access.redhat.com/security/cve/CVE-2025-14524"
-          }
-        }
-      ],
-      "ratings": [
-        {
-          "score": 6.5,
-          "severity": "low",
-          "method": "CVSSv31",
-          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N"
-        },
-        {
-          "source": {
-            "name": "FIRST",
-            "url": "https://www.first.org/epss/"
-          },
-          "score": 0.00026,
-          "method": "other"
-        }
-      ],
-      "description": "A flaw was found in curl. When an OAuth2 (Open Authorization) bearer token is used for an HTTP(S) transfer, and that transfer performs a cross-protocol redirect to a different scheme like IMAP, LDAP, POP3, or SMTP, curl might incorrectly pass the bearer token to the new target host. This could lead to information disclosure, where sensitive authentication tokens are exposed to unintended recipients.",
-      "affects": [
-        {
-          "ref": "pkg:rpm/rocky/curl@7.61.1-34.el8_10.11?arch=x86_64&distro=rocky-8.10&package-id=1c05d3793ae7c8dc&upstream=curl-7.61.1-34.el8_10.11.src.rpm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "urn:uuid:52362ff0-a8c7-4a5d-b341-a0d3cc8ba97e",
-      "id": "CVE-2025-14524",
-      "source": {
-        "name": "redhat-distro-redhat-8",
-        "url": "https://access.redhat.com/security/cve/CVE-2025-14524"
-      },
-      "references": [
-        {
-          "id": "CVE-2025-14524",
-          "source": {
-            "name": "redhat-distro-redhat-8",
-            "url": "https://access.redhat.com/security/cve/CVE-2025-14524"
-          }
-        }
-      ],
-      "ratings": [
-        {
-          "score": 6.5,
-          "severity": "low",
-          "method": "CVSSv31",
-          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N"
-        },
-        {
-          "source": {
-            "name": "FIRST",
-            "url": "https://www.first.org/epss/"
-          },
-          "score": 0.00026,
-          "method": "other"
-        }
-      ],
-      "description": "A flaw was found in curl. When an OAuth2 (Open Authorization) bearer token is used for an HTTP(S) transfer, and that transfer performs a cross-protocol redirect to a different scheme like IMAP, LDAP, POP3, or SMTP, curl might incorrectly pass the bearer token to the new target host. This could lead to information disclosure, where sensitive authentication tokens are exposed to unintended recipients.",
-      "affects": [
-        {
-          "ref": "pkg:rpm/rocky/libcurl-minimal@7.61.1-34.el8_10.11?arch=x86_64&distro=rocky-8.10&package-id=134156cea513795e&upstream=curl-7.61.1-34.el8_10.11.src.rpm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "urn:uuid:2c4dba84-4f7b-4030-8bd1-80bd8979cf32",
+      "bom-ref": "urn:uuid:e6078a33-fbdc-4983-ab8e-6573b2ef3503",
       "id": "CVE-2026-3783",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -66856,7 +66856,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:6e130c97-1302-4c2b-a9f3-81cb5012d043",
+      "bom-ref": "urn:uuid:07c0ca76-6457-422a-a0a8-eb9c379b7256",
       "id": "CVE-2026-3783",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -66895,85 +66895,46 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:949a9994-bfb8-47f0-82d7-f90cc39a06bf",
-      "id": "CVE-2026-31789",
+      "bom-ref": "urn:uuid:731d7fa8-f9aa-493e-b51f-d4abec3b4bf0",
+      "id": "CVE-2026-3832",
       "source": {
         "name": "redhat-distro-redhat-8",
-        "url": "https://access.redhat.com/security/cve/CVE-2026-31789"
+        "url": "https://access.redhat.com/security/cve/CVE-2026-3832"
       },
       "references": [
         {
-          "id": "CVE-2026-31789",
+          "id": "CVE-2026-3832",
           "source": {
             "name": "redhat-distro-redhat-8",
-            "url": "https://access.redhat.com/security/cve/CVE-2026-31789"
+            "url": "https://access.redhat.com/security/cve/CVE-2026-3832"
           }
         }
       ],
       "ratings": [
         {
-          "score": 5.8,
+          "score": 3.7,
           "severity": "low",
           "method": "CVSSv31",
-          "vector": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:L/I:L/A:H"
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N"
         },
         {
           "source": {
             "name": "FIRST",
             "url": "https://www.first.org/epss/"
           },
-          "score": 0.00026,
+          "score": 0.00036,
           "method": "other"
         }
       ],
-      "description": "A flaw was found in OpenSSL. This vulnerability, a heap buffer overflow, affects 32-bit systems when processing an unusually large X.509 certificate. If an application or service attempts to print or log such a specially crafted certificate, it could lead to a system crash or potentially allow an attacker to execute arbitrary code. This issue is considered low severity due to the specific conditions required for exploitation, including the need for an extremely large certificate and a 32-bit operating environment.",
+      "description": "A flaw was found in gnutls. A remote attacker could exploit this vulnerability by presenting a specially crafted Online Certificate Status Protocol (OCSP) response during a TLS handshake. Due to a logic error in how gnutls processes multi-record OCSP responses, a client with OCSP verification enabled may incorrectly accept a revoked server certificate, potentially leading to a compromise of trust.",
       "affects": [
         {
-          "ref": "pkg:rpm/rocky/openssl@1.1.1k-15.el8_10?arch=x86_64&distro=rocky-8.10&epoch=1&package-id=317eab9de5210360&upstream=openssl-1.1.1k-15.el8_10.src.rpm"
+          "ref": "pkg:rpm/rocky/gnutls@3.6.16-8.el8_10.5?arch=x86_64&distro=rocky-8.10&package-id=a1a40096d7e88303&upstream=gnutls-3.6.16-8.el8_10.5.src.rpm"
         }
       ]
     },
     {
-      "bom-ref": "urn:uuid:fcf71e25-9d4d-4b55-908b-2463b309370c",
-      "id": "CVE-2026-31789",
-      "source": {
-        "name": "redhat-distro-redhat-8",
-        "url": "https://access.redhat.com/security/cve/CVE-2026-31789"
-      },
-      "references": [
-        {
-          "id": "CVE-2026-31789",
-          "source": {
-            "name": "redhat-distro-redhat-8",
-            "url": "https://access.redhat.com/security/cve/CVE-2026-31789"
-          }
-        }
-      ],
-      "ratings": [
-        {
-          "score": 5.8,
-          "severity": "low",
-          "method": "CVSSv31",
-          "vector": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:L/I:L/A:H"
-        },
-        {
-          "source": {
-            "name": "FIRST",
-            "url": "https://www.first.org/epss/"
-          },
-          "score": 0.00026,
-          "method": "other"
-        }
-      ],
-      "description": "A flaw was found in OpenSSL. This vulnerability, a heap buffer overflow, affects 32-bit systems when processing an unusually large X.509 certificate. If an application or service attempts to print or log such a specially crafted certificate, it could lead to a system crash or potentially allow an attacker to execute arbitrary code. This issue is considered low severity due to the specific conditions required for exploitation, including the need for an extremely large certificate and a 32-bit operating environment.",
-      "affects": [
-        {
-          "ref": "pkg:rpm/rocky/openssl-libs@1.1.1k-15.el8_10?arch=x86_64&distro=rocky-8.10&epoch=1&package-id=3859f7a75ea97aa1&upstream=openssl-1.1.1k-15.el8_10.src.rpm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "urn:uuid:f277e480-cf5a-4001-ad59-4723e350146a",
+      "bom-ref": "urn:uuid:03831246-fb98-4c73-afec-84b7e82003ce",
       "id": "CVE-2026-41080",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -67012,7 +66973,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:8eb94582-0c30-409b-a98e-b4565e8026df",
+      "bom-ref": "urn:uuid:33303528-0ce4-4a4d-bfeb-217bdd578262",
       "id": "CVE-2025-68160",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -67051,7 +67012,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:dc6d0424-1841-48ca-a255-f4c9e2bb9a24",
+      "bom-ref": "urn:uuid:e50f31a0-8b28-41fa-a309-dc88dc8d4493",
       "id": "CVE-2025-68160",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -67090,46 +67051,85 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:226a5b28-0260-41a8-9c0b-b0f6f8e654b1",
-      "id": "CVE-2026-3832",
+      "bom-ref": "urn:uuid:e1c80f0d-7c3d-49b5-99a0-ee2cd47797e0",
+      "id": "CVE-2026-28388",
       "source": {
         "name": "redhat-distro-redhat-8",
-        "url": "https://access.redhat.com/security/cve/CVE-2026-3832"
+        "url": "https://access.redhat.com/security/cve/CVE-2026-28388"
       },
       "references": [
         {
-          "id": "CVE-2026-3832",
+          "id": "CVE-2026-28388",
           "source": {
             "name": "redhat-distro-redhat-8",
-            "url": "https://access.redhat.com/security/cve/CVE-2026-3832"
+            "url": "https://access.redhat.com/security/cve/CVE-2026-28388"
           }
         }
       ],
       "ratings": [
         {
-          "score": 3.7,
+          "score": 5.9,
           "severity": "low",
           "method": "CVSSv31",
-          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N"
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H"
         },
         {
           "source": {
             "name": "FIRST",
             "url": "https://www.first.org/epss/"
           },
-          "score": 0.0003,
+          "score": 0.00023,
           "method": "other"
         }
       ],
-      "description": "A flaw was found in gnutls. A remote attacker could exploit this vulnerability by presenting a specially crafted Online Certificate Status Protocol (OCSP) response during a TLS handshake. Due to a logic error in how gnutls processes multi-record OCSP responses, a client with OCSP verification enabled may incorrectly accept a revoked server certificate, potentially leading to a compromise of trust.",
+      "description": "A flaw was found in OpenSSL. When processing a malformed delta Certificate Revocation List (CRL) that lacks a required CRL Number extension, a NULL pointer dereference can occur. This vulnerability can be exploited by a remote attacker who provides a specially crafted delta CRL to an application that has delta CRL processing enabled, leading to a Denial of Service (DoS) for the application.",
       "affects": [
         {
-          "ref": "pkg:rpm/rocky/gnutls@3.6.16-8.el8_10.5?arch=x86_64&distro=rocky-8.10&package-id=a1a40096d7e88303&upstream=gnutls-3.6.16-8.el8_10.5.src.rpm"
+          "ref": "pkg:rpm/rocky/openssl@1.1.1k-15.el8_10?arch=x86_64&distro=rocky-8.10&epoch=1&package-id=317eab9de5210360&upstream=openssl-1.1.1k-15.el8_10.src.rpm"
         }
       ]
     },
     {
-      "bom-ref": "urn:uuid:950ca52d-0950-437b-809c-d7d71f12ba80",
+      "bom-ref": "urn:uuid:c5489df8-534b-4c80-b445-9816cc3a6494",
+      "id": "CVE-2026-28388",
+      "source": {
+        "name": "redhat-distro-redhat-8",
+        "url": "https://access.redhat.com/security/cve/CVE-2026-28388"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-28388",
+          "source": {
+            "name": "redhat-distro-redhat-8",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-28388"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 5.9,
+          "severity": "low",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00023,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in OpenSSL. When processing a malformed delta Certificate Revocation List (CRL) that lacks a required CRL Number extension, a NULL pointer dereference can occur. This vulnerability can be exploited by a remote attacker who provides a specially crafted delta CRL to an application that has delta CRL processing enabled, leading to a Denial of Service (DoS) for the application.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/openssl-libs@1.1.1k-15.el8_10?arch=x86_64&distro=rocky-8.10&epoch=1&package-id=3859f7a75ea97aa1&upstream=openssl-1.1.1k-15.el8_10.src.rpm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:5febf071-f933-4c94-adec-f09f1c87e22d",
       "id": "CVE-2025-15468",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -67168,7 +67168,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:c554f091-db13-4dc2-8ddf-6196e5f6de6c",
+      "bom-ref": "urn:uuid:8bb75228-3477-494b-997a-91906f823ccc",
       "id": "CVE-2025-15468",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -67207,7 +67207,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:4019ecfc-e4d7-4328-b089-7a708d684fe8",
+      "bom-ref": "urn:uuid:0d0d2163-dcde-4b55-9fe3-98c752f1f5c5",
       "id": "CVE-2026-41989",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -67246,7 +67246,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:0c19d637-16ba-489d-836f-4f5cc2d8abfd",
+      "bom-ref": "urn:uuid:48d1812c-6933-43a3-a47f-e971d585ad53",
       "id": "CVE-2026-1489",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -67285,7 +67285,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:e50d1984-d2a0-4bd6-ace9-74e482469f9c",
+      "bom-ref": "urn:uuid:8deb31e4-1316-4900-904f-0207671b7f2a",
       "id": "CVE-2025-6170",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -67324,85 +67324,46 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:2d51df45-1e3a-42a5-8eaf-c27bbe75393e",
-      "id": "CVE-2026-28388",
+      "bom-ref": "urn:uuid:cf91220c-3c8b-4207-a94e-f9bb76d9b99d",
+      "id": "CVE-2026-5745",
       "source": {
         "name": "redhat-distro-redhat-8",
-        "url": "https://access.redhat.com/security/cve/CVE-2026-28388"
+        "url": "https://access.redhat.com/security/cve/CVE-2026-5745"
       },
       "references": [
         {
-          "id": "CVE-2026-28388",
+          "id": "CVE-2026-5745",
           "source": {
             "name": "redhat-distro-redhat-8",
-            "url": "https://access.redhat.com/security/cve/CVE-2026-28388"
+            "url": "https://access.redhat.com/security/cve/CVE-2026-5745"
           }
         }
       ],
       "ratings": [
         {
-          "score": 5.9,
-          "severity": "low",
+          "score": 5.5,
+          "severity": "medium",
           "method": "CVSSv31",
-          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          "vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
         },
         {
           "source": {
             "name": "FIRST",
             "url": "https://www.first.org/epss/"
           },
-          "score": 0.00021,
+          "score": 0.00017,
           "method": "other"
         }
       ],
-      "description": "A flaw was found in OpenSSL. When processing a malformed delta Certificate Revocation List (CRL) that lacks a required CRL Number extension, a NULL pointer dereference can occur. This vulnerability can be exploited by a remote attacker who provides a specially crafted delta CRL to an application that has delta CRL processing enabled, leading to a Denial of Service (DoS) for the application.",
+      "description": "A flaw was found in libarchive. A NULL pointer dereference vulnerability exists in the ACL parsing logic, specifically within the archive_acl_from_text_nl() function. When processing a malformed ACL string (such as a bare \"d\" or \"default\" tag without subsequent fields), the function fails to perform adequate validation before advancing the pointer. An attacker can exploit this by providing a maliciously crafted archive, causing an application utilizing the libarchive API (such as bsdtar) to crash, resulting in a Denial of Service (DoS).",
       "affects": [
         {
-          "ref": "pkg:rpm/rocky/openssl@1.1.1k-15.el8_10?arch=x86_64&distro=rocky-8.10&epoch=1&package-id=317eab9de5210360&upstream=openssl-1.1.1k-15.el8_10.src.rpm"
+          "ref": "pkg:rpm/rocky/libarchive@3.3.3-7.el8_10?arch=x86_64&distro=rocky-8.10&package-id=244a311425bc25aa&upstream=libarchive-3.3.3-7.el8_10.src.rpm"
         }
       ]
     },
     {
-      "bom-ref": "urn:uuid:2fe3c3ed-8a26-4f5f-97ab-40f93e1f4cec",
-      "id": "CVE-2026-28388",
-      "source": {
-        "name": "redhat-distro-redhat-8",
-        "url": "https://access.redhat.com/security/cve/CVE-2026-28388"
-      },
-      "references": [
-        {
-          "id": "CVE-2026-28388",
-          "source": {
-            "name": "redhat-distro-redhat-8",
-            "url": "https://access.redhat.com/security/cve/CVE-2026-28388"
-          }
-        }
-      ],
-      "ratings": [
-        {
-          "score": 5.9,
-          "severity": "low",
-          "method": "CVSSv31",
-          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H"
-        },
-        {
-          "source": {
-            "name": "FIRST",
-            "url": "https://www.first.org/epss/"
-          },
-          "score": 0.00021,
-          "method": "other"
-        }
-      ],
-      "description": "A flaw was found in OpenSSL. When processing a malformed delta Certificate Revocation List (CRL) that lacks a required CRL Number extension, a NULL pointer dereference can occur. This vulnerability can be exploited by a remote attacker who provides a specially crafted delta CRL to an application that has delta CRL processing enabled, leading to a Denial of Service (DoS) for the application.",
-      "affects": [
-        {
-          "ref": "pkg:rpm/rocky/openssl-libs@1.1.1k-15.el8_10?arch=x86_64&distro=rocky-8.10&epoch=1&package-id=3859f7a75ea97aa1&upstream=openssl-1.1.1k-15.el8_10.src.rpm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "urn:uuid:07a9fe04-01d7-4c98-8860-7405f87870a2",
+      "bom-ref": "urn:uuid:33a94cd5-776f-4fc0-8700-7bb0a16bb6c8",
       "id": "CVE-2026-22795",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -67441,7 +67402,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:5cb19120-b83c-49a4-acd8-4e1c4a8761dd",
+      "bom-ref": "urn:uuid:4d3c92d3-7e7e-45e4-9cfe-a88e3dd35bb8",
       "id": "CVE-2026-22795",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -67480,7 +67441,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:0ad383a1-89e1-4e08-ae1c-97719c20b5d1",
+      "bom-ref": "urn:uuid:d2c90e6e-2b0d-4606-886e-ba9e8295d5c4",
       "id": "CVE-2021-24032",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -67519,46 +67480,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:38f3d26c-d12f-44b1-a2d3-77543ce6b91c",
-      "id": "CVE-2026-5745",
-      "source": {
-        "name": "redhat-distro-redhat-8",
-        "url": "https://access.redhat.com/security/cve/CVE-2026-5745"
-      },
-      "references": [
-        {
-          "id": "CVE-2026-5745",
-          "source": {
-            "name": "redhat-distro-redhat-8",
-            "url": "https://access.redhat.com/security/cve/CVE-2026-5745"
-          }
-        }
-      ],
-      "ratings": [
-        {
-          "score": 5.5,
-          "severity": "medium",
-          "method": "CVSSv31",
-          "vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
-        },
-        {
-          "source": {
-            "name": "FIRST",
-            "url": "https://www.first.org/epss/"
-          },
-          "score": 0.00016,
-          "method": "other"
-        }
-      ],
-      "description": "A flaw was found in libarchive. A NULL pointer dereference vulnerability exists in the ACL parsing logic, specifically within the archive_acl_from_text_nl() function. When processing a malformed ACL string (such as a bare \"d\" or \"default\" tag without subsequent fields), the function fails to perform adequate validation before advancing the pointer. An attacker can exploit this by providing a maliciously crafted archive, causing an application utilizing the libarchive API (such as bsdtar) to crash, resulting in a Denial of Service (DoS).",
-      "affects": [
-        {
-          "ref": "pkg:rpm/rocky/libarchive@3.3.3-7.el8_10?arch=x86_64&distro=rocky-8.10&package-id=244a311425bc25aa&upstream=libarchive-3.3.3-7.el8_10.src.rpm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "urn:uuid:86601dd0-243b-4843-b894-e0862091a0b6",
+      "bom-ref": "urn:uuid:7d750112-6639-4ad1-83fb-f6a0add82924",
       "id": "CVE-2026-1484",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -67597,7 +67519,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:67d604ed-812c-4939-9e2e-e6b56d96337c",
+      "bom-ref": "urn:uuid:aa5b3a63-4c70-479d-9202-5776e2591103",
       "id": "CVE-2026-27456",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -67636,7 +67558,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:60c59b4a-5014-4bd6-9367-7bd20252596f",
+      "bom-ref": "urn:uuid:bbae3100-5407-46bf-b3e3-e75d43baa4dc",
       "id": "CVE-2026-27456",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -67675,7 +67597,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:cdcb175e-135c-4a4e-a548-94ed2ff3f9b8",
+      "bom-ref": "urn:uuid:80337c39-4f39-4310-8125-fe52fba173f7",
       "id": "CVE-2026-27456",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -67714,7 +67636,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:6babe48d-6ada-4043-8350-f87c3bfddfea",
+      "bom-ref": "urn:uuid:c8082da1-bd98-4d1e-9404-004630cad0e1",
       "id": "CVE-2026-27456",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -67753,7 +67675,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:fbdd435d-75a6-409b-96c3-117740282a03",
+      "bom-ref": "urn:uuid:b16c2cda-a67c-48e8-824a-1a4f11abec5f",
       "id": "CVE-2026-27456",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -67792,7 +67714,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:f78439b6-96d2-4c2a-a569-86a3232398f3",
+      "bom-ref": "urn:uuid:79930e9f-60d2-4e0c-8b40-e1d4bb70deff",
       "id": "CVE-2026-27456",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -67831,7 +67753,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:bd7ab8cf-1111-49cd-a8ae-0ec999583660",
+      "bom-ref": "urn:uuid:941a9eac-cbf5-409f-ad6e-688ad646dec7",
       "id": "CVE-2025-1632",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -67870,7 +67792,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:8e57c3ab-457f-4553-a136-31c060396ccc",
+      "bom-ref": "urn:uuid:04a84f07-7c77-4e05-ad4b-51a426c42080",
       "id": "CVE-2026-2673",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -67909,7 +67831,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:08432af1-f373-4e14-bc3b-58caf25aecac",
+      "bom-ref": "urn:uuid:91306796-412a-4ea9-acfb-430f622fb73c",
       "id": "CVE-2026-2673",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -67948,7 +67870,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:fa15117c-24de-4b4c-ba38-66d1609cf5a7",
+      "bom-ref": "urn:uuid:5a63eaf3-110d-42d3-aff5-f363df7129ed",
       "id": "CVE-2024-57970",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -67987,7 +67909,124 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:bc9fba7d-69ac-4707-a499-a9a74f717061",
+      "bom-ref": "urn:uuid:39ef3802-cb52-46fb-a3c2-4083ab8b68b7",
+      "id": "CVE-2026-4878",
+      "source": {
+        "name": "redhat-distro-redhat-8",
+        "url": "https://access.redhat.com/security/cve/CVE-2026-4878"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-4878",
+          "source": {
+            "name": "redhat-distro-redhat-8",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-4878"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 6.7,
+          "severity": "high",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.0001,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in libcap. A local unprivileged user can exploit a Time-of-check-to-time-of-use (TOCTOU) race condition in the `cap_set_file()` function. This allows an attacker with write access to a parent directory to redirect file capability updates to an attacker-controlled file. By doing so, capabilities can be injected into or stripped from unintended executables, leading to privilege escalation.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/libcap@2.48-6.el8_9?arch=x86_64&distro=rocky-8.10&package-id=fa74cbf20c293cdb&upstream=libcap-2.48-6.el8_9.src.rpm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:aa62d004-cd6e-4aa5-ac40-a0b315a57737",
+      "id": "CVE-2025-13034",
+      "source": {
+        "name": "redhat-distro-redhat-8",
+        "url": "https://access.redhat.com/security/cve/CVE-2025-13034"
+      },
+      "references": [
+        {
+          "id": "CVE-2025-13034",
+          "source": {
+            "name": "redhat-distro-redhat-8",
+            "url": "https://access.redhat.com/security/cve/CVE-2025-13034"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 6.8,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:N"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00012,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in curl. When configured to use public key pinning with QUIC connections and GnuTLS, and with standard certificate verification explicitly disabled, curl could bypass the intended public key check. This oversight allows a malicious server to impersonate a legitimate one, potentially leading to unauthorized access or information disclosure due to a failure in verifying the server's identity.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/curl@7.61.1-34.el8_10.11?arch=x86_64&distro=rocky-8.10&package-id=1c05d3793ae7c8dc&upstream=curl-7.61.1-34.el8_10.11.src.rpm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:6e35cf54-df8d-4d7e-a85d-8b4f77f3b806",
+      "id": "CVE-2025-13034",
+      "source": {
+        "name": "redhat-distro-redhat-8",
+        "url": "https://access.redhat.com/security/cve/CVE-2025-13034"
+      },
+      "references": [
+        {
+          "id": "CVE-2025-13034",
+          "source": {
+            "name": "redhat-distro-redhat-8",
+            "url": "https://access.redhat.com/security/cve/CVE-2025-13034"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 6.8,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:N"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00012,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in curl. When configured to use public key pinning with QUIC connections and GnuTLS, and with standard certificate verification explicitly disabled, curl could bypass the intended public key check. This oversight allows a malicious server to impersonate a legitimate one, potentially leading to unauthorized access or information disclosure due to a failure in verifying the server's identity.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/libcurl-minimal@7.61.1-34.el8_10.11?arch=x86_64&distro=rocky-8.10&package-id=134156cea513795e&upstream=curl-7.61.1-34.el8_10.11.src.rpm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:53381886-0a6e-4214-ad86-813d3bb59941",
       "id": "CVE-2026-0989",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -68026,7 +68065,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:75389a1a-07b3-41e2-a2bb-e353fc6285b5",
+      "bom-ref": "urn:uuid:8889d9b0-0a68-45e3-b535-070d7f711993",
       "id": "CVE-2024-0232",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -68065,7 +68104,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:aa752501-4b82-4b31-b1fc-875661e15e85",
+      "bom-ref": "urn:uuid:84a3ccea-90e3-4518-b00e-c76979807413",
       "id": "CVE-2022-3219",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -68104,7 +68143,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:33079561-a931-4ac9-a488-4ad8fa5a529c",
+      "bom-ref": "urn:uuid:c506080b-6e4a-4eb7-975f-ed3956c6b7ef",
       "id": "CVE-2022-3219",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -68143,85 +68182,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:cd0fd4ff-851d-4e2b-982b-ca758e09fdcc",
-      "id": "CVE-2025-13034",
-      "source": {
-        "name": "redhat-distro-redhat-8",
-        "url": "https://access.redhat.com/security/cve/CVE-2025-13034"
-      },
-      "references": [
-        {
-          "id": "CVE-2025-13034",
-          "source": {
-            "name": "redhat-distro-redhat-8",
-            "url": "https://access.redhat.com/security/cve/CVE-2025-13034"
-          }
-        }
-      ],
-      "ratings": [
-        {
-          "score": 6.8,
-          "severity": "medium",
-          "method": "CVSSv31",
-          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:N"
-        },
-        {
-          "source": {
-            "name": "FIRST",
-            "url": "https://www.first.org/epss/"
-          },
-          "score": 0.00011,
-          "method": "other"
-        }
-      ],
-      "description": "A flaw was found in curl. When configured to use public key pinning with QUIC connections and GnuTLS, and with standard certificate verification explicitly disabled, curl could bypass the intended public key check. This oversight allows a malicious server to impersonate a legitimate one, potentially leading to unauthorized access or information disclosure due to a failure in verifying the server's identity.",
-      "affects": [
-        {
-          "ref": "pkg:rpm/rocky/curl@7.61.1-34.el8_10.11?arch=x86_64&distro=rocky-8.10&package-id=1c05d3793ae7c8dc&upstream=curl-7.61.1-34.el8_10.11.src.rpm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "urn:uuid:5059f74d-d483-4d48-9505-5f44fc90d2ca",
-      "id": "CVE-2025-13034",
-      "source": {
-        "name": "redhat-distro-redhat-8",
-        "url": "https://access.redhat.com/security/cve/CVE-2025-13034"
-      },
-      "references": [
-        {
-          "id": "CVE-2025-13034",
-          "source": {
-            "name": "redhat-distro-redhat-8",
-            "url": "https://access.redhat.com/security/cve/CVE-2025-13034"
-          }
-        }
-      ],
-      "ratings": [
-        {
-          "score": 6.8,
-          "severity": "medium",
-          "method": "CVSSv31",
-          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:N"
-        },
-        {
-          "source": {
-            "name": "FIRST",
-            "url": "https://www.first.org/epss/"
-          },
-          "score": 0.00011,
-          "method": "other"
-        }
-      ],
-      "description": "A flaw was found in curl. When configured to use public key pinning with QUIC connections and GnuTLS, and with standard certificate verification explicitly disabled, curl could bypass the intended public key check. This oversight allows a malicious server to impersonate a legitimate one, potentially leading to unauthorized access or information disclosure due to a failure in verifying the server's identity.",
-      "affects": [
-        {
-          "ref": "pkg:rpm/rocky/libcurl-minimal@7.61.1-34.el8_10.11?arch=x86_64&distro=rocky-8.10&package-id=134156cea513795e&upstream=curl-7.61.1-34.el8_10.11.src.rpm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "urn:uuid:e333c96d-f5b9-4571-b523-9c36c9bde09c",
+      "bom-ref": "urn:uuid:b4edb6ce-13a4-45dc-b3ff-a4e8c4299f97",
       "id": "CVE-2026-0992",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -68260,7 +68221,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:f8dbc407-080c-4bcb-8111-511150f8c8ce",
+      "bom-ref": "urn:uuid:de0ec81e-90b7-49de-8529-1dd1c830604d",
       "id": "CVE-2026-4105",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -68287,7 +68248,7 @@
             "name": "FIRST",
             "url": "https://www.first.org/epss/"
           },
-          "score": 0.0001,
+          "score": 0.00009,
           "method": "other"
         }
       ],
@@ -68299,7 +68260,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:b3e7c383-3c68-4e30-8fec-75327f3fd41b",
+      "bom-ref": "urn:uuid:0240775f-ea84-4e73-ba00-42f4bc6ef749",
       "id": "CVE-2026-4105",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -68326,7 +68287,7 @@
             "name": "FIRST",
             "url": "https://www.first.org/epss/"
           },
-          "score": 0.0001,
+          "score": 0.00009,
           "method": "other"
         }
       ],
@@ -68338,7 +68299,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:f2421b79-f959-423e-a17a-a35d2d493510",
+      "bom-ref": "urn:uuid:920c8ad4-8f29-45ba-8ff2-15ac046f07b9",
       "id": "CVE-2026-4105",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -68365,7 +68326,7 @@
             "name": "FIRST",
             "url": "https://www.first.org/epss/"
           },
-          "score": 0.0001,
+          "score": 0.00009,
           "method": "other"
         }
       ],
@@ -68377,46 +68338,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:a6d76eb2-2cfe-40f8-83b5-c4a745ba5736",
-      "id": "CVE-2026-4878",
-      "source": {
-        "name": "redhat-distro-redhat-8",
-        "url": "https://access.redhat.com/security/cve/CVE-2026-4878"
-      },
-      "references": [
-        {
-          "id": "CVE-2026-4878",
-          "source": {
-            "name": "redhat-distro-redhat-8",
-            "url": "https://access.redhat.com/security/cve/CVE-2026-4878"
-          }
-        }
-      ],
-      "ratings": [
-        {
-          "score": 6.7,
-          "severity": "high",
-          "method": "CVSSv31",
-          "vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H"
-        },
-        {
-          "source": {
-            "name": "FIRST",
-            "url": "https://www.first.org/epss/"
-          },
-          "score": 0.00008,
-          "method": "other"
-        }
-      ],
-      "description": "A flaw was found in libcap. A local unprivileged user can exploit a Time-of-check-to-time-of-use (TOCTOU) race condition in the `cap_set_file()` function. This allows an attacker with write access to a parent directory to redirect file capability updates to an attacker-controlled file. By doing so, capabilities can be injected into or stripped from unintended executables, leading to privilege escalation.",
-      "affects": [
-        {
-          "ref": "pkg:rpm/rocky/libcap@2.48-6.el8_9?arch=x86_64&distro=rocky-8.10&package-id=fa74cbf20c293cdb&upstream=libcap-2.48-6.el8_9.src.rpm"
-        }
-      ]
-    },
-    {
-      "bom-ref": "urn:uuid:aac988ca-2d0d-42c4-b683-5eea2b6e0067",
+      "bom-ref": "urn:uuid:2ab84b75-88ad-4c06-ba99-71288aeff1ae",
       "id": "CVE-2025-9714",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -68455,7 +68377,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:4ddb61bb-48af-4c4a-882e-7ca7d1701955",
+      "bom-ref": "urn:uuid:331fe4c9-093c-46ea-b928-a18aff0df45e",
       "id": "CVE-2026-1757",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -68494,7 +68416,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:ac3e3984-aa90-44f4-ac18-7ac41c08af49",
+      "bom-ref": "urn:uuid:a2862a48-2e44-41bd-b8cd-4c26c9224086",
       "id": "CVE-2026-41990",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -68533,7 +68455,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:166daba2-e6a3-4e2f-a637-bf1d4d6d0329",
+      "bom-ref": "urn:uuid:49af7e70-36ca-4b20-84ec-47ffad063860",
       "id": "CVE-2026-24883",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -68572,7 +68494,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:93253606-0b8d-4245-bbe0-d284b4507d88",
+      "bom-ref": "urn:uuid:6ec3e55c-4254-473f-a016-144faae90a77",
       "id": "CVE-2026-24883",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -68611,7 +68533,85 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:543c59e5-c8ec-4499-b1c8-be76dc8770d2",
+      "bom-ref": "urn:uuid:b5168494-83d7-4f5e-9dca-41130cdf4ad2",
+      "id": "CVE-2025-14017",
+      "source": {
+        "name": "redhat-distro-redhat-8",
+        "url": "https://access.redhat.com/security/cve/CVE-2025-14017"
+      },
+      "references": [
+        {
+          "id": "CVE-2025-14017",
+          "source": {
+            "name": "redhat-distro-redhat-8",
+            "url": "https://access.redhat.com/security/cve/CVE-2025-14017"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 4.8,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.0001,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in curl. When performing multi-threaded LDAPS (Lightweight Directory Access Protocol Secure) transfers, changes to Transport Layer Security (TLS) options in one thread could inadvertently apply globally, affecting other concurrent transfers. This could lead to unintended security posture changes, such as disabling certificate verification for other threads. This vulnerability can result in a security bypass, where expected security checks are not performed.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/curl@7.61.1-34.el8_10.11?arch=x86_64&distro=rocky-8.10&package-id=1c05d3793ae7c8dc&upstream=curl-7.61.1-34.el8_10.11.src.rpm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:44e51805-836f-4ad3-80ac-6f61fc3ca456",
+      "id": "CVE-2025-14017",
+      "source": {
+        "name": "redhat-distro-redhat-8",
+        "url": "https://access.redhat.com/security/cve/CVE-2025-14017"
+      },
+      "references": [
+        {
+          "id": "CVE-2025-14017",
+          "source": {
+            "name": "redhat-distro-redhat-8",
+            "url": "https://access.redhat.com/security/cve/CVE-2025-14017"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 4.8,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.0001,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in curl. When performing multi-threaded LDAPS (Lightweight Directory Access Protocol Secure) transfers, changes to Transport Layer Security (TLS) options in one thread could inadvertently apply globally, affecting other concurrent transfers. This could lead to unintended security posture changes, such as disabling certificate verification for other threads. This vulnerability can result in a security bypass, where expected security checks are not performed.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/libcurl-minimal@7.61.1-34.el8_10.11?arch=x86_64&distro=rocky-8.10&package-id=134156cea513795e&upstream=curl-7.61.1-34.el8_10.11.src.rpm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:f1fc9261-c2d2-4b1e-a31c-c6407ebe635f",
       "id": "CVE-2024-25260",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -68650,7 +68650,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:ec8d69dd-0f70-41a6-86d2-7c5285d1bd86",
+      "bom-ref": "urn:uuid:4c42c5c6-ec7e-4902-aab4-0d5cb49b5802",
       "id": "CVE-2024-25260",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -68689,7 +68689,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:e3803cc7-b1ee-494c-b87b-1b20aa261e4c",
+      "bom-ref": "urn:uuid:1c7b7e30-e18b-4df5-9b95-d306b789a1ce",
       "id": "CVE-2024-25260",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -68728,7 +68728,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:5db6e62b-4f8a-497d-bcfa-fd81fa9dee7c",
+      "bom-ref": "urn:uuid:555b3d23-0dd5-4365-971a-8f13fe214fdb",
       "id": "CVE-2024-25260",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -68767,27 +68767,27 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:1bbb2e0d-3f53-43ac-aaa8-77772626ff6b",
-      "id": "CVE-2025-14017",
+      "bom-ref": "urn:uuid:6aa5b70a-ca19-48e1-ae17-4fd36b88679c",
+      "id": "CVE-2026-31789",
       "source": {
         "name": "redhat-distro-redhat-8",
-        "url": "https://access.redhat.com/security/cve/CVE-2025-14017"
+        "url": "https://access.redhat.com/security/cve/CVE-2026-31789"
       },
       "references": [
         {
-          "id": "CVE-2025-14017",
+          "id": "CVE-2026-31789",
           "source": {
             "name": "redhat-distro-redhat-8",
-            "url": "https://access.redhat.com/security/cve/CVE-2025-14017"
+            "url": "https://access.redhat.com/security/cve/CVE-2026-31789"
           }
         }
       ],
       "ratings": [
         {
-          "score": 4.8,
-          "severity": "medium",
+          "score": 5.8,
+          "severity": "low",
           "method": "CVSSv31",
-          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N"
+          "vector": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:L/I:L/A:H"
         },
         {
           "source": {
@@ -68798,35 +68798,35 @@
           "method": "other"
         }
       ],
-      "description": "A flaw was found in curl. When performing multi-threaded LDAPS (Lightweight Directory Access Protocol Secure) transfers, changes to Transport Layer Security (TLS) options in one thread could inadvertently apply globally, affecting other concurrent transfers. This could lead to unintended security posture changes, such as disabling certificate verification for other threads. This vulnerability can result in a security bypass, where expected security checks are not performed.",
+      "description": "A flaw was found in OpenSSL. This vulnerability, a heap buffer overflow, affects 32-bit systems when processing an unusually large X.509 certificate. If an application or service attempts to print or log such a specially crafted certificate, it could lead to a system crash or potentially allow an attacker to execute arbitrary code. This issue is considered low severity due to the specific conditions required for exploitation, including the need for an extremely large certificate and a 32-bit operating environment.",
       "affects": [
         {
-          "ref": "pkg:rpm/rocky/curl@7.61.1-34.el8_10.11?arch=x86_64&distro=rocky-8.10&package-id=1c05d3793ae7c8dc&upstream=curl-7.61.1-34.el8_10.11.src.rpm"
+          "ref": "pkg:rpm/rocky/openssl@1.1.1k-15.el8_10?arch=x86_64&distro=rocky-8.10&epoch=1&package-id=317eab9de5210360&upstream=openssl-1.1.1k-15.el8_10.src.rpm"
         }
       ]
     },
     {
-      "bom-ref": "urn:uuid:f576f1d9-d899-41b4-aaef-90a5a19999f5",
-      "id": "CVE-2025-14017",
+      "bom-ref": "urn:uuid:c1c63eb7-ada4-40f2-b7ee-71a95646c0d6",
+      "id": "CVE-2026-31789",
       "source": {
         "name": "redhat-distro-redhat-8",
-        "url": "https://access.redhat.com/security/cve/CVE-2025-14017"
+        "url": "https://access.redhat.com/security/cve/CVE-2026-31789"
       },
       "references": [
         {
-          "id": "CVE-2025-14017",
+          "id": "CVE-2026-31789",
           "source": {
             "name": "redhat-distro-redhat-8",
-            "url": "https://access.redhat.com/security/cve/CVE-2025-14017"
+            "url": "https://access.redhat.com/security/cve/CVE-2026-31789"
           }
         }
       ],
       "ratings": [
         {
-          "score": 4.8,
-          "severity": "medium",
+          "score": 5.8,
+          "severity": "low",
           "method": "CVSSv31",
-          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N"
+          "vector": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:L/I:L/A:H"
         },
         {
           "source": {
@@ -68837,15 +68837,15 @@
           "method": "other"
         }
       ],
-      "description": "A flaw was found in curl. When performing multi-threaded LDAPS (Lightweight Directory Access Protocol Secure) transfers, changes to Transport Layer Security (TLS) options in one thread could inadvertently apply globally, affecting other concurrent transfers. This could lead to unintended security posture changes, such as disabling certificate verification for other threads. This vulnerability can result in a security bypass, where expected security checks are not performed.",
+      "description": "A flaw was found in OpenSSL. This vulnerability, a heap buffer overflow, affects 32-bit systems when processing an unusually large X.509 certificate. If an application or service attempts to print or log such a specially crafted certificate, it could lead to a system crash or potentially allow an attacker to execute arbitrary code. This issue is considered low severity due to the specific conditions required for exploitation, including the need for an extremely large certificate and a 32-bit operating environment.",
       "affects": [
         {
-          "ref": "pkg:rpm/rocky/libcurl-minimal@7.61.1-34.el8_10.11?arch=x86_64&distro=rocky-8.10&package-id=134156cea513795e&upstream=curl-7.61.1-34.el8_10.11.src.rpm"
+          "ref": "pkg:rpm/rocky/openssl-libs@1.1.1k-15.el8_10?arch=x86_64&distro=rocky-8.10&epoch=1&package-id=3859f7a75ea97aa1&upstream=openssl-1.1.1k-15.el8_10.src.rpm"
         }
       ]
     },
     {
-      "bom-ref": "urn:uuid:36e57442-a092-403a-a210-0e38d88f0e7a",
+      "bom-ref": "urn:uuid:2089f382-b7f8-4c2a-b453-e6775d995658",
       "id": "CVE-2026-27171",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -68884,7 +68884,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:ce121dd8-e963-4f00-8931-d77e88b06990",
+      "bom-ref": "urn:uuid:6d5df52b-5b78-4d42-a9dc-d9858a176fa8",
       "id": "CVE-2026-32776",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -68923,7 +68923,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:b48d016f-2729-4f4d-9d12-776c14931f48",
+      "bom-ref": "urn:uuid:546f0553-e114-466f-a7ef-54f1136cec82",
       "id": "CVE-2025-69418",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -68962,7 +68962,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:4f496f20-7b36-4eca-be05-d6fcce286623",
+      "bom-ref": "urn:uuid:3415015d-ec61-40fb-9896-54c33ab636ce",
       "id": "CVE-2025-69418",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -69001,7 +69001,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:63e86435-9f1b-4e8b-9529-f51c6dd66614",
+      "bom-ref": "urn:uuid:e9f293b5-057b-47fc-902c-41bf858ea027",
       "id": "CVE-2025-68972",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -69040,7 +69040,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:12784126-f66d-4b20-8e32-c9b54ee841df",
+      "bom-ref": "urn:uuid:83c70aed-da4d-492e-8409-c80eff986626",
       "id": "CVE-2025-68972",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -69079,7 +69079,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:029bf629-30cc-4d23-9459-3532d78a00ca",
+      "bom-ref": "urn:uuid:e357aecb-cc5c-4fa3-b2cc-c3ec1e4041f5",
       "id": "CVE-2025-66382",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -69118,7 +69118,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:8413873e-d6a5-4053-bd76-63096545bba8",
+      "bom-ref": "urn:uuid:e8d92a40-ed64-4648-914b-4d813180ab2c",
       "id": "CVE-2025-15469",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -69157,7 +69157,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:43b38b73-5017-4eea-9909-9fb22116cddc",
+      "bom-ref": "urn:uuid:5842682b-496e-4d32-a821-5bde0abe9393",
       "id": "CVE-2025-15469",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -69196,7 +69196,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:e7a8df6e-da72-4943-9c40-4e99d67beefa",
+      "bom-ref": "urn:uuid:28226921-dd01-4c83-b0ae-aaea38ff07d2",
       "id": "CVE-2026-32778",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -69235,7 +69235,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:dc93f86e-f5b1-43db-a7da-3c1874aa55ad",
+      "bom-ref": "urn:uuid:2b604a72-258d-4323-8143-11b973bfb925",
       "id": "CVE-2026-32777",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -69274,7 +69274,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:66a910e5-35ae-46bd-a7c8-aa54b9d763fb",
+      "bom-ref": "urn:uuid:8284afa1-074b-4eeb-ae53-c7bdd6c7b458",
       "id": "CVE-2026-24515",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -69313,7 +69313,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:1aa6ea86-7afa-4c63-94ef-a137d2599285",
+      "bom-ref": "urn:uuid:64f8cfa0-416d-41c0-8062-670274c624a4",
       "id": "CVE-2026-1485",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -69352,7 +69352,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:d447157b-66b3-41b6-ba25-89673571d602",
+      "bom-ref": "urn:uuid:95a66bd2-acf2-43a6-a796-6bf9aaea1ade",
       "id": "CVE-2026-4873",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -69383,7 +69383,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:1cf7b124-26c5-4f25-92fc-a9728af5465d",
+      "bom-ref": "urn:uuid:ee6e641e-73e5-4d4a-a8d0-38dff600f7f2",
       "id": "CVE-2026-5545",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -69414,7 +69414,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:7960f170-3106-419a-b4c8-307ab19d34b3",
+      "bom-ref": "urn:uuid:039d6fe7-6764-4dde-86ad-1b10e1b4a603",
       "id": "CVE-2026-5773",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -69445,7 +69445,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:9ee48f75-2a95-4538-9fa7-2543cde7ec4d",
+      "bom-ref": "urn:uuid:66f27a27-2876-44d7-8754-21bf65de58f2",
       "id": "CVE-2026-6253",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -69476,7 +69476,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:ddb75b87-2ff6-4b1e-b384-089891bb99cb",
+      "bom-ref": "urn:uuid:4b551a79-a144-4623-b7cf-ecb6fcc00e38",
       "id": "CVE-2026-6429",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -69507,7 +69507,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:b71ea4a5-3513-4016-8c98-3815a7cb7f1f",
+      "bom-ref": "urn:uuid:bc0f6c2c-6d09-4ee9-a54f-4648248a22a6",
       "id": "CVE-2026-4873",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -69538,7 +69538,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:bb58fddd-41a5-4f97-b7ee-c868737515b8",
+      "bom-ref": "urn:uuid:71aadd07-256c-4111-bf09-73c4a2cfbb24",
       "id": "CVE-2026-5545",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -69569,7 +69569,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:2f637350-fe64-4d47-8029-774afb181040",
+      "bom-ref": "urn:uuid:e86f1fb8-a52b-4909-804d-83f2164202ab",
       "id": "CVE-2026-5773",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -69600,7 +69600,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:cf6d687f-395b-4d0f-8707-c9f116d69ac7",
+      "bom-ref": "urn:uuid:cb3a0bda-0ad5-4731-afb1-e2c4eb7b6277",
       "id": "CVE-2026-6253",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -69631,7 +69631,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:d7add7ad-3c67-4cb8-90cb-336c6fdfab1e",
+      "bom-ref": "urn:uuid:dc6f5bb2-539f-48d0-8f6d-578a4e7aff89",
       "id": "CVE-2026-6429",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -69662,7 +69662,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:149b2dde-0a57-4217-a074-89b2441af55d",
+      "bom-ref": "urn:uuid:beb1a0c9-1c8a-4266-8fca-84e660c465ed",
       "id": "CVE-2026-6276",
       "source": {
         "name": "redhat-distro-redhat-8",
@@ -69693,7 +69693,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:1dc4f749-2305-45a5-b218-484ba422d06f",
+      "bom-ref": "urn:uuid:834c9629-18ad-4a10-9bd3-abf31e3898e6",
       "id": "CVE-2026-6276",
       "source": {
         "name": "redhat-distro-redhat-8",
