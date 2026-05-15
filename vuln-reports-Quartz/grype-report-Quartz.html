@@ -868,13 +868,13 @@
                     <dd id="typeValue">image</dd><dt>Checksum:</dt>
                     <dd id="checksumValue">sha256:f0046f0b22512638ba8cf43eb594deed08b3ce26cb3ecf85d0cdc443bd9ad4b8</dd><dt>Date:</dt>
                     <dd>
-                        <span id="dateElement">2026-05-14T11:47:37.615308698Z</span>
+                        <span id="dateElement">2026-05-15T11:34:13.865303884Z</span>
                         <span id="prettyDateElement" style="display: none;"></span>
                     </dd>
                     <dt>Grype Version:</dt>
                     <dd>0.112.0</dd>
                     <dt>DB Built:</dt>
-                    <dd>2026-05-14 07:20:27 +0000 UTC</dd>
+                    <dd>2026-05-15 07:26:20 +0000 UTC</dd>
                 </dl>
             </div>
             <div class="heading-right">
@@ -1210,22 +1210,6 @@
                         <td>pkg:rpm/rocky/sqlite-libs@3.46.1-5.el10_1?arch=x86_64&distro=rocky-10.1&upstream=sqlite-3.46.1-5.el10_1.src.rpm</td>
                     </tr>
                     <tr>
-                        <td>gnutls</td>
-                        <td>3.8.10-3.el10_1</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-42010">CVE-2026-42010</a>
-                        </td>
-                        <td>High</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in gnutls. Servers configured with RSA-PSK (Rivest–Shamir–Adleman – Pre-Shared Key) wrongfully matched usernames containing a NUL character with truncated usernames. A remote attacker could exploit this by sending a specially crafted username, leading to an authentication bypass. This vulnerability allows an attacker to gain unauthorized access by circumventing the authentication process.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/gnutls@3.8.10-3.el10_1?arch=x86_64&distro=rocky-10.1&upstream=gnutls-3.8.10-3.el10_1.src.rpm</td>
-                    </tr>
-                    <tr>
                         <td>glib2</td>
                         <td>2.80.4-10.el10_1.12</td>
                         <td>rpm</td>
@@ -1240,6 +1224,22 @@
                         <td>A flaw was found in how GLib’s GString manages memory when adding data to strings. If a string is already very large, combining it with more input can cause a hidden overflow in the size calculation. This makes the system think it has enough memory when it doesn’t. As a result, data may be written past the end of the allocated memory, leading to crashes or memory corruption.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/glib2@2.80.4-10.el10_1.12?arch=x86_64&distro=rocky-10.1&upstream=glib2-2.80.4-10.el10_1.12.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>gnutls</td>
+                        <td>3.8.10-3.el10_1</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-42010">CVE-2026-42010</a>
+                        </td>
+                        <td>High</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in gnutls. Servers configured with RSA-PSK (Rivest–Shamir–Adleman – Pre-Shared Key) wrongfully matched usernames containing a NUL character with truncated usernames. A remote attacker could exploit this by sending a specially crafted username, leading to an authentication bypass. This vulnerability allows an attacker to gain unauthorized access by circumventing the authentication process.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/gnutls@3.8.10-3.el10_1?arch=x86_64&distro=rocky-10.1&upstream=gnutls-3.8.10-3.el10_1.src.rpm</td>
                     </tr>
                     <tr>
                         <td>libarchive</td>
@@ -1354,24 +1354,6 @@
                         <td>pkg:rpm/rocky/libssh-config@0.11.1-5.el10_1?arch=noarch&distro=rocky-10.1&upstream=libssh-0.11.1-5.el10_1.src.rpm</td>
                     </tr>
                     <tr>
-                        <td>glib2</td>
-                        <td>2.80.4-10.el10_1.12</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2025-14512">CVE-2025-14512</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>fixed</td>
-                        <td>
-                            <ul>
-                                <li>0:2.80.4-10.el10_1.13</li>
-                            </ul>
-                        </td>
-                        <td>A flaw was found in glib. This vulnerability allows a heap buffer overflow and denial-of-service (DoS) via an integer overflow in GLib&#39;s GIO (GLib Input/Output) escape_byte_string() function when processing malicious file or remote filesystem attribute values.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/glib2@2.80.4-10.el10_1.12?arch=x86_64&distro=rocky-10.1&upstream=glib2-2.80.4-10.el10_1.12.src.rpm</td>
-                    </tr>
-                    <tr>
                         <td>krb5-libs</td>
                         <td>1.21.3-8.el10_0</td>
                         <td>rpm</td>
@@ -1469,6 +1451,24 @@ A SUID binary or process has a special type of permission, which allows the proc
                         <td>A flaw was found in gnutls. This vulnerability occurs because gnutls performs case-sensitive comparisons of `nameConstraints` labels, specifically for `dNSName` (DNS) or `rfc822Name` (email) constraints within `excludedSubtrees` or `permittedSubtrees`. A remote attacker can exploit this by crafting a leaf certificate with casing differences in the Subject Alternative Name (SAN), leading to a policy bypass where a certificate that should be rejected is instead accepted. This could result in unauthorized access or information disclosure.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/gnutls@3.8.10-3.el10_1?arch=x86_64&distro=rocky-10.1&upstream=gnutls-3.8.10-3.el10_1.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>glib2</td>
+                        <td>2.80.4-10.el10_1.12</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-14512">CVE-2025-14512</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>fixed</td>
+                        <td>
+                            <ul>
+                                <li>0:2.80.4-10.el10_1.13</li>
+                            </ul>
+                        </td>
+                        <td>A flaw was found in glib. This vulnerability allows a heap buffer overflow and denial-of-service (DoS) via an integer overflow in GLib&#39;s GIO (GLib Input/Output) escape_byte_string() function when processing malicious file or remote filesystem attribute values.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/glib2@2.80.4-10.el10_1.12?arch=x86_64&distro=rocky-10.1&upstream=glib2-2.80.4-10.el10_1.12.src.rpm</td>
                     </tr>
                     <tr>
                         <td>curl</td>
@@ -1795,6 +1795,22 @@ a locally running SSH agent.</td>
                         <td>pkg:rpm/rocky/gnutls@3.8.10-3.el10_1?arch=x86_64&distro=rocky-10.1&upstream=gnutls-3.8.10-3.el10_1.src.rpm</td>
                     </tr>
                     <tr>
+                        <td>libxml2</td>
+                        <td>2.12.5-9.el10_0</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-6732">CVE-2026-6732</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in libxml2. This vulnerability occurs when the library processes a specially crafted XML Schema Definition (XSD) validated document that includes an internal entity reference. An attacker could exploit this by providing a malicious document, leading to a type confusion error that causes the application to crash. This results in a denial of service (DoS), making the affected system or application unavailable.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/libxml2@2.12.5-9.el10_0?arch=x86_64&distro=rocky-10.1&upstream=libxml2-2.12.5-9.el10_0.src.rpm</td>
+                    </tr>
+                    <tr>
                         <td>libarchive</td>
                         <td>3.7.7-8.el10_1</td>
                         <td>rpm</td>
@@ -1971,6 +1987,38 @@ a locally running SSH agent.</td>
                         <td>pkg:rpm/rocky/glibc-minimal-langpack@2.39-58.el10_1.7?arch=x86_64&distro=rocky-10.1&upstream=glibc-2.39-58.el10_1.7.src.rpm</td>
                     </tr>
                     <tr>
+                        <td>curl</td>
+                        <td>8.12.1-2.el10_1.2</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-5545">CVE-2026-5545</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in libcurl. An application using libcurl that performs an authenticated HTTP(S) request after a Negotiate-authenticated one to the same host may incorrectly reuse the previous connection. This authentication bypass vulnerability allows the second request to be sent over a connection authenticated with different credentials, potentially leading to unauthorized access or information disclosure.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/curl@8.12.1-2.el10_1.2?arch=x86_64&distro=rocky-10.1&upstream=curl-8.12.1-2.el10_1.2.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>libcurl</td>
+                        <td>8.12.1-2.el10_1.2</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-5545">CVE-2026-5545</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in libcurl. An application using libcurl that performs an authenticated HTTP(S) request after a Negotiate-authenticated one to the same host may incorrectly reuse the previous connection. This authentication bypass vulnerability allows the second request to be sent over a connection authenticated with different credentials, potentially leading to unauthorized access or information disclosure.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/libcurl@8.12.1-2.el10_1.2?arch=x86_64&distro=rocky-10.1&upstream=curl-8.12.1-2.el10_1.2.src.rpm</td>
+                    </tr>
+                    <tr>
                         <td>libssh</td>
                         <td>0.11.1-5.el10_1</td>
                         <td>rpm</td>
@@ -2001,22 +2049,6 @@ a locally running SSH agent.</td>
                         <td>A flaw was found in libssh. The API function `ssh_get_hexa()` is vulnerable to a denial of service when processing zero-length input. This can be exploited remotely by an attacker during GSSAPI (Generic Security Service Application Program Interface) authentication if the server&#39;s logging verbosity is set to `SSH_LOG_PACKET (3)` or higher. Successful exploitation could lead to a self-Denial of Service of the per-connection daemon process.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/libssh-config@0.11.1-5.el10_1?arch=noarch&distro=rocky-10.1&upstream=libssh-0.11.1-5.el10_1.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>libxml2</td>
-                        <td>2.12.5-9.el10_0</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-6732">CVE-2026-6732</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in libxml2. This vulnerability occurs when the library processes a specially crafted XML Schema Definition (XSD) validated document that includes an internal entity reference. An attacker could exploit this by providing a malicious document, leading to a type confusion error that causes the application to crash. This results in a denial of service (DoS), making the affected system or application unavailable.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/libxml2@2.12.5-9.el10_0?arch=x86_64&distro=rocky-10.1&upstream=libxml2-2.12.5-9.el10_0.src.rpm</td>
                     </tr>
                     <tr>
                         <td>curl</td>
@@ -2307,36 +2339,20 @@ a locally running SSH agent.</td>
                         <td>pkg:rpm/rocky/glib2@2.80.4-10.el10_1.12?arch=x86_64&distro=rocky-10.1&upstream=glib2-2.80.4-10.el10_1.12.src.rpm</td>
                     </tr>
                     <tr>
-                        <td>curl</td>
-                        <td>8.12.1-2.el10_1.2</td>
+                        <td>rpm-sequoia</td>
+                        <td>1.9.0.3-1.el10_1</td>
                         <td>rpm</td>
                         <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-5545">CVE-2026-5545</a>
+                            <a href="https://access.redhat.com/security/cve/CVE-2023-53160">CVE-2023-53160</a>
                         </td>
-                        <td>Medium</td>
+                        <td>Low</td>
                         <td>not-fixed</td>
                         <td>
                             N/A
                         </td>
-                        <td>A flaw was found in libcurl. An application using libcurl that performs an authenticated HTTP(S) request after a Negotiate-authenticated one to the same host may incorrectly reuse the previous connection. This authentication bypass vulnerability allows the second request to be sent over a connection authenticated with different credentials, potentially leading to unauthorized access or information disclosure.</td>
+                        <td>A flaw was found in sequoia-openpgp. The crate exhibits an out-of-bounds array access, leading to a panic during processing. A local attacker can trigger this condition by providing a specially crafted input, which results in a denial of service.</td>
                         <td>[]</td>
-                        <td>pkg:rpm/rocky/curl@8.12.1-2.el10_1.2?arch=x86_64&distro=rocky-10.1&upstream=curl-8.12.1-2.el10_1.2.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>libcurl</td>
-                        <td>8.12.1-2.el10_1.2</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-5545">CVE-2026-5545</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in libcurl. An application using libcurl that performs an authenticated HTTP(S) request after a Negotiate-authenticated one to the same host may incorrectly reuse the previous connection. This authentication bypass vulnerability allows the second request to be sent over a connection authenticated with different credentials, potentially leading to unauthorized access or information disclosure.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/libcurl@8.12.1-2.el10_1.2?arch=x86_64&distro=rocky-10.1&upstream=curl-8.12.1-2.el10_1.2.src.rpm</td>
+                        <td>pkg:rpm/rocky/rpm-sequoia@1.9.0.3-1.el10_1?arch=x86_64&distro=rocky-10.1&upstream=rust-rpm-sequoia-1.9.0.3-1.el10_1.src.rpm</td>
                     </tr>
                     <tr>
                         <td>glibc</td>
@@ -2407,16 +2423,48 @@ a locally running SSH agent.</td>
                         <td>1.9.0.3-1.el10_1</td>
                         <td>rpm</td>
                         <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2023-53160">CVE-2023-53160</a>
+                            <a href="https://access.redhat.com/security/cve/CVE-2023-53161">CVE-2023-53161</a>
                         </td>
                         <td>Low</td>
                         <td>not-fixed</td>
                         <td>
                             N/A
                         </td>
-                        <td>A flaw was found in sequoia-openpgp. The crate exhibits an out-of-bounds array access, leading to a panic during processing. A local attacker can trigger this condition by providing a specially crafted input, which results in a denial of service.</td>
+                        <td>A flaw was found in buffered-reader. The crate&#39;s implementation contains an out-of-bounds array access, leading to a panic. A local attacker can trigger this condition by providing a specially crafted input. This occurs when processing data from an external source, which can result in a denial of service.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/rpm-sequoia@1.9.0.3-1.el10_1?arch=x86_64&distro=rocky-10.1&upstream=rust-rpm-sequoia-1.9.0.3-1.el10_1.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>curl</td>
+                        <td>8.12.1-2.el10_1.2</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-6253">CVE-2026-6253</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in curl. When curl is configured to use distinct proxies for different URL schemes, a redirect from a URL using an authenticated proxy to one using an unauthenticated proxy can inadvertently expose the initial proxy&#39;s credentials. This improper credential management (CWE-522) may allow an attacker to gain unauthorized access or information by intercepting these disclosed credentials.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/curl@8.12.1-2.el10_1.2?arch=x86_64&distro=rocky-10.1&upstream=curl-8.12.1-2.el10_1.2.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>libcurl</td>
+                        <td>8.12.1-2.el10_1.2</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-6253">CVE-2026-6253</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in curl. When curl is configured to use distinct proxies for different URL schemes, a redirect from a URL using an authenticated proxy to one using an unauthenticated proxy can inadvertently expose the initial proxy&#39;s credentials. This improper credential management (CWE-522) may allow an attacker to gain unauthorized access or information by intercepting these disclosed credentials.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/libcurl@8.12.1-2.el10_1.2?arch=x86_64&distro=rocky-10.1&upstream=curl-8.12.1-2.el10_1.2.src.rpm</td>
                     </tr>
                     <tr>
                         <td>gnutls</td>
@@ -2433,22 +2481,6 @@ a locally running SSH agent.</td>
                         <td>A flaw has been discovered in GnuTLS where an application crash can be induced when attempting to verify a specially crafted .pem bundle using the &#34;certtool --verify-chain&#34; command.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/gnutls@3.8.10-3.el10_1?arch=x86_64&distro=rocky-10.1&upstream=gnutls-3.8.10-3.el10_1.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>rpm-sequoia</td>
-                        <td>1.9.0.3-1.el10_1</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2023-53161">CVE-2023-53161</a>
-                        </td>
-                        <td>Low</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in buffered-reader. The crate&#39;s implementation contains an out-of-bounds array access, leading to a panic. A local attacker can trigger this condition by providing a specially crafted input. This occurs when processing data from an external source, which can result in a denial of service.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/rpm-sequoia@1.9.0.3-1.el10_1?arch=x86_64&distro=rocky-10.1&upstream=rust-rpm-sequoia-1.9.0.3-1.el10_1.src.rpm</td>
                     </tr>
                     <tr>
                         <td>openssl-fips-provider</td>
@@ -2497,6 +2529,70 @@ a locally running SSH agent.</td>
                         <td>A flaw was found in gnutls. This vulnerability occurs because permitted name constraints were incorrectly ignored when previous Certificate Authorities (CAs) only had excluded name constraints. A remote attacker could exploit this to bypass critical name constraint checks during certificate validation. This bypass could lead to the acceptance of invalid certificates, potentially enabling spoofing or man-in-the-middle attacks against affected systems.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/gnutls@3.8.10-3.el10_1?arch=x86_64&distro=rocky-10.1&upstream=gnutls-3.8.10-3.el10_1.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>curl</td>
+                        <td>8.12.1-2.el10_1.2</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-5773">CVE-2026-5773</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in libcurl. Due to a logical error in the connection reuse mechanism for SMB (Server Message Block) transfers, libcurl might reuse an existing SMB connection with a different share than intended. This vulnerability, categorized as CWE-488 (Exposure of Data Element to Wrong Session), could lead to the download of an incorrect file or the upload of a file to an unintended location when an application uses libcurl for SMB transfers.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/curl@8.12.1-2.el10_1.2?arch=x86_64&distro=rocky-10.1&upstream=curl-8.12.1-2.el10_1.2.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>libcurl</td>
+                        <td>8.12.1-2.el10_1.2</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-5773">CVE-2026-5773</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in libcurl. Due to a logical error in the connection reuse mechanism for SMB (Server Message Block) transfers, libcurl might reuse an existing SMB connection with a different share than intended. This vulnerability, categorized as CWE-488 (Exposure of Data Element to Wrong Session), could lead to the download of an incorrect file or the upload of a file to an unintended location when an application uses libcurl for SMB transfers.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/libcurl@8.12.1-2.el10_1.2?arch=x86_64&distro=rocky-10.1&upstream=curl-8.12.1-2.el10_1.2.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>curl</td>
+                        <td>8.12.1-2.el10_1.2</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-6429">CVE-2026-6429</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in libcurl. When configured to use a .netrc file for credentials and follow HTTP redirects, libcurl can inadvertently send the password from the initial connection to the redirected host. This sensitive information disclosure occurs when both the original and redirect URLs use clear text HTTP, are performed over the same HTTP proxy, and the same connection is reused. This vulnerability, categorized as an Exposure of Sensitive Information to an Unauthorized Actor (CWE-200), could allow an attacker to obtain user credentials.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/curl@8.12.1-2.el10_1.2?arch=x86_64&distro=rocky-10.1&upstream=curl-8.12.1-2.el10_1.2.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>libcurl</td>
+                        <td>8.12.1-2.el10_1.2</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-6429">CVE-2026-6429</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in libcurl. When configured to use a .netrc file for credentials and follow HTTP redirects, libcurl can inadvertently send the password from the initial connection to the redirected host. This sensitive information disclosure occurs when both the original and redirect URLs use clear text HTTP, are performed over the same HTTP proxy, and the same connection is reused. This vulnerability, categorized as an Exposure of Sensitive Information to an Unauthorized Actor (CWE-200), could allow an attacker to obtain user credentials.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/libcurl@8.12.1-2.el10_1.2?arch=x86_64&distro=rocky-10.1&upstream=curl-8.12.1-2.el10_1.2.src.rpm</td>
                     </tr>
                     <tr>
                         <td>curl</td>
@@ -2853,6 +2949,38 @@ a locally running SSH agent.</td>
                         <td>pkg:rpm/rocky/libcurl@8.12.1-2.el10_1.2?arch=x86_64&distro=rocky-10.1&upstream=curl-8.12.1-2.el10_1.2.src.rpm</td>
                     </tr>
                     <tr>
+                        <td>openssl-fips-provider</td>
+                        <td>1:3.5.1-7.el10_1</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-2673">CVE-2026-2673</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A key group selection preference flaw has been discovered in OpenSSL. An OpenSSL TLS 1.3 server may fail to negotiate the expected preferred key exchange group when its key exchange group configuration includes the default by using the &#34;DEFAULT&#34; keyword. A less preferred key exchange may be used even when a more preferred group is supported by both client and server, if the group was not included among the client&#39;s initial predicated keyshares. This will sometimes be the case with the new hybrid post-quantum groups, if the client chooses to defer their use until specifically requested by the server. No OpenSSL FIPS modules are affected by this issue, the code in question lies outside the FIPS boundary.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/openssl-fips-provider@3.5.1-7.el10_1?arch=x86_64&distro=rocky-10.1&epoch=1&upstream=openssl-3.5.1-7.el10_1.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>openssl-libs</td>
+                        <td>1:3.5.1-7.el10_1</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-2673">CVE-2026-2673</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A key group selection preference flaw has been discovered in OpenSSL. An OpenSSL TLS 1.3 server may fail to negotiate the expected preferred key exchange group when its key exchange group configuration includes the default by using the &#34;DEFAULT&#34; keyword. A less preferred key exchange may be used even when a more preferred group is supported by both client and server, if the group was not included among the client&#39;s initial predicated keyshares. This will sometimes be the case with the new hybrid post-quantum groups, if the client chooses to defer their use until specifically requested by the server. No OpenSSL FIPS modules are affected by this issue, the code in question lies outside the FIPS boundary.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/openssl-libs@3.5.1-7.el10_1?arch=x86_64&distro=rocky-10.1&epoch=1&upstream=openssl-3.5.1-7.el10_1.src.rpm</td>
+                    </tr>
+                    <tr>
                         <td>libarchive</td>
                         <td>3.7.7-8.el10_1</td>
                         <td>rpm</td>
@@ -2953,14 +3081,14 @@ a locally running SSH agent.</td>
                         <td>8.12.1-2.el10_1.2</td>
                         <td>rpm</td>
                         <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-5773">CVE-2026-5773</a>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-4873">CVE-2026-4873</a>
                         </td>
                         <td>Medium</td>
                         <td>not-fixed</td>
                         <td>
                             N/A
                         </td>
-                        <td>A flaw was found in libcurl. Due to a logical error in the connection reuse mechanism for SMB (Server Message Block) transfers, libcurl might reuse an existing SMB connection with a different share than intended. This vulnerability, categorized as CWE-488 (Exposure of Data Element to Wrong Session), could lead to the download of an incorrect file or the upload of a file to an unintended location when an application uses libcurl for SMB transfers.</td>
+                        <td>A flaw was found in curl. A remote attacker could exploit this by initiating an unencrypted connection (via IMAP, SMTP, or POP3) and then making a subsequent request to the same host that requires Transport Layer Security (TLS). Due to incorrect connection reuse, the subsequent request would bypass the TLS requirement, leading to the transmission of sensitive information in cleartext. This vulnerability, categorized as Cleartext Transmission of Sensitive Information (CWE-319), results in information disclosure.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/curl@8.12.1-2.el10_1.2?arch=x86_64&distro=rocky-10.1&upstream=curl-8.12.1-2.el10_1.2.src.rpm</td>
                     </tr>
@@ -2969,46 +3097,14 @@ a locally running SSH agent.</td>
                         <td>8.12.1-2.el10_1.2</td>
                         <td>rpm</td>
                         <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-5773">CVE-2026-5773</a>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-4873">CVE-2026-4873</a>
                         </td>
                         <td>Medium</td>
                         <td>not-fixed</td>
                         <td>
                             N/A
                         </td>
-                        <td>A flaw was found in libcurl. Due to a logical error in the connection reuse mechanism for SMB (Server Message Block) transfers, libcurl might reuse an existing SMB connection with a different share than intended. This vulnerability, categorized as CWE-488 (Exposure of Data Element to Wrong Session), could lead to the download of an incorrect file or the upload of a file to an unintended location when an application uses libcurl for SMB transfers.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/libcurl@8.12.1-2.el10_1.2?arch=x86_64&distro=rocky-10.1&upstream=curl-8.12.1-2.el10_1.2.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>curl</td>
-                        <td>8.12.1-2.el10_1.2</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-6429">CVE-2026-6429</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in libcurl. When configured to use a .netrc file for credentials and follow HTTP redirects, libcurl can inadvertently send the password from the initial connection to the redirected host. This sensitive information disclosure occurs when both the original and redirect URLs use clear text HTTP, are performed over the same HTTP proxy, and the same connection is reused. This vulnerability, categorized as an Exposure of Sensitive Information to an Unauthorized Actor (CWE-200), could allow an attacker to obtain user credentials.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/curl@8.12.1-2.el10_1.2?arch=x86_64&distro=rocky-10.1&upstream=curl-8.12.1-2.el10_1.2.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>libcurl</td>
-                        <td>8.12.1-2.el10_1.2</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-6429">CVE-2026-6429</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in libcurl. When configured to use a .netrc file for credentials and follow HTTP redirects, libcurl can inadvertently send the password from the initial connection to the redirected host. This sensitive information disclosure occurs when both the original and redirect URLs use clear text HTTP, are performed over the same HTTP proxy, and the same connection is reused. This vulnerability, categorized as an Exposure of Sensitive Information to an Unauthorized Actor (CWE-200), could allow an attacker to obtain user credentials.</td>
+                        <td>A flaw was found in curl. A remote attacker could exploit this by initiating an unencrypted connection (via IMAP, SMTP, or POP3) and then making a subsequent request to the same host that requires Transport Layer Security (TLS). Due to incorrect connection reuse, the subsequent request would bypass the TLS requirement, leading to the transmission of sensitive information in cleartext. This vulnerability, categorized as Cleartext Transmission of Sensitive Information (CWE-319), results in information disclosure.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/libcurl@8.12.1-2.el10_1.2?arch=x86_64&distro=rocky-10.1&upstream=curl-8.12.1-2.el10_1.2.src.rpm</td>
                     </tr>
@@ -3075,38 +3171,6 @@ a locally running SSH agent.</td>
                         <td>A flaw was found in sequoia-openpgp. Processing RawCertParser operations with unsupported primary key types triggers an infinite loop of error messages. This flaw allows a local attacker to provide a specially crafted certificate file, resulting in a denial of service due to resource exhaustion.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/rpm-sequoia@1.9.0.3-1.el10_1?arch=x86_64&distro=rocky-10.1&upstream=rust-rpm-sequoia-1.9.0.3-1.el10_1.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>openssl-fips-provider</td>
-                        <td>1:3.5.1-7.el10_1</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-2673">CVE-2026-2673</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A key group selection preference flaw has been discovered in OpenSSL. An OpenSSL TLS 1.3 server may fail to negotiate the expected preferred key exchange group when its key exchange group configuration includes the default by using the &#34;DEFAULT&#34; keyword. A less preferred key exchange may be used even when a more preferred group is supported by both client and server, if the group was not included among the client&#39;s initial predicated keyshares. This will sometimes be the case with the new hybrid post-quantum groups, if the client chooses to defer their use until specifically requested by the server. No OpenSSL FIPS modules are affected by this issue, the code in question lies outside the FIPS boundary.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/openssl-fips-provider@3.5.1-7.el10_1?arch=x86_64&distro=rocky-10.1&epoch=1&upstream=openssl-3.5.1-7.el10_1.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>openssl-libs</td>
-                        <td>1:3.5.1-7.el10_1</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-2673">CVE-2026-2673</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A key group selection preference flaw has been discovered in OpenSSL. An OpenSSL TLS 1.3 server may fail to negotiate the expected preferred key exchange group when its key exchange group configuration includes the default by using the &#34;DEFAULT&#34; keyword. A less preferred key exchange may be used even when a more preferred group is supported by both client and server, if the group was not included among the client&#39;s initial predicated keyshares. This will sometimes be the case with the new hybrid post-quantum groups, if the client chooses to defer their use until specifically requested by the server. No OpenSSL FIPS modules are affected by this issue, the code in question lies outside the FIPS boundary.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/openssl-libs@3.5.1-7.el10_1?arch=x86_64&distro=rocky-10.1&epoch=1&upstream=openssl-3.5.1-7.el10_1.src.rpm</td>
                     </tr>
                     <tr>
                         <td>glib2</td>
@@ -3235,38 +3299,6 @@ a locally running SSH agent.</td>
                         <td>A flaw was found in util-linux. When an /etc/fstab entry is configured with the user,loop options, the `mount` program checks the file path with user permissions but later opens it with root privileges. This creates a brief Time-of-Check-Time-of-Use (TOCTOU) window where an attacker can substitute the intended file with a malicious symbolic link. This allows a local unprivileged user to mount any root-owned file or block device that contains a valid filesystem, gaining full read access to its contents.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/util-linux-core@2.40.2-15.el10_1?arch=x86_64&distro=rocky-10.1&upstream=util-linux-2.40.2-15.el10_1.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>curl</td>
-                        <td>8.12.1-2.el10_1.2</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-6253">CVE-2026-6253</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in curl. When curl is configured to use distinct proxies for different URL schemes, a redirect from a URL using an authenticated proxy to one using an unauthenticated proxy can inadvertently expose the initial proxy&#39;s credentials. This improper credential management (CWE-522) may allow an attacker to gain unauthorized access or information by intercepting these disclosed credentials.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/curl@8.12.1-2.el10_1.2?arch=x86_64&distro=rocky-10.1&upstream=curl-8.12.1-2.el10_1.2.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>libcurl</td>
-                        <td>8.12.1-2.el10_1.2</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-6253">CVE-2026-6253</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in curl. When curl is configured to use distinct proxies for different URL schemes, a redirect from a URL using an authenticated proxy to one using an unauthenticated proxy can inadvertently expose the initial proxy&#39;s credentials. This improper credential management (CWE-522) may allow an attacker to gain unauthorized access or information by intercepting these disclosed credentials.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/libcurl@8.12.1-2.el10_1.2?arch=x86_64&distro=rocky-10.1&upstream=curl-8.12.1-2.el10_1.2.src.rpm</td>
                     </tr>
                     <tr>
                         <td>libarchive</td>
@@ -3443,14 +3475,14 @@ This is the same issue as in OpenSSH, tracked as CVE-2019-6111.</td>
                         <td>8.12.1-2.el10_1.2</td>
                         <td>rpm</td>
                         <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-4873">CVE-2026-4873</a>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-6276">CVE-2026-6276</a>
                         </td>
-                        <td>Medium</td>
+                        <td>Low</td>
                         <td>not-fixed</td>
                         <td>
                             N/A
                         </td>
-                        <td>A flaw was found in curl. A remote attacker could exploit this by initiating an unencrypted connection (via IMAP, SMTP, or POP3) and then making a subsequent request to the same host that requires Transport Layer Security (TLS). Due to incorrect connection reuse, the subsequent request would bypass the TLS requirement, leading to the transmission of sensitive information in cleartext. This vulnerability, categorized as Cleartext Transmission of Sensitive Information (CWE-319), results in information disclosure.</td>
+                        <td>A flaw was found in libcurl. This vulnerability allows for information disclosure when a custom `Host:` header is used in an initial HTTP request, and a subsequent request reuses the same connection without specifying a new `Host:` header. This can lead to libcurl incorrectly sending cookies intended for the first host to the second host, resulting in a cookie leak. This issue is categorized as an Origin Validation Error (CWE-346). Exploitation typically requires specific debugging configurations.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/curl@8.12.1-2.el10_1.2?arch=x86_64&distro=rocky-10.1&upstream=curl-8.12.1-2.el10_1.2.src.rpm</td>
                     </tr>
@@ -3459,14 +3491,14 @@ This is the same issue as in OpenSSH, tracked as CVE-2019-6111.</td>
                         <td>8.12.1-2.el10_1.2</td>
                         <td>rpm</td>
                         <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-4873">CVE-2026-4873</a>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-6276">CVE-2026-6276</a>
                         </td>
-                        <td>Medium</td>
+                        <td>Low</td>
                         <td>not-fixed</td>
                         <td>
                             N/A
                         </td>
-                        <td>A flaw was found in curl. A remote attacker could exploit this by initiating an unencrypted connection (via IMAP, SMTP, or POP3) and then making a subsequent request to the same host that requires Transport Layer Security (TLS). Due to incorrect connection reuse, the subsequent request would bypass the TLS requirement, leading to the transmission of sensitive information in cleartext. This vulnerability, categorized as Cleartext Transmission of Sensitive Information (CWE-319), results in information disclosure.</td>
+                        <td>A flaw was found in libcurl. This vulnerability allows for information disclosure when a custom `Host:` header is used in an initial HTTP request, and a subsequent request reuses the same connection without specifying a new `Host:` header. This can lead to libcurl incorrectly sending cookies intended for the first host to the second host, resulting in a cookie leak. This issue is categorized as an Origin Validation Error (CWE-346). Exploitation typically requires specific debugging configurations.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/libcurl@8.12.1-2.el10_1.2?arch=x86_64&distro=rocky-10.1&upstream=curl-8.12.1-2.el10_1.2.src.rpm</td>
                     </tr>
@@ -3581,38 +3613,6 @@ This is the same issue as in OpenSSH, tracked as CVE-2019-6111.</td>
                         <td>A flaw was found in rust-rpm-sequoia. An attacker can exploit this vulnerability by providing a specially crafted Red Hat Package Manager (RPM) file. During the RPM signature verification process, this crafted file can trigger an error in the OpenPGP signature parsing code, leading to an unconditional termination of the rpm process. This issue results in an application level denial of service, making the system unable to process RPM files for signature verification.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/rpm-sequoia@1.9.0.3-1.el10_1?arch=x86_64&distro=rocky-10.1&upstream=rust-rpm-sequoia-1.9.0.3-1.el10_1.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>curl</td>
-                        <td>8.12.1-2.el10_1.2</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-6276">CVE-2026-6276</a>
-                        </td>
-                        <td>Low</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in libcurl. This vulnerability allows for information disclosure when a custom `Host:` header is used in an initial HTTP request, and a subsequent request reuses the same connection without specifying a new `Host:` header. This can lead to libcurl incorrectly sending cookies intended for the first host to the second host, resulting in a cookie leak. This issue is categorized as an Origin Validation Error (CWE-346). Exploitation typically requires specific debugging configurations.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/curl@8.12.1-2.el10_1.2?arch=x86_64&distro=rocky-10.1&upstream=curl-8.12.1-2.el10_1.2.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>libcurl</td>
-                        <td>8.12.1-2.el10_1.2</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-6276">CVE-2026-6276</a>
-                        </td>
-                        <td>Low</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in libcurl. This vulnerability allows for information disclosure when a custom `Host:` header is used in an initial HTTP request, and a subsequent request reuses the same connection without specifying a new `Host:` header. This can lead to libcurl incorrectly sending cookies intended for the first host to the second host, resulting in a cookie leak. This issue is categorized as an Origin Validation Error (CWE-346). Exploitation typically requires specific debugging configurations.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/libcurl@8.12.1-2.el10_1.2?arch=x86_64&distro=rocky-10.1&upstream=curl-8.12.1-2.el10_1.2.src.rpm</td>
                     </tr>
                     <tr>
                         <td>openssl-fips-provider</td>
