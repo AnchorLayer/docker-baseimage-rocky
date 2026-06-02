@@ -885,15 +885,17 @@
 
                     <dt>Type:</dt>
                     <dd id="typeValue">image</dd><dt>Checksum:</dt>
-                    <dd id="checksumValue">sha256:a4a602c4db9758cd361779e1efe54a47a4e15d4f7e8131e4204cdfedc0554649</dd><dt>Date:</dt>
+                    <dd id="checksumValue">sha256:a4a602c4db9758cd361779e1efe54a47a4e15d4f7e8131e4204cdfedc0554649</dd><dt>Grype Version:</dt>
+                    <dd>grype 0.112.0</dd><dt>Vulnerability DB:</dt>
+                    <dd>{"status":{"schemaVersion":"v6.1.4","from":"https://grype.anchore.io/databases/v6/vulnerability-db_v6.1.4_2026-06-02T00:56:23Z_1780417666.tar.zst?checksum=sha256%3A770c1d4a103efd6e7a61f0c5005b29a36beae447797f7142e5e397a76083c705","built":"2026-06-02T16:27:46Z","path":"/home/runner/.cache/grype/db/6/vulnerability.db","valid":true},"providers":{"alma":{"captured":"2026-06-02T00:56:26Z","input":"xxh64:b7508dbc4796494e"},"alpine":{"captured":"2026-06-02T00:56:58Z","input":"xxh64:c461a7cc3f303901"},"amazon":{"captured":"2026-06-02T09:29:50Z","input":"xxh64:462a93cab4e98df3"},"arch":{"captured":"2026-06-02T00:56:35Z","input":"xxh64:311ab056eae63011"},"bitnami":{"captured":"2026-06-02T00:56:26Z","input":"xxh64:64d389b8d4962a56"},"chainguard":{"captured":"2026-06-02T00:56:33Z","input":"xxh64:bf92c899e60470e1"},"chainguard-libraries":{"captured":"2026-06-02T00:56:34Z","input":"xxh64:967df3284a2a7f40"},"debian":{"captured":"2026-06-02T00:56:47Z","input":"xxh64:346dfe71d822e9c9"},"echo":{"captured":"2026-06-02T00:56:50Z","input":"xxh64:66b65f2d1e57d006"},"eol":{"captured":"2026-06-02T00:56:55Z","input":"xxh64:7a9d812654b38f44"},"epss":{"captured":"2026-06-02T00:57:13Z","input":"xxh64:46148a7b22a58b53"},"fedora":{"captured":"2026-06-02T09:29:33Z","input":"xxh64:6c04137d67916d6b"},"github":{"captured":"2026-06-02T09:29:25Z","input":"xxh64:7d15b7b214ba908d"},"hummingbird":{"captured":"2026-06-02T00:57:14Z","input":"xxh64:edd8d46c553e0872"},"kev":{"captured":"2026-06-02T00:56:45Z","input":"xxh64:30e502bac58f761b"},"mariner":{"captured":"2026-06-02T00:56:26Z","input":"xxh64:0f2ca8f96885b375"},"minimos":{"captured":"2026-06-02T00:56:36Z","input":"xxh64:d041d656e77baa0f"},"nvd":{"captured":"2026-06-02T09:30:08Z","input":"xxh64:fe00b617ff019750"},"oracle":{"captured":"2026-06-02T00:56:23Z","input":"xxh64:fadc549cef36e21d"},"photon":{"captured":"2026-06-02T00:56:33Z","input":"xxh64:e43692dc830e4873"},"rhel":{"captured":"2026-06-02T09:30:42Z","input":"xxh64:e1f86050c168ebbe"},"secureos":{"captured":"2026-06-02T00:56:33Z","input":"xxh64:9b0db71b583878e1"},"sles":{"captured":"2026-06-02T00:56:53Z","input":"xxh64:f76831c9d6607c89"},"ubuntu":{"captured":"2026-06-02T09:36:20Z","input":"xxh64:8461aae9cb58d5ec"},"wolfi":{"captured":"2026-06-02T00:56:30Z","input":"xxh64:bc277e69675c5eac"}}}</dd><dt>Date:</dt>
                     <dd>
-                        <span id="dateElement">2026-05-31T17:37:02.737124983Z</span>
+                        <span id="dateElement">2026-06-02T21:29:29.090111845Z</span>
                         <span id="prettyDateElement" style="display: none;"></span>
                     </dd>
                     <dt>Grype Version:</dt>
                     <dd>0.112.0</dd>
                     <dt>DB Built:</dt>
-                    <dd>2026-05-31 07:39:13 +0000 UTC</dd>
+                    <dd>2026-06-02 16:27:46 +0000 UTC</dd>
                 </dl>
             </div>
             <div class="heading-right">
@@ -1185,6 +1187,22 @@
                         <td>pkg:rpm/rocky/libssh-config@0.10.4-17.el9_7?arch=noarch&distro=rocky-9.7&upstream=libssh-0.10.4-17.el9_7.src.rpm</td>
                     </tr>
                     <tr>
+                        <td>gnutls</td>
+                        <td>3.8.3-10.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-5260">CVE-2026-5260</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in libgnutls. A remote attacker, by sending an extremely short premaster secret during an RSA key exchange to a server using an RSA key backed by a PKCS#11 token, could trigger a short heap overread. This memory corruption vulnerability could lead to information disclosure.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/gnutls@3.8.3-10.el9_7?arch=x86_64&distro=rocky-9.7&upstream=gnutls-3.8.3-10.el9_7.src.rpm</td>
+                    </tr>
+                    <tr>
                         <td>libarchive</td>
                         <td>3.5.3-9.el9_7</td>
                         <td>rpm</td>
@@ -1205,14 +1223,14 @@
                         <td>3.8.3-10.el9_7</td>
                         <td>rpm</td>
                         <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-5260">CVE-2026-5260</a>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-42015">CVE-2026-42015</a>
                         </td>
                         <td>Medium</td>
                         <td>not-fixed</td>
                         <td>
                             N/A
                         </td>
-                        <td>A flaw was found in libgnutls. A remote attacker, by sending an extremely short premaster secret during an RSA key exchange to a server using an RSA key backed by a PKCS#11 token, could trigger a short heap overread. This memory corruption vulnerability could lead to information disclosure.</td>
+                        <td>A flaw was found in gnutls. An off-by-one error exists in the PKCS#12 bag element bounds check. This vulnerability allows an remote attacker to write past the internal array of a PKCS#12 bag when appending to a bag that already contains 32 elements. This memory corruption could lead to a denial of service (DoS) or potentially other unspecified impacts.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/gnutls@3.8.3-10.el9_7?arch=x86_64&distro=rocky-9.7&upstream=gnutls-3.8.3-10.el9_7.src.rpm</td>
                     </tr>
@@ -1265,22 +1283,6 @@
                         <td>pkg:rpm/rocky/openssl-libs@3.5.1-7.el9_7?arch=x86_64&distro=rocky-9.7&epoch=1&upstream=openssl-3.5.1-7.el9_7.src.rpm</td>
                     </tr>
                     <tr>
-                        <td>glib2</td>
-                        <td>2.68.4-18.el9_7.1</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2023-32636">CVE-2023-32636</a>
-                        </td>
-                        <td>Low</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in glib, where the gvariant deserialization code is vulnerable to a denial of service introduced by additional input validation added to resolve CVE-2023-29499. The offset table validation may be very slow. This bug does not affect any released version of glib but does affect glib distributors who followed the guidance of glib developers to backport the initial fix for CVE-2023-29499.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/glib2@2.68.4-18.el9_7.1?arch=x86_64&distro=rocky-9.7&upstream=glib2-2.68.4-18.el9_7.1.src.rpm</td>
-                    </tr>
-                    <tr>
                         <td>libssh</td>
                         <td>0.10.4-17.el9_7</td>
                         <td>rpm</td>
@@ -1317,18 +1319,34 @@
                         <td>pkg:rpm/rocky/libssh-config@0.10.4-17.el9_7?arch=noarch&distro=rocky-9.7&upstream=libssh-0.10.4-17.el9_7.src.rpm</td>
                     </tr>
                     <tr>
-                        <td>gnutls</td>
-                        <td>3.8.3-10.el9_7</td>
+                        <td>glib2</td>
+                        <td>2.68.4-18.el9_7.1</td>
                         <td>rpm</td>
                         <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-42015">CVE-2026-42015</a>
+                            <a href="https://access.redhat.com/security/cve/CVE-2023-32636">CVE-2023-32636</a>
                         </td>
-                        <td>Medium</td>
+                        <td>Low</td>
                         <td>not-fixed</td>
                         <td>
                             N/A
                         </td>
-                        <td>A flaw was found in gnutls. An off-by-one error exists in the PKCS#12 bag element bounds check. This vulnerability allows an remote attacker to write past the internal array of a PKCS#12 bag when appending to a bag that already contains 32 elements. This memory corruption could lead to a denial of service (DoS) or potentially other unspecified impacts.</td>
+                        <td>A flaw was found in glib, where the gvariant deserialization code is vulnerable to a denial of service introduced by additional input validation added to resolve CVE-2023-29499. The offset table validation may be very slow. This bug does not affect any released version of glib but does affect glib distributors who followed the guidance of glib developers to backport the initial fix for CVE-2023-29499.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/glib2@2.68.4-18.el9_7.1?arch=x86_64&distro=rocky-9.7&upstream=glib2-2.68.4-18.el9_7.1.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>gnutls</td>
+                        <td>3.8.3-10.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-42010">CVE-2026-42010</a>
+                        </td>
+                        <td>High</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in gnutls. Servers configured with RSA-PSK (Rivest–Shamir–Adleman – Pre-Shared Key) wrongfully matched usernames containing a NUL character with truncated usernames. A remote attacker could exploit this by sending a specially crafted username, leading to an authentication bypass. This vulnerability allows an attacker to gain unauthorized access by circumventing the authentication process.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/gnutls@3.8.3-10.el9_7?arch=x86_64&distro=rocky-9.7&upstream=gnutls-3.8.3-10.el9_7.src.rpm</td>
                     </tr>
@@ -1349,6 +1367,22 @@
                         <td>A flaw was found in MIT Kerberos 5 (krb5). An unauthenticated remote attacker can exploit an integer underflow and an out-of-bounds read vulnerability by calling `gss_accept_sec_context()` on a system with a NegoEx mechanism registered. This can lead to the process terminating, resulting in a Denial of Service (DoS).</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/krb5-libs@1.21.1-8.el9_6?arch=x86_64&distro=rocky-9.7&upstream=krb5-1.21.1-8.el9_6.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>gnutls</td>
+                        <td>3.8.3-10.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-3833">CVE-2026-3833</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in gnutls. This vulnerability occurs because gnutls performs case-sensitive comparisons of `nameConstraints` labels, specifically for `dNSName` (DNS) or `rfc822Name` (email) constraints within `excludedSubtrees` or `permittedSubtrees`. A remote attacker can exploit this by crafting a leaf certificate with casing differences in the Subject Alternative Name (SAN), leading to a policy bypass where a certificate that should be rejected is instead accepted. This could result in unauthorized access or information disclosure.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/gnutls@3.8.3-10.el9_7?arch=x86_64&distro=rocky-9.7&upstream=gnutls-3.8.3-10.el9_7.src.rpm</td>
                     </tr>
                     <tr>
                         <td>libssh</td>
@@ -1439,22 +1473,6 @@
                         <td>pkg:rpm/rocky/p11-kit-trust@0.25.3-3.el9_5?arch=x86_64&distro=rocky-9.7&upstream=p11-kit-0.25.3-3.el9_5.src.rpm</td>
                     </tr>
                     <tr>
-                        <td>gnutls</td>
-                        <td>3.8.3-10.el9_7</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-3833">CVE-2026-3833</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in gnutls. This vulnerability occurs because gnutls performs case-sensitive comparisons of `nameConstraints` labels, specifically for `dNSName` (DNS) or `rfc822Name` (email) constraints within `excludedSubtrees` or `permittedSubtrees`. A remote attacker can exploit this by crafting a leaf certificate with casing differences in the Subject Alternative Name (SAN), leading to a policy bypass where a certificate that should be rejected is instead accepted. This could result in unauthorized access or information disclosure.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/gnutls@3.8.3-10.el9_7?arch=x86_64&distro=rocky-9.7&upstream=gnutls-3.8.3-10.el9_7.src.rpm</td>
-                    </tr>
-                    <tr>
                         <td>krb5-libs</td>
                         <td>1.21.1-8.el9_6</td>
                         <td>rpm</td>
@@ -1471,22 +1489,6 @@
                         <td>A flaw was found in MIT Kerberos 5 (krb5). An unauthenticated remote attacker can exploit a NULL pointer dereference vulnerability by calling `gss_accept_sec_context()` on a system with a NegoEx mechanism registered. This can lead to the termination of the process, resulting in a Denial of Service (DoS).</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/krb5-libs@1.21.1-8.el9_6?arch=x86_64&distro=rocky-9.7&upstream=krb5-1.21.1-8.el9_6.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>gnutls</td>
-                        <td>3.8.3-10.el9_7</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-42010">CVE-2026-42010</a>
-                        </td>
-                        <td>High</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in gnutls. Servers configured with RSA-PSK (Rivest–Shamir–Adleman – Pre-Shared Key) wrongfully matched usernames containing a NUL character with truncated usernames. A remote attacker could exploit this by sending a specially crafted username, leading to an authentication bypass. This vulnerability allows an attacker to gain unauthorized access by circumventing the authentication process.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/gnutls@3.8.3-10.el9_7?arch=x86_64&distro=rocky-9.7&upstream=gnutls-3.8.3-10.el9_7.src.rpm</td>
                     </tr>
                     <tr>
                         <td>glibc</td>
@@ -1625,6 +1627,22 @@
                         <td>pkg:rpm/rocky/libxml2@2.9.13-14.el9_7?arch=x86_64&distro=rocky-9.7&upstream=libxml2-2.9.13-14.el9_7.src.rpm</td>
                     </tr>
                     <tr>
+                        <td>gnutls</td>
+                        <td>3.8.3-10.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-33845">CVE-2026-33845</a>
+                        </td>
+                        <td>High</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw in GnuTLS DTLS handshake parsing allows malformed fragments with zero length and non-zero offset, leading to an integer underflow during reassembly and resulting in an out-of-bounds read. This issue is remotely exploitable and may cause information disclosure or denial of service.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/gnutls@3.8.3-10.el9_7?arch=x86_64&distro=rocky-9.7&upstream=gnutls-3.8.3-10.el9_7.src.rpm</td>
+                    </tr>
+                    <tr>
                         <td>libxml2</td>
                         <td>2.9.13-14.el9_7</td>
                         <td>rpm</td>
@@ -1677,22 +1695,6 @@
                         <td>pkg:rpm/rocky/libssh-config@0.10.4-17.el9_7?arch=noarch&distro=rocky-9.7&upstream=libssh-0.10.4-17.el9_7.src.rpm</td>
                     </tr>
                     <tr>
-                        <td>gnutls</td>
-                        <td>3.8.3-10.el9_7</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-33845">CVE-2026-33845</a>
-                        </td>
-                        <td>High</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw in GnuTLS DTLS handshake parsing allows malformed fragments with zero length and non-zero offset, leading to an integer underflow during reassembly and resulting in an out-of-bounds read. This issue is remotely exploitable and may cause information disclosure or denial of service.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/gnutls@3.8.3-10.el9_7?arch=x86_64&distro=rocky-9.7&upstream=gnutls-3.8.3-10.el9_7.src.rpm</td>
-                    </tr>
-                    <tr>
                         <td>libarchive</td>
                         <td>3.5.3-9.el9_7</td>
                         <td>rpm</td>
@@ -1739,6 +1741,22 @@
                         <td>A flaw was found in curl. When an application uses libcurl to make multiple Negotiate-authenticated HTTP or HTTPS requests to the same server with different credentials, libcurl may incorrectly reuse an existing connection. This logical error can cause a subsequent request to be sent using the authentication of a previous user, leading to an authentication bypass.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/libcurl@7.76.1-35.el9_7.3?arch=x86_64&distro=rocky-9.7&upstream=curl-7.76.1-35.el9_7.3.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>glib2</td>
+                        <td>2.68.4-18.el9_7.1</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-3360">CVE-2025-3360</a>
+                        </td>
+                        <td>Low</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in GLib. An integer overflow and buffer under-read occur when parsing a long invalid ISO 8601 timestamp with the g_date_time_new_from_iso8601() function.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/glib2@2.68.4-18.el9_7.1?arch=x86_64&distro=rocky-9.7&upstream=glib2-2.68.4-18.el9_7.1.src.rpm</td>
                     </tr>
                     <tr>
                         <td>glibc</td>
@@ -1861,22 +1879,6 @@
                         <td>pkg:rpm/rocky/libarchive@3.5.3-9.el9_7?arch=x86_64&distro=rocky-9.7&upstream=libarchive-3.5.3-9.el9_7.src.rpm</td>
                     </tr>
                     <tr>
-                        <td>glib2</td>
-                        <td>2.68.4-18.el9_7.1</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2025-3360">CVE-2025-3360</a>
-                        </td>
-                        <td>Low</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in GLib. An integer overflow and buffer under-read occur when parsing a long invalid ISO 8601 timestamp with the g_date_time_new_from_iso8601() function.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/glib2@2.68.4-18.el9_7.1?arch=x86_64&distro=rocky-9.7&upstream=glib2-2.68.4-18.el9_7.1.src.rpm</td>
-                    </tr>
-                    <tr>
                         <td>curl</td>
                         <td>7.76.1-35.el9_7.3</td>
                         <td>rpm</td>
@@ -1911,218 +1913,6 @@ public key authentication, curl would wrongly still ask and authenticate using
 a locally running SSH agent.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/libcurl@7.76.1-35.el9_7.3?arch=x86_64&distro=rocky-9.7&upstream=curl-7.76.1-35.el9_7.3.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>libtasn1</td>
-                        <td>4.16.0-9.el9</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2025-13151">CVE-2025-13151</a>
-                        </td>
-                        <td>Low</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in libtasn1. A remote attacker could exploit a stack-based buffer overflow vulnerability in the `asn1_expend_octet_string` function. This occurs due to a failure in validating the size of input data. Successful exploitation can lead to a Denial of Service (DoS) condition, making the affected system or application unavailable.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/libtasn1@4.16.0-9.el9?arch=x86_64&distro=rocky-9.7&upstream=libtasn1-4.16.0-9.el9.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>glib2</td>
-                        <td>2.68.4-18.el9_7.1</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2025-14087">CVE-2025-14087</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>fixed</td>
-                        <td>
-                            <ul>
-                                <li>0:2.68.4-19.el9_8.1</li>
-                            </ul>
-                        </td>
-                        <td>A flaw was found in GLib (Gnome Lib). This vulnerability allows a remote attacker to cause heap corruption, leading to a denial of service or potential code execution via a buffer-underflow in the GVariant parser when processing maliciously crafted input strings.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/glib2@2.68.4-18.el9_7.1?arch=x86_64&distro=rocky-9.7&upstream=glib2-2.68.4-18.el9_7.1.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>libarchive</td>
-                        <td>3.5.3-9.el9_7</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2025-5916">CVE-2025-5916</a>
-                        </td>
-                        <td>Low</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A vulnerability has been identified in the libarchive library. This flaw involves an integer overflow that can be triggered when processing a Web Archive (WARC) file that claims to have more than INT64_MAX - 4 content bytes. An attacker could craft a malicious WARC archive to induce this overflow, potentially leading to unpredictable program behavior, memory corruption, or a denial-of-service condition within applications that process such archives using libarchive. This bug affects libarchive versions prior to 3.8.0.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/libarchive@3.5.3-9.el9_7?arch=x86_64&distro=rocky-9.7&upstream=libarchive-3.5.3-9.el9_7.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>libarchive</td>
-                        <td>3.5.3-9.el9_7</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2025-5917">CVE-2025-5917</a>
-                        </td>
-                        <td>Low</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A vulnerability has been identified in the libarchive library. This flaw involves an &#39;off-by-one&#39; miscalculation when handling prefixes and suffixes for file names. This can lead to a 1-byte write overflow. While seemingly small, such an overflow can corrupt adjacent memory, leading to unpredictable program behavior, crashes, or in specific circumstances, could be leveraged as a building block for more sophisticated exploitation. This bug affects libarchive versions prior to 3.8.0.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/libarchive@3.5.3-9.el9_7?arch=x86_64&distro=rocky-9.7&upstream=libarchive-3.5.3-9.el9_7.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>libsolv</td>
-                        <td>0.7.24-3.el9</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-9149">CVE-2026-9149</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in libsolv. This heap buffer overflow vulnerability occurs when a victim processes a specially crafted `.solv` file containing negative size values in the `repo_add_solv` function. This leads to an undersized memory allocation and a subsequent out-of-bounds write. An attacker could exploit this to cause a denial of service (DoS).</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/libsolv@0.7.24-3.el9?arch=x86_64&distro=rocky-9.7&upstream=libsolv-0.7.24-3.el9.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>gnutls</td>
-                        <td>3.8.3-10.el9_7</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-33846">CVE-2026-33846</a>
-                        </td>
-                        <td>High</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A heap buffer overflow vulnerability exists in the DTLS handshake fragment reassembly logic of GnuTLS. The issue arises in merge_handshake_packet() where incoming handshake fragments are matched and merged based solely on handshake type, without validating that the message_length field remains consistent across all fragments of the same logical message. An attacker can exploit this by sending crafted DTLS fragments with conflicting message_length values, causing the implementation to allocate a buffer based on a smaller initial fragment and subsequently write beyond its bounds using larger, inconsistent fragments. Because the merge operation does not enforce proper bounds checking against the allocated buffer size, this results in an out-of-bounds write on the heap. The vulnerability is remotely exploitable without authentication via the DTLS handshake path and can lead to application crashes or potential memory corruption.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/gnutls@3.8.3-10.el9_7?arch=x86_64&distro=rocky-9.7&upstream=gnutls-3.8.3-10.el9_7.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>glib2</td>
-                        <td>2.68.4-18.el9_7.1</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2025-14512">CVE-2025-14512</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>fixed</td>
-                        <td>
-                            <ul>
-                                <li>0:2.68.4-19.el9_8.1</li>
-                            </ul>
-                        </td>
-                        <td>A flaw was found in glib. This vulnerability allows a heap buffer overflow and denial-of-service (DoS) via an integer overflow in GLib&#39;s GIO (GLib Input/Output) escape_byte_string() function when processing malicious file or remote filesystem attribute values.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/glib2@2.68.4-18.el9_7.1?arch=x86_64&distro=rocky-9.7&upstream=glib2-2.68.4-18.el9_7.1.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>libxml2</td>
-                        <td>2.9.13-14.el9_7</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2023-45322">CVE-2023-45322</a>
-                        </td>
-                        <td>Low</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in libxml2. In an out-of-memory condition or when limiting the memory allocation, processing a XML document using the HTML parser may result in a use-after-free vulnerability.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/libxml2@2.9.13-14.el9_7?arch=x86_64&distro=rocky-9.7&upstream=libxml2-2.9.13-14.el9_7.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>xz-libs</td>
-                        <td>5.2.5-8.el9_0</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-34743">CVE-2026-34743</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in XZ Utils. When the `lzma_index_decoder()` function processes an empty index, and a subsequent `lzma_index_append()` operation is performed, insufficient memory is allocated. This can lead to a buffer overflow, potentially causing a denial of service (DoS) for affected systems.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/xz-libs@5.2.5-8.el9_0?arch=x86_64&distro=rocky-9.7&upstream=xz-5.2.5-8.el9_0.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>openssl</td>
-                        <td>1:3.5.1-7.el9_7</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2024-13176">CVE-2024-13176</a>
-                        </td>
-                        <td>Low</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A timing side-channel vulnerability was found in OpenSSL. This vulnerability allows an attacker to recover the private key. However, measuring the timing would require local access to the signing application or a fast network connection with low latency. There is a timing signal of around 300 nanoseconds when the top word of the inverted ECDSA nonce value is zero. This issue can happen with significant probability only for some of the supported elliptic curves. In particular, the NIST P-521 curve is affected.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/openssl@3.5.1-7.el9_7?arch=x86_64&distro=rocky-9.7&epoch=1&upstream=openssl-3.5.1-7.el9_7.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>openssl-fips-provider</td>
-                        <td>1:3.5.1-7.el9_7</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2024-13176">CVE-2024-13176</a>
-                        </td>
-                        <td>Low</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A timing side-channel vulnerability was found in OpenSSL. This vulnerability allows an attacker to recover the private key. However, measuring the timing would require local access to the signing application or a fast network connection with low latency. There is a timing signal of around 300 nanoseconds when the top word of the inverted ECDSA nonce value is zero. This issue can happen with significant probability only for some of the supported elliptic curves. In particular, the NIST P-521 curve is affected.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/openssl-fips-provider@3.5.1-7.el9_7?arch=x86_64&distro=rocky-9.7&epoch=1&upstream=openssl-3.5.1-7.el9_7.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>openssl-libs</td>
-                        <td>1:3.5.1-7.el9_7</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2024-13176">CVE-2024-13176</a>
-                        </td>
-                        <td>Low</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A timing side-channel vulnerability was found in OpenSSL. This vulnerability allows an attacker to recover the private key. However, measuring the timing would require local access to the signing application or a fast network connection with low latency. There is a timing signal of around 300 nanoseconds when the top word of the inverted ECDSA nonce value is zero. This issue can happen with significant probability only for some of the supported elliptic curves. In particular, the NIST P-521 curve is affected.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/openssl-libs@3.5.1-7.el9_7?arch=x86_64&distro=rocky-9.7&epoch=1&upstream=openssl-3.5.1-7.el9_7.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>libxml2</td>
-                        <td>2.9.13-14.el9_7</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2025-27113">CVE-2025-27113</a>
-                        </td>
-                        <td>Low</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in libxml2. This vulnerability allows a NULL pointer dereference, leading to a potential crash or denial of service via a crafted XML pattern.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/libxml2@2.9.13-14.el9_7?arch=x86_64&distro=rocky-9.7&upstream=libxml2-2.9.13-14.el9_7.src.rpm</td>
                     </tr>
                     <tr>
                         <td>glibc</td>
@@ -2187,6 +1977,282 @@ a locally running SSH agent.</td>
                         <td>A flaw was found in glibc (GNU C Library). This vulnerability occurs when an application uses the `scanf` family of functions with a `%mc` format specifier, which is used for dynamically allocating memory for character input, and provides an explicit width greater than 1024. This specific combination can lead to a one-byte heap buffer overflow, potentially allowing an attacker to corrupt memory.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/glibc-minimal-langpack@2.34-231.el9_7.10?arch=x86_64&distro=rocky-9.7&upstream=glibc-2.34-231.el9_7.10.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>libtasn1</td>
+                        <td>4.16.0-9.el9</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-13151">CVE-2025-13151</a>
+                        </td>
+                        <td>Low</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in libtasn1. A remote attacker could exploit a stack-based buffer overflow vulnerability in the `asn1_expend_octet_string` function. This occurs due to a failure in validating the size of input data. Successful exploitation can lead to a Denial of Service (DoS) condition, making the affected system or application unavailable.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/libtasn1@4.16.0-9.el9?arch=x86_64&distro=rocky-9.7&upstream=libtasn1-4.16.0-9.el9.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>libarchive</td>
+                        <td>3.5.3-9.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-5916">CVE-2025-5916</a>
+                        </td>
+                        <td>Low</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A vulnerability has been identified in the libarchive library. This flaw involves an integer overflow that can be triggered when processing a Web Archive (WARC) file that claims to have more than INT64_MAX - 4 content bytes. An attacker could craft a malicious WARC archive to induce this overflow, potentially leading to unpredictable program behavior, memory corruption, or a denial-of-service condition within applications that process such archives using libarchive. This bug affects libarchive versions prior to 3.8.0.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/libarchive@3.5.3-9.el9_7?arch=x86_64&distro=rocky-9.7&upstream=libarchive-3.5.3-9.el9_7.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>glibc</td>
+                        <td>2.34-231.el9_7.10</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-5928">CVE-2026-5928</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in glibc (GNU C Library). When the `ungetwc` function is called on a file stream using wide characters with specific overlapping single-byte and multi-byte encodings, it may attempt to read data outside of its allocated buffer. This can lead to the unintentional disclosure of sensitive information from memory or cause the program to crash, resulting in a denial of service.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/glibc@2.34-231.el9_7.10?arch=x86_64&distro=rocky-9.7&upstream=glibc-2.34-231.el9_7.10.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>glibc-common</td>
+                        <td>2.34-231.el9_7.10</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-5928">CVE-2026-5928</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in glibc (GNU C Library). When the `ungetwc` function is called on a file stream using wide characters with specific overlapping single-byte and multi-byte encodings, it may attempt to read data outside of its allocated buffer. This can lead to the unintentional disclosure of sensitive information from memory or cause the program to crash, resulting in a denial of service.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/glibc-common@2.34-231.el9_7.10?arch=x86_64&distro=rocky-9.7&upstream=glibc-2.34-231.el9_7.10.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>glibc-langpack-en</td>
+                        <td>2.34-231.el9_7.10</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-5928">CVE-2026-5928</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in glibc (GNU C Library). When the `ungetwc` function is called on a file stream using wide characters with specific overlapping single-byte and multi-byte encodings, it may attempt to read data outside of its allocated buffer. This can lead to the unintentional disclosure of sensitive information from memory or cause the program to crash, resulting in a denial of service.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/glibc-langpack-en@2.34-231.el9_7.10?arch=x86_64&distro=rocky-9.7&upstream=glibc-2.34-231.el9_7.10.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>glibc-minimal-langpack</td>
+                        <td>2.34-231.el9_7.10</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-5928">CVE-2026-5928</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in glibc (GNU C Library). When the `ungetwc` function is called on a file stream using wide characters with specific overlapping single-byte and multi-byte encodings, it may attempt to read data outside of its allocated buffer. This can lead to the unintentional disclosure of sensitive information from memory or cause the program to crash, resulting in a denial of service.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/glibc-minimal-langpack@2.34-231.el9_7.10?arch=x86_64&distro=rocky-9.7&upstream=glibc-2.34-231.el9_7.10.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>libarchive</td>
+                        <td>3.5.3-9.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-5917">CVE-2025-5917</a>
+                        </td>
+                        <td>Low</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A vulnerability has been identified in the libarchive library. This flaw involves an &#39;off-by-one&#39; miscalculation when handling prefixes and suffixes for file names. This can lead to a 1-byte write overflow. While seemingly small, such an overflow can corrupt adjacent memory, leading to unpredictable program behavior, crashes, or in specific circumstances, could be leveraged as a building block for more sophisticated exploitation. This bug affects libarchive versions prior to 3.8.0.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/libarchive@3.5.3-9.el9_7?arch=x86_64&distro=rocky-9.7&upstream=libarchive-3.5.3-9.el9_7.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>libsolv</td>
+                        <td>0.7.24-3.el9</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-9149">CVE-2026-9149</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in libsolv. This heap buffer overflow vulnerability occurs when a victim processes a specially crafted `.solv` file containing negative size values in the `repo_add_solv` function. This leads to an undersized memory allocation and a subsequent out-of-bounds write. An attacker could exploit this to cause a denial of service (DoS).</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/libsolv@0.7.24-3.el9?arch=x86_64&distro=rocky-9.7&upstream=libsolv-0.7.24-3.el9.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>gnutls</td>
+                        <td>3.8.3-10.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-33846">CVE-2026-33846</a>
+                        </td>
+                        <td>High</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A heap buffer overflow vulnerability exists in the DTLS handshake fragment reassembly logic of GnuTLS. The issue arises in merge_handshake_packet() where incoming handshake fragments are matched and merged based solely on handshake type, without validating that the message_length field remains consistent across all fragments of the same logical message. An attacker can exploit this by sending crafted DTLS fragments with conflicting message_length values, causing the implementation to allocate a buffer based on a smaller initial fragment and subsequently write beyond its bounds using larger, inconsistent fragments. Because the merge operation does not enforce proper bounds checking against the allocated buffer size, this results in an out-of-bounds write on the heap. The vulnerability is remotely exploitable without authentication via the DTLS handshake path and can lead to application crashes or potential memory corruption.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/gnutls@3.8.3-10.el9_7?arch=x86_64&distro=rocky-9.7&upstream=gnutls-3.8.3-10.el9_7.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>glib2</td>
+                        <td>2.68.4-18.el9_7.1</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-14087">CVE-2025-14087</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>fixed</td>
+                        <td>
+                            <ul>
+                                <li>0:2.68.4-19.el9_8.1</li>
+                            </ul>
+                        </td>
+                        <td>A flaw was found in GLib (Gnome Lib). This vulnerability allows a remote attacker to cause heap corruption, leading to a denial of service or potential code execution via a buffer-underflow in the GVariant parser when processing maliciously crafted input strings.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/glib2@2.68.4-18.el9_7.1?arch=x86_64&distro=rocky-9.7&upstream=glib2-2.68.4-18.el9_7.1.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>libxml2</td>
+                        <td>2.9.13-14.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2023-45322">CVE-2023-45322</a>
+                        </td>
+                        <td>Low</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in libxml2. In an out-of-memory condition or when limiting the memory allocation, processing a XML document using the HTML parser may result in a use-after-free vulnerability.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/libxml2@2.9.13-14.el9_7?arch=x86_64&distro=rocky-9.7&upstream=libxml2-2.9.13-14.el9_7.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>xz-libs</td>
+                        <td>5.2.5-8.el9_0</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-34743">CVE-2026-34743</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in XZ Utils. When the `lzma_index_decoder()` function processes an empty index, and a subsequent `lzma_index_append()` operation is performed, insufficient memory is allocated. This can lead to a buffer overflow, potentially causing a denial of service (DoS) for affected systems.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/xz-libs@5.2.5-8.el9_0?arch=x86_64&distro=rocky-9.7&upstream=xz-5.2.5-8.el9_0.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>glib2</td>
+                        <td>2.68.4-18.el9_7.1</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-14512">CVE-2025-14512</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>fixed</td>
+                        <td>
+                            <ul>
+                                <li>0:2.68.4-19.el9_8.1</li>
+                            </ul>
+                        </td>
+                        <td>A flaw was found in glib. This vulnerability allows a heap buffer overflow and denial-of-service (DoS) via an integer overflow in GLib&#39;s GIO (GLib Input/Output) escape_byte_string() function when processing malicious file or remote filesystem attribute values.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/glib2@2.68.4-18.el9_7.1?arch=x86_64&distro=rocky-9.7&upstream=glib2-2.68.4-18.el9_7.1.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>openssl</td>
+                        <td>1:3.5.1-7.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2024-13176">CVE-2024-13176</a>
+                        </td>
+                        <td>Low</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A timing side-channel vulnerability was found in OpenSSL. This vulnerability allows an attacker to recover the private key. However, measuring the timing would require local access to the signing application or a fast network connection with low latency. There is a timing signal of around 300 nanoseconds when the top word of the inverted ECDSA nonce value is zero. This issue can happen with significant probability only for some of the supported elliptic curves. In particular, the NIST P-521 curve is affected.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/openssl@3.5.1-7.el9_7?arch=x86_64&distro=rocky-9.7&epoch=1&upstream=openssl-3.5.1-7.el9_7.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>openssl-fips-provider</td>
+                        <td>1:3.5.1-7.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2024-13176">CVE-2024-13176</a>
+                        </td>
+                        <td>Low</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A timing side-channel vulnerability was found in OpenSSL. This vulnerability allows an attacker to recover the private key. However, measuring the timing would require local access to the signing application or a fast network connection with low latency. There is a timing signal of around 300 nanoseconds when the top word of the inverted ECDSA nonce value is zero. This issue can happen with significant probability only for some of the supported elliptic curves. In particular, the NIST P-521 curve is affected.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/openssl-fips-provider@3.5.1-7.el9_7?arch=x86_64&distro=rocky-9.7&epoch=1&upstream=openssl-3.5.1-7.el9_7.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>openssl-libs</td>
+                        <td>1:3.5.1-7.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2024-13176">CVE-2024-13176</a>
+                        </td>
+                        <td>Low</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A timing side-channel vulnerability was found in OpenSSL. This vulnerability allows an attacker to recover the private key. However, measuring the timing would require local access to the signing application or a fast network connection with low latency. There is a timing signal of around 300 nanoseconds when the top word of the inverted ECDSA nonce value is zero. This issue can happen with significant probability only for some of the supported elliptic curves. In particular, the NIST P-521 curve is affected.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/openssl-libs@3.5.1-7.el9_7?arch=x86_64&distro=rocky-9.7&epoch=1&upstream=openssl-3.5.1-7.el9_7.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>libxml2</td>
+                        <td>2.9.13-14.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-27113">CVE-2025-27113</a>
+                        </td>
+                        <td>Low</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in libxml2. This vulnerability allows a NULL pointer dereference, leading to a potential crash or denial of service via a crafted XML pattern.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/libxml2@2.9.13-14.el9_7?arch=x86_64&distro=rocky-9.7&upstream=libxml2-2.9.13-14.el9_7.src.rpm</td>
                     </tr>
                     <tr>
                         <td>glibc</td>
@@ -2301,68 +2367,20 @@ a locally running SSH agent.</td>
                         <td>pkg:rpm/rocky/libcurl@7.76.1-35.el9_7.3?arch=x86_64&distro=rocky-9.7&upstream=curl-7.76.1-35.el9_7.3.src.rpm</td>
                     </tr>
                     <tr>
-                        <td>glibc</td>
-                        <td>2.34-231.el9_7.10</td>
+                        <td>gnutls</td>
+                        <td>3.8.3-10.el9_7</td>
                         <td>rpm</td>
                         <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-5928">CVE-2026-5928</a>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-42013">CVE-2026-42013</a>
                         </td>
                         <td>Medium</td>
                         <td>not-fixed</td>
                         <td>
                             N/A
                         </td>
-                        <td>A flaw was found in glibc (GNU C Library). When the `ungetwc` function is called on a file stream using wide characters with specific overlapping single-byte and multi-byte encodings, it may attempt to read data outside of its allocated buffer. This can lead to the unintentional disclosure of sensitive information from memory or cause the program to crash, resulting in a denial of service.</td>
+                        <td>A flaw was found in gnutls. When validating certificates, an oversized Subject Alternative Name (SAN) could cause the validation process to incorrectly fall back to checking the Common Name (CN) field. This could allow a remote attacker to bypass proper certificate validation, potentially leading to spoofing or man-in-the-middle attacks.</td>
                         <td>[]</td>
-                        <td>pkg:rpm/rocky/glibc@2.34-231.el9_7.10?arch=x86_64&distro=rocky-9.7&upstream=glibc-2.34-231.el9_7.10.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>glibc-common</td>
-                        <td>2.34-231.el9_7.10</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-5928">CVE-2026-5928</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in glibc (GNU C Library). When the `ungetwc` function is called on a file stream using wide characters with specific overlapping single-byte and multi-byte encodings, it may attempt to read data outside of its allocated buffer. This can lead to the unintentional disclosure of sensitive information from memory or cause the program to crash, resulting in a denial of service.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/glibc-common@2.34-231.el9_7.10?arch=x86_64&distro=rocky-9.7&upstream=glibc-2.34-231.el9_7.10.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>glibc-langpack-en</td>
-                        <td>2.34-231.el9_7.10</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-5928">CVE-2026-5928</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in glibc (GNU C Library). When the `ungetwc` function is called on a file stream using wide characters with specific overlapping single-byte and multi-byte encodings, it may attempt to read data outside of its allocated buffer. This can lead to the unintentional disclosure of sensitive information from memory or cause the program to crash, resulting in a denial of service.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/glibc-langpack-en@2.34-231.el9_7.10?arch=x86_64&distro=rocky-9.7&upstream=glibc-2.34-231.el9_7.10.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>glibc-minimal-langpack</td>
-                        <td>2.34-231.el9_7.10</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-5928">CVE-2026-5928</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in glibc (GNU C Library). When the `ungetwc` function is called on a file stream using wide characters with specific overlapping single-byte and multi-byte encodings, it may attempt to read data outside of its allocated buffer. This can lead to the unintentional disclosure of sensitive information from memory or cause the program to crash, resulting in a denial of service.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/glibc-minimal-langpack@2.34-231.el9_7.10?arch=x86_64&distro=rocky-9.7&upstream=glibc-2.34-231.el9_7.10.src.rpm</td>
+                        <td>pkg:rpm/rocky/gnutls@3.8.3-10.el9_7?arch=x86_64&distro=rocky-9.7&upstream=gnutls-3.8.3-10.el9_7.src.rpm</td>
                     </tr>
                     <tr>
                         <td>ncurses-base</td>
@@ -2571,22 +2589,6 @@ a locally running SSH agent.</td>
                         <td>pkg:rpm/rocky/libssh-config@0.10.4-17.el9_7?arch=noarch&distro=rocky-9.7&upstream=libssh-0.10.4-17.el9_7.src.rpm</td>
                     </tr>
                     <tr>
-                        <td>gnutls</td>
-                        <td>3.8.3-10.el9_7</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-42013">CVE-2026-42013</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in gnutls. When validating certificates, an oversized Subject Alternative Name (SAN) could cause the validation process to incorrectly fall back to checking the Common Name (CN) field. This could allow a remote attacker to bypass proper certificate validation, potentially leading to spoofing or man-in-the-middle attacks.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/gnutls@3.8.3-10.el9_7?arch=x86_64&distro=rocky-9.7&upstream=gnutls-3.8.3-10.el9_7.src.rpm</td>
-                    </tr>
-                    <tr>
                         <td>curl</td>
                         <td>7.76.1-35.el9_7.3</td>
                         <td>rpm</td>
@@ -2731,6 +2733,22 @@ a locally running SSH agent.</td>
                         <td>pkg:rpm/rocky/libstdc%2B%2B@11.5.0-11.el9?arch=x86_64&distro=rocky-9.7&upstream=gcc-11.5.0-11.el9.src.rpm</td>
                     </tr>
                     <tr>
+                        <td>gnutls</td>
+                        <td>3.8.3-10.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-42012">CVE-2026-42012</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in gnutls. A remote attacker could exploit this vulnerability by presenting a specially crafted certificate that contains Uniform Resource Identifier (URI) or Service (SRV) Subject Alternative Names (SANs). This could cause the certificate validation process to incorrectly fall back to checking DNS hostnames against the Common Name (CN), potentially allowing the attacker to spoof legitimate services or intercept sensitive information.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/gnutls@3.8.3-10.el9_7?arch=x86_64&distro=rocky-9.7&upstream=gnutls-3.8.3-10.el9_7.src.rpm</td>
+                    </tr>
+                    <tr>
                         <td>curl</td>
                         <td>7.76.1-35.el9_7.3</td>
                         <td>rpm</td>
@@ -2761,22 +2779,6 @@ a locally running SSH agent.</td>
                         <td>A flaw was found in curl. When an OAuth2 (Open Authorization) bearer token is used for an HTTP(S) transfer, and that transfer performs a cross-protocol redirect to a different scheme like IMAP, LDAP, POP3, or SMTP, curl might incorrectly pass the bearer token to the new target host. This could lead to information disclosure, where sensitive authentication tokens are exposed to unintended recipients.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/libcurl@7.76.1-35.el9_7.3?arch=x86_64&distro=rocky-9.7&upstream=curl-7.76.1-35.el9_7.3.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>gnutls</td>
-                        <td>3.8.3-10.el9_7</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-42012">CVE-2026-42012</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in gnutls. A remote attacker could exploit this vulnerability by presenting a specially crafted certificate that contains Uniform Resource Identifier (URI) or Service (SRV) Subject Alternative Names (SANs). This could cause the certificate validation process to incorrectly fall back to checking DNS hostnames against the Common Name (CN), potentially allowing the attacker to spoof legitimate services or intercept sensitive information.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/gnutls@3.8.3-10.el9_7?arch=x86_64&distro=rocky-9.7&upstream=gnutls-3.8.3-10.el9_7.src.rpm</td>
                     </tr>
                     <tr>
                         <td>libssh</td>
@@ -3047,6 +3049,22 @@ This issue affects only 32-bits builds of libssh.</td>
                         <td>pkg:rpm/rocky/gawk@5.1.0-6.el9?arch=x86_64&distro=rocky-9.7&upstream=gawk-5.1.0-6.el9.src.rpm</td>
                     </tr>
                     <tr>
+                        <td>libarchive</td>
+                        <td>3.5.3-9.el9_7</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2025-60753">CVE-2025-60753</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A vulnerability in apply_substitution() function in libarchive&#39;s bsdtar allows crafted -s substitution rules to repeatedly match a zero-length substring and append replacements without advancing the input pointer. When the rule uses the global /g flag (or an explicitly empty pattern), this leads to unbounded output allocation and eventual process OOM (Denial of Service). Upgrade to libarchive 3.8.1 or apply a patch that prevents zero-length match loops or rejects empty patterns.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/libarchive@3.5.3-9.el9_7?arch=x86_64&distro=rocky-9.7&upstream=libarchive-3.5.3-9.el9_7.src.rpm</td>
+                    </tr>
+                    <tr>
                         <td>curl</td>
                         <td>7.76.1-35.el9_7.3</td>
                         <td>rpm</td>
@@ -3159,22 +3177,6 @@ This issue affects only 32-bits builds of libssh.</td>
                         <td>pkg:rpm/rocky/libcurl@7.76.1-35.el9_7.3?arch=x86_64&distro=rocky-9.7&upstream=curl-7.76.1-35.el9_7.3.src.rpm</td>
                     </tr>
                     <tr>
-                        <td>libarchive</td>
-                        <td>3.5.3-9.el9_7</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2025-60753">CVE-2025-60753</a>
-                        </td>
-                        <td>Medium</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A vulnerability in apply_substitution() function in libarchive&#39;s bsdtar allows crafted -s substitution rules to repeatedly match a zero-length substring and append replacements without advancing the input pointer. When the rule uses the global /g flag (or an explicitly empty pattern), this leads to unbounded output allocation and eventual process OOM (Denial of Service). Upgrade to libarchive 3.8.1 or apply a patch that prevents zero-length match loops or rejects empty patterns.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/libarchive@3.5.3-9.el9_7?arch=x86_64&distro=rocky-9.7&upstream=libarchive-3.5.3-9.el9_7.src.rpm</td>
-                    </tr>
-                    <tr>
                         <td>curl</td>
                         <td>7.76.1-35.el9_7.3</td>
                         <td>rpm</td>
@@ -3205,24 +3207,6 @@ This issue affects only 32-bits builds of libssh.</td>
                         <td>A flaw was found in libcurl. When configured to use a .netrc file for credentials and follow HTTP redirects, libcurl can inadvertently send the password from the initial connection to the redirected host. This sensitive information disclosure occurs when both the original and redirect URLs use clear text HTTP, are performed over the same HTTP proxy, and the same connection is reused. This vulnerability, categorized as an Exposure of Sensitive Information to an Unauthorized Actor (CWE-200), could allow an attacker to obtain user credentials.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/libcurl@7.76.1-35.el9_7.3?arch=x86_64&distro=rocky-9.7&upstream=curl-7.76.1-35.el9_7.3.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>libcap</td>
-                        <td>2.48-10.el9</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-4878">CVE-2026-4878</a>
-                        </td>
-                        <td>High</td>
-                        <td>fixed</td>
-                        <td>
-                            <ul>
-                                <li>0:2.48-10.el9_8.1</li>
-                            </ul>
-                        </td>
-                        <td>A flaw was found in libcap. A local unprivileged user can exploit a Time-of-check-to-time-of-use (TOCTOU) race condition in the `cap_set_file()` function. This allows an attacker with write access to a parent directory to redirect file capability updates to an attacker-controlled file. By doing so, capabilities can be injected into or stripped from unintended executables, leading to privilege escalation.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/libcap@2.48-10.el9?arch=x86_64&distro=rocky-9.7&upstream=libcap-2.48-10.el9.src.rpm</td>
                     </tr>
                     <tr>
                         <td>curl</td>
@@ -3319,6 +3303,40 @@ This issue affects only 32-bits builds of libssh.</td>
                         <td>A flaw was found in the interactive shell of the xmllint command-line tool, used for parsing XML files. When a user inputs an overly long command, the program does not check the input size properly, which can cause it to crash. This issue might allow attackers to run harmful code in rare configurations without modern protections.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/libxml2@2.9.13-14.el9_7?arch=x86_64&distro=rocky-9.7&upstream=libxml2-2.9.13-14.el9_7.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>libcap</td>
+                        <td>2.48-10.el9</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-4878">CVE-2026-4878</a>
+                        </td>
+                        <td>High</td>
+                        <td>fixed</td>
+                        <td>
+                            <ul>
+                                <li>0:2.48-10.el9_8.1</li>
+                            </ul>
+                        </td>
+                        <td>A flaw was found in libcap. A local unprivileged user can exploit a Time-of-check-to-time-of-use (TOCTOU) race condition in the `cap_set_file()` function. This allows an attacker with write access to a parent directory to redirect file capability updates to an attacker-controlled file. By doing so, capabilities can be injected into or stripped from unintended executables, leading to privilege escalation.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/libcap@2.48-10.el9?arch=x86_64&distro=rocky-9.7&upstream=libcap-2.48-10.el9.src.rpm</td>
+                    </tr>
+                    <tr>
+                        <td>libsolv</td>
+                        <td>0.7.24-3.el9</td>
+                        <td>rpm</td>
+                        <td>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-48864">CVE-2026-48864</a>
+                        </td>
+                        <td>Medium</td>
+                        <td>not-fixed</td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>A flaw was found in libsolv. This heap buffer overflow occurs during the decompression of attacker-controlled compressed data within `.solv` files due to insufficient input validation. An attacker can provide a specially crafted `.solv` file, which, when processed by a vulnerable application, can lead to out-of-bounds memory access. This could result in information disclosure, alteration of program execution, or a denial of service.</td>
+                        <td>[]</td>
+                        <td>pkg:rpm/rocky/libsolv@0.7.24-3.el9?arch=x86_64&distro=rocky-9.7&upstream=libsolv-0.7.24-3.el9.src.rpm</td>
                     </tr>
                     <tr>
                         <td>gnutls</td>
@@ -3677,20 +3695,20 @@ This issue affects only 32-bits builds of libssh.</td>
                         <td>pkg:rpm/rocky/util-linux-core@2.37.4-21.el9_7?arch=x86_64&distro=rocky-9.7&upstream=util-linux-2.37.4-21.el9_7.src.rpm</td>
                     </tr>
                     <tr>
-                        <td>libsolv</td>
-                        <td>0.7.24-3.el9</td>
+                        <td>gnutls</td>
+                        <td>3.8.3-10.el9_7</td>
                         <td>rpm</td>
                         <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-48864">CVE-2026-48864</a>
+                            <a href="https://access.redhat.com/security/cve/CVE-2026-3832">CVE-2026-3832</a>
                         </td>
-                        <td>Medium</td>
+                        <td>Low</td>
                         <td>not-fixed</td>
                         <td>
                             N/A
                         </td>
-                        <td>A flaw was found in libsolv. This heap buffer overflow occurs during the decompression of attacker-controlled compressed data within `.solv` files due to insufficient input validation. An attacker can provide a specially crafted `.solv` file, which, when processed by a vulnerable application, can lead to out-of-bounds memory access. This could result in information disclosure, alteration of program execution, or a denial of service.</td>
+                        <td>A flaw was found in gnutls. A remote attacker could exploit this vulnerability by presenting a specially crafted Online Certificate Status Protocol (OCSP) response during a TLS handshake. Due to a logic error in how gnutls processes multi-record OCSP responses, a client with OCSP verification enabled may incorrectly accept a revoked server certificate, potentially leading to a compromise of trust.</td>
                         <td>[]</td>
-                        <td>pkg:rpm/rocky/libsolv@0.7.24-3.el9?arch=x86_64&distro=rocky-9.7&upstream=libsolv-0.7.24-3.el9.src.rpm</td>
+                        <td>pkg:rpm/rocky/gnutls@3.8.3-10.el9_7?arch=x86_64&distro=rocky-9.7&upstream=gnutls-3.8.3-10.el9_7.src.rpm</td>
                     </tr>
                     <tr>
                         <td>systemd-libs</td>
@@ -3707,22 +3725,6 @@ This issue affects only 32-bits builds of libssh.</td>
                         <td>A flaw was found in systemd. The systemd-machined service contains an Improper Access Control vulnerability due to insufficient validation of the class parameter in the RegisterMachine D-Bus (Desktop Bus) method. A local unprivileged user can exploit this by attempting to register a machine with a specific class value, which may leave behind a usable, attacker-controlled machine object. This allows the attacker to invoke methods on the privileged object, leading to the execution of arbitrary commands with root privileges on the host system.</td>
                         <td>[]</td>
                         <td>pkg:rpm/rocky/systemd-libs@252-55.el9_7.8.rocky.0.1?arch=x86_64&distro=rocky-9.7&upstream=systemd-252-55.el9_7.8.rocky.0.1.src.rpm</td>
-                    </tr>
-                    <tr>
-                        <td>gnutls</td>
-                        <td>3.8.3-10.el9_7</td>
-                        <td>rpm</td>
-                        <td>
-                            <a href="https://access.redhat.com/security/cve/CVE-2026-3832">CVE-2026-3832</a>
-                        </td>
-                        <td>Low</td>
-                        <td>not-fixed</td>
-                        <td>
-                            N/A
-                        </td>
-                        <td>A flaw was found in gnutls. A remote attacker could exploit this vulnerability by presenting a specially crafted Online Certificate Status Protocol (OCSP) response during a TLS handshake. Due to a logic error in how gnutls processes multi-record OCSP responses, a client with OCSP verification enabled may incorrectly accept a revoked server certificate, potentially leading to a compromise of trust.</td>
-                        <td>[]</td>
-                        <td>pkg:rpm/rocky/gnutls@3.8.3-10.el9_7?arch=x86_64&distro=rocky-9.7&upstream=gnutls-3.8.3-10.el9_7.src.rpm</td>
                     </tr>
                     <tr>
                         <td>libxml2</td>
