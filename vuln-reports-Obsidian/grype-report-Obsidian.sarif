@@ -1228,45 +1228,24 @@
               }
             },
             {
-              "id": "CVE-2026-45447-openssl",
+              "id": "CVE-2026-3833-gnutls",
               "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
-                "text": "CVE-2026-45447 high vulnerability for openssl package"
+                "text": "CVE-2026-3833 medium vulnerability for gnutls package"
               },
               "fullDescription": {
-                "text": "A flaw was found in OpenSSL. When processing a specially crafted PKCS#7 or S/MIME (Secure/Multipurpose Internet Mail Extensions) signed message, a heap use-after-free vulnerability in the PKCS7_verify() function can be triggered. This occurs if the SignedData digestAlgorithms field is present as an empty ASN.1 SET, leading to incorrect memory deallocation. A remote attacker could exploit this to cause application crashes, memory corruption, or potentially achieve remote code execution."
+                "text": "A flaw was found in gnutls. This vulnerability occurs because gnutls performs case-sensitive comparisons of `nameConstraints` labels, specifically for `dNSName` (DNS) or `rfc822Name` (email) constraints within `excludedSubtrees` or `permittedSubtrees`. A remote attacker can exploit this by crafting a leaf certificate with casing differences in the Subject Alternative Name (SAN), leading to a policy bypass where a certificate that should be rejected is instead accepted. This could result in unauthorized access or information disclosure."
               },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-45447",
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-3833",
               "help": {
-                "text": "Vulnerability CVE-2026-45447\nSeverity: high\nPackage: openssl\nVersion: 1:1.1.1k-15.el8_10\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-45447](https://access.redhat.com/security/cve/CVE-2026-45447)",
-                "markdown": "**Vulnerability CVE-2026-45447**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| high  | openssl  | 1:1.1.1k-15.el8_10  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-45447](https://access.redhat.com/security/cve/CVE-2026-45447)  |\n"
+                "text": "Vulnerability CVE-2026-3833\nSeverity: medium\nPackage: gnutls\nVersion: 3.6.16-8.el8_10.5\nFix Version: 0:3.6.16-8.el8_10.6\nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-3833](https://access.redhat.com/security/cve/CVE-2026-3833)",
+                "markdown": "**Vulnerability CVE-2026-3833**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | gnutls  | 3.6.16-8.el8_10.5  | 0:3.6.16-8.el8_10.6  | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-3833](https://access.redhat.com/security/cve/CVE-2026-3833)  |\n"
               },
               "properties": {
                 "purls": [
-                  "pkg:rpm/rocky/openssl@1.1.1k-15.el8_10?arch=x86_64\u0026distro=rocky-8.10\u0026epoch=1\u0026upstream=openssl-1.1.1k-15.el8_10.src.rpm"
+                  "pkg:rpm/rocky/gnutls@3.6.16-8.el8_10.5?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=gnutls-3.6.16-8.el8_10.5.src.rpm"
                 ],
-                "security-severity": "8.1"
-              }
-            },
-            {
-              "id": "CVE-2026-45447-openssl-libs",
-              "name": "RpmMatcherExactIndirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-45447 high vulnerability for openssl-libs package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in OpenSSL. When processing a specially crafted PKCS#7 or S/MIME (Secure/Multipurpose Internet Mail Extensions) signed message, a heap use-after-free vulnerability in the PKCS7_verify() function can be triggered. This occurs if the SignedData digestAlgorithms field is present as an empty ASN.1 SET, leading to incorrect memory deallocation. A remote attacker could exploit this to cause application crashes, memory corruption, or potentially achieve remote code execution."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-45447",
-              "help": {
-                "text": "Vulnerability CVE-2026-45447\nSeverity: high\nPackage: openssl-libs\nVersion: 1:1.1.1k-15.el8_10\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-45447](https://access.redhat.com/security/cve/CVE-2026-45447)",
-                "markdown": "**Vulnerability CVE-2026-45447**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| high  | openssl-libs  | 1:1.1.1k-15.el8_10  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-45447](https://access.redhat.com/security/cve/CVE-2026-45447)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/openssl-libs@1.1.1k-15.el8_10?arch=x86_64\u0026distro=rocky-8.10\u0026epoch=1\u0026upstream=openssl-1.1.1k-15.el8_10.src.rpm"
-                ],
-                "security-severity": "8.1"
+                "security-severity": "6.5"
               }
             },
             {
@@ -1354,6 +1333,48 @@
               }
             },
             {
+              "id": "CVE-2026-45447-openssl",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-45447 high vulnerability for openssl package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in OpenSSL. When processing a specially crafted PKCS#7 or S/MIME (Secure/Multipurpose Internet Mail Extensions) signed message, a heap use-after-free vulnerability in the PKCS7_verify() function can be triggered. This occurs if the SignedData digestAlgorithms field is present as an empty ASN.1 SET, leading to incorrect memory deallocation. A remote attacker could exploit this to cause application crashes, memory corruption, or potentially achieve remote code execution."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-45447",
+              "help": {
+                "text": "Vulnerability CVE-2026-45447\nSeverity: high\nPackage: openssl\nVersion: 1:1.1.1k-15.el8_10\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-45447](https://access.redhat.com/security/cve/CVE-2026-45447)",
+                "markdown": "**Vulnerability CVE-2026-45447**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| high  | openssl  | 1:1.1.1k-15.el8_10  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-45447](https://access.redhat.com/security/cve/CVE-2026-45447)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/openssl@1.1.1k-15.el8_10?arch=x86_64\u0026distro=rocky-8.10\u0026epoch=1\u0026upstream=openssl-1.1.1k-15.el8_10.src.rpm"
+                ],
+                "security-severity": "8.1"
+              }
+            },
+            {
+              "id": "CVE-2026-45447-openssl-libs",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-45447 high vulnerability for openssl-libs package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in OpenSSL. When processing a specially crafted PKCS#7 or S/MIME (Secure/Multipurpose Internet Mail Extensions) signed message, a heap use-after-free vulnerability in the PKCS7_verify() function can be triggered. This occurs if the SignedData digestAlgorithms field is present as an empty ASN.1 SET, leading to incorrect memory deallocation. A remote attacker could exploit this to cause application crashes, memory corruption, or potentially achieve remote code execution."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-45447",
+              "help": {
+                "text": "Vulnerability CVE-2026-45447\nSeverity: high\nPackage: openssl-libs\nVersion: 1:1.1.1k-15.el8_10\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-45447](https://access.redhat.com/security/cve/CVE-2026-45447)",
+                "markdown": "**Vulnerability CVE-2026-45447**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| high  | openssl-libs  | 1:1.1.1k-15.el8_10  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-45447](https://access.redhat.com/security/cve/CVE-2026-45447)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/openssl-libs@1.1.1k-15.el8_10?arch=x86_64\u0026distro=rocky-8.10\u0026epoch=1\u0026upstream=openssl-1.1.1k-15.el8_10.src.rpm"
+                ],
+                "security-severity": "8.1"
+              }
+            },
+            {
               "id": "CVE-2019-19244-sqlite-libs",
               "name": "RpmMatcherExactIndirectMatch",
               "shortDescription": {
@@ -1414,27 +1435,6 @@
                   "pkg:rpm/rocky/gnutls@3.6.16-8.el8_10.5?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=gnutls-3.6.16-8.el8_10.5.src.rpm"
                 ],
                 "security-severity": "7.5"
-              }
-            },
-            {
-              "id": "CVE-2026-3833-gnutls",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-3833 medium vulnerability for gnutls package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in gnutls. This vulnerability occurs because gnutls performs case-sensitive comparisons of `nameConstraints` labels, specifically for `dNSName` (DNS) or `rfc822Name` (email) constraints within `excludedSubtrees` or `permittedSubtrees`. A remote attacker can exploit this by crafting a leaf certificate with casing differences in the Subject Alternative Name (SAN), leading to a policy bypass where a certificate that should be rejected is instead accepted. This could result in unauthorized access or information disclosure."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-3833",
-              "help": {
-                "text": "Vulnerability CVE-2026-3833\nSeverity: medium\nPackage: gnutls\nVersion: 3.6.16-8.el8_10.5\nFix Version: 0:3.6.16-8.el8_10.6\nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-3833](https://access.redhat.com/security/cve/CVE-2026-3833)",
-                "markdown": "**Vulnerability CVE-2026-3833**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | gnutls  | 3.6.16-8.el8_10.5  | 0:3.6.16-8.el8_10.6  | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-3833](https://access.redhat.com/security/cve/CVE-2026-3833)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/gnutls@3.6.16-8.el8_10.5?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=gnutls-3.6.16-8.el8_10.5.src.rpm"
-                ],
-                "security-severity": "6.5"
               }
             },
             {
@@ -2194,6 +2194,48 @@
               }
             },
             {
+              "id": "CVE-2024-13176-openssl",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2024-13176 low vulnerability for openssl package"
+              },
+              "fullDescription": {
+                "text": "A timing side-channel vulnerability was found in OpenSSL. This vulnerability allows an attacker to recover the private key. However, measuring the timing would require local access to the signing application or a fast network connection with low latency. There is a timing signal of around 300 nanoseconds when the top word of the inverted ECDSA nonce value is zero. This issue can happen with significant probability only for some of the supported elliptic curves. In particular, the NIST P-521 curve is affected."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2024-13176",
+              "help": {
+                "text": "Vulnerability CVE-2024-13176\nSeverity: low\nPackage: openssl\nVersion: 1:1.1.1k-15.el8_10\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2024-13176](https://access.redhat.com/security/cve/CVE-2024-13176)",
+                "markdown": "**Vulnerability CVE-2024-13176**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | openssl  | 1:1.1.1k-15.el8_10  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2024-13176](https://access.redhat.com/security/cve/CVE-2024-13176)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/openssl@1.1.1k-15.el8_10?arch=x86_64\u0026distro=rocky-8.10\u0026epoch=1\u0026upstream=openssl-1.1.1k-15.el8_10.src.rpm"
+                ],
+                "security-severity": "4.7"
+              }
+            },
+            {
+              "id": "CVE-2024-13176-openssl-libs",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2024-13176 low vulnerability for openssl-libs package"
+              },
+              "fullDescription": {
+                "text": "A timing side-channel vulnerability was found in OpenSSL. This vulnerability allows an attacker to recover the private key. However, measuring the timing would require local access to the signing application or a fast network connection with low latency. There is a timing signal of around 300 nanoseconds when the top word of the inverted ECDSA nonce value is zero. This issue can happen with significant probability only for some of the supported elliptic curves. In particular, the NIST P-521 curve is affected."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2024-13176",
+              "help": {
+                "text": "Vulnerability CVE-2024-13176\nSeverity: low\nPackage: openssl-libs\nVersion: 1:1.1.1k-15.el8_10\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2024-13176](https://access.redhat.com/security/cve/CVE-2024-13176)",
+                "markdown": "**Vulnerability CVE-2024-13176**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | openssl-libs  | 1:1.1.1k-15.el8_10  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2024-13176](https://access.redhat.com/security/cve/CVE-2024-13176)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/openssl-libs@1.1.1k-15.el8_10?arch=x86_64\u0026distro=rocky-8.10\u0026epoch=1\u0026upstream=openssl-1.1.1k-15.el8_10.src.rpm"
+                ],
+                "security-severity": "4.7"
+              }
+            },
+            {
               "id": "CVE-2026-5450-glibc",
               "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
@@ -2611,48 +2653,6 @@
                   "pkg:rpm/rocky/openssl-libs@1.1.1k-15.el8_10?arch=x86_64\u0026distro=rocky-8.10\u0026epoch=1\u0026upstream=openssl-1.1.1k-15.el8_10.src.rpm"
                 ],
                 "security-severity": "5.5"
-              }
-            },
-            {
-              "id": "CVE-2024-13176-openssl",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2024-13176 low vulnerability for openssl package"
-              },
-              "fullDescription": {
-                "text": "A timing side-channel vulnerability was found in OpenSSL. This vulnerability allows an attacker to recover the private key. However, measuring the timing would require local access to the signing application or a fast network connection with low latency. There is a timing signal of around 300 nanoseconds when the top word of the inverted ECDSA nonce value is zero. This issue can happen with significant probability only for some of the supported elliptic curves. In particular, the NIST P-521 curve is affected."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2024-13176",
-              "help": {
-                "text": "Vulnerability CVE-2024-13176\nSeverity: low\nPackage: openssl\nVersion: 1:1.1.1k-15.el8_10\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2024-13176](https://access.redhat.com/security/cve/CVE-2024-13176)",
-                "markdown": "**Vulnerability CVE-2024-13176**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | openssl  | 1:1.1.1k-15.el8_10  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2024-13176](https://access.redhat.com/security/cve/CVE-2024-13176)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/openssl@1.1.1k-15.el8_10?arch=x86_64\u0026distro=rocky-8.10\u0026epoch=1\u0026upstream=openssl-1.1.1k-15.el8_10.src.rpm"
-                ],
-                "security-severity": "4.7"
-              }
-            },
-            {
-              "id": "CVE-2024-13176-openssl-libs",
-              "name": "RpmMatcherExactIndirectMatch",
-              "shortDescription": {
-                "text": "CVE-2024-13176 low vulnerability for openssl-libs package"
-              },
-              "fullDescription": {
-                "text": "A timing side-channel vulnerability was found in OpenSSL. This vulnerability allows an attacker to recover the private key. However, measuring the timing would require local access to the signing application or a fast network connection with low latency. There is a timing signal of around 300 nanoseconds when the top word of the inverted ECDSA nonce value is zero. This issue can happen with significant probability only for some of the supported elliptic curves. In particular, the NIST P-521 curve is affected."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2024-13176",
-              "help": {
-                "text": "Vulnerability CVE-2024-13176\nSeverity: low\nPackage: openssl-libs\nVersion: 1:1.1.1k-15.el8_10\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2024-13176](https://access.redhat.com/security/cve/CVE-2024-13176)",
-                "markdown": "**Vulnerability CVE-2024-13176**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | openssl-libs  | 1:1.1.1k-15.el8_10  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2024-13176](https://access.redhat.com/security/cve/CVE-2024-13176)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/openssl-libs@1.1.1k-15.el8_10?arch=x86_64\u0026distro=rocky-8.10\u0026epoch=1\u0026upstream=openssl-1.1.1k-15.el8_10.src.rpm"
-                ],
-                "security-severity": "4.7"
               }
             },
             {
@@ -3097,6 +3097,48 @@
               }
             },
             {
+              "id": "CVE-2026-34183-openssl",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-34183 medium vulnerability for openssl package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in OpenSSL's QUIC PATH_CHALLENGE handler. A remote attacker can exploit this vulnerability by flooding a QUIC client or server with specially crafted PATH_CHALLENGE frames. This leads to unbounded memory allocation within the local QUIC stack, as the system continuously allocates PATH_RESPONSE frames without them being acknowledged. The primary consequence is a Denial of Service (DoS), causing the affected application to terminate abnormally due to memory exhaustion."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-34183",
+              "help": {
+                "text": "Vulnerability CVE-2026-34183\nSeverity: medium\nPackage: openssl\nVersion: 1:1.1.1k-15.el8_10\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-34183](https://access.redhat.com/security/cve/CVE-2026-34183)",
+                "markdown": "**Vulnerability CVE-2026-34183**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | openssl  | 1:1.1.1k-15.el8_10  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-34183](https://access.redhat.com/security/cve/CVE-2026-34183)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/openssl@1.1.1k-15.el8_10?arch=x86_64\u0026distro=rocky-8.10\u0026epoch=1\u0026upstream=openssl-1.1.1k-15.el8_10.src.rpm"
+                ],
+                "security-severity": "7.5"
+              }
+            },
+            {
+              "id": "CVE-2026-34183-openssl-libs",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-34183 medium vulnerability for openssl-libs package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in OpenSSL's QUIC PATH_CHALLENGE handler. A remote attacker can exploit this vulnerability by flooding a QUIC client or server with specially crafted PATH_CHALLENGE frames. This leads to unbounded memory allocation within the local QUIC stack, as the system continuously allocates PATH_RESPONSE frames without them being acknowledged. The primary consequence is a Denial of Service (DoS), causing the affected application to terminate abnormally due to memory exhaustion."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-34183",
+              "help": {
+                "text": "Vulnerability CVE-2026-34183\nSeverity: medium\nPackage: openssl-libs\nVersion: 1:1.1.1k-15.el8_10\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-34183](https://access.redhat.com/security/cve/CVE-2026-34183)",
+                "markdown": "**Vulnerability CVE-2026-34183**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | openssl-libs  | 1:1.1.1k-15.el8_10  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-34183](https://access.redhat.com/security/cve/CVE-2026-34183)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/openssl-libs@1.1.1k-15.el8_10?arch=x86_64\u0026distro=rocky-8.10\u0026epoch=1\u0026upstream=openssl-1.1.1k-15.el8_10.src.rpm"
+                ],
+                "security-severity": "7.5"
+              }
+            },
+            {
               "id": "CVE-2026-34180-openssl",
               "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
@@ -3535,6 +3577,27 @@
                   "pkg:rpm/rocky/libcurl-minimal@7.61.1-34.el8_10.11?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=curl-7.61.1-34.el8_10.11.src.rpm"
                 ],
                 "security-severity": "3.7"
+              }
+            },
+            {
+              "id": "CVE-2026-11850-krb5-libs",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-11850 medium vulnerability for krb5-libs package"
+              },
+              "fullDescription": {
+                "text": "An integer underflow vulnerability was found in MIT krb5 in the berval2tl_data() function in plugins/kdb/ldap/libkdb_ldap/ldap_principal2.c. The function performs an unsigned subtraction (bv_len - 2) without a prior bounds check. When bv_len is 0 or 1, the subtraction wraps to a large value which is then truncated to uint16_t, yielding 0xFFFE (65534) or 0xFFFF (65535). The subsequent malloc succeeds and memcpy reads up to 65534 bytes from a 0-1 byte buffer, resulting in a heap out-of-bounds read.\nThe attack vector involves a malicious or compromised LDAP KDB backend returning a krbExtraData attribute with bv_len \u003c 2, triggering the underflow when the KDC or kadmind reads principal data."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-11850",
+              "help": {
+                "text": "Vulnerability CVE-2026-11850\nSeverity: medium\nPackage: krb5-libs\nVersion: 1.18.2-32.el8_10\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-11850](https://access.redhat.com/security/cve/CVE-2026-11850)",
+                "markdown": "**Vulnerability CVE-2026-11850**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | krb5-libs  | 1.18.2-32.el8_10  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-11850](https://access.redhat.com/security/cve/CVE-2026-11850)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/krb5-libs@1.18.2-32.el8_10?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=krb5-1.18.2-32.el8_10.src.rpm"
+                ],
+                "security-severity": "5.0"
               }
             },
             {
@@ -4441,48 +4504,6 @@
               }
             },
             {
-              "id": "CVE-2026-34183-openssl",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-34183 medium vulnerability for openssl package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in OpenSSL's QUIC PATH_CHALLENGE handler. A remote attacker can exploit this vulnerability by flooding a QUIC client or server with specially crafted PATH_CHALLENGE frames. This leads to unbounded memory allocation within the local QUIC stack, as the system continuously allocates PATH_RESPONSE frames without them being acknowledged. The primary consequence is a Denial of Service (DoS), causing the affected application to terminate abnormally due to memory exhaustion."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-34183",
-              "help": {
-                "text": "Vulnerability CVE-2026-34183\nSeverity: medium\nPackage: openssl\nVersion: 1:1.1.1k-15.el8_10\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-34183](https://access.redhat.com/security/cve/CVE-2026-34183)",
-                "markdown": "**Vulnerability CVE-2026-34183**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | openssl  | 1:1.1.1k-15.el8_10  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-34183](https://access.redhat.com/security/cve/CVE-2026-34183)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/openssl@1.1.1k-15.el8_10?arch=x86_64\u0026distro=rocky-8.10\u0026epoch=1\u0026upstream=openssl-1.1.1k-15.el8_10.src.rpm"
-                ],
-                "security-severity": "7.5"
-              }
-            },
-            {
-              "id": "CVE-2026-34183-openssl-libs",
-              "name": "RpmMatcherExactIndirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-34183 medium vulnerability for openssl-libs package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in OpenSSL's QUIC PATH_CHALLENGE handler. A remote attacker can exploit this vulnerability by flooding a QUIC client or server with specially crafted PATH_CHALLENGE frames. This leads to unbounded memory allocation within the local QUIC stack, as the system continuously allocates PATH_RESPONSE frames without them being acknowledged. The primary consequence is a Denial of Service (DoS), causing the affected application to terminate abnormally due to memory exhaustion."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-34183",
-              "help": {
-                "text": "Vulnerability CVE-2026-34183\nSeverity: medium\nPackage: openssl-libs\nVersion: 1:1.1.1k-15.el8_10\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-34183](https://access.redhat.com/security/cve/CVE-2026-34183)",
-                "markdown": "**Vulnerability CVE-2026-34183**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | openssl-libs  | 1:1.1.1k-15.el8_10  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-34183](https://access.redhat.com/security/cve/CVE-2026-34183)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/openssl-libs@1.1.1k-15.el8_10?arch=x86_64\u0026distro=rocky-8.10\u0026epoch=1\u0026upstream=openssl-1.1.1k-15.el8_10.src.rpm"
-                ],
-                "security-severity": "7.5"
-              }
-            },
-            {
               "id": "CVE-2026-0988-glib2",
               "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
@@ -4499,6 +4520,27 @@
               "properties": {
                 "purls": [
                   "pkg:rpm/rocky/glib2@2.56.4-168.el8_10?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=glib2-2.56.4-168.el8_10.src.rpm"
+                ],
+                "security-severity": "3.7"
+              }
+            },
+            {
+              "id": "CVE-2026-3832-gnutls",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-3832 low vulnerability for gnutls package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in gnutls. A remote attacker could exploit this vulnerability by presenting a specially crafted Online Certificate Status Protocol (OCSP) response during a TLS handshake. Due to a logic error in how gnutls processes multi-record OCSP responses, a client with OCSP verification enabled may incorrectly accept a revoked server certificate, potentially leading to a compromise of trust."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-3832",
+              "help": {
+                "text": "Vulnerability CVE-2026-3832\nSeverity: low\nPackage: gnutls\nVersion: 3.6.16-8.el8_10.5\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-3832](https://access.redhat.com/security/cve/CVE-2026-3832)",
+                "markdown": "**Vulnerability CVE-2026-3832**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | gnutls  | 3.6.16-8.el8_10.5  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-3832](https://access.redhat.com/security/cve/CVE-2026-3832)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/gnutls@3.6.16-8.el8_10.5?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=gnutls-3.6.16-8.el8_10.5.src.rpm"
                 ],
                 "security-severity": "3.7"
               }
@@ -4543,6 +4585,27 @@
                   "pkg:rpm/rocky/libcap@2.48-6.el8_9?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=libcap-2.48-6.el8_9.src.rpm"
                 ],
                 "security-severity": "6.7"
+              }
+            },
+            {
+              "id": "CVE-2026-45186-expat",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-45186 high vulnerability for expat package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in libexpat. When processing a specially crafted XML input containing a specific pattern of attributes, the parsing time increases quadratically due to checks for attribute name collisions. This consumes excessive CPU resources and eventually results in a denial of service."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-45186",
+              "help": {
+                "text": "Vulnerability CVE-2026-45186\nSeverity: high\nPackage: expat\nVersion: 2.5.0-1.el8_10\nFix Version: 0:2.5.0-2.el8_10\nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-45186](https://access.redhat.com/security/cve/CVE-2026-45186)",
+                "markdown": "**Vulnerability CVE-2026-45186**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| high  | expat  | 2.5.0-1.el8_10  | 0:2.5.0-2.el8_10  | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-45186](https://access.redhat.com/security/cve/CVE-2026-45186)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/expat@2.5.0-1.el8_10?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=expat-2.5.0-1.el8_10.src.rpm"
+                ],
+                "security-severity": "7.5"
               }
             },
             {
@@ -4627,27 +4690,6 @@
                   "pkg:rpm/rocky/libzstd@1.4.4-1.el8?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=zstd-1.4.4-1.el8.src.rpm"
                 ],
                 "security-severity": "5.5"
-              }
-            },
-            {
-              "id": "CVE-2026-45186-expat",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-45186 high vulnerability for expat package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in libexpat. When processing a specially crafted XML input containing a specific pattern of attributes, the parsing time increases quadratically due to checks for attribute name collisions. This consumes excessive CPU resources and eventually results in a denial of service."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-45186",
-              "help": {
-                "text": "Vulnerability CVE-2026-45186\nSeverity: high\nPackage: expat\nVersion: 2.5.0-1.el8_10\nFix Version: 0:2.5.0-2.el8_10\nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-45186](https://access.redhat.com/security/cve/CVE-2026-45186)",
-                "markdown": "**Vulnerability CVE-2026-45186**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| high  | expat  | 2.5.0-1.el8_10  | 0:2.5.0-2.el8_10  | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-45186](https://access.redhat.com/security/cve/CVE-2026-45186)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/expat@2.5.0-1.el8_10?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=expat-2.5.0-1.el8_10.src.rpm"
-                ],
-                "security-severity": "7.5"
               }
             },
             {
@@ -4942,27 +4984,6 @@
                   "pkg:rpm/rocky/libarchive@3.3.3-7.el8_10?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=libarchive-3.3.3-7.el8_10.src.rpm"
                 ],
                 "security-severity": "4.0"
-              }
-            },
-            {
-              "id": "CVE-2026-3832-gnutls",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-3832 low vulnerability for gnutls package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in gnutls. A remote attacker could exploit this vulnerability by presenting a specially crafted Online Certificate Status Protocol (OCSP) response during a TLS handshake. Due to a logic error in how gnutls processes multi-record OCSP responses, a client with OCSP verification enabled may incorrectly accept a revoked server certificate, potentially leading to a compromise of trust."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-3832",
-              "help": {
-                "text": "Vulnerability CVE-2026-3832\nSeverity: low\nPackage: gnutls\nVersion: 3.6.16-8.el8_10.5\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-3832](https://access.redhat.com/security/cve/CVE-2026-3832)",
-                "markdown": "**Vulnerability CVE-2026-3832**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | gnutls  | 3.6.16-8.el8_10.5  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-3832](https://access.redhat.com/security/cve/CVE-2026-3832)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/gnutls@3.6.16-8.el8_10.5?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=gnutls-3.6.16-8.el8_10.5.src.rpm"
-                ],
-                "security-severity": "3.7"
               }
             },
             {
@@ -5491,6 +5512,48 @@
               }
             },
             {
+              "id": "CVE-2026-34182-openssl",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-34182 medium vulnerability for openssl package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in OpenSSL's Cryptographic Message Services (CMS) AuthEnvelopedData processing. An on-path attacker can exploit insufficient input validation on cipher and tag length fields by sending specially crafted CMS messages. This can lead to the forging of messages or bypassing integrity validation. Consequently, an attacker may achieve key-equivalent functionality for a given CMS recipient."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-34182",
+              "help": {
+                "text": "Vulnerability CVE-2026-34182\nSeverity: medium\nPackage: openssl\nVersion: 1:1.1.1k-15.el8_10\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-34182](https://access.redhat.com/security/cve/CVE-2026-34182)",
+                "markdown": "**Vulnerability CVE-2026-34182**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | openssl  | 1:1.1.1k-15.el8_10  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-34182](https://access.redhat.com/security/cve/CVE-2026-34182)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/openssl@1.1.1k-15.el8_10?arch=x86_64\u0026distro=rocky-8.10\u0026epoch=1\u0026upstream=openssl-1.1.1k-15.el8_10.src.rpm"
+                ],
+                "security-severity": "7.4"
+              }
+            },
+            {
+              "id": "CVE-2026-34182-openssl-libs",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-34182 medium vulnerability for openssl-libs package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in OpenSSL's Cryptographic Message Services (CMS) AuthEnvelopedData processing. An on-path attacker can exploit insufficient input validation on cipher and tag length fields by sending specially crafted CMS messages. This can lead to the forging of messages or bypassing integrity validation. Consequently, an attacker may achieve key-equivalent functionality for a given CMS recipient."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-34182",
+              "help": {
+                "text": "Vulnerability CVE-2026-34182\nSeverity: medium\nPackage: openssl-libs\nVersion: 1:1.1.1k-15.el8_10\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-34182](https://access.redhat.com/security/cve/CVE-2026-34182)",
+                "markdown": "**Vulnerability CVE-2026-34182**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | openssl-libs  | 1:1.1.1k-15.el8_10  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-34182](https://access.redhat.com/security/cve/CVE-2026-34182)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/openssl-libs@1.1.1k-15.el8_10?arch=x86_64\u0026distro=rocky-8.10\u0026epoch=1\u0026upstream=openssl-1.1.1k-15.el8_10.src.rpm"
+                ],
+                "security-severity": "7.4"
+              }
+            },
+            {
               "id": "CVE-2026-5958-sed",
               "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
@@ -5785,6 +5848,48 @@
               }
             },
             {
+              "id": "CVE-2026-34181-openssl",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-34181 low vulnerability for openssl package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in OpenSSL. This vulnerability allows a remote attacker to forge PKCS#12 (Public-Key Cryptography Standards #12) files that use Password-Based Message Authentication Code 1 (PBMAC1) with short HMAC (Hash-based Message Authentication Code) keys. This can lead to a service accepting attacker-controlled certificates and private keys with a 1 in 256 probability, potentially enabling impersonation."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-34181",
+              "help": {
+                "text": "Vulnerability CVE-2026-34181\nSeverity: low\nPackage: openssl\nVersion: 1:1.1.1k-15.el8_10\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-34181](https://access.redhat.com/security/cve/CVE-2026-34181)",
+                "markdown": "**Vulnerability CVE-2026-34181**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | openssl  | 1:1.1.1k-15.el8_10  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-34181](https://access.redhat.com/security/cve/CVE-2026-34181)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/openssl@1.1.1k-15.el8_10?arch=x86_64\u0026distro=rocky-8.10\u0026epoch=1\u0026upstream=openssl-1.1.1k-15.el8_10.src.rpm"
+                ],
+                "security-severity": "6.3"
+              }
+            },
+            {
+              "id": "CVE-2026-34181-openssl-libs",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-34181 low vulnerability for openssl-libs package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in OpenSSL. This vulnerability allows a remote attacker to forge PKCS#12 (Public-Key Cryptography Standards #12) files that use Password-Based Message Authentication Code 1 (PBMAC1) with short HMAC (Hash-based Message Authentication Code) keys. This can lead to a service accepting attacker-controlled certificates and private keys with a 1 in 256 probability, potentially enabling impersonation."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-34181",
+              "help": {
+                "text": "Vulnerability CVE-2026-34181\nSeverity: low\nPackage: openssl-libs\nVersion: 1:1.1.1k-15.el8_10\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-34181](https://access.redhat.com/security/cve/CVE-2026-34181)",
+                "markdown": "**Vulnerability CVE-2026-34181**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | openssl-libs  | 1:1.1.1k-15.el8_10  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-34181](https://access.redhat.com/security/cve/CVE-2026-34181)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/openssl-libs@1.1.1k-15.el8_10?arch=x86_64\u0026distro=rocky-8.10\u0026epoch=1\u0026upstream=openssl-1.1.1k-15.el8_10.src.rpm"
+                ],
+                "security-severity": "6.3"
+              }
+            },
+            {
               "id": "CVE-2026-32777-expat",
               "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
@@ -5803,48 +5908,6 @@
                   "pkg:rpm/rocky/expat@2.5.0-1.el8_10?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=expat-2.5.0-1.el8_10.src.rpm"
                 ],
                 "security-severity": "4.0"
-              }
-            },
-            {
-              "id": "CVE-2026-34182-openssl",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-34182 medium vulnerability for openssl package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in OpenSSL's Cryptographic Message Services (CMS) AuthEnvelopedData processing. An on-path attacker can exploit insufficient input validation on cipher and tag length fields by sending specially crafted CMS messages. This can lead to the forging of messages or bypassing integrity validation. Consequently, an attacker may achieve key-equivalent functionality for a given CMS recipient."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-34182",
-              "help": {
-                "text": "Vulnerability CVE-2026-34182\nSeverity: medium\nPackage: openssl\nVersion: 1:1.1.1k-15.el8_10\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-34182](https://access.redhat.com/security/cve/CVE-2026-34182)",
-                "markdown": "**Vulnerability CVE-2026-34182**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | openssl  | 1:1.1.1k-15.el8_10  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-34182](https://access.redhat.com/security/cve/CVE-2026-34182)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/openssl@1.1.1k-15.el8_10?arch=x86_64\u0026distro=rocky-8.10\u0026epoch=1\u0026upstream=openssl-1.1.1k-15.el8_10.src.rpm"
-                ],
-                "security-severity": "7.4"
-              }
-            },
-            {
-              "id": "CVE-2026-34182-openssl-libs",
-              "name": "RpmMatcherExactIndirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-34182 medium vulnerability for openssl-libs package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in OpenSSL's Cryptographic Message Services (CMS) AuthEnvelopedData processing. An on-path attacker can exploit insufficient input validation on cipher and tag length fields by sending specially crafted CMS messages. This can lead to the forging of messages or bypassing integrity validation. Consequently, an attacker may achieve key-equivalent functionality for a given CMS recipient."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-34182",
-              "help": {
-                "text": "Vulnerability CVE-2026-34182\nSeverity: medium\nPackage: openssl-libs\nVersion: 1:1.1.1k-15.el8_10\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-34182](https://access.redhat.com/security/cve/CVE-2026-34182)",
-                "markdown": "**Vulnerability CVE-2026-34182**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | openssl-libs  | 1:1.1.1k-15.el8_10  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-34182](https://access.redhat.com/security/cve/CVE-2026-34182)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/openssl-libs@1.1.1k-15.el8_10?arch=x86_64\u0026distro=rocky-8.10\u0026epoch=1\u0026upstream=openssl-1.1.1k-15.el8_10.src.rpm"
-                ],
-                "security-severity": "7.4"
               }
             },
             {
@@ -5887,48 +5950,6 @@
                   "pkg:rpm/rocky/expat@2.5.0-1.el8_10?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=expat-2.5.0-1.el8_10.src.rpm"
                 ],
                 "security-severity": "2.9"
-              }
-            },
-            {
-              "id": "CVE-2026-34181-openssl",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-34181 low vulnerability for openssl package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in OpenSSL. This vulnerability allows a remote attacker to forge PKCS#12 (Public-Key Cryptography Standards #12) files that use Password-Based Message Authentication Code 1 (PBMAC1) with short HMAC (Hash-based Message Authentication Code) keys. This can lead to a service accepting attacker-controlled certificates and private keys with a 1 in 256 probability, potentially enabling impersonation."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-34181",
-              "help": {
-                "text": "Vulnerability CVE-2026-34181\nSeverity: low\nPackage: openssl\nVersion: 1:1.1.1k-15.el8_10\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-34181](https://access.redhat.com/security/cve/CVE-2026-34181)",
-                "markdown": "**Vulnerability CVE-2026-34181**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | openssl  | 1:1.1.1k-15.el8_10  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-34181](https://access.redhat.com/security/cve/CVE-2026-34181)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/openssl@1.1.1k-15.el8_10?arch=x86_64\u0026distro=rocky-8.10\u0026epoch=1\u0026upstream=openssl-1.1.1k-15.el8_10.src.rpm"
-                ],
-                "security-severity": "6.3"
-              }
-            },
-            {
-              "id": "CVE-2026-34181-openssl-libs",
-              "name": "RpmMatcherExactIndirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-34181 low vulnerability for openssl-libs package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in OpenSSL. This vulnerability allows a remote attacker to forge PKCS#12 (Public-Key Cryptography Standards #12) files that use Password-Based Message Authentication Code 1 (PBMAC1) with short HMAC (Hash-based Message Authentication Code) keys. This can lead to a service accepting attacker-controlled certificates and private keys with a 1 in 256 probability, potentially enabling impersonation."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-34181",
-              "help": {
-                "text": "Vulnerability CVE-2026-34181\nSeverity: low\nPackage: openssl-libs\nVersion: 1:1.1.1k-15.el8_10\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-34181](https://access.redhat.com/security/cve/CVE-2026-34181)",
-                "markdown": "**Vulnerability CVE-2026-34181**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | openssl-libs  | 1:1.1.1k-15.el8_10  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-34181](https://access.redhat.com/security/cve/CVE-2026-34181)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/openssl-libs@1.1.1k-15.el8_10?arch=x86_64\u0026distro=rocky-8.10\u0026epoch=1\u0026upstream=openssl-1.1.1k-15.el8_10.src.rpm"
-                ],
-                "security-severity": "6.3"
               }
             },
             {
@@ -7797,10 +7818,10 @@
           }
         },
         {
-          "ruleId": "CVE-2026-45447-openssl",
-          "level": "error",
+          "ruleId": "CVE-2026-3833-gnutls",
+          "level": "warning",
           "message": {
-            "text": "A high vulnerability in rpm package: openssl, version 1:1.1.1k-15.el8_10 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
+            "text": "A medium vulnerability in rpm package: gnutls, version 3.6.16-8.el8_10.5 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
           },
           "locations": [
             {
@@ -7824,38 +7845,7 @@
             }
           ],
           "partialFingerprints": {
-            "primaryLocationLineHash": "47f848169c74c72fc743595363b3747ba51c4d0bea5b4a410a03b03eac62a49b:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2026-45447-openssl-libs",
-          "level": "error",
-          "message": {
-            "text": "A high vulnerability in rpm package: openssl-libs, version 1:1.1.1k-15.el8_10 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-8//var/lib/rpm/Packages"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/Packages",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "a951d7467c403bae5434c785b56ff88d7cd6a04509505b282c89765131eb2d2c:1"
+            "primaryLocationLineHash": "9c16f1d069961333d8f9c4a3ae1106a5871fd27665006000a9e9be50f9a8d863:1"
           }
         },
         {
@@ -7983,6 +7973,68 @@
           }
         },
         {
+          "ruleId": "CVE-2026-45447-openssl",
+          "level": "error",
+          "message": {
+            "text": "A high vulnerability in rpm package: openssl, version 1:1.1.1k-15.el8_10 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-8//var/lib/rpm/Packages"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/Packages",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "47f848169c74c72fc743595363b3747ba51c4d0bea5b4a410a03b03eac62a49b:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-45447-openssl-libs",
+          "level": "error",
+          "message": {
+            "text": "A high vulnerability in rpm package: openssl-libs, version 1:1.1.1k-15.el8_10 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-8//var/lib/rpm/Packages"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/Packages",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "a951d7467c403bae5434c785b56ff88d7cd6a04509505b282c89765131eb2d2c:1"
+          }
+        },
+        {
           "ruleId": "CVE-2019-19244-sqlite-libs",
           "level": "note",
           "message": {
@@ -8049,37 +8101,6 @@
           "level": "error",
           "message": {
             "text": "A high vulnerability in rpm package: gnutls, version 3.6.16-8.el8_10.5 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-8//var/lib/rpm/Packages"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/Packages",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "9c16f1d069961333d8f9c4a3ae1106a5871fd27665006000a9e9be50f9a8d863:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2026-3833-gnutls",
-          "level": "warning",
-          "message": {
-            "text": "A medium vulnerability in rpm package: gnutls, version 3.6.16-8.el8_10.5 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
           },
           "locations": [
             {
@@ -9223,6 +9244,68 @@
           }
         },
         {
+          "ruleId": "CVE-2024-13176-openssl",
+          "level": "note",
+          "message": {
+            "text": "A low vulnerability in rpm package: openssl, version 1:1.1.1k-15.el8_10 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-8//var/lib/rpm/Packages"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/Packages",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "47f848169c74c72fc743595363b3747ba51c4d0bea5b4a410a03b03eac62a49b:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2024-13176-openssl-libs",
+          "level": "note",
+          "message": {
+            "text": "A low vulnerability in rpm package: openssl-libs, version 1:1.1.1k-15.el8_10 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-8//var/lib/rpm/Packages"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/Packages",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "a951d7467c403bae5434c785b56ff88d7cd6a04509505b282c89765131eb2d2c:1"
+          }
+        },
+        {
           "ruleId": "CVE-2026-5450-glibc",
           "level": "warning",
           "message": {
@@ -9813,68 +9896,6 @@
         },
         {
           "ruleId": "CVE-2026-7383-openssl-libs",
-          "level": "note",
-          "message": {
-            "text": "A low vulnerability in rpm package: openssl-libs, version 1:1.1.1k-15.el8_10 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-8//var/lib/rpm/Packages"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/Packages",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "a951d7467c403bae5434c785b56ff88d7cd6a04509505b282c89765131eb2d2c:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2024-13176-openssl",
-          "level": "note",
-          "message": {
-            "text": "A low vulnerability in rpm package: openssl, version 1:1.1.1k-15.el8_10 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-8//var/lib/rpm/Packages"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/Packages",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "47f848169c74c72fc743595363b3747ba51c4d0bea5b4a410a03b03eac62a49b:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2024-13176-openssl-libs",
           "level": "note",
           "message": {
             "text": "A low vulnerability in rpm package: openssl-libs, version 1:1.1.1k-15.el8_10 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
@@ -10556,6 +10577,68 @@
           }
         },
         {
+          "ruleId": "CVE-2026-34183-openssl",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: openssl, version 1:1.1.1k-15.el8_10 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-8//var/lib/rpm/Packages"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/Packages",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "47f848169c74c72fc743595363b3747ba51c4d0bea5b4a410a03b03eac62a49b:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-34183-openssl-libs",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: openssl-libs, version 1:1.1.1k-15.el8_10 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-8//var/lib/rpm/Packages"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/Packages",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "a951d7467c403bae5434c785b56ff88d7cd6a04509505b282c89765131eb2d2c:1"
+          }
+        },
+        {
           "ruleId": "CVE-2026-34180-openssl",
           "level": "note",
           "message": {
@@ -11204,6 +11287,37 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "3d09dff4d381cac25d41ce76115012d183647c7ecba216a0b9a4f105778d0391:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-11850-krb5-libs",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: krb5-libs, version 1.18.2-32.el8_10 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-8//var/lib/rpm/Packages"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/Packages",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "8969b69a0b8df9597d6eb220b4eceb232dcf452643906e3a053f5af452736a54:1"
           }
         },
         {
@@ -12540,68 +12654,6 @@
           }
         },
         {
-          "ruleId": "CVE-2026-34183-openssl",
-          "level": "warning",
-          "message": {
-            "text": "A medium vulnerability in rpm package: openssl, version 1:1.1.1k-15.el8_10 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-8//var/lib/rpm/Packages"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/Packages",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "47f848169c74c72fc743595363b3747ba51c4d0bea5b4a410a03b03eac62a49b:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2026-34183-openssl-libs",
-          "level": "warning",
-          "message": {
-            "text": "A medium vulnerability in rpm package: openssl-libs, version 1:1.1.1k-15.el8_10 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-8//var/lib/rpm/Packages"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/Packages",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "a951d7467c403bae5434c785b56ff88d7cd6a04509505b282c89765131eb2d2c:1"
-          }
-        },
-        {
           "ruleId": "CVE-2026-0988-glib2",
           "level": "note",
           "message": {
@@ -12630,6 +12682,37 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "b46ca95c561efe9242baf33d7b71fd2e51c001787eb6496d98674206b6142b38:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-3832-gnutls",
+          "level": "note",
+          "message": {
+            "text": "A low vulnerability in rpm package: gnutls, version 3.6.16-8.el8_10.5 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-8//var/lib/rpm/Packages"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/Packages",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "9c16f1d069961333d8f9c4a3ae1106a5871fd27665006000a9e9be50f9a8d863:1"
           }
         },
         {
@@ -12692,6 +12775,37 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "9d846a9d620b6000a1531da2cfe879e35d99f5745ae3550bf178b51cf32ef32a:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-45186-expat",
+          "level": "error",
+          "message": {
+            "text": "A high vulnerability in rpm package: expat, version 2.5.0-1.el8_10 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-8//var/lib/rpm/Packages"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/Packages",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "deeea2c6d35bbbbe072d9f896eb605ff32c8d6269fff0acd55c63521aada9156:1"
           }
         },
         {
@@ -12816,37 +12930,6 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "244869c6012f8632bf6e54cd746b1acab99290fcfa520ca1ae4b13be32b93097:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2026-45186-expat",
-          "level": "error",
-          "message": {
-            "text": "A high vulnerability in rpm package: expat, version 2.5.0-1.el8_10 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-8//var/lib/rpm/Packages"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/Packages",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "deeea2c6d35bbbbe072d9f896eb605ff32c8d6269fff0acd55c63521aada9156:1"
           }
         },
         {
@@ -13281,37 +13364,6 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "e72079435c45a100bb4b0c9466adf47d803f7f393f84f8888f9b3d73851f26c1:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2026-3832-gnutls",
-          "level": "note",
-          "message": {
-            "text": "A low vulnerability in rpm package: gnutls, version 3.6.16-8.el8_10.5 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-8//var/lib/rpm/Packages"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/Packages",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "9c16f1d069961333d8f9c4a3ae1106a5871fd27665006000a9e9be50f9a8d863:1"
           }
         },
         {
@@ -14090,6 +14142,68 @@
           }
         },
         {
+          "ruleId": "CVE-2026-34182-openssl",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: openssl, version 1:1.1.1k-15.el8_10 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-8//var/lib/rpm/Packages"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/Packages",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "47f848169c74c72fc743595363b3747ba51c4d0bea5b4a410a03b03eac62a49b:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-34182-openssl-libs",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: openssl-libs, version 1:1.1.1k-15.el8_10 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-8//var/lib/rpm/Packages"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/Packages",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "a951d7467c403bae5434c785b56ff88d7cd6a04509505b282c89765131eb2d2c:1"
+          }
+        },
+        {
           "ruleId": "CVE-2026-5958-sed",
           "level": "warning",
           "message": {
@@ -14524,6 +14638,68 @@
           }
         },
         {
+          "ruleId": "CVE-2026-34181-openssl",
+          "level": "note",
+          "message": {
+            "text": "A low vulnerability in rpm package: openssl, version 1:1.1.1k-15.el8_10 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-8//var/lib/rpm/Packages"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/Packages",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "47f848169c74c72fc743595363b3747ba51c4d0bea5b4a410a03b03eac62a49b:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-34181-openssl-libs",
+          "level": "note",
+          "message": {
+            "text": "A low vulnerability in rpm package: openssl-libs, version 1:1.1.1k-15.el8_10 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-8//var/lib/rpm/Packages"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/Packages",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "a951d7467c403bae5434c785b56ff88d7cd6a04509505b282c89765131eb2d2c:1"
+          }
+        },
+        {
           "ruleId": "CVE-2026-32777-expat",
           "level": "warning",
           "message": {
@@ -14552,68 +14728,6 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "deeea2c6d35bbbbe072d9f896eb605ff32c8d6269fff0acd55c63521aada9156:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2026-34182-openssl",
-          "level": "warning",
-          "message": {
-            "text": "A medium vulnerability in rpm package: openssl, version 1:1.1.1k-15.el8_10 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-8//var/lib/rpm/Packages"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/Packages",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "47f848169c74c72fc743595363b3747ba51c4d0bea5b4a410a03b03eac62a49b:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2026-34182-openssl-libs",
-          "level": "warning",
-          "message": {
-            "text": "A medium vulnerability in rpm package: openssl-libs, version 1:1.1.1k-15.el8_10 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-8//var/lib/rpm/Packages"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/Packages",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "a951d7467c403bae5434c785b56ff88d7cd6a04509505b282c89765131eb2d2c:1"
           }
         },
         {
@@ -14676,68 +14790,6 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "deeea2c6d35bbbbe072d9f896eb605ff32c8d6269fff0acd55c63521aada9156:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2026-34181-openssl",
-          "level": "note",
-          "message": {
-            "text": "A low vulnerability in rpm package: openssl, version 1:1.1.1k-15.el8_10 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-8//var/lib/rpm/Packages"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/Packages",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "47f848169c74c72fc743595363b3747ba51c4d0bea5b4a410a03b03eac62a49b:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2026-34181-openssl-libs",
-          "level": "note",
-          "message": {
-            "text": "A low vulnerability in rpm package: openssl-libs, version 1:1.1.1k-15.el8_10 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-8//var/lib/rpm/Packages"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/Packages",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "a951d7467c403bae5434c785b56ff88d7cd6a04509505b282c89765131eb2d2c:1"
           }
         },
         {
