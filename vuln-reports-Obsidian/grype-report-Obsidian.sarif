@@ -703,6 +703,48 @@
               }
             },
             {
+              "id": "CVE-2026-8925-curl",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-8925 high vulnerability for curl package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in curl. The logic handling SASL (Simple Authentication and Security Layer) authentication could lead to a double-free vulnerability. This occurs because the GSASL context may be deallocated twice without clearing the pointer, potentially leading to memory corruption. An attacker could exploit this to cause a denial of service or potentially execute arbitrary code."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-8925",
+              "help": {
+                "text": "Vulnerability CVE-2026-8925\nSeverity: high\nPackage: curl\nVersion: 7.61.1-34.el8_10.11\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-8925](https://access.redhat.com/security/cve/CVE-2026-8925)",
+                "markdown": "**Vulnerability CVE-2026-8925**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| high  | curl  | 7.61.1-34.el8_10.11  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-8925](https://access.redhat.com/security/cve/CVE-2026-8925)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/curl@7.61.1-34.el8_10.11?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=curl-7.61.1-34.el8_10.11.src.rpm"
+                ],
+                "security-severity": "8.1"
+              }
+            },
+            {
+              "id": "CVE-2026-8925-libcurl-minimal",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-8925 high vulnerability for libcurl-minimal package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in curl. The logic handling SASL (Simple Authentication and Security Layer) authentication could lead to a double-free vulnerability. This occurs because the GSASL context may be deallocated twice without clearing the pointer, potentially leading to memory corruption. An attacker could exploit this to cause a denial of service or potentially execute arbitrary code."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-8925",
+              "help": {
+                "text": "Vulnerability CVE-2026-8925\nSeverity: high\nPackage: libcurl-minimal\nVersion: 7.61.1-34.el8_10.11\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-8925](https://access.redhat.com/security/cve/CVE-2026-8925)",
+                "markdown": "**Vulnerability CVE-2026-8925**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| high  | libcurl-minimal  | 7.61.1-34.el8_10.11  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-8925](https://access.redhat.com/security/cve/CVE-2026-8925)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/libcurl-minimal@7.61.1-34.el8_10.11?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=curl-7.61.1-34.el8_10.11.src.rpm"
+                ],
+                "security-severity": "8.1"
+              }
+            },
+            {
               "id": "CVE-2023-0466-openssl",
               "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
@@ -826,6 +868,48 @@
                   "pkg:rpm/rocky/gnutls@3.6.16-8.el8_10.5?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=gnutls-3.6.16-8.el8_10.5.src.rpm"
                 ],
                 "security-severity": "7.1"
+              }
+            },
+            {
+              "id": "CVE-2026-11352-curl",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-11352 high vulnerability for curl package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in curl and libcurl. A malicious HTTP/3 server can exploit an issue in the QUIC UDP receive function by continuously streaming empty UDP datagrams. This can lead to a remote denial of service (DoS) against a curl or libcurl client, as the helper function discards zero-length UDP datagrams before counting them toward the per-call packet budget, causing the client to indefinitely stall."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-11352",
+              "help": {
+                "text": "Vulnerability CVE-2026-11352\nSeverity: high\nPackage: curl\nVersion: 7.61.1-34.el8_10.11\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-11352](https://access.redhat.com/security/cve/CVE-2026-11352)",
+                "markdown": "**Vulnerability CVE-2026-11352**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| high  | curl  | 7.61.1-34.el8_10.11  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-11352](https://access.redhat.com/security/cve/CVE-2026-11352)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/curl@7.61.1-34.el8_10.11?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=curl-7.61.1-34.el8_10.11.src.rpm"
+                ],
+                "security-severity": "7.5"
+              }
+            },
+            {
+              "id": "CVE-2026-11352-libcurl-minimal",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-11352 high vulnerability for libcurl-minimal package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in curl and libcurl. A malicious HTTP/3 server can exploit an issue in the QUIC UDP receive function by continuously streaming empty UDP datagrams. This can lead to a remote denial of service (DoS) against a curl or libcurl client, as the helper function discards zero-length UDP datagrams before counting them toward the per-call packet budget, causing the client to indefinitely stall."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-11352",
+              "help": {
+                "text": "Vulnerability CVE-2026-11352\nSeverity: high\nPackage: libcurl-minimal\nVersion: 7.61.1-34.el8_10.11\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-11352](https://access.redhat.com/security/cve/CVE-2026-11352)",
+                "markdown": "**Vulnerability CVE-2026-11352**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| high  | libcurl-minimal  | 7.61.1-34.el8_10.11  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-11352](https://access.redhat.com/security/cve/CVE-2026-11352)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/libcurl-minimal@7.61.1-34.el8_10.11?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=curl-7.61.1-34.el8_10.11.src.rpm"
+                ],
+                "security-severity": "7.5"
               }
             },
             {
@@ -1207,6 +1291,48 @@
               }
             },
             {
+              "id": "CVE-2026-11586-curl",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-11586 high vulnerability for curl package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in curl. A malicious server can exploit this vulnerability by sending rapid, sequential WebSocket PING messages. Due to a lack of an upper bound on memory allocation for unacknowledged frames, curl can be forced to exhaust all available memory, leading to a denial of service."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-11586",
+              "help": {
+                "text": "Vulnerability CVE-2026-11586\nSeverity: high\nPackage: curl\nVersion: 7.61.1-34.el8_10.11\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-11586](https://access.redhat.com/security/cve/CVE-2026-11586)",
+                "markdown": "**Vulnerability CVE-2026-11586**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| high  | curl  | 7.61.1-34.el8_10.11  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-11586](https://access.redhat.com/security/cve/CVE-2026-11586)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/curl@7.61.1-34.el8_10.11?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=curl-7.61.1-34.el8_10.11.src.rpm"
+                ],
+                "security-severity": "7.5"
+              }
+            },
+            {
+              "id": "CVE-2026-11586-libcurl-minimal",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-11586 high vulnerability for libcurl-minimal package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in curl. A malicious server can exploit this vulnerability by sending rapid, sequential WebSocket PING messages. Due to a lack of an upper bound on memory allocation for unacknowledged frames, curl can be forced to exhaust all available memory, leading to a denial of service."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-11586",
+              "help": {
+                "text": "Vulnerability CVE-2026-11586\nSeverity: high\nPackage: libcurl-minimal\nVersion: 7.61.1-34.el8_10.11\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-11586](https://access.redhat.com/security/cve/CVE-2026-11586)",
+                "markdown": "**Vulnerability CVE-2026-11586**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| high  | libcurl-minimal  | 7.61.1-34.el8_10.11  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-11586](https://access.redhat.com/security/cve/CVE-2026-11586)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/libcurl-minimal@7.61.1-34.el8_10.11?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=curl-7.61.1-34.el8_10.11.src.rpm"
+                ],
+                "security-severity": "7.5"
+              }
+            },
+            {
               "id": "CVE-2024-11053-curl",
               "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
@@ -1249,45 +1375,45 @@
               }
             },
             {
-              "id": "CVE-2026-8925-curl",
+              "id": "CVE-2026-11856-curl",
               "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
-                "text": "CVE-2026-8925 high vulnerability for curl package"
+                "text": "CVE-2026-11856 medium vulnerability for curl package"
               },
               "fullDescription": {
-                "text": "A flaw was found in curl. The logic handling SASL (Simple Authentication and Security Layer) authentication could lead to a double-free vulnerability. This occurs because the GSASL context may be deallocated twice without clearing the pointer, potentially leading to memory corruption. An attacker could exploit this to cause a denial of service or potentially execute arbitrary code."
+                "text": "A flaw was found in curl. When `libcurl` performs a transfer to an HTTP origin using Digest authentication and then reuses the same connection handle for a subsequent transfer to a different origin, it may incorrectly send the authentication header intended for the first origin to the second. This could lead to unintended information disclosure, potentially allowing an attacker to gain unauthorized access to sensitive data."
               },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-8925",
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-11856",
               "help": {
-                "text": "Vulnerability CVE-2026-8925\nSeverity: high\nPackage: curl\nVersion: 7.61.1-34.el8_10.11\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-8925](https://access.redhat.com/security/cve/CVE-2026-8925)",
-                "markdown": "**Vulnerability CVE-2026-8925**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| high  | curl  | 7.61.1-34.el8_10.11  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-8925](https://access.redhat.com/security/cve/CVE-2026-8925)  |\n"
+                "text": "Vulnerability CVE-2026-11856\nSeverity: medium\nPackage: curl\nVersion: 7.61.1-34.el8_10.11\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-11856](https://access.redhat.com/security/cve/CVE-2026-11856)",
+                "markdown": "**Vulnerability CVE-2026-11856**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | curl  | 7.61.1-34.el8_10.11  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-11856](https://access.redhat.com/security/cve/CVE-2026-11856)  |\n"
               },
               "properties": {
                 "purls": [
                   "pkg:rpm/rocky/curl@7.61.1-34.el8_10.11?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=curl-7.61.1-34.el8_10.11.src.rpm"
                 ],
-                "security-severity": "8.1"
+                "security-severity": "6.5"
               }
             },
             {
-              "id": "CVE-2026-8925-libcurl-minimal",
+              "id": "CVE-2026-11856-libcurl-minimal",
               "name": "RpmMatcherExactIndirectMatch",
               "shortDescription": {
-                "text": "CVE-2026-8925 high vulnerability for libcurl-minimal package"
+                "text": "CVE-2026-11856 medium vulnerability for libcurl-minimal package"
               },
               "fullDescription": {
-                "text": "A flaw was found in curl. The logic handling SASL (Simple Authentication and Security Layer) authentication could lead to a double-free vulnerability. This occurs because the GSASL context may be deallocated twice without clearing the pointer, potentially leading to memory corruption. An attacker could exploit this to cause a denial of service or potentially execute arbitrary code."
+                "text": "A flaw was found in curl. When `libcurl` performs a transfer to an HTTP origin using Digest authentication and then reuses the same connection handle for a subsequent transfer to a different origin, it may incorrectly send the authentication header intended for the first origin to the second. This could lead to unintended information disclosure, potentially allowing an attacker to gain unauthorized access to sensitive data."
               },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-8925",
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-11856",
               "help": {
-                "text": "Vulnerability CVE-2026-8925\nSeverity: high\nPackage: libcurl-minimal\nVersion: 7.61.1-34.el8_10.11\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-8925](https://access.redhat.com/security/cve/CVE-2026-8925)",
-                "markdown": "**Vulnerability CVE-2026-8925**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| high  | libcurl-minimal  | 7.61.1-34.el8_10.11  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-8925](https://access.redhat.com/security/cve/CVE-2026-8925)  |\n"
+                "text": "Vulnerability CVE-2026-11856\nSeverity: medium\nPackage: libcurl-minimal\nVersion: 7.61.1-34.el8_10.11\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-11856](https://access.redhat.com/security/cve/CVE-2026-11856)",
+                "markdown": "**Vulnerability CVE-2026-11856**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | libcurl-minimal  | 7.61.1-34.el8_10.11  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-11856](https://access.redhat.com/security/cve/CVE-2026-11856)  |\n"
               },
               "properties": {
                 "purls": [
                   "pkg:rpm/rocky/libcurl-minimal@7.61.1-34.el8_10.11?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=curl-7.61.1-34.el8_10.11.src.rpm"
                 ],
-                "security-severity": "8.1"
+                "security-severity": "6.5"
               }
             },
             {
@@ -1328,48 +1454,6 @@
               "properties": {
                 "purls": [
                   "pkg:rpm/rocky/gnutls@3.6.16-8.el8_10.5?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=gnutls-3.6.16-8.el8_10.5.src.rpm"
-                ],
-                "security-severity": "7.5"
-              }
-            },
-            {
-              "id": "CVE-2026-11352-curl",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-11352 high vulnerability for curl package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in curl and libcurl. A malicious HTTP/3 server can exploit an issue in the QUIC UDP receive function by continuously streaming empty UDP datagrams. This can lead to a remote denial of service (DoS) against a curl or libcurl client, as the helper function discards zero-length UDP datagrams before counting them toward the per-call packet budget, causing the client to indefinitely stall."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-11352",
-              "help": {
-                "text": "Vulnerability CVE-2026-11352\nSeverity: high\nPackage: curl\nVersion: 7.61.1-34.el8_10.11\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-11352](https://access.redhat.com/security/cve/CVE-2026-11352)",
-                "markdown": "**Vulnerability CVE-2026-11352**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| high  | curl  | 7.61.1-34.el8_10.11  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-11352](https://access.redhat.com/security/cve/CVE-2026-11352)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/curl@7.61.1-34.el8_10.11?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=curl-7.61.1-34.el8_10.11.src.rpm"
-                ],
-                "security-severity": "7.5"
-              }
-            },
-            {
-              "id": "CVE-2026-11352-libcurl-minimal",
-              "name": "RpmMatcherExactIndirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-11352 high vulnerability for libcurl-minimal package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in curl and libcurl. A malicious HTTP/3 server can exploit an issue in the QUIC UDP receive function by continuously streaming empty UDP datagrams. This can lead to a remote denial of service (DoS) against a curl or libcurl client, as the helper function discards zero-length UDP datagrams before counting them toward the per-call packet budget, causing the client to indefinitely stall."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-11352",
-              "help": {
-                "text": "Vulnerability CVE-2026-11352\nSeverity: high\nPackage: libcurl-minimal\nVersion: 7.61.1-34.el8_10.11\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-11352](https://access.redhat.com/security/cve/CVE-2026-11352)",
-                "markdown": "**Vulnerability CVE-2026-11352**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| high  | libcurl-minimal  | 7.61.1-34.el8_10.11  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-11352](https://access.redhat.com/security/cve/CVE-2026-11352)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/libcurl-minimal@7.61.1-34.el8_10.11?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=curl-7.61.1-34.el8_10.11.src.rpm"
                 ],
                 "security-severity": "7.5"
               }
@@ -1501,45 +1585,45 @@
               }
             },
             {
-              "id": "CVE-2026-11586-curl",
+              "id": "CVE-2026-28388-openssl",
               "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
-                "text": "CVE-2026-11586 high vulnerability for curl package"
+                "text": "CVE-2026-28388 low vulnerability for openssl package"
               },
               "fullDescription": {
-                "text": "A flaw was found in curl. A malicious server can exploit this vulnerability by sending rapid, sequential WebSocket PING messages. Due to a lack of an upper bound on memory allocation for unacknowledged frames, curl can be forced to exhaust all available memory, leading to a denial of service."
+                "text": "A flaw was found in OpenSSL. When processing a malformed delta Certificate Revocation List (CRL) that lacks a required CRL Number extension, a NULL pointer dereference can occur. This vulnerability can be exploited by a remote attacker who provides a specially crafted delta CRL to an application that has delta CRL processing enabled, leading to a Denial of Service (DoS) for the application."
               },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-11586",
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-28388",
               "help": {
-                "text": "Vulnerability CVE-2026-11586\nSeverity: high\nPackage: curl\nVersion: 7.61.1-34.el8_10.11\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-11586](https://access.redhat.com/security/cve/CVE-2026-11586)",
-                "markdown": "**Vulnerability CVE-2026-11586**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| high  | curl  | 7.61.1-34.el8_10.11  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-11586](https://access.redhat.com/security/cve/CVE-2026-11586)  |\n"
+                "text": "Vulnerability CVE-2026-28388\nSeverity: low\nPackage: openssl\nVersion: 1:1.1.1k-15.el8_10\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-28388](https://access.redhat.com/security/cve/CVE-2026-28388)",
+                "markdown": "**Vulnerability CVE-2026-28388**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | openssl  | 1:1.1.1k-15.el8_10  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-28388](https://access.redhat.com/security/cve/CVE-2026-28388)  |\n"
               },
               "properties": {
                 "purls": [
-                  "pkg:rpm/rocky/curl@7.61.1-34.el8_10.11?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=curl-7.61.1-34.el8_10.11.src.rpm"
+                  "pkg:rpm/rocky/openssl@1.1.1k-15.el8_10?arch=x86_64\u0026distro=rocky-8.10\u0026epoch=1\u0026upstream=openssl-1.1.1k-15.el8_10.src.rpm"
                 ],
-                "security-severity": "7.5"
+                "security-severity": "5.9"
               }
             },
             {
-              "id": "CVE-2026-11586-libcurl-minimal",
+              "id": "CVE-2026-28388-openssl-libs",
               "name": "RpmMatcherExactIndirectMatch",
               "shortDescription": {
-                "text": "CVE-2026-11586 high vulnerability for libcurl-minimal package"
+                "text": "CVE-2026-28388 low vulnerability for openssl-libs package"
               },
               "fullDescription": {
-                "text": "A flaw was found in curl. A malicious server can exploit this vulnerability by sending rapid, sequential WebSocket PING messages. Due to a lack of an upper bound on memory allocation for unacknowledged frames, curl can be forced to exhaust all available memory, leading to a denial of service."
+                "text": "A flaw was found in OpenSSL. When processing a malformed delta Certificate Revocation List (CRL) that lacks a required CRL Number extension, a NULL pointer dereference can occur. This vulnerability can be exploited by a remote attacker who provides a specially crafted delta CRL to an application that has delta CRL processing enabled, leading to a Denial of Service (DoS) for the application."
               },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-11586",
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-28388",
               "help": {
-                "text": "Vulnerability CVE-2026-11586\nSeverity: high\nPackage: libcurl-minimal\nVersion: 7.61.1-34.el8_10.11\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-11586](https://access.redhat.com/security/cve/CVE-2026-11586)",
-                "markdown": "**Vulnerability CVE-2026-11586**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| high  | libcurl-minimal  | 7.61.1-34.el8_10.11  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-11586](https://access.redhat.com/security/cve/CVE-2026-11586)  |\n"
+                "text": "Vulnerability CVE-2026-28388\nSeverity: low\nPackage: openssl-libs\nVersion: 1:1.1.1k-15.el8_10\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-28388](https://access.redhat.com/security/cve/CVE-2026-28388)",
+                "markdown": "**Vulnerability CVE-2026-28388**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | openssl-libs  | 1:1.1.1k-15.el8_10  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-28388](https://access.redhat.com/security/cve/CVE-2026-28388)  |\n"
               },
               "properties": {
                 "purls": [
-                  "pkg:rpm/rocky/libcurl-minimal@7.61.1-34.el8_10.11?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=curl-7.61.1-34.el8_10.11.src.rpm"
+                  "pkg:rpm/rocky/openssl-libs@1.1.1k-15.el8_10?arch=x86_64\u0026distro=rocky-8.10\u0026epoch=1\u0026upstream=openssl-1.1.1k-15.el8_10.src.rpm"
                 ],
-                "security-severity": "7.5"
+                "security-severity": "5.9"
               }
             },
             {
@@ -1585,45 +1669,45 @@
               }
             },
             {
-              "id": "CVE-2026-11856-curl",
+              "id": "CVE-2026-12064-curl",
               "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
-                "text": "CVE-2026-11856 medium vulnerability for curl package"
+                "text": "CVE-2026-12064 high vulnerability for curl package"
               },
               "fullDescription": {
-                "text": "A flaw was found in curl. When `libcurl` performs a transfer to an HTTP origin using Digest authentication and then reuses the same connection handle for a subsequent transfer to a different origin, it may incorrectly send the authentication header intended for the first origin to the second. This could lead to unintended information disclosure, potentially allowing an attacker to gain unauthorized access to sensitive data."
+                "text": "A flaw was found in curl. When a user invokes curl with a schemeless URL and specifies SFTP (SSH File Transfer Protocol) or SCP (Secure Copy Protocol) as the default protocol, the tool layer fails to initialize critical SSH security options. This bypasses host verification, allowing curl to connect to an unverified SSH remote host without alerting the user. This could enable an attacker to intercept or manipulate data through a man-in-the-middle attack."
               },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-11856",
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-12064",
               "help": {
-                "text": "Vulnerability CVE-2026-11856\nSeverity: medium\nPackage: curl\nVersion: 7.61.1-34.el8_10.11\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-11856](https://access.redhat.com/security/cve/CVE-2026-11856)",
-                "markdown": "**Vulnerability CVE-2026-11856**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | curl  | 7.61.1-34.el8_10.11  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-11856](https://access.redhat.com/security/cve/CVE-2026-11856)  |\n"
+                "text": "Vulnerability CVE-2026-12064\nSeverity: high\nPackage: curl\nVersion: 7.61.1-34.el8_10.11\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-12064](https://access.redhat.com/security/cve/CVE-2026-12064)",
+                "markdown": "**Vulnerability CVE-2026-12064**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| high  | curl  | 7.61.1-34.el8_10.11  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-12064](https://access.redhat.com/security/cve/CVE-2026-12064)  |\n"
               },
               "properties": {
                 "purls": [
                   "pkg:rpm/rocky/curl@7.61.1-34.el8_10.11?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=curl-7.61.1-34.el8_10.11.src.rpm"
                 ],
-                "security-severity": "6.5"
+                "security-severity": "7.5"
               }
             },
             {
-              "id": "CVE-2026-11856-libcurl-minimal",
+              "id": "CVE-2026-12064-libcurl-minimal",
               "name": "RpmMatcherExactIndirectMatch",
               "shortDescription": {
-                "text": "CVE-2026-11856 medium vulnerability for libcurl-minimal package"
+                "text": "CVE-2026-12064 high vulnerability for libcurl-minimal package"
               },
               "fullDescription": {
-                "text": "A flaw was found in curl. When `libcurl` performs a transfer to an HTTP origin using Digest authentication and then reuses the same connection handle for a subsequent transfer to a different origin, it may incorrectly send the authentication header intended for the first origin to the second. This could lead to unintended information disclosure, potentially allowing an attacker to gain unauthorized access to sensitive data."
+                "text": "A flaw was found in curl. When a user invokes curl with a schemeless URL and specifies SFTP (SSH File Transfer Protocol) or SCP (Secure Copy Protocol) as the default protocol, the tool layer fails to initialize critical SSH security options. This bypasses host verification, allowing curl to connect to an unverified SSH remote host without alerting the user. This could enable an attacker to intercept or manipulate data through a man-in-the-middle attack."
               },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-11856",
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-12064",
               "help": {
-                "text": "Vulnerability CVE-2026-11856\nSeverity: medium\nPackage: libcurl-minimal\nVersion: 7.61.1-34.el8_10.11\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-11856](https://access.redhat.com/security/cve/CVE-2026-11856)",
-                "markdown": "**Vulnerability CVE-2026-11856**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | libcurl-minimal  | 7.61.1-34.el8_10.11  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-11856](https://access.redhat.com/security/cve/CVE-2026-11856)  |\n"
+                "text": "Vulnerability CVE-2026-12064\nSeverity: high\nPackage: libcurl-minimal\nVersion: 7.61.1-34.el8_10.11\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-12064](https://access.redhat.com/security/cve/CVE-2026-12064)",
+                "markdown": "**Vulnerability CVE-2026-12064**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| high  | libcurl-minimal  | 7.61.1-34.el8_10.11  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-12064](https://access.redhat.com/security/cve/CVE-2026-12064)  |\n"
               },
               "properties": {
                 "purls": [
                   "pkg:rpm/rocky/libcurl-minimal@7.61.1-34.el8_10.11?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=curl-7.61.1-34.el8_10.11.src.rpm"
                 ],
-                "security-severity": "6.5"
+                "security-severity": "7.5"
               }
             },
             {
@@ -1645,6 +1729,69 @@
                   "pkg:rpm/rocky/libxml2@2.9.7-21.el8_10.3?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=libxml2-2.9.7-21.el8_10.3.src.rpm"
                 ],
                 "security-severity": "5.9"
+              }
+            },
+            {
+              "id": "CVE-2025-14087-glib2",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2025-14087 medium vulnerability for glib2 package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in GLib (Gnome Lib). This vulnerability allows a remote attacker to cause heap corruption, leading to a denial of service or potential code execution via a buffer-underflow in the GVariant parser when processing maliciously crafted input strings."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2025-14087",
+              "help": {
+                "text": "Vulnerability CVE-2025-14087\nSeverity: medium\nPackage: glib2\nVersion: 2.56.4-168.el8_10\nFix Version: 0:2.56.4-169.el8_10\nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2025-14087](https://access.redhat.com/security/cve/CVE-2025-14087)",
+                "markdown": "**Vulnerability CVE-2025-14087**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | glib2  | 2.56.4-168.el8_10  | 0:2.56.4-169.el8_10  | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2025-14087](https://access.redhat.com/security/cve/CVE-2025-14087)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/glib2@2.56.4-168.el8_10?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=glib2-2.56.4-168.el8_10.src.rpm"
+                ],
+                "security-severity": "5.6"
+              }
+            },
+            {
+              "id": "CVE-2026-8286-curl",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-8286 high vulnerability for curl package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in curl. When a new data transfer attempts to upgrade its connection using STARTTLS, it may incorrectly reuse an existing live connection. This reuse can occur even if the Transport Layer Security (TLS) configuration of the new transfer does not match the existing connection, potentially leading to an insecure connection being established."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-8286",
+              "help": {
+                "text": "Vulnerability CVE-2026-8286\nSeverity: high\nPackage: curl\nVersion: 7.61.1-34.el8_10.11\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-8286](https://access.redhat.com/security/cve/CVE-2026-8286)",
+                "markdown": "**Vulnerability CVE-2026-8286**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| high  | curl  | 7.61.1-34.el8_10.11  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-8286](https://access.redhat.com/security/cve/CVE-2026-8286)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/curl@7.61.1-34.el8_10.11?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=curl-7.61.1-34.el8_10.11.src.rpm"
+                ],
+                "security-severity": "8.1"
+              }
+            },
+            {
+              "id": "CVE-2026-8286-libcurl-minimal",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-8286 high vulnerability for libcurl-minimal package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in curl. When a new data transfer attempts to upgrade its connection using STARTTLS, it may incorrectly reuse an existing live connection. This reuse can occur even if the Transport Layer Security (TLS) configuration of the new transfer does not match the existing connection, potentially leading to an insecure connection being established."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-8286",
+              "help": {
+                "text": "Vulnerability CVE-2026-8286\nSeverity: high\nPackage: libcurl-minimal\nVersion: 7.61.1-34.el8_10.11\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-8286](https://access.redhat.com/security/cve/CVE-2026-8286)",
+                "markdown": "**Vulnerability CVE-2026-8286**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| high  | libcurl-minimal  | 7.61.1-34.el8_10.11  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-8286](https://access.redhat.com/security/cve/CVE-2026-8286)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/libcurl-minimal@7.61.1-34.el8_10.11?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=curl-7.61.1-34.el8_10.11.src.rpm"
+                ],
+                "security-severity": "8.1"
               }
             },
             {
@@ -1732,27 +1879,6 @@
               }
             },
             {
-              "id": "CVE-2025-14087-glib2",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2025-14087 medium vulnerability for glib2 package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in GLib (Gnome Lib). This vulnerability allows a remote attacker to cause heap corruption, leading to a denial of service or potential code execution via a buffer-underflow in the GVariant parser when processing maliciously crafted input strings."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2025-14087",
-              "help": {
-                "text": "Vulnerability CVE-2025-14087\nSeverity: medium\nPackage: glib2\nVersion: 2.56.4-168.el8_10\nFix Version: 0:2.56.4-169.el8_10\nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2025-14087](https://access.redhat.com/security/cve/CVE-2025-14087)",
-                "markdown": "**Vulnerability CVE-2025-14087**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | glib2  | 2.56.4-168.el8_10  | 0:2.56.4-169.el8_10  | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2025-14087](https://access.redhat.com/security/cve/CVE-2025-14087)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/glib2@2.56.4-168.el8_10?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=glib2-2.56.4-168.el8_10.src.rpm"
-                ],
-                "security-severity": "5.6"
-              }
-            },
-            {
               "id": "CVE-2022-41409-pcre2",
               "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
@@ -1771,48 +1897,6 @@
                   "pkg:rpm/rocky/pcre2@10.32-3.el8_6?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=pcre2-10.32-3.el8_6.src.rpm"
                 ],
                 "security-severity": "5.3"
-              }
-            },
-            {
-              "id": "CVE-2026-28388-openssl",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-28388 low vulnerability for openssl package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in OpenSSL. When processing a malformed delta Certificate Revocation List (CRL) that lacks a required CRL Number extension, a NULL pointer dereference can occur. This vulnerability can be exploited by a remote attacker who provides a specially crafted delta CRL to an application that has delta CRL processing enabled, leading to a Denial of Service (DoS) for the application."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-28388",
-              "help": {
-                "text": "Vulnerability CVE-2026-28388\nSeverity: low\nPackage: openssl\nVersion: 1:1.1.1k-15.el8_10\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-28388](https://access.redhat.com/security/cve/CVE-2026-28388)",
-                "markdown": "**Vulnerability CVE-2026-28388**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | openssl  | 1:1.1.1k-15.el8_10  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-28388](https://access.redhat.com/security/cve/CVE-2026-28388)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/openssl@1.1.1k-15.el8_10?arch=x86_64\u0026distro=rocky-8.10\u0026epoch=1\u0026upstream=openssl-1.1.1k-15.el8_10.src.rpm"
-                ],
-                "security-severity": "5.9"
-              }
-            },
-            {
-              "id": "CVE-2026-28388-openssl-libs",
-              "name": "RpmMatcherExactIndirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-28388 low vulnerability for openssl-libs package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in OpenSSL. When processing a malformed delta Certificate Revocation List (CRL) that lacks a required CRL Number extension, a NULL pointer dereference can occur. This vulnerability can be exploited by a remote attacker who provides a specially crafted delta CRL to an application that has delta CRL processing enabled, leading to a Denial of Service (DoS) for the application."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-28388",
-              "help": {
-                "text": "Vulnerability CVE-2026-28388\nSeverity: low\nPackage: openssl-libs\nVersion: 1:1.1.1k-15.el8_10\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-28388](https://access.redhat.com/security/cve/CVE-2026-28388)",
-                "markdown": "**Vulnerability CVE-2026-28388**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | openssl-libs  | 1:1.1.1k-15.el8_10  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-28388](https://access.redhat.com/security/cve/CVE-2026-28388)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/openssl-libs@1.1.1k-15.el8_10?arch=x86_64\u0026distro=rocky-8.10\u0026epoch=1\u0026upstream=openssl-1.1.1k-15.el8_10.src.rpm"
-                ],
-                "security-severity": "5.9"
               }
             },
             {
@@ -1858,6 +1942,48 @@
               }
             },
             {
+              "id": "CVE-2026-9547-curl",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-9547 high vulnerability for curl package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in curl. When a libcurl-based application uses SCP:// or SFTP:// for transfers and employs the CURLOPT_SSH_KEYFUNCTION callback, it may silently accept an untrusted server. This occurs if the server's host key type differs from the one stored in the known_hosts file. The callback mechanism fails to enforce the host key restriction, enabling a connection to an untrusted server and risking a man-in-the-middle attack."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-9547",
+              "help": {
+                "text": "Vulnerability CVE-2026-9547\nSeverity: high\nPackage: curl\nVersion: 7.61.1-34.el8_10.11\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-9547](https://access.redhat.com/security/cve/CVE-2026-9547)",
+                "markdown": "**Vulnerability CVE-2026-9547**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| high  | curl  | 7.61.1-34.el8_10.11  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-9547](https://access.redhat.com/security/cve/CVE-2026-9547)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/curl@7.61.1-34.el8_10.11?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=curl-7.61.1-34.el8_10.11.src.rpm"
+                ],
+                "security-severity": "7.4"
+              }
+            },
+            {
+              "id": "CVE-2026-9547-libcurl-minimal",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-9547 high vulnerability for libcurl-minimal package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in curl. When a libcurl-based application uses SCP:// or SFTP:// for transfers and employs the CURLOPT_SSH_KEYFUNCTION callback, it may silently accept an untrusted server. This occurs if the server's host key type differs from the one stored in the known_hosts file. The callback mechanism fails to enforce the host key restriction, enabling a connection to an untrusted server and risking a man-in-the-middle attack."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-9547",
+              "help": {
+                "text": "Vulnerability CVE-2026-9547\nSeverity: high\nPackage: libcurl-minimal\nVersion: 7.61.1-34.el8_10.11\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-9547](https://access.redhat.com/security/cve/CVE-2026-9547)",
+                "markdown": "**Vulnerability CVE-2026-9547**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| high  | libcurl-minimal  | 7.61.1-34.el8_10.11  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-9547](https://access.redhat.com/security/cve/CVE-2026-9547)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/libcurl-minimal@7.61.1-34.el8_10.11?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=curl-7.61.1-34.el8_10.11.src.rpm"
+                ],
+                "security-severity": "7.4"
+              }
+            },
+            {
               "id": "CVE-2026-42015-gnutls",
               "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
@@ -1876,6 +2002,48 @@
                   "pkg:rpm/rocky/gnutls@3.6.16-8.el8_10.5?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=gnutls-3.6.16-8.el8_10.5.src.rpm"
                 ],
                 "security-severity": "5.3"
+              }
+            },
+            {
+              "id": "CVE-2026-8924-curl",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-8924 medium vulnerability for curl package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in curl's cookie parsing logic. A malicious HTTP server can exploit this by setting 'super cookies' that bypass the Public Suffix List check. This allows an attacker-controlled origin to inject cookies that curl then transmits to unrelated third-party domains, leading to compromising request integrity."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-8924",
+              "help": {
+                "text": "Vulnerability CVE-2026-8924\nSeverity: medium\nPackage: curl\nVersion: 7.61.1-34.el8_10.11\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-8924](https://access.redhat.com/security/cve/CVE-2026-8924)",
+                "markdown": "**Vulnerability CVE-2026-8924**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | curl  | 7.61.1-34.el8_10.11  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-8924](https://access.redhat.com/security/cve/CVE-2026-8924)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/curl@7.61.1-34.el8_10.11?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=curl-7.61.1-34.el8_10.11.src.rpm"
+                ],
+                "security-severity": "6.5"
+              }
+            },
+            {
+              "id": "CVE-2026-8924-libcurl-minimal",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-8924 medium vulnerability for libcurl-minimal package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in curl's cookie parsing logic. A malicious HTTP server can exploit this by setting 'super cookies' that bypass the Public Suffix List check. This allows an attacker-controlled origin to inject cookies that curl then transmits to unrelated third-party domains, leading to compromising request integrity."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-8924",
+              "help": {
+                "text": "Vulnerability CVE-2026-8924\nSeverity: medium\nPackage: libcurl-minimal\nVersion: 7.61.1-34.el8_10.11\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-8924](https://access.redhat.com/security/cve/CVE-2026-8924)",
+                "markdown": "**Vulnerability CVE-2026-8924**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | libcurl-minimal  | 7.61.1-34.el8_10.11  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-8924](https://access.redhat.com/security/cve/CVE-2026-8924)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/libcurl-minimal@7.61.1-34.el8_10.11?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=curl-7.61.1-34.el8_10.11.src.rpm"
+                ],
+                "security-severity": "6.5"
               }
             },
             {
@@ -2047,48 +2215,6 @@
               }
             },
             {
-              "id": "CVE-2026-12064-curl",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-12064 high vulnerability for curl package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in curl. When a user invokes curl with a schemeless URL and specifies SFTP (SSH File Transfer Protocol) or SCP (Secure Copy Protocol) as the default protocol, the tool layer fails to initialize critical SSH security options. This bypasses host verification, allowing curl to connect to an unverified SSH remote host without alerting the user. This could enable an attacker to intercept or manipulate data through a man-in-the-middle attack."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-12064",
-              "help": {
-                "text": "Vulnerability CVE-2026-12064\nSeverity: high\nPackage: curl\nVersion: 7.61.1-34.el8_10.11\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-12064](https://access.redhat.com/security/cve/CVE-2026-12064)",
-                "markdown": "**Vulnerability CVE-2026-12064**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| high  | curl  | 7.61.1-34.el8_10.11  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-12064](https://access.redhat.com/security/cve/CVE-2026-12064)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/curl@7.61.1-34.el8_10.11?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=curl-7.61.1-34.el8_10.11.src.rpm"
-                ],
-                "security-severity": "7.5"
-              }
-            },
-            {
-              "id": "CVE-2026-12064-libcurl-minimal",
-              "name": "RpmMatcherExactIndirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-12064 high vulnerability for libcurl-minimal package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in curl. When a user invokes curl with a schemeless URL and specifies SFTP (SSH File Transfer Protocol) or SCP (Secure Copy Protocol) as the default protocol, the tool layer fails to initialize critical SSH security options. This bypasses host verification, allowing curl to connect to an unverified SSH remote host without alerting the user. This could enable an attacker to intercept or manipulate data through a man-in-the-middle attack."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-12064",
-              "help": {
-                "text": "Vulnerability CVE-2026-12064\nSeverity: high\nPackage: libcurl-minimal\nVersion: 7.61.1-34.el8_10.11\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-12064](https://access.redhat.com/security/cve/CVE-2026-12064)",
-                "markdown": "**Vulnerability CVE-2026-12064**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| high  | libcurl-minimal  | 7.61.1-34.el8_10.11  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-12064](https://access.redhat.com/security/cve/CVE-2026-12064)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/libcurl-minimal@7.61.1-34.el8_10.11?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=curl-7.61.1-34.el8_10.11.src.rpm"
-                ],
-                "security-severity": "7.5"
-              }
-            },
-            {
               "id": "CVE-2025-15468-openssl",
               "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
@@ -2236,48 +2362,6 @@
               }
             },
             {
-              "id": "CVE-2026-8286-curl",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-8286 high vulnerability for curl package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in curl. When a new data transfer attempts to upgrade its connection using STARTTLS, it may incorrectly reuse an existing live connection. This reuse can occur even if the Transport Layer Security (TLS) configuration of the new transfer does not match the existing connection, potentially leading to an insecure connection being established."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-8286",
-              "help": {
-                "text": "Vulnerability CVE-2026-8286\nSeverity: high\nPackage: curl\nVersion: 7.61.1-34.el8_10.11\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-8286](https://access.redhat.com/security/cve/CVE-2026-8286)",
-                "markdown": "**Vulnerability CVE-2026-8286**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| high  | curl  | 7.61.1-34.el8_10.11  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-8286](https://access.redhat.com/security/cve/CVE-2026-8286)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/curl@7.61.1-34.el8_10.11?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=curl-7.61.1-34.el8_10.11.src.rpm"
-                ],
-                "security-severity": "8.1"
-              }
-            },
-            {
-              "id": "CVE-2026-8286-libcurl-minimal",
-              "name": "RpmMatcherExactIndirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-8286 high vulnerability for libcurl-minimal package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in curl. When a new data transfer attempts to upgrade its connection using STARTTLS, it may incorrectly reuse an existing live connection. This reuse can occur even if the Transport Layer Security (TLS) configuration of the new transfer does not match the existing connection, potentially leading to an insecure connection being established."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-8286",
-              "help": {
-                "text": "Vulnerability CVE-2026-8286\nSeverity: high\nPackage: libcurl-minimal\nVersion: 7.61.1-34.el8_10.11\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-8286](https://access.redhat.com/security/cve/CVE-2026-8286)",
-                "markdown": "**Vulnerability CVE-2026-8286**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| high  | libcurl-minimal  | 7.61.1-34.el8_10.11  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-8286](https://access.redhat.com/security/cve/CVE-2026-8286)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/libcurl-minimal@7.61.1-34.el8_10.11?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=curl-7.61.1-34.el8_10.11.src.rpm"
-                ],
-                "security-severity": "8.1"
-              }
-            },
-            {
               "id": "CVE-2026-45186-expat",
               "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
@@ -2296,48 +2380,6 @@
                   "pkg:rpm/rocky/expat@2.5.0-1.el8_10?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=expat-2.5.0-1.el8_10.src.rpm"
                 ],
                 "security-severity": "7.5"
-              }
-            },
-            {
-              "id": "CVE-2026-5773-curl",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-5773 medium vulnerability for curl package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in libcurl. Due to a logical error in the connection reuse mechanism for SMB (Server Message Block) transfers, libcurl might reuse an existing SMB connection with a different share than intended. This vulnerability, categorized as CWE-488 (Exposure of Data Element to Wrong Session), could lead to the download of an incorrect file or the upload of a file to an unintended location when an application uses libcurl for SMB transfers."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-5773",
-              "help": {
-                "text": "Vulnerability CVE-2026-5773\nSeverity: medium\nPackage: curl\nVersion: 7.61.1-34.el8_10.11\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-5773](https://access.redhat.com/security/cve/CVE-2026-5773)",
-                "markdown": "**Vulnerability CVE-2026-5773**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | curl  | 7.61.1-34.el8_10.11  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-5773](https://access.redhat.com/security/cve/CVE-2026-5773)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/curl@7.61.1-34.el8_10.11?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=curl-7.61.1-34.el8_10.11.src.rpm"
-                ],
-                "security-severity": "6.5"
-              }
-            },
-            {
-              "id": "CVE-2026-5773-libcurl-minimal",
-              "name": "RpmMatcherExactIndirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-5773 medium vulnerability for libcurl-minimal package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in libcurl. Due to a logical error in the connection reuse mechanism for SMB (Server Message Block) transfers, libcurl might reuse an existing SMB connection with a different share than intended. This vulnerability, categorized as CWE-488 (Exposure of Data Element to Wrong Session), could lead to the download of an incorrect file or the upload of a file to an unintended location when an application uses libcurl for SMB transfers."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-5773",
-              "help": {
-                "text": "Vulnerability CVE-2026-5773\nSeverity: medium\nPackage: libcurl-minimal\nVersion: 7.61.1-34.el8_10.11\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-5773](https://access.redhat.com/security/cve/CVE-2026-5773)",
-                "markdown": "**Vulnerability CVE-2026-5773**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | libcurl-minimal  | 7.61.1-34.el8_10.11  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-5773](https://access.redhat.com/security/cve/CVE-2026-5773)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/libcurl-minimal@7.61.1-34.el8_10.11?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=curl-7.61.1-34.el8_10.11.src.rpm"
-                ],
-                "security-severity": "6.5"
               }
             },
             {
@@ -2404,6 +2446,48 @@
               }
             },
             {
+              "id": "CVE-2026-5773-curl",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-5773 medium vulnerability for curl package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in libcurl. Due to a logical error in the connection reuse mechanism for SMB (Server Message Block) transfers, libcurl might reuse an existing SMB connection with a different share than intended. This vulnerability, categorized as CWE-488 (Exposure of Data Element to Wrong Session), could lead to the download of an incorrect file or the upload of a file to an unintended location when an application uses libcurl for SMB transfers."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-5773",
+              "help": {
+                "text": "Vulnerability CVE-2026-5773\nSeverity: medium\nPackage: curl\nVersion: 7.61.1-34.el8_10.11\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-5773](https://access.redhat.com/security/cve/CVE-2026-5773)",
+                "markdown": "**Vulnerability CVE-2026-5773**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | curl  | 7.61.1-34.el8_10.11  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-5773](https://access.redhat.com/security/cve/CVE-2026-5773)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/curl@7.61.1-34.el8_10.11?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=curl-7.61.1-34.el8_10.11.src.rpm"
+                ],
+                "security-severity": "6.5"
+              }
+            },
+            {
+              "id": "CVE-2026-5773-libcurl-minimal",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-5773 medium vulnerability for libcurl-minimal package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in libcurl. Due to a logical error in the connection reuse mechanism for SMB (Server Message Block) transfers, libcurl might reuse an existing SMB connection with a different share than intended. This vulnerability, categorized as CWE-488 (Exposure of Data Element to Wrong Session), could lead to the download of an incorrect file or the upload of a file to an unintended location when an application uses libcurl for SMB transfers."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-5773",
+              "help": {
+                "text": "Vulnerability CVE-2026-5773\nSeverity: medium\nPackage: libcurl-minimal\nVersion: 7.61.1-34.el8_10.11\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-5773](https://access.redhat.com/security/cve/CVE-2026-5773)",
+                "markdown": "**Vulnerability CVE-2026-5773**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | libcurl-minimal  | 7.61.1-34.el8_10.11  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-5773](https://access.redhat.com/security/cve/CVE-2026-5773)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/libcurl-minimal@7.61.1-34.el8_10.11?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=curl-7.61.1-34.el8_10.11.src.rpm"
+                ],
+                "security-severity": "6.5"
+              }
+            },
+            {
               "id": "CVE-2025-27113-libxml2",
               "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
@@ -2422,6 +2506,69 @@
                   "pkg:rpm/rocky/libxml2@2.9.7-21.el8_10.3?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=libxml2-2.9.7-21.el8_10.3.src.rpm"
                 ],
                 "security-severity": "3.1"
+              }
+            },
+            {
+              "id": "CVE-2025-14512-glib2",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2025-14512 medium vulnerability for glib2 package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in glib. This vulnerability allows a heap buffer overflow and denial-of-service (DoS) via an integer overflow in GLib's GIO (GLib Input/Output) escape_byte_string() function when processing malicious file or remote filesystem attribute values."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2025-14512",
+              "help": {
+                "text": "Vulnerability CVE-2025-14512\nSeverity: medium\nPackage: glib2\nVersion: 2.56.4-168.el8_10\nFix Version: 0:2.56.4-169.el8_10\nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2025-14512](https://access.redhat.com/security/cve/CVE-2025-14512)",
+                "markdown": "**Vulnerability CVE-2025-14512**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | glib2  | 2.56.4-168.el8_10  | 0:2.56.4-169.el8_10  | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2025-14512](https://access.redhat.com/security/cve/CVE-2025-14512)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/glib2@2.56.4-168.el8_10?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=glib2-2.56.4-168.el8_10.src.rpm"
+                ],
+                "security-severity": "6.5"
+              }
+            },
+            {
+              "id": "CVE-2026-8926-curl",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-8926 medium vulnerability for curl package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in curl. When curl is configured to use a .netrc file for credentials and a URL is provided with a username but no password, curl may incorrectly retrieve and use the password for a different user from the .netrc file for the same host. This could lead to unauthorized information disclosure, as curl might connect using unintended credentials."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-8926",
+              "help": {
+                "text": "Vulnerability CVE-2026-8926\nSeverity: medium\nPackage: curl\nVersion: 7.61.1-34.el8_10.11\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-8926](https://access.redhat.com/security/cve/CVE-2026-8926)",
+                "markdown": "**Vulnerability CVE-2026-8926**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | curl  | 7.61.1-34.el8_10.11  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-8926](https://access.redhat.com/security/cve/CVE-2026-8926)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/curl@7.61.1-34.el8_10.11?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=curl-7.61.1-34.el8_10.11.src.rpm"
+                ],
+                "security-severity": "4.8"
+              }
+            },
+            {
+              "id": "CVE-2026-8926-libcurl-minimal",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-8926 medium vulnerability for libcurl-minimal package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in curl. When curl is configured to use a .netrc file for credentials and a URL is provided with a username but no password, curl may incorrectly retrieve and use the password for a different user from the .netrc file for the same host. This could lead to unauthorized information disclosure, as curl might connect using unintended credentials."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-8926",
+              "help": {
+                "text": "Vulnerability CVE-2026-8926\nSeverity: medium\nPackage: libcurl-minimal\nVersion: 7.61.1-34.el8_10.11\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-8926](https://access.redhat.com/security/cve/CVE-2026-8926)",
+                "markdown": "**Vulnerability CVE-2026-8926**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | libcurl-minimal  | 7.61.1-34.el8_10.11  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-8926](https://access.redhat.com/security/cve/CVE-2026-8926)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/libcurl-minimal@7.61.1-34.el8_10.11?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=curl-7.61.1-34.el8_10.11.src.rpm"
+                ],
+                "security-severity": "4.8"
               }
             },
             {
@@ -2467,48 +2614,6 @@
               }
             },
             {
-              "id": "CVE-2026-9547-curl",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-9547 high vulnerability for curl package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in curl. When a libcurl-based application uses SCP:// or SFTP:// for transfers and employs the CURLOPT_SSH_KEYFUNCTION callback, it may silently accept an untrusted server. This occurs if the server's host key type differs from the one stored in the known_hosts file. The callback mechanism fails to enforce the host key restriction, enabling a connection to an untrusted server and risking a man-in-the-middle attack."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-9547",
-              "help": {
-                "text": "Vulnerability CVE-2026-9547\nSeverity: high\nPackage: curl\nVersion: 7.61.1-34.el8_10.11\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-9547](https://access.redhat.com/security/cve/CVE-2026-9547)",
-                "markdown": "**Vulnerability CVE-2026-9547**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| high  | curl  | 7.61.1-34.el8_10.11  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-9547](https://access.redhat.com/security/cve/CVE-2026-9547)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/curl@7.61.1-34.el8_10.11?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=curl-7.61.1-34.el8_10.11.src.rpm"
-                ],
-                "security-severity": "7.4"
-              }
-            },
-            {
-              "id": "CVE-2026-9547-libcurl-minimal",
-              "name": "RpmMatcherExactIndirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-9547 high vulnerability for libcurl-minimal package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in curl. When a libcurl-based application uses SCP:// or SFTP:// for transfers and employs the CURLOPT_SSH_KEYFUNCTION callback, it may silently accept an untrusted server. This occurs if the server's host key type differs from the one stored in the known_hosts file. The callback mechanism fails to enforce the host key restriction, enabling a connection to an untrusted server and risking a man-in-the-middle attack."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-9547",
-              "help": {
-                "text": "Vulnerability CVE-2026-9547\nSeverity: high\nPackage: libcurl-minimal\nVersion: 7.61.1-34.el8_10.11\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-9547](https://access.redhat.com/security/cve/CVE-2026-9547)",
-                "markdown": "**Vulnerability CVE-2026-9547**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| high  | libcurl-minimal  | 7.61.1-34.el8_10.11  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-9547](https://access.redhat.com/security/cve/CVE-2026-9547)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/libcurl-minimal@7.61.1-34.el8_10.11?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=curl-7.61.1-34.el8_10.11.src.rpm"
-                ],
-                "security-severity": "7.4"
-              }
-            },
-            {
               "id": "CVE-2026-42011-gnutls",
               "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
@@ -2527,48 +2632,6 @@
                   "pkg:rpm/rocky/gnutls@3.6.16-8.el8_10.5?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=gnutls-3.6.16-8.el8_10.5.src.rpm"
                 ],
                 "security-severity": "7.4"
-              }
-            },
-            {
-              "id": "CVE-2026-8924-curl",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-8924 medium vulnerability for curl package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in curl's cookie parsing logic. A malicious HTTP server can exploit this by setting 'super cookies' that bypass the Public Suffix List check. This allows an attacker-controlled origin to inject cookies that curl then transmits to unrelated third-party domains, leading to compromising request integrity."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-8924",
-              "help": {
-                "text": "Vulnerability CVE-2026-8924\nSeverity: medium\nPackage: curl\nVersion: 7.61.1-34.el8_10.11\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-8924](https://access.redhat.com/security/cve/CVE-2026-8924)",
-                "markdown": "**Vulnerability CVE-2026-8924**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | curl  | 7.61.1-34.el8_10.11  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-8924](https://access.redhat.com/security/cve/CVE-2026-8924)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/curl@7.61.1-34.el8_10.11?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=curl-7.61.1-34.el8_10.11.src.rpm"
-                ],
-                "security-severity": "6.5"
-              }
-            },
-            {
-              "id": "CVE-2026-8924-libcurl-minimal",
-              "name": "RpmMatcherExactIndirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-8924 medium vulnerability for libcurl-minimal package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in curl's cookie parsing logic. A malicious HTTP server can exploit this by setting 'super cookies' that bypass the Public Suffix List check. This allows an attacker-controlled origin to inject cookies that curl then transmits to unrelated third-party domains, leading to compromising request integrity."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-8924",
-              "help": {
-                "text": "Vulnerability CVE-2026-8924\nSeverity: medium\nPackage: libcurl-minimal\nVersion: 7.61.1-34.el8_10.11\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-8924](https://access.redhat.com/security/cve/CVE-2026-8924)",
-                "markdown": "**Vulnerability CVE-2026-8924**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | libcurl-minimal  | 7.61.1-34.el8_10.11  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-8924](https://access.redhat.com/security/cve/CVE-2026-8924)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/libcurl-minimal@7.61.1-34.el8_10.11?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=curl-7.61.1-34.el8_10.11.src.rpm"
-                ],
-                "security-severity": "6.5"
               }
             },
             {
@@ -2609,27 +2672,6 @@
               "properties": {
                 "purls": [
                   "pkg:rpm/rocky/libcurl-minimal@7.61.1-34.el8_10.11?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=curl-7.61.1-34.el8_10.11.src.rpm"
-                ],
-                "security-severity": "6.5"
-              }
-            },
-            {
-              "id": "CVE-2025-14512-glib2",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2025-14512 medium vulnerability for glib2 package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in glib. This vulnerability allows a heap buffer overflow and denial-of-service (DoS) via an integer overflow in GLib's GIO (GLib Input/Output) escape_byte_string() function when processing malicious file or remote filesystem attribute values."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2025-14512",
-              "help": {
-                "text": "Vulnerability CVE-2025-14512\nSeverity: medium\nPackage: glib2\nVersion: 2.56.4-168.el8_10\nFix Version: 0:2.56.4-169.el8_10\nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2025-14512](https://access.redhat.com/security/cve/CVE-2025-14512)",
-                "markdown": "**Vulnerability CVE-2025-14512**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | glib2  | 2.56.4-168.el8_10  | 0:2.56.4-169.el8_10  | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2025-14512](https://access.redhat.com/security/cve/CVE-2025-14512)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/glib2@2.56.4-168.el8_10?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=glib2-2.56.4-168.el8_10.src.rpm"
                 ],
                 "security-severity": "6.5"
               }
@@ -2677,48 +2719,6 @@
               }
             },
             {
-              "id": "CVE-2025-15079-curl",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2025-15079 low vulnerability for curl package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in curl. When performing SSH-based transfers using SCP or SFTP, libcurl could mistakenly connect to hosts not listed in the user-specified knownhosts file. This occurs if the host is present in the libssh global knownhosts file, effectively bypassing the intended host verification. This could allow a remote attacker to connect to an untrusted host, potentially leading to information disclosure or man-in-the-middle attacks."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2025-15079",
-              "help": {
-                "text": "Vulnerability CVE-2025-15079\nSeverity: low\nPackage: curl\nVersion: 7.61.1-34.el8_10.11\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2025-15079](https://access.redhat.com/security/cve/CVE-2025-15079)",
-                "markdown": "**Vulnerability CVE-2025-15079**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | curl  | 7.61.1-34.el8_10.11  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2025-15079](https://access.redhat.com/security/cve/CVE-2025-15079)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/curl@7.61.1-34.el8_10.11?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=curl-7.61.1-34.el8_10.11.src.rpm"
-                ],
-                "security-severity": "8.1"
-              }
-            },
-            {
-              "id": "CVE-2025-15079-libcurl-minimal",
-              "name": "RpmMatcherExactIndirectMatch",
-              "shortDescription": {
-                "text": "CVE-2025-15079 low vulnerability for libcurl-minimal package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in curl. When performing SSH-based transfers using SCP or SFTP, libcurl could mistakenly connect to hosts not listed in the user-specified knownhosts file. This occurs if the host is present in the libssh global knownhosts file, effectively bypassing the intended host verification. This could allow a remote attacker to connect to an untrusted host, potentially leading to information disclosure or man-in-the-middle attacks."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2025-15079",
-              "help": {
-                "text": "Vulnerability CVE-2025-15079\nSeverity: low\nPackage: libcurl-minimal\nVersion: 7.61.1-34.el8_10.11\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2025-15079](https://access.redhat.com/security/cve/CVE-2025-15079)",
-                "markdown": "**Vulnerability CVE-2025-15079**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | libcurl-minimal  | 7.61.1-34.el8_10.11  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2025-15079](https://access.redhat.com/security/cve/CVE-2025-15079)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/libcurl-minimal@7.61.1-34.el8_10.11?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=curl-7.61.1-34.el8_10.11.src.rpm"
-                ],
-                "security-severity": "8.1"
-              }
-            },
-            {
               "id": "CVE-2026-40355-krb5-libs",
               "name": "RpmMatcherExactIndirectMatch",
               "shortDescription": {
@@ -2758,6 +2758,48 @@
                   "pkg:rpm/rocky/krb5-libs@1.18.2-32.el8_10?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=krb5-1.18.2-32.el8_10.src.rpm"
                 ],
                 "security-severity": "5.9"
+              }
+            },
+            {
+              "id": "CVE-2025-15079-curl",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2025-15079 low vulnerability for curl package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in curl. When performing SSH-based transfers using SCP or SFTP, libcurl could mistakenly connect to hosts not listed in the user-specified knownhosts file. This occurs if the host is present in the libssh global knownhosts file, effectively bypassing the intended host verification. This could allow a remote attacker to connect to an untrusted host, potentially leading to information disclosure or man-in-the-middle attacks."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2025-15079",
+              "help": {
+                "text": "Vulnerability CVE-2025-15079\nSeverity: low\nPackage: curl\nVersion: 7.61.1-34.el8_10.11\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2025-15079](https://access.redhat.com/security/cve/CVE-2025-15079)",
+                "markdown": "**Vulnerability CVE-2025-15079**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | curl  | 7.61.1-34.el8_10.11  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2025-15079](https://access.redhat.com/security/cve/CVE-2025-15079)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/curl@7.61.1-34.el8_10.11?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=curl-7.61.1-34.el8_10.11.src.rpm"
+                ],
+                "security-severity": "8.1"
+              }
+            },
+            {
+              "id": "CVE-2025-15079-libcurl-minimal",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2025-15079 low vulnerability for libcurl-minimal package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in curl. When performing SSH-based transfers using SCP or SFTP, libcurl could mistakenly connect to hosts not listed in the user-specified knownhosts file. This occurs if the host is present in the libssh global knownhosts file, effectively bypassing the intended host verification. This could allow a remote attacker to connect to an untrusted host, potentially leading to information disclosure or man-in-the-middle attacks."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2025-15079",
+              "help": {
+                "text": "Vulnerability CVE-2025-15079\nSeverity: low\nPackage: libcurl-minimal\nVersion: 7.61.1-34.el8_10.11\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2025-15079](https://access.redhat.com/security/cve/CVE-2025-15079)",
+                "markdown": "**Vulnerability CVE-2025-15079**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | libcurl-minimal  | 7.61.1-34.el8_10.11  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2025-15079](https://access.redhat.com/security/cve/CVE-2025-15079)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/libcurl-minimal@7.61.1-34.el8_10.11?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=curl-7.61.1-34.el8_10.11.src.rpm"
+                ],
+                "security-severity": "8.1"
               }
             },
             {
@@ -2905,48 +2947,6 @@
                   "pkg:rpm/rocky/libcurl-minimal@7.61.1-34.el8_10.11?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=curl-7.61.1-34.el8_10.11.src.rpm"
                 ],
                 "security-severity": "6.5"
-              }
-            },
-            {
-              "id": "CVE-2026-8926-curl",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-8926 medium vulnerability for curl package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in curl. When curl is configured to use a .netrc file for credentials and a URL is provided with a username but no password, curl may incorrectly retrieve and use the password for a different user from the .netrc file for the same host. This could lead to unauthorized information disclosure, as curl might connect using unintended credentials."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-8926",
-              "help": {
-                "text": "Vulnerability CVE-2026-8926\nSeverity: medium\nPackage: curl\nVersion: 7.61.1-34.el8_10.11\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-8926](https://access.redhat.com/security/cve/CVE-2026-8926)",
-                "markdown": "**Vulnerability CVE-2026-8926**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | curl  | 7.61.1-34.el8_10.11  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-8926](https://access.redhat.com/security/cve/CVE-2026-8926)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/curl@7.61.1-34.el8_10.11?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=curl-7.61.1-34.el8_10.11.src.rpm"
-                ],
-                "security-severity": "4.8"
-              }
-            },
-            {
-              "id": "CVE-2026-8926-libcurl-minimal",
-              "name": "RpmMatcherExactIndirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-8926 medium vulnerability for libcurl-minimal package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in curl. When curl is configured to use a .netrc file for credentials and a URL is provided with a username but no password, curl may incorrectly retrieve and use the password for a different user from the .netrc file for the same host. This could lead to unauthorized information disclosure, as curl might connect using unintended credentials."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-8926",
-              "help": {
-                "text": "Vulnerability CVE-2026-8926\nSeverity: medium\nPackage: libcurl-minimal\nVersion: 7.61.1-34.el8_10.11\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-8926](https://access.redhat.com/security/cve/CVE-2026-8926)",
-                "markdown": "**Vulnerability CVE-2026-8926**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | libcurl-minimal  | 7.61.1-34.el8_10.11  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-8926](https://access.redhat.com/security/cve/CVE-2026-8926)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/libcurl-minimal@7.61.1-34.el8_10.11?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=curl-7.61.1-34.el8_10.11.src.rpm"
-                ],
-                "security-severity": "4.8"
               }
             },
             {
@@ -3307,27 +3307,6 @@
               }
             },
             {
-              "id": "CVE-2026-58012-glib2",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-58012 medium vulnerability for glib2 package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in GLib. A buffer over-read can occur in the g_regex_replace function when used with the `G_REGEX_RAW` compile flag and case-change replacement escapes because the string_append function processes matched substrings using UTF-8 functions that assume valid UTF-8 input, even when the string is treated as raw bytes. This vulnerability can cause a minor information disclosure of 1-5 bytes and a denial of service when the buffer over-read crosses a page boundary."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-58012",
-              "help": {
-                "text": "Vulnerability CVE-2026-58012\nSeverity: medium\nPackage: glib2\nVersion: 2.56.4-168.el8_10\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-58012](https://access.redhat.com/security/cve/CVE-2026-58012)",
-                "markdown": "**Vulnerability CVE-2026-58012**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | glib2  | 2.56.4-168.el8_10  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-58012](https://access.redhat.com/security/cve/CVE-2026-58012)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/glib2@2.56.4-168.el8_10?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=glib2-2.56.4-168.el8_10.src.rpm"
-                ],
-                "security-severity": "6.5"
-              }
-            },
-            {
               "id": "CVE-2026-58010-glib2",
               "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
@@ -3340,6 +3319,27 @@
               "help": {
                 "text": "Vulnerability CVE-2026-58010\nSeverity: medium\nPackage: glib2\nVersion: 2.56.4-168.el8_10\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-58010](https://access.redhat.com/security/cve/CVE-2026-58010)",
                 "markdown": "**Vulnerability CVE-2026-58010**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | glib2  | 2.56.4-168.el8_10  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-58010](https://access.redhat.com/security/cve/CVE-2026-58010)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/glib2@2.56.4-168.el8_10?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=glib2-2.56.4-168.el8_10.src.rpm"
+                ],
+                "security-severity": "6.5"
+              }
+            },
+            {
+              "id": "CVE-2026-58012-glib2",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-58012 medium vulnerability for glib2 package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in GLib. A buffer over-read can occur in the g_regex_replace function when used with the `G_REGEX_RAW` compile flag and case-change replacement escapes because the string_append function processes matched substrings using UTF-8 functions that assume valid UTF-8 input, even when the string is treated as raw bytes. This vulnerability can cause a minor information disclosure of 1-5 bytes and a denial of service when the buffer over-read crosses a page boundary."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-58012",
+              "help": {
+                "text": "Vulnerability CVE-2026-58012\nSeverity: medium\nPackage: glib2\nVersion: 2.56.4-168.el8_10\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-58012](https://access.redhat.com/security/cve/CVE-2026-58012)",
+                "markdown": "**Vulnerability CVE-2026-58012**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | glib2  | 2.56.4-168.el8_10  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-58012](https://access.redhat.com/security/cve/CVE-2026-58012)  |\n"
               },
               "properties": {
                 "purls": [
@@ -4441,6 +4441,27 @@
               }
             },
             {
+              "id": "CVE-2025-3360-glib2",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2025-3360 low vulnerability for glib2 package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in GLib. An integer overflow and buffer under-read occur when parsing a long invalid ISO 8601 timestamp with the g_date_time_new_from_iso8601() function."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2025-3360",
+              "help": {
+                "text": "Vulnerability CVE-2025-3360\nSeverity: low\nPackage: glib2\nVersion: 2.56.4-168.el8_10\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2025-3360](https://access.redhat.com/security/cve/CVE-2025-3360)",
+                "markdown": "**Vulnerability CVE-2025-3360**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | glib2  | 2.56.4-168.el8_10  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2025-3360](https://access.redhat.com/security/cve/CVE-2025-3360)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/glib2@2.56.4-168.el8_10?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=glib2-2.56.4-168.el8_10.src.rpm"
+                ],
+                "security-severity": "3.7"
+              }
+            },
+            {
               "id": "CVE-2021-24032-libzstd",
               "name": "RpmMatcherExactIndirectMatch",
               "shortDescription": {
@@ -4501,27 +4522,6 @@
                   "pkg:rpm/rocky/glib2@2.56.4-168.el8_10?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=glib2-2.56.4-168.el8_10.src.rpm"
                 ],
                 "security-severity": "4.2"
-              }
-            },
-            {
-              "id": "CVE-2025-3360-glib2",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2025-3360 low vulnerability for glib2 package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in GLib. An integer overflow and buffer under-read occur when parsing a long invalid ISO 8601 timestamp with the g_date_time_new_from_iso8601() function."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2025-3360",
-              "help": {
-                "text": "Vulnerability CVE-2025-3360\nSeverity: low\nPackage: glib2\nVersion: 2.56.4-168.el8_10\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2025-3360](https://access.redhat.com/security/cve/CVE-2025-3360)",
-                "markdown": "**Vulnerability CVE-2025-3360**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | glib2  | 2.56.4-168.el8_10  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2025-3360](https://access.redhat.com/security/cve/CVE-2025-3360)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/glib2@2.56.4-168.el8_10?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=glib2-2.56.4-168.el8_10.src.rpm"
-                ],
-                "security-severity": "3.7"
               }
             },
             {
@@ -5827,6 +5827,48 @@
               }
             },
             {
+              "id": "CVE-2026-13757-p11-kit",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-13757 medium vulnerability for p11-kit package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in p11-kit. The RPC message attribute parsing functions p11_rpc_message_get_attribute() and p11_rpc_message_get_attribute_array_value() form a mutually-recursive call chain with no recursion depth limit when processing nested CKA_WRAP_TEMPLATE, CKA_UNWRAP_TEMPLATE, and CKA_DERIVE_TEMPLATE attributes. An unauthenticated attacker with local access to the p11-kit RPC Unix domain socket can send a specially crafted request with deeply nested template attributes, causing stack exhaustion and crashing the p11-kit server process and its dependent services."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-13757",
+              "help": {
+                "text": "Vulnerability CVE-2026-13757\nSeverity: medium\nPackage: p11-kit\nVersion: 0.23.22-2.el8\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-13757](https://access.redhat.com/security/cve/CVE-2026-13757)",
+                "markdown": "**Vulnerability CVE-2026-13757**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | p11-kit  | 0.23.22-2.el8  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-13757](https://access.redhat.com/security/cve/CVE-2026-13757)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/p11-kit@0.23.22-2.el8?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=p11-kit-0.23.22-2.el8.src.rpm"
+                ],
+                "security-severity": "6.2"
+              }
+            },
+            {
+              "id": "CVE-2026-13757-p11-kit-trust",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-13757 medium vulnerability for p11-kit-trust package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in p11-kit. The RPC message attribute parsing functions p11_rpc_message_get_attribute() and p11_rpc_message_get_attribute_array_value() form a mutually-recursive call chain with no recursion depth limit when processing nested CKA_WRAP_TEMPLATE, CKA_UNWRAP_TEMPLATE, and CKA_DERIVE_TEMPLATE attributes. An unauthenticated attacker with local access to the p11-kit RPC Unix domain socket can send a specially crafted request with deeply nested template attributes, causing stack exhaustion and crashing the p11-kit server process and its dependent services."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-13757",
+              "help": {
+                "text": "Vulnerability CVE-2026-13757\nSeverity: medium\nPackage: p11-kit-trust\nVersion: 0.23.22-2.el8\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-13757](https://access.redhat.com/security/cve/CVE-2026-13757)",
+                "markdown": "**Vulnerability CVE-2026-13757**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | p11-kit-trust  | 0.23.22-2.el8  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-13757](https://access.redhat.com/security/cve/CVE-2026-13757)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/p11-kit-trust@0.23.22-2.el8?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=p11-kit-0.23.22-2.el8.src.rpm"
+                ],
+                "security-severity": "6.2"
+              }
+            },
+            {
               "id": "CVE-2026-11979-libxml2",
               "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
@@ -5908,6 +5950,27 @@
                   "pkg:rpm/rocky/openssl-libs@1.1.1k-15.el8_10?arch=x86_64\u0026distro=rocky-8.10\u0026epoch=1\u0026upstream=openssl-1.1.1k-15.el8_10.src.rpm"
                 ],
                 "security-severity": "3.7"
+              }
+            },
+            {
+              "id": "CVE-2026-15028-libarchive",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-15028 low vulnerability for libarchive package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in libarchive. This vulnerability allows a remote attacker to trigger a heap overflow by providing a specially crafted tar archive. The issue occurs during the parsing of a PAX extended header containing a malformed SUN.holesdata sparse-file attribute. Successful exploitation could lead to a denial of service, making the system unavailable, or potentially allow for arbitrary code execution, giving the attacker control over the affected system."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-15028",
+              "help": {
+                "text": "Vulnerability CVE-2026-15028\nSeverity: low\nPackage: libarchive\nVersion: 3.3.3-7.el8_10\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-15028](https://access.redhat.com/security/cve/CVE-2026-15028)",
+                "markdown": "**Vulnerability CVE-2026-15028**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | libarchive  | 3.3.3-7.el8_10  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-15028](https://access.redhat.com/security/cve/CVE-2026-15028)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/libarchive@3.3.3-7.el8_10?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=libarchive-3.3.3-7.el8_10.src.rpm"
+                ],
+                "security-severity": "3.9"
               }
             },
             {
@@ -6163,45 +6226,24 @@
               }
             },
             {
-              "id": "CVE-2026-13757-p11-kit",
+              "id": "CVE-2026-56132-expat",
               "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
-                "text": "CVE-2026-13757 medium vulnerability for p11-kit package"
+                "text": "CVE-2026-56132 medium vulnerability for expat package"
               },
               "fullDescription": {
-                "text": "A flaw was found in p11-kit. The RPC message attribute parsing functions p11_rpc_message_get_attribute() and p11_rpc_message_get_attribute_array_value() form a mutually-recursive call chain with no recursion depth limit when processing nested CKA_WRAP_TEMPLATE, CKA_UNWRAP_TEMPLATE, and CKA_DERIVE_TEMPLATE attributes. An unauthenticated attacker with local access to the p11-kit RPC Unix domain socket can send a specially crafted request with deeply nested template attributes, causing stack exhaustion and crashing the p11-kit server process and its dependent services."
+                "text": "A flaw was found in libexpat, a library used for parsing XML data. An attacker could exploit a heap-based buffer overflow, a type of memory error, by providing specially crafted XML input. This vulnerability occurs when the library mishandles memory reallocation while processing XML, particularly when multiple parsers share data. Successful exploitation could allow the attacker to execute arbitrary code, access sensitive information, or cause the application to crash, leading to a denial of service."
               },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-13757",
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-56132",
               "help": {
-                "text": "Vulnerability CVE-2026-13757\nSeverity: medium\nPackage: p11-kit\nVersion: 0.23.22-2.el8\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-13757](https://access.redhat.com/security/cve/CVE-2026-13757)",
-                "markdown": "**Vulnerability CVE-2026-13757**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | p11-kit  | 0.23.22-2.el8  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-13757](https://access.redhat.com/security/cve/CVE-2026-13757)  |\n"
+                "text": "Vulnerability CVE-2026-56132\nSeverity: medium\nPackage: expat\nVersion: 2.5.0-1.el8_10\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-56132](https://access.redhat.com/security/cve/CVE-2026-56132)",
+                "markdown": "**Vulnerability CVE-2026-56132**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | expat  | 2.5.0-1.el8_10  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-56132](https://access.redhat.com/security/cve/CVE-2026-56132)  |\n"
               },
               "properties": {
                 "purls": [
-                  "pkg:rpm/rocky/p11-kit@0.23.22-2.el8?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=p11-kit-0.23.22-2.el8.src.rpm"
+                  "pkg:rpm/rocky/expat@2.5.0-1.el8_10?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=expat-2.5.0-1.el8_10.src.rpm"
                 ],
-                "security-severity": "6.2"
-              }
-            },
-            {
-              "id": "CVE-2026-13757-p11-kit-trust",
-              "name": "RpmMatcherExactIndirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-13757 medium vulnerability for p11-kit-trust package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in p11-kit. The RPC message attribute parsing functions p11_rpc_message_get_attribute() and p11_rpc_message_get_attribute_array_value() form a mutually-recursive call chain with no recursion depth limit when processing nested CKA_WRAP_TEMPLATE, CKA_UNWRAP_TEMPLATE, and CKA_DERIVE_TEMPLATE attributes. An unauthenticated attacker with local access to the p11-kit RPC Unix domain socket can send a specially crafted request with deeply nested template attributes, causing stack exhaustion and crashing the p11-kit server process and its dependent services."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-13757",
-              "help": {
-                "text": "Vulnerability CVE-2026-13757\nSeverity: medium\nPackage: p11-kit-trust\nVersion: 0.23.22-2.el8\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-13757](https://access.redhat.com/security/cve/CVE-2026-13757)",
-                "markdown": "**Vulnerability CVE-2026-13757**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | p11-kit-trust  | 0.23.22-2.el8  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-13757](https://access.redhat.com/security/cve/CVE-2026-13757)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/p11-kit-trust@0.23.22-2.el8?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=p11-kit-0.23.22-2.el8.src.rpm"
-                ],
-                "security-severity": "6.2"
+                "security-severity": "6.9"
               }
             },
             {
@@ -6580,27 +6622,6 @@
                   "pkg:rpm/rocky/libarchive@3.3.3-7.el8_10?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=libarchive-3.3.3-7.el8_10.src.rpm"
                 ],
                 "security-severity": "3.9"
-              }
-            },
-            {
-              "id": "CVE-2026-56132-expat",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-56132 medium vulnerability for expat package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in libexpat, a library used for parsing XML data. An attacker could exploit a heap-based buffer overflow, a type of memory error, by providing specially crafted XML input. This vulnerability occurs when the library mishandles memory reallocation while processing XML, particularly when multiple parsers share data. Successful exploitation could allow the attacker to execute arbitrary code, access sensitive information, or cause the application to crash, leading to a denial of service."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-56132",
-              "help": {
-                "text": "Vulnerability CVE-2026-56132\nSeverity: medium\nPackage: expat\nVersion: 2.5.0-1.el8_10\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-56132](https://access.redhat.com/security/cve/CVE-2026-56132)",
-                "markdown": "**Vulnerability CVE-2026-56132**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | expat  | 2.5.0-1.el8_10  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-56132](https://access.redhat.com/security/cve/CVE-2026-56132)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/expat@2.5.0-1.el8_10?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=expat-2.5.0-1.el8_10.src.rpm"
-                ],
-                "security-severity": "6.9"
               }
             },
             {
@@ -7967,6 +7988,68 @@
           }
         },
         {
+          "ruleId": "CVE-2026-8925-curl",
+          "level": "error",
+          "message": {
+            "text": "A high vulnerability in rpm package: curl, version 7.61.1-34.el8_10.11 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-8//var/lib/rpm/Packages"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/Packages",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "27a9f5798db97a7c803c8b1da179097b4c6ee32e62e9b4edf56baf14db5e3314:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-8925-libcurl-minimal",
+          "level": "error",
+          "message": {
+            "text": "A high vulnerability in rpm package: libcurl-minimal, version 7.61.1-34.el8_10.11 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-8//var/lib/rpm/Packages"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/Packages",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "3d09dff4d381cac25d41ce76115012d183647c7ecba216a0b9a4f105778d0391:1"
+          }
+        },
+        {
           "ruleId": "CVE-2023-0466-openssl",
           "level": "warning",
           "message": {
@@ -8150,6 +8233,68 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "9c16f1d069961333d8f9c4a3ae1106a5871fd27665006000a9e9be50f9a8d863:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-11352-curl",
+          "level": "error",
+          "message": {
+            "text": "A high vulnerability in rpm package: curl, version 7.61.1-34.el8_10.11 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-8//var/lib/rpm/Packages"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/Packages",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "27a9f5798db97a7c803c8b1da179097b4c6ee32e62e9b4edf56baf14db5e3314:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-11352-libcurl-minimal",
+          "level": "error",
+          "message": {
+            "text": "A high vulnerability in rpm package: libcurl-minimal, version 7.61.1-34.el8_10.11 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-8//var/lib/rpm/Packages"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/Packages",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "3d09dff4d381cac25d41ce76115012d183647c7ecba216a0b9a4f105778d0391:1"
           }
         },
         {
@@ -8711,6 +8856,68 @@
           }
         },
         {
+          "ruleId": "CVE-2026-11586-curl",
+          "level": "error",
+          "message": {
+            "text": "A high vulnerability in rpm package: curl, version 7.61.1-34.el8_10.11 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-8//var/lib/rpm/Packages"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/Packages",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "27a9f5798db97a7c803c8b1da179097b4c6ee32e62e9b4edf56baf14db5e3314:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-11586-libcurl-minimal",
+          "level": "error",
+          "message": {
+            "text": "A high vulnerability in rpm package: libcurl-minimal, version 7.61.1-34.el8_10.11 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-8//var/lib/rpm/Packages"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/Packages",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "3d09dff4d381cac25d41ce76115012d183647c7ecba216a0b9a4f105778d0391:1"
+          }
+        },
+        {
           "ruleId": "CVE-2024-11053-curl",
           "level": "note",
           "message": {
@@ -8773,10 +8980,10 @@
           }
         },
         {
-          "ruleId": "CVE-2026-8925-curl",
-          "level": "error",
+          "ruleId": "CVE-2026-11856-curl",
+          "level": "warning",
           "message": {
-            "text": "A high vulnerability in rpm package: curl, version 7.61.1-34.el8_10.11 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
+            "text": "A medium vulnerability in rpm package: curl, version 7.61.1-34.el8_10.11 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
           },
           "locations": [
             {
@@ -8804,10 +9011,10 @@
           }
         },
         {
-          "ruleId": "CVE-2026-8925-libcurl-minimal",
-          "level": "error",
+          "ruleId": "CVE-2026-11856-libcurl-minimal",
+          "level": "warning",
           "message": {
-            "text": "A high vulnerability in rpm package: libcurl-minimal, version 7.61.1-34.el8_10.11 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
+            "text": "A medium vulnerability in rpm package: libcurl-minimal, version 7.61.1-34.el8_10.11 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
           },
           "locations": [
             {
@@ -8894,68 +9101,6 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "9c16f1d069961333d8f9c4a3ae1106a5871fd27665006000a9e9be50f9a8d863:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2026-11352-curl",
-          "level": "error",
-          "message": {
-            "text": "A high vulnerability in rpm package: curl, version 7.61.1-34.el8_10.11 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-8//var/lib/rpm/Packages"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/Packages",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "27a9f5798db97a7c803c8b1da179097b4c6ee32e62e9b4edf56baf14db5e3314:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2026-11352-libcurl-minimal",
-          "level": "error",
-          "message": {
-            "text": "A high vulnerability in rpm package: libcurl-minimal, version 7.61.1-34.el8_10.11 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-8//var/lib/rpm/Packages"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/Packages",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "3d09dff4d381cac25d41ce76115012d183647c7ecba216a0b9a4f105778d0391:1"
           }
         },
         {
@@ -9145,10 +9290,10 @@
           }
         },
         {
-          "ruleId": "CVE-2026-11586-curl",
-          "level": "error",
+          "ruleId": "CVE-2026-28388-openssl",
+          "level": "note",
           "message": {
-            "text": "A high vulnerability in rpm package: curl, version 7.61.1-34.el8_10.11 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
+            "text": "A low vulnerability in rpm package: openssl, version 1:1.1.1k-15.el8_10 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
           },
           "locations": [
             {
@@ -9172,14 +9317,14 @@
             }
           ],
           "partialFingerprints": {
-            "primaryLocationLineHash": "27a9f5798db97a7c803c8b1da179097b4c6ee32e62e9b4edf56baf14db5e3314:1"
+            "primaryLocationLineHash": "47f848169c74c72fc743595363b3747ba51c4d0bea5b4a410a03b03eac62a49b:1"
           }
         },
         {
-          "ruleId": "CVE-2026-11586-libcurl-minimal",
-          "level": "error",
+          "ruleId": "CVE-2026-28388-openssl-libs",
+          "level": "note",
           "message": {
-            "text": "A high vulnerability in rpm package: libcurl-minimal, version 7.61.1-34.el8_10.11 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
+            "text": "A low vulnerability in rpm package: openssl-libs, version 1:1.1.1k-15.el8_10 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
           },
           "locations": [
             {
@@ -9203,7 +9348,7 @@
             }
           ],
           "partialFingerprints": {
-            "primaryLocationLineHash": "3d09dff4d381cac25d41ce76115012d183647c7ecba216a0b9a4f105778d0391:1"
+            "primaryLocationLineHash": "a951d7467c403bae5434c785b56ff88d7cd6a04509505b282c89765131eb2d2c:1"
           }
         },
         {
@@ -9269,10 +9414,10 @@
           }
         },
         {
-          "ruleId": "CVE-2026-11856-curl",
-          "level": "warning",
+          "ruleId": "CVE-2026-12064-curl",
+          "level": "error",
           "message": {
-            "text": "A medium vulnerability in rpm package: curl, version 7.61.1-34.el8_10.11 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
+            "text": "A high vulnerability in rpm package: curl, version 7.61.1-34.el8_10.11 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
           },
           "locations": [
             {
@@ -9300,10 +9445,10 @@
           }
         },
         {
-          "ruleId": "CVE-2026-11856-libcurl-minimal",
-          "level": "warning",
+          "ruleId": "CVE-2026-12064-libcurl-minimal",
+          "level": "error",
           "message": {
-            "text": "A medium vulnerability in rpm package: libcurl-minimal, version 7.61.1-34.el8_10.11 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
+            "text": "A high vulnerability in rpm package: libcurl-minimal, version 7.61.1-34.el8_10.11 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
           },
           "locations": [
             {
@@ -9359,6 +9504,99 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "f095501dacaf9f57354c16141362a291ee35f9e4cc31c431b76841f965ba36a6:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2025-14087-glib2",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: glib2, version 2.56.4-168.el8_10 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-8//var/lib/rpm/Packages"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/Packages",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "b46ca95c561efe9242baf33d7b71fd2e51c001787eb6496d98674206b6142b38:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-8286-curl",
+          "level": "error",
+          "message": {
+            "text": "A high vulnerability in rpm package: curl, version 7.61.1-34.el8_10.11 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-8//var/lib/rpm/Packages"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/Packages",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "27a9f5798db97a7c803c8b1da179097b4c6ee32e62e9b4edf56baf14db5e3314:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-8286-libcurl-minimal",
+          "level": "error",
+          "message": {
+            "text": "A high vulnerability in rpm package: libcurl-minimal, version 7.61.1-34.el8_10.11 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-8//var/lib/rpm/Packages"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/Packages",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "3d09dff4d381cac25d41ce76115012d183647c7ecba216a0b9a4f105778d0391:1"
           }
         },
         {
@@ -9486,37 +9724,6 @@
           }
         },
         {
-          "ruleId": "CVE-2025-14087-glib2",
-          "level": "warning",
-          "message": {
-            "text": "A medium vulnerability in rpm package: glib2, version 2.56.4-168.el8_10 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-8//var/lib/rpm/Packages"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/Packages",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "b46ca95c561efe9242baf33d7b71fd2e51c001787eb6496d98674206b6142b38:1"
-          }
-        },
-        {
           "ruleId": "CVE-2022-41409-pcre2",
           "level": "note",
           "message": {
@@ -9545,68 +9752,6 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "fff59478a16abfd1ab3a43d7e95ddd6bac9fb372f56aec48fb4c0eaa413a836f:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2026-28388-openssl",
-          "level": "note",
-          "message": {
-            "text": "A low vulnerability in rpm package: openssl, version 1:1.1.1k-15.el8_10 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-8//var/lib/rpm/Packages"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/Packages",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "47f848169c74c72fc743595363b3747ba51c4d0bea5b4a410a03b03eac62a49b:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2026-28388-openssl-libs",
-          "level": "note",
-          "message": {
-            "text": "A low vulnerability in rpm package: openssl-libs, version 1:1.1.1k-15.el8_10 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-8//var/lib/rpm/Packages"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/Packages",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "a951d7467c403bae5434c785b56ff88d7cd6a04509505b282c89765131eb2d2c:1"
           }
         },
         {
@@ -9672,6 +9817,68 @@
           }
         },
         {
+          "ruleId": "CVE-2026-9547-curl",
+          "level": "error",
+          "message": {
+            "text": "A high vulnerability in rpm package: curl, version 7.61.1-34.el8_10.11 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-8//var/lib/rpm/Packages"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/Packages",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "27a9f5798db97a7c803c8b1da179097b4c6ee32e62e9b4edf56baf14db5e3314:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-9547-libcurl-minimal",
+          "level": "error",
+          "message": {
+            "text": "A high vulnerability in rpm package: libcurl-minimal, version 7.61.1-34.el8_10.11 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-8//var/lib/rpm/Packages"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/Packages",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "3d09dff4d381cac25d41ce76115012d183647c7ecba216a0b9a4f105778d0391:1"
+          }
+        },
+        {
           "ruleId": "CVE-2026-42015-gnutls",
           "level": "warning",
           "message": {
@@ -9700,6 +9907,68 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "9c16f1d069961333d8f9c4a3ae1106a5871fd27665006000a9e9be50f9a8d863:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-8924-curl",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: curl, version 7.61.1-34.el8_10.11 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-8//var/lib/rpm/Packages"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/Packages",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "27a9f5798db97a7c803c8b1da179097b4c6ee32e62e9b4edf56baf14db5e3314:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-8924-libcurl-minimal",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: libcurl-minimal, version 7.61.1-34.el8_10.11 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-8//var/lib/rpm/Packages"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/Packages",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "3d09dff4d381cac25d41ce76115012d183647c7ecba216a0b9a4f105778d0391:1"
           }
         },
         {
@@ -9951,68 +10220,6 @@
           }
         },
         {
-          "ruleId": "CVE-2026-12064-curl",
-          "level": "error",
-          "message": {
-            "text": "A high vulnerability in rpm package: curl, version 7.61.1-34.el8_10.11 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-8//var/lib/rpm/Packages"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/Packages",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "27a9f5798db97a7c803c8b1da179097b4c6ee32e62e9b4edf56baf14db5e3314:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2026-12064-libcurl-minimal",
-          "level": "error",
-          "message": {
-            "text": "A high vulnerability in rpm package: libcurl-minimal, version 7.61.1-34.el8_10.11 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-8//var/lib/rpm/Packages"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/Packages",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "3d09dff4d381cac25d41ce76115012d183647c7ecba216a0b9a4f105778d0391:1"
-          }
-        },
-        {
           "ruleId": "CVE-2025-15468-openssl",
           "level": "note",
           "message": {
@@ -10230,68 +10437,6 @@
           }
         },
         {
-          "ruleId": "CVE-2026-8286-curl",
-          "level": "error",
-          "message": {
-            "text": "A high vulnerability in rpm package: curl, version 7.61.1-34.el8_10.11 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-8//var/lib/rpm/Packages"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/Packages",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "27a9f5798db97a7c803c8b1da179097b4c6ee32e62e9b4edf56baf14db5e3314:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2026-8286-libcurl-minimal",
-          "level": "error",
-          "message": {
-            "text": "A high vulnerability in rpm package: libcurl-minimal, version 7.61.1-34.el8_10.11 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-8//var/lib/rpm/Packages"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/Packages",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "3d09dff4d381cac25d41ce76115012d183647c7ecba216a0b9a4f105778d0391:1"
-          }
-        },
-        {
           "ruleId": "CVE-2026-45186-expat",
           "level": "error",
           "message": {
@@ -10320,68 +10465,6 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "deeea2c6d35bbbbe072d9f896eb605ff32c8d6269fff0acd55c63521aada9156:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2026-5773-curl",
-          "level": "warning",
-          "message": {
-            "text": "A medium vulnerability in rpm package: curl, version 7.61.1-34.el8_10.11 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-8//var/lib/rpm/Packages"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/Packages",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "27a9f5798db97a7c803c8b1da179097b4c6ee32e62e9b4edf56baf14db5e3314:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2026-5773-libcurl-minimal",
-          "level": "warning",
-          "message": {
-            "text": "A medium vulnerability in rpm package: libcurl-minimal, version 7.61.1-34.el8_10.11 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-8//var/lib/rpm/Packages"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/Packages",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "3d09dff4d381cac25d41ce76115012d183647c7ecba216a0b9a4f105778d0391:1"
           }
         },
         {
@@ -10478,6 +10561,68 @@
           }
         },
         {
+          "ruleId": "CVE-2026-5773-curl",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: curl, version 7.61.1-34.el8_10.11 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-8//var/lib/rpm/Packages"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/Packages",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "27a9f5798db97a7c803c8b1da179097b4c6ee32e62e9b4edf56baf14db5e3314:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-5773-libcurl-minimal",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: libcurl-minimal, version 7.61.1-34.el8_10.11 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-8//var/lib/rpm/Packages"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/Packages",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "3d09dff4d381cac25d41ce76115012d183647c7ecba216a0b9a4f105778d0391:1"
+          }
+        },
+        {
           "ruleId": "CVE-2025-27113-libxml2",
           "level": "note",
           "message": {
@@ -10506,6 +10651,99 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "f095501dacaf9f57354c16141362a291ee35f9e4cc31c431b76841f965ba36a6:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2025-14512-glib2",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: glib2, version 2.56.4-168.el8_10 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-8//var/lib/rpm/Packages"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/Packages",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "b46ca95c561efe9242baf33d7b71fd2e51c001787eb6496d98674206b6142b38:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-8926-curl",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: curl, version 7.61.1-34.el8_10.11 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-8//var/lib/rpm/Packages"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/Packages",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "27a9f5798db97a7c803c8b1da179097b4c6ee32e62e9b4edf56baf14db5e3314:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-8926-libcurl-minimal",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: libcurl-minimal, version 7.61.1-34.el8_10.11 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-8//var/lib/rpm/Packages"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/Packages",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "3d09dff4d381cac25d41ce76115012d183647c7ecba216a0b9a4f105778d0391:1"
           }
         },
         {
@@ -10571,68 +10809,6 @@
           }
         },
         {
-          "ruleId": "CVE-2026-9547-curl",
-          "level": "error",
-          "message": {
-            "text": "A high vulnerability in rpm package: curl, version 7.61.1-34.el8_10.11 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-8//var/lib/rpm/Packages"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/Packages",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "27a9f5798db97a7c803c8b1da179097b4c6ee32e62e9b4edf56baf14db5e3314:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2026-9547-libcurl-minimal",
-          "level": "error",
-          "message": {
-            "text": "A high vulnerability in rpm package: libcurl-minimal, version 7.61.1-34.el8_10.11 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-8//var/lib/rpm/Packages"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/Packages",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "3d09dff4d381cac25d41ce76115012d183647c7ecba216a0b9a4f105778d0391:1"
-          }
-        },
-        {
           "ruleId": "CVE-2026-42011-gnutls",
           "level": "warning",
           "message": {
@@ -10661,68 +10837,6 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "9c16f1d069961333d8f9c4a3ae1106a5871fd27665006000a9e9be50f9a8d863:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2026-8924-curl",
-          "level": "warning",
-          "message": {
-            "text": "A medium vulnerability in rpm package: curl, version 7.61.1-34.el8_10.11 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-8//var/lib/rpm/Packages"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/Packages",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "27a9f5798db97a7c803c8b1da179097b4c6ee32e62e9b4edf56baf14db5e3314:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2026-8924-libcurl-minimal",
-          "level": "warning",
-          "message": {
-            "text": "A medium vulnerability in rpm package: libcurl-minimal, version 7.61.1-34.el8_10.11 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-8//var/lib/rpm/Packages"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/Packages",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "3d09dff4d381cac25d41ce76115012d183647c7ecba216a0b9a4f105778d0391:1"
           }
         },
         {
@@ -10788,37 +10902,6 @@
           }
         },
         {
-          "ruleId": "CVE-2025-14512-glib2",
-          "level": "warning",
-          "message": {
-            "text": "A medium vulnerability in rpm package: glib2, version 2.56.4-168.el8_10 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-8//var/lib/rpm/Packages"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/Packages",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "b46ca95c561efe9242baf33d7b71fd2e51c001787eb6496d98674206b6142b38:1"
-          }
-        },
-        {
           "ruleId": "CVE-2026-58016-glib2",
           "level": "error",
           "message": {
@@ -10881,68 +10964,6 @@
           }
         },
         {
-          "ruleId": "CVE-2025-15079-curl",
-          "level": "note",
-          "message": {
-            "text": "A low vulnerability in rpm package: curl, version 7.61.1-34.el8_10.11 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-8//var/lib/rpm/Packages"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/Packages",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "27a9f5798db97a7c803c8b1da179097b4c6ee32e62e9b4edf56baf14db5e3314:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2025-15079-libcurl-minimal",
-          "level": "note",
-          "message": {
-            "text": "A low vulnerability in rpm package: libcurl-minimal, version 7.61.1-34.el8_10.11 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-8//var/lib/rpm/Packages"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/Packages",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "3d09dff4d381cac25d41ce76115012d183647c7ecba216a0b9a4f105778d0391:1"
-          }
-        },
-        {
           "ruleId": "CVE-2026-40355-krb5-libs",
           "level": "warning",
           "message": {
@@ -11002,6 +11023,68 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "8969b69a0b8df9597d6eb220b4eceb232dcf452643906e3a053f5af452736a54:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2025-15079-curl",
+          "level": "note",
+          "message": {
+            "text": "A low vulnerability in rpm package: curl, version 7.61.1-34.el8_10.11 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-8//var/lib/rpm/Packages"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/Packages",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "27a9f5798db97a7c803c8b1da179097b4c6ee32e62e9b4edf56baf14db5e3314:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2025-15079-libcurl-minimal",
+          "level": "note",
+          "message": {
+            "text": "A low vulnerability in rpm package: libcurl-minimal, version 7.61.1-34.el8_10.11 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-8//var/lib/rpm/Packages"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/Packages",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "3d09dff4d381cac25d41ce76115012d183647c7ecba216a0b9a4f105778d0391:1"
           }
         },
         {
@@ -11192,68 +11275,6 @@
         },
         {
           "ruleId": "CVE-2026-5545-libcurl-minimal",
-          "level": "warning",
-          "message": {
-            "text": "A medium vulnerability in rpm package: libcurl-minimal, version 7.61.1-34.el8_10.11 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-8//var/lib/rpm/Packages"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/Packages",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "3d09dff4d381cac25d41ce76115012d183647c7ecba216a0b9a4f105778d0391:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2026-8926-curl",
-          "level": "warning",
-          "message": {
-            "text": "A medium vulnerability in rpm package: curl, version 7.61.1-34.el8_10.11 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-8//var/lib/rpm/Packages"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/Packages",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "27a9f5798db97a7c803c8b1da179097b4c6ee32e62e9b4edf56baf14db5e3314:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2026-8926-libcurl-minimal",
           "level": "warning",
           "message": {
             "text": "A medium vulnerability in rpm package: libcurl-minimal, version 7.61.1-34.el8_10.11 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
@@ -11811,7 +11832,7 @@
           }
         },
         {
-          "ruleId": "CVE-2026-58012-glib2",
+          "ruleId": "CVE-2026-58010-glib2",
           "level": "warning",
           "message": {
             "text": "A medium vulnerability in rpm package: glib2, version 2.56.4-168.el8_10 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
@@ -11842,7 +11863,7 @@
           }
         },
         {
-          "ruleId": "CVE-2026-58010-glib2",
+          "ruleId": "CVE-2026-58012-glib2",
           "level": "warning",
           "message": {
             "text": "A medium vulnerability in rpm package: glib2, version 2.56.4-168.el8_10 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
@@ -13485,6 +13506,37 @@
           }
         },
         {
+          "ruleId": "CVE-2025-3360-glib2",
+          "level": "note",
+          "message": {
+            "text": "A low vulnerability in rpm package: glib2, version 2.56.4-168.el8_10 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-8//var/lib/rpm/Packages"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/Packages",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "b46ca95c561efe9242baf33d7b71fd2e51c001787eb6496d98674206b6142b38:1"
+          }
+        },
+        {
           "ruleId": "CVE-2021-24032-libzstd",
           "level": "note",
           "message": {
@@ -13551,37 +13603,6 @@
           "level": "warning",
           "message": {
             "text": "A medium vulnerability in rpm package: glib2, version 2.56.4-168.el8_10 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-8//var/lib/rpm/Packages"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/Packages",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "b46ca95c561efe9242baf33d7b71fd2e51c001787eb6496d98674206b6142b38:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2025-3360-glib2",
-          "level": "note",
-          "message": {
-            "text": "A low vulnerability in rpm package: glib2, version 2.56.4-168.el8_10 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
           },
           "locations": [
             {
@@ -15531,6 +15552,68 @@
           }
         },
         {
+          "ruleId": "CVE-2026-13757-p11-kit",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: p11-kit, version 0.23.22-2.el8 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-8//var/lib/rpm/Packages"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/Packages",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "b37bc5369ff215eb17257aba26028689ce89271f954cae7c96b7568fe2f85ba8:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-13757-p11-kit-trust",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: p11-kit-trust, version 0.23.22-2.el8 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-8//var/lib/rpm/Packages"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/Packages",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "88a02bf60ae9fe485c39294f3339ca4c83474ce36f0e19f6c7126cf71f4f0b9d:1"
+          }
+        },
+        {
           "ruleId": "CVE-2026-11979-libxml2",
           "level": "warning",
           "message": {
@@ -15652,6 +15735,37 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "a951d7467c403bae5434c785b56ff88d7cd6a04509505b282c89765131eb2d2c:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-15028-libarchive",
+          "level": "note",
+          "message": {
+            "text": "A low vulnerability in rpm package: libarchive, version 3.3.3-7.el8_10 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-8//var/lib/rpm/Packages"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/Packages",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "e72079435c45a100bb4b0c9466adf47d803f7f393f84f8888f9b3d73851f26c1:1"
           }
         },
         {
@@ -16027,10 +16141,10 @@
           }
         },
         {
-          "ruleId": "CVE-2026-13757-p11-kit",
+          "ruleId": "CVE-2026-56132-expat",
           "level": "warning",
           "message": {
-            "text": "A medium vulnerability in rpm package: p11-kit, version 0.23.22-2.el8 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
+            "text": "A medium vulnerability in rpm package: expat, version 2.5.0-1.el8_10 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
           },
           "locations": [
             {
@@ -16054,38 +16168,7 @@
             }
           ],
           "partialFingerprints": {
-            "primaryLocationLineHash": "b37bc5369ff215eb17257aba26028689ce89271f954cae7c96b7568fe2f85ba8:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2026-13757-p11-kit-trust",
-          "level": "warning",
-          "message": {
-            "text": "A medium vulnerability in rpm package: p11-kit-trust, version 0.23.22-2.el8 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-8//var/lib/rpm/Packages"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/Packages",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "88a02bf60ae9fe485c39294f3339ca4c83474ce36f0e19f6c7126cf71f4f0b9d:1"
+            "primaryLocationLineHash": "deeea2c6d35bbbbe072d9f896eb605ff32c8d6269fff0acd55c63521aada9156:1"
           }
         },
         {
@@ -16644,37 +16727,6 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "e72079435c45a100bb4b0c9466adf47d803f7f393f84f8888f9b3d73851f26c1:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2026-56132-expat",
-          "level": "warning",
-          "message": {
-            "text": "A medium vulnerability in rpm package: expat, version 2.5.0-1.el8_10 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-8//var/lib/rpm/Packages"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/Packages",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "deeea2c6d35bbbbe072d9f896eb605ff32c8d6269fff0acd55c63521aada9156:1"
           }
         },
         {
