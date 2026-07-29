@@ -6,7 +6,7 @@
       "tool": {
         "driver": {
           "name": "grype",
-          "version": "0.116.0",
+          "version": "0.116.1",
           "informationUri": "https://github.com/anchore/grype",
           "rules": [
             {
@@ -997,6 +997,27 @@
               }
             },
             {
+              "id": "CVE-2026-58016-glib2",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-58016 high vulnerability for glib2 package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in GLib. A state confusion issue exists in g_dbus_node_info_new_for_xml() in the gio/gdbusintrospection.c file when processing malformed D-Bus introspection XML, specifically with a \u003cnode\u003e element nested within other elements like \u003cmethod\u003e, \u003csignal\u003e, \u003cproperty\u003e or \u003carg\u003e. This issue can cause an unsigned integer overflow and lead to an out-of-bounds read, resulting in a denial of service."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-58016",
+              "help": {
+                "text": "Vulnerability CVE-2026-58016\nSeverity: high\nPackage: glib2\nVersion: 2.80.4-12.el10_2.13\nFix Version: 0:2.80.4-12.el10_2.14\nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-58016](https://access.redhat.com/security/cve/CVE-2026-58016)",
+                "markdown": "**Vulnerability CVE-2026-58016**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| high  | glib2  | 2.80.4-12.el10_2.13  | 0:2.80.4-12.el10_2.14  | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-58016](https://access.redhat.com/security/cve/CVE-2026-58016)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/glib2@2.80.4-12.el10_2.13?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=glib2-2.80.4-12.el10_2.13.src.rpm"
+                ],
+                "security-severity": "7.5"
+              }
+            },
+            {
               "id": "CVE-2025-14819-curl",
               "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
@@ -1039,27 +1060,6 @@
               }
             },
             {
-              "id": "CVE-2026-58016-glib2",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-58016 high vulnerability for glib2 package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in GLib. A state confusion issue exists in g_dbus_node_info_new_for_xml() in the gio/gdbusintrospection.c file when processing malformed D-Bus introspection XML, specifically with a \u003cnode\u003e element nested within other elements like \u003cmethod\u003e, \u003csignal\u003e, \u003cproperty\u003e or \u003carg\u003e. This issue can cause an unsigned integer overflow and lead to an out-of-bounds read, resulting in a denial of service."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-58016",
-              "help": {
-                "text": "Vulnerability CVE-2026-58016\nSeverity: high\nPackage: glib2\nVersion: 2.80.4-12.el10_2.13\nFix Version: 0:2.80.4-12.el10_2.14\nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-58016](https://access.redhat.com/security/cve/CVE-2026-58016)",
-                "markdown": "**Vulnerability CVE-2026-58016**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| high  | glib2  | 2.80.4-12.el10_2.13  | 0:2.80.4-12.el10_2.14  | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-58016](https://access.redhat.com/security/cve/CVE-2026-58016)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/glib2@2.80.4-12.el10_2.13?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=glib2-2.80.4-12.el10_2.13.src.rpm"
-                ],
-                "security-severity": "7.5"
-              }
-            },
-            {
               "id": "CVE-2026-3731-libssh",
               "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
@@ -1099,6 +1099,27 @@
                   "pkg:rpm/rocky/libssh-config@0.12.0-2.el10?arch=noarch\u0026distro=rocky-10.2\u0026upstream=libssh-0.12.0-2.el10.src.rpm"
                 ],
                 "security-severity": "5.3"
+              }
+            },
+            {
+              "id": "CVE-2026-51303-sqlite-libs",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-51303 high vulnerability for sqlite-libs package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in SQLite. A remote attacker can exploit a use-after-free vulnerability in the core parsing component by sending specially crafted SQL queries. This can lead to an application crash, sensitive information disclosure, and potentially allow the attacker to execute arbitrary code on the affected system."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-51303",
+              "help": {
+                "text": "Vulnerability CVE-2026-51303\nSeverity: high\nPackage: sqlite-libs\nVersion: 3.46.1-5.el10_1\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-51303](https://access.redhat.com/security/cve/CVE-2026-51303)",
+                "markdown": "**Vulnerability CVE-2026-51303**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| high  | sqlite-libs  | 3.46.1-5.el10_1  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-51303](https://access.redhat.com/security/cve/CVE-2026-51303)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/sqlite-libs@3.46.1-5.el10_1?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=sqlite-3.46.1-5.el10_1.src.rpm"
+                ],
+                "security-severity": "9.8"
               }
             },
             {
@@ -1165,90 +1186,6 @@
               }
             },
             {
-              "id": "CVE-2026-59844-libssh",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-59844 medium vulnerability for libssh package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in libssh. A remote authenticated client can issue SSH_FXP_READ requests with an arbitrarily large length, causing a libssh SFTP server to allocate excessive memory and potentially exhaust it through repeated requests."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-59844",
-              "help": {
-                "text": "Vulnerability CVE-2026-59844\nSeverity: medium\nPackage: libssh\nVersion: 0.12.0-2.el10\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-59844](https://access.redhat.com/security/cve/CVE-2026-59844)",
-                "markdown": "**Vulnerability CVE-2026-59844**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | libssh  | 0.12.0-2.el10  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-59844](https://access.redhat.com/security/cve/CVE-2026-59844)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/libssh@0.12.0-2.el10?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=libssh-0.12.0-2.el10.src.rpm"
-                ],
-                "security-severity": "6.5"
-              }
-            },
-            {
-              "id": "CVE-2026-59844-libssh-config",
-              "name": "RpmMatcherExactIndirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-59844 medium vulnerability for libssh-config package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in libssh. A remote authenticated client can issue SSH_FXP_READ requests with an arbitrarily large length, causing a libssh SFTP server to allocate excessive memory and potentially exhaust it through repeated requests."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-59844",
-              "help": {
-                "text": "Vulnerability CVE-2026-59844\nSeverity: medium\nPackage: libssh-config\nVersion: 0.12.0-2.el10\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-59844](https://access.redhat.com/security/cve/CVE-2026-59844)",
-                "markdown": "**Vulnerability CVE-2026-59844**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | libssh-config  | 0.12.0-2.el10  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-59844](https://access.redhat.com/security/cve/CVE-2026-59844)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/libssh-config@0.12.0-2.el10?arch=noarch\u0026distro=rocky-10.2\u0026upstream=libssh-0.12.0-2.el10.src.rpm"
-                ],
-                "security-severity": "6.5"
-              }
-            },
-            {
-              "id": "CVE-2026-59843-libssh",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-59843 medium vulnerability for libssh package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in libssh. A remote authenticated peer can advertise a zero maximum packet size in SSH_MSG_CHANNEL_OPEN, causing later channel writes to loop indefinitely and consume CPU, leading to denial of service."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-59843",
-              "help": {
-                "text": "Vulnerability CVE-2026-59843\nSeverity: medium\nPackage: libssh\nVersion: 0.12.0-2.el10\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-59843](https://access.redhat.com/security/cve/CVE-2026-59843)",
-                "markdown": "**Vulnerability CVE-2026-59843**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | libssh  | 0.12.0-2.el10  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-59843](https://access.redhat.com/security/cve/CVE-2026-59843)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/libssh@0.12.0-2.el10?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=libssh-0.12.0-2.el10.src.rpm"
-                ],
-                "security-severity": "6.5"
-              }
-            },
-            {
-              "id": "CVE-2026-59843-libssh-config",
-              "name": "RpmMatcherExactIndirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-59843 medium vulnerability for libssh-config package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in libssh. A remote authenticated peer can advertise a zero maximum packet size in SSH_MSG_CHANNEL_OPEN, causing later channel writes to loop indefinitely and consume CPU, leading to denial of service."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-59843",
-              "help": {
-                "text": "Vulnerability CVE-2026-59843\nSeverity: medium\nPackage: libssh-config\nVersion: 0.12.0-2.el10\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-59843](https://access.redhat.com/security/cve/CVE-2026-59843)",
-                "markdown": "**Vulnerability CVE-2026-59843**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | libssh-config  | 0.12.0-2.el10  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-59843](https://access.redhat.com/security/cve/CVE-2026-59843)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/libssh-config@0.12.0-2.el10?arch=noarch\u0026distro=rocky-10.2\u0026upstream=libssh-0.12.0-2.el10.src.rpm"
-                ],
-                "security-severity": "6.5"
-              }
-            },
-            {
               "id": "CVE-2026-6429-curl",
               "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
@@ -1288,6 +1225,132 @@
                   "pkg:rpm/rocky/libcurl@8.12.1-4.el10?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=curl-8.12.1-4.el10.src.rpm"
                 ],
                 "security-severity": "6.5"
+              }
+            },
+            {
+              "id": "CVE-2026-51297-sqlite-libs",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-51297 high vulnerability for sqlite-libs package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in sqlite. This use-after-free vulnerability in the JSON parsing logic allows remote attackers to craft malicious JSON payloads. This can trigger memory deallocation followed by illegal memory access, potentially leading to arbitrary code execution, sensitive information leakage, or denial of service."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-51297",
+              "help": {
+                "text": "Vulnerability CVE-2026-51297\nSeverity: high\nPackage: sqlite-libs\nVersion: 3.46.1-5.el10_1\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-51297](https://access.redhat.com/security/cve/CVE-2026-51297)",
+                "markdown": "**Vulnerability CVE-2026-51297**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| high  | sqlite-libs  | 3.46.1-5.el10_1  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-51297](https://access.redhat.com/security/cve/CVE-2026-51297)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/sqlite-libs@3.46.1-5.el10_1?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=sqlite-3.46.1-5.el10_1.src.rpm"
+                ],
+                "security-severity": "9.8"
+              }
+            },
+            {
+              "id": "CVE-2026-59843-libssh",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-59843 medium vulnerability for libssh package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in libssh. A remote authenticated peer can advertise a zero maximum packet size in SSH_MSG_CHANNEL_OPEN, causing later channel writes to loop indefinitely and consume CPU, leading to denial of service."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-59843",
+              "help": {
+                "text": "Vulnerability CVE-2026-59843\nSeverity: medium\nPackage: libssh\nVersion: 0.12.0-2.el10\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-59843](https://access.redhat.com/security/cve/CVE-2026-59843)",
+                "markdown": "**Vulnerability CVE-2026-59843**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | libssh  | 0.12.0-2.el10  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-59843](https://access.redhat.com/security/cve/CVE-2026-59843)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/libssh@0.12.0-2.el10?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=libssh-0.12.0-2.el10.src.rpm"
+                ],
+                "security-severity": "6.5"
+              }
+            },
+            {
+              "id": "CVE-2026-59844-libssh",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-59844 medium vulnerability for libssh package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in libssh. A remote authenticated client can issue SSH_FXP_READ requests with an arbitrarily large length, causing a libssh SFTP server to allocate excessive memory and potentially exhaust it through repeated requests."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-59844",
+              "help": {
+                "text": "Vulnerability CVE-2026-59844\nSeverity: medium\nPackage: libssh\nVersion: 0.12.0-2.el10\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-59844](https://access.redhat.com/security/cve/CVE-2026-59844)",
+                "markdown": "**Vulnerability CVE-2026-59844**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | libssh  | 0.12.0-2.el10  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-59844](https://access.redhat.com/security/cve/CVE-2026-59844)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/libssh@0.12.0-2.el10?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=libssh-0.12.0-2.el10.src.rpm"
+                ],
+                "security-severity": "6.5"
+              }
+            },
+            {
+              "id": "CVE-2026-59843-libssh-config",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-59843 medium vulnerability for libssh-config package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in libssh. A remote authenticated peer can advertise a zero maximum packet size in SSH_MSG_CHANNEL_OPEN, causing later channel writes to loop indefinitely and consume CPU, leading to denial of service."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-59843",
+              "help": {
+                "text": "Vulnerability CVE-2026-59843\nSeverity: medium\nPackage: libssh-config\nVersion: 0.12.0-2.el10\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-59843](https://access.redhat.com/security/cve/CVE-2026-59843)",
+                "markdown": "**Vulnerability CVE-2026-59843**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | libssh-config  | 0.12.0-2.el10  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-59843](https://access.redhat.com/security/cve/CVE-2026-59843)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/libssh-config@0.12.0-2.el10?arch=noarch\u0026distro=rocky-10.2\u0026upstream=libssh-0.12.0-2.el10.src.rpm"
+                ],
+                "security-severity": "6.5"
+              }
+            },
+            {
+              "id": "CVE-2026-59844-libssh-config",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-59844 medium vulnerability for libssh-config package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in libssh. A remote authenticated client can issue SSH_FXP_READ requests with an arbitrarily large length, causing a libssh SFTP server to allocate excessive memory and potentially exhaust it through repeated requests."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-59844",
+              "help": {
+                "text": "Vulnerability CVE-2026-59844\nSeverity: medium\nPackage: libssh-config\nVersion: 0.12.0-2.el10\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-59844](https://access.redhat.com/security/cve/CVE-2026-59844)",
+                "markdown": "**Vulnerability CVE-2026-59844**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | libssh-config  | 0.12.0-2.el10  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-59844](https://access.redhat.com/security/cve/CVE-2026-59844)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/libssh-config@0.12.0-2.el10?arch=noarch\u0026distro=rocky-10.2\u0026upstream=libssh-0.12.0-2.el10.src.rpm"
+                ],
+                "security-severity": "6.5"
+              }
+            },
+            {
+              "id": "CVE-2026-51304-sqlite-libs",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-51304 high vulnerability for sqlite-libs package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in sqlite. A remote attacker can exploit a use-after-free vulnerability in the ORDER BY clause parsing routine by crafting a malicious SQL statement. This can lead to an application crash, sensitive information disclosure, and in some cases, arbitrary code execution, allowing the attacker to run their own commands on the affected system."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-51304",
+              "help": {
+                "text": "Vulnerability CVE-2026-51304\nSeverity: high\nPackage: sqlite-libs\nVersion: 3.46.1-5.el10_1\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-51304](https://access.redhat.com/security/cve/CVE-2026-51304)",
+                "markdown": "**Vulnerability CVE-2026-51304**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| high  | sqlite-libs  | 3.46.1-5.el10_1  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-51304](https://access.redhat.com/security/cve/CVE-2026-51304)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/sqlite-libs@3.46.1-5.el10_1?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=sqlite-3.46.1-5.el10_1.src.rpm"
+                ],
+                "security-severity": "9.8"
               }
             },
             {
@@ -1753,6 +1816,48 @@
               }
             },
             {
+              "id": "CVE-2026-10536-curl",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-10536 medium vulnerability for curl package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in libcurl. This use-after-free vulnerability occurs when an application configures an HTTP/2 stream-dependency tree and then performs a sequence of operations involving `curl_easy_reset()` and `curl_easy_cleanup()`. During the final cleanup, libcurl attempts to access memory that has already been released. This can lead to application crashes, resulting in a Denial of Service (DoS)."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-10536",
+              "help": {
+                "text": "Vulnerability CVE-2026-10536\nSeverity: medium\nPackage: curl\nVersion: 8.12.1-4.el10\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-10536](https://access.redhat.com/security/cve/CVE-2026-10536)",
+                "markdown": "**Vulnerability CVE-2026-10536**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | curl  | 8.12.1-4.el10  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-10536](https://access.redhat.com/security/cve/CVE-2026-10536)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/curl@8.12.1-4.el10?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=curl-8.12.1-4.el10.src.rpm"
+                ],
+                "security-severity": "4.7"
+              }
+            },
+            {
+              "id": "CVE-2026-10536-libcurl",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-10536 medium vulnerability for libcurl package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in libcurl. This use-after-free vulnerability occurs when an application configures an HTTP/2 stream-dependency tree and then performs a sequence of operations involving `curl_easy_reset()` and `curl_easy_cleanup()`. During the final cleanup, libcurl attempts to access memory that has already been released. This can lead to application crashes, resulting in a Denial of Service (DoS)."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-10536",
+              "help": {
+                "text": "Vulnerability CVE-2026-10536\nSeverity: medium\nPackage: libcurl\nVersion: 8.12.1-4.el10\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-10536](https://access.redhat.com/security/cve/CVE-2026-10536)",
+                "markdown": "**Vulnerability CVE-2026-10536**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | libcurl  | 8.12.1-4.el10  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-10536](https://access.redhat.com/security/cve/CVE-2026-10536)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/libcurl@8.12.1-4.el10?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=curl-8.12.1-4.el10.src.rpm"
+                ],
+                "security-severity": "4.7"
+              }
+            },
+            {
               "id": "CVE-2021-46195-libgcc",
               "name": "RpmMatcherExactIndirectMatch",
               "shortDescription": {
@@ -2002,6 +2107,27 @@
                   "pkg:rpm/rocky/libssh-config@0.12.0-2.el10?arch=noarch\u0026distro=rocky-10.2\u0026upstream=libssh-0.12.0-2.el10.src.rpm"
                 ],
                 "security-severity": "8.8"
+              }
+            },
+            {
+              "id": "CVE-2026-51302-sqlite-libs",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-51302 critical vulnerability for sqlite-libs package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in SQLite. A use-after-free vulnerability in the expression evaluation logic, specifically within the sqlite3ReleaseTempReg and exprComputeOperands functions, allows a remote attacker to exploit the system. By supplying a malicious SQL statement, an attacker can cause a denial of service, leak sensitive information, or potentially execute arbitrary code."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-51302",
+              "help": {
+                "text": "Vulnerability CVE-2026-51302\nSeverity: critical\nPackage: sqlite-libs\nVersion: 3.46.1-5.el10_1\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-51302](https://access.redhat.com/security/cve/CVE-2026-51302)",
+                "markdown": "**Vulnerability CVE-2026-51302**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| critical  | sqlite-libs  | 3.46.1-5.el10_1  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-51302](https://access.redhat.com/security/cve/CVE-2026-51302)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/sqlite-libs@3.46.1-5.el10_1?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=sqlite-3.46.1-5.el10_1.src.rpm"
+                ],
+                "security-severity": "10.0"
               }
             },
             {
@@ -2887,48 +3013,6 @@
               }
             },
             {
-              "id": "CVE-2026-59848-libssh",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-59848 medium vulnerability for libssh package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in libssh. A malicious SFTP server can send responses for unknown request IDs that libssh clients keep queued indefinitely, causing unbounded memory growth and client-side denial of service."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-59848",
-              "help": {
-                "text": "Vulnerability CVE-2026-59848\nSeverity: medium\nPackage: libssh\nVersion: 0.12.0-2.el10\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-59848](https://access.redhat.com/security/cve/CVE-2026-59848)",
-                "markdown": "**Vulnerability CVE-2026-59848**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | libssh  | 0.12.0-2.el10  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-59848](https://access.redhat.com/security/cve/CVE-2026-59848)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/libssh@0.12.0-2.el10?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=libssh-0.12.0-2.el10.src.rpm"
-                ],
-                "security-severity": "5.3"
-              }
-            },
-            {
-              "id": "CVE-2026-59848-libssh-config",
-              "name": "RpmMatcherExactIndirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-59848 medium vulnerability for libssh-config package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in libssh. A malicious SFTP server can send responses for unknown request IDs that libssh clients keep queued indefinitely, causing unbounded memory growth and client-side denial of service."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-59848",
-              "help": {
-                "text": "Vulnerability CVE-2026-59848\nSeverity: medium\nPackage: libssh-config\nVersion: 0.12.0-2.el10\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-59848](https://access.redhat.com/security/cve/CVE-2026-59848)",
-                "markdown": "**Vulnerability CVE-2026-59848**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | libssh-config  | 0.12.0-2.el10  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-59848](https://access.redhat.com/security/cve/CVE-2026-59848)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/libssh-config@0.12.0-2.el10?arch=noarch\u0026distro=rocky-10.2\u0026upstream=libssh-0.12.0-2.el10.src.rpm"
-                ],
-                "security-severity": "5.3"
-              }
-            },
-            {
               "id": "CVE-2026-54411-pam",
               "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
@@ -2971,6 +3055,27 @@
               }
             },
             {
+              "id": "CVE-2026-51296-sqlite-libs",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-51296 high vulnerability for sqlite-libs package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in SQLite. A use-after-free vulnerability in the SQLite JSON module's jsonRemoveFunc allows a remote attacker to cause a denial of service by crashing the service. This vulnerability can also lead to the disclosure of sensitive heap memory information."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-51296",
+              "help": {
+                "text": "Vulnerability CVE-2026-51296\nSeverity: high\nPackage: sqlite-libs\nVersion: 3.46.1-5.el10_1\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-51296](https://access.redhat.com/security/cve/CVE-2026-51296)",
+                "markdown": "**Vulnerability CVE-2026-51296**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| high  | sqlite-libs  | 3.46.1-5.el10_1  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-51296](https://access.redhat.com/security/cve/CVE-2026-51296)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/sqlite-libs@3.46.1-5.el10_1?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=sqlite-3.46.1-5.el10_1.src.rpm"
+                ],
+                "security-severity": "8.2"
+              }
+            },
+            {
               "id": "CVE-2025-15224-curl",
               "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
@@ -3010,6 +3115,48 @@
                   "pkg:rpm/rocky/libcurl@8.12.1-4.el10?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=curl-8.12.1-4.el10.src.rpm"
                 ],
                 "security-severity": "4.7"
+              }
+            },
+            {
+              "id": "CVE-2026-59848-libssh",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-59848 medium vulnerability for libssh package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in libssh. A malicious SFTP server can send responses for unknown request IDs that libssh clients keep queued indefinitely, causing unbounded memory growth and client-side denial of service."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-59848",
+              "help": {
+                "text": "Vulnerability CVE-2026-59848\nSeverity: medium\nPackage: libssh\nVersion: 0.12.0-2.el10\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-59848](https://access.redhat.com/security/cve/CVE-2026-59848)",
+                "markdown": "**Vulnerability CVE-2026-59848**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | libssh  | 0.12.0-2.el10  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-59848](https://access.redhat.com/security/cve/CVE-2026-59848)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/libssh@0.12.0-2.el10?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=libssh-0.12.0-2.el10.src.rpm"
+                ],
+                "security-severity": "5.3"
+              }
+            },
+            {
+              "id": "CVE-2026-59848-libssh-config",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-59848 medium vulnerability for libssh-config package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in libssh. A malicious SFTP server can send responses for unknown request IDs that libssh clients keep queued indefinitely, causing unbounded memory growth and client-side denial of service."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-59848",
+              "help": {
+                "text": "Vulnerability CVE-2026-59848\nSeverity: medium\nPackage: libssh-config\nVersion: 0.12.0-2.el10\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-59848](https://access.redhat.com/security/cve/CVE-2026-59848)",
+                "markdown": "**Vulnerability CVE-2026-59848**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | libssh-config  | 0.12.0-2.el10  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-59848](https://access.redhat.com/security/cve/CVE-2026-59848)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/libssh-config@0.12.0-2.el10?arch=noarch\u0026distro=rocky-10.2\u0026upstream=libssh-0.12.0-2.el10.src.rpm"
+                ],
+                "security-severity": "5.3"
               }
             },
             {
@@ -3286,48 +3433,6 @@
               }
             },
             {
-              "id": "CVE-2026-59850-libssh",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-59850 medium vulnerability for libssh package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in libssh. If data packets are processed after a channel is closed, channel data callbacks can be invoked after the associated data has already been freed, leading to crashes or possible use-after-free conditions."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-59850",
-              "help": {
-                "text": "Vulnerability CVE-2026-59850\nSeverity: medium\nPackage: libssh\nVersion: 0.12.0-2.el10\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-59850](https://access.redhat.com/security/cve/CVE-2026-59850)",
-                "markdown": "**Vulnerability CVE-2026-59850**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | libssh  | 0.12.0-2.el10  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-59850](https://access.redhat.com/security/cve/CVE-2026-59850)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/libssh@0.12.0-2.el10?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=libssh-0.12.0-2.el10.src.rpm"
-                ],
-                "security-severity": "4.3"
-              }
-            },
-            {
-              "id": "CVE-2026-59850-libssh-config",
-              "name": "RpmMatcherExactIndirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-59850 medium vulnerability for libssh-config package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in libssh. If data packets are processed after a channel is closed, channel data callbacks can be invoked after the associated data has already been freed, leading to crashes or possible use-after-free conditions."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-59850",
-              "help": {
-                "text": "Vulnerability CVE-2026-59850\nSeverity: medium\nPackage: libssh-config\nVersion: 0.12.0-2.el10\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-59850](https://access.redhat.com/security/cve/CVE-2026-59850)",
-                "markdown": "**Vulnerability CVE-2026-59850**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | libssh-config  | 0.12.0-2.el10  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-59850](https://access.redhat.com/security/cve/CVE-2026-59850)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/libssh-config@0.12.0-2.el10?arch=noarch\u0026distro=rocky-10.2\u0026upstream=libssh-0.12.0-2.el10.src.rpm"
-                ],
-                "security-severity": "4.3"
-              }
-            },
-            {
               "id": "CVE-2026-48864-libsolv",
               "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
@@ -3472,6 +3577,48 @@
                   "pkg:rpm/rocky/sqlite-libs@3.46.1-5.el10_1?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=sqlite-3.46.1-5.el10_1.src.rpm"
                 ],
                 "security-severity": "6.1"
+              }
+            },
+            {
+              "id": "CVE-2026-59850-libssh",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-59850 medium vulnerability for libssh package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in libssh. If data packets are processed after a channel is closed, channel data callbacks can be invoked after the associated data has already been freed, leading to crashes or possible use-after-free conditions."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-59850",
+              "help": {
+                "text": "Vulnerability CVE-2026-59850\nSeverity: medium\nPackage: libssh\nVersion: 0.12.0-2.el10\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-59850](https://access.redhat.com/security/cve/CVE-2026-59850)",
+                "markdown": "**Vulnerability CVE-2026-59850**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | libssh  | 0.12.0-2.el10  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-59850](https://access.redhat.com/security/cve/CVE-2026-59850)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/libssh@0.12.0-2.el10?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=libssh-0.12.0-2.el10.src.rpm"
+                ],
+                "security-severity": "4.3"
+              }
+            },
+            {
+              "id": "CVE-2026-59850-libssh-config",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-59850 medium vulnerability for libssh-config package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in libssh. If data packets are processed after a channel is closed, channel data callbacks can be invoked after the associated data has already been freed, leading to crashes or possible use-after-free conditions."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-59850",
+              "help": {
+                "text": "Vulnerability CVE-2026-59850\nSeverity: medium\nPackage: libssh-config\nVersion: 0.12.0-2.el10\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-59850](https://access.redhat.com/security/cve/CVE-2026-59850)",
+                "markdown": "**Vulnerability CVE-2026-59850**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | libssh-config  | 0.12.0-2.el10  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-59850](https://access.redhat.com/security/cve/CVE-2026-59850)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/libssh-config@0.12.0-2.el10?arch=noarch\u0026distro=rocky-10.2\u0026upstream=libssh-0.12.0-2.el10.src.rpm"
+                ],
+                "security-severity": "4.3"
               }
             },
             {
@@ -4378,6 +4525,27 @@
               }
             },
             {
+              "id": "CVE-2026-51298-sqlite-libs",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-51298 medium vulnerability for sqlite-libs package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in SQLite. A remote attacker could exploit a use-after-free vulnerability in the JSON extraction function. This occurs when the program attempts to access memory after it has been freed, specifically within the `JsonParse` object. Successful exploitation of this vulnerability can lead to a service crash and a denial of service (DoS) for affected systems."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-51298",
+              "help": {
+                "text": "Vulnerability CVE-2026-51298\nSeverity: medium\nPackage: sqlite-libs\nVersion: 3.46.1-5.el10_1\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-51298](https://access.redhat.com/security/cve/CVE-2026-51298)",
+                "markdown": "**Vulnerability CVE-2026-51298**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | sqlite-libs  | 3.46.1-5.el10_1  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-51298](https://access.redhat.com/security/cve/CVE-2026-51298)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/sqlite-libs@3.46.1-5.el10_1?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=sqlite-3.46.1-5.el10_1.src.rpm"
+                ],
+                "security-severity": "7.5"
+              }
+            },
+            {
               "id": "CVE-2026-12610-pam",
               "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
@@ -4609,48 +4777,6 @@
               }
             },
             {
-              "id": "CVE-2026-59849-libssh",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-59849 low vulnerability for libssh package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in libssh. Logic errors in automatic certificate-based public key authentication can cause libssh clients to loop indefinitely when configured certificates are missing or repeatedly rejected by a server, leading to denial of service."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-59849",
-              "help": {
-                "text": "Vulnerability CVE-2026-59849\nSeverity: low\nPackage: libssh\nVersion: 0.12.0-2.el10\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-59849](https://access.redhat.com/security/cve/CVE-2026-59849)",
-                "markdown": "**Vulnerability CVE-2026-59849**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | libssh  | 0.12.0-2.el10  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-59849](https://access.redhat.com/security/cve/CVE-2026-59849)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/libssh@0.12.0-2.el10?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=libssh-0.12.0-2.el10.src.rpm"
-                ],
-                "security-severity": "3.1"
-              }
-            },
-            {
-              "id": "CVE-2026-59849-libssh-config",
-              "name": "RpmMatcherExactIndirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-59849 low vulnerability for libssh-config package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in libssh. Logic errors in automatic certificate-based public key authentication can cause libssh clients to loop indefinitely when configured certificates are missing or repeatedly rejected by a server, leading to denial of service."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-59849",
-              "help": {
-                "text": "Vulnerability CVE-2026-59849\nSeverity: low\nPackage: libssh-config\nVersion: 0.12.0-2.el10\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-59849](https://access.redhat.com/security/cve/CVE-2026-59849)",
-                "markdown": "**Vulnerability CVE-2026-59849**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | libssh-config  | 0.12.0-2.el10  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-59849](https://access.redhat.com/security/cve/CVE-2026-59849)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/libssh-config@0.12.0-2.el10?arch=noarch\u0026distro=rocky-10.2\u0026upstream=libssh-0.12.0-2.el10.src.rpm"
-                ],
-                "security-severity": "3.1"
-              }
-            },
-            {
               "id": "CVE-2025-4878-libssh",
               "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
@@ -4690,6 +4816,48 @@
                   "pkg:rpm/rocky/libssh-config@0.12.0-2.el10?arch=noarch\u0026distro=rocky-10.2\u0026upstream=libssh-0.12.0-2.el10.src.rpm"
                 ],
                 "security-severity": "3.6"
+              }
+            },
+            {
+              "id": "CVE-2026-59849-libssh",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-59849 low vulnerability for libssh package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in libssh. Logic errors in automatic certificate-based public key authentication can cause libssh clients to loop indefinitely when configured certificates are missing or repeatedly rejected by a server, leading to denial of service."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-59849",
+              "help": {
+                "text": "Vulnerability CVE-2026-59849\nSeverity: low\nPackage: libssh\nVersion: 0.12.0-2.el10\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-59849](https://access.redhat.com/security/cve/CVE-2026-59849)",
+                "markdown": "**Vulnerability CVE-2026-59849**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | libssh  | 0.12.0-2.el10  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-59849](https://access.redhat.com/security/cve/CVE-2026-59849)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/libssh@0.12.0-2.el10?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=libssh-0.12.0-2.el10.src.rpm"
+                ],
+                "security-severity": "3.1"
+              }
+            },
+            {
+              "id": "CVE-2026-59849-libssh-config",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-59849 low vulnerability for libssh-config package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in libssh. Logic errors in automatic certificate-based public key authentication can cause libssh clients to loop indefinitely when configured certificates are missing or repeatedly rejected by a server, leading to denial of service."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-59849",
+              "help": {
+                "text": "Vulnerability CVE-2026-59849\nSeverity: low\nPackage: libssh-config\nVersion: 0.12.0-2.el10\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-59849](https://access.redhat.com/security/cve/CVE-2026-59849)",
+                "markdown": "**Vulnerability CVE-2026-59849**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | libssh-config  | 0.12.0-2.el10  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-59849](https://access.redhat.com/security/cve/CVE-2026-59849)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/libssh-config@0.12.0-2.el10?arch=noarch\u0026distro=rocky-10.2\u0026upstream=libssh-0.12.0-2.el10.src.rpm"
+                ],
+                "security-severity": "3.1"
               }
             },
             {
@@ -4840,6 +5008,27 @@
               }
             },
             {
+              "id": "CVE-2025-6170-libxml2",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2025-6170 low vulnerability for libxml2 package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in the interactive shell of the xmllint command-line tool, used for parsing XML files. When a user inputs an overly long command, the program does not check the input size properly, which can cause it to crash. This issue might allow attackers to run harmful code in rare configurations without modern protections."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2025-6170",
+              "help": {
+                "text": "Vulnerability CVE-2025-6170\nSeverity: low\nPackage: libxml2\nVersion: 2.12.5-10.el10\nFix Version: 0:2.12.5-10.el10_2.2\nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2025-6170](https://access.redhat.com/security/cve/CVE-2025-6170)",
+                "markdown": "**Vulnerability CVE-2025-6170**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | libxml2  | 2.12.5-10.el10  | 0:2.12.5-10.el10_2.2  | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2025-6170](https://access.redhat.com/security/cve/CVE-2025-6170)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/libxml2@2.12.5-10.el10?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=libxml2-2.12.5-10.el10.src.rpm"
+                ],
+                "security-severity": "2.5"
+              }
+            },
+            {
               "id": "CVE-2026-59845-libssh",
               "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
@@ -4879,27 +5068,6 @@
                   "pkg:rpm/rocky/libssh-config@0.12.0-2.el10?arch=noarch\u0026distro=rocky-10.2\u0026upstream=libssh-0.12.0-2.el10.src.rpm"
                 ],
                 "security-severity": "5.3"
-              }
-            },
-            {
-              "id": "CVE-2025-6170-libxml2",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2025-6170 low vulnerability for libxml2 package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in the interactive shell of the xmllint command-line tool, used for parsing XML files. When a user inputs an overly long command, the program does not check the input size properly, which can cause it to crash. This issue might allow attackers to run harmful code in rare configurations without modern protections."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2025-6170",
-              "help": {
-                "text": "Vulnerability CVE-2025-6170\nSeverity: low\nPackage: libxml2\nVersion: 2.12.5-10.el10\nFix Version: 0:2.12.5-10.el10_2.2\nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2025-6170](https://access.redhat.com/security/cve/CVE-2025-6170)",
-                "markdown": "**Vulnerability CVE-2025-6170**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | libxml2  | 2.12.5-10.el10  | 0:2.12.5-10.el10_2.2  | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2025-6170](https://access.redhat.com/security/cve/CVE-2025-6170)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/libxml2@2.12.5-10.el10?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=libxml2-2.12.5-10.el10.src.rpm"
-                ],
-                "security-severity": "2.5"
               }
             },
             {
@@ -6574,6 +6742,37 @@
           }
         },
         {
+          "ruleId": "CVE-2026-58016-glib2",
+          "level": "error",
+          "message": {
+            "text": "A high vulnerability in rpm package: glib2, version 2.80.4-12.el10_2.13 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "80cc3bbe3ea679b2b4dd4f300e1c487dbbe8837af7d52a55d1318461c9414dc7:1"
+          }
+        },
+        {
           "ruleId": "CVE-2025-14819-curl",
           "level": "note",
           "message": {
@@ -6636,37 +6835,6 @@
           }
         },
         {
-          "ruleId": "CVE-2026-58016-glib2",
-          "level": "error",
-          "message": {
-            "text": "A high vulnerability in rpm package: glib2, version 2.80.4-12.el10_2.13 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "80cc3bbe3ea679b2b4dd4f300e1c487dbbe8837af7d52a55d1318461c9414dc7:1"
-          }
-        },
-        {
           "ruleId": "CVE-2026-3731-libssh",
           "level": "warning",
           "message": {
@@ -6726,6 +6894,37 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "acee919118338cc40a3683ef4b6a553114b5cb81e2897d00a559c49e4a071c11:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-51303-sqlite-libs",
+          "level": "error",
+          "message": {
+            "text": "A high vulnerability in rpm package: sqlite-libs, version 3.46.1-5.el10_1 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "ae5bbdfd64ab1e47ad19512e01415f30b42f3a033c6bf69e1cf3deb14142776c:1"
           }
         },
         {
@@ -6822,7 +7021,100 @@
           }
         },
         {
-          "ruleId": "CVE-2026-59844-libssh",
+          "ruleId": "CVE-2026-6429-curl",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: curl, version 8.12.1-4.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "cf8c3493811e26dd569d2b29f0210e7db84729cf87eb211a3373cd02329cb93e:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-6429-libcurl",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: libcurl, version 8.12.1-4.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "f20110d7cf262975c4cc989d5b6f551c736c2c1dfc232da2f932e1c53cdea82f:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-51297-sqlite-libs",
+          "level": "error",
+          "message": {
+            "text": "A high vulnerability in rpm package: sqlite-libs, version 3.46.1-5.el10_1 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "ae5bbdfd64ab1e47ad19512e01415f30b42f3a033c6bf69e1cf3deb14142776c:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-59843-libssh",
           "level": "warning",
           "message": {
             "text": "A medium vulnerability in rpm package: libssh, version 0.12.0-2.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
@@ -6853,38 +7145,7 @@
           }
         },
         {
-          "ruleId": "CVE-2026-59844-libssh-config",
-          "level": "warning",
-          "message": {
-            "text": "A medium vulnerability in rpm package: libssh-config, version 0.12.0-2.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "acee919118338cc40a3683ef4b6a553114b5cb81e2897d00a559c49e4a071c11:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2026-59843-libssh",
+          "ruleId": "CVE-2026-59844-libssh",
           "level": "warning",
           "message": {
             "text": "A medium vulnerability in rpm package: libssh, version 0.12.0-2.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
@@ -6946,10 +7207,10 @@
           }
         },
         {
-          "ruleId": "CVE-2026-6429-curl",
+          "ruleId": "CVE-2026-59844-libssh-config",
           "level": "warning",
           "message": {
-            "text": "A medium vulnerability in rpm package: curl, version 8.12.1-4.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
+            "text": "A medium vulnerability in rpm package: libssh-config, version 0.12.0-2.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
           },
           "locations": [
             {
@@ -6973,14 +7234,14 @@
             }
           ],
           "partialFingerprints": {
-            "primaryLocationLineHash": "cf8c3493811e26dd569d2b29f0210e7db84729cf87eb211a3373cd02329cb93e:1"
+            "primaryLocationLineHash": "acee919118338cc40a3683ef4b6a553114b5cb81e2897d00a559c49e4a071c11:1"
           }
         },
         {
-          "ruleId": "CVE-2026-6429-libcurl",
-          "level": "warning",
+          "ruleId": "CVE-2026-51304-sqlite-libs",
+          "level": "error",
           "message": {
-            "text": "A medium vulnerability in rpm package: libcurl, version 8.12.1-4.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
+            "text": "A high vulnerability in rpm package: sqlite-libs, version 3.46.1-5.el10_1 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
           },
           "locations": [
             {
@@ -7004,7 +7265,7 @@
             }
           ],
           "partialFingerprints": {
-            "primaryLocationLineHash": "f20110d7cf262975c4cc989d5b6f551c736c2c1dfc232da2f932e1c53cdea82f:1"
+            "primaryLocationLineHash": "ae5bbdfd64ab1e47ad19512e01415f30b42f3a033c6bf69e1cf3deb14142776c:1"
           }
         },
         {
@@ -7690,6 +7951,68 @@
           }
         },
         {
+          "ruleId": "CVE-2026-10536-curl",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: curl, version 8.12.1-4.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "cf8c3493811e26dd569d2b29f0210e7db84729cf87eb211a3373cd02329cb93e:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-10536-libcurl",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: libcurl, version 8.12.1-4.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "f20110d7cf262975c4cc989d5b6f551c736c2c1dfc232da2f932e1c53cdea82f:1"
+          }
+        },
+        {
           "ruleId": "CVE-2021-46195-libgcc",
           "level": "note",
           "message": {
@@ -8059,6 +8382,37 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "acee919118338cc40a3683ef4b6a553114b5cb81e2897d00a559c49e4a071c11:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-51302-sqlite-libs",
+          "level": "error",
+          "message": {
+            "text": "A critical vulnerability in rpm package: sqlite-libs, version 3.46.1-5.el10_1 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "ae5bbdfd64ab1e47ad19512e01415f30b42f3a033c6bf69e1cf3deb14142776c:1"
           }
         },
         {
@@ -9364,68 +9718,6 @@
           }
         },
         {
-          "ruleId": "CVE-2026-59848-libssh",
-          "level": "warning",
-          "message": {
-            "text": "A medium vulnerability in rpm package: libssh, version 0.12.0-2.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "194a19a0ddbe5e3603775777fa0b6a2de393ccd12b54795172e30db4b9d5091d:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2026-59848-libssh-config",
-          "level": "warning",
-          "message": {
-            "text": "A medium vulnerability in rpm package: libssh-config, version 0.12.0-2.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "acee919118338cc40a3683ef4b6a553114b5cb81e2897d00a559c49e4a071c11:1"
-          }
-        },
-        {
           "ruleId": "CVE-2026-54411-pam",
           "level": "warning",
           "message": {
@@ -9488,6 +9780,37 @@
           }
         },
         {
+          "ruleId": "CVE-2026-51296-sqlite-libs",
+          "level": "error",
+          "message": {
+            "text": "A high vulnerability in rpm package: sqlite-libs, version 3.46.1-5.el10_1 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "ae5bbdfd64ab1e47ad19512e01415f30b42f3a033c6bf69e1cf3deb14142776c:1"
+          }
+        },
+        {
           "ruleId": "CVE-2025-15224-curl",
           "level": "note",
           "message": {
@@ -9547,6 +9870,68 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "f20110d7cf262975c4cc989d5b6f551c736c2c1dfc232da2f932e1c53cdea82f:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-59848-libssh",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: libssh, version 0.12.0-2.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "194a19a0ddbe5e3603775777fa0b6a2de393ccd12b54795172e30db4b9d5091d:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-59848-libssh-config",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: libssh-config, version 0.12.0-2.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "acee919118338cc40a3683ef4b6a553114b5cb81e2897d00a559c49e4a071c11:1"
           }
         },
         {
@@ -9953,68 +10338,6 @@
           }
         },
         {
-          "ruleId": "CVE-2026-59850-libssh",
-          "level": "warning",
-          "message": {
-            "text": "A medium vulnerability in rpm package: libssh, version 0.12.0-2.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "194a19a0ddbe5e3603775777fa0b6a2de393ccd12b54795172e30db4b9d5091d:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2026-59850-libssh-config",
-          "level": "warning",
-          "message": {
-            "text": "A medium vulnerability in rpm package: libssh-config, version 0.12.0-2.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "acee919118338cc40a3683ef4b6a553114b5cb81e2897d00a559c49e4a071c11:1"
-          }
-        },
-        {
           "ruleId": "CVE-2026-48864-libsolv",
           "level": "warning",
           "message": {
@@ -10229,6 +10552,68 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "ae5bbdfd64ab1e47ad19512e01415f30b42f3a033c6bf69e1cf3deb14142776c:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-59850-libssh",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: libssh, version 0.12.0-2.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "194a19a0ddbe5e3603775777fa0b6a2de393ccd12b54795172e30db4b9d5091d:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-59850-libssh-config",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: libssh-config, version 0.12.0-2.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "acee919118338cc40a3683ef4b6a553114b5cb81e2897d00a559c49e4a071c11:1"
           }
         },
         {
@@ -11565,6 +11950,37 @@
           }
         },
         {
+          "ruleId": "CVE-2026-51298-sqlite-libs",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: sqlite-libs, version 3.46.1-5.el10_1 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "ae5bbdfd64ab1e47ad19512e01415f30b42f3a033c6bf69e1cf3deb14142776c:1"
+          }
+        },
+        {
           "ruleId": "CVE-2026-12610-pam",
           "level": "warning",
           "message": {
@@ -11906,68 +12322,6 @@
           }
         },
         {
-          "ruleId": "CVE-2026-59849-libssh",
-          "level": "note",
-          "message": {
-            "text": "A low vulnerability in rpm package: libssh, version 0.12.0-2.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "194a19a0ddbe5e3603775777fa0b6a2de393ccd12b54795172e30db4b9d5091d:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2026-59849-libssh-config",
-          "level": "note",
-          "message": {
-            "text": "A low vulnerability in rpm package: libssh-config, version 0.12.0-2.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "acee919118338cc40a3683ef4b6a553114b5cb81e2897d00a559c49e4a071c11:1"
-          }
-        },
-        {
           "ruleId": "CVE-2025-4878-libssh",
           "level": "note",
           "message": {
@@ -12000,6 +12354,68 @@
         },
         {
           "ruleId": "CVE-2025-4878-libssh-config",
+          "level": "note",
+          "message": {
+            "text": "A low vulnerability in rpm package: libssh-config, version 0.12.0-2.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "acee919118338cc40a3683ef4b6a553114b5cb81e2897d00a559c49e4a071c11:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-59849-libssh",
+          "level": "note",
+          "message": {
+            "text": "A low vulnerability in rpm package: libssh, version 0.12.0-2.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "194a19a0ddbe5e3603775777fa0b6a2de393ccd12b54795172e30db4b9d5091d:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-59849-libssh-config",
           "level": "note",
           "message": {
             "text": "A low vulnerability in rpm package: libssh-config, version 0.12.0-2.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
@@ -12247,6 +12663,37 @@
           }
         },
         {
+          "ruleId": "CVE-2025-6170-libxml2",
+          "level": "note",
+          "message": {
+            "text": "A low vulnerability in rpm package: libxml2, version 2.12.5-10.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "fc03813685a8fbb51357d31bfe2f713c222e42ac0bc41b3d9e4235cb5ebeb183:1"
+          }
+        },
+        {
           "ruleId": "CVE-2026-59845-libssh",
           "level": "warning",
           "message": {
@@ -12306,37 +12753,6 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "acee919118338cc40a3683ef4b6a553114b5cb81e2897d00a559c49e4a071c11:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2025-6170-libxml2",
-          "level": "note",
-          "message": {
-            "text": "A low vulnerability in rpm package: libxml2, version 2.12.5-10.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "fc03813685a8fbb51357d31bfe2f713c222e42ac0bc41b3d9e4235cb5ebeb183:1"
           }
         },
         {
