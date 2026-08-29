@@ -4483,27 +4483,6 @@
               }
             },
             {
-              "id": "CVE-2025-5918-libarchive",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2025-5918 low vulnerability for libarchive package"
-              },
-              "fullDescription": {
-                "text": "A vulnerability has been identified in the libarchive library. This flaw can be triggered when file streams are piped into bsdtar, potentially allowing for reading past the end of the file. This out-of-bounds read can lead to unintended consequences, including unpredictable program behavior, memory corruption, or a denial-of-service condition."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2025-5918",
-              "help": {
-                "text": "Vulnerability CVE-2025-5918\nSeverity: low\nPackage: libarchive\nVersion: 3.5.3-9.el9_7\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2025-5918](https://access.redhat.com/security/cve/CVE-2025-5918)",
-                "markdown": "**Vulnerability CVE-2025-5918**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | libarchive  | 3.5.3-9.el9_7  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2025-5918](https://access.redhat.com/security/cve/CVE-2025-5918)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/libarchive@3.5.3-9.el9_7?arch=x86_64\u0026distro=rocky-9.8\u0026upstream=libarchive-3.5.3-9.el9_7.src.rpm"
-                ],
-                "security-severity": "3.9"
-              }
-            },
-            {
               "id": "CVE-2025-5278-coreutils-single",
               "name": "RpmMatcherExactIndirectMatch",
               "shortDescription": {
@@ -4522,6 +4501,27 @@
                   "pkg:rpm/rocky/coreutils-single@8.32-40.el9?arch=x86_64\u0026distro=rocky-9.8\u0026upstream=coreutils-8.32-40.el9.src.rpm"
                 ],
                 "security-severity": "4.4"
+              }
+            },
+            {
+              "id": "CVE-2025-5918-libarchive",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2025-5918 low vulnerability for libarchive package"
+              },
+              "fullDescription": {
+                "text": "A vulnerability has been identified in the libarchive library. This flaw can be triggered when file streams are piped into bsdtar, potentially allowing for reading past the end of the file. This out-of-bounds read can lead to unintended consequences, including unpredictable program behavior, memory corruption, or a denial-of-service condition."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2025-5918",
+              "help": {
+                "text": "Vulnerability CVE-2025-5918\nSeverity: low\nPackage: libarchive\nVersion: 3.5.3-9.el9_7\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2025-5918](https://access.redhat.com/security/cve/CVE-2025-5918)",
+                "markdown": "**Vulnerability CVE-2025-5918**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | libarchive  | 3.5.3-9.el9_7  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2025-5918](https://access.redhat.com/security/cve/CVE-2025-5918)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/libarchive@3.5.3-9.el9_7?arch=x86_64\u0026distro=rocky-9.8\u0026upstream=libarchive-3.5.3-9.el9_7.src.rpm"
+                ],
+                "security-severity": "3.9"
               }
             },
             {
@@ -6517,6 +6517,27 @@
                   "pkg:rpm/rocky/glibc-minimal-langpack@2.34-270.el9_8?arch=x86_64\u0026distro=rocky-9.8\u0026upstream=glibc-2.34-270.el9_8.src.rpm"
                 ],
                 "security-severity": "5.9"
+              }
+            },
+            {
+              "id": "CVE-2026-82327-libsolv",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-82327 medium vulnerability for libsolv package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in libsolv, a dependency-resolution library used by RPM-based package managers such as dnf and zypper to work with .solv repository cache files. When libsolv rewrites a .solv cache file, it reads directory-id values from the file's compressed filelist data without validating that they fall within the expected range. A corrupted or specially crafted .solv cache file (for example, one left in a torn state after an unclean system shutdown) can cause an out-of-bounds memory write when a tool such as dnf, yum, or zypper next processes it. Successful exploitation is expected to result in a crash of the affected tool (denial of service); it is not expected to allow arbitrary code execution because the out-of-bounds write always stores a fixed, non-attacker-controlled value."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-82327",
+              "help": {
+                "text": "Vulnerability CVE-2026-82327\nSeverity: medium\nPackage: libsolv\nVersion: 0.7.24-5.el9_8\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-82327](https://access.redhat.com/security/cve/CVE-2026-82327)",
+                "markdown": "**Vulnerability CVE-2026-82327**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | libsolv  | 0.7.24-5.el9_8  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-82327](https://access.redhat.com/security/cve/CVE-2026-82327)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/libsolv@0.7.24-5.el9_8?arch=x86_64\u0026distro=rocky-9.8\u0026upstream=libsolv-0.7.24-5.el9_8.src.rpm"
+                ],
+                "security-severity": "5.5"
               }
             }
           ]
@@ -13127,37 +13148,6 @@
           }
         },
         {
-          "ruleId": "CVE-2025-5918-libarchive",
-          "level": "note",
-          "message": {
-            "text": "A low vulnerability in rpm package: libarchive, version 3.5.3-9.el9_7 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:f1950c2f0fad7ccd25e714e77d3ddeacd91076275c389b0268308b45226d58d1:/var/lib/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "cc0873b321a4d003d5720c471571e2fbe8e6643d9443579894c6cbcff0f87f3d:1"
-          }
-        },
-        {
           "ruleId": "CVE-2025-5278-coreutils-single",
           "level": "warning",
           "message": {
@@ -13186,6 +13176,37 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "be1a2a9ba0246df2559ea04f6db3bf33de28200b11f5557c7bb69ce7c74eadc6:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2025-5918-libarchive",
+          "level": "note",
+          "message": {
+            "text": "A low vulnerability in rpm package: libarchive, version 3.5.3-9.el9_7 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:f1950c2f0fad7ccd25e714e77d3ddeacd91076275c389b0268308b45226d58d1:/var/lib/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "cc0873b321a4d003d5720c471571e2fbe8e6643d9443579894c6cbcff0f87f3d:1"
           }
         },
         {
@@ -16131,6 +16152,37 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "e540ac471c7179d92715f0c8ae7e66ec7c58987a765b5375dc02db883de30680:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-82327-libsolv",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: libsolv, version 0.7.24-5.el9_8 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:f1950c2f0fad7ccd25e714e77d3ddeacd91076275c389b0268308b45226d58d1:/var/lib/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "fd28c289545ace83a1bb6bfc5017cfda1b9248ee0d564c0d0c90217a863d9ca4:1"
           }
         }
       ]
