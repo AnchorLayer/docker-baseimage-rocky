@@ -283,6 +283,27 @@
               }
             },
             {
+              "id": "CVE-2024-12243-gnutls",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2024-12243 medium vulnerability for gnutls package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in GnuTLS, which relies on libtasn1 for ASN.1 data processing. Due to an inefficient algorithm in libtasn1, decoding certain DER-encoded certificate data can take excessive time, leading to increased resource consumption. This flaw allows a remote attacker to send a specially crafted certificate, causing GnuTLS to become unresponsive or slow, resulting in a denial-of-service condition."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2024-12243",
+              "help": {
+                "text": "Vulnerability CVE-2024-12243\nSeverity: medium\nPackage: gnutls\nVersion: 3.8.10-4.el10_2\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2024-12243](https://access.redhat.com/security/cve/CVE-2024-12243)",
+                "markdown": "**Vulnerability CVE-2024-12243**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | gnutls  | 3.8.10-4.el10_2  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2024-12243](https://access.redhat.com/security/cve/CVE-2024-12243)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/gnutls@3.8.10-4.el10_2?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=gnutls-3.8.10-4.el10_2.src.rpm"
+                ],
+                "security-severity": "5.3"
+              }
+            },
+            {
               "id": "CVE-2026-9079-curl",
               "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
@@ -406,27 +427,6 @@
                   "pkg:rpm/rocky/openssl-libs@3.5.5-3.el10_2?arch=x86_64\u0026distro=rocky-10.2\u0026epoch=1\u0026upstream=openssl-3.5.5-3.el10_2.src.rpm"
                 ],
                 "security-severity": "7.5"
-              }
-            },
-            {
-              "id": "CVE-2024-12243-gnutls",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2024-12243 medium vulnerability for gnutls package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in GnuTLS, which relies on libtasn1 for ASN.1 data processing. Due to an inefficient algorithm in libtasn1, decoding certain DER-encoded certificate data can take excessive time, leading to increased resource consumption. This flaw allows a remote attacker to send a specially crafted certificate, causing GnuTLS to become unresponsive or slow, resulting in a denial-of-service condition."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2024-12243",
-              "help": {
-                "text": "Vulnerability CVE-2024-12243\nSeverity: medium\nPackage: gnutls\nVersion: 3.8.10-4.el10_2\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2024-12243](https://access.redhat.com/security/cve/CVE-2024-12243)",
-                "markdown": "**Vulnerability CVE-2024-12243**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | gnutls  | 3.8.10-4.el10_2  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2024-12243](https://access.redhat.com/security/cve/CVE-2024-12243)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/gnutls@3.8.10-4.el10_2?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=gnutls-3.8.10-4.el10_2.src.rpm"
-                ],
-                "security-severity": "5.3"
               }
             },
             {
@@ -1312,6 +1312,48 @@
               }
             },
             {
+              "id": "CVE-2025-14819-curl",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2025-14819 low vulnerability for curl package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in libcurl. When handling secure connections (TLS) and reusing connection settings, libcurl could incorrectly apply a cached security setting related to certificate chain validation. This could allow libcurl to accept a server's security certificate that it should have otherwise rejected, potentially compromising the integrity of the secure connection."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2025-14819",
+              "help": {
+                "text": "Vulnerability CVE-2025-14819\nSeverity: low\nPackage: curl\nVersion: 8.12.1-4.el10\nFix Version: 0:8.12.1-4.el10_2.3\nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2025-14819](https://access.redhat.com/security/cve/CVE-2025-14819)",
+                "markdown": "**Vulnerability CVE-2025-14819**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | curl  | 8.12.1-4.el10  | 0:8.12.1-4.el10_2.3  | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2025-14819](https://access.redhat.com/security/cve/CVE-2025-14819)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/curl@8.12.1-4.el10?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=curl-8.12.1-4.el10.src.rpm"
+                ],
+                "security-severity": "6.8"
+              }
+            },
+            {
+              "id": "CVE-2025-14819-libcurl",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2025-14819 low vulnerability for libcurl package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in libcurl. When handling secure connections (TLS) and reusing connection settings, libcurl could incorrectly apply a cached security setting related to certificate chain validation. This could allow libcurl to accept a server's security certificate that it should have otherwise rejected, potentially compromising the integrity of the secure connection."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2025-14819",
+              "help": {
+                "text": "Vulnerability CVE-2025-14819\nSeverity: low\nPackage: libcurl\nVersion: 8.12.1-4.el10\nFix Version: 0:8.12.1-4.el10_2.3\nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2025-14819](https://access.redhat.com/security/cve/CVE-2025-14819)",
+                "markdown": "**Vulnerability CVE-2025-14819**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | libcurl  | 8.12.1-4.el10  | 0:8.12.1-4.el10_2.3  | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2025-14819](https://access.redhat.com/security/cve/CVE-2025-14819)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/libcurl@8.12.1-4.el10?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=curl-8.12.1-4.el10.src.rpm"
+                ],
+                "security-severity": "6.8"
+              }
+            },
+            {
               "id": "CVE-2026-28389-openssl-fips-provider",
               "name": "RpmMatcherExactIndirectMatch",
               "shortDescription": {
@@ -1393,48 +1435,6 @@
                   "pkg:rpm/rocky/libcurl@8.12.1-4.el10?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=curl-8.12.1-4.el10.src.rpm"
                 ],
                 "security-severity": "6.5"
-              }
-            },
-            {
-              "id": "CVE-2025-14819-curl",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2025-14819 low vulnerability for curl package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in libcurl. When handling secure connections (TLS) and reusing connection settings, libcurl could incorrectly apply a cached security setting related to certificate chain validation. This could allow libcurl to accept a server's security certificate that it should have otherwise rejected, potentially compromising the integrity of the secure connection."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2025-14819",
-              "help": {
-                "text": "Vulnerability CVE-2025-14819\nSeverity: low\nPackage: curl\nVersion: 8.12.1-4.el10\nFix Version: 0:8.12.1-4.el10_2.3\nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2025-14819](https://access.redhat.com/security/cve/CVE-2025-14819)",
-                "markdown": "**Vulnerability CVE-2025-14819**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | curl  | 8.12.1-4.el10  | 0:8.12.1-4.el10_2.3  | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2025-14819](https://access.redhat.com/security/cve/CVE-2025-14819)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/curl@8.12.1-4.el10?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=curl-8.12.1-4.el10.src.rpm"
-                ],
-                "security-severity": "6.8"
-              }
-            },
-            {
-              "id": "CVE-2025-14819-libcurl",
-              "name": "RpmMatcherExactIndirectMatch",
-              "shortDescription": {
-                "text": "CVE-2025-14819 low vulnerability for libcurl package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in libcurl. When handling secure connections (TLS) and reusing connection settings, libcurl could incorrectly apply a cached security setting related to certificate chain validation. This could allow libcurl to accept a server's security certificate that it should have otherwise rejected, potentially compromising the integrity of the secure connection."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2025-14819",
-              "help": {
-                "text": "Vulnerability CVE-2025-14819\nSeverity: low\nPackage: libcurl\nVersion: 8.12.1-4.el10\nFix Version: 0:8.12.1-4.el10_2.3\nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2025-14819](https://access.redhat.com/security/cve/CVE-2025-14819)",
-                "markdown": "**Vulnerability CVE-2025-14819**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | libcurl  | 8.12.1-4.el10  | 0:8.12.1-4.el10_2.3  | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2025-14819](https://access.redhat.com/security/cve/CVE-2025-14819)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/libcurl@8.12.1-4.el10?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=curl-8.12.1-4.el10.src.rpm"
-                ],
-                "security-severity": "6.8"
               }
             },
             {
@@ -1669,24 +1669,45 @@
               }
             },
             {
-              "id": "CVE-2026-63495-libevent",
+              "id": "CVE-2025-14524-curl",
               "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
-                "text": "CVE-2026-63495 high vulnerability for libevent package"
+                "text": "CVE-2025-14524 low vulnerability for curl package"
               },
               "fullDescription": {
-                "text": "A flaw was found in Libevent. An unauthenticated remote client can exploit this vulnerability by repeatedly sending fragmented WebSocket frames to the Libevent WebSocket server. Due to a lack of a total message-size limit, these fragmented frames accumulate in memory without bound, leading to memory exhaustion and a denial of service (DoS) for the process or host."
+                "text": "A flaw was found in curl. When an OAuth2 (Open Authorization) bearer token is used for an HTTP(S) transfer, and that transfer performs a cross-protocol redirect to a different scheme like IMAP, LDAP, POP3, or SMTP, curl might incorrectly pass the bearer token to the new target host. This could lead to information disclosure, where sensitive authentication tokens are exposed to unintended recipients."
               },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-63495",
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2025-14524",
               "help": {
-                "text": "Vulnerability CVE-2026-63495\nSeverity: high\nPackage: libevent\nVersion: 2.1.12-16.el10\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-63495](https://access.redhat.com/security/cve/CVE-2026-63495)",
-                "markdown": "**Vulnerability CVE-2026-63495**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| high  | libevent  | 2.1.12-16.el10  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-63495](https://access.redhat.com/security/cve/CVE-2026-63495)  |\n"
+                "text": "Vulnerability CVE-2025-14524\nSeverity: low\nPackage: curl\nVersion: 8.12.1-4.el10\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2025-14524](https://access.redhat.com/security/cve/CVE-2025-14524)",
+                "markdown": "**Vulnerability CVE-2025-14524**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | curl  | 8.12.1-4.el10  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2025-14524](https://access.redhat.com/security/cve/CVE-2025-14524)  |\n"
               },
               "properties": {
                 "purls": [
-                  "pkg:rpm/rocky/libevent@2.1.12-16.el10?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=libevent-2.1.12-16.el10.src.rpm"
+                  "pkg:rpm/rocky/curl@8.12.1-4.el10?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=curl-8.12.1-4.el10.src.rpm"
                 ],
-                "security-severity": "7.5"
+                "security-severity": "6.5"
+              }
+            },
+            {
+              "id": "CVE-2025-14524-libcurl",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2025-14524 low vulnerability for libcurl package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in curl. When an OAuth2 (Open Authorization) bearer token is used for an HTTP(S) transfer, and that transfer performs a cross-protocol redirect to a different scheme like IMAP, LDAP, POP3, or SMTP, curl might incorrectly pass the bearer token to the new target host. This could lead to information disclosure, where sensitive authentication tokens are exposed to unintended recipients."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2025-14524",
+              "help": {
+                "text": "Vulnerability CVE-2025-14524\nSeverity: low\nPackage: libcurl\nVersion: 8.12.1-4.el10\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2025-14524](https://access.redhat.com/security/cve/CVE-2025-14524)",
+                "markdown": "**Vulnerability CVE-2025-14524**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | libcurl  | 8.12.1-4.el10  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2025-14524](https://access.redhat.com/security/cve/CVE-2025-14524)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/libcurl@8.12.1-4.el10?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=curl-8.12.1-4.el10.src.rpm"
+                ],
+                "security-severity": "6.5"
               }
             },
             {
@@ -1837,48 +1858,6 @@
               }
             },
             {
-              "id": "CVE-2025-14524-curl",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2025-14524 low vulnerability for curl package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in curl. When an OAuth2 (Open Authorization) bearer token is used for an HTTP(S) transfer, and that transfer performs a cross-protocol redirect to a different scheme like IMAP, LDAP, POP3, or SMTP, curl might incorrectly pass the bearer token to the new target host. This could lead to information disclosure, where sensitive authentication tokens are exposed to unintended recipients."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2025-14524",
-              "help": {
-                "text": "Vulnerability CVE-2025-14524\nSeverity: low\nPackage: curl\nVersion: 8.12.1-4.el10\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2025-14524](https://access.redhat.com/security/cve/CVE-2025-14524)",
-                "markdown": "**Vulnerability CVE-2025-14524**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | curl  | 8.12.1-4.el10  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2025-14524](https://access.redhat.com/security/cve/CVE-2025-14524)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/curl@8.12.1-4.el10?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=curl-8.12.1-4.el10.src.rpm"
-                ],
-                "security-severity": "6.5"
-              }
-            },
-            {
-              "id": "CVE-2025-14524-libcurl",
-              "name": "RpmMatcherExactIndirectMatch",
-              "shortDescription": {
-                "text": "CVE-2025-14524 low vulnerability for libcurl package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in curl. When an OAuth2 (Open Authorization) bearer token is used for an HTTP(S) transfer, and that transfer performs a cross-protocol redirect to a different scheme like IMAP, LDAP, POP3, or SMTP, curl might incorrectly pass the bearer token to the new target host. This could lead to information disclosure, where sensitive authentication tokens are exposed to unintended recipients."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2025-14524",
-              "help": {
-                "text": "Vulnerability CVE-2025-14524\nSeverity: low\nPackage: libcurl\nVersion: 8.12.1-4.el10\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2025-14524](https://access.redhat.com/security/cve/CVE-2025-14524)",
-                "markdown": "**Vulnerability CVE-2025-14524**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | libcurl  | 8.12.1-4.el10  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2025-14524](https://access.redhat.com/security/cve/CVE-2025-14524)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/libcurl@8.12.1-4.el10?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=curl-8.12.1-4.el10.src.rpm"
-                ],
-                "security-severity": "6.5"
-              }
-            },
-            {
               "id": "CVE-2026-12064-curl",
               "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
@@ -1963,6 +1942,48 @@
               }
             },
             {
+              "id": "CVE-2025-15079-curl",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2025-15079 low vulnerability for curl package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in curl. When performing SSH-based transfers using SCP or SFTP, libcurl could mistakenly connect to hosts not listed in the user-specified knownhosts file. This occurs if the host is present in the libssh global knownhosts file, effectively bypassing the intended host verification. This could allow a remote attacker to connect to an untrusted host, potentially leading to information disclosure or man-in-the-middle attacks."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2025-15079",
+              "help": {
+                "text": "Vulnerability CVE-2025-15079\nSeverity: low\nPackage: curl\nVersion: 8.12.1-4.el10\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2025-15079](https://access.redhat.com/security/cve/CVE-2025-15079)",
+                "markdown": "**Vulnerability CVE-2025-15079**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | curl  | 8.12.1-4.el10  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2025-15079](https://access.redhat.com/security/cve/CVE-2025-15079)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/curl@8.12.1-4.el10?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=curl-8.12.1-4.el10.src.rpm"
+                ],
+                "security-severity": "8.1"
+              }
+            },
+            {
+              "id": "CVE-2025-15079-libcurl",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2025-15079 low vulnerability for libcurl package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in curl. When performing SSH-based transfers using SCP or SFTP, libcurl could mistakenly connect to hosts not listed in the user-specified knownhosts file. This occurs if the host is present in the libssh global knownhosts file, effectively bypassing the intended host verification. This could allow a remote attacker to connect to an untrusted host, potentially leading to information disclosure or man-in-the-middle attacks."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2025-15079",
+              "help": {
+                "text": "Vulnerability CVE-2025-15079\nSeverity: low\nPackage: libcurl\nVersion: 8.12.1-4.el10\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2025-15079](https://access.redhat.com/security/cve/CVE-2025-15079)",
+                "markdown": "**Vulnerability CVE-2025-15079**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | libcurl  | 8.12.1-4.el10  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2025-15079](https://access.redhat.com/security/cve/CVE-2025-15079)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/libcurl@8.12.1-4.el10?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=curl-8.12.1-4.el10.src.rpm"
+                ],
+                "security-severity": "8.1"
+              }
+            },
+            {
               "id": "CVE-2026-63379-libevent",
               "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
@@ -1984,27 +2005,6 @@
               }
             },
             {
-              "id": "CVE-2026-63383-libevent",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-63383 high vulnerability for libevent package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in Libevent, an event notification library. A remote attacker could exploit an out-of-bounds read vulnerability in the `decode_tag_internal()` function by sending specially crafted, attacker-controlled tagged RPC (Remote Procedure Call) data. This could lead to a denial of service, causing the process that decodes the data to crash."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-63383",
-              "help": {
-                "text": "Vulnerability CVE-2026-63383\nSeverity: high\nPackage: libevent\nVersion: 2.1.12-16.el10\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-63383](https://access.redhat.com/security/cve/CVE-2026-63383)",
-                "markdown": "**Vulnerability CVE-2026-63383**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| high  | libevent  | 2.1.12-16.el10  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-63383](https://access.redhat.com/security/cve/CVE-2026-63383)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/libevent@2.1.12-16.el10?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=libevent-2.1.12-16.el10.src.rpm"
-                ],
-                "security-severity": "7.5"
-              }
-            },
-            {
               "id": "CVE-2026-63384-libevent",
               "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
@@ -2017,6 +2017,27 @@
               "help": {
                 "text": "Vulnerability CVE-2026-63384\nSeverity: high\nPackage: libevent\nVersion: 2.1.12-16.el10\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-63384](https://access.redhat.com/security/cve/CVE-2026-63384)",
                 "markdown": "**Vulnerability CVE-2026-63384**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| high  | libevent  | 2.1.12-16.el10  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-63384](https://access.redhat.com/security/cve/CVE-2026-63384)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/libevent@2.1.12-16.el10?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=libevent-2.1.12-16.el10.src.rpm"
+                ],
+                "security-severity": "7.5"
+              }
+            },
+            {
+              "id": "CVE-2026-63383-libevent",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-63383 high vulnerability for libevent package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in Libevent, an event notification library. A remote attacker could exploit an out-of-bounds read vulnerability in the `decode_tag_internal()` function by sending specially crafted, attacker-controlled tagged RPC (Remote Procedure Call) data. This could lead to a denial of service, causing the process that decodes the data to crash."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-63383",
+              "help": {
+                "text": "Vulnerability CVE-2026-63383\nSeverity: high\nPackage: libevent\nVersion: 2.1.12-16.el10\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-63383](https://access.redhat.com/security/cve/CVE-2026-63383)",
+                "markdown": "**Vulnerability CVE-2026-63383**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| high  | libevent  | 2.1.12-16.el10  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-63383](https://access.redhat.com/security/cve/CVE-2026-63383)  |\n"
               },
               "properties": {
                 "purls": [
@@ -2215,27 +2236,6 @@
               }
             },
             {
-              "id": "CVE-2026-58012-glib2",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-58012 medium vulnerability for glib2 package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in GLib. A buffer over-read can occur in the g_regex_replace function when used with the `G_REGEX_RAW` compile flag and case-change replacement escapes because the string_append function processes matched substrings using UTF-8 functions that assume valid UTF-8 input, even when the string is treated as raw bytes. This vulnerability can cause a minor information disclosure of 1-5 bytes and a denial of service when the buffer over-read crosses a page boundary."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-58012",
-              "help": {
-                "text": "Vulnerability CVE-2026-58012\nSeverity: medium\nPackage: glib2\nVersion: 2.80.4-12.el10_2.13\nFix Version: 0:2.80.4-12.el10_2.21\nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-58012](https://access.redhat.com/security/cve/CVE-2026-58012)",
-                "markdown": "**Vulnerability CVE-2026-58012**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | glib2  | 2.80.4-12.el10_2.13  | 0:2.80.4-12.el10_2.21  | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-58012](https://access.redhat.com/security/cve/CVE-2026-58012)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/glib2@2.80.4-12.el10_2.13?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=glib2-2.80.4-12.el10_2.13.src.rpm"
-                ],
-                "security-severity": "6.5"
-              }
-            },
-            {
               "id": "CVE-2026-58010-glib2",
               "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
@@ -2257,45 +2257,24 @@
               }
             },
             {
-              "id": "CVE-2025-15079-curl",
+              "id": "CVE-2026-58012-glib2",
               "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
-                "text": "CVE-2025-15079 low vulnerability for curl package"
+                "text": "CVE-2026-58012 medium vulnerability for glib2 package"
               },
               "fullDescription": {
-                "text": "A flaw was found in curl. When performing SSH-based transfers using SCP or SFTP, libcurl could mistakenly connect to hosts not listed in the user-specified knownhosts file. This occurs if the host is present in the libssh global knownhosts file, effectively bypassing the intended host verification. This could allow a remote attacker to connect to an untrusted host, potentially leading to information disclosure or man-in-the-middle attacks."
+                "text": "A flaw was found in GLib. A buffer over-read can occur in the g_regex_replace function when used with the `G_REGEX_RAW` compile flag and case-change replacement escapes because the string_append function processes matched substrings using UTF-8 functions that assume valid UTF-8 input, even when the string is treated as raw bytes. This vulnerability can cause a minor information disclosure of 1-5 bytes and a denial of service when the buffer over-read crosses a page boundary."
               },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2025-15079",
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-58012",
               "help": {
-                "text": "Vulnerability CVE-2025-15079\nSeverity: low\nPackage: curl\nVersion: 8.12.1-4.el10\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2025-15079](https://access.redhat.com/security/cve/CVE-2025-15079)",
-                "markdown": "**Vulnerability CVE-2025-15079**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | curl  | 8.12.1-4.el10  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2025-15079](https://access.redhat.com/security/cve/CVE-2025-15079)  |\n"
+                "text": "Vulnerability CVE-2026-58012\nSeverity: medium\nPackage: glib2\nVersion: 2.80.4-12.el10_2.13\nFix Version: 0:2.80.4-12.el10_2.21\nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-58012](https://access.redhat.com/security/cve/CVE-2026-58012)",
+                "markdown": "**Vulnerability CVE-2026-58012**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | glib2  | 2.80.4-12.el10_2.13  | 0:2.80.4-12.el10_2.21  | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-58012](https://access.redhat.com/security/cve/CVE-2026-58012)  |\n"
               },
               "properties": {
                 "purls": [
-                  "pkg:rpm/rocky/curl@8.12.1-4.el10?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=curl-8.12.1-4.el10.src.rpm"
+                  "pkg:rpm/rocky/glib2@2.80.4-12.el10_2.13?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=glib2-2.80.4-12.el10_2.13.src.rpm"
                 ],
-                "security-severity": "8.1"
-              }
-            },
-            {
-              "id": "CVE-2025-15079-libcurl",
-              "name": "RpmMatcherExactIndirectMatch",
-              "shortDescription": {
-                "text": "CVE-2025-15079 low vulnerability for libcurl package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in curl. When performing SSH-based transfers using SCP or SFTP, libcurl could mistakenly connect to hosts not listed in the user-specified knownhosts file. This occurs if the host is present in the libssh global knownhosts file, effectively bypassing the intended host verification. This could allow a remote attacker to connect to an untrusted host, potentially leading to information disclosure or man-in-the-middle attacks."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2025-15079",
-              "help": {
-                "text": "Vulnerability CVE-2025-15079\nSeverity: low\nPackage: libcurl\nVersion: 8.12.1-4.el10\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2025-15079](https://access.redhat.com/security/cve/CVE-2025-15079)",
-                "markdown": "**Vulnerability CVE-2025-15079**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | libcurl  | 8.12.1-4.el10  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2025-15079](https://access.redhat.com/security/cve/CVE-2025-15079)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/libcurl@8.12.1-4.el10?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=curl-8.12.1-4.el10.src.rpm"
-                ],
-                "security-severity": "8.1"
+                "security-severity": "6.5"
               }
             },
             {
@@ -3286,6 +3265,48 @@
               }
             },
             {
+              "id": "CVE-2025-15224-curl",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2025-15224 low vulnerability for curl package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in libcurl. When doing SSH-based transfers using either SCP or SFTP, and asked to do\npublic key authentication, curl would wrongly still ask and authenticate using\na locally running SSH agent."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2025-15224",
+              "help": {
+                "text": "Vulnerability CVE-2025-15224\nSeverity: low\nPackage: curl\nVersion: 8.12.1-4.el10\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2025-15224](https://access.redhat.com/security/cve/CVE-2025-15224)",
+                "markdown": "**Vulnerability CVE-2025-15224**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | curl  | 8.12.1-4.el10  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2025-15224](https://access.redhat.com/security/cve/CVE-2025-15224)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/curl@8.12.1-4.el10?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=curl-8.12.1-4.el10.src.rpm"
+                ],
+                "security-severity": "4.7"
+              }
+            },
+            {
+              "id": "CVE-2025-15224-libcurl",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2025-15224 low vulnerability for libcurl package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in libcurl. When doing SSH-based transfers using either SCP or SFTP, and asked to do\npublic key authentication, curl would wrongly still ask and authenticate using\na locally running SSH agent."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2025-15224",
+              "help": {
+                "text": "Vulnerability CVE-2025-15224\nSeverity: low\nPackage: libcurl\nVersion: 8.12.1-4.el10\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2025-15224](https://access.redhat.com/security/cve/CVE-2025-15224)",
+                "markdown": "**Vulnerability CVE-2025-15224**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | libcurl  | 8.12.1-4.el10  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2025-15224](https://access.redhat.com/security/cve/CVE-2025-15224)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/libcurl@8.12.1-4.el10?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=curl-8.12.1-4.el10.src.rpm"
+                ],
+                "security-severity": "4.7"
+              }
+            },
+            {
               "id": "CVE-2026-5928-glibc",
               "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
@@ -3367,6 +3388,48 @@
                   "pkg:rpm/rocky/glibc-minimal-langpack@2.39-124.el10_2?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=glibc-2.39-124.el10_2.src.rpm"
                 ],
                 "security-severity": "5.0"
+              }
+            },
+            {
+              "id": "CVE-2026-59847-libssh",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-59847 medium vulnerability for libssh package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in libssh. Incorrect AES-GCM finalization checks in builds using the OpenSSL backend can effectively remove integrity protection, allowing an in-path attacker to modify plaintext on the wire without detection."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-59847",
+              "help": {
+                "text": "Vulnerability CVE-2026-59847\nSeverity: medium\nPackage: libssh\nVersion: 0.12.0-2.el10\nFix Version: 0:0.12.0-3.el10_2\nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-59847](https://access.redhat.com/security/cve/CVE-2026-59847)",
+                "markdown": "**Vulnerability CVE-2026-59847**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | libssh  | 0.12.0-2.el10  | 0:0.12.0-3.el10_2  | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-59847](https://access.redhat.com/security/cve/CVE-2026-59847)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/libssh@0.12.0-2.el10?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=libssh-0.12.0-2.el10.src.rpm"
+                ],
+                "security-severity": "5.9"
+              }
+            },
+            {
+              "id": "CVE-2026-59847-libssh-config",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-59847 medium vulnerability for libssh-config package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in libssh. Incorrect AES-GCM finalization checks in builds using the OpenSSL backend can effectively remove integrity protection, allowing an in-path attacker to modify plaintext on the wire without detection."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-59847",
+              "help": {
+                "text": "Vulnerability CVE-2026-59847\nSeverity: medium\nPackage: libssh-config\nVersion: 0.12.0-2.el10\nFix Version: 0:0.12.0-3.el10_2\nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-59847](https://access.redhat.com/security/cve/CVE-2026-59847)",
+                "markdown": "**Vulnerability CVE-2026-59847**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | libssh-config  | 0.12.0-2.el10  | 0:0.12.0-3.el10_2  | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-59847](https://access.redhat.com/security/cve/CVE-2026-59847)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/libssh-config@0.12.0-2.el10?arch=noarch\u0026distro=rocky-10.2\u0026upstream=libssh-0.12.0-2.el10.src.rpm"
+                ],
+                "security-severity": "5.9"
               }
             },
             {
@@ -3517,48 +3580,6 @@
               }
             },
             {
-              "id": "CVE-2026-59847-libssh",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-59847 medium vulnerability for libssh package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in libssh. Incorrect AES-GCM finalization checks in builds using the OpenSSL backend can effectively remove integrity protection, allowing an in-path attacker to modify plaintext on the wire without detection."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-59847",
-              "help": {
-                "text": "Vulnerability CVE-2026-59847\nSeverity: medium\nPackage: libssh\nVersion: 0.12.0-2.el10\nFix Version: 0:0.12.0-3.el10_2\nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-59847](https://access.redhat.com/security/cve/CVE-2026-59847)",
-                "markdown": "**Vulnerability CVE-2026-59847**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | libssh  | 0.12.0-2.el10  | 0:0.12.0-3.el10_2  | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-59847](https://access.redhat.com/security/cve/CVE-2026-59847)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/libssh@0.12.0-2.el10?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=libssh-0.12.0-2.el10.src.rpm"
-                ],
-                "security-severity": "5.9"
-              }
-            },
-            {
-              "id": "CVE-2026-59847-libssh-config",
-              "name": "RpmMatcherExactIndirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-59847 medium vulnerability for libssh-config package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in libssh. Incorrect AES-GCM finalization checks in builds using the OpenSSL backend can effectively remove integrity protection, allowing an in-path attacker to modify plaintext on the wire without detection."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-59847",
-              "help": {
-                "text": "Vulnerability CVE-2026-59847\nSeverity: medium\nPackage: libssh-config\nVersion: 0.12.0-2.el10\nFix Version: 0:0.12.0-3.el10_2\nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-59847](https://access.redhat.com/security/cve/CVE-2026-59847)",
-                "markdown": "**Vulnerability CVE-2026-59847**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | libssh-config  | 0.12.0-2.el10  | 0:0.12.0-3.el10_2  | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-59847](https://access.redhat.com/security/cve/CVE-2026-59847)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/libssh-config@0.12.0-2.el10?arch=noarch\u0026distro=rocky-10.2\u0026upstream=libssh-0.12.0-2.el10.src.rpm"
-                ],
-                "security-severity": "5.9"
-              }
-            },
-            {
               "id": "CVE-2026-1489-glib2",
               "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
@@ -3619,48 +3640,6 @@
                   "pkg:rpm/rocky/libcurl@8.12.1-4.el10?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=curl-8.12.1-4.el10.src.rpm"
                 ],
                 "security-severity": "5.3"
-              }
-            },
-            {
-              "id": "CVE-2025-15224-curl",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2025-15224 low vulnerability for curl package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in libcurl. When doing SSH-based transfers using either SCP or SFTP, and asked to do\npublic key authentication, curl would wrongly still ask and authenticate using\na locally running SSH agent."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2025-15224",
-              "help": {
-                "text": "Vulnerability CVE-2025-15224\nSeverity: low\nPackage: curl\nVersion: 8.12.1-4.el10\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2025-15224](https://access.redhat.com/security/cve/CVE-2025-15224)",
-                "markdown": "**Vulnerability CVE-2025-15224**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | curl  | 8.12.1-4.el10  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2025-15224](https://access.redhat.com/security/cve/CVE-2025-15224)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/curl@8.12.1-4.el10?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=curl-8.12.1-4.el10.src.rpm"
-                ],
-                "security-severity": "4.7"
-              }
-            },
-            {
-              "id": "CVE-2025-15224-libcurl",
-              "name": "RpmMatcherExactIndirectMatch",
-              "shortDescription": {
-                "text": "CVE-2025-15224 low vulnerability for libcurl package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in libcurl. When doing SSH-based transfers using either SCP or SFTP, and asked to do\npublic key authentication, curl would wrongly still ask and authenticate using\na locally running SSH agent."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2025-15224",
-              "help": {
-                "text": "Vulnerability CVE-2025-15224\nSeverity: low\nPackage: libcurl\nVersion: 8.12.1-4.el10\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2025-15224](https://access.redhat.com/security/cve/CVE-2025-15224)",
-                "markdown": "**Vulnerability CVE-2025-15224**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | libcurl  | 8.12.1-4.el10  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2025-15224](https://access.redhat.com/security/cve/CVE-2025-15224)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/libcurl@8.12.1-4.el10?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=curl-8.12.1-4.el10.src.rpm"
-                ],
-                "security-severity": "4.7"
               }
             },
             {
@@ -3916,6 +3895,48 @@
               }
             },
             {
+              "id": "CVE-2025-13034-curl",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2025-13034 medium vulnerability for curl package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in curl. When configured to use public key pinning with QUIC connections and GnuTLS, and with standard certificate verification explicitly disabled, curl could bypass the intended public key check. This oversight allows a malicious server to impersonate a legitimate one, potentially leading to unauthorized access or information disclosure due to a failure in verifying the server's identity."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2025-13034",
+              "help": {
+                "text": "Vulnerability CVE-2025-13034\nSeverity: medium\nPackage: curl\nVersion: 8.12.1-4.el10\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2025-13034](https://access.redhat.com/security/cve/CVE-2025-13034)",
+                "markdown": "**Vulnerability CVE-2025-13034**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | curl  | 8.12.1-4.el10  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2025-13034](https://access.redhat.com/security/cve/CVE-2025-13034)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/curl@8.12.1-4.el10?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=curl-8.12.1-4.el10.src.rpm"
+                ],
+                "security-severity": "6.8"
+              }
+            },
+            {
+              "id": "CVE-2025-13034-libcurl",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2025-13034 medium vulnerability for libcurl package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in curl. When configured to use public key pinning with QUIC connections and GnuTLS, and with standard certificate verification explicitly disabled, curl could bypass the intended public key check. This oversight allows a malicious server to impersonate a legitimate one, potentially leading to unauthorized access or information disclosure due to a failure in verifying the server's identity."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2025-13034",
+              "help": {
+                "text": "Vulnerability CVE-2025-13034\nSeverity: medium\nPackage: libcurl\nVersion: 8.12.1-4.el10\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2025-13034](https://access.redhat.com/security/cve/CVE-2025-13034)",
+                "markdown": "**Vulnerability CVE-2025-13034**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | libcurl  | 8.12.1-4.el10  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2025-13034](https://access.redhat.com/security/cve/CVE-2025-13034)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/libcurl@8.12.1-4.el10?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=curl-8.12.1-4.el10.src.rpm"
+                ],
+                "security-severity": "6.8"
+              }
+            },
+            {
               "id": "CVE-2026-1484-glib2",
               "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
@@ -3997,48 +4018,6 @@
                   "pkg:rpm/rocky/libssh-config@0.12.0-2.el10?arch=noarch\u0026distro=rocky-10.2\u0026upstream=libssh-0.12.0-2.el10.src.rpm"
                 ],
                 "security-severity": "3.7"
-              }
-            },
-            {
-              "id": "CVE-2025-13034-curl",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2025-13034 medium vulnerability for curl package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in curl. When configured to use public key pinning with QUIC connections and GnuTLS, and with standard certificate verification explicitly disabled, curl could bypass the intended public key check. This oversight allows a malicious server to impersonate a legitimate one, potentially leading to unauthorized access or information disclosure due to a failure in verifying the server's identity."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2025-13034",
-              "help": {
-                "text": "Vulnerability CVE-2025-13034\nSeverity: medium\nPackage: curl\nVersion: 8.12.1-4.el10\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2025-13034](https://access.redhat.com/security/cve/CVE-2025-13034)",
-                "markdown": "**Vulnerability CVE-2025-13034**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | curl  | 8.12.1-4.el10  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2025-13034](https://access.redhat.com/security/cve/CVE-2025-13034)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/curl@8.12.1-4.el10?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=curl-8.12.1-4.el10.src.rpm"
-                ],
-                "security-severity": "6.8"
-              }
-            },
-            {
-              "id": "CVE-2025-13034-libcurl",
-              "name": "RpmMatcherExactIndirectMatch",
-              "shortDescription": {
-                "text": "CVE-2025-13034 medium vulnerability for libcurl package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in curl. When configured to use public key pinning with QUIC connections and GnuTLS, and with standard certificate verification explicitly disabled, curl could bypass the intended public key check. This oversight allows a malicious server to impersonate a legitimate one, potentially leading to unauthorized access or information disclosure due to a failure in verifying the server's identity."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2025-13034",
-              "help": {
-                "text": "Vulnerability CVE-2025-13034\nSeverity: medium\nPackage: libcurl\nVersion: 8.12.1-4.el10\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2025-13034](https://access.redhat.com/security/cve/CVE-2025-13034)",
-                "markdown": "**Vulnerability CVE-2025-13034**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | libcurl  | 8.12.1-4.el10  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2025-13034](https://access.redhat.com/security/cve/CVE-2025-13034)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/libcurl@8.12.1-4.el10?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=curl-8.12.1-4.el10.src.rpm"
-                ],
-                "security-severity": "6.8"
               }
             },
             {
@@ -5659,6 +5638,27 @@
               }
             },
             {
+              "id": "CVE-2025-6170-libxml2",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2025-6170 low vulnerability for libxml2 package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in the interactive shell of the xmllint command-line tool, used for parsing XML files. When a user inputs an overly long command, the program does not check the input size properly, which can cause it to crash. This issue might allow attackers to run harmful code in rare configurations without modern protections."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2025-6170",
+              "help": {
+                "text": "Vulnerability CVE-2025-6170\nSeverity: low\nPackage: libxml2\nVersion: 2.12.5-10.el10\nFix Version: 0:2.12.5-10.el10_2.2\nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2025-6170](https://access.redhat.com/security/cve/CVE-2025-6170)",
+                "markdown": "**Vulnerability CVE-2025-6170**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | libxml2  | 2.12.5-10.el10  | 0:2.12.5-10.el10_2.2  | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2025-6170](https://access.redhat.com/security/cve/CVE-2025-6170)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/libxml2@2.12.5-10.el10?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=libxml2-2.12.5-10.el10.src.rpm"
+                ],
+                "security-severity": "2.5"
+              }
+            },
+            {
               "id": "CVE-2026-16118-glib2",
               "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
@@ -5722,24 +5722,45 @@
               }
             },
             {
-              "id": "CVE-2025-6170-libxml2",
+              "id": "CVE-2026-84233-rpm",
               "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
-                "text": "CVE-2025-6170 low vulnerability for libxml2 package"
+                "text": "CVE-2026-84233 medium vulnerability for rpm package"
               },
               "fullDescription": {
-                "text": "A flaw was found in the interactive shell of the xmllint command-line tool, used for parsing XML files. When a user inputs an overly long command, the program does not check the input size properly, which can cause it to crash. This issue might allow attackers to run harmful code in rare configurations without modern protections."
+                "text": "A flaw was found in rpm. A local attacker could supply a specially crafted `.gem` filename containing RPM macro syntax. When a user or automated workflow invokes `rpmuncompress -x` on this file, the macro expansion occurs during command construction. This allows the attacker to execute arbitrary commands with the privileges of the invoking account, leading to a compromise of confidentiality, integrity, and availability."
               },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2025-6170",
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-84233",
               "help": {
-                "text": "Vulnerability CVE-2025-6170\nSeverity: low\nPackage: libxml2\nVersion: 2.12.5-10.el10\nFix Version: 0:2.12.5-10.el10_2.2\nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2025-6170](https://access.redhat.com/security/cve/CVE-2025-6170)",
-                "markdown": "**Vulnerability CVE-2025-6170**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | libxml2  | 2.12.5-10.el10  | 0:2.12.5-10.el10_2.2  | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2025-6170](https://access.redhat.com/security/cve/CVE-2025-6170)  |\n"
+                "text": "Vulnerability CVE-2026-84233\nSeverity: medium\nPackage: rpm\nVersion: 4.19.1.1-23.el10\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-84233](https://access.redhat.com/security/cve/CVE-2026-84233)",
+                "markdown": "**Vulnerability CVE-2026-84233**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | rpm  | 4.19.1.1-23.el10  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-84233](https://access.redhat.com/security/cve/CVE-2026-84233)  |\n"
               },
               "properties": {
                 "purls": [
-                  "pkg:rpm/rocky/libxml2@2.12.5-10.el10?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=libxml2-2.12.5-10.el10.src.rpm"
+                  "pkg:rpm/rocky/rpm@4.19.1.1-23.el10?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=rpm-4.19.1.1-23.el10.src.rpm"
                 ],
-                "security-severity": "2.5"
+                "security-severity": "7.0"
+              }
+            },
+            {
+              "id": "CVE-2026-84233-rpm-libs",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-84233 medium vulnerability for rpm-libs package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in rpm. A local attacker could supply a specially crafted `.gem` filename containing RPM macro syntax. When a user or automated workflow invokes `rpmuncompress -x` on this file, the macro expansion occurs during command construction. This allows the attacker to execute arbitrary commands with the privileges of the invoking account, leading to a compromise of confidentiality, integrity, and availability."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-84233",
+              "help": {
+                "text": "Vulnerability CVE-2026-84233\nSeverity: medium\nPackage: rpm-libs\nVersion: 4.19.1.1-23.el10\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-84233](https://access.redhat.com/security/cve/CVE-2026-84233)",
+                "markdown": "**Vulnerability CVE-2026-84233**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | rpm-libs  | 4.19.1.1-23.el10  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-84233](https://access.redhat.com/security/cve/CVE-2026-84233)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/rpm-libs@4.19.1.1-23.el10?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=rpm-4.19.1.1-23.el10.src.rpm"
+                ],
+                "security-severity": "7.0"
               }
             },
             {
@@ -6478,6 +6499,48 @@
               }
             },
             {
+              "id": "CVE-2025-14017-curl",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2025-14017 medium vulnerability for curl package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in curl. When performing multi-threaded LDAPS (Lightweight Directory Access Protocol Secure) transfers, changes to Transport Layer Security (TLS) options in one thread could inadvertently apply globally, affecting other concurrent transfers. This could lead to unintended security posture changes, such as disabling certificate verification for other threads. This vulnerability can result in a security bypass, where expected security checks are not performed."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2025-14017",
+              "help": {
+                "text": "Vulnerability CVE-2025-14017\nSeverity: medium\nPackage: curl\nVersion: 8.12.1-4.el10\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2025-14017](https://access.redhat.com/security/cve/CVE-2025-14017)",
+                "markdown": "**Vulnerability CVE-2025-14017**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | curl  | 8.12.1-4.el10  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2025-14017](https://access.redhat.com/security/cve/CVE-2025-14017)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/curl@8.12.1-4.el10?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=curl-8.12.1-4.el10.src.rpm"
+                ],
+                "security-severity": "4.8"
+              }
+            },
+            {
+              "id": "CVE-2025-14017-libcurl",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2025-14017 medium vulnerability for libcurl package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in curl. When performing multi-threaded LDAPS (Lightweight Directory Access Protocol Secure) transfers, changes to Transport Layer Security (TLS) options in one thread could inadvertently apply globally, affecting other concurrent transfers. This could lead to unintended security posture changes, such as disabling certificate verification for other threads. This vulnerability can result in a security bypass, where expected security checks are not performed."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2025-14017",
+              "help": {
+                "text": "Vulnerability CVE-2025-14017\nSeverity: medium\nPackage: libcurl\nVersion: 8.12.1-4.el10\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2025-14017](https://access.redhat.com/security/cve/CVE-2025-14017)",
+                "markdown": "**Vulnerability CVE-2025-14017**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | libcurl  | 8.12.1-4.el10  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2025-14017](https://access.redhat.com/security/cve/CVE-2025-14017)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/libcurl@8.12.1-4.el10?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=curl-8.12.1-4.el10.src.rpm"
+                ],
+                "security-severity": "4.8"
+              }
+            },
+            {
               "id": "CVE-2026-6368-glibc",
               "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
@@ -6646,48 +6709,6 @@
               }
             },
             {
-              "id": "CVE-2025-14017-curl",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2025-14017 medium vulnerability for curl package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in curl. When performing multi-threaded LDAPS (Lightweight Directory Access Protocol Secure) transfers, changes to Transport Layer Security (TLS) options in one thread could inadvertently apply globally, affecting other concurrent transfers. This could lead to unintended security posture changes, such as disabling certificate verification for other threads. This vulnerability can result in a security bypass, where expected security checks are not performed."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2025-14017",
-              "help": {
-                "text": "Vulnerability CVE-2025-14017\nSeverity: medium\nPackage: curl\nVersion: 8.12.1-4.el10\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2025-14017](https://access.redhat.com/security/cve/CVE-2025-14017)",
-                "markdown": "**Vulnerability CVE-2025-14017**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | curl  | 8.12.1-4.el10  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2025-14017](https://access.redhat.com/security/cve/CVE-2025-14017)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/curl@8.12.1-4.el10?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=curl-8.12.1-4.el10.src.rpm"
-                ],
-                "security-severity": "4.8"
-              }
-            },
-            {
-              "id": "CVE-2025-14017-libcurl",
-              "name": "RpmMatcherExactIndirectMatch",
-              "shortDescription": {
-                "text": "CVE-2025-14017 medium vulnerability for libcurl package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in curl. When performing multi-threaded LDAPS (Lightweight Directory Access Protocol Secure) transfers, changes to Transport Layer Security (TLS) options in one thread could inadvertently apply globally, affecting other concurrent transfers. This could lead to unintended security posture changes, such as disabling certificate verification for other threads. This vulnerability can result in a security bypass, where expected security checks are not performed."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2025-14017",
-              "help": {
-                "text": "Vulnerability CVE-2025-14017\nSeverity: medium\nPackage: libcurl\nVersion: 8.12.1-4.el10\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2025-14017](https://access.redhat.com/security/cve/CVE-2025-14017)",
-                "markdown": "**Vulnerability CVE-2025-14017**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | libcurl  | 8.12.1-4.el10  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2025-14017](https://access.redhat.com/security/cve/CVE-2025-14017)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/libcurl@8.12.1-4.el10?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=curl-8.12.1-4.el10.src.rpm"
-                ],
-                "security-severity": "4.8"
-              }
-            },
-            {
               "id": "CVE-2026-54370-libacl",
               "name": "RpmMatcherExactIndirectMatch",
               "shortDescription": {
@@ -6706,27 +6727,6 @@
                   "pkg:rpm/rocky/libacl@2.3.2-4.el10?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=acl-2.3.2-4.el10.src.rpm"
                 ],
                 "security-severity": "6.3"
-              }
-            },
-            {
-              "id": "CVE-2026-16742-systemd-libs",
-              "name": "RpmMatcherExactIndirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-16742 high vulnerability for systemd-libs package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in systemd-homed. A local, logged-in user can exploit a missing signature verification in the authentication path when processing home records. This vulnerability allows the user to add arbitrary system groups to their account, which can lead to local privilege escalation and enable them to gain elevated access on the system."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-16742",
-              "help": {
-                "text": "Vulnerability CVE-2026-16742\nSeverity: high\nPackage: systemd-libs\nVersion: 257-23.el10_2.1.rocky.0.1\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-16742](https://access.redhat.com/security/cve/CVE-2026-16742)",
-                "markdown": "**Vulnerability CVE-2026-16742**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| high  | systemd-libs  | 257-23.el10_2.1.rocky.0.1  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-16742](https://access.redhat.com/security/cve/CVE-2026-16742)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/systemd-libs@257-23.el10_2.1.rocky.0.1?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=systemd-257-23.el10_2.1.rocky.0.1.src.rpm"
-                ],
-                "security-severity": "8.8"
               }
             },
             {
@@ -6925,7 +6925,7 @@
                 "text": "CVE-2026-53613 high vulnerability for libblkid package"
               },
               "fullDescription": {
-                "text": "A flaw was found in util-linux. When an /etc/fstab entry is configured with the user or users option, mount(8) validates the target path before performing the mount syscall, creating a Time-of-Check-Time-of-Use (TOCTOU) window. A local unprivileged user with write access to an ancestor directory of the mount target can swap that directory to redirect the mount to an arbitrary root-owned location, potentially escalating privileges to root."
+                "text": "When an /etc/fstab entry is configured with the user or users option, mount(8) validates the target path before performing the mount syscall, creating a Time-of-Check-Time-of-Use (TOCTOU) window. A local unprivileged user with write access to an ancestor directory of the mount target can swap that directory to redirect the mount to an arbitrary root-owned location, potentially escalating privileges to root."
               },
               "helpUri": "https://access.redhat.com/security/cve/CVE-2026-53613",
               "help": {
@@ -6988,7 +6988,7 @@
                 "text": "CVE-2026-53613 high vulnerability for libfdisk package"
               },
               "fullDescription": {
-                "text": "A flaw was found in util-linux. When an /etc/fstab entry is configured with the user or users option, mount(8) validates the target path before performing the mount syscall, creating a Time-of-Check-Time-of-Use (TOCTOU) window. A local unprivileged user with write access to an ancestor directory of the mount target can swap that directory to redirect the mount to an arbitrary root-owned location, potentially escalating privileges to root."
+                "text": "When an /etc/fstab entry is configured with the user or users option, mount(8) validates the target path before performing the mount syscall, creating a Time-of-Check-Time-of-Use (TOCTOU) window. A local unprivileged user with write access to an ancestor directory of the mount target can swap that directory to redirect the mount to an arbitrary root-owned location, potentially escalating privileges to root."
               },
               "helpUri": "https://access.redhat.com/security/cve/CVE-2026-53613",
               "help": {
@@ -7051,7 +7051,7 @@
                 "text": "CVE-2026-53613 high vulnerability for libmount package"
               },
               "fullDescription": {
-                "text": "A flaw was found in util-linux. When an /etc/fstab entry is configured with the user or users option, mount(8) validates the target path before performing the mount syscall, creating a Time-of-Check-Time-of-Use (TOCTOU) window. A local unprivileged user with write access to an ancestor directory of the mount target can swap that directory to redirect the mount to an arbitrary root-owned location, potentially escalating privileges to root."
+                "text": "When an /etc/fstab entry is configured with the user or users option, mount(8) validates the target path before performing the mount syscall, creating a Time-of-Check-Time-of-Use (TOCTOU) window. A local unprivileged user with write access to an ancestor directory of the mount target can swap that directory to redirect the mount to an arbitrary root-owned location, potentially escalating privileges to root."
               },
               "helpUri": "https://access.redhat.com/security/cve/CVE-2026-53613",
               "help": {
@@ -7114,7 +7114,7 @@
                 "text": "CVE-2026-53613 high vulnerability for libsmartcols package"
               },
               "fullDescription": {
-                "text": "A flaw was found in util-linux. When an /etc/fstab entry is configured with the user or users option, mount(8) validates the target path before performing the mount syscall, creating a Time-of-Check-Time-of-Use (TOCTOU) window. A local unprivileged user with write access to an ancestor directory of the mount target can swap that directory to redirect the mount to an arbitrary root-owned location, potentially escalating privileges to root."
+                "text": "When an /etc/fstab entry is configured with the user or users option, mount(8) validates the target path before performing the mount syscall, creating a Time-of-Check-Time-of-Use (TOCTOU) window. A local unprivileged user with write access to an ancestor directory of the mount target can swap that directory to redirect the mount to an arbitrary root-owned location, potentially escalating privileges to root."
               },
               "helpUri": "https://access.redhat.com/security/cve/CVE-2026-53613",
               "help": {
@@ -7177,7 +7177,7 @@
                 "text": "CVE-2026-53613 high vulnerability for libuuid package"
               },
               "fullDescription": {
-                "text": "A flaw was found in util-linux. When an /etc/fstab entry is configured with the user or users option, mount(8) validates the target path before performing the mount syscall, creating a Time-of-Check-Time-of-Use (TOCTOU) window. A local unprivileged user with write access to an ancestor directory of the mount target can swap that directory to redirect the mount to an arbitrary root-owned location, potentially escalating privileges to root."
+                "text": "When an /etc/fstab entry is configured with the user or users option, mount(8) validates the target path before performing the mount syscall, creating a Time-of-Check-Time-of-Use (TOCTOU) window. A local unprivileged user with write access to an ancestor directory of the mount target can swap that directory to redirect the mount to an arbitrary root-owned location, potentially escalating privileges to root."
               },
               "helpUri": "https://access.redhat.com/security/cve/CVE-2026-53613",
               "help": {
@@ -7240,7 +7240,7 @@
                 "text": "CVE-2026-53613 high vulnerability for util-linux package"
               },
               "fullDescription": {
-                "text": "A flaw was found in util-linux. When an /etc/fstab entry is configured with the user or users option, mount(8) validates the target path before performing the mount syscall, creating a Time-of-Check-Time-of-Use (TOCTOU) window. A local unprivileged user with write access to an ancestor directory of the mount target can swap that directory to redirect the mount to an arbitrary root-owned location, potentially escalating privileges to root."
+                "text": "When an /etc/fstab entry is configured with the user or users option, mount(8) validates the target path before performing the mount syscall, creating a Time-of-Check-Time-of-Use (TOCTOU) window. A local unprivileged user with write access to an ancestor directory of the mount target can swap that directory to redirect the mount to an arbitrary root-owned location, potentially escalating privileges to root."
               },
               "helpUri": "https://access.redhat.com/security/cve/CVE-2026-53613",
               "help": {
@@ -7303,7 +7303,7 @@
                 "text": "CVE-2026-53613 high vulnerability for util-linux-core package"
               },
               "fullDescription": {
-                "text": "A flaw was found in util-linux. When an /etc/fstab entry is configured with the user or users option, mount(8) validates the target path before performing the mount syscall, creating a Time-of-Check-Time-of-Use (TOCTOU) window. A local unprivileged user with write access to an ancestor directory of the mount target can swap that directory to redirect the mount to an arbitrary root-owned location, potentially escalating privileges to root."
+                "text": "When an /etc/fstab entry is configured with the user or users option, mount(8) validates the target path before performing the mount syscall, creating a Time-of-Check-Time-of-Use (TOCTOU) window. A local unprivileged user with write access to an ancestor directory of the mount target can swap that directory to redirect the mount to an arbitrary root-owned location, potentially escalating privileges to root."
               },
               "helpUri": "https://access.redhat.com/security/cve/CVE-2026-53613",
               "help": {
@@ -7336,6 +7336,27 @@
                   "pkg:rpm/rocky/util-linux-core@2.40.2-18.el10?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=util-linux-2.40.2-18.el10.src.rpm"
                 ],
                 "security-severity": "7.0"
+              }
+            },
+            {
+              "id": "CVE-2026-86469-glib2",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-86469 medium vulnerability for glib2 package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in GLib2. When g_file_replace() is used with G_FILE_CREATE_REPLACE_DESTINATION and creating the .goutputstream-XXXXXX temporary file fails, the library unlinks the destination and recreates it without exclusive creation or symlink protection. A local attacker who can write to the destination directory can win that race and redirect the write to another file."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-86469",
+              "help": {
+                "text": "Vulnerability CVE-2026-86469\nSeverity: medium\nPackage: glib2\nVersion: 2.80.4-12.el10_2.13\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-86469](https://access.redhat.com/security/cve/CVE-2026-86469)",
+                "markdown": "**Vulnerability CVE-2026-86469**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | glib2  | 2.80.4-12.el10_2.13  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-86469](https://access.redhat.com/security/cve/CVE-2026-86469)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/glib2@2.80.4-12.el10_2.13?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=glib2-2.80.4-12.el10_2.13.src.rpm"
+                ],
+                "security-severity": "5.3"
               }
             },
             {
@@ -8082,6 +8103,37 @@
           }
         },
         {
+          "ruleId": "CVE-2024-12243-gnutls",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: gnutls, version 3.8.10-4.el10_2 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "3baff2fee518352f9af76f3e148697339c3e76c28cf71cba0107e865fcaaebea:1"
+          }
+        },
+        {
           "ruleId": "CVE-2026-9079-curl",
           "level": "warning",
           "message": {
@@ -8265,37 +8317,6 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "cf066d41890017e7540d525bdcd7fd29e08f6b068b4c131e68b9944500b05f14:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2024-12243-gnutls",
-          "level": "warning",
-          "message": {
-            "text": "A medium vulnerability in rpm package: gnutls, version 3.8.10-4.el10_2 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "3baff2fee518352f9af76f3e148697339c3e76c28cf71cba0107e865fcaaebea:1"
           }
         },
         {
@@ -9601,6 +9622,68 @@
           }
         },
         {
+          "ruleId": "CVE-2025-14819-curl",
+          "level": "note",
+          "message": {
+            "text": "A low vulnerability in rpm package: curl, version 8.12.1-4.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "cf8c3493811e26dd569d2b29f0210e7db84729cf87eb211a3373cd02329cb93e:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2025-14819-libcurl",
+          "level": "note",
+          "message": {
+            "text": "A low vulnerability in rpm package: libcurl, version 8.12.1-4.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "f20110d7cf262975c4cc989d5b6f551c736c2c1dfc232da2f932e1c53cdea82f:1"
+          }
+        },
+        {
           "ruleId": "CVE-2026-28389-openssl-fips-provider",
           "level": "note",
           "message": {
@@ -9698,68 +9781,6 @@
           "level": "warning",
           "message": {
             "text": "A medium vulnerability in rpm package: libcurl, version 8.12.1-4.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "f20110d7cf262975c4cc989d5b6f551c736c2c1dfc232da2f932e1c53cdea82f:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2025-14819-curl",
-          "level": "note",
-          "message": {
-            "text": "A low vulnerability in rpm package: curl, version 8.12.1-4.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "cf8c3493811e26dd569d2b29f0210e7db84729cf87eb211a3373cd02329cb93e:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2025-14819-libcurl",
-          "level": "note",
-          "message": {
-            "text": "A low vulnerability in rpm package: libcurl, version 8.12.1-4.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
           },
           "locations": [
             {
@@ -10128,10 +10149,10 @@
           }
         },
         {
-          "ruleId": "CVE-2026-63495-libevent",
-          "level": "error",
+          "ruleId": "CVE-2025-14524-curl",
+          "level": "note",
           "message": {
-            "text": "A high vulnerability in rpm package: libevent, version 2.1.12-16.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
+            "text": "A low vulnerability in rpm package: curl, version 8.12.1-4.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
           },
           "locations": [
             {
@@ -10155,7 +10176,38 @@
             }
           ],
           "partialFingerprints": {
-            "primaryLocationLineHash": "39d25874055babf93dd1c630fa7590078f3d5bd57fbf2c1d696efff5138dac14:1"
+            "primaryLocationLineHash": "cf8c3493811e26dd569d2b29f0210e7db84729cf87eb211a3373cd02329cb93e:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2025-14524-libcurl",
+          "level": "note",
+          "message": {
+            "text": "A low vulnerability in rpm package: libcurl, version 8.12.1-4.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "f20110d7cf262975c4cc989d5b6f551c736c2c1dfc232da2f932e1c53cdea82f:1"
           }
         },
         {
@@ -10376,68 +10428,6 @@
           }
         },
         {
-          "ruleId": "CVE-2025-14524-curl",
-          "level": "note",
-          "message": {
-            "text": "A low vulnerability in rpm package: curl, version 8.12.1-4.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "cf8c3493811e26dd569d2b29f0210e7db84729cf87eb211a3373cd02329cb93e:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2025-14524-libcurl",
-          "level": "note",
-          "message": {
-            "text": "A low vulnerability in rpm package: libcurl, version 8.12.1-4.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "f20110d7cf262975c4cc989d5b6f551c736c2c1dfc232da2f932e1c53cdea82f:1"
-          }
-        },
-        {
           "ruleId": "CVE-2026-12064-curl",
           "level": "error",
           "message": {
@@ -10562,6 +10552,68 @@
           }
         },
         {
+          "ruleId": "CVE-2025-15079-curl",
+          "level": "note",
+          "message": {
+            "text": "A low vulnerability in rpm package: curl, version 8.12.1-4.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "cf8c3493811e26dd569d2b29f0210e7db84729cf87eb211a3373cd02329cb93e:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2025-15079-libcurl",
+          "level": "note",
+          "message": {
+            "text": "A low vulnerability in rpm package: libcurl, version 8.12.1-4.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "f20110d7cf262975c4cc989d5b6f551c736c2c1dfc232da2f932e1c53cdea82f:1"
+          }
+        },
+        {
           "ruleId": "CVE-2026-63379-libevent",
           "level": "warning",
           "message": {
@@ -10593,7 +10645,7 @@
           }
         },
         {
-          "ruleId": "CVE-2026-63383-libevent",
+          "ruleId": "CVE-2026-63384-libevent",
           "level": "error",
           "message": {
             "text": "A high vulnerability in rpm package: libevent, version 2.1.12-16.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
@@ -10624,7 +10676,7 @@
           }
         },
         {
-          "ruleId": "CVE-2026-63384-libevent",
+          "ruleId": "CVE-2026-63383-libevent",
           "level": "error",
           "message": {
             "text": "A high vulnerability in rpm package: libevent, version 2.1.12-16.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
@@ -10934,37 +10986,6 @@
           }
         },
         {
-          "ruleId": "CVE-2026-58012-glib2",
-          "level": "warning",
-          "message": {
-            "text": "A medium vulnerability in rpm package: glib2, version 2.80.4-12.el10_2.13 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "80cc3bbe3ea679b2b4dd4f300e1c487dbbe8837af7d52a55d1318461c9414dc7:1"
-          }
-        },
-        {
           "ruleId": "CVE-2026-58010-glib2",
           "level": "warning",
           "message": {
@@ -10996,10 +11017,10 @@
           }
         },
         {
-          "ruleId": "CVE-2025-15079-curl",
-          "level": "note",
+          "ruleId": "CVE-2026-58012-glib2",
+          "level": "warning",
           "message": {
-            "text": "A low vulnerability in rpm package: curl, version 8.12.1-4.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
+            "text": "A medium vulnerability in rpm package: glib2, version 2.80.4-12.el10_2.13 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
           },
           "locations": [
             {
@@ -11023,38 +11044,7 @@
             }
           ],
           "partialFingerprints": {
-            "primaryLocationLineHash": "cf8c3493811e26dd569d2b29f0210e7db84729cf87eb211a3373cd02329cb93e:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2025-15079-libcurl",
-          "level": "note",
-          "message": {
-            "text": "A low vulnerability in rpm package: libcurl, version 8.12.1-4.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "f20110d7cf262975c4cc989d5b6f551c736c2c1dfc232da2f932e1c53cdea82f:1"
+            "primaryLocationLineHash": "80cc3bbe3ea679b2b4dd4f300e1c487dbbe8837af7d52a55d1318461c9414dc7:1"
           }
         },
         {
@@ -12515,6 +12505,68 @@
           }
         },
         {
+          "ruleId": "CVE-2025-15224-curl",
+          "level": "note",
+          "message": {
+            "text": "A low vulnerability in rpm package: curl, version 8.12.1-4.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "cf8c3493811e26dd569d2b29f0210e7db84729cf87eb211a3373cd02329cb93e:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2025-15224-libcurl",
+          "level": "note",
+          "message": {
+            "text": "A low vulnerability in rpm package: libcurl, version 8.12.1-4.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "f20110d7cf262975c4cc989d5b6f551c736c2c1dfc232da2f932e1c53cdea82f:1"
+          }
+        },
+        {
           "ruleId": "CVE-2026-5928-glibc",
           "level": "warning",
           "message": {
@@ -12636,6 +12688,68 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "337b4d19714414cec942971f4097fc85d7d601a7bb3442fc155f6e2321facdd7:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-59847-libssh",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: libssh, version 0.12.0-2.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "194a19a0ddbe5e3603775777fa0b6a2de393ccd12b54795172e30db4b9d5091d:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-59847-libssh-config",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: libssh-config, version 0.12.0-2.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "acee919118338cc40a3683ef4b6a553114b5cb81e2897d00a559c49e4a071c11:1"
           }
         },
         {
@@ -12856,68 +12970,6 @@
           }
         },
         {
-          "ruleId": "CVE-2026-59847-libssh",
-          "level": "warning",
-          "message": {
-            "text": "A medium vulnerability in rpm package: libssh, version 0.12.0-2.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "194a19a0ddbe5e3603775777fa0b6a2de393ccd12b54795172e30db4b9d5091d:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2026-59847-libssh-config",
-          "level": "warning",
-          "message": {
-            "text": "A medium vulnerability in rpm package: libssh-config, version 0.12.0-2.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "acee919118338cc40a3683ef4b6a553114b5cb81e2897d00a559c49e4a071c11:1"
-          }
-        },
-        {
           "ruleId": "CVE-2026-1489-glib2",
           "level": "warning",
           "message": {
@@ -12984,68 +13036,6 @@
           "level": "warning",
           "message": {
             "text": "A medium vulnerability in rpm package: libcurl, version 8.12.1-4.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "f20110d7cf262975c4cc989d5b6f551c736c2c1dfc232da2f932e1c53cdea82f:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2025-15224-curl",
-          "level": "note",
-          "message": {
-            "text": "A low vulnerability in rpm package: curl, version 8.12.1-4.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "cf8c3493811e26dd569d2b29f0210e7db84729cf87eb211a3373cd02329cb93e:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2025-15224-libcurl",
-          "level": "note",
-          "message": {
-            "text": "A low vulnerability in rpm package: libcurl, version 8.12.1-4.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
           },
           "locations": [
             {
@@ -13445,6 +13435,68 @@
           }
         },
         {
+          "ruleId": "CVE-2025-13034-curl",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: curl, version 8.12.1-4.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "cf8c3493811e26dd569d2b29f0210e7db84729cf87eb211a3373cd02329cb93e:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2025-13034-libcurl",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: libcurl, version 8.12.1-4.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "f20110d7cf262975c4cc989d5b6f551c736c2c1dfc232da2f932e1c53cdea82f:1"
+          }
+        },
+        {
           "ruleId": "CVE-2026-1484-glib2",
           "level": "warning",
           "message": {
@@ -13566,68 +13618,6 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "acee919118338cc40a3683ef4b6a553114b5cb81e2897d00a559c49e4a071c11:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2025-13034-curl",
-          "level": "warning",
-          "message": {
-            "text": "A medium vulnerability in rpm package: curl, version 8.12.1-4.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "cf8c3493811e26dd569d2b29f0210e7db84729cf87eb211a3373cd02329cb93e:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2025-13034-libcurl",
-          "level": "warning",
-          "message": {
-            "text": "A medium vulnerability in rpm package: libcurl, version 8.12.1-4.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "f20110d7cf262975c4cc989d5b6f551c736c2c1dfc232da2f932e1c53cdea82f:1"
           }
         },
         {
@@ -16018,6 +16008,37 @@
           }
         },
         {
+          "ruleId": "CVE-2025-6170-libxml2",
+          "level": "note",
+          "message": {
+            "text": "A low vulnerability in rpm package: libxml2, version 2.12.5-10.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "fc03813685a8fbb51357d31bfe2f713c222e42ac0bc41b3d9e4235cb5ebeb183:1"
+          }
+        },
+        {
           "ruleId": "CVE-2026-16118-glib2",
           "level": "warning",
           "message": {
@@ -16111,10 +16132,10 @@
           }
         },
         {
-          "ruleId": "CVE-2025-6170-libxml2",
-          "level": "note",
+          "ruleId": "CVE-2026-84233-rpm",
+          "level": "warning",
           "message": {
-            "text": "A low vulnerability in rpm package: libxml2, version 2.12.5-10.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
+            "text": "A medium vulnerability in rpm package: rpm, version 4.19.1.1-23.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
           },
           "locations": [
             {
@@ -16138,7 +16159,38 @@
             }
           ],
           "partialFingerprints": {
-            "primaryLocationLineHash": "fc03813685a8fbb51357d31bfe2f713c222e42ac0bc41b3d9e4235cb5ebeb183:1"
+            "primaryLocationLineHash": "b275aa19d6018450ed03ff19b8d765db1d8ee493e751b78a6f16c2cafae1874d:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-84233-rpm-libs",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: rpm-libs, version 4.19.1.1-23.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "23d2aa01414be9974903d47b491ebe0fde5b92271135ea77b2a68c33345ee7cc:1"
           }
         },
         {
@@ -17227,6 +17279,68 @@
           }
         },
         {
+          "ruleId": "CVE-2025-14017-curl",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: curl, version 8.12.1-4.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "cf8c3493811e26dd569d2b29f0210e7db84729cf87eb211a3373cd02329cb93e:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2025-14017-libcurl",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: libcurl, version 8.12.1-4.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "f20110d7cf262975c4cc989d5b6f551c736c2c1dfc232da2f932e1c53cdea82f:1"
+          }
+        },
+        {
           "ruleId": "CVE-2026-6368-glibc",
           "level": "warning",
           "message": {
@@ -17475,68 +17589,6 @@
           }
         },
         {
-          "ruleId": "CVE-2025-14017-curl",
-          "level": "warning",
-          "message": {
-            "text": "A medium vulnerability in rpm package: curl, version 8.12.1-4.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "cf8c3493811e26dd569d2b29f0210e7db84729cf87eb211a3373cd02329cb93e:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2025-14017-libcurl",
-          "level": "warning",
-          "message": {
-            "text": "A medium vulnerability in rpm package: libcurl, version 8.12.1-4.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "f20110d7cf262975c4cc989d5b6f551c736c2c1dfc232da2f932e1c53cdea82f:1"
-          }
-        },
-        {
           "ruleId": "CVE-2026-54370-libacl",
           "level": "warning",
           "message": {
@@ -17565,37 +17617,6 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "c1e424d9fc83413cd02c9947d87e7e27f76e019cd563c0e6f754a345b2af8803:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2026-16742-systemd-libs",
-          "level": "error",
-          "message": {
-            "text": "A high vulnerability in rpm package: systemd-libs, version 257-23.el10_2.1.rocky.0.1 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "da5e7dc8e899cb8f60268efe3c53724ff5ed8db1ac5910139a39ba776ac89007:1"
           }
         },
         {
@@ -18495,6 +18516,37 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "b10c59c1abdbc1cb3795e82bf5a2130a05099f264a6c611586898173ca47a0e2:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-86469-glib2",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: glib2, version 2.80.4-12.el10_2.13 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "80cc3bbe3ea679b2b4dd4f300e1c487dbbe8837af7d52a55d1318461c9414dc7:1"
           }
         },
         {
