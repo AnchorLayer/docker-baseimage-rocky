@@ -682,6 +682,27 @@
               }
             },
             {
+              "id": "CVE-2026-0990-libxml2",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-0990 medium vulnerability for libxml2 package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in libxml2, an XML parsing library. This uncontrolled recursion vulnerability occurs in the xmlCatalogXMLResolveURI function when an XML catalog contains a delegate URI entry that references itself. A remote attacker could exploit this configuration-dependent issue by providing a specially crafted XML catalog, leading to infinite recursion and call stack exhaustion. This ultimately results in a segmentation fault, causing a Denial of Service (DoS) by crashing affected applications."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-0990",
+              "help": {
+                "text": "Vulnerability CVE-2026-0990\nSeverity: medium\nPackage: libxml2\nVersion: 2.12.5-10.el10\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-0990](https://access.redhat.com/security/cve/CVE-2026-0990)",
+                "markdown": "**Vulnerability CVE-2026-0990**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | libxml2  | 2.12.5-10.el10  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-0990](https://access.redhat.com/security/cve/CVE-2026-0990)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/libxml2@2.12.5-10.el10?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=libxml2-2.12.5-10.el10.src.rpm"
+                ],
+                "security-severity": "5.9"
+              }
+            },
+            {
               "id": "CVE-2024-41996-openssl-fips-provider",
               "name": "RpmMatcherExactIndirectMatch",
               "shortDescription": {
@@ -763,27 +784,6 @@
                   "pkg:rpm/rocky/openssl-libs@3.5.5-3.el10_2?arch=x86_64\u0026distro=rocky-10.2\u0026epoch=1\u0026upstream=openssl-3.5.5-3.el10_2.src.rpm"
                 ],
                 "security-severity": "5.3"
-              }
-            },
-            {
-              "id": "CVE-2026-0990-libxml2",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-0990 medium vulnerability for libxml2 package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in libxml2, an XML parsing library. This uncontrolled recursion vulnerability occurs in the xmlCatalogXMLResolveURI function when an XML catalog contains a delegate URI entry that references itself. A remote attacker could exploit this configuration-dependent issue by providing a specially crafted XML catalog, leading to infinite recursion and call stack exhaustion. This ultimately results in a segmentation fault, causing a Denial of Service (DoS) by crashing affected applications."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-0990",
-              "help": {
-                "text": "Vulnerability CVE-2026-0990\nSeverity: medium\nPackage: libxml2\nVersion: 2.12.5-10.el10\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-0990](https://access.redhat.com/security/cve/CVE-2026-0990)",
-                "markdown": "**Vulnerability CVE-2026-0990**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | libxml2  | 2.12.5-10.el10  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-0990](https://access.redhat.com/security/cve/CVE-2026-0990)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/libxml2@2.12.5-10.el10?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=libxml2-2.12.5-10.el10.src.rpm"
-                ],
-                "security-severity": "5.9"
               }
             },
             {
@@ -1204,6 +1204,48 @@
                   "pkg:rpm/rocky/openssl-libs@3.5.5-3.el10_2?arch=x86_64\u0026distro=rocky-10.2\u0026epoch=1\u0026upstream=openssl-3.5.5-3.el10_2.src.rpm"
                 ],
                 "security-severity": "7.5"
+              }
+            },
+            {
+              "id": "CVE-2026-34182-openssl-fips-provider",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-34182 medium vulnerability for openssl-fips-provider package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in OpenSSL's Cryptographic Message Services (CMS) AuthEnvelopedData processing. An on-path attacker can exploit insufficient input validation on cipher and tag length fields by sending specially crafted CMS messages. This can lead to the forging of messages or bypassing integrity validation. Consequently, an attacker may achieve key-equivalent functionality for a given CMS recipient."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-34182",
+              "help": {
+                "text": "Vulnerability CVE-2026-34182\nSeverity: medium\nPackage: openssl-fips-provider\nVersion: 1:3.5.5-3.el10_2\nFix Version: 1:3.5.5-4.el10_2\nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-34182](https://access.redhat.com/security/cve/CVE-2026-34182)",
+                "markdown": "**Vulnerability CVE-2026-34182**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | openssl-fips-provider  | 1:3.5.5-3.el10_2  | 1:3.5.5-4.el10_2  | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-34182](https://access.redhat.com/security/cve/CVE-2026-34182)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/openssl-fips-provider@3.5.5-3.el10_2?arch=x86_64\u0026distro=rocky-10.2\u0026epoch=1\u0026upstream=openssl-3.5.5-3.el10_2.src.rpm"
+                ],
+                "security-severity": "7.4"
+              }
+            },
+            {
+              "id": "CVE-2026-34182-openssl-libs",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-34182 medium vulnerability for openssl-libs package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in OpenSSL's Cryptographic Message Services (CMS) AuthEnvelopedData processing. An on-path attacker can exploit insufficient input validation on cipher and tag length fields by sending specially crafted CMS messages. This can lead to the forging of messages or bypassing integrity validation. Consequently, an attacker may achieve key-equivalent functionality for a given CMS recipient."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-34182",
+              "help": {
+                "text": "Vulnerability CVE-2026-34182\nSeverity: medium\nPackage: openssl-libs\nVersion: 1:3.5.5-3.el10_2\nFix Version: 1:3.5.5-4.el10_2\nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-34182](https://access.redhat.com/security/cve/CVE-2026-34182)",
+                "markdown": "**Vulnerability CVE-2026-34182**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | openssl-libs  | 1:3.5.5-3.el10_2  | 1:3.5.5-4.el10_2  | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-34182](https://access.redhat.com/security/cve/CVE-2026-34182)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/openssl-libs@3.5.5-3.el10_2?arch=x86_64\u0026distro=rocky-10.2\u0026epoch=1\u0026upstream=openssl-3.5.5-3.el10_2.src.rpm"
+                ],
+                "security-severity": "7.4"
               }
             },
             {
@@ -2089,27 +2131,6 @@
               }
             },
             {
-              "id": "CVE-2026-63383-libevent",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-63383 high vulnerability for libevent package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in Libevent, an event notification library. A remote attacker could exploit an out-of-bounds read vulnerability in the `decode_tag_internal()` function by sending specially crafted, attacker-controlled tagged RPC (Remote Procedure Call) data. This could lead to a denial of service, causing the process that decodes the data to crash."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-63383",
-              "help": {
-                "text": "Vulnerability CVE-2026-63383\nSeverity: high\nPackage: libevent\nVersion: 2.1.12-16.el10\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-63383](https://access.redhat.com/security/cve/CVE-2026-63383)",
-                "markdown": "**Vulnerability CVE-2026-63383**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| high  | libevent  | 2.1.12-16.el10  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-63383](https://access.redhat.com/security/cve/CVE-2026-63383)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/libevent@2.1.12-16.el10?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=libevent-2.1.12-16.el10.src.rpm"
-                ],
-                "security-severity": "7.5"
-              }
-            },
-            {
               "id": "CVE-2026-63384-libevent",
               "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
@@ -2122,6 +2143,27 @@
               "help": {
                 "text": "Vulnerability CVE-2026-63384\nSeverity: high\nPackage: libevent\nVersion: 2.1.12-16.el10\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-63384](https://access.redhat.com/security/cve/CVE-2026-63384)",
                 "markdown": "**Vulnerability CVE-2026-63384**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| high  | libevent  | 2.1.12-16.el10  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-63384](https://access.redhat.com/security/cve/CVE-2026-63384)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/libevent@2.1.12-16.el10?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=libevent-2.1.12-16.el10.src.rpm"
+                ],
+                "security-severity": "7.5"
+              }
+            },
+            {
+              "id": "CVE-2026-63383-libevent",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-63383 high vulnerability for libevent package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in Libevent, an event notification library. A remote attacker could exploit an out-of-bounds read vulnerability in the `decode_tag_internal()` function by sending specially crafted, attacker-controlled tagged RPC (Remote Procedure Call) data. This could lead to a denial of service, causing the process that decodes the data to crash."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-63383",
+              "help": {
+                "text": "Vulnerability CVE-2026-63383\nSeverity: high\nPackage: libevent\nVersion: 2.1.12-16.el10\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-63383](https://access.redhat.com/security/cve/CVE-2026-63383)",
+                "markdown": "**Vulnerability CVE-2026-63383**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| high  | libevent  | 2.1.12-16.el10  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-63383](https://access.redhat.com/security/cve/CVE-2026-63383)  |\n"
               },
               "properties": {
                 "purls": [
@@ -2254,48 +2296,6 @@
                   "pkg:rpm/rocky/openssl-libs@3.5.5-3.el10_2?arch=x86_64\u0026distro=rocky-10.2\u0026epoch=1\u0026upstream=openssl-3.5.5-3.el10_2.src.rpm"
                 ],
                 "security-severity": "7.5"
-              }
-            },
-            {
-              "id": "CVE-2026-34182-openssl-fips-provider",
-              "name": "RpmMatcherExactIndirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-34182 medium vulnerability for openssl-fips-provider package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in OpenSSL's Cryptographic Message Services (CMS) AuthEnvelopedData processing. An on-path attacker can exploit insufficient input validation on cipher and tag length fields by sending specially crafted CMS messages. This can lead to the forging of messages or bypassing integrity validation. Consequently, an attacker may achieve key-equivalent functionality for a given CMS recipient."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-34182",
-              "help": {
-                "text": "Vulnerability CVE-2026-34182\nSeverity: medium\nPackage: openssl-fips-provider\nVersion: 1:3.5.5-3.el10_2\nFix Version: 1:3.5.5-4.el10_2\nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-34182](https://access.redhat.com/security/cve/CVE-2026-34182)",
-                "markdown": "**Vulnerability CVE-2026-34182**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | openssl-fips-provider  | 1:3.5.5-3.el10_2  | 1:3.5.5-4.el10_2  | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-34182](https://access.redhat.com/security/cve/CVE-2026-34182)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/openssl-fips-provider@3.5.5-3.el10_2?arch=x86_64\u0026distro=rocky-10.2\u0026epoch=1\u0026upstream=openssl-3.5.5-3.el10_2.src.rpm"
-                ],
-                "security-severity": "7.4"
-              }
-            },
-            {
-              "id": "CVE-2026-34182-openssl-libs",
-              "name": "RpmMatcherExactIndirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-34182 medium vulnerability for openssl-libs package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in OpenSSL's Cryptographic Message Services (CMS) AuthEnvelopedData processing. An on-path attacker can exploit insufficient input validation on cipher and tag length fields by sending specially crafted CMS messages. This can lead to the forging of messages or bypassing integrity validation. Consequently, an attacker may achieve key-equivalent functionality for a given CMS recipient."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-34182",
-              "help": {
-                "text": "Vulnerability CVE-2026-34182\nSeverity: medium\nPackage: openssl-libs\nVersion: 1:3.5.5-3.el10_2\nFix Version: 1:3.5.5-4.el10_2\nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-34182](https://access.redhat.com/security/cve/CVE-2026-34182)",
-                "markdown": "**Vulnerability CVE-2026-34182**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | openssl-libs  | 1:3.5.5-3.el10_2  | 1:3.5.5-4.el10_2  | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-34182](https://access.redhat.com/security/cve/CVE-2026-34182)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/openssl-libs@3.5.5-3.el10_2?arch=x86_64\u0026distro=rocky-10.2\u0026epoch=1\u0026upstream=openssl-3.5.5-3.el10_2.src.rpm"
-                ],
-                "security-severity": "7.4"
               }
             },
             {
@@ -3706,6 +3706,27 @@
               }
             },
             {
+              "id": "CVE-2026-0989-libxml2",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-0989 low vulnerability for libxml2 package"
+              },
+              "fullDescription": {
+                "text": "A flaw was identified in the RelaxNG parser of libxml2 related to how external schema inclusions are handled. The parser does not enforce a limit on inclusion depth when resolving nested \u003cinclude\u003e directives. Specially crafted or overly complex schemas can cause excessive recursion during parsing. This may lead to stack exhaustion and application crashes, creating a denial-of-service risk."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-0989",
+              "help": {
+                "text": "Vulnerability CVE-2026-0989\nSeverity: low\nPackage: libxml2\nVersion: 2.12.5-10.el10\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-0989](https://access.redhat.com/security/cve/CVE-2026-0989)",
+                "markdown": "**Vulnerability CVE-2026-0989**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | libxml2  | 2.12.5-10.el10  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-0989](https://access.redhat.com/security/cve/CVE-2026-0989)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/libxml2@2.12.5-10.el10?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=libxml2-2.12.5-10.el10.src.rpm"
+                ],
+                "security-severity": "3.7"
+              }
+            },
+            {
               "id": "CVE-2026-40553-gawk",
               "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
@@ -3848,27 +3869,6 @@
               "properties": {
                 "purls": [
                   "pkg:rpm/rocky/glib2@2.80.4-12.el10_2.13?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=glib2-2.80.4-12.el10_2.13.src.rpm"
-                ],
-                "security-severity": "3.7"
-              }
-            },
-            {
-              "id": "CVE-2026-0989-libxml2",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-0989 low vulnerability for libxml2 package"
-              },
-              "fullDescription": {
-                "text": "A flaw was identified in the RelaxNG parser of libxml2 related to how external schema inclusions are handled. The parser does not enforce a limit on inclusion depth when resolving nested \u003cinclude\u003e directives. Specially crafted or overly complex schemas can cause excessive recursion during parsing. This may lead to stack exhaustion and application crashes, creating a denial-of-service risk."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-0989",
-              "help": {
-                "text": "Vulnerability CVE-2026-0989\nSeverity: low\nPackage: libxml2\nVersion: 2.12.5-10.el10\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-0989](https://access.redhat.com/security/cve/CVE-2026-0989)",
-                "markdown": "**Vulnerability CVE-2026-0989**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | libxml2  | 2.12.5-10.el10  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-0989](https://access.redhat.com/security/cve/CVE-2026-0989)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/libxml2@2.12.5-10.el10?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=libxml2-2.12.5-10.el10.src.rpm"
                 ],
                 "security-severity": "3.7"
               }
@@ -4060,6 +4060,27 @@
                   "pkg:rpm/rocky/glib2@2.80.4-12.el10_2.13?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=glib2-2.80.4-12.el10_2.13.src.rpm"
                 ],
                 "security-severity": "3.7"
+              }
+            },
+            {
+              "id": "CVE-2026-0992-libxml2",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-0992 low vulnerability for libxml2 package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in the libxml2 library. This uncontrolled resource consumption vulnerability occurs when processing XML catalogs that contain repeated \u003cnextCatalog\u003e elements pointing to the same downstream catalog. A remote attacker can exploit this by supplying crafted catalogs, causing the parser to redundantly traverse catalog chains. This leads to excessive CPU consumption and degrades application availability, resulting in a denial-of-service condition."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-0992",
+              "help": {
+                "text": "Vulnerability CVE-2026-0992\nSeverity: low\nPackage: libxml2\nVersion: 2.12.5-10.el10\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-0992](https://access.redhat.com/security/cve/CVE-2026-0992)",
+                "markdown": "**Vulnerability CVE-2026-0992**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | libxml2  | 2.12.5-10.el10  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-0992](https://access.redhat.com/security/cve/CVE-2026-0992)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/libxml2@2.12.5-10.el10?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=libxml2-2.12.5-10.el10.src.rpm"
+                ],
+                "security-severity": "2.9"
               }
             },
             {
@@ -4480,27 +4501,6 @@
                   "pkg:rpm/rocky/glibc-minimal-langpack@2.39-124.el10_2?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=glibc-2.39-124.el10_2.src.rpm"
                 ],
                 "security-severity": "5.9"
-              }
-            },
-            {
-              "id": "CVE-2026-0992-libxml2",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-0992 low vulnerability for libxml2 package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in the libxml2 library. This uncontrolled resource consumption vulnerability occurs when processing XML catalogs that contain repeated \u003cnextCatalog\u003e elements pointing to the same downstream catalog. A remote attacker can exploit this by supplying crafted catalogs, causing the parser to redundantly traverse catalog chains. This leads to excessive CPU consumption and degrades application availability, resulting in a denial-of-service condition."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-0992",
-              "help": {
-                "text": "Vulnerability CVE-2026-0992\nSeverity: low\nPackage: libxml2\nVersion: 2.12.5-10.el10\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-0992](https://access.redhat.com/security/cve/CVE-2026-0992)",
-                "markdown": "**Vulnerability CVE-2026-0992**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | libxml2  | 2.12.5-10.el10  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-0992](https://access.redhat.com/security/cve/CVE-2026-0992)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/libxml2@2.12.5-10.el10?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=libxml2-2.12.5-10.el10.src.rpm"
-                ],
-                "security-severity": "2.9"
               }
             },
             {
@@ -9028,6 +9028,37 @@
           }
         },
         {
+          "ruleId": "CVE-2026-0990-libxml2",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: libxml2, version 2.12.5-10.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "fc03813685a8fbb51357d31bfe2f713c222e42ac0bc41b3d9e4235cb5ebeb183:1"
+          }
+        },
+        {
           "ruleId": "CVE-2024-41996-openssl-fips-provider",
           "level": "note",
           "message": {
@@ -9149,37 +9180,6 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "cf066d41890017e7540d525bdcd7fd29e08f6b068b4c131e68b9944500b05f14:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2026-0990-libxml2",
-          "level": "warning",
-          "message": {
-            "text": "A medium vulnerability in rpm package: libxml2, version 2.12.5-10.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "fc03813685a8fbb51357d31bfe2f713c222e42ac0bc41b3d9e4235cb5ebeb183:1"
           }
         },
         {
@@ -9773,6 +9773,68 @@
         },
         {
           "ruleId": "CVE-2026-63072-openssl-libs",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: openssl-libs, version 1:3.5.5-3.el10_2 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "cf066d41890017e7540d525bdcd7fd29e08f6b068b4c131e68b9944500b05f14:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-34182-openssl-fips-provider",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: openssl-fips-provider, version 1:3.5.5-3.el10_2 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "0069e8659960b5ac2d4313df1cc477e71f8bd248a42b6d0c0a79a267300f690c:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-34182-openssl-libs",
           "level": "warning",
           "message": {
             "text": "A medium vulnerability in rpm package: openssl-libs, version 1:3.5.5-3.el10_2 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
@@ -11105,7 +11167,7 @@
           }
         },
         {
-          "ruleId": "CVE-2026-63383-libevent",
+          "ruleId": "CVE-2026-63384-libevent",
           "level": "error",
           "message": {
             "text": "A high vulnerability in rpm package: libevent, version 2.1.12-16.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
@@ -11136,7 +11198,7 @@
           }
         },
         {
-          "ruleId": "CVE-2026-63384-libevent",
+          "ruleId": "CVE-2026-63383-libevent",
           "level": "error",
           "message": {
             "text": "A high vulnerability in rpm package: libevent, version 2.1.12-16.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
@@ -11326,68 +11388,6 @@
           "level": "note",
           "message": {
             "text": "A low vulnerability in rpm package: openssl-libs, version 1:3.5.5-3.el10_2 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "cf066d41890017e7540d525bdcd7fd29e08f6b068b4c131e68b9944500b05f14:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2026-34182-openssl-fips-provider",
-          "level": "warning",
-          "message": {
-            "text": "A medium vulnerability in rpm package: openssl-fips-provider, version 1:3.5.5-3.el10_2 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "0069e8659960b5ac2d4313df1cc477e71f8bd248a42b6d0c0a79a267300f690c:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2026-34182-openssl-libs",
-          "level": "warning",
-          "message": {
-            "text": "A medium vulnerability in rpm package: openssl-libs, version 1:3.5.5-3.el10_2 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
           },
           "locations": [
             {
@@ -13492,6 +13492,37 @@
           }
         },
         {
+          "ruleId": "CVE-2026-0989-libxml2",
+          "level": "note",
+          "message": {
+            "text": "A low vulnerability in rpm package: libxml2, version 2.12.5-10.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "fc03813685a8fbb51357d31bfe2f713c222e42ac0bc41b3d9e4235cb5ebeb183:1"
+          }
+        },
+        {
           "ruleId": "CVE-2026-40553-gawk",
           "level": "warning",
           "message": {
@@ -13706,37 +13737,6 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "80cc3bbe3ea679b2b4dd4f300e1c487dbbe8837af7d52a55d1318461c9414dc7:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2026-0989-libxml2",
-          "level": "note",
-          "message": {
-            "text": "A low vulnerability in rpm package: libxml2, version 2.12.5-10.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "fc03813685a8fbb51357d31bfe2f713c222e42ac0bc41b3d9e4235cb5ebeb183:1"
           }
         },
         {
@@ -14016,6 +14016,37 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "80cc3bbe3ea679b2b4dd4f300e1c487dbbe8837af7d52a55d1318461c9414dc7:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-0992-libxml2",
+          "level": "note",
+          "message": {
+            "text": "A low vulnerability in rpm package: libxml2, version 2.12.5-10.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "fc03813685a8fbb51357d31bfe2f713c222e42ac0bc41b3d9e4235cb5ebeb183:1"
           }
         },
         {
@@ -14636,37 +14667,6 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "337b4d19714414cec942971f4097fc85d7d601a7bb3442fc155f6e2321facdd7:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2026-0992-libxml2",
-          "level": "note",
-          "message": {
-            "text": "A low vulnerability in rpm package: libxml2, version 2.12.5-10.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "fc03813685a8fbb51357d31bfe2f713c222e42ac0bc41b3d9e4235cb5ebeb183:1"
           }
         },
         {
