@@ -1732,27 +1732,6 @@
               }
             },
             {
-              "id": "CVE-2026-63383-libevent",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-63383 high vulnerability for libevent package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in Libevent, an event notification library. A remote attacker could exploit an out-of-bounds read vulnerability in the `decode_tag_internal()` function by sending specially crafted, attacker-controlled tagged RPC (Remote Procedure Call) data. This could lead to a denial of service, causing the process that decodes the data to crash."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-63383",
-              "help": {
-                "text": "Vulnerability CVE-2026-63383\nSeverity: high\nPackage: libevent\nVersion: 2.1.12-16.el10\nFix Version: 0:2.1.13-1.el10_2\nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-63383](https://access.redhat.com/security/cve/CVE-2026-63383)",
-                "markdown": "**Vulnerability CVE-2026-63383**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| high  | libevent  | 2.1.12-16.el10  | 0:2.1.13-1.el10_2  | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-63383](https://access.redhat.com/security/cve/CVE-2026-63383)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/libevent@2.1.12-16.el10?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=libevent-2.1.12-16.el10.src.rpm"
-                ],
-                "security-severity": "7.5"
-              }
-            },
-            {
               "id": "CVE-2026-63384-libevent",
               "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
@@ -1765,6 +1744,27 @@
               "help": {
                 "text": "Vulnerability CVE-2026-63384\nSeverity: high\nPackage: libevent\nVersion: 2.1.12-16.el10\nFix Version: 0:2.1.13-1.el10_2\nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-63384](https://access.redhat.com/security/cve/CVE-2026-63384)",
                 "markdown": "**Vulnerability CVE-2026-63384**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| high  | libevent  | 2.1.12-16.el10  | 0:2.1.13-1.el10_2  | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-63384](https://access.redhat.com/security/cve/CVE-2026-63384)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/libevent@2.1.12-16.el10?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=libevent-2.1.12-16.el10.src.rpm"
+                ],
+                "security-severity": "7.5"
+              }
+            },
+            {
+              "id": "CVE-2026-63383-libevent",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-63383 high vulnerability for libevent package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in Libevent, an event notification library. A remote attacker could exploit an out-of-bounds read vulnerability in the `decode_tag_internal()` function by sending specially crafted, attacker-controlled tagged RPC (Remote Procedure Call) data. This could lead to a denial of service, causing the process that decodes the data to crash."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-63383",
+              "help": {
+                "text": "Vulnerability CVE-2026-63383\nSeverity: high\nPackage: libevent\nVersion: 2.1.12-16.el10\nFix Version: 0:2.1.13-1.el10_2\nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-63383](https://access.redhat.com/security/cve/CVE-2026-63383)",
+                "markdown": "**Vulnerability CVE-2026-63383**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| high  | libevent  | 2.1.12-16.el10  | 0:2.1.13-1.el10_2  | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-63383](https://access.redhat.com/security/cve/CVE-2026-63383)  |\n"
               },
               "properties": {
                 "purls": [
@@ -3628,7 +3628,7 @@
                 "text": "CVE-2026-80489 medium vulnerability for glibc package"
               },
               "fullDescription": {
-                "text": "A flaw was found in glibc. A remote attacker could exploit this vulnerability by providing specially crafted input during SHIFT_JISX0213 to UCS-4 text conversion. This crafted input can cause the application to repeatedly process a buffered character without consuming further input, leading to a persistent loop and a denial of service (DoS) condition. This could make the affected application unresponsive."
+                "text": "A flaw was found in glibc. Converting crafted EUC_JISX0213 input to UCS-4 or the internal wide character encoding (for example with iconv) can cause the converter to make no progress, hanging the calling application. Some EUC_JISX0213 sequences decode to two code points; if the output buffer has room for only the first, the second is stored in conversion state and returned as E2BIG, but that pending character is never cleared after it is emitted on the next call, so retries loop forever without consuming further input."
               },
               "helpUri": "https://access.redhat.com/security/cve/CVE-2026-80489",
               "help": {
@@ -3649,7 +3649,7 @@
                 "text": "CVE-2026-80489 medium vulnerability for glibc-common package"
               },
               "fullDescription": {
-                "text": "A flaw was found in glibc. A remote attacker could exploit this vulnerability by providing specially crafted input during SHIFT_JISX0213 to UCS-4 text conversion. This crafted input can cause the application to repeatedly process a buffered character without consuming further input, leading to a persistent loop and a denial of service (DoS) condition. This could make the affected application unresponsive."
+                "text": "A flaw was found in glibc. Converting crafted EUC_JISX0213 input to UCS-4 or the internal wide character encoding (for example with iconv) can cause the converter to make no progress, hanging the calling application. Some EUC_JISX0213 sequences decode to two code points; if the output buffer has room for only the first, the second is stored in conversion state and returned as E2BIG, but that pending character is never cleared after it is emitted on the next call, so retries loop forever without consuming further input."
               },
               "helpUri": "https://access.redhat.com/security/cve/CVE-2026-80489",
               "help": {
@@ -3670,7 +3670,7 @@
                 "text": "CVE-2026-80489 medium vulnerability for glibc-langpack-en package"
               },
               "fullDescription": {
-                "text": "A flaw was found in glibc. A remote attacker could exploit this vulnerability by providing specially crafted input during SHIFT_JISX0213 to UCS-4 text conversion. This crafted input can cause the application to repeatedly process a buffered character without consuming further input, leading to a persistent loop and a denial of service (DoS) condition. This could make the affected application unresponsive."
+                "text": "A flaw was found in glibc. Converting crafted EUC_JISX0213 input to UCS-4 or the internal wide character encoding (for example with iconv) can cause the converter to make no progress, hanging the calling application. Some EUC_JISX0213 sequences decode to two code points; if the output buffer has room for only the first, the second is stored in conversion state and returned as E2BIG, but that pending character is never cleared after it is emitted on the next call, so retries loop forever without consuming further input."
               },
               "helpUri": "https://access.redhat.com/security/cve/CVE-2026-80489",
               "help": {
@@ -3691,7 +3691,7 @@
                 "text": "CVE-2026-80489 medium vulnerability for glibc-minimal-langpack package"
               },
               "fullDescription": {
-                "text": "A flaw was found in glibc. A remote attacker could exploit this vulnerability by providing specially crafted input during SHIFT_JISX0213 to UCS-4 text conversion. This crafted input can cause the application to repeatedly process a buffered character without consuming further input, leading to a persistent loop and a denial of service (DoS) condition. This could make the affected application unresponsive."
+                "text": "A flaw was found in glibc. Converting crafted EUC_JISX0213 input to UCS-4 or the internal wide character encoding (for example with iconv) can cause the converter to make no progress, hanging the calling application. Some EUC_JISX0213 sequences decode to two code points; if the output buffer has room for only the first, the second is stored in conversion state and returned as E2BIG, but that pending character is never cleared after it is emitted on the next call, so retries loop forever without consuming further input."
               },
               "helpUri": "https://access.redhat.com/security/cve/CVE-2026-80489",
               "help": {
@@ -4483,6 +4483,27 @@
               }
             },
             {
+              "id": "CVE-2026-16118-glib2",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-16118 medium vulnerability for glib2 package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in xdgmime. A heap-based buffer overflow can be triggered in _xdg_mime_magic_parse_magic_line() in the xdgmimemagic.c file on little-endian systems when an attacker-controlled MIME magic file in a user-writable XDG data location (e.g., in the $XDG_DATA_HOME/mime/magic path) is parsed by an application performing MIME type detection (e.g., via g_content_type_guess()). When performing byte-swap, incorrect pointer arithmetic on the write side causes an out-of-bounds write of 2 bytes, resulting in an application crash or memory corruption."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-16118",
+              "help": {
+                "text": "Vulnerability CVE-2026-16118\nSeverity: medium\nPackage: glib2\nVersion: 2.80.4-12.el10_2.13\nFix Version: 0:2.80.4-12.el10_2.22\nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-16118](https://access.redhat.com/security/cve/CVE-2026-16118)",
+                "markdown": "**Vulnerability CVE-2026-16118**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | glib2  | 2.80.4-12.el10_2.13  | 0:2.80.4-12.el10_2.22  | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-16118](https://access.redhat.com/security/cve/CVE-2026-16118)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/glib2@2.80.4-12.el10_2.13?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=glib2-2.80.4-12.el10_2.13.src.rpm"
+                ],
+                "security-severity": "7.1"
+              }
+            },
+            {
               "id": "CVE-2026-40468-gawk",
               "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
@@ -4711,27 +4732,6 @@
                   "pkg:rpm/rocky/libssh-config@0.12.0-2.el10?arch=noarch\u0026distro=rocky-10.2\u0026upstream=libssh-0.12.0-2.el10.src.rpm"
                 ],
                 "security-severity": "3.7"
-              }
-            },
-            {
-              "id": "CVE-2026-16118-glib2",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-16118 medium vulnerability for glib2 package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in xdgmime. A heap-based buffer overflow can be triggered in _xdg_mime_magic_parse_magic_line() in the xdgmimemagic.c file on little-endian systems when an attacker-controlled MIME magic file in a user-writable XDG data location (e.g., in the $XDG_DATA_HOME/mime/magic path) is parsed by an application performing MIME type detection (e.g., via g_content_type_guess()). When performing byte-swap, incorrect pointer arithmetic on the write side causes an out-of-bounds write of 2 bytes, resulting in an application crash or memory corruption."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-16118",
-              "help": {
-                "text": "Vulnerability CVE-2026-16118\nSeverity: medium\nPackage: glib2\nVersion: 2.80.4-12.el10_2.13\nFix Version: 0:2.80.4-12.el10_2.22\nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-16118](https://access.redhat.com/security/cve/CVE-2026-16118)",
-                "markdown": "**Vulnerability CVE-2026-16118**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | glib2  | 2.80.4-12.el10_2.13  | 0:2.80.4-12.el10_2.22  | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-16118](https://access.redhat.com/security/cve/CVE-2026-16118)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/glib2@2.80.4-12.el10_2.13?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=glib2-2.80.4-12.el10_2.13.src.rpm"
-                ],
-                "security-severity": "7.1"
               }
             },
             {
@@ -5974,6 +5974,48 @@
               }
             },
             {
+              "id": "CVE-2026-13757-p11-kit",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-13757 medium vulnerability for p11-kit package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in p11-kit. The RPC message attribute parsing functions p11_rpc_message_get_attribute() and p11_rpc_message_get_attribute_array_value() form a mutually-recursive call chain with no recursion depth limit when processing nested CKA_WRAP_TEMPLATE, CKA_UNWRAP_TEMPLATE, and CKA_DERIVE_TEMPLATE attributes. An unauthenticated attacker with local access to the p11-kit RPC Unix domain socket can send a specially crafted request with deeply nested template attributes, causing stack exhaustion and crashing the p11-kit server process and its dependent services."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-13757",
+              "help": {
+                "text": "Vulnerability CVE-2026-13757\nSeverity: medium\nPackage: p11-kit\nVersion: 0.26.2-1.el10\nFix Version: 0:0.26.4-1.el10_2\nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-13757](https://access.redhat.com/security/cve/CVE-2026-13757)",
+                "markdown": "**Vulnerability CVE-2026-13757**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | p11-kit  | 0.26.2-1.el10  | 0:0.26.4-1.el10_2  | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-13757](https://access.redhat.com/security/cve/CVE-2026-13757)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/p11-kit@0.26.2-1.el10?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=p11-kit-0.26.2-1.el10.src.rpm"
+                ],
+                "security-severity": "6.2"
+              }
+            },
+            {
+              "id": "CVE-2026-13757-p11-kit-trust",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-13757 medium vulnerability for p11-kit-trust package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in p11-kit. The RPC message attribute parsing functions p11_rpc_message_get_attribute() and p11_rpc_message_get_attribute_array_value() form a mutually-recursive call chain with no recursion depth limit when processing nested CKA_WRAP_TEMPLATE, CKA_UNWRAP_TEMPLATE, and CKA_DERIVE_TEMPLATE attributes. An unauthenticated attacker with local access to the p11-kit RPC Unix domain socket can send a specially crafted request with deeply nested template attributes, causing stack exhaustion and crashing the p11-kit server process and its dependent services."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-13757",
+              "help": {
+                "text": "Vulnerability CVE-2026-13757\nSeverity: medium\nPackage: p11-kit-trust\nVersion: 0.26.2-1.el10\nFix Version: 0:0.26.4-1.el10_2\nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-13757](https://access.redhat.com/security/cve/CVE-2026-13757)",
+                "markdown": "**Vulnerability CVE-2026-13757**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | p11-kit-trust  | 0.26.2-1.el10  | 0:0.26.4-1.el10_2  | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-13757](https://access.redhat.com/security/cve/CVE-2026-13757)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/p11-kit-trust@0.26.2-1.el10?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=p11-kit-0.26.2-1.el10.src.rpm"
+                ],
+                "security-severity": "6.2"
+              }
+            },
+            {
               "id": "CVE-2024-58261-rpm-sequoia",
               "name": "RpmMatcherExactIndirectMatch",
               "shortDescription": {
@@ -6034,48 +6076,6 @@
                   "pkg:rpm/rocky/rpm-libs@4.19.1.1-23.el10?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=rpm-4.19.1.1-23.el10.src.rpm"
                 ],
                 "security-severity": "7.0"
-              }
-            },
-            {
-              "id": "CVE-2026-13757-p11-kit",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-13757 medium vulnerability for p11-kit package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in p11-kit. The RPC message attribute parsing functions p11_rpc_message_get_attribute() and p11_rpc_message_get_attribute_array_value() form a mutually-recursive call chain with no recursion depth limit when processing nested CKA_WRAP_TEMPLATE, CKA_UNWRAP_TEMPLATE, and CKA_DERIVE_TEMPLATE attributes. An unauthenticated attacker with local access to the p11-kit RPC Unix domain socket can send a specially crafted request with deeply nested template attributes, causing stack exhaustion and crashing the p11-kit server process and its dependent services."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-13757",
-              "help": {
-                "text": "Vulnerability CVE-2026-13757\nSeverity: medium\nPackage: p11-kit\nVersion: 0.26.2-1.el10\nFix Version: 0:0.26.4-1.el10_2\nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-13757](https://access.redhat.com/security/cve/CVE-2026-13757)",
-                "markdown": "**Vulnerability CVE-2026-13757**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | p11-kit  | 0.26.2-1.el10  | 0:0.26.4-1.el10_2  | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-13757](https://access.redhat.com/security/cve/CVE-2026-13757)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/p11-kit@0.26.2-1.el10?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=p11-kit-0.26.2-1.el10.src.rpm"
-                ],
-                "security-severity": "6.2"
-              }
-            },
-            {
-              "id": "CVE-2026-13757-p11-kit-trust",
-              "name": "RpmMatcherExactIndirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-13757 medium vulnerability for p11-kit-trust package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in p11-kit. The RPC message attribute parsing functions p11_rpc_message_get_attribute() and p11_rpc_message_get_attribute_array_value() form a mutually-recursive call chain with no recursion depth limit when processing nested CKA_WRAP_TEMPLATE, CKA_UNWRAP_TEMPLATE, and CKA_DERIVE_TEMPLATE attributes. An unauthenticated attacker with local access to the p11-kit RPC Unix domain socket can send a specially crafted request with deeply nested template attributes, causing stack exhaustion and crashing the p11-kit server process and its dependent services."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-13757",
-              "help": {
-                "text": "Vulnerability CVE-2026-13757\nSeverity: medium\nPackage: p11-kit-trust\nVersion: 0.26.2-1.el10\nFix Version: 0:0.26.4-1.el10_2\nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-13757](https://access.redhat.com/security/cve/CVE-2026-13757)",
-                "markdown": "**Vulnerability CVE-2026-13757**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | p11-kit-trust  | 0.26.2-1.el10  | 0:0.26.4-1.el10_2  | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-13757](https://access.redhat.com/security/cve/CVE-2026-13757)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/p11-kit-trust@0.26.2-1.el10?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=p11-kit-0.26.2-1.el10.src.rpm"
-                ],
-                "security-severity": "6.2"
               }
             },
             {
@@ -6856,27 +6856,6 @@
               }
             },
             {
-              "id": "CVE-2025-6170-libxml2",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2025-6170 low vulnerability for libxml2 package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in the interactive shell of the xmllint command-line tool, used for parsing XML files. When a user inputs an overly long command, the program does not check the input size properly, which can cause it to crash. This issue might allow attackers to run harmful code in rare configurations without modern protections."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2025-6170",
-              "help": {
-                "text": "Vulnerability CVE-2025-6170\nSeverity: low\nPackage: libxml2\nVersion: 2.12.5-10.el10\nFix Version: 0:2.12.5-10.el10_2.2\nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2025-6170](https://access.redhat.com/security/cve/CVE-2025-6170)",
-                "markdown": "**Vulnerability CVE-2025-6170**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | libxml2  | 2.12.5-10.el10  | 0:2.12.5-10.el10_2.2  | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2025-6170](https://access.redhat.com/security/cve/CVE-2025-6170)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/libxml2@2.12.5-10.el10?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=libxml2-2.12.5-10.el10.src.rpm"
-                ],
-                "security-severity": "2.5"
-              }
-            },
-            {
               "id": "CVE-2026-56392-coreutils-single",
               "name": "RpmMatcherExactIndirectMatch",
               "shortDescription": {
@@ -6979,6 +6958,27 @@
                   "pkg:rpm/rocky/pcre2-syntax@10.44-1.el10.3?arch=noarch\u0026distro=rocky-10.2\u0026upstream=pcre2-10.44-1.el10.3.src.rpm"
                 ],
                 "security-severity": "2.9"
+              }
+            },
+            {
+              "id": "CVE-2025-6170-libxml2",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2025-6170 low vulnerability for libxml2 package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in the interactive shell of the xmllint command-line tool, used for parsing XML files. When a user inputs an overly long command, the program does not check the input size properly, which can cause it to crash. This issue might allow attackers to run harmful code in rare configurations without modern protections."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2025-6170",
+              "help": {
+                "text": "Vulnerability CVE-2025-6170\nSeverity: low\nPackage: libxml2\nVersion: 2.12.5-10.el10\nFix Version: 0:2.12.5-10.el10_2.2\nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2025-6170](https://access.redhat.com/security/cve/CVE-2025-6170)",
+                "markdown": "**Vulnerability CVE-2025-6170**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | libxml2  | 2.12.5-10.el10  | 0:2.12.5-10.el10_2.2  | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2025-6170](https://access.redhat.com/security/cve/CVE-2025-6170)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/libxml2@2.12.5-10.el10?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=libxml2-2.12.5-10.el10.src.rpm"
+                ],
+                "security-severity": "2.5"
               }
             },
             {
@@ -11292,7 +11292,7 @@
           }
         },
         {
-          "ruleId": "CVE-2026-63383-libevent",
+          "ruleId": "CVE-2026-63384-libevent",
           "level": "error",
           "message": {
             "text": "A high vulnerability in rpm package: libevent, version 2.1.12-16.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
@@ -11323,7 +11323,7 @@
           }
         },
         {
-          "ruleId": "CVE-2026-63384-libevent",
+          "ruleId": "CVE-2026-63383-libevent",
           "level": "error",
           "message": {
             "text": "A high vulnerability in rpm package: libevent, version 2.1.12-16.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
@@ -15353,6 +15353,37 @@
           }
         },
         {
+          "ruleId": "CVE-2026-16118-glib2",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: glib2, version 2.80.4-12.el10_2.13 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "80cc3bbe3ea679b2b4dd4f300e1c487dbbe8837af7d52a55d1318461c9414dc7:1"
+          }
+        },
+        {
           "ruleId": "CVE-2026-40468-gawk",
           "level": "warning",
           "message": {
@@ -15691,37 +15722,6 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "acee919118338cc40a3683ef4b6a553114b5cb81e2897d00a559c49e4a071c11:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2026-16118-glib2",
-          "level": "warning",
-          "message": {
-            "text": "A medium vulnerability in rpm package: glib2, version 2.80.4-12.el10_2.13 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "80cc3bbe3ea679b2b4dd4f300e1c487dbbe8837af7d52a55d1318461c9414dc7:1"
           }
         },
         {
@@ -17554,6 +17554,68 @@
           }
         },
         {
+          "ruleId": "CVE-2026-13757-p11-kit",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: p11-kit, version 0.26.2-1.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "c7b436b56aecdccd675576a59dcca0c0a5b5af0b667cdd6c5c13de31cc645993:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-13757-p11-kit-trust",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: p11-kit-trust, version 0.26.2-1.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "49b1c7c4fe8a04551d4649a72c0f422ecfacf5e19dea14f2c241772c2d0fc8ba:1"
+          }
+        },
+        {
           "ruleId": "CVE-2024-58261-rpm-sequoia",
           "level": "note",
           "message": {
@@ -17644,68 +17706,6 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "23d2aa01414be9974903d47b491ebe0fde5b92271135ea77b2a68c33345ee7cc:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2026-13757-p11-kit",
-          "level": "warning",
-          "message": {
-            "text": "A medium vulnerability in rpm package: p11-kit, version 0.26.2-1.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "c7b436b56aecdccd675576a59dcca0c0a5b5af0b667cdd6c5c13de31cc645993:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2026-13757-p11-kit-trust",
-          "level": "warning",
-          "message": {
-            "text": "A medium vulnerability in rpm package: p11-kit-trust, version 0.26.2-1.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "49b1c7c4fe8a04551d4649a72c0f422ecfacf5e19dea14f2c241772c2d0fc8ba:1"
           }
         },
         {
@@ -18856,37 +18856,6 @@
           }
         },
         {
-          "ruleId": "CVE-2025-6170-libxml2",
-          "level": "note",
-          "message": {
-            "text": "A low vulnerability in rpm package: libxml2, version 2.12.5-10.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "fc03813685a8fbb51357d31bfe2f713c222e42ac0bc41b3d9e4235cb5ebeb183:1"
-          }
-        },
-        {
           "ruleId": "CVE-2026-56392-coreutils-single",
           "level": "warning",
           "message": {
@@ -19039,6 +19008,37 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "9d432abb8753cddce58cd595abb201b14b335782166be5bd5591a8b780cff822:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2025-6170-libxml2",
+          "level": "note",
+          "message": {
+            "text": "A low vulnerability in rpm package: libxml2, version 2.12.5-10.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "fc03813685a8fbb51357d31bfe2f713c222e42ac0bc41b3d9e4235cb5ebeb183:1"
           }
         },
         {
