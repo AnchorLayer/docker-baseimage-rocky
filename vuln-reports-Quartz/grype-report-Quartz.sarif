@@ -997,27 +997,6 @@
               }
             },
             {
-              "id": "CVE-2026-58010-glib2",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-58010 medium vulnerability for glib2 package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in GLib. An off-by-one error can occur in the gvs_tuple_is_normal function in the glib/gvariant-serialiser.c file when doing an alignment padding check because the bounds check uses \u003e instead of \u003e=, causing an out-of-bounds read of only 1 byte. This issue can cause a minor information disclosure of 1 byte and a denial of service when the out-of-bounds read crosses a page boundary."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-58010",
-              "help": {
-                "text": "Vulnerability CVE-2026-58010\nSeverity: medium\nPackage: glib2\nVersion: 2.80.4-12.el10_2.13\nFix Version: 0:2.80.4-12.el10_2.21\nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-58010](https://access.redhat.com/security/cve/CVE-2026-58010)",
-                "markdown": "**Vulnerability CVE-2026-58010**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | glib2  | 2.80.4-12.el10_2.13  | 0:2.80.4-12.el10_2.21  | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-58010](https://access.redhat.com/security/cve/CVE-2026-58010)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/glib2@2.80.4-12.el10_2.13?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=glib2-2.80.4-12.el10_2.13.src.rpm"
-                ],
-                "security-severity": "6.5"
-              }
-            },
-            {
               "id": "CVE-2026-58013-glib2",
               "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
@@ -1030,6 +1009,27 @@
               "help": {
                 "text": "Vulnerability CVE-2026-58013\nSeverity: medium\nPackage: glib2\nVersion: 2.80.4-12.el10_2.13\nFix Version: 0:2.80.4-12.el10_2.21\nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-58013](https://access.redhat.com/security/cve/CVE-2026-58013)",
                 "markdown": "**Vulnerability CVE-2026-58013**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | glib2  | 2.80.4-12.el10_2.13  | 0:2.80.4-12.el10_2.21  | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-58013](https://access.redhat.com/security/cve/CVE-2026-58013)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/glib2@2.80.4-12.el10_2.13?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=glib2-2.80.4-12.el10_2.13.src.rpm"
+                ],
+                "security-severity": "6.5"
+              }
+            },
+            {
+              "id": "CVE-2026-58010-glib2",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-58010 medium vulnerability for glib2 package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in GLib. An off-by-one error can occur in the gvs_tuple_is_normal function in the glib/gvariant-serialiser.c file when doing an alignment padding check because the bounds check uses \u003e instead of \u003e=, causing an out-of-bounds read of only 1 byte. This issue can cause a minor information disclosure of 1 byte and a denial of service when the out-of-bounds read crosses a page boundary."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-58010",
+              "help": {
+                "text": "Vulnerability CVE-2026-58010\nSeverity: medium\nPackage: glib2\nVersion: 2.80.4-12.el10_2.13\nFix Version: 0:2.80.4-12.el10_2.21\nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-58010](https://access.redhat.com/security/cve/CVE-2026-58010)",
+                "markdown": "**Vulnerability CVE-2026-58010**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | glib2  | 2.80.4-12.el10_2.13  | 0:2.80.4-12.el10_2.21  | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-58010](https://access.redhat.com/security/cve/CVE-2026-58010)  |\n"
               },
               "properties": {
                 "purls": [
@@ -5008,6 +5008,27 @@
               }
             },
             {
+              "id": "CVE-2026-42784-rpm-sequoia",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-42784 high vulnerability for rpm-sequoia package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in sequoia-openpgp. The library incorrectly infers key flags for older certificates when a key flags subpacket is missing, leading to a discrepancy in how key capabilities are viewed. This key flag confusion allows an attacker to bypass the back-signature check. Consequently, an attacker can illegitimately bind an arbitrary subkey to their own certificate and forge signatures, completely compromising cryptographic integrity."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-42784",
+              "help": {
+                "text": "Vulnerability CVE-2026-42784\nSeverity: high\nPackage: rpm-sequoia\nVersion: 1.10.1.1-2.el10\nFix Version: 0:1.10.2.1-1.el10_2\nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-42784](https://access.redhat.com/security/cve/CVE-2026-42784)",
+                "markdown": "**Vulnerability CVE-2026-42784**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| high  | rpm-sequoia  | 1.10.1.1-2.el10  | 0:1.10.2.1-1.el10_2  | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-42784](https://access.redhat.com/security/cve/CVE-2026-42784)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/rpm-sequoia@1.10.1.1-2.el10?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=rust-rpm-sequoia-1.10.1.1-2.el10.src.rpm"
+                ],
+                "security-severity": "7.4"
+              }
+            },
+            {
               "id": "CVE-2026-1965-curl",
               "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
@@ -5089,27 +5110,6 @@
                   "pkg:rpm/rocky/libstdc%2B%2B@14.3.1-4.4.el10?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=gcc-14.3.1-4.4.el10.src.rpm"
                 ],
                 "security-severity": "7.0"
-              }
-            },
-            {
-              "id": "CVE-2026-42784-rpm-sequoia",
-              "name": "RpmMatcherExactIndirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-42784 high vulnerability for rpm-sequoia package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in sequoia-openpgp. The library incorrectly infers key flags for older certificates when a key flags subpacket is missing, leading to a discrepancy in how key capabilities are viewed. This key flag confusion allows an attacker to bypass the back-signature check. Consequently, an attacker can illegitimately bind an arbitrary subkey to their own certificate and forge signatures, completely compromising cryptographic integrity."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-42784",
-              "help": {
-                "text": "Vulnerability CVE-2026-42784\nSeverity: high\nPackage: rpm-sequoia\nVersion: 1.10.1.1-2.el10\nFix Version: 0:1.10.2.1-1.el10_2\nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-42784](https://access.redhat.com/security/cve/CVE-2026-42784)",
-                "markdown": "**Vulnerability CVE-2026-42784**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| high  | rpm-sequoia  | 1.10.1.1-2.el10  | 0:1.10.2.1-1.el10_2  | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-42784](https://access.redhat.com/security/cve/CVE-2026-42784)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/rpm-sequoia@1.10.1.1-2.el10?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=rust-rpm-sequoia-1.10.1.1-2.el10.src.rpm"
-                ],
-                "security-severity": "7.4"
               }
             },
             {
@@ -7780,6 +7780,27 @@
               }
             },
             {
+              "id": "CVE-2026-11979-libxml2",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-11979 medium vulnerability for libxml2 package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in libxml2, specifically within the xmlcatalog utility when operating in shell mode. An attacker can exploit multiple stack-based buffer overflows by providing an excessively long input line. This leads to memory corruption, which may cause the application to crash or potentially allow the attacker to execute arbitrary code within the context of the xmlcatalog process."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-11979",
+              "help": {
+                "text": "Vulnerability CVE-2026-11979\nSeverity: medium\nPackage: libxml2\nVersion: 2.12.5-10.el10\nFix Version: 0:2.12.5-10.el10_2.3\nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-11979](https://access.redhat.com/security/cve/CVE-2026-11979)",
+                "markdown": "**Vulnerability CVE-2026-11979**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | libxml2  | 2.12.5-10.el10  | 0:2.12.5-10.el10_2.3  | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-11979](https://access.redhat.com/security/cve/CVE-2026-11979)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/libxml2@2.12.5-10.el10?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=libxml2-2.12.5-10.el10.src.rpm"
+                ],
+                "security-severity": "5.9"
+              }
+            },
+            {
               "id": "CVE-2026-45446-openssl-fips-provider",
               "name": "RpmMatcherExactIndirectMatch",
               "shortDescription": {
@@ -8302,27 +8323,6 @@
                   "pkg:rpm/rocky/glib2@2.80.4-12.el10_2.13?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=glib2-2.80.4-12.el10_2.13.src.rpm"
                 ],
                 "security-severity": "5.3"
-              }
-            },
-            {
-              "id": "CVE-2026-11979-libxml2",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-11979 medium vulnerability for libxml2 package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in libxml2, specifically within the xmlcatalog utility when operating in shell mode. An attacker can exploit multiple stack-based buffer overflows by providing an excessively long input line. This leads to memory corruption, which may cause the application to crash or potentially allow the attacker to execute arbitrary code within the context of the xmlcatalog process."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-11979",
-              "help": {
-                "text": "Vulnerability CVE-2026-11979\nSeverity: medium\nPackage: libxml2\nVersion: 2.12.5-10.el10\nFix Version: 0:2.12.5-10.el10_2.3\nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-11979](https://access.redhat.com/security/cve/CVE-2026-11979)",
-                "markdown": "**Vulnerability CVE-2026-11979**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | libxml2  | 2.12.5-10.el10  | 0:2.12.5-10.el10_2.3  | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-11979](https://access.redhat.com/security/cve/CVE-2026-11979)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/libxml2@2.12.5-10.el10?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=libxml2-2.12.5-10.el10.src.rpm"
-                ],
-                "security-severity": "4.8"
               }
             },
             {
@@ -9103,27 +9103,6 @@
               }
             },
             {
-              "id": "CVE-2026-53614-libblkid",
-              "name": "RpmMatcherExactIndirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-53614 high vulnerability for libblkid package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in util-linux. The mount(8) SUID binary does not sanitize the LIBMOUNT_FORCE_MOUNT2 environment variable before use. A local unprivileged user can set this variable to force mount(8) to use the legacy two-step mount(2) code path, which applies security restrictions such as nosuid and noexec after the mount is already active. During this window, an attacker can execute a SUID binary from the mounted filesystem, allowing local privilege escalation to root."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-53614",
-              "help": {
-                "text": "Vulnerability CVE-2026-53614\nSeverity: high\nPackage: libblkid\nVersion: 2.40.2-18.el10\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-53614](https://access.redhat.com/security/cve/CVE-2026-53614)",
-                "markdown": "**Vulnerability CVE-2026-53614**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| high  | libblkid  | 2.40.2-18.el10  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-53614](https://access.redhat.com/security/cve/CVE-2026-53614)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/libblkid@2.40.2-18.el10?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=util-linux-2.40.2-18.el10.src.rpm"
-                ],
-                "security-severity": "7.0"
-              }
-            },
-            {
               "id": "CVE-2026-53612-libfdisk",
               "name": "RpmMatcherExactIndirectMatch",
               "shortDescription": {
@@ -9157,27 +9136,6 @@
               "help": {
                 "text": "Vulnerability CVE-2026-53613\nSeverity: high\nPackage: libfdisk\nVersion: 2.40.2-18.el10\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-53613](https://access.redhat.com/security/cve/CVE-2026-53613)",
                 "markdown": "**Vulnerability CVE-2026-53613**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| high  | libfdisk  | 2.40.2-18.el10  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-53613](https://access.redhat.com/security/cve/CVE-2026-53613)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/libfdisk@2.40.2-18.el10?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=util-linux-2.40.2-18.el10.src.rpm"
-                ],
-                "security-severity": "7.0"
-              }
-            },
-            {
-              "id": "CVE-2026-53614-libfdisk",
-              "name": "RpmMatcherExactIndirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-53614 high vulnerability for libfdisk package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in util-linux. The mount(8) SUID binary does not sanitize the LIBMOUNT_FORCE_MOUNT2 environment variable before use. A local unprivileged user can set this variable to force mount(8) to use the legacy two-step mount(2) code path, which applies security restrictions such as nosuid and noexec after the mount is already active. During this window, an attacker can execute a SUID binary from the mounted filesystem, allowing local privilege escalation to root."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-53614",
-              "help": {
-                "text": "Vulnerability CVE-2026-53614\nSeverity: high\nPackage: libfdisk\nVersion: 2.40.2-18.el10\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-53614](https://access.redhat.com/security/cve/CVE-2026-53614)",
-                "markdown": "**Vulnerability CVE-2026-53614**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| high  | libfdisk  | 2.40.2-18.el10  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-53614](https://access.redhat.com/security/cve/CVE-2026-53614)  |\n"
               },
               "properties": {
                 "purls": [
@@ -9229,27 +9187,6 @@
               }
             },
             {
-              "id": "CVE-2026-53614-libmount",
-              "name": "RpmMatcherExactIndirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-53614 high vulnerability for libmount package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in util-linux. The mount(8) SUID binary does not sanitize the LIBMOUNT_FORCE_MOUNT2 environment variable before use. A local unprivileged user can set this variable to force mount(8) to use the legacy two-step mount(2) code path, which applies security restrictions such as nosuid and noexec after the mount is already active. During this window, an attacker can execute a SUID binary from the mounted filesystem, allowing local privilege escalation to root."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-53614",
-              "help": {
-                "text": "Vulnerability CVE-2026-53614\nSeverity: high\nPackage: libmount\nVersion: 2.40.2-18.el10\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-53614](https://access.redhat.com/security/cve/CVE-2026-53614)",
-                "markdown": "**Vulnerability CVE-2026-53614**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| high  | libmount  | 2.40.2-18.el10  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-53614](https://access.redhat.com/security/cve/CVE-2026-53614)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/libmount@2.40.2-18.el10?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=util-linux-2.40.2-18.el10.src.rpm"
-                ],
-                "security-severity": "7.0"
-              }
-            },
-            {
               "id": "CVE-2026-53612-libsmartcols",
               "name": "RpmMatcherExactIndirectMatch",
               "shortDescription": {
@@ -9283,27 +9220,6 @@
               "help": {
                 "text": "Vulnerability CVE-2026-53613\nSeverity: high\nPackage: libsmartcols\nVersion: 2.40.2-18.el10\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-53613](https://access.redhat.com/security/cve/CVE-2026-53613)",
                 "markdown": "**Vulnerability CVE-2026-53613**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| high  | libsmartcols  | 2.40.2-18.el10  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-53613](https://access.redhat.com/security/cve/CVE-2026-53613)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/libsmartcols@2.40.2-18.el10?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=util-linux-2.40.2-18.el10.src.rpm"
-                ],
-                "security-severity": "7.0"
-              }
-            },
-            {
-              "id": "CVE-2026-53614-libsmartcols",
-              "name": "RpmMatcherExactIndirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-53614 high vulnerability for libsmartcols package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in util-linux. The mount(8) SUID binary does not sanitize the LIBMOUNT_FORCE_MOUNT2 environment variable before use. A local unprivileged user can set this variable to force mount(8) to use the legacy two-step mount(2) code path, which applies security restrictions such as nosuid and noexec after the mount is already active. During this window, an attacker can execute a SUID binary from the mounted filesystem, allowing local privilege escalation to root."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-53614",
-              "help": {
-                "text": "Vulnerability CVE-2026-53614\nSeverity: high\nPackage: libsmartcols\nVersion: 2.40.2-18.el10\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-53614](https://access.redhat.com/security/cve/CVE-2026-53614)",
-                "markdown": "**Vulnerability CVE-2026-53614**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| high  | libsmartcols  | 2.40.2-18.el10  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-53614](https://access.redhat.com/security/cve/CVE-2026-53614)  |\n"
               },
               "properties": {
                 "purls": [
@@ -9355,27 +9271,6 @@
               }
             },
             {
-              "id": "CVE-2026-53614-libuuid",
-              "name": "RpmMatcherExactIndirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-53614 high vulnerability for libuuid package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in util-linux. The mount(8) SUID binary does not sanitize the LIBMOUNT_FORCE_MOUNT2 environment variable before use. A local unprivileged user can set this variable to force mount(8) to use the legacy two-step mount(2) code path, which applies security restrictions such as nosuid and noexec after the mount is already active. During this window, an attacker can execute a SUID binary from the mounted filesystem, allowing local privilege escalation to root."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-53614",
-              "help": {
-                "text": "Vulnerability CVE-2026-53614\nSeverity: high\nPackage: libuuid\nVersion: 2.40.2-18.el10\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-53614](https://access.redhat.com/security/cve/CVE-2026-53614)",
-                "markdown": "**Vulnerability CVE-2026-53614**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| high  | libuuid  | 2.40.2-18.el10  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-53614](https://access.redhat.com/security/cve/CVE-2026-53614)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/libuuid@2.40.2-18.el10?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=util-linux-2.40.2-18.el10.src.rpm"
-                ],
-                "security-severity": "7.0"
-              }
-            },
-            {
               "id": "CVE-2026-53612-util-linux",
               "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
@@ -9418,27 +9313,6 @@
               }
             },
             {
-              "id": "CVE-2026-53614-util-linux",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-53614 high vulnerability for util-linux package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in util-linux. The mount(8) SUID binary does not sanitize the LIBMOUNT_FORCE_MOUNT2 environment variable before use. A local unprivileged user can set this variable to force mount(8) to use the legacy two-step mount(2) code path, which applies security restrictions such as nosuid and noexec after the mount is already active. During this window, an attacker can execute a SUID binary from the mounted filesystem, allowing local privilege escalation to root."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-53614",
-              "help": {
-                "text": "Vulnerability CVE-2026-53614\nSeverity: high\nPackage: util-linux\nVersion: 2.40.2-18.el10\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-53614](https://access.redhat.com/security/cve/CVE-2026-53614)",
-                "markdown": "**Vulnerability CVE-2026-53614**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| high  | util-linux  | 2.40.2-18.el10  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-53614](https://access.redhat.com/security/cve/CVE-2026-53614)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/util-linux@2.40.2-18.el10?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=util-linux-2.40.2-18.el10.src.rpm"
-                ],
-                "security-severity": "7.0"
-              }
-            },
-            {
               "id": "CVE-2026-53612-util-linux-core",
               "name": "RpmMatcherExactIndirectMatch",
               "shortDescription": {
@@ -9472,27 +9346,6 @@
               "help": {
                 "text": "Vulnerability CVE-2026-53613\nSeverity: high\nPackage: util-linux-core\nVersion: 2.40.2-18.el10\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-53613](https://access.redhat.com/security/cve/CVE-2026-53613)",
                 "markdown": "**Vulnerability CVE-2026-53613**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| high  | util-linux-core  | 2.40.2-18.el10  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-53613](https://access.redhat.com/security/cve/CVE-2026-53613)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/util-linux-core@2.40.2-18.el10?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=util-linux-2.40.2-18.el10.src.rpm"
-                ],
-                "security-severity": "7.0"
-              }
-            },
-            {
-              "id": "CVE-2026-53614-util-linux-core",
-              "name": "RpmMatcherExactIndirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-53614 high vulnerability for util-linux-core package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in util-linux. The mount(8) SUID binary does not sanitize the LIBMOUNT_FORCE_MOUNT2 environment variable before use. A local unprivileged user can set this variable to force mount(8) to use the legacy two-step mount(2) code path, which applies security restrictions such as nosuid and noexec after the mount is already active. During this window, an attacker can execute a SUID binary from the mounted filesystem, allowing local privilege escalation to root."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-53614",
-              "help": {
-                "text": "Vulnerability CVE-2026-53614\nSeverity: high\nPackage: util-linux-core\nVersion: 2.40.2-18.el10\nFix Version: \nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-53614](https://access.redhat.com/security/cve/CVE-2026-53614)",
-                "markdown": "**Vulnerability CVE-2026-53614**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| high  | util-linux-core  | 2.40.2-18.el10  |   | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-53614](https://access.redhat.com/security/cve/CVE-2026-53614)  |\n"
               },
               "properties": {
                 "purls": [
@@ -10963,7 +10816,7 @@
           }
         },
         {
-          "ruleId": "CVE-2026-58010-glib2",
+          "ruleId": "CVE-2026-58013-glib2",
           "level": "warning",
           "message": {
             "text": "A medium vulnerability in rpm package: glib2, version 2.80.4-12.el10_2.13 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
@@ -10994,7 +10847,7 @@
           }
         },
         {
-          "ruleId": "CVE-2026-58013-glib2",
+          "ruleId": "CVE-2026-58010-glib2",
           "level": "warning",
           "message": {
             "text": "A medium vulnerability in rpm package: glib2, version 2.80.4-12.el10_2.13 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
@@ -16884,6 +16737,37 @@
           }
         },
         {
+          "ruleId": "CVE-2026-42784-rpm-sequoia",
+          "level": "error",
+          "message": {
+            "text": "A high vulnerability in rpm package: rpm-sequoia, version 1.10.1.1-2.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "53b15c2200b9ddf7313a64461b70119e26d19b74b83bc381fa5668e69490c48f:1"
+          }
+        },
+        {
           "ruleId": "CVE-2026-1965-curl",
           "level": "warning",
           "message": {
@@ -17005,37 +16889,6 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "1202a89b576b5ec3bc7c50a3b98d7faa39a4d42b10358c8c37ef29c8597b042f:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2026-42784-rpm-sequoia",
-          "level": "error",
-          "message": {
-            "text": "A high vulnerability in rpm package: rpm-sequoia, version 1.10.1.1-2.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "53b15c2200b9ddf7313a64461b70119e26d19b74b83bc381fa5668e69490c48f:1"
           }
         },
         {
@@ -20976,6 +20829,37 @@
           }
         },
         {
+          "ruleId": "CVE-2026-11979-libxml2",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: libxml2, version 2.12.5-10.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "fc03813685a8fbb51357d31bfe2f713c222e42ac0bc41b3d9e4235cb5ebeb183:1"
+          }
+        },
+        {
           "ruleId": "CVE-2026-45446-openssl-fips-provider",
           "level": "note",
           "message": {
@@ -21748,37 +21632,6 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "80cc3bbe3ea679b2b4dd4f300e1c487dbbe8837af7d52a55d1318461c9414dc7:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2026-11979-libxml2",
-          "level": "warning",
-          "message": {
-            "text": "A medium vulnerability in rpm package: libxml2, version 2.12.5-10.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "fc03813685a8fbb51357d31bfe2f713c222e42ac0bc41b3d9e4235cb5ebeb183:1"
           }
         },
         {
@@ -22929,37 +22782,6 @@
           }
         },
         {
-          "ruleId": "CVE-2026-53614-libblkid",
-          "level": "error",
-          "message": {
-            "text": "A high vulnerability in rpm package: libblkid, version 2.40.2-18.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "1230359add1d749b567826ca93828c3f2d12d1c61fef6e40e5e29b110697a410:1"
-          }
-        },
-        {
           "ruleId": "CVE-2026-53612-libfdisk",
           "level": "error",
           "message": {
@@ -22992,37 +22814,6 @@
         },
         {
           "ruleId": "CVE-2026-53613-libfdisk",
-          "level": "error",
-          "message": {
-            "text": "A high vulnerability in rpm package: libfdisk, version 2.40.2-18.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "861a9067d446b966faf993f3f2fe71fafaef1a623d71e922826788ae78539f61:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2026-53614-libfdisk",
           "level": "error",
           "message": {
             "text": "A high vulnerability in rpm package: libfdisk, version 2.40.2-18.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
@@ -23115,37 +22906,6 @@
           }
         },
         {
-          "ruleId": "CVE-2026-53614-libmount",
-          "level": "error",
-          "message": {
-            "text": "A high vulnerability in rpm package: libmount, version 2.40.2-18.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "1b11d392d5f696bcbbfa7177f410d7463fe09932bca31ca5a94fdcd854fc5fe8:1"
-          }
-        },
-        {
           "ruleId": "CVE-2026-53612-libsmartcols",
           "level": "error",
           "message": {
@@ -23178,37 +22938,6 @@
         },
         {
           "ruleId": "CVE-2026-53613-libsmartcols",
-          "level": "error",
-          "message": {
-            "text": "A high vulnerability in rpm package: libsmartcols, version 2.40.2-18.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "ecb4ac75eddebe8ad0f3bd7cab122feb459fadb9970abd84ac56e8c7a227472e:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2026-53614-libsmartcols",
           "level": "error",
           "message": {
             "text": "A high vulnerability in rpm package: libsmartcols, version 2.40.2-18.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
@@ -23301,37 +23030,6 @@
           }
         },
         {
-          "ruleId": "CVE-2026-53614-libuuid",
-          "level": "error",
-          "message": {
-            "text": "A high vulnerability in rpm package: libuuid, version 2.40.2-18.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "5f42902d18f0b6a55298abf3b7c9f5b58a1464534f110089bc97a8f9df003064:1"
-          }
-        },
-        {
           "ruleId": "CVE-2026-53612-util-linux",
           "level": "error",
           "message": {
@@ -23394,37 +23092,6 @@
           }
         },
         {
-          "ruleId": "CVE-2026-53614-util-linux",
-          "level": "error",
-          "message": {
-            "text": "A high vulnerability in rpm package: util-linux, version 2.40.2-18.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "0a1d1114c845ba690a213e296e5f52646a38de9203174b1aed24585a65736ebd:1"
-          }
-        },
-        {
           "ruleId": "CVE-2026-53612-util-linux-core",
           "level": "error",
           "message": {
@@ -23457,37 +23124,6 @@
         },
         {
           "ruleId": "CVE-2026-53613-util-linux-core",
-          "level": "error",
-          "message": {
-            "text": "A high vulnerability in rpm package: util-linux-core, version 2.40.2-18.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "b10c59c1abdbc1cb3795e82bf5a2130a05099f264a6c611586898173ca47a0e2:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2026-53614-util-linux-core",
           "level": "error",
           "message": {
             "text": "A high vulnerability in rpm package: util-linux-core, version 2.40.2-18.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
