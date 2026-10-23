@@ -4504,27 +4504,6 @@
               }
             },
             {
-              "id": "CVE-2026-77117-glibc",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-77117 medium vulnerability for glibc package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in glibc. A remote attacker could exploit this vulnerability by providing specially crafted input during SHIFT_JISX0213 to UCS-4 text conversion. This crafted input can cause the application to repeatedly emit a buffered code point without consuming further input, leading to persistent retry churn. This can result in a denial of service (DoS) for callers converting untrusted text."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-77117",
-              "help": {
-                "text": "Vulnerability CVE-2026-77117\nSeverity: medium\nPackage: glibc\nVersion: 2.34-270.el9_8\nFix Version: 0:2.34-283.el9_8\nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-77117](https://access.redhat.com/security/cve/CVE-2026-77117)",
-                "markdown": "**Vulnerability CVE-2026-77117**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | glibc  | 2.34-270.el9_8  | 0:2.34-283.el9_8  | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-77117](https://access.redhat.com/security/cve/CVE-2026-77117)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/glibc@2.34-270.el9_8?arch=x86_64\u0026distro=rocky-9.8\u0026upstream=glibc-2.34-270.el9_8.src.rpm"
-                ],
-                "security-severity": "5.9"
-              }
-            },
-            {
               "id": "CVE-2026-80489-glibc",
               "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
@@ -4537,6 +4516,90 @@
               "help": {
                 "text": "Vulnerability CVE-2026-80489\nSeverity: medium\nPackage: glibc\nVersion: 2.34-270.el9_8\nFix Version: 0:2.34-283.el9_8\nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-80489](https://access.redhat.com/security/cve/CVE-2026-80489)",
                 "markdown": "**Vulnerability CVE-2026-80489**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | glibc  | 2.34-270.el9_8  | 0:2.34-283.el9_8  | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-80489](https://access.redhat.com/security/cve/CVE-2026-80489)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/glibc@2.34-270.el9_8?arch=x86_64\u0026distro=rocky-9.8\u0026upstream=glibc-2.34-270.el9_8.src.rpm"
+                ],
+                "security-severity": "5.9"
+              }
+            },
+            {
+              "id": "CVE-2026-80489-glibc-common",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-80489 medium vulnerability for glibc-common package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in glibc. Converting crafted EUC_JISX0213 input to UCS-4 or the internal wide character encoding (for example with iconv) can cause the converter to make no progress, hanging the calling application. Some EUC_JISX0213 sequences decode to two code points; if the output buffer has room for only the first, the second is stored in conversion state and returned as E2BIG, but that pending character is never cleared after it is emitted on the next call, so retries loop forever without consuming further input."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-80489",
+              "help": {
+                "text": "Vulnerability CVE-2026-80489\nSeverity: medium\nPackage: glibc-common\nVersion: 2.34-270.el9_8\nFix Version: 0:2.34-283.el9_8\nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-80489](https://access.redhat.com/security/cve/CVE-2026-80489)",
+                "markdown": "**Vulnerability CVE-2026-80489**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | glibc-common  | 2.34-270.el9_8  | 0:2.34-283.el9_8  | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-80489](https://access.redhat.com/security/cve/CVE-2026-80489)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/glibc-common@2.34-270.el9_8?arch=x86_64\u0026distro=rocky-9.8\u0026upstream=glibc-2.34-270.el9_8.src.rpm"
+                ],
+                "security-severity": "5.9"
+              }
+            },
+            {
+              "id": "CVE-2026-80489-glibc-langpack-en",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-80489 medium vulnerability for glibc-langpack-en package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in glibc. Converting crafted EUC_JISX0213 input to UCS-4 or the internal wide character encoding (for example with iconv) can cause the converter to make no progress, hanging the calling application. Some EUC_JISX0213 sequences decode to two code points; if the output buffer has room for only the first, the second is stored in conversion state and returned as E2BIG, but that pending character is never cleared after it is emitted on the next call, so retries loop forever without consuming further input."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-80489",
+              "help": {
+                "text": "Vulnerability CVE-2026-80489\nSeverity: medium\nPackage: glibc-langpack-en\nVersion: 2.34-270.el9_8\nFix Version: 0:2.34-283.el9_8\nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-80489](https://access.redhat.com/security/cve/CVE-2026-80489)",
+                "markdown": "**Vulnerability CVE-2026-80489**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | glibc-langpack-en  | 2.34-270.el9_8  | 0:2.34-283.el9_8  | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-80489](https://access.redhat.com/security/cve/CVE-2026-80489)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/glibc-langpack-en@2.34-270.el9_8?arch=x86_64\u0026distro=rocky-9.8\u0026upstream=glibc-2.34-270.el9_8.src.rpm"
+                ],
+                "security-severity": "5.9"
+              }
+            },
+            {
+              "id": "CVE-2026-80489-glibc-minimal-langpack",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-80489 medium vulnerability for glibc-minimal-langpack package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in glibc. Converting crafted EUC_JISX0213 input to UCS-4 or the internal wide character encoding (for example with iconv) can cause the converter to make no progress, hanging the calling application. Some EUC_JISX0213 sequences decode to two code points; if the output buffer has room for only the first, the second is stored in conversion state and returned as E2BIG, but that pending character is never cleared after it is emitted on the next call, so retries loop forever without consuming further input."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-80489",
+              "help": {
+                "text": "Vulnerability CVE-2026-80489\nSeverity: medium\nPackage: glibc-minimal-langpack\nVersion: 2.34-270.el9_8\nFix Version: 0:2.34-283.el9_8\nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-80489](https://access.redhat.com/security/cve/CVE-2026-80489)",
+                "markdown": "**Vulnerability CVE-2026-80489**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | glibc-minimal-langpack  | 2.34-270.el9_8  | 0:2.34-283.el9_8  | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-80489](https://access.redhat.com/security/cve/CVE-2026-80489)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/glibc-minimal-langpack@2.34-270.el9_8?arch=x86_64\u0026distro=rocky-9.8\u0026upstream=glibc-2.34-270.el9_8.src.rpm"
+                ],
+                "security-severity": "5.9"
+              }
+            },
+            {
+              "id": "CVE-2026-77117-glibc",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-77117 medium vulnerability for glibc package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in glibc. A remote attacker could exploit this vulnerability by providing specially crafted input during SHIFT_JISX0213 to UCS-4 text conversion. This crafted input can cause the application to repeatedly emit a buffered code point without consuming further input, leading to persistent retry churn. This can result in a denial of service (DoS) for callers converting untrusted text."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-77117",
+              "help": {
+                "text": "Vulnerability CVE-2026-77117\nSeverity: medium\nPackage: glibc\nVersion: 2.34-270.el9_8\nFix Version: 0:2.34-283.el9_8\nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-77117](https://access.redhat.com/security/cve/CVE-2026-77117)",
+                "markdown": "**Vulnerability CVE-2026-77117**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | glibc  | 2.34-270.el9_8  | 0:2.34-283.el9_8  | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-77117](https://access.redhat.com/security/cve/CVE-2026-77117)  |\n"
               },
               "properties": {
                 "purls": [
@@ -4567,27 +4630,6 @@
               }
             },
             {
-              "id": "CVE-2026-80489-glibc-common",
-              "name": "RpmMatcherExactIndirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-80489 medium vulnerability for glibc-common package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in glibc. Converting crafted EUC_JISX0213 input to UCS-4 or the internal wide character encoding (for example with iconv) can cause the converter to make no progress, hanging the calling application. Some EUC_JISX0213 sequences decode to two code points; if the output buffer has room for only the first, the second is stored in conversion state and returned as E2BIG, but that pending character is never cleared after it is emitted on the next call, so retries loop forever without consuming further input."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-80489",
-              "help": {
-                "text": "Vulnerability CVE-2026-80489\nSeverity: medium\nPackage: glibc-common\nVersion: 2.34-270.el9_8\nFix Version: 0:2.34-283.el9_8\nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-80489](https://access.redhat.com/security/cve/CVE-2026-80489)",
-                "markdown": "**Vulnerability CVE-2026-80489**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | glibc-common  | 2.34-270.el9_8  | 0:2.34-283.el9_8  | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-80489](https://access.redhat.com/security/cve/CVE-2026-80489)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/glibc-common@2.34-270.el9_8?arch=x86_64\u0026distro=rocky-9.8\u0026upstream=glibc-2.34-270.el9_8.src.rpm"
-                ],
-                "security-severity": "5.9"
-              }
-            },
-            {
               "id": "CVE-2026-77117-glibc-langpack-en",
               "name": "RpmMatcherExactIndirectMatch",
               "shortDescription": {
@@ -4609,27 +4651,6 @@
               }
             },
             {
-              "id": "CVE-2026-80489-glibc-langpack-en",
-              "name": "RpmMatcherExactIndirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-80489 medium vulnerability for glibc-langpack-en package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in glibc. Converting crafted EUC_JISX0213 input to UCS-4 or the internal wide character encoding (for example with iconv) can cause the converter to make no progress, hanging the calling application. Some EUC_JISX0213 sequences decode to two code points; if the output buffer has room for only the first, the second is stored in conversion state and returned as E2BIG, but that pending character is never cleared after it is emitted on the next call, so retries loop forever without consuming further input."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-80489",
-              "help": {
-                "text": "Vulnerability CVE-2026-80489\nSeverity: medium\nPackage: glibc-langpack-en\nVersion: 2.34-270.el9_8\nFix Version: 0:2.34-283.el9_8\nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-80489](https://access.redhat.com/security/cve/CVE-2026-80489)",
-                "markdown": "**Vulnerability CVE-2026-80489**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | glibc-langpack-en  | 2.34-270.el9_8  | 0:2.34-283.el9_8  | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-80489](https://access.redhat.com/security/cve/CVE-2026-80489)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/glibc-langpack-en@2.34-270.el9_8?arch=x86_64\u0026distro=rocky-9.8\u0026upstream=glibc-2.34-270.el9_8.src.rpm"
-                ],
-                "security-severity": "5.9"
-              }
-            },
-            {
               "id": "CVE-2026-77117-glibc-minimal-langpack",
               "name": "RpmMatcherExactIndirectMatch",
               "shortDescription": {
@@ -4642,27 +4663,6 @@
               "help": {
                 "text": "Vulnerability CVE-2026-77117\nSeverity: medium\nPackage: glibc-minimal-langpack\nVersion: 2.34-270.el9_8\nFix Version: 0:2.34-283.el9_8\nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-77117](https://access.redhat.com/security/cve/CVE-2026-77117)",
                 "markdown": "**Vulnerability CVE-2026-77117**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | glibc-minimal-langpack  | 2.34-270.el9_8  | 0:2.34-283.el9_8  | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-77117](https://access.redhat.com/security/cve/CVE-2026-77117)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/glibc-minimal-langpack@2.34-270.el9_8?arch=x86_64\u0026distro=rocky-9.8\u0026upstream=glibc-2.34-270.el9_8.src.rpm"
-                ],
-                "security-severity": "5.9"
-              }
-            },
-            {
-              "id": "CVE-2026-80489-glibc-minimal-langpack",
-              "name": "RpmMatcherExactIndirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-80489 medium vulnerability for glibc-minimal-langpack package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in glibc. Converting crafted EUC_JISX0213 input to UCS-4 or the internal wide character encoding (for example with iconv) can cause the converter to make no progress, hanging the calling application. Some EUC_JISX0213 sequences decode to two code points; if the output buffer has room for only the first, the second is stored in conversion state and returned as E2BIG, but that pending character is never cleared after it is emitted on the next call, so retries loop forever without consuming further input."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-80489",
-              "help": {
-                "text": "Vulnerability CVE-2026-80489\nSeverity: medium\nPackage: glibc-minimal-langpack\nVersion: 2.34-270.el9_8\nFix Version: 0:2.34-283.el9_8\nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-80489](https://access.redhat.com/security/cve/CVE-2026-80489)",
-                "markdown": "**Vulnerability CVE-2026-80489**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | glibc-minimal-langpack  | 2.34-270.el9_8  | 0:2.34-283.el9_8  | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-80489](https://access.redhat.com/security/cve/CVE-2026-80489)  |\n"
               },
               "properties": {
                 "purls": [
@@ -5890,48 +5890,6 @@
               }
             },
             {
-              "id": "CVE-2026-86414-curl",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-86414 low vulnerability for curl package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in curl. A malicious or compromised HTTP proxy server can trick curl into sending authentication credentials intended for the target destination server directly to the proxy itself. When establishing a connection tunnel, if the proxy replies with an HTTP 401 Unauthorized status code instead of a proxy authentication challenge, curl mishandles the response and transmits the origin server's credentials. This issue leads to information disclosure, allowing an untrusted proxy to intercept sensitive passwords and authentication tokens."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-86414",
-              "help": {
-                "text": "Vulnerability CVE-2026-86414\nSeverity: low\nPackage: curl\nVersion: 7.76.1-40.el9\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-86414](https://access.redhat.com/security/cve/CVE-2026-86414)",
-                "markdown": "**Vulnerability CVE-2026-86414**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | curl  | 7.76.1-40.el9  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-86414](https://access.redhat.com/security/cve/CVE-2026-86414)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/curl@7.76.1-40.el9?arch=x86_64\u0026distro=rocky-9.8\u0026upstream=curl-7.76.1-40.el9.src.rpm"
-                ],
-                "security-severity": "6.5"
-              }
-            },
-            {
-              "id": "CVE-2026-86414-libcurl",
-              "name": "RpmMatcherExactIndirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-86414 low vulnerability for libcurl package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in curl. A malicious or compromised HTTP proxy server can trick curl into sending authentication credentials intended for the target destination server directly to the proxy itself. When establishing a connection tunnel, if the proxy replies with an HTTP 401 Unauthorized status code instead of a proxy authentication challenge, curl mishandles the response and transmits the origin server's credentials. This issue leads to information disclosure, allowing an untrusted proxy to intercept sensitive passwords and authentication tokens."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-86414",
-              "help": {
-                "text": "Vulnerability CVE-2026-86414\nSeverity: low\nPackage: libcurl\nVersion: 7.76.1-40.el9\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-86414](https://access.redhat.com/security/cve/CVE-2026-86414)",
-                "markdown": "**Vulnerability CVE-2026-86414**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | libcurl  | 7.76.1-40.el9  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-86414](https://access.redhat.com/security/cve/CVE-2026-86414)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/libcurl@7.76.1-40.el9?arch=x86_64\u0026distro=rocky-9.8\u0026upstream=curl-7.76.1-40.el9.src.rpm"
-                ],
-                "security-severity": "6.5"
-              }
-            },
-            {
               "id": "CVE-2026-92390-curl",
               "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
@@ -5965,6 +5923,48 @@
               "help": {
                 "text": "Vulnerability CVE-2026-92390\nSeverity: low\nPackage: libcurl\nVersion: 7.76.1-40.el9\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-92390](https://access.redhat.com/security/cve/CVE-2026-92390)",
                 "markdown": "**Vulnerability CVE-2026-92390**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | libcurl  | 7.76.1-40.el9  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-92390](https://access.redhat.com/security/cve/CVE-2026-92390)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/libcurl@7.76.1-40.el9?arch=x86_64\u0026distro=rocky-9.8\u0026upstream=curl-7.76.1-40.el9.src.rpm"
+                ],
+                "security-severity": "6.5"
+              }
+            },
+            {
+              "id": "CVE-2026-86414-curl",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-86414 low vulnerability for curl package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in curl. A malicious or compromised HTTP proxy server can trick curl into sending authentication credentials intended for the target destination server directly to the proxy itself. When establishing a connection tunnel, if the proxy replies with an HTTP 401 Unauthorized status code instead of a proxy authentication challenge, curl mishandles the response and transmits the origin server's credentials. This issue leads to information disclosure, allowing an untrusted proxy to intercept sensitive passwords and authentication tokens."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-86414",
+              "help": {
+                "text": "Vulnerability CVE-2026-86414\nSeverity: low\nPackage: curl\nVersion: 7.76.1-40.el9\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-86414](https://access.redhat.com/security/cve/CVE-2026-86414)",
+                "markdown": "**Vulnerability CVE-2026-86414**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | curl  | 7.76.1-40.el9  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-86414](https://access.redhat.com/security/cve/CVE-2026-86414)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/curl@7.76.1-40.el9?arch=x86_64\u0026distro=rocky-9.8\u0026upstream=curl-7.76.1-40.el9.src.rpm"
+                ],
+                "security-severity": "6.5"
+              }
+            },
+            {
+              "id": "CVE-2026-86414-libcurl",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-86414 low vulnerability for libcurl package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in curl. A malicious or compromised HTTP proxy server can trick curl into sending authentication credentials intended for the target destination server directly to the proxy itself. When establishing a connection tunnel, if the proxy replies with an HTTP 401 Unauthorized status code instead of a proxy authentication challenge, curl mishandles the response and transmits the origin server's credentials. This issue leads to information disclosure, allowing an untrusted proxy to intercept sensitive passwords and authentication tokens."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-86414",
+              "help": {
+                "text": "Vulnerability CVE-2026-86414\nSeverity: low\nPackage: libcurl\nVersion: 7.76.1-40.el9\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-86414](https://access.redhat.com/security/cve/CVE-2026-86414)",
+                "markdown": "**Vulnerability CVE-2026-86414**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | libcurl  | 7.76.1-40.el9  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-86414](https://access.redhat.com/security/cve/CVE-2026-86414)  |\n"
               },
               "properties": {
                 "purls": [
@@ -6118,6 +6118,27 @@
                   "pkg:rpm/rocky/util-linux-core@2.37.4-25.el9?arch=x86_64\u0026distro=rocky-9.8\u0026upstream=util-linux-2.37.4-25.el9.src.rpm"
                 ],
                 "security-severity": "8.0"
+              }
+            },
+            {
+              "id": "CVE-2026-114406-ca-certificates",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-114406 critical vulnerability for ca-certificates package"
+              },
+              "fullDescription": {
+                "text": "The system certificate authority (CA) store in Red Hat products, distributed via ca-certificates RPM packages, included multiple root CA certificates of authorities, which signed intermediate CA certificates with weak private keys issued by the eMudhra certificate authority. A man-in-the-middle attacker could use this flaw to issue certificates for arbitrary host names signed by the weak intermediate CA certificates, which would be considered trusted by a TLS/SSL client using system CA store and cause such clients to connect to malicious sites.\nDue to inability to only distrust specific intermediate certificates in all clients using the system CA store, root CA certificates of authorities that signed weak intermediate CA certificates are being removed."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-114406",
+              "help": {
+                "text": "Vulnerability CVE-2026-114406\nSeverity: critical\nPackage: ca-certificates\nVersion: 2025.2.80_v9.0.305-91.el9\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-114406](https://access.redhat.com/security/cve/CVE-2026-114406)",
+                "markdown": "**Vulnerability CVE-2026-114406**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| critical  | ca-certificates  | 2025.2.80_v9.0.305-91.el9  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-114406](https://access.redhat.com/security/cve/CVE-2026-114406)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/ca-certificates@2025.2.80_v9.0.305-91.el9?arch=noarch\u0026distro=rocky-9.8\u0026upstream=ca-certificates-2025.2.80_v9.0.305-91.el9.src.rpm"
+                ],
+                "security-severity": "6.8"
               }
             },
             {
@@ -8893,27 +8914,6 @@
               }
             },
             {
-              "id": "CVE-2026-95520-rpm",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-95520 medium vulnerability for rpm package"
-              },
-              "fullDescription": {
-                "text": "A heap-based buffer overflow flaw was found in rpm. Parsing a symlink entry in an untrusted RPM package whose declared RPMTAG_LONGFILESIZES value is 0xFFFFFFFFFFFFFFFF causes an integer overflow in iterReadArchiveNext() that shrinks a buffer allocation to one byte, after which the payload's independently-controlled cpio filesize field is used to write attacker-controlled data past the end of that allocation. This is reachable via rpm2cpio, rpm2archive, and rpm -qlvp on an  untrusted package."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-95520",
-              "help": {
-                "text": "Vulnerability CVE-2026-95520\nSeverity: medium\nPackage: rpm\nVersion: 4.16.1.3-40.el9\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-95520](https://access.redhat.com/security/cve/CVE-2026-95520)",
-                "markdown": "**Vulnerability CVE-2026-95520**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | rpm  | 4.16.1.3-40.el9  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-95520](https://access.redhat.com/security/cve/CVE-2026-95520)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/rpm@4.16.1.3-40.el9?arch=x86_64\u0026distro=rocky-9.8\u0026upstream=rpm-4.16.1.3-40.el9.src.rpm"
-                ],
-                "security-severity": "7.1"
-              }
-            },
-            {
               "id": "CVE-2026-103242-rpm-libs",
               "name": "RpmMatcherExactIndirectMatch",
               "shortDescription": {
@@ -8930,6 +8930,27 @@
               "properties": {
                 "purls": [
                   "pkg:rpm/rocky/rpm-libs@4.16.1.3-40.el9?arch=x86_64\u0026distro=rocky-9.8\u0026upstream=rpm-4.16.1.3-40.el9.src.rpm"
+                ],
+                "security-severity": "7.1"
+              }
+            },
+            {
+              "id": "CVE-2026-95520-rpm",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-95520 medium vulnerability for rpm package"
+              },
+              "fullDescription": {
+                "text": "A heap-based buffer overflow flaw was found in rpm. Parsing a symlink entry in an untrusted RPM package whose declared RPMTAG_LONGFILESIZES value is 0xFFFFFFFFFFFFFFFF causes an integer overflow in iterReadArchiveNext() that shrinks a buffer allocation to one byte, after which the payload's independently-controlled cpio filesize field is used to write attacker-controlled data past the end of that allocation. This is reachable via rpm2cpio, rpm2archive, and rpm -qlvp on an  untrusted package."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-95520",
+              "help": {
+                "text": "Vulnerability CVE-2026-95520\nSeverity: medium\nPackage: rpm\nVersion: 4.16.1.3-40.el9\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-95520](https://access.redhat.com/security/cve/CVE-2026-95520)",
+                "markdown": "**Vulnerability CVE-2026-95520**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | rpm  | 4.16.1.3-40.el9  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-95520](https://access.redhat.com/security/cve/CVE-2026-95520)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/rpm@4.16.1.3-40.el9?arch=x86_64\u0026distro=rocky-9.8\u0026upstream=rpm-4.16.1.3-40.el9.src.rpm"
                 ],
                 "security-severity": "7.1"
               }
@@ -9145,6 +9166,27 @@
               }
             },
             {
+              "id": "CVE-2026-92822-libmodulemd",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-92822 medium vulnerability for libmodulemd package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in libmodulemd. When parsing module metadata, the xmd field is converted into nested GVariant values through recursive YAML mapping and sequence helpers without a recursion-depth or node-count limit. An attacker who can supply crafted modulemd YAML with deeply nested xmd content can cause stack exhaustion or excessive resource consumption, resulting in a denial of service."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-92822",
+              "help": {
+                "text": "Vulnerability CVE-2026-92822\nSeverity: medium\nPackage: libmodulemd\nVersion: 2.13.0-2.el9\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-92822](https://access.redhat.com/security/cve/CVE-2026-92822)",
+                "markdown": "**Vulnerability CVE-2026-92822**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | libmodulemd  | 2.13.0-2.el9  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-92822](https://access.redhat.com/security/cve/CVE-2026-92822)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/libmodulemd@2.13.0-2.el9?arch=x86_64\u0026distro=rocky-9.8\u0026upstream=libmodulemd-2.13.0-2.el9.src.rpm"
+                ],
+                "security-severity": "6.2"
+              }
+            },
+            {
               "id": "CVE-2026-92823-libmodulemd",
               "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
@@ -9178,27 +9220,6 @@
               "help": {
                 "text": "Vulnerability CVE-2026-92824\nSeverity: medium\nPackage: libmodulemd\nVersion: 2.13.0-2.el9\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-92824](https://access.redhat.com/security/cve/CVE-2026-92824)",
                 "markdown": "**Vulnerability CVE-2026-92824**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | libmodulemd  | 2.13.0-2.el9  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-92824](https://access.redhat.com/security/cve/CVE-2026-92824)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/libmodulemd@2.13.0-2.el9?arch=x86_64\u0026distro=rocky-9.8\u0026upstream=libmodulemd-2.13.0-2.el9.src.rpm"
-                ],
-                "security-severity": "6.2"
-              }
-            },
-            {
-              "id": "CVE-2026-92822-libmodulemd",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-92822 medium vulnerability for libmodulemd package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in libmodulemd. When parsing module metadata, the xmd field is converted into nested GVariant values through recursive YAML mapping and sequence helpers without a recursion-depth or node-count limit. An attacker who can supply crafted modulemd YAML with deeply nested xmd content can cause stack exhaustion or excessive resource consumption, resulting in a denial of service."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-92822",
-              "help": {
-                "text": "Vulnerability CVE-2026-92822\nSeverity: medium\nPackage: libmodulemd\nVersion: 2.13.0-2.el9\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-92822](https://access.redhat.com/security/cve/CVE-2026-92822)",
-                "markdown": "**Vulnerability CVE-2026-92822**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | libmodulemd  | 2.13.0-2.el9  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-92822](https://access.redhat.com/security/cve/CVE-2026-92822)  |\n"
               },
               "properties": {
                 "purls": [
@@ -16560,7 +16581,7 @@
           }
         },
         {
-          "ruleId": "CVE-2026-77117-glibc",
+          "ruleId": "CVE-2026-80489-glibc",
           "level": "warning",
           "message": {
             "text": "A medium vulnerability in rpm package: glibc, version 2.34-270.el9_8 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
@@ -16591,7 +16612,100 @@
           }
         },
         {
-          "ruleId": "CVE-2026-80489-glibc",
+          "ruleId": "CVE-2026-80489-glibc-common",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: glibc-common, version 2.34-270.el9_8 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:f1950c2f0fad7ccd25e714e77d3ddeacd91076275c389b0268308b45226d58d1:/var/lib/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "d4d28596351eb4748622fae9f83303548715e443a8a20e48b0c7b89875b77ae0:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-80489-glibc-langpack-en",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: glibc-langpack-en, version 2.34-270.el9_8 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:f1950c2f0fad7ccd25e714e77d3ddeacd91076275c389b0268308b45226d58d1:/var/lib/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "cd3f8f52d6a4952d1ff3cd000d95a47dce2c295ea92ab51a93dd08fa11080c16:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-80489-glibc-minimal-langpack",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: glibc-minimal-langpack, version 2.34-270.el9_8 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:f1950c2f0fad7ccd25e714e77d3ddeacd91076275c389b0268308b45226d58d1:/var/lib/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "e540ac471c7179d92715f0c8ae7e66ec7c58987a765b5375dc02db883de30680:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-77117-glibc",
           "level": "warning",
           "message": {
             "text": "A medium vulnerability in rpm package: glibc, version 2.34-270.el9_8 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
@@ -16653,37 +16767,6 @@
           }
         },
         {
-          "ruleId": "CVE-2026-80489-glibc-common",
-          "level": "warning",
-          "message": {
-            "text": "A medium vulnerability in rpm package: glibc-common, version 2.34-270.el9_8 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:f1950c2f0fad7ccd25e714e77d3ddeacd91076275c389b0268308b45226d58d1:/var/lib/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "d4d28596351eb4748622fae9f83303548715e443a8a20e48b0c7b89875b77ae0:1"
-          }
-        },
-        {
           "ruleId": "CVE-2026-77117-glibc-langpack-en",
           "level": "warning",
           "message": {
@@ -16715,69 +16798,7 @@
           }
         },
         {
-          "ruleId": "CVE-2026-80489-glibc-langpack-en",
-          "level": "warning",
-          "message": {
-            "text": "A medium vulnerability in rpm package: glibc-langpack-en, version 2.34-270.el9_8 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:f1950c2f0fad7ccd25e714e77d3ddeacd91076275c389b0268308b45226d58d1:/var/lib/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "cd3f8f52d6a4952d1ff3cd000d95a47dce2c295ea92ab51a93dd08fa11080c16:1"
-          }
-        },
-        {
           "ruleId": "CVE-2026-77117-glibc-minimal-langpack",
-          "level": "warning",
-          "message": {
-            "text": "A medium vulnerability in rpm package: glibc-minimal-langpack, version 2.34-270.el9_8 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:f1950c2f0fad7ccd25e714e77d3ddeacd91076275c389b0268308b45226d58d1:/var/lib/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "e540ac471c7179d92715f0c8ae7e66ec7c58987a765b5375dc02db883de30680:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2026-80489-glibc-minimal-langpack",
           "level": "warning",
           "message": {
             "text": "A medium vulnerability in rpm package: glibc-minimal-langpack, version 2.34-270.el9_8 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
@@ -18606,68 +18627,6 @@
           }
         },
         {
-          "ruleId": "CVE-2026-86414-curl",
-          "level": "note",
-          "message": {
-            "text": "A low vulnerability in rpm package: curl, version 7.76.1-40.el9 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:f1950c2f0fad7ccd25e714e77d3ddeacd91076275c389b0268308b45226d58d1:/var/lib/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "e456d9d2d39190f9a15e1d2ff66f7c0f4ca72ac76121581578a7730a5e68265c:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2026-86414-libcurl",
-          "level": "note",
-          "message": {
-            "text": "A low vulnerability in rpm package: libcurl, version 7.76.1-40.el9 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:f1950c2f0fad7ccd25e714e77d3ddeacd91076275c389b0268308b45226d58d1:/var/lib/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "f2581b49d770a7233cf64364ed3fbd3d4bdbf234271bd46c8c453a122f56cf22:1"
-          }
-        },
-        {
           "ruleId": "CVE-2026-92390-curl",
           "level": "note",
           "message": {
@@ -18700,6 +18659,68 @@
         },
         {
           "ruleId": "CVE-2026-92390-libcurl",
+          "level": "note",
+          "message": {
+            "text": "A low vulnerability in rpm package: libcurl, version 7.76.1-40.el9 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:f1950c2f0fad7ccd25e714e77d3ddeacd91076275c389b0268308b45226d58d1:/var/lib/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "f2581b49d770a7233cf64364ed3fbd3d4bdbf234271bd46c8c453a122f56cf22:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-86414-curl",
+          "level": "note",
+          "message": {
+            "text": "A low vulnerability in rpm package: curl, version 7.76.1-40.el9 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:f1950c2f0fad7ccd25e714e77d3ddeacd91076275c389b0268308b45226d58d1:/var/lib/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "e456d9d2d39190f9a15e1d2ff66f7c0f4ca72ac76121581578a7730a5e68265c:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-86414-libcurl",
           "level": "note",
           "message": {
             "text": "A low vulnerability in rpm package: libcurl, version 7.76.1-40.el9 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
@@ -18944,6 +18965,37 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "0a27cb6cc0ed83721bb84703fb020594ac7410fcf1ed2c983a1893ce4f8fd166:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-114406-ca-certificates",
+          "level": "error",
+          "message": {
+            "text": "A critical vulnerability in rpm package: ca-certificates, version 2025.2.80_v9.0.305-91.el9 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:f1950c2f0fad7ccd25e714e77d3ddeacd91076275c389b0268308b45226d58d1:/var/lib/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "104460b109c02fd23351462dcb43f7dfce2d27065d4c84155a737e93471be962:1"
           }
         },
         {
@@ -23039,37 +23091,6 @@
           }
         },
         {
-          "ruleId": "CVE-2026-95520-rpm",
-          "level": "warning",
-          "message": {
-            "text": "A medium vulnerability in rpm package: rpm, version 4.16.1.3-40.el9 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:f1950c2f0fad7ccd25e714e77d3ddeacd91076275c389b0268308b45226d58d1:/var/lib/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "162d03a9b2509902382770e0ce8f4ce8d55b13f85cff11435f8c0c1c822270e4:1"
-          }
-        },
-        {
           "ruleId": "CVE-2026-103242-rpm-libs",
           "level": "warning",
           "message": {
@@ -23098,6 +23119,37 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "eabf0a46ac16339841633f5cf85e133f6ef0b64ddf89d7f8dfa5c52598f73584:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-95520-rpm",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: rpm, version 4.16.1.3-40.el9 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:f1950c2f0fad7ccd25e714e77d3ddeacd91076275c389b0268308b45226d58d1:/var/lib/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "162d03a9b2509902382770e0ce8f4ce8d55b13f85cff11435f8c0c1c822270e4:1"
           }
         },
         {
@@ -23411,6 +23463,37 @@
           }
         },
         {
+          "ruleId": "CVE-2026-92822-libmodulemd",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: libmodulemd, version 2.13.0-2.el9 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:f1950c2f0fad7ccd25e714e77d3ddeacd91076275c389b0268308b45226d58d1:/var/lib/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "51e50bcc0323d9c0f423fa70c166dc71bdc9d761c79ce456a7189e10c67f210d:1"
+          }
+        },
+        {
           "ruleId": "CVE-2026-92823-libmodulemd",
           "level": "warning",
           "message": {
@@ -23443,37 +23526,6 @@
         },
         {
           "ruleId": "CVE-2026-92824-libmodulemd",
-          "level": "warning",
-          "message": {
-            "text": "A medium vulnerability in rpm package: libmodulemd, version 2.13.0-2.el9 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:f1950c2f0fad7ccd25e714e77d3ddeacd91076275c389b0268308b45226d58d1:/var/lib/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "51e50bcc0323d9c0f423fa70c166dc71bdc9d761c79ce456a7189e10c67f210d:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2026-92822-libmodulemd",
           "level": "warning",
           "message": {
             "text": "A medium vulnerability in rpm package: libmodulemd, version 2.13.0-2.el9 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
