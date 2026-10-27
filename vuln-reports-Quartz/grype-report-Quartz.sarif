@@ -1501,6 +1501,27 @@
               }
             },
             {
+              "id": "CVE-2026-74860-libxml2",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-74860 high vulnerability for libxml2 package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in libxml2 with Python bindings enabled. A remote attacker could exploit this vulnerability by providing a specially crafted XML document containing a Document Type Definition (DTD) with enumerated attribute values. This triggers a double-free error in the SAX attributeDecl callback handler, where a string is freed twice. This flaw can lead to a denial of service (DoS) due to a reproducible crash in Python applications using the libxml2 SAX bindings."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-74860",
+              "help": {
+                "text": "Vulnerability CVE-2026-74860\nSeverity: high\nPackage: libxml2\nVersion: 2.12.5-10.el10\nFix Version: 0:2.12.5-10.el10_2.4\nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-74860](https://access.redhat.com/security/cve/CVE-2026-74860)",
+                "markdown": "**Vulnerability CVE-2026-74860**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| high  | libxml2  | 2.12.5-10.el10  | 0:2.12.5-10.el10_2.4  | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-74860](https://access.redhat.com/security/cve/CVE-2026-74860)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/libxml2@2.12.5-10.el10?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=libxml2-2.12.5-10.el10.src.rpm"
+                ],
+                "security-severity": "8.5"
+              }
+            },
+            {
               "id": "CVE-2026-8924-curl",
               "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
@@ -1855,27 +1876,6 @@
                   "pkg:rpm/rocky/openssl-libs@3.5.5-3.el10_2?arch=x86_64\u0026distro=rocky-10.2\u0026epoch=1\u0026upstream=openssl-3.5.5-3.el10_2.src.rpm"
                 ],
                 "security-severity": "5.9"
-              }
-            },
-            {
-              "id": "CVE-2026-74860-libxml2",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-74860 high vulnerability for libxml2 package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in libxml2 with Python bindings enabled. A remote attacker could exploit this vulnerability by providing a specially crafted XML document containing a Document Type Definition (DTD) with enumerated attribute values. This triggers a double-free error in the SAX attributeDecl callback handler, where a string is freed twice. This flaw can lead to a denial of service (DoS) due to a reproducible crash in Python applications using the libxml2 SAX bindings."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-74860",
-              "help": {
-                "text": "Vulnerability CVE-2026-74860\nSeverity: high\nPackage: libxml2\nVersion: 2.12.5-10.el10\nFix Version: 0:2.12.5-10.el10_2.4\nType: rpm\nLocation: /usr/lib/sysimage/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:10\nLink: [CVE-2026-74860](https://access.redhat.com/security/cve/CVE-2026-74860)",
-                "markdown": "**Vulnerability CVE-2026-74860**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| high  | libxml2  | 2.12.5-10.el10  | 0:2.12.5-10.el10_2.4  | rpm  | /usr/lib/sysimage/rpm/rpmdb.sqlite  | redhat:distro:redhat:10  | [CVE-2026-74860](https://access.redhat.com/security/cve/CVE-2026-74860)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/libxml2@2.12.5-10.el10?arch=x86_64\u0026distro=rocky-10.2\u0026upstream=libxml2-2.12.5-10.el10.src.rpm"
-                ],
-                "security-severity": "8.5"
               }
             },
             {
@@ -12820,6 +12820,37 @@
           }
         },
         {
+          "ruleId": "CVE-2026-74860-libxml2",
+          "level": "error",
+          "message": {
+            "text": "A high vulnerability in rpm package: libxml2, version 2.12.5-10.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "fc03813685a8fbb51357d31bfe2f713c222e42ac0bc41b3d9e4235cb5ebeb183:1"
+          }
+        },
+        {
           "ruleId": "CVE-2026-8924-curl",
           "level": "warning",
           "message": {
@@ -13344,37 +13375,6 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "cf066d41890017e7540d525bdcd7fd29e08f6b068b4c131e68b9944500b05f14:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2026-74860-libxml2",
-          "level": "error",
-          "message": {
-            "text": "A high vulnerability in rpm package: libxml2, version 2.12.5-10.el10 was found in image ghcr.io/anchorlayer/rocky-10:latest at: /usr/lib/sysimage/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-10//usr/lib/sysimage/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/usr/lib/sysimage/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-10:latest@sha256:3fca8d1e55ffacce207fc886cade22a9b768a4d02d0bbe919ba206e521f0f2ff:/usr/lib/sysimage/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "fc03813685a8fbb51357d31bfe2f713c222e42ac0bc41b3d9e4235cb5ebeb183:1"
           }
         },
         {
