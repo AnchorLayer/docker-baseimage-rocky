@@ -6,7 +6,7 @@
       "tool": {
         "driver": {
           "name": "grype",
-          "version": "0.122.0",
+          "version": "0.122.1",
           "informationUri": "https://github.com/anchore/grype",
           "rules": [
             {
@@ -1165,27 +1165,6 @@
               }
             },
             {
-              "id": "CVE-2020-19190-ncurses-base",
-              "name": "RpmMatcherExactIndirectMatch",
-              "shortDescription": {
-                "text": "CVE-2020-19190 low vulnerability for ncurses-base package"
-              },
-              "fullDescription": {
-                "text": "A flaw has been identified in the ncurses library. This issue occurs when processing a crafted terminfo database, causing a heap-based buffer overflow, resulting in an application crash."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2020-19190",
-              "help": {
-                "text": "Vulnerability CVE-2020-19190\nSeverity: low\nPackage: ncurses-base\nVersion: 6.1-10.20180224.el8\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2020-19190](https://access.redhat.com/security/cve/CVE-2020-19190)",
-                "markdown": "**Vulnerability CVE-2020-19190**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | ncurses-base  | 6.1-10.20180224.el8  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2020-19190](https://access.redhat.com/security/cve/CVE-2020-19190)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/ncurses-base@6.1-10.20180224.el8?arch=noarch\u0026distro=rocky-8.10\u0026upstream=ncurses-6.1-10.20180224.el8.src.rpm"
-                ],
-                "security-severity": "6.5"
-              }
-            },
-            {
               "id": "CVE-2020-19185-ncurses-libs",
               "name": "RpmMatcherExactIndirectMatch",
               "shortDescription": {
@@ -1244,6 +1223,27 @@
               "properties": {
                 "purls": [
                   "pkg:rpm/rocky/ncurses-libs@6.1-10.20180224.el8?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=ncurses-6.1-10.20180224.el8.src.rpm"
+                ],
+                "security-severity": "6.5"
+              }
+            },
+            {
+              "id": "CVE-2020-19190-ncurses-base",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2020-19190 low vulnerability for ncurses-base package"
+              },
+              "fullDescription": {
+                "text": "A flaw has been identified in the ncurses library. This issue occurs when processing a crafted terminfo database, causing a heap-based buffer overflow, resulting in an application crash."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2020-19190",
+              "help": {
+                "text": "Vulnerability CVE-2020-19190\nSeverity: low\nPackage: ncurses-base\nVersion: 6.1-10.20180224.el8\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2020-19190](https://access.redhat.com/security/cve/CVE-2020-19190)",
+                "markdown": "**Vulnerability CVE-2020-19190**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | ncurses-base  | 6.1-10.20180224.el8  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2020-19190](https://access.redhat.com/security/cve/CVE-2020-19190)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/ncurses-base@6.1-10.20180224.el8?arch=noarch\u0026distro=rocky-8.10\u0026upstream=ncurses-6.1-10.20180224.el8.src.rpm"
                 ],
                 "security-severity": "6.5"
               }
@@ -6688,27 +6688,6 @@
               }
             },
             {
-              "id": "CVE-2026-80489-glibc",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-80489 medium vulnerability for glibc package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in glibc. Converting crafted EUC_JISX0213 input to UCS-4 or the internal wide character encoding (for example with iconv) can cause the converter to make no progress, hanging the calling application. Some EUC_JISX0213 sequences decode to two code points; if the output buffer has room for only the first, the second is stored in conversion state and returned as E2BIG, but that pending character is never cleared after it is emitted on the next call, so retries loop forever without consuming further input."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-80489",
-              "help": {
-                "text": "Vulnerability CVE-2026-80489\nSeverity: medium\nPackage: glibc\nVersion: 2.28-251.el8_10.2\nFix Version: 0:2.28-251.el8_10.48\nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-80489](https://access.redhat.com/security/cve/CVE-2026-80489)",
-                "markdown": "**Vulnerability CVE-2026-80489**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | glibc  | 2.28-251.el8_10.2  | 0:2.28-251.el8_10.48  | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-80489](https://access.redhat.com/security/cve/CVE-2026-80489)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/glibc@2.28-251.el8_10.2?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=glibc-2.28-251.el8_10.2.src.rpm"
-                ],
-                "security-severity": "5.9"
-              }
-            },
-            {
               "id": "CVE-2026-77117-glibc-common",
               "name": "RpmMatcherExactIndirectMatch",
               "shortDescription": {
@@ -6721,27 +6700,6 @@
               "help": {
                 "text": "Vulnerability CVE-2026-77117\nSeverity: medium\nPackage: glibc-common\nVersion: 2.28-251.el8_10.2\nFix Version: 0:2.28-251.el8_10.48\nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-77117](https://access.redhat.com/security/cve/CVE-2026-77117)",
                 "markdown": "**Vulnerability CVE-2026-77117**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | glibc-common  | 2.28-251.el8_10.2  | 0:2.28-251.el8_10.48  | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-77117](https://access.redhat.com/security/cve/CVE-2026-77117)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/glibc-common@2.28-251.el8_10.2?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=glibc-2.28-251.el8_10.2.src.rpm"
-                ],
-                "security-severity": "5.9"
-              }
-            },
-            {
-              "id": "CVE-2026-80489-glibc-common",
-              "name": "RpmMatcherExactIndirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-80489 medium vulnerability for glibc-common package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in glibc. Converting crafted EUC_JISX0213 input to UCS-4 or the internal wide character encoding (for example with iconv) can cause the converter to make no progress, hanging the calling application. Some EUC_JISX0213 sequences decode to two code points; if the output buffer has room for only the first, the second is stored in conversion state and returned as E2BIG, but that pending character is never cleared after it is emitted on the next call, so retries loop forever without consuming further input."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-80489",
-              "help": {
-                "text": "Vulnerability CVE-2026-80489\nSeverity: medium\nPackage: glibc-common\nVersion: 2.28-251.el8_10.2\nFix Version: 0:2.28-251.el8_10.48\nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-80489](https://access.redhat.com/security/cve/CVE-2026-80489)",
-                "markdown": "**Vulnerability CVE-2026-80489**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | glibc-common  | 2.28-251.el8_10.2  | 0:2.28-251.el8_10.48  | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-80489](https://access.redhat.com/security/cve/CVE-2026-80489)  |\n"
               },
               "properties": {
                 "purls": [
@@ -6772,27 +6730,6 @@
               }
             },
             {
-              "id": "CVE-2026-80489-glibc-gconv-extra",
-              "name": "RpmMatcherExactIndirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-80489 medium vulnerability for glibc-gconv-extra package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in glibc. Converting crafted EUC_JISX0213 input to UCS-4 or the internal wide character encoding (for example with iconv) can cause the converter to make no progress, hanging the calling application. Some EUC_JISX0213 sequences decode to two code points; if the output buffer has room for only the first, the second is stored in conversion state and returned as E2BIG, but that pending character is never cleared after it is emitted on the next call, so retries loop forever without consuming further input."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-80489",
-              "help": {
-                "text": "Vulnerability CVE-2026-80489\nSeverity: medium\nPackage: glibc-gconv-extra\nVersion: 2.28-251.el8_10.31\nFix Version: 0:2.28-251.el8_10.48\nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-80489](https://access.redhat.com/security/cve/CVE-2026-80489)",
-                "markdown": "**Vulnerability CVE-2026-80489**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | glibc-gconv-extra  | 2.28-251.el8_10.31  | 0:2.28-251.el8_10.48  | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-80489](https://access.redhat.com/security/cve/CVE-2026-80489)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/glibc-gconv-extra@2.28-251.el8_10.31?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=glibc-2.28-251.el8_10.31.src.rpm"
-                ],
-                "security-severity": "5.9"
-              }
-            },
-            {
               "id": "CVE-2026-77117-glibc-langpack-en",
               "name": "RpmMatcherExactIndirectMatch",
               "shortDescription": {
@@ -6805,27 +6742,6 @@
               "help": {
                 "text": "Vulnerability CVE-2026-77117\nSeverity: medium\nPackage: glibc-langpack-en\nVersion: 2.28-251.el8_10.31\nFix Version: 0:2.28-251.el8_10.48\nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-77117](https://access.redhat.com/security/cve/CVE-2026-77117)",
                 "markdown": "**Vulnerability CVE-2026-77117**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | glibc-langpack-en  | 2.28-251.el8_10.31  | 0:2.28-251.el8_10.48  | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-77117](https://access.redhat.com/security/cve/CVE-2026-77117)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/glibc-langpack-en@2.28-251.el8_10.31?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=glibc-2.28-251.el8_10.31.src.rpm"
-                ],
-                "security-severity": "5.9"
-              }
-            },
-            {
-              "id": "CVE-2026-80489-glibc-langpack-en",
-              "name": "RpmMatcherExactIndirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-80489 medium vulnerability for glibc-langpack-en package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in glibc. Converting crafted EUC_JISX0213 input to UCS-4 or the internal wide character encoding (for example with iconv) can cause the converter to make no progress, hanging the calling application. Some EUC_JISX0213 sequences decode to two code points; if the output buffer has room for only the first, the second is stored in conversion state and returned as E2BIG, but that pending character is never cleared after it is emitted on the next call, so retries loop forever without consuming further input."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-80489",
-              "help": {
-                "text": "Vulnerability CVE-2026-80489\nSeverity: medium\nPackage: glibc-langpack-en\nVersion: 2.28-251.el8_10.31\nFix Version: 0:2.28-251.el8_10.48\nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-80489](https://access.redhat.com/security/cve/CVE-2026-80489)",
-                "markdown": "**Vulnerability CVE-2026-80489**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | glibc-langpack-en  | 2.28-251.el8_10.31  | 0:2.28-251.el8_10.48  | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-80489](https://access.redhat.com/security/cve/CVE-2026-80489)  |\n"
               },
               "properties": {
                 "purls": [
@@ -6851,6 +6767,90 @@
               "properties": {
                 "purls": [
                   "pkg:rpm/rocky/glibc-minimal-langpack@2.28-251.el8_10.2?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=glibc-2.28-251.el8_10.2.src.rpm"
+                ],
+                "security-severity": "5.9"
+              }
+            },
+            {
+              "id": "CVE-2026-80489-glibc",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-80489 medium vulnerability for glibc package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in glibc. Converting crafted EUC_JISX0213 input to UCS-4 or the internal wide character encoding (for example with iconv) can cause the converter to make no progress, hanging the calling application. Some EUC_JISX0213 sequences decode to two code points; if the output buffer has room for only the first, the second is stored in conversion state and returned as E2BIG, but that pending character is never cleared after it is emitted on the next call, so retries loop forever without consuming further input."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-80489",
+              "help": {
+                "text": "Vulnerability CVE-2026-80489\nSeverity: medium\nPackage: glibc\nVersion: 2.28-251.el8_10.2\nFix Version: 0:2.28-251.el8_10.48\nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-80489](https://access.redhat.com/security/cve/CVE-2026-80489)",
+                "markdown": "**Vulnerability CVE-2026-80489**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | glibc  | 2.28-251.el8_10.2  | 0:2.28-251.el8_10.48  | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-80489](https://access.redhat.com/security/cve/CVE-2026-80489)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/glibc@2.28-251.el8_10.2?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=glibc-2.28-251.el8_10.2.src.rpm"
+                ],
+                "security-severity": "5.9"
+              }
+            },
+            {
+              "id": "CVE-2026-80489-glibc-common",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-80489 medium vulnerability for glibc-common package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in glibc. Converting crafted EUC_JISX0213 input to UCS-4 or the internal wide character encoding (for example with iconv) can cause the converter to make no progress, hanging the calling application. Some EUC_JISX0213 sequences decode to two code points; if the output buffer has room for only the first, the second is stored in conversion state and returned as E2BIG, but that pending character is never cleared after it is emitted on the next call, so retries loop forever without consuming further input."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-80489",
+              "help": {
+                "text": "Vulnerability CVE-2026-80489\nSeverity: medium\nPackage: glibc-common\nVersion: 2.28-251.el8_10.2\nFix Version: 0:2.28-251.el8_10.48\nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-80489](https://access.redhat.com/security/cve/CVE-2026-80489)",
+                "markdown": "**Vulnerability CVE-2026-80489**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | glibc-common  | 2.28-251.el8_10.2  | 0:2.28-251.el8_10.48  | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-80489](https://access.redhat.com/security/cve/CVE-2026-80489)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/glibc-common@2.28-251.el8_10.2?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=glibc-2.28-251.el8_10.2.src.rpm"
+                ],
+                "security-severity": "5.9"
+              }
+            },
+            {
+              "id": "CVE-2026-80489-glibc-gconv-extra",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-80489 medium vulnerability for glibc-gconv-extra package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in glibc. Converting crafted EUC_JISX0213 input to UCS-4 or the internal wide character encoding (for example with iconv) can cause the converter to make no progress, hanging the calling application. Some EUC_JISX0213 sequences decode to two code points; if the output buffer has room for only the first, the second is stored in conversion state and returned as E2BIG, but that pending character is never cleared after it is emitted on the next call, so retries loop forever without consuming further input."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-80489",
+              "help": {
+                "text": "Vulnerability CVE-2026-80489\nSeverity: medium\nPackage: glibc-gconv-extra\nVersion: 2.28-251.el8_10.31\nFix Version: 0:2.28-251.el8_10.48\nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-80489](https://access.redhat.com/security/cve/CVE-2026-80489)",
+                "markdown": "**Vulnerability CVE-2026-80489**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | glibc-gconv-extra  | 2.28-251.el8_10.31  | 0:2.28-251.el8_10.48  | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-80489](https://access.redhat.com/security/cve/CVE-2026-80489)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/glibc-gconv-extra@2.28-251.el8_10.31?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=glibc-2.28-251.el8_10.31.src.rpm"
+                ],
+                "security-severity": "5.9"
+              }
+            },
+            {
+              "id": "CVE-2026-80489-glibc-langpack-en",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-80489 medium vulnerability for glibc-langpack-en package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in glibc. Converting crafted EUC_JISX0213 input to UCS-4 or the internal wide character encoding (for example with iconv) can cause the converter to make no progress, hanging the calling application. Some EUC_JISX0213 sequences decode to two code points; if the output buffer has room for only the first, the second is stored in conversion state and returned as E2BIG, but that pending character is never cleared after it is emitted on the next call, so retries loop forever without consuming further input."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-80489",
+              "help": {
+                "text": "Vulnerability CVE-2026-80489\nSeverity: medium\nPackage: glibc-langpack-en\nVersion: 2.28-251.el8_10.31\nFix Version: 0:2.28-251.el8_10.48\nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-80489](https://access.redhat.com/security/cve/CVE-2026-80489)",
+                "markdown": "**Vulnerability CVE-2026-80489**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | glibc-langpack-en  | 2.28-251.el8_10.31  | 0:2.28-251.el8_10.48  | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-80489](https://access.redhat.com/security/cve/CVE-2026-80489)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/glibc-langpack-en@2.28-251.el8_10.31?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=glibc-2.28-251.el8_10.31.src.rpm"
                 ],
                 "security-severity": "5.9"
               }
@@ -8704,6 +8704,111 @@
               }
             },
             {
+              "id": "CVE-2026-115819-glibc",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-115819 medium vulnerability for glibc package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in glibc. An attacker who supplies input to an application using wide scanf functions can trigger an out-of-bounds write, potentially leading to memory corruption or a Denial of Service (DoS) via an application crash. This issue occurs because the wide scanf family of functions writes an extra null byte past the end of the destination buffer when a converted multibyte string exactly fills the allocated space."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-115819",
+              "help": {
+                "text": "Vulnerability CVE-2026-115819\nSeverity: medium\nPackage: glibc\nVersion: 2.28-251.el8_10.2\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-115819](https://access.redhat.com/security/cve/CVE-2026-115819)",
+                "markdown": "**Vulnerability CVE-2026-115819**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | glibc  | 2.28-251.el8_10.2  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-115819](https://access.redhat.com/security/cve/CVE-2026-115819)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/glibc@2.28-251.el8_10.2?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=glibc-2.28-251.el8_10.2.src.rpm"
+                ],
+                "security-severity": "4.8"
+              }
+            },
+            {
+              "id": "CVE-2026-115819-glibc-common",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-115819 medium vulnerability for glibc-common package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in glibc. An attacker who supplies input to an application using wide scanf functions can trigger an out-of-bounds write, potentially leading to memory corruption or a Denial of Service (DoS) via an application crash. This issue occurs because the wide scanf family of functions writes an extra null byte past the end of the destination buffer when a converted multibyte string exactly fills the allocated space."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-115819",
+              "help": {
+                "text": "Vulnerability CVE-2026-115819\nSeverity: medium\nPackage: glibc-common\nVersion: 2.28-251.el8_10.2\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-115819](https://access.redhat.com/security/cve/CVE-2026-115819)",
+                "markdown": "**Vulnerability CVE-2026-115819**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | glibc-common  | 2.28-251.el8_10.2  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-115819](https://access.redhat.com/security/cve/CVE-2026-115819)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/glibc-common@2.28-251.el8_10.2?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=glibc-2.28-251.el8_10.2.src.rpm"
+                ],
+                "security-severity": "4.8"
+              }
+            },
+            {
+              "id": "CVE-2026-115819-glibc-gconv-extra",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-115819 medium vulnerability for glibc-gconv-extra package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in glibc. An attacker who supplies input to an application using wide scanf functions can trigger an out-of-bounds write, potentially leading to memory corruption or a Denial of Service (DoS) via an application crash. This issue occurs because the wide scanf family of functions writes an extra null byte past the end of the destination buffer when a converted multibyte string exactly fills the allocated space."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-115819",
+              "help": {
+                "text": "Vulnerability CVE-2026-115819\nSeverity: medium\nPackage: glibc-gconv-extra\nVersion: 2.28-251.el8_10.31\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-115819](https://access.redhat.com/security/cve/CVE-2026-115819)",
+                "markdown": "**Vulnerability CVE-2026-115819**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | glibc-gconv-extra  | 2.28-251.el8_10.31  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-115819](https://access.redhat.com/security/cve/CVE-2026-115819)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/glibc-gconv-extra@2.28-251.el8_10.31?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=glibc-2.28-251.el8_10.31.src.rpm"
+                ],
+                "security-severity": "4.8"
+              }
+            },
+            {
+              "id": "CVE-2026-115819-glibc-langpack-en",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-115819 medium vulnerability for glibc-langpack-en package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in glibc. An attacker who supplies input to an application using wide scanf functions can trigger an out-of-bounds write, potentially leading to memory corruption or a Denial of Service (DoS) via an application crash. This issue occurs because the wide scanf family of functions writes an extra null byte past the end of the destination buffer when a converted multibyte string exactly fills the allocated space."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-115819",
+              "help": {
+                "text": "Vulnerability CVE-2026-115819\nSeverity: medium\nPackage: glibc-langpack-en\nVersion: 2.28-251.el8_10.31\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-115819](https://access.redhat.com/security/cve/CVE-2026-115819)",
+                "markdown": "**Vulnerability CVE-2026-115819**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | glibc-langpack-en  | 2.28-251.el8_10.31  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-115819](https://access.redhat.com/security/cve/CVE-2026-115819)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/glibc-langpack-en@2.28-251.el8_10.31?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=glibc-2.28-251.el8_10.31.src.rpm"
+                ],
+                "security-severity": "4.8"
+              }
+            },
+            {
+              "id": "CVE-2026-115819-glibc-minimal-langpack",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-115819 medium vulnerability for glibc-minimal-langpack package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in glibc. An attacker who supplies input to an application using wide scanf functions can trigger an out-of-bounds write, potentially leading to memory corruption or a Denial of Service (DoS) via an application crash. This issue occurs because the wide scanf family of functions writes an extra null byte past the end of the destination buffer when a converted multibyte string exactly fills the allocated space."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-115819",
+              "help": {
+                "text": "Vulnerability CVE-2026-115819\nSeverity: medium\nPackage: glibc-minimal-langpack\nVersion: 2.28-251.el8_10.2\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-115819](https://access.redhat.com/security/cve/CVE-2026-115819)",
+                "markdown": "**Vulnerability CVE-2026-115819**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | glibc-minimal-langpack  | 2.28-251.el8_10.2  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-115819](https://access.redhat.com/security/cve/CVE-2026-115819)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/glibc-minimal-langpack@2.28-251.el8_10.2?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=glibc-2.28-251.el8_10.2.src.rpm"
+                ],
+                "security-severity": "4.8"
+              }
+            },
+            {
               "id": "CVE-2026-80230-curl",
               "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
@@ -9499,6 +9604,111 @@
                   "pkg:rpm/rocky/libgcrypt@1.8.5-7.el8_6?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=libgcrypt-1.8.5-7.el8_6.src.rpm"
                 ],
                 "security-severity": "7.5"
+              }
+            },
+            {
+              "id": "CVE-2026-100290-glibc",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-100290 low vulnerability for glibc package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in glibc. When an application compiles or matches regular expressions under system memory pressure, memory allocation failures can cause internal memory tracking errors, leading to accessing or releasing memory blocks that have already been freed. An attacker who provides regular expressions or target strings to an affected application could trigger this flaw, resulting in an application crash and a denial of service (DoS)."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-100290",
+              "help": {
+                "text": "Vulnerability CVE-2026-100290\nSeverity: low\nPackage: glibc\nVersion: 2.28-251.el8_10.2\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-100290](https://access.redhat.com/security/cve/CVE-2026-100290)",
+                "markdown": "**Vulnerability CVE-2026-100290**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | glibc  | 2.28-251.el8_10.2  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-100290](https://access.redhat.com/security/cve/CVE-2026-100290)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/glibc@2.28-251.el8_10.2?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=glibc-2.28-251.el8_10.2.src.rpm"
+                ],
+                "security-severity": "3.7"
+              }
+            },
+            {
+              "id": "CVE-2026-100290-glibc-common",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-100290 low vulnerability for glibc-common package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in glibc. When an application compiles or matches regular expressions under system memory pressure, memory allocation failures can cause internal memory tracking errors, leading to accessing or releasing memory blocks that have already been freed. An attacker who provides regular expressions or target strings to an affected application could trigger this flaw, resulting in an application crash and a denial of service (DoS)."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-100290",
+              "help": {
+                "text": "Vulnerability CVE-2026-100290\nSeverity: low\nPackage: glibc-common\nVersion: 2.28-251.el8_10.2\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-100290](https://access.redhat.com/security/cve/CVE-2026-100290)",
+                "markdown": "**Vulnerability CVE-2026-100290**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | glibc-common  | 2.28-251.el8_10.2  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-100290](https://access.redhat.com/security/cve/CVE-2026-100290)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/glibc-common@2.28-251.el8_10.2?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=glibc-2.28-251.el8_10.2.src.rpm"
+                ],
+                "security-severity": "3.7"
+              }
+            },
+            {
+              "id": "CVE-2026-100290-glibc-gconv-extra",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-100290 low vulnerability for glibc-gconv-extra package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in glibc. When an application compiles or matches regular expressions under system memory pressure, memory allocation failures can cause internal memory tracking errors, leading to accessing or releasing memory blocks that have already been freed. An attacker who provides regular expressions or target strings to an affected application could trigger this flaw, resulting in an application crash and a denial of service (DoS)."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-100290",
+              "help": {
+                "text": "Vulnerability CVE-2026-100290\nSeverity: low\nPackage: glibc-gconv-extra\nVersion: 2.28-251.el8_10.31\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-100290](https://access.redhat.com/security/cve/CVE-2026-100290)",
+                "markdown": "**Vulnerability CVE-2026-100290**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | glibc-gconv-extra  | 2.28-251.el8_10.31  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-100290](https://access.redhat.com/security/cve/CVE-2026-100290)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/glibc-gconv-extra@2.28-251.el8_10.31?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=glibc-2.28-251.el8_10.31.src.rpm"
+                ],
+                "security-severity": "3.7"
+              }
+            },
+            {
+              "id": "CVE-2026-100290-glibc-langpack-en",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-100290 low vulnerability for glibc-langpack-en package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in glibc. When an application compiles or matches regular expressions under system memory pressure, memory allocation failures can cause internal memory tracking errors, leading to accessing or releasing memory blocks that have already been freed. An attacker who provides regular expressions or target strings to an affected application could trigger this flaw, resulting in an application crash and a denial of service (DoS)."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-100290",
+              "help": {
+                "text": "Vulnerability CVE-2026-100290\nSeverity: low\nPackage: glibc-langpack-en\nVersion: 2.28-251.el8_10.31\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-100290](https://access.redhat.com/security/cve/CVE-2026-100290)",
+                "markdown": "**Vulnerability CVE-2026-100290**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | glibc-langpack-en  | 2.28-251.el8_10.31  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-100290](https://access.redhat.com/security/cve/CVE-2026-100290)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/glibc-langpack-en@2.28-251.el8_10.31?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=glibc-2.28-251.el8_10.31.src.rpm"
+                ],
+                "security-severity": "3.7"
+              }
+            },
+            {
+              "id": "CVE-2026-100290-glibc-minimal-langpack",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-100290 low vulnerability for glibc-minimal-langpack package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in glibc. When an application compiles or matches regular expressions under system memory pressure, memory allocation failures can cause internal memory tracking errors, leading to accessing or releasing memory blocks that have already been freed. An attacker who provides regular expressions or target strings to an affected application could trigger this flaw, resulting in an application crash and a denial of service (DoS)."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-100290",
+              "help": {
+                "text": "Vulnerability CVE-2026-100290\nSeverity: low\nPackage: glibc-minimal-langpack\nVersion: 2.28-251.el8_10.2\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-100290](https://access.redhat.com/security/cve/CVE-2026-100290)",
+                "markdown": "**Vulnerability CVE-2026-100290**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | glibc-minimal-langpack  | 2.28-251.el8_10.2  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-100290](https://access.redhat.com/security/cve/CVE-2026-100290)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/glibc-minimal-langpack@2.28-251.el8_10.2?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=glibc-2.28-251.el8_10.2.src.rpm"
+                ],
+                "security-severity": "3.7"
               }
             },
             {
@@ -10762,6 +10972,69 @@
               }
             },
             {
+              "id": "CVE-2026-29111-systemd",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-29111 medium vulnerability for systemd package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in systemd, a system and service manager. An unprivileged user can exploit this vulnerability by making an Inter-Process Communication (IPC) API call with spurious data. In older versions (v249 and earlier), this can lead to stack overwriting with attacker-controlled content, potentially enabling arbitrary code execution or privilege escalation. In newer versions (v250 and later), the flaw causes systemd to assert and freeze, resulting in a Denial of Service (DoS)."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-29111",
+              "help": {
+                "text": "Vulnerability CVE-2026-29111\nSeverity: medium\nPackage: systemd\nVersion: 239-82.el8_10.15\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-29111](https://access.redhat.com/security/cve/CVE-2026-29111)",
+                "markdown": "**Vulnerability CVE-2026-29111**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | systemd  | 239-82.el8_10.15  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-29111](https://access.redhat.com/security/cve/CVE-2026-29111)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/systemd@239-82.el8_10.15?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=systemd-239-82.el8_10.15.src.rpm"
+                ],
+                "security-severity": "7.8"
+              }
+            },
+            {
+              "id": "CVE-2026-29111-systemd-libs",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-29111 medium vulnerability for systemd-libs package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in systemd, a system and service manager. An unprivileged user can exploit this vulnerability by making an Inter-Process Communication (IPC) API call with spurious data. In older versions (v249 and earlier), this can lead to stack overwriting with attacker-controlled content, potentially enabling arbitrary code execution or privilege escalation. In newer versions (v250 and later), the flaw causes systemd to assert and freeze, resulting in a Denial of Service (DoS)."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-29111",
+              "help": {
+                "text": "Vulnerability CVE-2026-29111\nSeverity: medium\nPackage: systemd-libs\nVersion: 239-82.el8\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-29111](https://access.redhat.com/security/cve/CVE-2026-29111)",
+                "markdown": "**Vulnerability CVE-2026-29111**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | systemd-libs  | 239-82.el8  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-29111](https://access.redhat.com/security/cve/CVE-2026-29111)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/systemd-libs@239-82.el8?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=systemd-239-82.el8.src.rpm"
+                ],
+                "security-severity": "7.8"
+              }
+            },
+            {
+              "id": "CVE-2026-29111-systemd-pam",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-29111 medium vulnerability for systemd-pam package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in systemd, a system and service manager. An unprivileged user can exploit this vulnerability by making an Inter-Process Communication (IPC) API call with spurious data. In older versions (v249 and earlier), this can lead to stack overwriting with attacker-controlled content, potentially enabling arbitrary code execution or privilege escalation. In newer versions (v250 and later), the flaw causes systemd to assert and freeze, resulting in a Denial of Service (DoS)."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-29111",
+              "help": {
+                "text": "Vulnerability CVE-2026-29111\nSeverity: medium\nPackage: systemd-pam\nVersion: 239-82.el8_10.15\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-29111](https://access.redhat.com/security/cve/CVE-2026-29111)",
+                "markdown": "**Vulnerability CVE-2026-29111**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | systemd-pam  | 239-82.el8_10.15  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-29111](https://access.redhat.com/security/cve/CVE-2026-29111)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/systemd-pam@239-82.el8_10.15?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=systemd-239-82.el8_10.15.src.rpm"
+                ],
+                "security-severity": "7.8"
+              }
+            },
+            {
               "id": "CVE-2025-15469-openssl",
               "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
@@ -11242,69 +11515,6 @@
                   "pkg:rpm/rocky/device-mapper-libs@1.02.181-15.el8_10.3?arch=x86_64\u0026distro=rocky-8.10\u0026epoch=8\u0026upstream=lvm2-2.03.14-15.el8_10.3.src.rpm"
                 ],
                 "security-severity": "5.5"
-              }
-            },
-            {
-              "id": "CVE-2026-29111-systemd",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-29111 medium vulnerability for systemd package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in systemd, a system and service manager. An unprivileged user can exploit this vulnerability by making an Inter-Process Communication (IPC) API call with spurious data. In older versions (v249 and earlier), this can lead to stack overwriting with attacker-controlled content, potentially enabling arbitrary code execution or privilege escalation. In newer versions (v250 and later), the flaw causes systemd to assert and freeze, resulting in a Denial of Service (DoS)."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-29111",
-              "help": {
-                "text": "Vulnerability CVE-2026-29111\nSeverity: medium\nPackage: systemd\nVersion: 239-82.el8_10.15\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-29111](https://access.redhat.com/security/cve/CVE-2026-29111)",
-                "markdown": "**Vulnerability CVE-2026-29111**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | systemd  | 239-82.el8_10.15  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-29111](https://access.redhat.com/security/cve/CVE-2026-29111)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/systemd@239-82.el8_10.15?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=systemd-239-82.el8_10.15.src.rpm"
-                ],
-                "security-severity": "7.8"
-              }
-            },
-            {
-              "id": "CVE-2026-29111-systemd-libs",
-              "name": "RpmMatcherExactIndirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-29111 medium vulnerability for systemd-libs package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in systemd, a system and service manager. An unprivileged user can exploit this vulnerability by making an Inter-Process Communication (IPC) API call with spurious data. In older versions (v249 and earlier), this can lead to stack overwriting with attacker-controlled content, potentially enabling arbitrary code execution or privilege escalation. In newer versions (v250 and later), the flaw causes systemd to assert and freeze, resulting in a Denial of Service (DoS)."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-29111",
-              "help": {
-                "text": "Vulnerability CVE-2026-29111\nSeverity: medium\nPackage: systemd-libs\nVersion: 239-82.el8\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-29111](https://access.redhat.com/security/cve/CVE-2026-29111)",
-                "markdown": "**Vulnerability CVE-2026-29111**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | systemd-libs  | 239-82.el8  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-29111](https://access.redhat.com/security/cve/CVE-2026-29111)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/systemd-libs@239-82.el8?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=systemd-239-82.el8.src.rpm"
-                ],
-                "security-severity": "7.8"
-              }
-            },
-            {
-              "id": "CVE-2026-29111-systemd-pam",
-              "name": "RpmMatcherExactIndirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-29111 medium vulnerability for systemd-pam package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in systemd, a system and service manager. An unprivileged user can exploit this vulnerability by making an Inter-Process Communication (IPC) API call with spurious data. In older versions (v249 and earlier), this can lead to stack overwriting with attacker-controlled content, potentially enabling arbitrary code execution or privilege escalation. In newer versions (v250 and later), the flaw causes systemd to assert and freeze, resulting in a Denial of Service (DoS)."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-29111",
-              "help": {
-                "text": "Vulnerability CVE-2026-29111\nSeverity: medium\nPackage: systemd-pam\nVersion: 239-82.el8_10.15\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-29111](https://access.redhat.com/security/cve/CVE-2026-29111)",
-                "markdown": "**Vulnerability CVE-2026-29111**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | systemd-pam  | 239-82.el8_10.15  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-29111](https://access.redhat.com/security/cve/CVE-2026-29111)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/systemd-pam@239-82.el8_10.15?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=systemd-239-82.el8_10.15.src.rpm"
-                ],
-                "security-severity": "7.8"
               }
             },
             {
@@ -15518,41 +15728,6 @@
           }
         },
         {
-          "ruleId": "CVE-2020-19190-ncurses-base",
-          "level": "note",
-          "message": {
-            "text": "A low vulnerability in rpm package: ncurses-base, version 6.1-10.20180224.el8 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-8//var/lib/rpm/Packages"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/Packages",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:a6d614a2fb9c037eb42aa95d8aad4dff42889a0869deb68f14343a5ec75d5148:/var/lib/rpm/Packages"
-                },
-                {
-                  "name": "/var/lib/rpm/Packages",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "957049c2a79f33d2f85adb6cd39abd531833ccf7d5b18f09b7ba9187be7b9e00:1"
-          }
-        },
-        {
           "ruleId": "CVE-2020-19185-ncurses-libs",
           "level": "note",
           "message": {
@@ -15655,6 +15830,41 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "9dfdc9f9edde26dedc97af3c5ed409f42d9444e271fc39a0cc48b0158bfb7b00:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2020-19190-ncurses-base",
+          "level": "note",
+          "message": {
+            "text": "A low vulnerability in rpm package: ncurses-base, version 6.1-10.20180224.el8 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-8//var/lib/rpm/Packages"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/Packages",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:a6d614a2fb9c037eb42aa95d8aad4dff42889a0869deb68f14343a5ec75d5148:/var/lib/rpm/Packages"
+                },
+                {
+                  "name": "/var/lib/rpm/Packages",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "957049c2a79f33d2f85adb6cd39abd531833ccf7d5b18f09b7ba9187be7b9e00:1"
           }
         },
         {
@@ -28629,37 +28839,6 @@
           }
         },
         {
-          "ruleId": "CVE-2026-80489-glibc",
-          "level": "warning",
-          "message": {
-            "text": "A medium vulnerability in rpm package: glibc, version 2.28-251.el8_10.2 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-8//var/lib/rpm/Packages"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/Packages",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:a6d614a2fb9c037eb42aa95d8aad4dff42889a0869deb68f14343a5ec75d5148:/var/lib/rpm/Packages"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "327c06a6e4a0ac1dea808034cc160170b129eb301f7ca047490b70ff89e5912e:1"
-          }
-        },
-        {
           "ruleId": "CVE-2026-77117-glibc",
           "level": "warning",
           "message": {
@@ -28691,37 +28870,6 @@
           }
         },
         {
-          "ruleId": "CVE-2026-80489-glibc",
-          "level": "warning",
-          "message": {
-            "text": "A medium vulnerability in rpm package: glibc, version 2.28-251.el8_10.31 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-8//var/lib/rpm/Packages"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/Packages",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "d641f7a50de3e3ed60ba35787c0bb365c79dbd86d8087478b11a8834d8f0d89e:1"
-          }
-        },
-        {
           "ruleId": "CVE-2026-77117-glibc-common",
           "level": "warning",
           "message": {
@@ -28753,69 +28901,7 @@
           }
         },
         {
-          "ruleId": "CVE-2026-80489-glibc-common",
-          "level": "warning",
-          "message": {
-            "text": "A medium vulnerability in rpm package: glibc-common, version 2.28-251.el8_10.2 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-8//var/lib/rpm/Packages"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/Packages",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:a6d614a2fb9c037eb42aa95d8aad4dff42889a0869deb68f14343a5ec75d5148:/var/lib/rpm/Packages"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "d15d3415dd21d6e0903eb82515ab471081776325a552edc23cc7a9afdd93f9b7:1"
-          }
-        },
-        {
           "ruleId": "CVE-2026-77117-glibc-common",
-          "level": "warning",
-          "message": {
-            "text": "A medium vulnerability in rpm package: glibc-common, version 2.28-251.el8_10.31 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-8//var/lib/rpm/Packages"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/Packages",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "ff7f5fba472163f53be79ad1e28c7779b1999fd3add84e79e000f5639a04a986:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2026-80489-glibc-common",
           "level": "warning",
           "message": {
             "text": "A medium vulnerability in rpm package: glibc-common, version 2.28-251.el8_10.31 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
@@ -28877,37 +28963,6 @@
           }
         },
         {
-          "ruleId": "CVE-2026-80489-glibc-gconv-extra",
-          "level": "warning",
-          "message": {
-            "text": "A medium vulnerability in rpm package: glibc-gconv-extra, version 2.28-251.el8_10.31 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-8//var/lib/rpm/Packages"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/Packages",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "33cbdabb09923846273814dde06c136e4c24cc13d5dc79ac0c3df855f20a357d:1"
-          }
-        },
-        {
           "ruleId": "CVE-2026-77117-glibc-langpack-en",
           "level": "warning",
           "message": {
@@ -28939,69 +28994,7 @@
           }
         },
         {
-          "ruleId": "CVE-2026-80489-glibc-langpack-en",
-          "level": "warning",
-          "message": {
-            "text": "A medium vulnerability in rpm package: glibc-langpack-en, version 2.28-251.el8_10.31 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-8//var/lib/rpm/Packages"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/Packages",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "2b56ba1d91b07f1e67251c40d9c2acb3953ade8a41440fdb2571d9eac1565da4:1"
-          }
-        },
-        {
           "ruleId": "CVE-2026-77117-glibc-minimal-langpack",
-          "level": "warning",
-          "message": {
-            "text": "A medium vulnerability in rpm package: glibc-minimal-langpack, version 2.28-251.el8_10.2 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-8//var/lib/rpm/Packages"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/Packages",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:a6d614a2fb9c037eb42aa95d8aad4dff42889a0869deb68f14343a5ec75d5148:/var/lib/rpm/Packages"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "afe85f7942fc32736b88fc3b31cec4d0de4343288a29bc3bcc14540479e932ab:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2026-80489-glibc-minimal-langpack",
           "level": "warning",
           "message": {
             "text": "A medium vulnerability in rpm package: glibc-minimal-langpack, version 2.28-251.el8_10.2 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
@@ -29060,6 +29053,223 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "bc5e5ad236586269dda1791c99ed7377e790c2925d2b19a1e69b104b21a2cc27:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-80489-glibc",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: glibc, version 2.28-251.el8_10.2 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-8//var/lib/rpm/Packages"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/Packages",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:a6d614a2fb9c037eb42aa95d8aad4dff42889a0869deb68f14343a5ec75d5148:/var/lib/rpm/Packages"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "327c06a6e4a0ac1dea808034cc160170b129eb301f7ca047490b70ff89e5912e:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-80489-glibc",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: glibc, version 2.28-251.el8_10.31 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-8//var/lib/rpm/Packages"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/Packages",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "d641f7a50de3e3ed60ba35787c0bb365c79dbd86d8087478b11a8834d8f0d89e:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-80489-glibc-common",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: glibc-common, version 2.28-251.el8_10.2 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-8//var/lib/rpm/Packages"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/Packages",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:a6d614a2fb9c037eb42aa95d8aad4dff42889a0869deb68f14343a5ec75d5148:/var/lib/rpm/Packages"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "d15d3415dd21d6e0903eb82515ab471081776325a552edc23cc7a9afdd93f9b7:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-80489-glibc-common",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: glibc-common, version 2.28-251.el8_10.31 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-8//var/lib/rpm/Packages"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/Packages",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "ff7f5fba472163f53be79ad1e28c7779b1999fd3add84e79e000f5639a04a986:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-80489-glibc-gconv-extra",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: glibc-gconv-extra, version 2.28-251.el8_10.31 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-8//var/lib/rpm/Packages"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/Packages",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "33cbdabb09923846273814dde06c136e4c24cc13d5dc79ac0c3df855f20a357d:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-80489-glibc-langpack-en",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: glibc-langpack-en, version 2.28-251.el8_10.31 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-8//var/lib/rpm/Packages"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/Packages",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "2b56ba1d91b07f1e67251c40d9c2acb3953ade8a41440fdb2571d9eac1565da4:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-80489-glibc-minimal-langpack",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: glibc-minimal-langpack, version 2.28-251.el8_10.2 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-8//var/lib/rpm/Packages"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/Packages",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:a6d614a2fb9c037eb42aa95d8aad4dff42889a0869deb68f14343a5ec75d5148:/var/lib/rpm/Packages"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "afe85f7942fc32736b88fc3b31cec4d0de4343288a29bc3bcc14540479e932ab:1"
           }
         },
         {
@@ -33435,6 +33645,254 @@
           }
         },
         {
+          "ruleId": "CVE-2026-115819-glibc",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: glibc, version 2.28-251.el8_10.2 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-8//var/lib/rpm/Packages"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/Packages",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:a6d614a2fb9c037eb42aa95d8aad4dff42889a0869deb68f14343a5ec75d5148:/var/lib/rpm/Packages"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "327c06a6e4a0ac1dea808034cc160170b129eb301f7ca047490b70ff89e5912e:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-115819-glibc",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: glibc, version 2.28-251.el8_10.31 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-8//var/lib/rpm/Packages"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/Packages",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "d641f7a50de3e3ed60ba35787c0bb365c79dbd86d8087478b11a8834d8f0d89e:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-115819-glibc-common",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: glibc-common, version 2.28-251.el8_10.2 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-8//var/lib/rpm/Packages"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/Packages",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:a6d614a2fb9c037eb42aa95d8aad4dff42889a0869deb68f14343a5ec75d5148:/var/lib/rpm/Packages"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "d15d3415dd21d6e0903eb82515ab471081776325a552edc23cc7a9afdd93f9b7:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-115819-glibc-common",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: glibc-common, version 2.28-251.el8_10.31 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-8//var/lib/rpm/Packages"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/Packages",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "ff7f5fba472163f53be79ad1e28c7779b1999fd3add84e79e000f5639a04a986:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-115819-glibc-gconv-extra",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: glibc-gconv-extra, version 2.28-251.el8_10.31 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-8//var/lib/rpm/Packages"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/Packages",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "33cbdabb09923846273814dde06c136e4c24cc13d5dc79ac0c3df855f20a357d:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-115819-glibc-langpack-en",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: glibc-langpack-en, version 2.28-251.el8_10.31 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-8//var/lib/rpm/Packages"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/Packages",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "2b56ba1d91b07f1e67251c40d9c2acb3953ade8a41440fdb2571d9eac1565da4:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-115819-glibc-minimal-langpack",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: glibc-minimal-langpack, version 2.28-251.el8_10.2 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-8//var/lib/rpm/Packages"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/Packages",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:a6d614a2fb9c037eb42aa95d8aad4dff42889a0869deb68f14343a5ec75d5148:/var/lib/rpm/Packages"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "afe85f7942fc32736b88fc3b31cec4d0de4343288a29bc3bcc14540479e932ab:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-115819-glibc-minimal-langpack",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: glibc-minimal-langpack, version 2.28-251.el8_10.31 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-8//var/lib/rpm/Packages"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/Packages",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "bc5e5ad236586269dda1791c99ed7377e790c2925d2b19a1e69b104b21a2cc27:1"
+          }
+        },
+        {
           "ruleId": "CVE-2026-80230-curl",
           "level": "note",
           "message": {
@@ -35358,6 +35816,254 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "8c830eaee6768fafc9ecf44eddbbae21ff439806e5e1cfb364a2f21b3695a409:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-100290-glibc",
+          "level": "note",
+          "message": {
+            "text": "A low vulnerability in rpm package: glibc, version 2.28-251.el8_10.2 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-8//var/lib/rpm/Packages"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/Packages",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:a6d614a2fb9c037eb42aa95d8aad4dff42889a0869deb68f14343a5ec75d5148:/var/lib/rpm/Packages"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "327c06a6e4a0ac1dea808034cc160170b129eb301f7ca047490b70ff89e5912e:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-100290-glibc",
+          "level": "note",
+          "message": {
+            "text": "A low vulnerability in rpm package: glibc, version 2.28-251.el8_10.31 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-8//var/lib/rpm/Packages"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/Packages",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "d641f7a50de3e3ed60ba35787c0bb365c79dbd86d8087478b11a8834d8f0d89e:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-100290-glibc-common",
+          "level": "note",
+          "message": {
+            "text": "A low vulnerability in rpm package: glibc-common, version 2.28-251.el8_10.2 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-8//var/lib/rpm/Packages"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/Packages",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:a6d614a2fb9c037eb42aa95d8aad4dff42889a0869deb68f14343a5ec75d5148:/var/lib/rpm/Packages"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "d15d3415dd21d6e0903eb82515ab471081776325a552edc23cc7a9afdd93f9b7:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-100290-glibc-common",
+          "level": "note",
+          "message": {
+            "text": "A low vulnerability in rpm package: glibc-common, version 2.28-251.el8_10.31 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-8//var/lib/rpm/Packages"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/Packages",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "ff7f5fba472163f53be79ad1e28c7779b1999fd3add84e79e000f5639a04a986:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-100290-glibc-gconv-extra",
+          "level": "note",
+          "message": {
+            "text": "A low vulnerability in rpm package: glibc-gconv-extra, version 2.28-251.el8_10.31 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-8//var/lib/rpm/Packages"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/Packages",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "33cbdabb09923846273814dde06c136e4c24cc13d5dc79ac0c3df855f20a357d:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-100290-glibc-langpack-en",
+          "level": "note",
+          "message": {
+            "text": "A low vulnerability in rpm package: glibc-langpack-en, version 2.28-251.el8_10.31 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-8//var/lib/rpm/Packages"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/Packages",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "2b56ba1d91b07f1e67251c40d9c2acb3953ade8a41440fdb2571d9eac1565da4:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-100290-glibc-minimal-langpack",
+          "level": "note",
+          "message": {
+            "text": "A low vulnerability in rpm package: glibc-minimal-langpack, version 2.28-251.el8_10.2 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-8//var/lib/rpm/Packages"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/Packages",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:a6d614a2fb9c037eb42aa95d8aad4dff42889a0869deb68f14343a5ec75d5148:/var/lib/rpm/Packages"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "afe85f7942fc32736b88fc3b31cec4d0de4343288a29bc3bcc14540479e932ab:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-100290-glibc-minimal-langpack",
+          "level": "note",
+          "message": {
+            "text": "A low vulnerability in rpm package: glibc-minimal-langpack, version 2.28-251.el8_10.31 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-8//var/lib/rpm/Packages"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/Packages",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "bc5e5ad236586269dda1791c99ed7377e790c2925d2b19a1e69b104b21a2cc27:1"
           }
         },
         {
@@ -38113,6 +38819,130 @@
           }
         },
         {
+          "ruleId": "CVE-2026-29111-systemd",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: systemd, version 239-82.el8_10.15 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-8//var/lib/rpm/Packages"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/Packages",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "79f4e7421e841f5c2e47dd9d5da9b033772c587d2ff4cb328a06a6e9155cef3b:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-29111-systemd-libs",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: systemd-libs, version 239-82.el8 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-8//var/lib/rpm/Packages"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/Packages",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:a6d614a2fb9c037eb42aa95d8aad4dff42889a0869deb68f14343a5ec75d5148:/var/lib/rpm/Packages"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "c03b35e52e48968c79dac9f321775bdca21aa9e8ca9b9ad5da48c7e32cff36aa:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-29111-systemd-libs",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: systemd-libs, version 239-82.el8_10.15 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-8//var/lib/rpm/Packages"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/Packages",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "716b5fb67e5285ed296d69f5130fdf5213cedd40c4f89ac5f328b1eac7babdc9:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-29111-systemd-pam",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: systemd-pam, version 239-82.el8_10.15 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-8//var/lib/rpm/Packages"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/Packages",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "dfb75578202668a53f5a2d41fefc91d268534f339f4d4d146a13532101e0ca02:1"
+          }
+        },
+        {
           "ruleId": "CVE-2025-15469-openssl",
           "level": "note",
           "message": {
@@ -39211,130 +40041,6 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "4ed8af1d35f2eba1eade342847503f652794228e14cf5842f8237923e6832669:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2026-29111-systemd",
-          "level": "warning",
-          "message": {
-            "text": "A medium vulnerability in rpm package: systemd, version 239-82.el8_10.15 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-8//var/lib/rpm/Packages"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/Packages",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "79f4e7421e841f5c2e47dd9d5da9b033772c587d2ff4cb328a06a6e9155cef3b:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2026-29111-systemd-libs",
-          "level": "warning",
-          "message": {
-            "text": "A medium vulnerability in rpm package: systemd-libs, version 239-82.el8 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-8//var/lib/rpm/Packages"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/Packages",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:a6d614a2fb9c037eb42aa95d8aad4dff42889a0869deb68f14343a5ec75d5148:/var/lib/rpm/Packages"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "c03b35e52e48968c79dac9f321775bdca21aa9e8ca9b9ad5da48c7e32cff36aa:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2026-29111-systemd-libs",
-          "level": "warning",
-          "message": {
-            "text": "A medium vulnerability in rpm package: systemd-libs, version 239-82.el8_10.15 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-8//var/lib/rpm/Packages"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/Packages",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "716b5fb67e5285ed296d69f5130fdf5213cedd40c4f89ac5f328b1eac7babdc9:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2026-29111-systemd-pam",
-          "level": "warning",
-          "message": {
-            "text": "A medium vulnerability in rpm package: systemd-pam, version 239-82.el8_10.15 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-8//var/lib/rpm/Packages"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/Packages",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "dfb75578202668a53f5a2d41fefc91d268534f339f4d4d146a13532101e0ca02:1"
           }
         },
         {
