@@ -13282,6 +13282,27 @@
               }
             },
             {
+              "id": "CVE-2026-132138-cyrus-sasl-lib",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-132138 medium vulnerability for cyrus-sasl-lib package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in cyrus-sasl. When processing authentication requests using the Salted Challenge Response Authentication Mechanism (SCRAM), a remote attacker can trigger a null pointer dereference by submitting unexpected channel-binding data. This causes the server process to crash before validating authentication proofs, leading to a Denial of Service (DoS)."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-132138",
+              "help": {
+                "text": "Vulnerability CVE-2026-132138\nSeverity: medium\nPackage: cyrus-sasl-lib\nVersion: 2.1.27-6.el8_5\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-132138](https://access.redhat.com/security/cve/CVE-2026-132138)",
+                "markdown": "**Vulnerability CVE-2026-132138**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | cyrus-sasl-lib  | 2.1.27-6.el8_5  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-132138](https://access.redhat.com/security/cve/CVE-2026-132138)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/cyrus-sasl-lib@2.1.27-6.el8_5?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=cyrus-sasl-2.1.27-6.el8_5.src.rpm"
+                ],
+                "security-severity": "5.3"
+              }
+            },
+            {
               "id": "CVE-2026-107884-krb5-libs",
               "name": "RpmMatcherExactIndirectMatch",
               "shortDescription": {
@@ -13321,6 +13342,27 @@
                   "pkg:rpm/rocky/krb5-libs@1.18.2-27.el8_10?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=krb5-1.18.2-27.el8_10.src.rpm"
                 ],
                 "security-severity": "4.2"
+              }
+            },
+            {
+              "id": "CVE-2026-104357-libtirpc",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-104357 medium vulnerability for libtirpc package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in libtirpc. The SunRPC UDP/datagram server transport reuses a single receive buffer across requests and resets the XDR decode position without rebinding the decode length to the size of the datagram actually received. As a result, when a short UDP RPC request is received after a longer one, the XDR decoder can read stale bytes left in the reused buffer and interpret them as part of the current request, including credential, verifier, or procedure-argument fields. The highest threat from this vulnerability is to data confidentiality and integrity for services that use a UDP-based SunRPC server."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-104357",
+              "help": {
+                "text": "Vulnerability CVE-2026-104357\nSeverity: medium\nPackage: libtirpc\nVersion: 1.1.4-12.el8_10\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/Packages\nData Namespace: redhat:distro:redhat:8\nLink: [CVE-2026-104357](https://access.redhat.com/security/cve/CVE-2026-104357)",
+                "markdown": "**Vulnerability CVE-2026-104357**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | libtirpc  | 1.1.4-12.el8_10  |   | rpm  | /var/lib/rpm/Packages  | redhat:distro:redhat:8  | [CVE-2026-104357](https://access.redhat.com/security/cve/CVE-2026-104357)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/libtirpc@1.1.4-12.el8_10?arch=x86_64\u0026distro=rocky-8.10\u0026upstream=libtirpc-1.1.4-12.el8_10.src.rpm"
+                ],
+                "security-severity": "4.8"
               }
             }
           ]
@@ -44133,6 +44175,41 @@
           }
         },
         {
+          "ruleId": "CVE-2026-132138-cyrus-sasl-lib",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: cyrus-sasl-lib, version 2.1.27-6.el8_5 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-8//var/lib/rpm/Packages"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/Packages",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:a6d614a2fb9c037eb42aa95d8aad4dff42889a0869deb68f14343a5ec75d5148:/var/lib/rpm/Packages"
+                },
+                {
+                  "name": "/var/lib/rpm/Packages",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "38af40a1bea2350ba89b3eaf1adee1211b6ee5228c29a309a15fdbdabed9b6e8:1"
+          }
+        },
+        {
           "ruleId": "CVE-2026-107884-krb5-libs",
           "level": "warning",
           "message": {
@@ -44254,6 +44331,37 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "8969b69a0b8df9597d6eb220b4eceb232dcf452643906e3a053f5af452736a54:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-104357-libtirpc",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: libtirpc, version 1.1.4-12.el8_10 was found in image ghcr.io/anchorlayer/rocky-8:latest at: /var/lib/rpm/Packages"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-8//var/lib/rpm/Packages"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/Packages",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-8:latest@sha256:ff54fc76018b1c9d3ccd0658445eb4e668e4c4ebdbaf86f9ffa68bc5845f243b:/var/lib/rpm/Packages"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "e67eefdfb08fd9effb22559bb0c97a7b88269c775641abd8ce6014528d9b5442:1"
           }
         }
       ]

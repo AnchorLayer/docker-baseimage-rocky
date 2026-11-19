@@ -4103,6 +4103,27 @@
                 ],
                 "security-severity": "2.5"
               }
+            },
+            {
+              "id": "CVE-2026-132138-cyrus-sasl-lib",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-132138 medium vulnerability for cyrus-sasl-lib package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in cyrus-sasl. When processing authentication requests using the Salted Challenge Response Authentication Mechanism (SCRAM), a remote attacker can trigger a null pointer dereference by submitting unexpected channel-binding data. This causes the server process to crash before validating authentication proofs, leading to a Denial of Service (DoS)."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-132138",
+              "help": {
+                "text": "Vulnerability CVE-2026-132138\nSeverity: medium\nPackage: cyrus-sasl-lib\nVersion: 2.1.27-22.el9_7\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-132138](https://access.redhat.com/security/cve/CVE-2026-132138)",
+                "markdown": "**Vulnerability CVE-2026-132138**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | cyrus-sasl-lib  | 2.1.27-22.el9_7  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-132138](https://access.redhat.com/security/cve/CVE-2026-132138)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/cyrus-sasl-lib@2.1.27-22.el9_7?arch=x86_64\u0026distro=rocky-9.9\u0026upstream=cyrus-sasl-2.1.27-22.el9_7.src.rpm"
+                ],
+                "security-severity": "5.3"
+              }
             }
           ]
         }
@@ -10151,6 +10172,37 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "07f69ace166e02cb15b38da9f0e5b998a1886c3658088e456949f940f717bbd6:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-132138-cyrus-sasl-lib",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: cyrus-sasl-lib, version 2.1.27-22.el9_7 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:544c7139ab0ef1bec7e7c40c768c2460f0f617a1baeee1a69ca7188d4343dbe1:/var/lib/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "ddd67a70641a5039e8fab6851dc164573b36b6da4b67675ca51622545284b99e:1"
           }
         }
       ]
