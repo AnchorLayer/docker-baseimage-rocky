@@ -2,10 +2,10 @@
   "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
   "bomFormat": "CycloneDX",
   "specVersion": "1.7",
-  "serialNumber": "urn:uuid:ec6cc066-d4d9-4fa5-9cdc-f86e2a37eb6d",
+  "serialNumber": "urn:uuid:d1b6eb58-b434-4c75-ab17-2a8fdd7ec951",
   "version": 1,
   "metadata": {
-    "timestamp": "2026-11-20T12:25:24Z",
+    "timestamp": "2026-11-21T09:04:29Z",
     "tools": {
       "components": [
         {
@@ -32008,7 +32008,7 @@
   ],
   "vulnerabilities": [
     {
-      "bom-ref": "urn:uuid:295edfd4-74bd-4b7b-80f6-4da9e7b88fd3",
+      "bom-ref": "urn:uuid:3a3af1d0-3c36-4650-bdd8-9857cfbf61f7",
       "id": "CVE-2024-7264",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -32053,7 +32053,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:2e9d49c6-7982-40e4-81bc-700e02145e46",
+      "bom-ref": "urn:uuid:4e1dbcc5-ecbb-487b-98df-4a2a57b51267",
       "id": "CVE-2024-7264",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -32098,7 +32098,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:0edae7b1-6363-48fc-b7aa-f6662e83c633",
+      "bom-ref": "urn:uuid:3eed987c-3d83-49e7-8ed0-92e964ff44bd",
       "id": "CVE-2026-119586",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -32143,7 +32143,105 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:14175934-55c4-4000-b6d5-46e66f671022",
+      "bom-ref": "urn:uuid:d80ca02f-14ed-439d-b007-85c6a7a55634",
+      "id": "CVE-2026-92392",
+      "source": {
+        "name": "redhat-distro-redhat-10",
+        "url": "https://access.redhat.com/security/cve/CVE-2026-92392"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-92392",
+          "source": {
+            "name": "redhat-distro-redhat-10",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-92392"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 8.1,
+          "severity": "high",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.01284,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in curl. When curl uploads data over an HTTP/2 connection, it mishandles server stream reset frames, which can lead to the reuse of previously released memory. Under specific memory and timing conditions, a malicious server can exploit this flaw to execute arbitrary code on the client system or cause the application to crash, resulting in a Denial of Service (DoS).",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/curl@8.12.1-6.el10?arch=x86_64&distro=rocky-10.3&package-id=f4b8a4a05fd8dc79&upstream=curl-8.12.1-6.el10.src.rpm",
+          "versions": [
+            {
+              "version": "8.12.1-6.el10",
+              "status": "affected"
+            },
+            {
+              "range": "vers:rpm/>=0:8.12.1-9.el10_3",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:04b26987-e222-4f59-a750-a5ece3f187ca",
+      "id": "CVE-2026-92392",
+      "source": {
+        "name": "redhat-distro-redhat-10",
+        "url": "https://access.redhat.com/security/cve/CVE-2026-92392"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-92392",
+          "source": {
+            "name": "redhat-distro-redhat-10",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-92392"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 8.1,
+          "severity": "high",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.01284,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in curl. When curl uploads data over an HTTP/2 connection, it mishandles server stream reset frames, which can lead to the reuse of previously released memory. Under specific memory and timing conditions, a malicious server can exploit this flaw to execute arbitrary code on the client system or cause the application to crash, resulting in a Denial of Service (DoS).",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/libcurl@8.12.1-6.el10?arch=x86_64&distro=rocky-10.3&package-id=fc8e95cd622a7abb&upstream=curl-8.12.1-6.el10.src.rpm",
+          "versions": [
+            {
+              "version": "8.12.1-6.el10",
+              "status": "affected"
+            },
+            {
+              "range": "vers:rpm/>=0:8.12.1-9.el10_3",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:5f7c50c8-8969-4e25-a0fb-f45238f4e846",
       "id": "CVE-2024-11053",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -32188,7 +32286,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:4b142fc1-22b4-4834-add5-d8bd44d0a593",
+      "bom-ref": "urn:uuid:7aace818-a4a4-40e2-9450-4d5af9576ae3",
       "id": "CVE-2024-11053",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -32233,7 +32331,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:61e739c1-92aa-40e3-ae45-ed89f3ab4863",
+      "bom-ref": "urn:uuid:870ced7a-b632-4f39-8d44-45b232353d8d",
       "id": "CVE-2025-9232",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -32278,7 +32376,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:d92f1db0-58c8-4486-9525-bed26f96b478",
+      "bom-ref": "urn:uuid:d49af6bb-0d8c-46fd-b5f2-0d4e8f9367e7",
       "id": "CVE-2025-9232",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -32323,7 +32421,105 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:7345dad0-bd89-4685-9af0-2aa6d46961ec",
+      "bom-ref": "urn:uuid:854e7133-afca-47bb-a01e-79c2aefb2ee5",
+      "id": "CVE-2026-9079",
+      "source": {
+        "name": "redhat-distro-redhat-10",
+        "url": "https://access.redhat.com/security/cve/CVE-2026-9079"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-9079",
+          "source": {
+            "name": "redhat-distro-redhat-10",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-9079"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 7.5,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.01064,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in curl. When libcurl is instructed to clear proxy authentication credentials, it fails to do so, leaving the old credentials available. This could lead to the unintended reuse of sensitive proxy authentication credentials for subsequent network transfers, potentially resulting in unauthorized access or information disclosure.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/curl@8.12.1-6.el10?arch=x86_64&distro=rocky-10.3&package-id=f4b8a4a05fd8dc79&upstream=curl-8.12.1-6.el10.src.rpm",
+          "versions": [
+            {
+              "version": "8.12.1-6.el10",
+              "status": "affected"
+            },
+            {
+              "range": "vers:rpm/>=0:8.12.1-9.el10_3",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:8f90e800-86cb-4fe2-b4cb-4853cedecbae",
+      "id": "CVE-2026-9079",
+      "source": {
+        "name": "redhat-distro-redhat-10",
+        "url": "https://access.redhat.com/security/cve/CVE-2026-9079"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-9079",
+          "source": {
+            "name": "redhat-distro-redhat-10",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-9079"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 7.5,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.01064,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in curl. When libcurl is instructed to clear proxy authentication credentials, it fails to do so, leaving the old credentials available. This could lead to the unintended reuse of sensitive proxy authentication credentials for subsequent network transfers, potentially resulting in unauthorized access or information disclosure.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/libcurl@8.12.1-6.el10?arch=x86_64&distro=rocky-10.3&package-id=fc8e95cd622a7abb&upstream=curl-8.12.1-6.el10.src.rpm",
+          "versions": [
+            {
+              "version": "8.12.1-6.el10",
+              "status": "affected"
+            },
+            {
+              "range": "vers:rpm/>=0:8.12.1-9.el10_3",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:24d3d132-76f6-45ca-a2f0-bb3c6b07226f",
       "id": "CVE-2026-0990",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -32368,7 +32564,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:8977a1b4-2662-44f0-9966-6e7cf1cab7e6",
+      "bom-ref": "urn:uuid:a642b6d1-4404-41cf-b164-d675dc54f8d5",
       "id": "CVE-2024-4603",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -32413,7 +32609,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:0bd60c58-9ef8-43fe-bcc0-16478b6be3ac",
+      "bom-ref": "urn:uuid:74c585f4-05f7-4ace-9e49-5334631bf16a",
       "id": "CVE-2024-4603",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -32458,7 +32654,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:f1670c76-852f-410f-82ce-525b2d174c5e",
+      "bom-ref": "urn:uuid:b7c4e495-7070-404a-9fb4-7822be6fcdd8",
       "id": "CVE-2024-41996",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -32503,7 +32699,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:39f07fa7-8cf6-499d-9683-85bd86a6ec82",
+      "bom-ref": "urn:uuid:75b3f8e8-da0c-49c3-a773-6799be4c2f47",
       "id": "CVE-2024-41996",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -32548,7 +32744,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:594e97cd-e26a-4d26-a5f5-ddfa5e2d0ac4",
+      "bom-ref": "urn:uuid:65b5f77d-ce22-4905-b993-f26327e2a727",
       "id": "CVE-2026-95521",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -32593,7 +32789,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:0ab23dbd-c69d-4e67-98b2-13d58a76fcd8",
+      "bom-ref": "urn:uuid:d6316a7f-4c06-4435-8c06-969748844676",
       "id": "CVE-2026-95521",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -32638,7 +32834,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:f4ed4c92-cdd6-49d1-8d6e-5668af4a014f",
+      "bom-ref": "urn:uuid:cf281fb7-4355-4658-af81-69ff4538dd93",
       "id": "CVE-2026-86409",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -32683,7 +32879,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:2c11a9f0-4852-4d96-872b-f63db7157f6e",
+      "bom-ref": "urn:uuid:fdc431e4-58f0-4480-ad73-8eed897ccea4",
       "id": "CVE-2026-86409",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -32728,7 +32924,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:58553217-ea61-48fd-8b45-de3a9903fe95",
+      "bom-ref": "urn:uuid:69579ada-ab7e-476e-806b-684c40f24995",
       "id": "CVE-2026-19931",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -32773,7 +32969,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:ea91b42a-e47b-4153-aa8b-314f5b580f71",
+      "bom-ref": "urn:uuid:e3b9335a-1c4b-4065-9354-a13f98e959df",
       "id": "CVE-2026-19931",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -32818,7 +33014,97 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:61b4248e-e3c2-47ce-af5e-305d1609489f",
+      "bom-ref": "urn:uuid:10188c1a-d121-4a2d-a6d1-f14c8f71819c",
+      "id": "CVE-2026-124709",
+      "source": {
+        "name": "redhat-distro-redhat-10",
+        "url": "https://access.redhat.com/security/cve/CVE-2026-124709"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-124709",
+          "source": {
+            "name": "redhat-distro-redhat-10",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-124709"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 7.5,
+          "severity": "high",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00569,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in OpenSSL. A remote attacker can trigger a Denial of Service (DoS) by repeatedly opening and resetting streams on an established QUIC connection. When a peer resets a stream before the server's rejection is signaled, the stream's allocated state is never reclaimed and persists for the lifetime of the connection. Over time, this unbounded memory accumulation can exhaust server memory and terminate active connections.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/openssl-fips-provider@3.5.9-1.el10_3?arch=x86_64&distro=rocky-10.3&epoch=1&package-id=e76238296c299582&upstream=openssl-3.5.9-1.el10_3.src.rpm",
+          "versions": [
+            {
+              "version": "1:3.5.9-1.el10_3",
+              "status": "affected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:128123cb-1ec9-42c1-b4b7-f40cdb0663f6",
+      "id": "CVE-2026-124709",
+      "source": {
+        "name": "redhat-distro-redhat-10",
+        "url": "https://access.redhat.com/security/cve/CVE-2026-124709"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-124709",
+          "source": {
+            "name": "redhat-distro-redhat-10",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-124709"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 7.5,
+          "severity": "high",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00569,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in OpenSSL. A remote attacker can trigger a Denial of Service (DoS) by repeatedly opening and resetting streams on an established QUIC connection. When a peer resets a stream before the server's rejection is signaled, the stream's allocated state is never reclaimed and persists for the lifetime of the connection. Over time, this unbounded memory accumulation can exhaust server memory and terminate active connections.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/openssl-libs@3.5.9-1.el10_3?arch=x86_64&distro=rocky-10.3&epoch=1&package-id=c9390715ef45e4cb&upstream=openssl-3.5.9-1.el10_3.src.rpm",
+          "versions": [
+            {
+              "version": "1:3.5.9-1.el10_3",
+              "status": "affected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:5e4fae16-51b3-48b0-b99f-80d0ac303f37",
       "id": "CVE-2026-28388",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -32863,7 +33149,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:fb2ad4ed-f043-4aa3-b890-a91c9bc9e852",
+      "bom-ref": "urn:uuid:2ad90842-b45e-4710-ba96-83a58ca092f6",
       "id": "CVE-2026-28388",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -32908,7 +33194,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:5c2c1dfa-c460-4f4c-8ea0-2f5d2fc7a96c",
+      "bom-ref": "urn:uuid:28d76329-3c53-4007-a938-74c734209a37",
       "id": "CVE-2026-9546",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -32953,7 +33239,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:d7a0dd5a-add5-4987-9e9c-42b54cb24892",
+      "bom-ref": "urn:uuid:1b9723c9-60e3-4f0f-8289-164f6c2dee24",
       "id": "CVE-2026-9546",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -32998,7 +33284,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:6a68f35f-c788-4590-a0fa-f8bb82404064",
+      "bom-ref": "urn:uuid:5faaa209-59bf-4ec5-8262-375b157e3840",
       "id": "CVE-2026-92388",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -33043,7 +33329,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:b1ea2b9d-e83a-4928-b740-43ec1f3daa09",
+      "bom-ref": "urn:uuid:bbf3c3c9-9d97-41be-9a40-eff7e3639d48",
       "id": "CVE-2026-92388",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -33088,7 +33374,105 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:fe815c32-3346-48f9-ad92-933e63421205",
+      "bom-ref": "urn:uuid:b1dd7587-ac9b-4150-966e-5f81de0a922e",
+      "id": "CVE-2026-11856",
+      "source": {
+        "name": "redhat-distro-redhat-10",
+        "url": "https://access.redhat.com/security/cve/CVE-2026-11856"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-11856",
+          "source": {
+            "name": "redhat-distro-redhat-10",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-11856"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 6.5,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00688,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in curl. When `libcurl` performs a transfer to an HTTP origin using Digest authentication and then reuses the same connection handle for a subsequent transfer to a different origin, it may incorrectly send the authentication header intended for the first origin to the second. This could lead to unintended information disclosure, potentially allowing an attacker to gain unauthorized access to sensitive data.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/curl@8.12.1-6.el10?arch=x86_64&distro=rocky-10.3&package-id=f4b8a4a05fd8dc79&upstream=curl-8.12.1-6.el10.src.rpm",
+          "versions": [
+            {
+              "version": "8.12.1-6.el10",
+              "status": "affected"
+            },
+            {
+              "range": "vers:rpm/>=0:8.12.1-9.el10_3",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:3eee596a-edb6-4d5a-9b74-9b08d8d0d14d",
+      "id": "CVE-2026-11856",
+      "source": {
+        "name": "redhat-distro-redhat-10",
+        "url": "https://access.redhat.com/security/cve/CVE-2026-11856"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-11856",
+          "source": {
+            "name": "redhat-distro-redhat-10",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-11856"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 6.5,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00688,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in curl. When `libcurl` performs a transfer to an HTTP origin using Digest authentication and then reuses the same connection handle for a subsequent transfer to a different origin, it may incorrectly send the authentication header intended for the first origin to the second. This could lead to unintended information disclosure, potentially allowing an attacker to gain unauthorized access to sensitive data.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/libcurl@8.12.1-6.el10?arch=x86_64&distro=rocky-10.3&package-id=fc8e95cd622a7abb&upstream=curl-8.12.1-6.el10.src.rpm",
+          "versions": [
+            {
+              "version": "8.12.1-6.el10",
+              "status": "affected"
+            },
+            {
+              "range": "vers:rpm/>=0:8.12.1-9.el10_3",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:94cd40f4-1376-4bc3-ac41-f5449510bd00",
       "id": "CVE-2026-92391",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -33133,7 +33517,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:6aac1b19-fb33-4327-9e19-bbd40386cf6b",
+      "bom-ref": "urn:uuid:c3378e3e-aaef-4edf-acb6-03b4b9335aab",
       "id": "CVE-2026-92391",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -33178,7 +33562,105 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:1d68f3a9-a4e6-47aa-9e64-ccbb772bb779",
+      "bom-ref": "urn:uuid:48fbbf88-38d5-4efb-84eb-8dbe65d51de7",
+      "id": "CVE-2026-8924",
+      "source": {
+        "name": "redhat-distro-redhat-10",
+        "url": "https://access.redhat.com/security/cve/CVE-2026-8924"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-8924",
+          "source": {
+            "name": "redhat-distro-redhat-10",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-8924"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 6.5,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00661,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in curl's cookie parsing logic. A malicious HTTP server can exploit this by setting 'super cookies' that bypass the Public Suffix List check. This allows an attacker-controlled origin to inject cookies that curl then transmits to unrelated third-party domains, leading to compromising request integrity.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/curl@8.12.1-6.el10?arch=x86_64&distro=rocky-10.3&package-id=f4b8a4a05fd8dc79&upstream=curl-8.12.1-6.el10.src.rpm",
+          "versions": [
+            {
+              "version": "8.12.1-6.el10",
+              "status": "affected"
+            },
+            {
+              "range": "vers:rpm/>=0:8.12.1-9.el10_3",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:a5f6fa97-d561-4e90-8781-ec67dced76cd",
+      "id": "CVE-2026-8924",
+      "source": {
+        "name": "redhat-distro-redhat-10",
+        "url": "https://access.redhat.com/security/cve/CVE-2026-8924"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-8924",
+          "source": {
+            "name": "redhat-distro-redhat-10",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-8924"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 6.5,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00661,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in curl's cookie parsing logic. A malicious HTTP server can exploit this by setting 'super cookies' that bypass the Public Suffix List check. This allows an attacker-controlled origin to inject cookies that curl then transmits to unrelated third-party domains, leading to compromising request integrity.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/libcurl@8.12.1-6.el10?arch=x86_64&distro=rocky-10.3&package-id=fc8e95cd622a7abb&upstream=curl-8.12.1-6.el10.src.rpm",
+          "versions": [
+            {
+              "version": "8.12.1-6.el10",
+              "status": "affected"
+            },
+            {
+              "range": "vers:rpm/>=0:8.12.1-9.el10_3",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:62b543f5-8ad8-49ea-90a0-f235230b8ea0",
       "id": "CVE-2026-86410",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -33223,7 +33705,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:32289f5a-4a89-4ec4-8734-59ff94e249aa",
+      "bom-ref": "urn:uuid:cc9c6d7e-988c-49ef-908b-1e78c260d989",
       "id": "CVE-2026-86410",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -33268,7 +33750,105 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:22812237-34a9-4748-b078-58c20af25931",
+      "bom-ref": "urn:uuid:716fdda1-7dbe-4881-b00d-ae320c28ca19",
+      "id": "CVE-2026-8927",
+      "source": {
+        "name": "redhat-distro-redhat-10",
+        "url": "https://access.redhat.com/security/cve/CVE-2026-8927"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-8927",
+          "source": {
+            "name": "redhat-distro-redhat-10",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-8927"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 7.5,
+          "severity": "high",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.005,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in libcurl. When reusing a libcurl handle for sequential transfers with environment-variable proxy configuration, the library does not properly clear the proxy authentication state. This oversight can lead to the unintended disclosure of `Proxy-Authorization` headers to an incorrect proxy, potentially exposing sensitive authentication information to an unauthorized entity. This is an information disclosure vulnerability.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/curl@8.12.1-6.el10?arch=x86_64&distro=rocky-10.3&package-id=f4b8a4a05fd8dc79&upstream=curl-8.12.1-6.el10.src.rpm",
+          "versions": [
+            {
+              "version": "8.12.1-6.el10",
+              "status": "affected"
+            },
+            {
+              "range": "vers:rpm/>=0:8.12.1-9.el10_3",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:9b75a3f9-213c-4154-8794-7db6f000386d",
+      "id": "CVE-2026-8927",
+      "source": {
+        "name": "redhat-distro-redhat-10",
+        "url": "https://access.redhat.com/security/cve/CVE-2026-8927"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-8927",
+          "source": {
+            "name": "redhat-distro-redhat-10",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-8927"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 7.5,
+          "severity": "high",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.005,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in libcurl. When reusing a libcurl handle for sequential transfers with environment-variable proxy configuration, the library does not properly clear the proxy authentication state. This oversight can lead to the unintended disclosure of `Proxy-Authorization` headers to an incorrect proxy, potentially exposing sensitive authentication information to an unauthorized entity. This is an information disclosure vulnerability.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/libcurl@8.12.1-6.el10?arch=x86_64&distro=rocky-10.3&package-id=fc8e95cd622a7abb&upstream=curl-8.12.1-6.el10.src.rpm",
+          "versions": [
+            {
+              "version": "8.12.1-6.el10",
+              "status": "affected"
+            },
+            {
+              "range": "vers:rpm/>=0:8.12.1-9.el10_3",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:1168e4b1-c9be-43a1-96e8-710dc617f8e7",
       "id": "CVE-2026-3731",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -33313,7 +33893,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:be33dafe-9792-4e00-aae4-4968ec120f69",
+      "bom-ref": "urn:uuid:2772944e-fe0b-4e04-88ee-b32a50d31844",
       "id": "CVE-2026-3731",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -33358,7 +33938,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:2e60f721-9bbf-4d74-9515-f6e6f0636f6c",
+      "bom-ref": "urn:uuid:28443368-cace-4418-bcbd-bd0ea5312df4",
       "id": "CVE-2026-28389",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -33403,7 +33983,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:dab517db-7766-467d-b1fe-f7fa24483821",
+      "bom-ref": "urn:uuid:b078c3e6-b6f5-49a2-b85e-29329ea41383",
       "id": "CVE-2026-28389",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -33448,7 +34028,203 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:0e904379-5137-4857-9355-bf98a233ac2b",
+      "bom-ref": "urn:uuid:ca8aa53d-9b5e-47b2-84a0-6b8b55428dc7",
+      "id": "CVE-2025-14819",
+      "source": {
+        "name": "redhat-distro-redhat-10",
+        "url": "https://access.redhat.com/security/cve/CVE-2025-14819"
+      },
+      "references": [
+        {
+          "id": "CVE-2025-14819",
+          "source": {
+            "name": "redhat-distro-redhat-10",
+            "url": "https://access.redhat.com/security/cve/CVE-2025-14819"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 6.8,
+          "severity": "low",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:N"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00756,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in libcurl. When handling secure connections (TLS) and reusing connection settings, libcurl could incorrectly apply a cached security setting related to certificate chain validation. This could allow libcurl to accept a server's security certificate that it should have otherwise rejected, potentially compromising the integrity of the secure connection.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/curl@8.12.1-6.el10?arch=x86_64&distro=rocky-10.3&package-id=f4b8a4a05fd8dc79&upstream=curl-8.12.1-6.el10.src.rpm",
+          "versions": [
+            {
+              "version": "8.12.1-6.el10",
+              "status": "affected"
+            },
+            {
+              "range": "vers:rpm/>=0:8.12.1-9.el10_3",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:2f5adf5e-6f99-4fa1-ab88-2a5c69ab8be6",
+      "id": "CVE-2025-14819",
+      "source": {
+        "name": "redhat-distro-redhat-10",
+        "url": "https://access.redhat.com/security/cve/CVE-2025-14819"
+      },
+      "references": [
+        {
+          "id": "CVE-2025-14819",
+          "source": {
+            "name": "redhat-distro-redhat-10",
+            "url": "https://access.redhat.com/security/cve/CVE-2025-14819"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 6.8,
+          "severity": "low",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:N"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00756,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in libcurl. When handling secure connections (TLS) and reusing connection settings, libcurl could incorrectly apply a cached security setting related to certificate chain validation. This could allow libcurl to accept a server's security certificate that it should have otherwise rejected, potentially compromising the integrity of the secure connection.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/libcurl@8.12.1-6.el10?arch=x86_64&distro=rocky-10.3&package-id=fc8e95cd622a7abb&upstream=curl-8.12.1-6.el10.src.rpm",
+          "versions": [
+            {
+              "version": "8.12.1-6.el10",
+              "status": "affected"
+            },
+            {
+              "range": "vers:rpm/>=0:8.12.1-9.el10_3",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:d4ade857-22e3-4542-9356-6ad2853231e5",
+      "id": "CVE-2026-6253",
+      "source": {
+        "name": "redhat-distro-redhat-10",
+        "url": "https://access.redhat.com/security/cve/CVE-2026-6253"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-6253",
+          "source": {
+            "name": "redhat-distro-redhat-10",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-6253"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 5.3,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:N/A:N"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00719,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in curl. When curl is configured to use distinct proxies for different URL schemes, a redirect from a URL using an authenticated proxy to one using an unauthenticated proxy can inadvertently expose the initial proxy's credentials. This improper credential management (CWE-522) may allow an attacker to gain unauthorized access or information by intercepting these disclosed credentials.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/curl@8.12.1-6.el10?arch=x86_64&distro=rocky-10.3&package-id=f4b8a4a05fd8dc79&upstream=curl-8.12.1-6.el10.src.rpm",
+          "versions": [
+            {
+              "version": "8.12.1-6.el10",
+              "status": "affected"
+            },
+            {
+              "range": "vers:rpm/>=0:8.12.1-9.el10_3",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:ba250d7d-b2ef-42bd-8024-d3a36d3950bd",
+      "id": "CVE-2026-6253",
+      "source": {
+        "name": "redhat-distro-redhat-10",
+        "url": "https://access.redhat.com/security/cve/CVE-2026-6253"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-6253",
+          "source": {
+            "name": "redhat-distro-redhat-10",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-6253"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 5.3,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:N/A:N"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00719,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in curl. When curl is configured to use distinct proxies for different URL schemes, a redirect from a URL using an authenticated proxy to one using an unauthenticated proxy can inadvertently expose the initial proxy's credentials. This improper credential management (CWE-522) may allow an attacker to gain unauthorized access or information by intercepting these disclosed credentials.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/libcurl@8.12.1-6.el10?arch=x86_64&distro=rocky-10.3&package-id=fc8e95cd622a7abb&upstream=curl-8.12.1-6.el10.src.rpm",
+          "versions": [
+            {
+              "version": "8.12.1-6.el10",
+              "status": "affected"
+            },
+            {
+              "range": "vers:rpm/>=0:8.12.1-9.el10_3",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:ce371e10-5bce-4d96-b464-ad8e3433ab9f",
       "id": "CVE-2025-5351",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -33493,7 +34269,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:74be6ba0-035c-431c-b892-aab020d52f53",
+      "bom-ref": "urn:uuid:4e77cbad-1bd2-40a3-b6d7-354e8a5307db",
       "id": "CVE-2025-5351",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -33538,7 +34314,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:3de6486c-c855-4a35-8430-fa6e242f80c2",
+      "bom-ref": "urn:uuid:f1113b17-9c22-43d4-9d19-72ad2ac6a52f",
       "id": "CVE-2026-5773",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -33583,7 +34359,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:c11bfd9f-e97e-4376-956f-5a3cc46d71b9",
+      "bom-ref": "urn:uuid:926df754-6470-4601-b901-f69efa06936e",
       "id": "CVE-2026-5773",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -33628,7 +34404,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:85791f31-de05-42c2-865e-4761bc18b12b",
+      "bom-ref": "urn:uuid:d489e0d6-641a-4b24-a09b-ceb1fc56596d",
       "id": "CVE-2026-92387",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -33673,7 +34449,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:bb7d1118-3408-4b09-b3b7-5d4ee0ed45b8",
+      "bom-ref": "urn:uuid:0f9066c0-d0be-475c-9b16-a948721fd901",
       "id": "CVE-2026-92387",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -33718,7 +34494,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:d1469fb6-1d8e-4caf-b3c9-dd520ab7c05a",
+      "bom-ref": "urn:uuid:d8e1ea62-5031-45e9-a383-a0d7c6957e02",
       "id": "CVE-2026-87862",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -33763,7 +34539,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:b86d3c35-9120-4259-aec7-20214252a7e9",
+      "bom-ref": "urn:uuid:b136680c-539f-4787-ba6d-bac73d5915e9",
       "id": "CVE-2026-87862",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -33808,7 +34584,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:725d58ac-94ff-496e-8706-916255f02c2a",
+      "bom-ref": "urn:uuid:bc7c5cec-2fbb-46ab-829c-77ce6355247d",
       "id": "CVE-2025-27113",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -33853,7 +34629,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:7dd7b7c3-89b8-46b4-ba30-a19a626093dd",
+      "bom-ref": "urn:uuid:1d705095-36dd-4df6-8270-ee804450e352",
       "id": "CVE-2025-14524",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -33898,7 +34674,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:c195181f-ede3-4eac-a50e-32b0f8ec2ed1",
+      "bom-ref": "urn:uuid:634e3382-b4a0-476e-9494-f079927d7c1d",
       "id": "CVE-2025-14524",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -33943,7 +34719,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:8f4c5978-bac9-4228-acd8-0ccad6bf4b37",
+      "bom-ref": "urn:uuid:6dc384a9-a6b6-4e7a-8758-cbf18e43827a",
       "id": "CVE-2026-86414",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -33988,7 +34764,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:0fa85564-08bd-44d0-992f-5baa1990b3cb",
+      "bom-ref": "urn:uuid:ba811cb4-9ed6-4d8b-ad39-19bc939df012",
       "id": "CVE-2026-86414",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -34033,7 +34809,150 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:d924423e-c15f-4eeb-8105-27b384491a8b",
+      "bom-ref": "urn:uuid:e6c8e85f-8a2d-49f7-becd-88601d71df11",
+      "id": "CVE-2026-129483",
+      "source": {
+        "name": "redhat-distro-redhat-10",
+        "url": "https://access.redhat.com/security/cve/CVE-2026-129483"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-129483",
+          "source": {
+            "name": "redhat-distro-redhat-10",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-129483"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 9.1,
+          "severity": "high",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.0038,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in cyrus-sasl. The Secure Remote Password (SRP) authentication mechanism fails to properly validate public key values sent by clients during the authentication exchange. A remote, unauthenticated attacker can exploit this vulnerability by sending crafted values during the handshake to force the server into calculating a predictable shared key. This enables the attacker to bypass authentication entirely, log in as any valid user without requiring a password, and compromise session encryption keys.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/cyrus-sasl-lib@2.1.28-30.el10_2?arch=x86_64&distro=rocky-10.3&package-id=3e33f5cc8c3dd4df&upstream=cyrus-sasl-2.1.28-30.el10_2.src.rpm",
+          "versions": [
+            {
+              "version": "2.1.28-30.el10_2",
+              "status": "affected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:3c6bad55-926e-4d4b-9e73-46df43eaac88",
+      "id": "CVE-2026-12064",
+      "source": {
+        "name": "redhat-distro-redhat-10",
+        "url": "https://access.redhat.com/security/cve/CVE-2026-12064"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-12064",
+          "source": {
+            "name": "redhat-distro-redhat-10",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-12064"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 7.5,
+          "severity": "high",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00414,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in curl. When a user invokes curl with a schemeless URL and specifies SFTP (SSH File Transfer Protocol) or SCP (Secure Copy Protocol) as the default protocol, the tool layer fails to initialize critical SSH security options. This bypasses host verification, allowing curl to connect to an unverified SSH remote host without alerting the user. This could enable an attacker to intercept or manipulate data through a man-in-the-middle attack.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/curl@8.12.1-6.el10?arch=x86_64&distro=rocky-10.3&package-id=f4b8a4a05fd8dc79&upstream=curl-8.12.1-6.el10.src.rpm",
+          "versions": [
+            {
+              "version": "8.12.1-6.el10",
+              "status": "affected"
+            },
+            {
+              "range": "vers:rpm/>=0:8.12.1-9.el10_3",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:85fdcd55-fe42-41e7-8101-50c0ea6ea68f",
+      "id": "CVE-2026-12064",
+      "source": {
+        "name": "redhat-distro-redhat-10",
+        "url": "https://access.redhat.com/security/cve/CVE-2026-12064"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-12064",
+          "source": {
+            "name": "redhat-distro-redhat-10",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-12064"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 7.5,
+          "severity": "high",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00414,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in curl. When a user invokes curl with a schemeless URL and specifies SFTP (SSH File Transfer Protocol) or SCP (Secure Copy Protocol) as the default protocol, the tool layer fails to initialize critical SSH security options. This bypasses host verification, allowing curl to connect to an unverified SSH remote host without alerting the user. This could enable an attacker to intercept or manipulate data through a man-in-the-middle attack.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/libcurl@8.12.1-6.el10?arch=x86_64&distro=rocky-10.3&package-id=fc8e95cd622a7abb&upstream=curl-8.12.1-6.el10.src.rpm",
+          "versions": [
+            {
+              "version": "8.12.1-6.el10",
+              "status": "affected"
+            },
+            {
+              "range": "vers:rpm/>=0:8.12.1-9.el10_3",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:c2218a5d-4a39-4136-acfa-0e422052d3d9",
       "id": "CVE-2025-15079",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -34078,7 +34997,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:42a4d0bc-706e-4e6c-b1a2-1cf935219259",
+      "bom-ref": "urn:uuid:eb761ebe-6ee4-47f2-90cb-353d7b34ac23",
       "id": "CVE-2025-15079",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -34123,7 +35042,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:0b4bfb82-368a-4713-becc-671eb16d9bd1",
+      "bom-ref": "urn:uuid:29edf7a4-918a-42a0-8c0a-c5d1007828fb",
       "id": "CVE-2026-9080",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -34168,7 +35087,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:b480a4e3-0909-4d64-a087-5e4709197496",
+      "bom-ref": "urn:uuid:8f9dc9fa-710a-4271-810a-affad000f581",
       "id": "CVE-2026-9080",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -34213,7 +35132,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:bcbec124-b95e-4c42-98a6-1e8c8797cb7e",
+      "bom-ref": "urn:uuid:5d2a905b-e455-40b5-94b9-38b41b40f49d",
       "id": "CVE-2026-92386",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -34258,7 +35177,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:710f67e5-8471-4c23-80e2-bb61516845b3",
+      "bom-ref": "urn:uuid:6df0fe3f-b966-44c0-92b6-c27418da38b2",
       "id": "CVE-2026-92386",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -34303,7 +35222,105 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:1f9618a5-ef71-4d9c-aa0d-a99df902dcc3",
+      "bom-ref": "urn:uuid:77109367-6fa1-44a8-ab16-d03f84e0be83",
+      "id": "CVE-2026-6429",
+      "source": {
+        "name": "redhat-distro-redhat-10",
+        "url": "https://access.redhat.com/security/cve/CVE-2026-6429"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-6429",
+          "source": {
+            "name": "redhat-distro-redhat-10",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-6429"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 6.5,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00519,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in libcurl. When configured to use a .netrc file for credentials and follow HTTP redirects, libcurl can inadvertently send the password from the initial connection to the redirected host. This sensitive information disclosure occurs when both the original and redirect URLs use clear text HTTP, are performed over the same HTTP proxy, and the same connection is reused. This vulnerability, categorized as an Exposure of Sensitive Information to an Unauthorized Actor (CWE-200), could allow an attacker to obtain user credentials.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/curl@8.12.1-6.el10?arch=x86_64&distro=rocky-10.3&package-id=f4b8a4a05fd8dc79&upstream=curl-8.12.1-6.el10.src.rpm",
+          "versions": [
+            {
+              "version": "8.12.1-6.el10",
+              "status": "affected"
+            },
+            {
+              "range": "vers:rpm/>=0:8.12.1-9.el10_3",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:ee39d2e5-d8fe-47a9-98fa-498cbb046d71",
+      "id": "CVE-2026-6429",
+      "source": {
+        "name": "redhat-distro-redhat-10",
+        "url": "https://access.redhat.com/security/cve/CVE-2026-6429"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-6429",
+          "source": {
+            "name": "redhat-distro-redhat-10",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-6429"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 6.5,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00519,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in libcurl. When configured to use a .netrc file for credentials and follow HTTP redirects, libcurl can inadvertently send the password from the initial connection to the redirected host. This sensitive information disclosure occurs when both the original and redirect URLs use clear text HTTP, are performed over the same HTTP proxy, and the same connection is reused. This vulnerability, categorized as an Exposure of Sensitive Information to an Unauthorized Actor (CWE-200), could allow an attacker to obtain user credentials.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/libcurl@8.12.1-6.el10?arch=x86_64&distro=rocky-10.3&package-id=fc8e95cd622a7abb&upstream=curl-8.12.1-6.el10.src.rpm",
+          "versions": [
+            {
+              "version": "8.12.1-6.el10",
+              "status": "affected"
+            },
+            {
+              "range": "vers:rpm/>=0:8.12.1-9.el10_3",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:0226935a-6ff2-4e7d-b0dc-aba77cc3184b",
       "id": "CVE-2026-132138",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -34348,7 +35365,203 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:8a4561a3-9b59-4cd1-a58a-e20f692fcac1",
+      "bom-ref": "urn:uuid:03e466a8-415d-490e-91c9-2d5b1a98d804",
+      "id": "CVE-2026-10536",
+      "source": {
+        "name": "redhat-distro-redhat-10",
+        "url": "https://access.redhat.com/security/cve/CVE-2026-10536"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-10536",
+          "source": {
+            "name": "redhat-distro-redhat-10",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-10536"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 4.7,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00598,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in libcurl. This use-after-free vulnerability occurs when an application configures an HTTP/2 stream-dependency tree and then performs a sequence of operations involving `curl_easy_reset()` and `curl_easy_cleanup()`. During the final cleanup, libcurl attempts to access memory that has already been released. This can lead to application crashes, resulting in a Denial of Service (DoS).",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/curl@8.12.1-6.el10?arch=x86_64&distro=rocky-10.3&package-id=f4b8a4a05fd8dc79&upstream=curl-8.12.1-6.el10.src.rpm",
+          "versions": [
+            {
+              "version": "8.12.1-6.el10",
+              "status": "affected"
+            },
+            {
+              "range": "vers:rpm/>=0:8.12.1-9.el10_3",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:4c8bf3af-9cff-4698-a302-d7a3fae76775",
+      "id": "CVE-2026-10536",
+      "source": {
+        "name": "redhat-distro-redhat-10",
+        "url": "https://access.redhat.com/security/cve/CVE-2026-10536"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-10536",
+          "source": {
+            "name": "redhat-distro-redhat-10",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-10536"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 4.7,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00598,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in libcurl. This use-after-free vulnerability occurs when an application configures an HTTP/2 stream-dependency tree and then performs a sequence of operations involving `curl_easy_reset()` and `curl_easy_cleanup()`. During the final cleanup, libcurl attempts to access memory that has already been released. This can lead to application crashes, resulting in a Denial of Service (DoS).",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/libcurl@8.12.1-6.el10?arch=x86_64&distro=rocky-10.3&package-id=fc8e95cd622a7abb&upstream=curl-8.12.1-6.el10.src.rpm",
+          "versions": [
+            {
+              "version": "8.12.1-6.el10",
+              "status": "affected"
+            },
+            {
+              "range": "vers:rpm/>=0:8.12.1-9.el10_3",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:015e4a9b-8145-47e3-a1ef-450e969f20c0",
+      "id": "CVE-2026-8458",
+      "source": {
+        "name": "redhat-distro-redhat-10",
+        "url": "https://access.redhat.com/security/cve/CVE-2026-8458"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-8458",
+          "source": {
+            "name": "redhat-distro-redhat-10",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-8458"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 8.1,
+          "severity": "high",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00371,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in libcurl. A logical error in the connection pooling mechanism may cause libcurl to reuse an authenticated connection for an unintended service. This could allow an application to wrongfully reuse an existing connection to the same server that was authenticated for a different service, potentially leading to unauthorized access or information disclosure.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/curl@8.12.1-6.el10?arch=x86_64&distro=rocky-10.3&package-id=f4b8a4a05fd8dc79&upstream=curl-8.12.1-6.el10.src.rpm",
+          "versions": [
+            {
+              "version": "8.12.1-6.el10",
+              "status": "affected"
+            },
+            {
+              "range": "vers:rpm/>=0:8.12.1-9.el10_3",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:6e9a514f-08f6-4c10-bc36-6053b3c7980b",
+      "id": "CVE-2026-8458",
+      "source": {
+        "name": "redhat-distro-redhat-10",
+        "url": "https://access.redhat.com/security/cve/CVE-2026-8458"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-8458",
+          "source": {
+            "name": "redhat-distro-redhat-10",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-8458"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 8.1,
+          "severity": "high",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00371,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in libcurl. A logical error in the connection pooling mechanism may cause libcurl to reuse an authenticated connection for an unintended service. This could allow an application to wrongfully reuse an existing connection to the same server that was authenticated for a different service, potentially leading to unauthorized access or information disclosure.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/libcurl@8.12.1-6.el10?arch=x86_64&distro=rocky-10.3&package-id=fc8e95cd622a7abb&upstream=curl-8.12.1-6.el10.src.rpm",
+          "versions": [
+            {
+              "version": "8.12.1-6.el10",
+              "status": "affected"
+            },
+            {
+              "range": "vers:rpm/>=0:8.12.1-9.el10_3",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:b8c01fb5-72ba-4cb9-8a23-5b31af0b49f2",
       "id": "CVE-2024-13176",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -34393,7 +35606,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:142ca80b-3350-40d1-b03f-b06fbbe25770",
+      "bom-ref": "urn:uuid:e34108d3-fc40-4885-8be7-632cdc1b5de0",
       "id": "CVE-2024-13176",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -34438,7 +35651,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:50c7343b-4ba2-4da3-8f26-a255b366e2df",
+      "bom-ref": "urn:uuid:be75ba91-63a2-4aa7-8774-2e1632cc23c6",
       "id": "CVE-2025-29087",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -34483,7 +35696,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:74a4a3ec-a05c-4c7a-811e-f3654d581592",
+      "bom-ref": "urn:uuid:748ee4fa-897b-44fc-99d3-1ad86eb6c7c8",
       "id": "CVE-2026-92390",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -34528,7 +35741,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:9e986ffc-ee93-4c08-a542-55d771b103e8",
+      "bom-ref": "urn:uuid:613e615d-38b8-4bd0-af11-1d7becce241c",
       "id": "CVE-2026-92390",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -34573,52 +35786,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:a7997c01-68f7-4734-8d91-8ff9818147b8",
-      "id": "CVE-2026-87863",
-      "source": {
-        "name": "redhat-distro-redhat-10",
-        "url": "https://access.redhat.com/security/cve/CVE-2026-87863"
-      },
-      "references": [
-        {
-          "id": "CVE-2026-87863",
-          "source": {
-            "name": "redhat-distro-redhat-10",
-            "url": "https://access.redhat.com/security/cve/CVE-2026-87863"
-          }
-        }
-      ],
-      "ratings": [
-        {
-          "score": 3.7,
-          "severity": "low",
-          "method": "CVSSv31",
-          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N"
-        },
-        {
-          "source": {
-            "name": "FIRST",
-            "url": "https://www.first.org/epss/"
-          },
-          "score": 0.00828,
-          "method": "other"
-        }
-      ],
-      "description": "A flaw was found in curl. When persistent HTTP Strict Transport Security (HSTS) caching is enabled, a remote HTTPS server can return an out-of-range expiration value that fails time serialization during cache saving. Because curl truncates the cache file prior to writing the update, this serialization failure causes the persistent HSTS cache to be deleted or emptied. As a result, stored security policies for known hosts are lost, potentially allowing future connections to fall back to insecure communication.",
-      "affects": [
-        {
-          "ref": "pkg:rpm/rocky/curl@8.12.1-6.el10?arch=x86_64&distro=rocky-10.3&package-id=f4b8a4a05fd8dc79&upstream=curl-8.12.1-6.el10.src.rpm",
-          "versions": [
-            {
-              "version": "8.12.1-6.el10",
-              "status": "affected"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "bom-ref": "urn:uuid:67f81c28-0c36-4285-8bea-dc1d4938ec71",
+      "bom-ref": "urn:uuid:b6c9b06c-5dad-4ba2-83e0-6b6c78e37d81",
       "id": "CVE-2026-87864",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -34663,52 +35831,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:4ab2bdc7-a06c-4f9a-9c95-438dd67545fc",
-      "id": "CVE-2026-87863",
-      "source": {
-        "name": "redhat-distro-redhat-10",
-        "url": "https://access.redhat.com/security/cve/CVE-2026-87863"
-      },
-      "references": [
-        {
-          "id": "CVE-2026-87863",
-          "source": {
-            "name": "redhat-distro-redhat-10",
-            "url": "https://access.redhat.com/security/cve/CVE-2026-87863"
-          }
-        }
-      ],
-      "ratings": [
-        {
-          "score": 3.7,
-          "severity": "low",
-          "method": "CVSSv31",
-          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N"
-        },
-        {
-          "source": {
-            "name": "FIRST",
-            "url": "https://www.first.org/epss/"
-          },
-          "score": 0.00828,
-          "method": "other"
-        }
-      ],
-      "description": "A flaw was found in curl. When persistent HTTP Strict Transport Security (HSTS) caching is enabled, a remote HTTPS server can return an out-of-range expiration value that fails time serialization during cache saving. Because curl truncates the cache file prior to writing the update, this serialization failure causes the persistent HSTS cache to be deleted or emptied. As a result, stored security policies for known hosts are lost, potentially allowing future connections to fall back to insecure communication.",
-      "affects": [
-        {
-          "ref": "pkg:rpm/rocky/libcurl@8.12.1-6.el10?arch=x86_64&distro=rocky-10.3&package-id=fc8e95cd622a7abb&upstream=curl-8.12.1-6.el10.src.rpm",
-          "versions": [
-            {
-              "version": "8.12.1-6.el10",
-              "status": "affected"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "bom-ref": "urn:uuid:1dc981e9-e8bc-4ce0-96a5-7e888ec39ad7",
+      "bom-ref": "urn:uuid:ecc44098-5c65-429d-8d47-a21d915e1327",
       "id": "CVE-2026-87864",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -34753,7 +35876,97 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:c959df8b-cc7f-4efb-907d-1246cb75b73a",
+      "bom-ref": "urn:uuid:42136d0d-d7d7-4eb5-a2c6-1b6bdb04aa0a",
+      "id": "CVE-2026-87863",
+      "source": {
+        "name": "redhat-distro-redhat-10",
+        "url": "https://access.redhat.com/security/cve/CVE-2026-87863"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-87863",
+          "source": {
+            "name": "redhat-distro-redhat-10",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-87863"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 3.7,
+          "severity": "low",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00828,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in curl. When persistent HTTP Strict Transport Security (HSTS) caching is enabled, a remote HTTPS server can return an out-of-range expiration value that fails time serialization during cache saving. Because curl truncates the cache file prior to writing the update, this serialization failure causes the persistent HSTS cache to be deleted or emptied. As a result, stored security policies for known hosts are lost, potentially allowing future connections to fall back to insecure communication.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/curl@8.12.1-6.el10?arch=x86_64&distro=rocky-10.3&package-id=f4b8a4a05fd8dc79&upstream=curl-8.12.1-6.el10.src.rpm",
+          "versions": [
+            {
+              "version": "8.12.1-6.el10",
+              "status": "affected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:cb480838-074b-413a-a412-bc1aaaa77dad",
+      "id": "CVE-2026-87863",
+      "source": {
+        "name": "redhat-distro-redhat-10",
+        "url": "https://access.redhat.com/security/cve/CVE-2026-87863"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-87863",
+          "source": {
+            "name": "redhat-distro-redhat-10",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-87863"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 3.7,
+          "severity": "low",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00828,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in curl. When persistent HTTP Strict Transport Security (HSTS) caching is enabled, a remote HTTPS server can return an out-of-range expiration value that fails time serialization during cache saving. Because curl truncates the cache file prior to writing the update, this serialization failure causes the persistent HSTS cache to be deleted or emptied. As a result, stored security policies for known hosts are lost, potentially allowing future connections to fall back to insecure communication.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/libcurl@8.12.1-6.el10?arch=x86_64&distro=rocky-10.3&package-id=fc8e95cd622a7abb&upstream=curl-8.12.1-6.el10.src.rpm",
+          "versions": [
+            {
+              "version": "8.12.1-6.el10",
+              "status": "affected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:5f4055bf-5ec8-4939-a5b0-6d21fbdfa7aa",
       "id": "CVE-2021-46195",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -34798,7 +36011,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:72397b60-b4f4-4425-b297-68879cf68e3f",
+      "bom-ref": "urn:uuid:e26e36dc-da21-42eb-986a-38ac1433b0ed",
       "id": "CVE-2021-46195",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -34843,7 +36056,497 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:8bf3dbe9-dde9-4695-b9b5-33100208f0c8",
+      "bom-ref": "urn:uuid:3200dae2-ac9c-47e0-87b1-bf72df0b9ef8",
+      "id": "CVE-2026-9547",
+      "source": {
+        "name": "redhat-distro-redhat-10",
+        "url": "https://access.redhat.com/security/cve/CVE-2026-9547"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-9547",
+          "source": {
+            "name": "redhat-distro-redhat-10",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-9547"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 7.4,
+          "severity": "high",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00361,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in curl. When a libcurl-based application uses SCP:// or SFTP:// for transfers and employs the CURLOPT_SSH_KEYFUNCTION callback, it may silently accept an untrusted server. This occurs if the server's host key type differs from the one stored in the known_hosts file. The callback mechanism fails to enforce the host key restriction, enabling a connection to an untrusted server and risking a man-in-the-middle attack.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/curl@8.12.1-6.el10?arch=x86_64&distro=rocky-10.3&package-id=f4b8a4a05fd8dc79&upstream=curl-8.12.1-6.el10.src.rpm",
+          "versions": [
+            {
+              "version": "8.12.1-6.el10",
+              "status": "affected"
+            },
+            {
+              "range": "vers:rpm/>=0:8.12.1-9.el10_3",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:1f5bd38a-bd00-4914-9096-4a046bc947d3",
+      "id": "CVE-2026-9547",
+      "source": {
+        "name": "redhat-distro-redhat-10",
+        "url": "https://access.redhat.com/security/cve/CVE-2026-9547"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-9547",
+          "source": {
+            "name": "redhat-distro-redhat-10",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-9547"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 7.4,
+          "severity": "high",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00361,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in curl. When a libcurl-based application uses SCP:// or SFTP:// for transfers and employs the CURLOPT_SSH_KEYFUNCTION callback, it may silently accept an untrusted server. This occurs if the server's host key type differs from the one stored in the known_hosts file. The callback mechanism fails to enforce the host key restriction, enabling a connection to an untrusted server and risking a man-in-the-middle attack.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/libcurl@8.12.1-6.el10?arch=x86_64&distro=rocky-10.3&package-id=fc8e95cd622a7abb&upstream=curl-8.12.1-6.el10.src.rpm",
+          "versions": [
+            {
+              "version": "8.12.1-6.el10",
+              "status": "affected"
+            },
+            {
+              "range": "vers:rpm/>=0:8.12.1-9.el10_3",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:378a12a5-8499-4353-8ea7-e7741ac37b9a",
+      "id": "CVE-2026-3783",
+      "source": {
+        "name": "redhat-distro-redhat-10",
+        "url": "https://access.redhat.com/security/cve/CVE-2026-3783"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-3783",
+          "source": {
+            "name": "redhat-distro-redhat-10",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-3783"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 5.7,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:N/A:N"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00495,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in curl. When an OAuth2 bearer token is used for an HTTP(S) transfer that redirects to a second URL, curl could unintentionally leak the token. This occurs if the second hostname has entries in the `.netrc` file, allowing the bearer token intended for the first host to be sent to the redirected host. This information disclosure could allow an attacker to gain unauthorized access.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/curl@8.12.1-6.el10?arch=x86_64&distro=rocky-10.3&package-id=f4b8a4a05fd8dc79&upstream=curl-8.12.1-6.el10.src.rpm",
+          "versions": [
+            {
+              "version": "8.12.1-6.el10",
+              "status": "affected"
+            },
+            {
+              "range": "vers:rpm/>=0:8.12.1-9.el10_3",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:46855bd6-03f8-45af-b66e-511892246838",
+      "id": "CVE-2026-3783",
+      "source": {
+        "name": "redhat-distro-redhat-10",
+        "url": "https://access.redhat.com/security/cve/CVE-2026-3783"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-3783",
+          "source": {
+            "name": "redhat-distro-redhat-10",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-3783"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 5.7,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:N/A:N"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00495,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in curl. When an OAuth2 bearer token is used for an HTTP(S) transfer that redirects to a second URL, curl could unintentionally leak the token. This occurs if the second hostname has entries in the `.netrc` file, allowing the bearer token intended for the first host to be sent to the redirected host. This information disclosure could allow an attacker to gain unauthorized access.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/libcurl@8.12.1-6.el10?arch=x86_64&distro=rocky-10.3&package-id=fc8e95cd622a7abb&upstream=curl-8.12.1-6.el10.src.rpm",
+          "versions": [
+            {
+              "version": "8.12.1-6.el10",
+              "status": "affected"
+            },
+            {
+              "range": "vers:rpm/>=0:8.12.1-9.el10_3",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:4961c53d-c226-4f52-b622-4d2d6a001d5e",
+      "id": "CVE-2026-3784",
+      "source": {
+        "name": "redhat-distro-redhat-10",
+        "url": "https://access.redhat.com/security/cve/CVE-2026-3784"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-3784",
+          "source": {
+            "name": "redhat-distro-redhat-10",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-3784"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 6.5,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00448,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in curl. This vulnerability allows curl to wrongly reuse an existing HTTP proxy connection when performing a CONNECT request to a server, even if the new request uses different authentication credentials for the HTTP proxy. This improper connection reuse could lead to an attacker gaining unauthorized access to resources or information intended for a different user.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/curl@8.12.1-6.el10?arch=x86_64&distro=rocky-10.3&package-id=f4b8a4a05fd8dc79&upstream=curl-8.12.1-6.el10.src.rpm",
+          "versions": [
+            {
+              "version": "8.12.1-6.el10",
+              "status": "affected"
+            },
+            {
+              "range": "vers:rpm/>=0:8.12.1-9.el10_3",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:ddc651b8-f733-441f-85fb-c2dc1c9fd3d4",
+      "id": "CVE-2026-3784",
+      "source": {
+        "name": "redhat-distro-redhat-10",
+        "url": "https://access.redhat.com/security/cve/CVE-2026-3784"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-3784",
+          "source": {
+            "name": "redhat-distro-redhat-10",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-3784"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 6.5,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00448,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in curl. This vulnerability allows curl to wrongly reuse an existing HTTP proxy connection when performing a CONNECT request to a server, even if the new request uses different authentication credentials for the HTTP proxy. This improper connection reuse could lead to an attacker gaining unauthorized access to resources or information intended for a different user.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/libcurl@8.12.1-6.el10?arch=x86_64&distro=rocky-10.3&package-id=fc8e95cd622a7abb&upstream=curl-8.12.1-6.el10.src.rpm",
+          "versions": [
+            {
+              "version": "8.12.1-6.el10",
+              "status": "affected"
+            },
+            {
+              "range": "vers:rpm/>=0:8.12.1-9.el10_3",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:557df5bc-fbbe-4948-94b8-045ed4fb426e",
+      "id": "CVE-2026-8932",
+      "source": {
+        "name": "redhat-distro-redhat-10",
+        "url": "https://access.redhat.com/security/cve/CVE-2026-8932"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-8932",
+          "source": {
+            "name": "redhat-distro-redhat-10",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-8932"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 7.5,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00396,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in curl. The libcurl library, used for transferring data with URLs, could improperly reuse existing network connections. This occurred even when changes to mutual Transport Layer Security (mTLS) settings, particularly those for client certificates, should have prevented such reuse. This issue could lead to a security feature bypass, where a client might use a connection with an unintended or weaker security configuration, potentially compromising the integrity or confidentiality of data.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/curl@8.12.1-6.el10?arch=x86_64&distro=rocky-10.3&package-id=f4b8a4a05fd8dc79&upstream=curl-8.12.1-6.el10.src.rpm",
+          "versions": [
+            {
+              "version": "8.12.1-6.el10",
+              "status": "affected"
+            },
+            {
+              "range": "vers:rpm/>=0:8.12.1-9.el10_3",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:0f86e63b-3c13-4dcf-88da-4bfb0699992a",
+      "id": "CVE-2026-8932",
+      "source": {
+        "name": "redhat-distro-redhat-10",
+        "url": "https://access.redhat.com/security/cve/CVE-2026-8932"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-8932",
+          "source": {
+            "name": "redhat-distro-redhat-10",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-8932"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 7.5,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00396,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in curl. The libcurl library, used for transferring data with URLs, could improperly reuse existing network connections. This occurred even when changes to mutual Transport Layer Security (mTLS) settings, particularly those for client certificates, should have prevented such reuse. This issue could lead to a security feature bypass, where a client might use a connection with an unintended or weaker security configuration, potentially compromising the integrity or confidentiality of data.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/libcurl@8.12.1-6.el10?arch=x86_64&distro=rocky-10.3&package-id=fc8e95cd622a7abb&upstream=curl-8.12.1-6.el10.src.rpm",
+          "versions": [
+            {
+              "version": "8.12.1-6.el10",
+              "status": "affected"
+            },
+            {
+              "range": "vers:rpm/>=0:8.12.1-9.el10_3",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:e80b8aa3-d596-4be7-af83-3b555163d03d",
+      "id": "CVE-2026-7168",
+      "source": {
+        "name": "redhat-distro-redhat-10",
+        "url": "https://access.redhat.com/security/cve/CVE-2026-7168"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-7168",
+          "source": {
+            "name": "redhat-distro-redhat-10",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-7168"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 5.3,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00471,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in libcurl. When a user performs a transfer over an HTTP proxy using Digest authentication and then reuses the same handle for a second transfer with a different proxy host, libcurl incorrectly sends the `Proxy-Authorization` header intended for the first proxy to the second proxy. This could lead to the disclosure of sensitive authentication information to an unintended proxy, potentially allowing an attacker to gain unauthorized access or impersonate the user.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/curl@8.12.1-6.el10?arch=x86_64&distro=rocky-10.3&package-id=f4b8a4a05fd8dc79&upstream=curl-8.12.1-6.el10.src.rpm",
+          "versions": [
+            {
+              "version": "8.12.1-6.el10",
+              "status": "affected"
+            },
+            {
+              "range": "vers:rpm/>=0:8.12.1-9.el10_3",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:4a468565-10e6-4fc6-8ddb-e121647d2151",
+      "id": "CVE-2026-7168",
+      "source": {
+        "name": "redhat-distro-redhat-10",
+        "url": "https://access.redhat.com/security/cve/CVE-2026-7168"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-7168",
+          "source": {
+            "name": "redhat-distro-redhat-10",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-7168"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 5.3,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00471,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in libcurl. When a user performs a transfer over an HTTP proxy using Digest authentication and then reuses the same handle for a second transfer with a different proxy host, libcurl incorrectly sends the `Proxy-Authorization` header intended for the first proxy to the second proxy. This could lead to the disclosure of sensitive authentication information to an unintended proxy, potentially allowing an attacker to gain unauthorized access or impersonate the user.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/libcurl@8.12.1-6.el10?arch=x86_64&distro=rocky-10.3&package-id=fc8e95cd622a7abb&upstream=curl-8.12.1-6.el10.src.rpm",
+          "versions": [
+            {
+              "version": "8.12.1-6.el10",
+              "status": "affected"
+            },
+            {
+              "range": "vers:rpm/>=0:8.12.1-9.el10_3",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:b2bee587-1369-4902-82eb-cc783ac42da5",
       "id": "CVE-2026-92389",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -34888,7 +36591,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:4e93b8ea-69ab-43c8-aaae-aff07a766a07",
+      "bom-ref": "urn:uuid:29a31f2b-1dd8-4934-b4ad-38bdf52131a5",
       "id": "CVE-2026-92389",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -34933,7 +36636,203 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:26ebc2ca-7717-4161-95c3-a5a5d6ee354d",
+      "bom-ref": "urn:uuid:87c966f2-8486-4526-b831-601e3074c8a6",
+      "id": "CVE-2026-8286",
+      "source": {
+        "name": "redhat-distro-redhat-10",
+        "url": "https://access.redhat.com/security/cve/CVE-2026-8286"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-8286",
+          "source": {
+            "name": "redhat-distro-redhat-10",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-8286"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 8.1,
+          "severity": "high",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00309,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in curl. When a new data transfer attempts to upgrade its connection using STARTTLS, it may incorrectly reuse an existing live connection. This reuse can occur even if the Transport Layer Security (TLS) configuration of the new transfer does not match the existing connection, potentially leading to an insecure connection being established.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/curl@8.12.1-6.el10?arch=x86_64&distro=rocky-10.3&package-id=f4b8a4a05fd8dc79&upstream=curl-8.12.1-6.el10.src.rpm",
+          "versions": [
+            {
+              "version": "8.12.1-6.el10",
+              "status": "affected"
+            },
+            {
+              "range": "vers:rpm/>=0:8.12.1-9.el10_3",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:bfb09ca1-bc33-45d8-a717-5defd26d5095",
+      "id": "CVE-2026-8286",
+      "source": {
+        "name": "redhat-distro-redhat-10",
+        "url": "https://access.redhat.com/security/cve/CVE-2026-8286"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-8286",
+          "source": {
+            "name": "redhat-distro-redhat-10",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-8286"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 8.1,
+          "severity": "high",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00309,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in curl. When a new data transfer attempts to upgrade its connection using STARTTLS, it may incorrectly reuse an existing live connection. This reuse can occur even if the Transport Layer Security (TLS) configuration of the new transfer does not match the existing connection, potentially leading to an insecure connection being established.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/libcurl@8.12.1-6.el10?arch=x86_64&distro=rocky-10.3&package-id=fc8e95cd622a7abb&upstream=curl-8.12.1-6.el10.src.rpm",
+          "versions": [
+            {
+              "version": "8.12.1-6.el10",
+              "status": "affected"
+            },
+            {
+              "range": "vers:rpm/>=0:8.12.1-9.el10_3",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:5d38dbab-d344-4780-96c5-285e551cd7f3",
+      "id": "CVE-2026-5545",
+      "source": {
+        "name": "redhat-distro-redhat-10",
+        "url": "https://access.redhat.com/security/cve/CVE-2026-5545"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-5545",
+          "source": {
+            "name": "redhat-distro-redhat-10",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-5545"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 6.5,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00414,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in libcurl. An application using libcurl that performs an authenticated HTTP(S) request after a Negotiate-authenticated one to the same host may incorrectly reuse the previous connection. This authentication bypass vulnerability allows the second request to be sent over a connection authenticated with different credentials, potentially leading to unauthorized access or information disclosure.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/curl@8.12.1-6.el10?arch=x86_64&distro=rocky-10.3&package-id=f4b8a4a05fd8dc79&upstream=curl-8.12.1-6.el10.src.rpm",
+          "versions": [
+            {
+              "version": "8.12.1-6.el10",
+              "status": "affected"
+            },
+            {
+              "range": "vers:rpm/>=0:8.12.1-9.el10_3",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:98c07c5a-c5bf-4b30-9b94-dd9bcc2c1c35",
+      "id": "CVE-2026-5545",
+      "source": {
+        "name": "redhat-distro-redhat-10",
+        "url": "https://access.redhat.com/security/cve/CVE-2026-5545"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-5545",
+          "source": {
+            "name": "redhat-distro-redhat-10",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-5545"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 6.5,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00414,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in libcurl. An application using libcurl that performs an authenticated HTTP(S) request after a Negotiate-authenticated one to the same host may incorrectly reuse the previous connection. This authentication bypass vulnerability allows the second request to be sent over a connection authenticated with different credentials, potentially leading to unauthorized access or information disclosure.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/libcurl@8.12.1-6.el10?arch=x86_64&distro=rocky-10.3&package-id=fc8e95cd622a7abb&upstream=curl-8.12.1-6.el10.src.rpm",
+          "versions": [
+            {
+              "version": "8.12.1-6.el10",
+              "status": "affected"
+            },
+            {
+              "range": "vers:rpm/>=0:8.12.1-9.el10_3",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:66ae249d-cef0-4d57-8e17-b40ac41f2378",
       "id": "CVE-2026-107161",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -34978,7 +36877,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:3d905e01-47f5-4572-bef9-6e171ac56601",
+      "bom-ref": "urn:uuid:c2d3c136-eebe-42c1-b4c4-bb09a02c67d4",
       "id": "CVE-2026-28387",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -35023,7 +36922,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:d5891105-65ad-4a37-9644-08022d5af212",
+      "bom-ref": "urn:uuid:e9664815-beb4-4963-914e-0324ef3eb66b",
       "id": "CVE-2026-28387",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -35068,7 +36967,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:2146dd66-f490-4c0d-9366-d355e75172f5",
+      "bom-ref": "urn:uuid:e0a41782-3cc6-486f-a7b3-32ce3def5181",
       "id": "CVE-2026-42765",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -35113,7 +37012,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:e71a9f0e-68fc-4193-a426-a4cbd4365487",
+      "bom-ref": "urn:uuid:699ea903-8490-409c-9187-4cb3b91d81c1",
       "id": "CVE-2026-42765",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -35158,7 +37057,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:7d98718b-48a5-4efd-af74-65aaf89dd00c",
+      "bom-ref": "urn:uuid:dadb35f9-874b-47f4-9eec-4c5295ffcb86",
       "id": "CVE-2026-107929",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -35203,7 +37102,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:d426eb52-98b3-4ebc-8cc3-b2d9eb311b3e",
+      "bom-ref": "urn:uuid:966eb177-eb34-4c8c-a91c-e3eff099ab74",
       "id": "CVE-2026-107929",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -35248,7 +37147,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:4a3dcdc5-9f63-4bcc-92e4-793cb184996a",
+      "bom-ref": "urn:uuid:0ad5134d-e4d3-4576-90f9-99b4170a3f14",
       "id": "CVE-2025-3360",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -35293,7 +37192,285 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:1d6e1ded-a4be-463d-9800-229bb8d6b7cc",
+      "bom-ref": "urn:uuid:887df5da-f41c-487b-a9a5-1ef7efb7f137",
+      "id": "CVE-2026-95692",
+      "source": {
+        "name": "redhat-distro-redhat-10",
+        "url": "https://access.redhat.com/security/cve/CVE-2026-95692"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-95692",
+          "source": {
+            "name": "redhat-distro-redhat-10",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-95692"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 4.8,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:L"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00449,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in OpenSSL. This vulnerability allows an attacker to cause a Denial of Service (DoS) or bypass message authentication due to improper Initialization Vector (IV) length handling in the AES-GCM-SIV cipher. When an application initializes the cipher with an unexpected IV length, OpenSSL copies the buffer using a fixed expected size rather than the provided length. As a result, a shorter IV triggers an out-of-bounds read that crashes the application, whereas a longer IV is silently truncated, allowing an attacker to forge messages under different IVs.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/openssl-fips-provider@3.5.9-1.el10_3?arch=x86_64&distro=rocky-10.3&epoch=1&package-id=e76238296c299582&upstream=openssl-3.5.9-1.el10_3.src.rpm",
+          "versions": [
+            {
+              "version": "1:3.5.9-1.el10_3",
+              "status": "affected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:881cf0d2-9342-48e3-b363-6f1784bf4840",
+      "id": "CVE-2026-95692",
+      "source": {
+        "name": "redhat-distro-redhat-10",
+        "url": "https://access.redhat.com/security/cve/CVE-2026-95692"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-95692",
+          "source": {
+            "name": "redhat-distro-redhat-10",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-95692"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 4.8,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:L"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00449,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in OpenSSL. This vulnerability allows an attacker to cause a Denial of Service (DoS) or bypass message authentication due to improper Initialization Vector (IV) length handling in the AES-GCM-SIV cipher. When an application initializes the cipher with an unexpected IV length, OpenSSL copies the buffer using a fixed expected size rather than the provided length. As a result, a shorter IV triggers an out-of-bounds read that crashes the application, whereas a longer IV is silently truncated, allowing an attacker to forge messages under different IVs.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/openssl-libs@3.5.9-1.el10_3?arch=x86_64&distro=rocky-10.3&epoch=1&package-id=c9390715ef45e4cb&upstream=openssl-3.5.9-1.el10_3.src.rpm",
+          "versions": [
+            {
+              "version": "1:3.5.9-1.el10_3",
+              "status": "affected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:e252647a-e2a6-4e15-8f19-0f74e01a6773",
+      "id": "CVE-2026-8926",
+      "source": {
+        "name": "redhat-distro-redhat-10",
+        "url": "https://access.redhat.com/security/cve/CVE-2026-8926"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-8926",
+          "source": {
+            "name": "redhat-distro-redhat-10",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-8926"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 4.8,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:N/A:N"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00444,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in curl. When curl is configured to use a .netrc file for credentials and a URL is provided with a username but no password, curl may incorrectly retrieve and use the password for a different user from the .netrc file for the same host. This could lead to unauthorized information disclosure, as curl might connect using unintended credentials.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/curl@8.12.1-6.el10?arch=x86_64&distro=rocky-10.3&package-id=f4b8a4a05fd8dc79&upstream=curl-8.12.1-6.el10.src.rpm",
+          "versions": [
+            {
+              "version": "8.12.1-6.el10",
+              "status": "affected"
+            },
+            {
+              "range": "vers:rpm/>=0:8.12.1-9.el10_3",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:6d0b78b2-c3fb-4e79-8a47-a3f4af41558e",
+      "id": "CVE-2026-8926",
+      "source": {
+        "name": "redhat-distro-redhat-10",
+        "url": "https://access.redhat.com/security/cve/CVE-2026-8926"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-8926",
+          "source": {
+            "name": "redhat-distro-redhat-10",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-8926"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 4.8,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:N/A:N"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00444,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in curl. When curl is configured to use a .netrc file for credentials and a URL is provided with a username but no password, curl may incorrectly retrieve and use the password for a different user from the .netrc file for the same host. This could lead to unauthorized information disclosure, as curl might connect using unintended credentials.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/libcurl@8.12.1-6.el10?arch=x86_64&distro=rocky-10.3&package-id=fc8e95cd622a7abb&upstream=curl-8.12.1-6.el10.src.rpm",
+          "versions": [
+            {
+              "version": "8.12.1-6.el10",
+              "status": "affected"
+            },
+            {
+              "range": "vers:rpm/>=0:8.12.1-9.el10_3",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:1c7f6abf-bd90-4660-b034-ac631ad156e6",
+      "id": "CVE-2026-107494",
+      "source": {
+        "name": "redhat-distro-redhat-10",
+        "url": "https://access.redhat.com/security/cve/CVE-2026-107494"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-107494",
+          "source": {
+            "name": "redhat-distro-redhat-10",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-107494"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 7.5,
+          "severity": "high",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.0029,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in OpenSSL. The QUIC (Quick UDP Internet Connections) protocol stack improperly queues a frame retirement response when handling retransmitted connection identifier frames. A remote attacker can exploit this vulnerability by sending repeated connection frames, causing an unlimited number of responses to be held in memory. This issue leads to excessive memory consumption, resulting in a Denial of Service (DoS).",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/openssl-fips-provider@3.5.9-1.el10_3?arch=x86_64&distro=rocky-10.3&epoch=1&package-id=e76238296c299582&upstream=openssl-3.5.9-1.el10_3.src.rpm",
+          "versions": [
+            {
+              "version": "1:3.5.9-1.el10_3",
+              "status": "affected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:925e6134-c680-4fcb-8da9-1a86dc25bfaa",
+      "id": "CVE-2026-107494",
+      "source": {
+        "name": "redhat-distro-redhat-10",
+        "url": "https://access.redhat.com/security/cve/CVE-2026-107494"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-107494",
+          "source": {
+            "name": "redhat-distro-redhat-10",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-107494"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 7.5,
+          "severity": "high",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.0029,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in OpenSSL. The QUIC (Quick UDP Internet Connections) protocol stack improperly queues a frame retirement response when handling retransmitted connection identifier frames. A remote attacker can exploit this vulnerability by sending repeated connection frames, causing an unlimited number of responses to be held in memory. This issue leads to excessive memory consumption, resulting in a Denial of Service (DoS).",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/openssl-libs@3.5.9-1.el10_3?arch=x86_64&distro=rocky-10.3&epoch=1&package-id=c9390715ef45e4cb&upstream=openssl-3.5.9-1.el10_3.src.rpm",
+          "versions": [
+            {
+              "version": "1:3.5.9-1.el10_3",
+              "status": "affected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:c9f4174a-4cb0-43f5-92f6-fd912e8d5e9a",
       "id": "CVE-2026-119379",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -35338,7 +37515,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:349f5233-0e69-4e6e-8f10-98263cc2c8b5",
+      "bom-ref": "urn:uuid:00918068-1165-4c3f-bb7e-04ae0f1477a2",
       "id": "CVE-2026-4426",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -35383,7 +37560,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:2d0cb153-8b90-4dc4-a7af-8936a8571939",
+      "bom-ref": "urn:uuid:6ce23ebc-b5b1-4dc4-9455-672b68e3bfdb",
       "id": "CVE-2025-10148",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -35428,7 +37605,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:d7a963f2-e93c-4028-bb20-b55b7a47eaaf",
+      "bom-ref": "urn:uuid:c8db5b39-f5ea-4c56-b5a7-92e603b75e65",
       "id": "CVE-2025-10148",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -35473,7 +37650,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:ed9f3019-b2a0-4e97-b59d-647b882f7f07",
+      "bom-ref": "urn:uuid:0e705acf-5dbe-411d-87a1-ef5fd56e691d",
       "id": "CVE-2025-7458",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -35518,7 +37695,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:f4079fae-cf20-426e-953e-88df67d31f01",
+      "bom-ref": "urn:uuid:8ea24af9-2bb2-4d23-96ac-3a6df65b7038",
       "id": "CVE-2025-67897",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -35563,7 +37740,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:8babcd53-931e-46bf-9349-aabef48d68b1",
+      "bom-ref": "urn:uuid:29d6c494-69e5-4069-9f60-b3861d11ace7",
       "id": "CVE-2026-18924",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -35608,7 +37785,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:f39aa995-f8f3-4a12-83b5-73f6888b1534",
+      "bom-ref": "urn:uuid:98f16f77-c8b9-47ca-8ea4-ea6fc9892382",
       "id": "CVE-2026-18924",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -35653,7 +37830,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:08c1a0d3-c41a-432e-be98-563072c050c5",
+      "bom-ref": "urn:uuid:7003fb5b-91a6-42b0-a507-27693d435362",
       "id": "CVE-2026-1489",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -35698,7 +37875,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:da40b986-6c8b-4812-a1b7-52fd4c1292ec",
+      "bom-ref": "urn:uuid:83cb7316-6d97-477a-9b43-38e72e414a58",
       "id": "CVE-2026-9545",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -35743,7 +37920,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:4177a888-1dfb-47f5-ba2d-3a6350eb7a82",
+      "bom-ref": "urn:uuid:e7bdac7a-56b4-4cf7-b4f1-d2b898b56cd4",
       "id": "CVE-2026-9545",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -35788,7 +37965,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:aff20afc-d7e0-4a05-a876-329e611469c4",
+      "bom-ref": "urn:uuid:704a741d-3421-48d2-9838-91c1da70b3a5",
       "id": "CVE-2025-15224",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -35833,7 +38010,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:98826eb2-2bcc-4aa7-ad20-d58bdc4c2495",
+      "bom-ref": "urn:uuid:c5d680f0-407d-4035-be43-37ef2f699a47",
       "id": "CVE-2025-15224",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -35878,7 +38055,97 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:3fa8b1a1-dcc4-4d59-8538-bca63d6359d0",
+      "bom-ref": "urn:uuid:ad3ca015-2a00-4b96-9d6d-059ddbb0736b",
+      "id": "CVE-2026-107496",
+      "source": {
+        "name": "redhat-distro-redhat-10",
+        "url": "https://access.redhat.com/security/cve/CVE-2026-107496"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-107496",
+          "source": {
+            "name": "redhat-distro-redhat-10",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-107496"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 5.9,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00336,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in openssl. An attacker who can supply a specially crafted recipient certificate to an application performing Cryptographic Message Syntax (CMS) encryption can trigger an infinite loop, resulting in a Denial of Service (DoS). This issue occurs when an elliptic curve (EC) certificate specifies an invalid group order, causing the ephemeral key generation process to retry indefinitely while waiting for a valid key. Consequently, the affected application process hangs and consumes a CPU core until it is terminated.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/openssl-fips-provider@3.5.9-1.el10_3?arch=x86_64&distro=rocky-10.3&epoch=1&package-id=e76238296c299582&upstream=openssl-3.5.9-1.el10_3.src.rpm",
+          "versions": [
+            {
+              "version": "1:3.5.9-1.el10_3",
+              "status": "affected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:f2d6d3a0-663f-4f66-a112-10ecf994cd39",
+      "id": "CVE-2026-107496",
+      "source": {
+        "name": "redhat-distro-redhat-10",
+        "url": "https://access.redhat.com/security/cve/CVE-2026-107496"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-107496",
+          "source": {
+            "name": "redhat-distro-redhat-10",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-107496"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 5.9,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00336,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in openssl. An attacker who can supply a specially crafted recipient certificate to an application performing Cryptographic Message Syntax (CMS) encryption can trigger an infinite loop, resulting in a Denial of Service (DoS). This issue occurs when an elliptic curve (EC) certificate specifies an invalid group order, causing the ephemeral key generation process to retry indefinitely while waiting for a valid key. Consequently, the affected application process hangs and consumes a CPU core until it is terminated.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/openssl-libs@3.5.9-1.el10_3?arch=x86_64&distro=rocky-10.3&epoch=1&package-id=c9390715ef45e4cb&upstream=openssl-3.5.9-1.el10_3.src.rpm",
+          "versions": [
+            {
+              "version": "1:3.5.9-1.el10_3",
+              "status": "affected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:dc6b25df-b865-4a93-9696-14e2b1f33013",
       "id": "CVE-2025-6052",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -35923,7 +38190,97 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:0feb2595-da0a-4da8-b849-cc0dd6c8c53d",
+      "bom-ref": "urn:uuid:9c2bf9e7-de28-4c92-a69b-78731a8b4977",
+      "id": "CVE-2026-95690",
+      "source": {
+        "name": "redhat-distro-redhat-10",
+        "url": "https://access.redhat.com/security/cve/CVE-2026-95690"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-95690",
+          "source": {
+            "name": "redhat-distro-redhat-10",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-95690"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 5.3,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00351,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in OpenSSL. A remote attacker can cause excessive memory consumption leading to a Denial of Service (DoS) by sending crafted, out-of-sequence Datagram Transport Layer Security (DTLS) handshake fragments. Because OpenSSL allocates a full message-length reassembly buffer for each buffered fragment, an attacker can exhaust system memory resources using a relatively small volume of network traffic.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/openssl-fips-provider@3.5.9-1.el10_3?arch=x86_64&distro=rocky-10.3&epoch=1&package-id=e76238296c299582&upstream=openssl-3.5.9-1.el10_3.src.rpm",
+          "versions": [
+            {
+              "version": "1:3.5.9-1.el10_3",
+              "status": "affected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:ffc2a4df-46db-4752-a461-dc809e201d80",
+      "id": "CVE-2026-95690",
+      "source": {
+        "name": "redhat-distro-redhat-10",
+        "url": "https://access.redhat.com/security/cve/CVE-2026-95690"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-95690",
+          "source": {
+            "name": "redhat-distro-redhat-10",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-95690"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 5.3,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00351,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in OpenSSL. A remote attacker can cause excessive memory consumption leading to a Denial of Service (DoS) by sending crafted, out-of-sequence Datagram Transport Layer Security (DTLS) handshake fragments. Because OpenSSL allocates a full message-length reassembly buffer for each buffered fragment, an attacker can exhaust system memory resources using a relatively small volume of network traffic.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/openssl-libs@3.5.9-1.el10_3?arch=x86_64&distro=rocky-10.3&epoch=1&package-id=c9390715ef45e4cb&upstream=openssl-3.5.9-1.el10_3.src.rpm",
+          "versions": [
+            {
+              "version": "1:3.5.9-1.el10_3",
+              "status": "affected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:b0554428-98c9-4aa7-80b9-444dc751c549",
       "id": "CVE-2026-84243",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -35968,7 +38325,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:2510dd46-090d-410a-a927-8d984fc23dd8",
+      "bom-ref": "urn:uuid:bc5ae042-d670-4fe3-94f0-853dc1af6239",
       "id": "CVE-2026-84243",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -36013,7 +38370,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:011524ea-0e56-433f-8664-e1e91cd3a26a",
+      "bom-ref": "urn:uuid:18722b30-d7f4-4677-ba84-476030fe5d71",
       "id": "CVE-2026-84243",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -36058,7 +38415,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:e16ac890-ea5f-4652-a778-04cd64683bdf",
+      "bom-ref": "urn:uuid:8f08de77-c400-47bc-b00a-3492c2e629e7",
       "id": "CVE-2026-119374",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -36103,7 +38460,105 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:3b43159d-21eb-4ab9-8e69-0c75b2cde033",
+      "bom-ref": "urn:uuid:5735ba52-8af3-4cbb-bbc3-82e3e3e9ca32",
+      "id": "CVE-2026-1965",
+      "source": {
+        "name": "redhat-distro-redhat-10",
+        "url": "https://access.redhat.com/security/cve/CVE-2026-1965"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-1965",
+          "source": {
+            "name": "redhat-distro-redhat-10",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-1965"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 6.8,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:N"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00297,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in curl. When an application uses libcurl to make multiple Negotiate-authenticated HTTP or HTTPS requests to the same server with different credentials, libcurl may incorrectly reuse an existing connection. This logical error can cause a subsequent request to be sent using the authentication of a previous user, leading to an authentication bypass.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/curl@8.12.1-6.el10?arch=x86_64&distro=rocky-10.3&package-id=f4b8a4a05fd8dc79&upstream=curl-8.12.1-6.el10.src.rpm",
+          "versions": [
+            {
+              "version": "8.12.1-6.el10",
+              "status": "affected"
+            },
+            {
+              "range": "vers:rpm/>=0:8.12.1-9.el10_3",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:99f85157-5220-499c-b5fc-97835d48a319",
+      "id": "CVE-2026-1965",
+      "source": {
+        "name": "redhat-distro-redhat-10",
+        "url": "https://access.redhat.com/security/cve/CVE-2026-1965"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-1965",
+          "source": {
+            "name": "redhat-distro-redhat-10",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-1965"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 6.8,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:N"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00297,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in curl. When an application uses libcurl to make multiple Negotiate-authenticated HTTP or HTTPS requests to the same server with different credentials, libcurl may incorrectly reuse an existing connection. This logical error can cause a subsequent request to be sent using the authentication of a previous user, leading to an authentication bypass.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/libcurl@8.12.1-6.el10?arch=x86_64&distro=rocky-10.3&package-id=fc8e95cd622a7abb&upstream=curl-8.12.1-6.el10.src.rpm",
+          "versions": [
+            {
+              "version": "8.12.1-6.el10",
+              "status": "affected"
+            },
+            {
+              "range": "vers:rpm/>=0:8.12.1-9.el10_3",
+              "status": "unaffected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:17d02607-2553-4593-aa33-2b2f8ce653f2",
       "id": "CVE-2026-94266",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -36148,7 +38603,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:81360f1d-28ae-46f2-97ea-0511547c170d",
+      "bom-ref": "urn:uuid:539190fe-676f-433b-ba92-39dd3db5db15",
       "id": "CVE-2026-94266",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -36193,7 +38648,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:31cce9f6-4b5e-4a51-b266-ffc7d2ae65ef",
+      "bom-ref": "urn:uuid:a1e0a422-f9fe-4c5e-83c3-091a1270130a",
       "id": "CVE-2026-0989",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -36238,7 +38693,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:da19284a-6b30-4556-b39f-b302c92e1297",
+      "bom-ref": "urn:uuid:ad7d5d73-bac2-45b9-846f-c9fbdab7881e",
       "id": "CVE-2026-4873",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -36283,7 +38738,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:3accb544-1ad0-4ed1-8a41-e3930f2ac90a",
+      "bom-ref": "urn:uuid:7dfdcf89-1aec-488f-b0a6-0e5db566cbf3",
       "id": "CVE-2026-4873",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -36328,7 +38783,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:a045f5c0-4138-457d-a789-466e64e04a16",
+      "bom-ref": "urn:uuid:6e860ad9-a5f3-49f4-b370-2ad1e4cf7cb6",
       "id": "CVE-2026-13608",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -36373,7 +38828,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:b3351f5f-01c9-4ba2-ad68-4ca83ffd1ae9",
+      "bom-ref": "urn:uuid:8bd4ca25-26b7-476f-b9ab-8c7ba3f5bc5b",
       "id": "CVE-2026-13608",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -36418,7 +38873,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:c30ab0ae-9ef7-4ce8-9c31-785b64387807",
+      "bom-ref": "urn:uuid:b45a1405-d676-4771-8905-f2015148a95e",
       "id": "CVE-2025-70873",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -36463,7 +38918,142 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:903a81b6-0e62-4919-96e3-514a86b644e8",
+      "bom-ref": "urn:uuid:8e0ce1f8-e444-4919-b42f-02c3db3c987f",
+      "id": "CVE-2026-126765",
+      "source": {
+        "name": "redhat-distro-redhat-10",
+        "url": "https://access.redhat.com/security/cve/CVE-2026-126765"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-126765",
+          "source": {
+            "name": "redhat-distro-redhat-10",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-126765"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 3.7,
+          "severity": "low",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00469,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in glibc. This vulnerability allows an attacker to cause a Denial of Service (DoS) through a double-free condition in file pattern-matching (glob) functions. Under constrained memory conditions, an attacker who controls the input pattern can force a memory allocation failure during directory name processing. When recovering from the error, the application releases the same memory block twice, resulting in a crash or potential memory corruption.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/glibc@2.39-147.el10_3?arch=x86_64&distro=rocky-10.3&package-id=f3630fd8d0febed9&upstream=glibc-2.39-147.el10_3.src.rpm",
+          "versions": [
+            {
+              "version": "2.39-147.el10_3",
+              "status": "affected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:585069fa-daef-413e-b168-15e72e6d6cf7",
+      "id": "CVE-2026-126765",
+      "source": {
+        "name": "redhat-distro-redhat-10",
+        "url": "https://access.redhat.com/security/cve/CVE-2026-126765"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-126765",
+          "source": {
+            "name": "redhat-distro-redhat-10",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-126765"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 3.7,
+          "severity": "low",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00469,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in glibc. This vulnerability allows an attacker to cause a Denial of Service (DoS) through a double-free condition in file pattern-matching (glob) functions. Under constrained memory conditions, an attacker who controls the input pattern can force a memory allocation failure during directory name processing. When recovering from the error, the application releases the same memory block twice, resulting in a crash or potential memory corruption.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/glibc-common@2.39-147.el10_3?arch=x86_64&distro=rocky-10.3&package-id=4aa9ea6af1341a16&upstream=glibc-2.39-147.el10_3.src.rpm",
+          "versions": [
+            {
+              "version": "2.39-147.el10_3",
+              "status": "affected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:ae57bbad-4c4d-4523-8b8a-5ba1738f631b",
+      "id": "CVE-2026-126765",
+      "source": {
+        "name": "redhat-distro-redhat-10",
+        "url": "https://access.redhat.com/security/cve/CVE-2026-126765"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-126765",
+          "source": {
+            "name": "redhat-distro-redhat-10",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-126765"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 3.7,
+          "severity": "low",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00469,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in glibc. This vulnerability allows an attacker to cause a Denial of Service (DoS) through a double-free condition in file pattern-matching (glob) functions. Under constrained memory conditions, an attacker who controls the input pattern can force a memory allocation failure during directory name processing. When recovering from the error, the application releases the same memory block twice, resulting in a crash or potential memory corruption.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/glibc-minimal-langpack@2.39-147.el10_3?arch=x86_64&distro=rocky-10.3&package-id=19be52f2c3163105&upstream=glibc-2.39-147.el10_3.src.rpm",
+          "versions": [
+            {
+              "version": "2.39-147.el10_3",
+              "status": "affected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:653c1949-ad6f-490c-80bd-83ab7b68d9d4",
       "id": "CVE-2026-1484",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -36508,7 +39098,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:994f1639-9b57-4f21-8d28-93941d372901",
+      "bom-ref": "urn:uuid:62788011-9420-469b-af1d-f30ea02e8ae5",
       "id": "CVE-2026-4878",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -36557,7 +39147,97 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:76b2fb97-7d48-43ac-80e3-def080e9c7ce",
+      "bom-ref": "urn:uuid:831b8f0f-984c-4d44-b356-930176f5aab9",
+      "id": "CVE-2026-95691",
+      "source": {
+        "name": "redhat-distro-redhat-10",
+        "url": "https://access.redhat.com/security/cve/CVE-2026-95691"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-95691",
+          "source": {
+            "name": "redhat-distro-redhat-10",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-95691"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 5.4,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:L"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00284,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in OpenSSL. During QUIC cryptographic stream processing, retransmitting an overlapping data frame can prematurely release packet memory while it is still referenced by the Transport Layer Security (TLS) handshake handler. A malicious QUIC server can exploit this use-after-free condition to trigger an invalid memory read against a connected OpenSSL QUIC client. This issue primarily leads to a Denial of Service (DoS) by crashing the client application, or to a minor disclosure of heap memory contents.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/openssl-fips-provider@3.5.9-1.el10_3?arch=x86_64&distro=rocky-10.3&epoch=1&package-id=e76238296c299582&upstream=openssl-3.5.9-1.el10_3.src.rpm",
+          "versions": [
+            {
+              "version": "1:3.5.9-1.el10_3",
+              "status": "affected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:574c864f-4c3b-4d29-a515-30a446276535",
+      "id": "CVE-2026-95691",
+      "source": {
+        "name": "redhat-distro-redhat-10",
+        "url": "https://access.redhat.com/security/cve/CVE-2026-95691"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-95691",
+          "source": {
+            "name": "redhat-distro-redhat-10",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-95691"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 5.4,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:L"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00284,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in OpenSSL. During QUIC cryptographic stream processing, retransmitting an overlapping data frame can prematurely release packet memory while it is still referenced by the Transport Layer Security (TLS) handshake handler. A malicious QUIC server can exploit this use-after-free condition to trigger an invalid memory read against a connected OpenSSL QUIC client. This issue primarily leads to a Denial of Service (DoS) by crashing the client application, or to a minor disclosure of heap memory contents.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/openssl-libs@3.5.9-1.el10_3?arch=x86_64&distro=rocky-10.3&epoch=1&package-id=c9390715ef45e4cb&upstream=openssl-3.5.9-1.el10_3.src.rpm",
+          "versions": [
+            {
+              "version": "1:3.5.9-1.el10_3",
+              "status": "affected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:91a70bdc-e28a-4655-9d91-b8eaf864a619",
       "id": "CVE-2026-0988",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -36602,7 +39282,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:245d0d2c-50bd-464a-85b6-238814003df9",
+      "bom-ref": "urn:uuid:3923983d-f580-4eae-a5a8-d6112bda0546",
       "id": "CVE-2025-7039",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -36647,7 +39327,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:57ab37ff-7e51-4003-9725-3f7ba1994c7d",
+      "bom-ref": "urn:uuid:a7109650-66df-4c80-b04d-6ff018165aed",
       "id": "CVE-2025-13034",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -36692,7 +39372,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:5c98251e-f440-472b-8021-5a2d6f38deaf",
+      "bom-ref": "urn:uuid:433bc6f2-d7e3-4bb1-9bc0-f544ff364b1c",
       "id": "CVE-2025-13034",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -36737,7 +39417,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:028c8c27-d820-4ff5-98a0-48f8bc45a311",
+      "bom-ref": "urn:uuid:83096e4e-681f-466e-a752-d98bc1c91f0a",
       "id": "CVE-2026-92822",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -36782,7 +39462,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:2f9df6c1-69c1-450f-bdb5-91a644471493",
+      "bom-ref": "urn:uuid:c25e2b7f-ef98-4247-9846-7404fd787d6f",
       "id": "CVE-2026-53615",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -36831,7 +39511,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:c292fcad-0916-4933-8c9f-5209c9dd2bb9",
+      "bom-ref": "urn:uuid:32af6bd6-c19b-42df-bfcb-ea17b7ecc7ba",
       "id": "CVE-2026-53615",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -36880,7 +39560,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:ef905634-794b-4e05-a172-263a16a9c10b",
+      "bom-ref": "urn:uuid:ada26f74-e19b-459f-86a3-cb021e618f5d",
       "id": "CVE-2026-53615",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -36929,7 +39609,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:26ed7d3b-36e3-474b-ba60-b833b7ce1c2b",
+      "bom-ref": "urn:uuid:0fef4c7d-7bbe-4a4e-a856-91f28962d936",
       "id": "CVE-2026-53615",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -36978,7 +39658,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:1c377919-28b6-45ef-94d0-fd8f10432d22",
+      "bom-ref": "urn:uuid:ae03e7df-c82e-4950-ad5e-0b6b8eaf620a",
       "id": "CVE-2026-53615",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -37027,7 +39707,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:87cece10-d904-4949-934b-5ad27d0d6551",
+      "bom-ref": "urn:uuid:00f0dc17-f30b-40f5-8982-516c9e57a527",
       "id": "CVE-2026-53615",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -37076,7 +39756,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:1c82236c-78cc-4b85-8155-490addc3b877",
+      "bom-ref": "urn:uuid:180645e6-2b54-4fd4-abf7-1fd099bce5f7",
       "id": "CVE-2026-53615",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -37125,7 +39805,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:3dcd9081-3217-41f4-9807-f57e90cd6017",
+      "bom-ref": "urn:uuid:7d44584a-d351-43ec-99cc-a57c1429432b",
       "id": "CVE-2025-5918",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -37170,7 +39850,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:8aa0b787-86aa-44a6-bf47-146bb74845e3",
+      "bom-ref": "urn:uuid:15a86374-020b-41c4-b88e-13a58325f19a",
       "id": "CVE-2026-11850",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -37215,7 +39895,97 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:bae447fc-b576-4a04-bc33-cfc1cd031cc0",
+      "bom-ref": "urn:uuid:a906543c-ecfb-4c21-bba7-c82414069528",
+      "id": "CVE-2026-121482",
+      "source": {
+        "name": "redhat-distro-redhat-10",
+        "url": "https://access.redhat.com/security/cve/CVE-2026-121482"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-121482",
+          "source": {
+            "name": "redhat-distro-redhat-10",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-121482"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 5.3,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00263,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in OpenSSL. A remote attacker could cause a Denial of Service (DoS) by submitting a maliciously crafted Cryptographic Message Syntax (CMS) or PKCS#7 SignedData message to an application with Certificate Revocation List (CRL) checking enabled. Processing this input consumes excessive CPU resources that scale disproportionately with the message size, leading to service unresponsiveness.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/openssl-fips-provider@3.5.9-1.el10_3?arch=x86_64&distro=rocky-10.3&epoch=1&package-id=e76238296c299582&upstream=openssl-3.5.9-1.el10_3.src.rpm",
+          "versions": [
+            {
+              "version": "1:3.5.9-1.el10_3",
+              "status": "affected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:ed5cb9f5-15ad-4dc2-8d7a-5c17979b5bb9",
+      "id": "CVE-2026-121482",
+      "source": {
+        "name": "redhat-distro-redhat-10",
+        "url": "https://access.redhat.com/security/cve/CVE-2026-121482"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-121482",
+          "source": {
+            "name": "redhat-distro-redhat-10",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-121482"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 5.3,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00263,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in OpenSSL. A remote attacker could cause a Denial of Service (DoS) by submitting a maliciously crafted Cryptographic Message Syntax (CMS) or PKCS#7 SignedData message to an application with Certificate Revocation List (CRL) checking enabled. Processing this input consumes excessive CPU resources that scale disproportionately with the message size, leading to service unresponsiveness.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/openssl-libs@3.5.9-1.el10_3?arch=x86_64&distro=rocky-10.3&epoch=1&package-id=c9390715ef45e4cb&upstream=openssl-3.5.9-1.el10_3.src.rpm",
+          "versions": [
+            {
+              "version": "1:3.5.9-1.el10_3",
+              "status": "affected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:7f92e5ca-1e94-43be-8872-92e16688ef87",
       "id": "CVE-2026-0992",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -37260,7 +40030,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:67e42053-65e5-4ba5-b5a7-4acdcc40a63c",
+      "bom-ref": "urn:uuid:bc401bd2-f100-4f6b-a43a-0303301a806e",
       "id": "CVE-2026-119378",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -37305,7 +40075,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:da3e6f62-4b68-49c7-bd6b-f0e0755b2928",
+      "bom-ref": "urn:uuid:48ed7e0d-4bb9-4608-a512-260c5ca6b2b7",
       "id": "CVE-2025-8277",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -37350,7 +40120,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:36e862c7-9aa6-457b-af2f-528ef9df07d4",
+      "bom-ref": "urn:uuid:e26eac5a-47fa-46e8-a3f5-8c6202e06d1b",
       "id": "CVE-2025-8277",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -37395,7 +40165,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:4acdb620-2aa9-47da-8711-ca0af9ba9883",
+      "bom-ref": "urn:uuid:2b83a620-b6e2-48c8-b74c-ca25cc4f6cb1",
       "id": "CVE-2026-115819",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -37440,7 +40210,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:bd0fa839-76d9-4dc9-b8a0-f81ea26a7c56",
+      "bom-ref": "urn:uuid:0a2dca96-46eb-4866-a243-9d3bb3becc4e",
       "id": "CVE-2026-115819",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -37485,7 +40255,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:ce93246a-19f7-4a4f-a07e-9777ee8a7e01",
+      "bom-ref": "urn:uuid:2eab003b-3d23-4d6a-8e13-d0b597ee5e8f",
       "id": "CVE-2026-115819",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -37530,7 +40300,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:504d98b6-94f8-443b-b9de-9cf20dc5273f",
+      "bom-ref": "urn:uuid:de03eec1-7bf1-43ae-9ca3-722582fa31f0",
       "id": "CVE-2024-58261",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -37575,7 +40345,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:8dc02c29-dd2c-4f78-bbdb-c67e34353f77",
+      "bom-ref": "urn:uuid:59837045-ba16-4499-984d-462f89c581bc",
       "id": "CVE-2025-8114",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -37620,7 +40390,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:77dd692d-a48b-464f-9270-b26166462ad0",
+      "bom-ref": "urn:uuid:7f664e83-86a8-4417-a148-b08d90fa40e5",
       "id": "CVE-2025-8114",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -37665,7 +40435,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:f824df03-f0b1-4f1c-b1a9-395cb16d6a84",
+      "bom-ref": "urn:uuid:563886c5-ac7d-4402-ba23-a5ebf5163589",
       "id": "CVE-2026-80230",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -37710,7 +40480,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:7eb3d450-5efe-433b-924f-fa8d5e5c6afd",
+      "bom-ref": "urn:uuid:9a816ec8-7747-4663-bbf6-bb78d88923f6",
       "id": "CVE-2026-80230",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -37755,7 +40525,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:5e148d96-a1d0-4f7a-8cd0-30b62a5f9a80",
+      "bom-ref": "urn:uuid:40ba2778-bc2b-4ce4-9207-da1c7e8289c9",
       "id": "CVE-2026-119373",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -37800,7 +40570,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:1ab05ca4-a414-4aee-aa8d-75aacc78f93f",
+      "bom-ref": "urn:uuid:11584fec-77ab-482f-98f6-687e31640fc3",
       "id": "CVE-2023-53161",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -37845,7 +40615,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:02944f93-9008-4f44-9efc-bc06b50ab13b",
+      "bom-ref": "urn:uuid:9758f802-55a4-4736-9745-0fd540c177f7",
       "id": "CVE-2026-1757",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -37890,7 +40660,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:7a47665a-be7c-4ab2-a338-f8bae85cbd70",
+      "bom-ref": "urn:uuid:6fa110db-23f7-428e-b7f8-61c2f9316bb0",
       "id": "CVE-2026-95519",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -37935,7 +40705,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:2cebef77-1e01-46e1-941b-6a4b00a8ec16",
+      "bom-ref": "urn:uuid:c215f8ff-321b-4914-b7da-b8823b57e2bb",
       "id": "CVE-2026-95519",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -37980,7 +40750,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:41e692fd-96c5-4954-8955-edd6ec70da7b",
+      "bom-ref": "urn:uuid:05a7d889-d764-4c87-b7bd-6c6ad7e147ed",
       "id": "CVE-2026-125709",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -38025,7 +40795,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:f290dd02-ce6f-4d88-8e95-a13c23b5814e",
+      "bom-ref": "urn:uuid:f53f0fb9-9045-40b8-b021-f6eed08d9db1",
       "id": "CVE-2026-125709",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -38070,7 +40840,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:f7c76894-f404-40b6-9749-c4911e92831b",
+      "bom-ref": "urn:uuid:db406fc5-6550-46ec-9fe7-1d9552fba07e",
       "id": "CVE-2026-82209",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -38115,7 +40885,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:5b5a4284-d5f1-4161-b56d-1b5227698de5",
+      "bom-ref": "urn:uuid:df721fe9-d883-463d-b265-67c697b17126",
       "id": "CVE-2026-82209",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -38160,7 +40930,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:0703101a-bfa1-438b-ae12-02d88ea191cb",
+      "bom-ref": "urn:uuid:409a15fe-5914-4968-a715-c6e636c48439",
       "id": "CVE-2026-100290",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -38205,7 +40975,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:dce90428-8bd9-43a0-8f62-294820483784",
+      "bom-ref": "urn:uuid:04607cb5-efa3-4969-854d-0c4d0dbdb529",
       "id": "CVE-2026-100290",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -38250,7 +41020,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:95b87216-dd21-43de-8460-3473e133a78b",
+      "bom-ref": "urn:uuid:ee1a8675-9a05-48f7-88f3-4820ba5a2b45",
       "id": "CVE-2026-100290",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -38295,7 +41065,97 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:dd6c18a5-227d-4280-9343-ea46b8d0f2c6",
+      "bom-ref": "urn:uuid:164d3137-a046-4fad-a99b-42519e50edbc",
+      "id": "CVE-2026-35190",
+      "source": {
+        "name": "redhat-distro-redhat-10",
+        "url": "https://access.redhat.com/security/cve/CVE-2026-35190"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-35190",
+          "source": {
+            "name": "redhat-distro-redhat-10",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-35190"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 5.9,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00206,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in OpenSSL. A remote attacker can cause a Denial of Service (DoS) by sending a specially crafted Transport Layer Security (TLS) handshake request to an affected server. When a server is configured with Suite B cryptographic settings, receiving a connection request that omits compatible cryptographic groups causes the application to perform an out-of-bounds read past the end of an internal list. Although no memory contents are disclosed to the client, this invalid read can terminate the server process on systems with memory-hardening protections.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/openssl-fips-provider@3.5.9-1.el10_3?arch=x86_64&distro=rocky-10.3&epoch=1&package-id=e76238296c299582&upstream=openssl-3.5.9-1.el10_3.src.rpm",
+          "versions": [
+            {
+              "version": "1:3.5.9-1.el10_3",
+              "status": "affected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:10261063-4fcf-47cc-89f3-9b7ca060dfae",
+      "id": "CVE-2026-35190",
+      "source": {
+        "name": "redhat-distro-redhat-10",
+        "url": "https://access.redhat.com/security/cve/CVE-2026-35190"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-35190",
+          "source": {
+            "name": "redhat-distro-redhat-10",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-35190"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 5.9,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00206,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in OpenSSL. A remote attacker can cause a Denial of Service (DoS) by sending a specially crafted Transport Layer Security (TLS) handshake request to an affected server. When a server is configured with Suite B cryptographic settings, receiving a connection request that omits compatible cryptographic groups causes the application to perform an out-of-bounds read past the end of an internal list. Although no memory contents are disclosed to the client, this invalid read can terminate the server process on systems with memory-hardening protections.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/openssl-libs@3.5.9-1.el10_3?arch=x86_64&distro=rocky-10.3&epoch=1&package-id=c9390715ef45e4cb&upstream=openssl-3.5.9-1.el10_3.src.rpm",
+          "versions": [
+            {
+              "version": "1:3.5.9-1.el10_3",
+              "status": "affected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:f605e315-6fbe-4db2-a894-2cba8ef8f7ec",
       "id": "CVE-2026-31789",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -38340,7 +41200,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:46c65ad9-6695-4658-98df-8bfca29411bc",
+      "bom-ref": "urn:uuid:60b31e67-58dd-4435-855e-6e7a43b4023d",
       "id": "CVE-2026-31789",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -38385,7 +41245,52 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:1ca3874f-cd60-4078-ad00-c25cb5e1f505",
+      "bom-ref": "urn:uuid:1af649ed-b64b-48e8-b515-16b01f419d39",
+      "id": "CVE-2026-22185",
+      "source": {
+        "name": "redhat-distro-redhat-10",
+        "url": "https://access.redhat.com/security/cve/CVE-2026-22185"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-22185",
+          "source": {
+            "name": "redhat-distro-redhat-10",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-22185"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 6.8,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:H"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00184,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in OpenLDAP Lightning Memory-Mapped Database (LMDB) mdb_load. When processing malformed input, a local attacker can exploit a heap buffer underflow vulnerability in the readline() function. This can lead to an out-of-bounds read, potentially causing a denial of service (DoS) and limited disclosure of heap memory contents.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/openldap@2.6.13-1.el10?arch=x86_64&distro=rocky-10.3&package-id=aa02b14f9dcb33f3&upstream=openldap-2.6.13-1.el10.src.rpm",
+          "versions": [
+            {
+              "version": "2.6.13-1.el10",
+              "status": "affected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:cee84c20-9220-46a3-b39c-2e81dcde56b8",
       "id": "CVE-2025-60753",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -38430,7 +41335,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:3327d4f0-34fd-4ac6-9237-24a6123b5054",
+      "bom-ref": "urn:uuid:d52140a1-c984-4b3a-8e87-85c39b0b2c7f",
       "id": "CVE-2025-1632",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -38475,7 +41380,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:5f8c6b06-826f-47f3-a96e-0249263c28fe",
+      "bom-ref": "urn:uuid:ab926c1e-00d1-48fa-bc24-c55714684d60",
       "id": "CVE-2025-5915",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -38520,7 +41425,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:b5e2609c-968d-4f23-b7ab-d32edfe04cb0",
+      "bom-ref": "urn:uuid:83d580dc-8e21-4e04-8e31-48f186252935",
       "id": "CVE-2026-92824",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -38565,7 +41470,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:9e0ac54a-a08a-42d6-97f2-67051e81ccf6",
+      "bom-ref": "urn:uuid:141100d6-aa80-4d29-b222-6eb0087d0c72",
       "id": "CVE-2026-95520",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -38610,7 +41515,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:93a7c91f-9d0d-4eec-8b3a-059ffa9a6901",
+      "bom-ref": "urn:uuid:4f7b0dc2-1281-493a-bf66-12e474228f4d",
       "id": "CVE-2026-95520",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -38655,7 +41560,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:bfc5ccd0-9a88-434e-a20a-f7d746326e00",
+      "bom-ref": "urn:uuid:7f1e7fd8-7783-4170-b8cd-042550aac333",
       "id": "CVE-2026-42771",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -38700,7 +41605,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:80cd82f9-f783-4953-8835-0bf51c8839b4",
+      "bom-ref": "urn:uuid:2918fd4a-fe20-4fde-890f-fa7ecd7acb9b",
       "id": "CVE-2026-42771",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -38745,7 +41650,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:8293598f-1d7e-4d64-9721-7a7a02bc34f7",
+      "bom-ref": "urn:uuid:540b4d89-6734-4bf8-a00e-f5fd969a7e2a",
       "id": "CVE-2026-92823",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -38790,7 +41695,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:c54cb31b-ead5-4942-a4f6-a69e72ced412",
+      "bom-ref": "urn:uuid:2839f011-8d4a-416d-b183-d6de112c640f",
       "id": "CVE-2026-119375",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -38835,7 +41740,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:c70cd695-b23b-4181-af2c-396e001ca740",
+      "bom-ref": "urn:uuid:98b016a3-073f-478f-90fd-43eee1b306b1",
       "id": "CVE-2023-53160",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -38880,7 +41785,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:34280c82-be33-4dc4-aef2-a49cfdc02613",
+      "bom-ref": "urn:uuid:32194ec2-1c71-49b0-940c-d49cb0eaa44f",
       "id": "CVE-2026-88648",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -38924,7 +41829,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:3cec5841-e6a6-4c4a-b9af-ec6981f7d99b",
+      "bom-ref": "urn:uuid:dfbea6e0-bb2c-4adb-9281-57b9932b9aa2",
       "id": "CVE-2026-119371",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -38969,7 +41874,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:6c243ed3-0940-4880-a599-7ce2e424eb39",
+      "bom-ref": "urn:uuid:09af9647-6b1d-454e-b01a-bf6eeaceb408",
       "id": "CVE-2026-6276",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -39014,7 +41919,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:a75d30dd-f5b7-494e-b022-ff5bc05e61e3",
+      "bom-ref": "urn:uuid:1a9f6c85-e0ef-4385-8e0d-43f33ad05ac1",
       "id": "CVE-2026-6276",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -39059,7 +41964,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:bf7b746a-db21-4673-9afd-e527ec35a42c",
+      "bom-ref": "urn:uuid:8d32f6c8-be07-491e-9dc4-b68694e71f84",
       "id": "CVE-2026-4105",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -39104,7 +42009,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:b7d997bf-0747-41fe-98aa-4b7040c5fd8d",
+      "bom-ref": "urn:uuid:2c5367e0-5953-40e8-b643-e12ee04a1c81",
       "id": "CVE-2026-119376",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -39149,7 +42054,97 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:a2c63673-3aec-4dd8-a435-cc152d629eda",
+      "bom-ref": "urn:uuid:b6103315-e230-40f2-b6b6-5e2a4d753771",
+      "id": "CVE-2026-84786",
+      "source": {
+        "name": "redhat-distro-redhat-10",
+        "url": "https://access.redhat.com/security/cve/CVE-2026-84786"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-84786",
+          "source": {
+            "name": "redhat-distro-redhat-10",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-84786"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 5.9,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00173,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in OpenSSL. When a Transport Layer Security (TLS) client configured with DNS-based Authentication of Named Entities (DANE) processes an unusual combination of certificates and TLSA records, a null pointer dereference can occur. A remote attacker or malicious server can exploit this condition to crash the client application, resulting in a Denial of Service (DoS).",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/openssl-fips-provider@3.5.9-1.el10_3?arch=x86_64&distro=rocky-10.3&epoch=1&package-id=e76238296c299582&upstream=openssl-3.5.9-1.el10_3.src.rpm",
+          "versions": [
+            {
+              "version": "1:3.5.9-1.el10_3",
+              "status": "affected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:2fa12f9e-696f-4456-a3b1-8fccae40271a",
+      "id": "CVE-2026-84786",
+      "source": {
+        "name": "redhat-distro-redhat-10",
+        "url": "https://access.redhat.com/security/cve/CVE-2026-84786"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-84786",
+          "source": {
+            "name": "redhat-distro-redhat-10",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-84786"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 5.9,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00173,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in OpenSSL. When a Transport Layer Security (TLS) client configured with DNS-based Authentication of Named Entities (DANE) processes an unusual combination of certificates and TLSA records, a null pointer dereference can occur. A remote attacker or malicious server can exploit this condition to crash the client application, resulting in a Denial of Service (DoS).",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/openssl-libs@3.5.9-1.el10_3?arch=x86_64&distro=rocky-10.3&epoch=1&package-id=c9390715ef45e4cb&upstream=openssl-3.5.9-1.el10_3.src.rpm",
+          "versions": [
+            {
+              "version": "1:3.5.9-1.el10_3",
+              "status": "affected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:bfb396fb-fdfa-4dc6-9268-2a4ef2b59f06",
       "id": "CVE-2026-97399",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -39194,7 +42189,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:bb983290-f52e-4520-9faf-2b00067b174d",
+      "bom-ref": "urn:uuid:0545a6d6-c3f3-493b-bace-9c2169a3dcf7",
       "id": "CVE-2026-97399",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -39239,7 +42234,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:ff4165ae-c2c7-4b08-b46f-0e420686376a",
+      "bom-ref": "urn:uuid:d9093e5e-bb22-47f9-9f10-bfc1b4f6b7ee",
       "id": "CVE-2026-97399",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -39284,7 +42279,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:54ec3d2c-9129-4e50-9158-c5ca059aa3ec",
+      "bom-ref": "urn:uuid:46cb8e7b-d148-4362-9a20-1669954744f1",
       "id": "CVE-2026-119591",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -39329,44 +42324,44 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:e98731e5-f7c7-407c-af0a-80fb4f285104",
-      "id": "CVE-2026-22185",
+      "bom-ref": "urn:uuid:80129f5d-d74b-442a-b831-78757da02935",
+      "id": "CVE-2026-88823",
       "source": {
         "name": "redhat-distro-redhat-10",
-        "url": "https://access.redhat.com/security/cve/CVE-2026-22185"
+        "url": "https://access.redhat.com/security/cve/CVE-2026-88823"
       },
       "references": [
         {
-          "id": "CVE-2026-22185",
+          "id": "CVE-2026-88823",
           "source": {
             "name": "redhat-distro-redhat-10",
-            "url": "https://access.redhat.com/security/cve/CVE-2026-22185"
+            "url": "https://access.redhat.com/security/cve/CVE-2026-88823"
           }
         }
       ],
       "ratings": [
         {
-          "score": 6.8,
-          "severity": "medium",
+          "score": 3.7,
+          "severity": "low",
           "method": "CVSSv31",
-          "vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:H"
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N"
         },
         {
           "source": {
             "name": "FIRST",
             "url": "https://www.first.org/epss/"
           },
-          "score": 0.00152,
+          "score": 0.00267,
           "method": "other"
         }
       ],
-      "description": "A flaw was found in OpenLDAP Lightning Memory-Mapped Database (LMDB) mdb_load. When processing malformed input, a local attacker can exploit a heap buffer underflow vulnerability in the readline() function. This can lead to an out-of-bounds read, potentially causing a denial of service (DoS) and limited disclosure of heap memory contents.",
+      "description": "A flaw was found in OpenSSL. This vulnerability allows an attacker to bypass message authentication when an application processes data using the AES-GCM-SIV cipher. The cipher implementation improperly treats an empty Additional Authenticated Data (AAD) chunk—contextual data verified alongside encrypted messages—as a reset, excluding previously supplied data from the calculated authentication tag. As a result, data intended to be protected is silently left unverified, enabling an attacker to forge or tamper with the message without detection.",
       "affects": [
         {
-          "ref": "pkg:rpm/rocky/openldap@2.6.13-1.el10?arch=x86_64&distro=rocky-10.3&package-id=aa02b14f9dcb33f3&upstream=openldap-2.6.13-1.el10.src.rpm",
+          "ref": "pkg:rpm/rocky/openssl-fips-provider@3.5.9-1.el10_3?arch=x86_64&distro=rocky-10.3&epoch=1&package-id=e76238296c299582&upstream=openssl-3.5.9-1.el10_3.src.rpm",
           "versions": [
             {
-              "version": "2.6.13-1.el10",
+              "version": "1:3.5.9-1.el10_3",
               "status": "affected"
             }
           ]
@@ -39374,7 +42369,52 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:ac3a9efa-3860-4f98-bf42-5888943ccc8f",
+      "bom-ref": "urn:uuid:d20d48cb-b317-45fd-bf5a-ca9d2356a9b6",
+      "id": "CVE-2026-88823",
+      "source": {
+        "name": "redhat-distro-redhat-10",
+        "url": "https://access.redhat.com/security/cve/CVE-2026-88823"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-88823",
+          "source": {
+            "name": "redhat-distro-redhat-10",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-88823"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 3.7,
+          "severity": "low",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00267,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in OpenSSL. This vulnerability allows an attacker to bypass message authentication when an application processes data using the AES-GCM-SIV cipher. The cipher implementation improperly treats an empty Additional Authenticated Data (AAD) chunk—contextual data verified alongside encrypted messages—as a reset, excluding previously supplied data from the calculated authentication tag. As a result, data intended to be protected is silently left unverified, enabling an attacker to forge or tamper with the message without detection.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/openssl-libs@3.5.9-1.el10_3?arch=x86_64&distro=rocky-10.3&epoch=1&package-id=c9390715ef45e4cb&upstream=openssl-3.5.9-1.el10_3.src.rpm",
+          "versions": [
+            {
+              "version": "1:3.5.9-1.el10_3",
+              "status": "affected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:d2184e42-e4a8-4b4b-a315-fa12f9897139",
       "id": "CVE-2026-5745",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -39419,7 +42459,97 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:595b9ca6-7a15-499c-92ad-8b34c0e3bb7a",
+      "bom-ref": "urn:uuid:62762196-ec49-4bc3-afb3-45747745f555",
+      "id": "CVE-2026-88822",
+      "source": {
+        "name": "redhat-distro-redhat-10",
+        "url": "https://access.redhat.com/security/cve/CVE-2026-88822"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-88822",
+          "source": {
+            "name": "redhat-distro-redhat-10",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-88822"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 3.7,
+          "severity": "low",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00259,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in OpenSSL. This vulnerability allows information disclosure when the QUIC (Quick UDP Internet Connections) protocol performs automated peer address detection. An incorrectly sized buffer causes uninitialized stack memory to be used as the destination address for outgoing packets, allowing an attacker passively observing network traffic to capture leaked data. Additionally, the invalid destination address may cause network connections to fail.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/openssl-fips-provider@3.5.9-1.el10_3?arch=x86_64&distro=rocky-10.3&epoch=1&package-id=e76238296c299582&upstream=openssl-3.5.9-1.el10_3.src.rpm",
+          "versions": [
+            {
+              "version": "1:3.5.9-1.el10_3",
+              "status": "affected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:6f0cb10a-2267-47f0-86eb-5ee1218feff5",
+      "id": "CVE-2026-88822",
+      "source": {
+        "name": "redhat-distro-redhat-10",
+        "url": "https://access.redhat.com/security/cve/CVE-2026-88822"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-88822",
+          "source": {
+            "name": "redhat-distro-redhat-10",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-88822"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 3.7,
+          "severity": "low",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00259,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in OpenSSL. This vulnerability allows information disclosure when the QUIC (Quick UDP Internet Connections) protocol performs automated peer address detection. An incorrectly sized buffer causes uninitialized stack memory to be used as the destination address for outgoing packets, allowing an attacker passively observing network traffic to capture leaked data. Additionally, the invalid destination address may cause network connections to fail.",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/openssl-libs@3.5.9-1.el10_3?arch=x86_64&distro=rocky-10.3&epoch=1&package-id=c9390715ef45e4cb&upstream=openssl-3.5.9-1.el10_3.src.rpm",
+          "versions": [
+            {
+              "version": "1:3.5.9-1.el10_3",
+              "status": "affected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:e006feb9-d8d5-48c7-8524-61c05302c020",
       "id": "CVE-2026-15059",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -39464,7 +42594,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:9b10c0d8-41bb-4755-9b2c-beba3c8649f1",
+      "bom-ref": "urn:uuid:ef534b3b-d6c3-4fef-a89a-c767a9d13580",
       "id": "CVE-2026-82327",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -39509,7 +42639,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:b2f21c69-1089-4da3-870b-ceb926b2e613",
+      "bom-ref": "urn:uuid:3f607db6-4942-4a3f-a78d-021ee0a81af8",
       "id": "CVE-2026-75803",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -39554,7 +42684,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:a95b9264-1818-401c-8378-c12aa7b8b6c1",
+      "bom-ref": "urn:uuid:7d9be246-de57-418c-a3b0-95b8488b7970",
       "id": "CVE-2026-75803",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -39599,7 +42729,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:d8b15a23-26ac-473b-9fdb-624d378f7d96",
+      "bom-ref": "urn:uuid:73a73207-78cb-4ce5-ab82-c26eb89bc74f",
       "id": "CVE-2026-75803",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -39644,7 +42774,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:e4d8db0e-dfdb-48e8-83ac-7317ca6aa6d3",
+      "bom-ref": "urn:uuid:0c44c145-a812-4e77-9f79-4deee1392804",
       "id": "CVE-2026-50812",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -39689,7 +42819,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:208a610b-1ffd-4af7-9308-d2f46e2e4423",
+      "bom-ref": "urn:uuid:bdf546c0-4608-40ea-89be-efd3ee3d3adc",
       "id": "CVE-2026-67693",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -39733,7 +42863,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:6b3a4475-53ad-4e8b-991c-ffb992121b28",
+      "bom-ref": "urn:uuid:e6b4c1ce-fae5-4bc0-bd52-0c1a947da83c",
       "id": "CVE-2026-5958",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -39778,7 +42908,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:54215b4d-2838-4b1f-bbcf-66c94abef2d6",
+      "bom-ref": "urn:uuid:81139400-eea8-47ec-aae5-3cd204055eda",
       "id": "CVE-2025-5916",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -39823,7 +42953,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:f37fc2da-73ea-4dc4-baa4-e18c15da230a",
+      "bom-ref": "urn:uuid:a22a4ee8-4a84-46ff-a336-5d254e572a83",
       "id": "CVE-2026-103242",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -39868,7 +42998,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:01c4a81a-c5d5-4c3e-b5fe-27909e31c267",
+      "bom-ref": "urn:uuid:59875f78-9b63-4e70-9882-2afab1a385df",
       "id": "CVE-2026-103242",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -39913,7 +43043,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:c0da4efb-a008-4184-a408-cf28b26b75f0",
+      "bom-ref": "urn:uuid:ee748693-906a-41b2-8b1b-02e0d40c9260",
       "id": "CVE-2026-119372",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -39958,7 +43088,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:34bfe94c-47fe-40e0-8ddf-01543df2a4a4",
+      "bom-ref": "urn:uuid:5511b1dc-eb15-4a8f-9272-f0157e9c1d59",
       "id": "CVE-2026-44605",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -40003,7 +43133,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:7160cb77-f6cf-4fc0-a9c1-108488e109b4",
+      "bom-ref": "urn:uuid:225ee8a1-6bbe-4252-bf06-e7ec31eccf21",
       "id": "CVE-2026-44605",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -40048,7 +43178,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:450200a5-ecf5-4a82-9443-b4ac5449816e",
+      "bom-ref": "urn:uuid:fb026660-95e1-44bd-b36d-e0d79a0a3056",
       "id": "CVE-2025-4878",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -40093,7 +43223,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:c3289910-0f73-4b49-8edf-ed795e46e929",
+      "bom-ref": "urn:uuid:daf532fc-e608-435f-abc8-aebbac337c12",
       "id": "CVE-2025-4878",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -40138,7 +43268,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:afcbebdd-b096-4962-bf6a-705c4a2f5e61",
+      "bom-ref": "urn:uuid:7e85fe2b-b81b-4885-a521-8ae0b133e846",
       "id": "CVE-2025-5917",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -40183,7 +43313,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:384d2edf-29cc-4b2b-8a92-f9bb83d48f30",
+      "bom-ref": "urn:uuid:8f9215cf-d8e7-4c67-a85e-177c403764cc",
       "id": "CVE-2026-86469",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -40228,7 +43358,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:be745db4-4070-45f3-b690-3416dfb4cf7b",
+      "bom-ref": "urn:uuid:4bacd085-085a-45a1-9a5c-e16572aa5509",
       "id": "CVE-2026-12610",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -40273,7 +43403,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:dc5fdc2b-dffa-4b7e-8ef4-efb33b8dfb7d",
+      "bom-ref": "urn:uuid:a1a4bd0f-5c5b-4a64-ae52-9fdeed233ae6",
       "id": "CVE-2026-12610",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -40318,7 +43448,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:2fd11395-7e17-4d4c-ac82-3180ecdf01e4",
+      "bom-ref": "urn:uuid:411b1cca-772b-442b-b91c-4b9fa328b88b",
       "id": "CVE-2026-63380",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -40363,7 +43493,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:b94d951c-4f1b-40d3-9ddf-52cf4bdb1854",
+      "bom-ref": "urn:uuid:e2f65670-5807-4a5e-bdf7-241c1e8f1c1d",
       "id": "CVE-2026-42250",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -40408,7 +43538,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:dc856023-3b10-4f38-b037-666eebc1ba2c",
+      "bom-ref": "urn:uuid:5747a347-9212-435b-b697-e24181e1347a",
       "id": "CVE-2025-14017",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -40447,13 +43577,17 @@
             {
               "version": "8.12.1-6.el10",
               "status": "affected"
+            },
+            {
+              "range": "vers:rpm/>=0:8.12.1-9.el10_3",
+              "status": "unaffected"
             }
           ]
         }
       ]
     },
     {
-      "bom-ref": "urn:uuid:e8544706-b05c-41c2-8f4b-b40f4e391f78",
+      "bom-ref": "urn:uuid:684e84a9-0cef-4536-a27c-3847347619a5",
       "id": "CVE-2025-14017",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -40492,13 +43626,17 @@
             {
               "version": "8.12.1-6.el10",
               "status": "affected"
+            },
+            {
+              "range": "vers:rpm/>=0:8.12.1-9.el10_3",
+              "status": "unaffected"
             }
           ]
         }
       ]
     },
     {
-      "bom-ref": "urn:uuid:94f5f9c6-4fe2-4ad4-9999-af57cb623e5d",
+      "bom-ref": "urn:uuid:94968070-75ac-47ba-93b3-7804d916abea",
       "id": "CVE-2026-17591",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -40543,7 +43681,97 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:50dbcdb0-355c-4ab1-bb14-201598f4fb16",
+      "bom-ref": "urn:uuid:9e6178d7-97e6-4fec-8c66-b5a426d260c1",
+      "id": "CVE-2026-107493",
+      "source": {
+        "name": "redhat-distro-redhat-10",
+        "url": "https://access.redhat.com/security/cve/CVE-2026-107493"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-107493",
+          "source": {
+            "name": "redhat-distro-redhat-10",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-107493"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 3.7,
+          "severity": "low",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00143,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in OpenSSL. When an application provides an existing stack of certificate structures to PEM parsing functions, such as PEM_X509_INFO_read_bio_ex(), and the read operation fails, OpenSSL deallocates all entries in the stack while retaining pointers to the freed memory. A remote attacker can supply malformed Privacy-Enhanced Mail (PEM) data to trigger a read failure. If the calling application subsequently accesses or frees the affected stack, it can cause memory corruption or an application crash resulting in a Denial of Service (DoS).",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/openssl-fips-provider@3.5.9-1.el10_3?arch=x86_64&distro=rocky-10.3&epoch=1&package-id=e76238296c299582&upstream=openssl-3.5.9-1.el10_3.src.rpm",
+          "versions": [
+            {
+              "version": "1:3.5.9-1.el10_3",
+              "status": "affected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:0d4e4335-49da-4afd-9282-de2b06822049",
+      "id": "CVE-2026-107493",
+      "source": {
+        "name": "redhat-distro-redhat-10",
+        "url": "https://access.redhat.com/security/cve/CVE-2026-107493"
+      },
+      "references": [
+        {
+          "id": "CVE-2026-107493",
+          "source": {
+            "name": "redhat-distro-redhat-10",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-107493"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 3.7,
+          "severity": "low",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L"
+        },
+        {
+          "source": {
+            "name": "FIRST",
+            "url": "https://www.first.org/epss/"
+          },
+          "score": 0.00143,
+          "method": "other"
+        }
+      ],
+      "description": "A flaw was found in OpenSSL. When an application provides an existing stack of certificate structures to PEM parsing functions, such as PEM_X509_INFO_read_bio_ex(), and the read operation fails, OpenSSL deallocates all entries in the stack while retaining pointers to the freed memory. A remote attacker can supply malformed Privacy-Enhanced Mail (PEM) data to trigger a read failure. If the calling application subsequently accesses or frees the affected stack, it can cause memory corruption or an application crash resulting in a Denial of Service (DoS).",
+      "affects": [
+        {
+          "ref": "pkg:rpm/rocky/openssl-libs@3.5.9-1.el10_3?arch=x86_64&distro=rocky-10.3&epoch=1&package-id=c9390715ef45e4cb&upstream=openssl-3.5.9-1.el10_3.src.rpm",
+          "versions": [
+            {
+              "version": "1:3.5.9-1.el10_3",
+              "status": "affected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:0f573cd0-d2f4-4159-a4ba-9d07df970c39",
       "id": "CVE-2026-1485",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -40588,7 +43816,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:9aacaa1a-0b0c-452e-ad09-919bbce6db44",
+      "bom-ref": "urn:uuid:e330075d-7ae5-4b0d-a9e3-1d8d2685f704",
       "id": "CVE-2026-2625",
       "source": {
         "name": "redhat-distro-redhat-10",
@@ -40615,7 +43843,7 @@
             "name": "FIRST",
             "url": "https://www.first.org/epss/"
           },
-          "score": 0.00089,
+          "score": 0.00091,
           "method": "other"
         }
       ],
@@ -40633,7 +43861,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:7ed642c6-c3e3-4c62-82f5-6f7b39625cbb",
+      "bom-ref": "urn:uuid:f9b3cb07-424a-4241-bfba-56837a9fbeb0",
       "id": "CVE-2026-119377",
       "source": {
         "name": "redhat-distro-redhat-10",
