@@ -10,48 +10,6 @@
           "informationUri": "https://github.com/anchore/grype",
           "rules": [
             {
-              "id": "CVE-2024-7264-curl",
-              "name": "RpmMatcherExactDirectMatch",
-              "shortDescription": {
-                "text": "CVE-2024-7264 low vulnerability for curl package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in libcurl, where libcurl's ASN1 parser code has the `GTime2str()` function, used for parsing an ASN.1 Generalized Time field. If a syntactically incorrect field is given, the parser can use -1 for the length of the *time fraction*, leading to a `strlen()` performed on a pointer to a heap buffer area that is not purposely NULL terminated."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2024-7264",
-              "help": {
-                "text": "Vulnerability CVE-2024-7264\nSeverity: low\nPackage: curl\nVersion: 7.76.1-43.el9\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2024-7264](https://access.redhat.com/security/cve/CVE-2024-7264)",
-                "markdown": "**Vulnerability CVE-2024-7264**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | curl  | 7.76.1-43.el9  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2024-7264](https://access.redhat.com/security/cve/CVE-2024-7264)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/curl@7.76.1-43.el9?arch=x86_64\u0026distro=rocky-9.9\u0026upstream=curl-7.76.1-43.el9.src.rpm"
-                ],
-                "security-severity": "5.3"
-              }
-            },
-            {
-              "id": "CVE-2024-7264-libcurl",
-              "name": "RpmMatcherExactIndirectMatch",
-              "shortDescription": {
-                "text": "CVE-2024-7264 low vulnerability for libcurl package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in libcurl, where libcurl's ASN1 parser code has the `GTime2str()` function, used for parsing an ASN.1 Generalized Time field. If a syntactically incorrect field is given, the parser can use -1 for the length of the *time fraction*, leading to a `strlen()` performed on a pointer to a heap buffer area that is not purposely NULL terminated."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2024-7264",
-              "help": {
-                "text": "Vulnerability CVE-2024-7264\nSeverity: low\nPackage: libcurl\nVersion: 7.76.1-43.el9\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2024-7264](https://access.redhat.com/security/cve/CVE-2024-7264)",
-                "markdown": "**Vulnerability CVE-2024-7264**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | libcurl  | 7.76.1-43.el9  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2024-7264](https://access.redhat.com/security/cve/CVE-2024-7264)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/libcurl@7.76.1-43.el9?arch=x86_64\u0026distro=rocky-9.9\u0026upstream=curl-7.76.1-43.el9.src.rpm"
-                ],
-                "security-severity": "5.3"
-              }
-            },
-            {
               "id": "CVE-2026-119586-sqlite-libs",
               "name": "RpmMatcherExactIndirectMatch",
               "shortDescription": {
@@ -2467,6 +2425,48 @@
               }
             },
             {
+              "id": "CVE-2026-119375-sqlite-libs",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-119375 medium vulnerability for sqlite-libs package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in SQLite. A local attacker can exploit this vulnerability by providing a crafted database and a Write-Ahead Logging (WAL) file configured with an undersized page size. This mismatch causes SQLite to read uninitialized page-cache memory when executing queries on oversized records, resulting in information disclosure of internal pointers and other database rows."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-119375",
+              "help": {
+                "text": "Vulnerability CVE-2026-119375\nSeverity: medium\nPackage: sqlite-libs\nVersion: 3.34.1-11.el9_8\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-119375](https://access.redhat.com/security/cve/CVE-2026-119375)",
+                "markdown": "**Vulnerability CVE-2026-119375**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | sqlite-libs  | 3.34.1-11.el9_8  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-119375](https://access.redhat.com/security/cve/CVE-2026-119375)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/sqlite-libs@3.34.1-11.el9_8?arch=x86_64\u0026distro=rocky-9.9\u0026upstream=sqlite-3.34.1-11.el9_8.src.rpm"
+                ],
+                "security-severity": "5.5"
+              }
+            },
+            {
+              "id": "CVE-2026-119376-sqlite-libs",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-119376 medium vulnerability for sqlite-libs package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in SQLite. An attacker can cause a Denial of Service (DoS) by supplying specially crafted SQL queries or an untrusted database view containing deeply chained COLLATE operators. This flaw bypasses expression depth limitations, triggering unbounded recursion and stack exhaustion that crashes the application process."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-119376",
+              "help": {
+                "text": "Vulnerability CVE-2026-119376\nSeverity: medium\nPackage: sqlite-libs\nVersion: 3.34.1-11.el9_8\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-119376](https://access.redhat.com/security/cve/CVE-2026-119376)",
+                "markdown": "**Vulnerability CVE-2026-119376**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | sqlite-libs  | 3.34.1-11.el9_8  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-119376](https://access.redhat.com/security/cve/CVE-2026-119376)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/sqlite-libs@3.34.1-11.el9_8?arch=x86_64\u0026distro=rocky-9.9\u0026upstream=sqlite-3.34.1-11.el9_8.src.rpm"
+                ],
+                "security-severity": "5.5"
+              }
+            },
+            {
               "id": "CVE-2026-9149-libsolv",
               "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
@@ -2908,6 +2908,27 @@
               }
             },
             {
+              "id": "CVE-2026-119591-sqlite-libs",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-119591 medium vulnerability for sqlite-libs package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in SQLite. This vulnerability allows an attacker to cause a Denial of Service (DoS) by crashing the host application. By supplying a specially crafted database file or SQL query that performs a count operation over a large multi-row VALUES clause, an attacker can trigger excessive recursion during view optimization. This results in stack exhaustion when freeing internal query expressions, terminating the application process."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-119591",
+              "help": {
+                "text": "Vulnerability CVE-2026-119591\nSeverity: medium\nPackage: sqlite-libs\nVersion: 3.34.1-11.el9_8\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-119591](https://access.redhat.com/security/cve/CVE-2026-119591)",
+                "markdown": "**Vulnerability CVE-2026-119591**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | sqlite-libs  | 3.34.1-11.el9_8  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-119591](https://access.redhat.com/security/cve/CVE-2026-119591)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/sqlite-libs@3.34.1-11.el9_8?arch=x86_64\u0026distro=rocky-9.9\u0026upstream=sqlite-3.34.1-11.el9_8.src.rpm"
+                ],
+                "security-severity": "5.5"
+              }
+            },
+            {
               "id": "CVE-2024-0232-sqlite-libs",
               "name": "RpmMatcherExactIndirectMatch",
               "shortDescription": {
@@ -3094,27 +3115,6 @@
                   "pkg:rpm/rocky/libmodulemd@2.13.0-2.el9?arch=x86_64\u0026distro=rocky-9.9\u0026upstream=libmodulemd-2.13.0-2.el9.src.rpm"
                 ],
                 "security-severity": "6.2"
-              }
-            },
-            {
-              "id": "CVE-2026-119376-sqlite-libs",
-              "name": "RpmMatcherExactIndirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-119376 medium vulnerability for sqlite-libs package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in SQLite. An attacker can cause a Denial of Service (DoS) by supplying specially crafted SQL queries or an untrusted database view containing deeply chained COLLATE operators. This flaw bypasses expression depth limitations, triggering unbounded recursion and stack exhaustion that crashes the application process."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-119376",
-              "help": {
-                "text": "Vulnerability CVE-2026-119376\nSeverity: medium\nPackage: sqlite-libs\nVersion: 3.34.1-11.el9_8\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-119376](https://access.redhat.com/security/cve/CVE-2026-119376)",
-                "markdown": "**Vulnerability CVE-2026-119376**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | sqlite-libs  | 3.34.1-11.el9_8  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-119376](https://access.redhat.com/security/cve/CVE-2026-119376)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/sqlite-libs@3.34.1-11.el9_8?arch=x86_64\u0026distro=rocky-9.9\u0026upstream=sqlite-3.34.1-11.el9_8.src.rpm"
-                ],
-                "security-severity": "5.5"
               }
             },
             {
@@ -3391,27 +3391,6 @@
               }
             },
             {
-              "id": "CVE-2026-119375-sqlite-libs",
-              "name": "RpmMatcherExactIndirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-119375 medium vulnerability for sqlite-libs package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in SQLite. A local attacker can exploit this vulnerability by providing a crafted database and a Write-Ahead Logging (WAL) file configured with an undersized page size. This mismatch causes SQLite to read uninitialized page-cache memory when executing queries on oversized records, resulting in information disclosure of internal pointers and other database rows."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-119375",
-              "help": {
-                "text": "Vulnerability CVE-2026-119375\nSeverity: medium\nPackage: sqlite-libs\nVersion: 3.34.1-11.el9_8\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-119375](https://access.redhat.com/security/cve/CVE-2026-119375)",
-                "markdown": "**Vulnerability CVE-2026-119375**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | sqlite-libs  | 3.34.1-11.el9_8  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-119375](https://access.redhat.com/security/cve/CVE-2026-119375)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/sqlite-libs@3.34.1-11.el9_8?arch=x86_64\u0026distro=rocky-9.9\u0026upstream=sqlite-3.34.1-11.el9_8.src.rpm"
-                ],
-                "security-severity": "5.5"
-              }
-            },
-            {
               "id": "CVE-2026-95519-rpm",
               "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
@@ -3454,45 +3433,24 @@
               }
             },
             {
-              "id": "CVE-2026-119371-sqlite-libs",
-              "name": "RpmMatcherExactIndirectMatch",
+              "id": "CVE-2026-88647-gnutls",
+              "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
-                "text": "CVE-2026-119371 medium vulnerability for sqlite-libs package"
+                "text": "CVE-2026-88647 medium vulnerability for gnutls package"
               },
               "fullDescription": {
-                "text": "A flaw was found in SQLite. This vulnerability allows an attacker to cause a Denial of Service (DoS) through stack exhaustion. By providing a specially crafted SQL query or an untrusted database file with deeply nested Common Table Expressions (CTEs), an attacker can bypass expression nesting limits. This triggers unbounded recursive function calls during query expansion, causing the application to crash."
+                "text": "A flaw was found in GnuTLS. This vulnerability can lead to information disclosure by allowing an attacker to bypass certificate hostname verification. A remote attacker presenting a crafted certificate can circumvent the Common Name fallback check, enabling them to eavesdrop on or intercept encrypted network communications."
               },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-119371",
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-88647",
               "help": {
-                "text": "Vulnerability CVE-2026-119371\nSeverity: medium\nPackage: sqlite-libs\nVersion: 3.34.1-11.el9_8\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-119371](https://access.redhat.com/security/cve/CVE-2026-119371)",
-                "markdown": "**Vulnerability CVE-2026-119371**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | sqlite-libs  | 3.34.1-11.el9_8  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-119371](https://access.redhat.com/security/cve/CVE-2026-119371)  |\n"
+                "text": "Vulnerability CVE-2026-88647\nSeverity: medium\nPackage: gnutls\nVersion: 3.8.10-9.el9_8\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-88647](https://access.redhat.com/security/cve/CVE-2026-88647)",
+                "markdown": "**Vulnerability CVE-2026-88647**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | gnutls  | 3.8.10-9.el9_8  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-88647](https://access.redhat.com/security/cve/CVE-2026-88647)  |\n"
               },
               "properties": {
                 "purls": [
-                  "pkg:rpm/rocky/sqlite-libs@3.34.1-11.el9_8?arch=x86_64\u0026distro=rocky-9.9\u0026upstream=sqlite-3.34.1-11.el9_8.src.rpm"
+                  "pkg:rpm/rocky/gnutls@3.8.10-9.el9_8?arch=x86_64\u0026distro=rocky-9.9\u0026upstream=gnutls-3.8.10-9.el9_8.src.rpm"
                 ],
-                "security-severity": "5.5"
-              }
-            },
-            {
-              "id": "CVE-2026-119372-sqlite-libs",
-              "name": "RpmMatcherExactIndirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-119372 medium vulnerability for sqlite-libs package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in SQLite. A use-after-free vulnerability exists in its full-text search extension due to improper handling of cached memory pointers during query processing. An attacker can exploit this issue by executing a specially crafted full-text search query, causing the application to access previously freed memory and crash, resulting in a Denial of Service (DoS)."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-119372",
-              "help": {
-                "text": "Vulnerability CVE-2026-119372\nSeverity: medium\nPackage: sqlite-libs\nVersion: 3.34.1-11.el9_8\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-119372](https://access.redhat.com/security/cve/CVE-2026-119372)",
-                "markdown": "**Vulnerability CVE-2026-119372**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | sqlite-libs  | 3.34.1-11.el9_8  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-119372](https://access.redhat.com/security/cve/CVE-2026-119372)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/sqlite-libs@3.34.1-11.el9_8?arch=x86_64\u0026distro=rocky-9.9\u0026upstream=sqlite-3.34.1-11.el9_8.src.rpm"
-                ],
-                "security-severity": "5.5"
+                "security-severity": "6.5"
               }
             },
             {
@@ -3535,27 +3493,6 @@
                   "pkg:rpm/rocky/libstdc%2B%2B@11.5.0-17.el9_9?arch=x86_64\u0026distro=rocky-9.9\u0026upstream=gcc-11.5.0-17.el9_9.src.rpm"
                 ],
                 "security-severity": "4.2"
-              }
-            },
-            {
-              "id": "CVE-2026-119591-sqlite-libs",
-              "name": "RpmMatcherExactIndirectMatch",
-              "shortDescription": {
-                "text": "CVE-2026-119591 medium vulnerability for sqlite-libs package"
-              },
-              "fullDescription": {
-                "text": "A flaw was found in SQLite. This vulnerability allows an attacker to cause a Denial of Service (DoS) by crashing the host application. By supplying a specially crafted database file or SQL query that performs a count operation over a large multi-row VALUES clause, an attacker can trigger excessive recursion during view optimization. This results in stack exhaustion when freeing internal query expressions, terminating the application process."
-              },
-              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-119591",
-              "help": {
-                "text": "Vulnerability CVE-2026-119591\nSeverity: medium\nPackage: sqlite-libs\nVersion: 3.34.1-11.el9_8\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-119591](https://access.redhat.com/security/cve/CVE-2026-119591)",
-                "markdown": "**Vulnerability CVE-2026-119591**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | sqlite-libs  | 3.34.1-11.el9_8  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-119591](https://access.redhat.com/security/cve/CVE-2026-119591)  |\n"
-              },
-              "properties": {
-                "purls": [
-                  "pkg:rpm/rocky/sqlite-libs@3.34.1-11.el9_8?arch=x86_64\u0026distro=rocky-9.9\u0026upstream=sqlite-3.34.1-11.el9_8.src.rpm"
-                ],
-                "security-severity": "5.5"
               }
             },
             {
@@ -3937,6 +3874,27 @@
               }
             },
             {
+              "id": "CVE-2026-119371-sqlite-libs",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-119371 medium vulnerability for sqlite-libs package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in SQLite. This vulnerability allows an attacker to cause a Denial of Service (DoS) through stack exhaustion. By providing a specially crafted SQL query or an untrusted database file with deeply nested Common Table Expressions (CTEs), an attacker can bypass expression nesting limits. This triggers unbounded recursive function calls during query expansion, causing the application to crash."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-119371",
+              "help": {
+                "text": "Vulnerability CVE-2026-119371\nSeverity: medium\nPackage: sqlite-libs\nVersion: 3.34.1-11.el9_8\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-119371](https://access.redhat.com/security/cve/CVE-2026-119371)",
+                "markdown": "**Vulnerability CVE-2026-119371**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | sqlite-libs  | 3.34.1-11.el9_8  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-119371](https://access.redhat.com/security/cve/CVE-2026-119371)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/sqlite-libs@3.34.1-11.el9_8?arch=x86_64\u0026distro=rocky-9.9\u0026upstream=sqlite-3.34.1-11.el9_8.src.rpm"
+                ],
+                "security-severity": "5.5"
+              }
+            },
+            {
               "id": "CVE-2026-6276-curl",
               "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
@@ -3976,6 +3934,27 @@
                   "pkg:rpm/rocky/libcurl@7.76.1-43.el9?arch=x86_64\u0026distro=rocky-9.9\u0026upstream=curl-7.76.1-43.el9.src.rpm"
                 ],
                 "security-severity": "3.7"
+              }
+            },
+            {
+              "id": "CVE-2026-119372-sqlite-libs",
+              "name": "RpmMatcherExactIndirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-119372 medium vulnerability for sqlite-libs package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in SQLite. A use-after-free vulnerability exists in its full-text search extension due to improper handling of cached memory pointers during query processing. An attacker can exploit this issue by executing a specially crafted full-text search query, causing the application to access previously freed memory and crash, resulting in a Denial of Service (DoS)."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-119372",
+              "help": {
+                "text": "Vulnerability CVE-2026-119372\nSeverity: medium\nPackage: sqlite-libs\nVersion: 3.34.1-11.el9_8\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-119372](https://access.redhat.com/security/cve/CVE-2026-119372)",
+                "markdown": "**Vulnerability CVE-2026-119372**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | sqlite-libs  | 3.34.1-11.el9_8  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-119372](https://access.redhat.com/security/cve/CVE-2026-119372)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/sqlite-libs@3.34.1-11.el9_8?arch=x86_64\u0026distro=rocky-9.9\u0026upstream=sqlite-3.34.1-11.el9_8.src.rpm"
+                ],
+                "security-severity": "5.5"
               }
             },
             {
@@ -4819,6 +4798,27 @@
               }
             },
             {
+              "id": "CVE-2026-105712-gnupg2",
+              "name": "RpmMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "CVE-2026-105712 low vulnerability for gnupg2 package"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in the gpgtar utility in GnuPG. When extracting an archive into a directory containing pre-existing symbolic links (symlinks), the tool can follow those links instead of staying within the target directory. An attacker can provide a crafted archive that, when extracted by an unsuspecting user, creates or overwrites files outside the intended destination directory. Any unauthorized file writes are limited to the filesystem permissions of the user performing the extraction."
+              },
+              "helpUri": "https://access.redhat.com/security/cve/CVE-2026-105712",
+              "help": {
+                "text": "Vulnerability CVE-2026-105712\nSeverity: low\nPackage: gnupg2\nVersion: 2.3.3-5.el9_7\nFix Version: \nType: rpm\nLocation: /var/lib/rpm/rpmdb.sqlite\nData Namespace: redhat:distro:redhat:9\nLink: [CVE-2026-105712](https://access.redhat.com/security/cve/CVE-2026-105712)",
+                "markdown": "**Vulnerability CVE-2026-105712**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | gnupg2  | 2.3.3-5.el9_7  |   | rpm  | /var/lib/rpm/rpmdb.sqlite  | redhat:distro:redhat:9  | [CVE-2026-105712](https://access.redhat.com/security/cve/CVE-2026-105712)  |\n"
+              },
+              "properties": {
+                "purls": [
+                  "pkg:rpm/rocky/gnupg2@2.3.3-5.el9_7?arch=x86_64\u0026distro=rocky-9.9\u0026upstream=gnupg2-2.3.3-5.el9_7.src.rpm"
+                ],
+                "security-severity": "3.6"
+              }
+            },
+            {
               "id": "CVE-2026-57062-gnupg2",
               "name": "RpmMatcherExactDirectMatch",
               "shortDescription": {
@@ -4843,68 +4843,6 @@
         }
       },
       "results": [
-        {
-          "ruleId": "CVE-2024-7264-curl",
-          "level": "note",
-          "message": {
-            "text": "A low vulnerability in rpm package: curl, version 7.76.1-43.el9 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:544c7139ab0ef1bec7e7c40c768c2460f0f617a1baeee1a69ca7188d4343dbe1:/var/lib/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "c63efaafefd7b0a2fc203003d7b5463044ec0526a5fb34544f05627a80eb595a:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2024-7264-libcurl",
-          "level": "note",
-          "message": {
-            "text": "A low vulnerability in rpm package: libcurl, version 7.76.1-43.el9 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:544c7139ab0ef1bec7e7c40c768c2460f0f617a1baeee1a69ca7188d4343dbe1:/var/lib/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "d06d89b3435c9057cbdd6a34d0f3329645705ea7665e77a3bcc33f66f28e6167:1"
-          }
-        },
         {
           "ruleId": "CVE-2026-119586-sqlite-libs",
           "level": "error",
@@ -8471,6 +8409,68 @@
           }
         },
         {
+          "ruleId": "CVE-2026-119375-sqlite-libs",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: sqlite-libs, version 3.34.1-11.el9_8 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:544c7139ab0ef1bec7e7c40c768c2460f0f617a1baeee1a69ca7188d4343dbe1:/var/lib/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "07f69ace166e02cb15b38da9f0e5b998a1886c3658088e456949f940f717bbd6:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-119376-sqlite-libs",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: sqlite-libs, version 3.34.1-11.el9_8 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:544c7139ab0ef1bec7e7c40c768c2460f0f617a1baeee1a69ca7188d4343dbe1:/var/lib/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "07f69ace166e02cb15b38da9f0e5b998a1886c3658088e456949f940f717bbd6:1"
+          }
+        },
+        {
           "ruleId": "CVE-2026-9149-libsolv",
           "level": "warning",
           "message": {
@@ -9122,6 +9122,37 @@
           }
         },
         {
+          "ruleId": "CVE-2026-119591-sqlite-libs",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: sqlite-libs, version 3.34.1-11.el9_8 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:544c7139ab0ef1bec7e7c40c768c2460f0f617a1baeee1a69ca7188d4343dbe1:/var/lib/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "07f69ace166e02cb15b38da9f0e5b998a1886c3658088e456949f940f717bbd6:1"
+          }
+        },
+        {
           "ruleId": "CVE-2024-0232-sqlite-libs",
           "level": "note",
           "message": {
@@ -9398,37 +9429,6 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "51e50bcc0323d9c0f423fa70c166dc71bdc9d761c79ce456a7189e10c67f210d:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2026-119376-sqlite-libs",
-          "level": "warning",
-          "message": {
-            "text": "A medium vulnerability in rpm package: sqlite-libs, version 3.34.1-11.el9_8 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:544c7139ab0ef1bec7e7c40c768c2460f0f617a1baeee1a69ca7188d4343dbe1:/var/lib/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "07f69ace166e02cb15b38da9f0e5b998a1886c3658088e456949f940f717bbd6:1"
           }
         },
         {
@@ -9835,37 +9835,6 @@
           }
         },
         {
-          "ruleId": "CVE-2026-119375-sqlite-libs",
-          "level": "warning",
-          "message": {
-            "text": "A medium vulnerability in rpm package: sqlite-libs, version 3.34.1-11.el9_8 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:544c7139ab0ef1bec7e7c40c768c2460f0f617a1baeee1a69ca7188d4343dbe1:/var/lib/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "07f69ace166e02cb15b38da9f0e5b998a1886c3658088e456949f940f717bbd6:1"
-          }
-        },
-        {
           "ruleId": "CVE-2026-95519-rpm",
           "level": "warning",
           "message": {
@@ -9928,10 +9897,10 @@
           }
         },
         {
-          "ruleId": "CVE-2026-119371-sqlite-libs",
+          "ruleId": "CVE-2026-88647-gnutls",
           "level": "warning",
           "message": {
-            "text": "A medium vulnerability in rpm package: sqlite-libs, version 3.34.1-11.el9_8 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
+            "text": "A medium vulnerability in rpm package: gnutls, version 3.8.10-9.el9_8 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
           },
           "locations": [
             {
@@ -9955,38 +9924,7 @@
             }
           ],
           "partialFingerprints": {
-            "primaryLocationLineHash": "07f69ace166e02cb15b38da9f0e5b998a1886c3658088e456949f940f717bbd6:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2026-119372-sqlite-libs",
-          "level": "warning",
-          "message": {
-            "text": "A medium vulnerability in rpm package: sqlite-libs, version 3.34.1-11.el9_8 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:544c7139ab0ef1bec7e7c40c768c2460f0f617a1baeee1a69ca7188d4343dbe1:/var/lib/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "07f69ace166e02cb15b38da9f0e5b998a1886c3658088e456949f940f717bbd6:1"
+            "primaryLocationLineHash": "d1a4e4abbc0fde1484c063001ff472c17c63ed531fae1ec8b511f54f3e381e00:1"
           }
         },
         {
@@ -10049,37 +9987,6 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "394a2bff009051ede9d11ff9a8161560657dc0a0b1cfca661c712fdc0fa3727c:1"
-          }
-        },
-        {
-          "ruleId": "CVE-2026-119591-sqlite-libs",
-          "level": "warning",
-          "message": {
-            "text": "A medium vulnerability in rpm package: sqlite-libs, version 3.34.1-11.el9_8 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
-                },
-                "region": {
-                  "startLine": 1,
-                  "startColumn": 1,
-                  "endLine": 1,
-                  "endColumn": 1
-                }
-              },
-              "logicalLocations": [
-                {
-                  "name": "/var/lib/rpm/rpmdb.sqlite",
-                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:544c7139ab0ef1bec7e7c40c768c2460f0f617a1baeee1a69ca7188d4343dbe1:/var/lib/rpm/rpmdb.sqlite"
-                }
-              ]
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "07f69ace166e02cb15b38da9f0e5b998a1886c3658088e456949f940f717bbd6:1"
           }
         },
         {
@@ -10641,6 +10548,37 @@
           }
         },
         {
+          "ruleId": "CVE-2026-119371-sqlite-libs",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: sqlite-libs, version 3.34.1-11.el9_8 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:544c7139ab0ef1bec7e7c40c768c2460f0f617a1baeee1a69ca7188d4343dbe1:/var/lib/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "07f69ace166e02cb15b38da9f0e5b998a1886c3658088e456949f940f717bbd6:1"
+          }
+        },
+        {
           "ruleId": "CVE-2026-6276-curl",
           "level": "note",
           "message": {
@@ -10700,6 +10638,37 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "d06d89b3435c9057cbdd6a34d0f3329645705ea7665e77a3bcc33f66f28e6167:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-119372-sqlite-libs",
+          "level": "warning",
+          "message": {
+            "text": "A medium vulnerability in rpm package: sqlite-libs, version 3.34.1-11.el9_8 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:544c7139ab0ef1bec7e7c40c768c2460f0f617a1baeee1a69ca7188d4343dbe1:/var/lib/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "07f69ace166e02cb15b38da9f0e5b998a1886c3658088e456949f940f717bbd6:1"
           }
         },
         {
@@ -11940,6 +11909,37 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "07f69ace166e02cb15b38da9f0e5b998a1886c3658088e456949f940f717bbd6:1"
+          }
+        },
+        {
+          "ruleId": "CVE-2026-105712-gnupg2",
+          "level": "note",
+          "message": {
+            "text": "A low vulnerability in rpm package: gnupg2, version 2.3.3-5.el9_7 was found in image ghcr.io/anchorlayer/rocky-9:latest at: /var/lib/rpm/rpmdb.sqlite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "rocky-9//var/lib/rpm/rpmdb.sqlite"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/var/lib/rpm/rpmdb.sqlite",
+                  "fullyQualifiedName": "ghcr.io/anchorlayer/rocky-9:latest@sha256:544c7139ab0ef1bec7e7c40c768c2460f0f617a1baeee1a69ca7188d4343dbe1:/var/lib/rpm/rpmdb.sqlite"
+                }
+              ]
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "1f928d0172c6a032877b6eb0563ac2975413b502c35997d8a13e3eb0b3a3c243:1"
           }
         },
         {
